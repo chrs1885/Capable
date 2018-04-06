@@ -299,10 +299,10 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Capable.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/Capable.framework",
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Capable.framework",
+				"$(BUILT_PRODUCTS_DIR)/../$(FRAMEWORKS_FOLDER_PATH)/Capable.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
