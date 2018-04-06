@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831213F62078282300E73DF5 /* Capable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831213F52078282300E73DF5 /* Capable.framework */; };
 		83C6F5F520780FE700F0C74D /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F5F420780FE700F0C74D /* ExampleTests.swift */; };
 		83C6F60020780FE700F0C74D /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F5FF20780FE700F0C74D /* ExampleUITests.swift */; };
 		83C6F62D2078138E00F0C74D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		831213F52078282300E73DF5 /* Capable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Capable.framework; path = ../Carthage/Build/iOS/Capable.framework; sourceTree = "<group>"; };
 		83C6F5DC20780FE700F0C74D /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C6F5F020780FE700F0C74D /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C6F5F420780FE700F0C74D /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831213F62078282300E73DF5 /* Capable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +155,7 @@
 		83C6F6352078189700F0C74D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				831213F52078282300E73DF5 /* Capable.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
