@@ -1,6 +1,6 @@
 //
 //  FontsViewController.swift
-//  CapableApp
+//  Example
 //
 //  Created by Christoph Wendt on 31.03.18.
 //
