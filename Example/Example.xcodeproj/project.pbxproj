@@ -17,7 +17,6 @@
 		83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
 		83C6F6332078138E00F0C74D /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62B2078138E00F0C74D /* FontsViewController.swift */; };
 		83C6F6342078138E00F0C74D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F62C2078138E00F0C74D /* Info.plist */; };
-		83C6F6372078189700F0C74D /* Capable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C6F6362078189700F0C74D /* Capable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +52,6 @@
 		83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureOverviewController.swift; sourceTree = "<group>"; };
 		83C6F62B2078138E00F0C74D /* FontsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
 		83C6F62C2078138E00F0C74D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83C6F6362078189700F0C74D /* Capable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Capable.framework; path = ../Carthage/Build/iOS/Capable.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +59,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83C6F6372078189700F0C74D /* Capable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +152,6 @@
 		83C6F6352078189700F0C74D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				83C6F6362078189700F0C74D /* Capable.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -302,7 +298,7 @@
 				"$(SRCROOT)/../Carthage/Build/iOS/Capable.framework",
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/../$(FRAMEWORKS_FOLDER_PATH)/Capable.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Capable.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -485,6 +481,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.capable.Example";
@@ -500,6 +497,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.capable.Example";
