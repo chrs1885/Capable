@@ -1,6 +1,6 @@
 //
 //  MasterViewController.swift
-//  CapableApp
+//  Example
 //
 //  Created by Christoph Wendt on 23.03.18.
 //

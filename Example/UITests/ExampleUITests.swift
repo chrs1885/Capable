@@ -1,13 +1,14 @@
 //
-//  CapableAppUITests.swift
-//  CapableAppUITests
+//  ExampleUITests.swift
+//  ExampleUITests
 //
-//  Created by Christoph Wendt on 23.03.18.
+//  Created by Christoph Wendt on 06.04.18.
+//  Copyright © 2018 Christoph Wendt. All rights reserved.
 //
 
 import XCTest
 
-class CapableAppUITests: XCTestCase {
+class ExampleUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
