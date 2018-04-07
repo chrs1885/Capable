@@ -13,6 +13,6 @@ Capable lets you easily keep track of accessibility settings used by your app us
   s.source           = { :git => 'https://github.com/chrs1885/Capable-iOS.git', :tag => s.version }
  
   s.ios.deployment_target = '10.0'
-  s.source_files = 'Source/*.swift'
+  s.source_files = 'Source/**/*.swift'
  
 end
