@@ -15,23 +15,13 @@
 		83973ADA206FD22C0057CD4F /* UIFont+ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973AD9206FD22C0057CD4F /* UIFont+ScaledFont.swift */; };
 		83973ADD206FD3A40057CD4F /* FontMetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973ADC206FD3A40057CD4F /* FontMetricsProtocol.swift */; };
 		83973ADF206FD4080057CD4F /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973ADE206FD4080057CD4F /* FontMetrics.swift */; };
-		83973AE2206FDCA90057CD4F /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83973AE1206FDCA90057CD4F /* Cardo-Regular.ttf */; };
-		83973AE4206FDD050057CD4F /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973AE3206FDD050057CD4F /* FontsViewController.swift */; };
 		83A8EE5A206FB8410043EB34 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A8EE59206FB8410043EB34 /* Nimble.framework */; };
 		83A8EE5C206FB8660043EB34 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A8EE5B206FB8660043EB34 /* Quick.framework */; };
 		83A8EE5E206FB9DA0043EB34 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83A8EE5B206FB8660043EB34 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		83A8EE5F206FB9DA0043EB34 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 83A8EE59206FB8410043EB34 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		83B5FFB52065332900E8E83F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFB42065332900E8E83F /* AppDelegate.swift */; };
-		83B5FFB72065332900E8E83F /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFB62065332900E8E83F /* FeatureOverviewController.swift */; };
-		83B5FFBC2065332900E8E83F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B5FFBA2065332900E8E83F /* Main.storyboard */; };
-		83B5FFBE2065332900E8E83F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B5FFBD2065332900E8E83F /* Assets.xcassets */; };
-		83B5FFC12065332900E8E83F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B5FFBF2065332900E8E83F /* LaunchScreen.storyboard */; };
-		83B5FFCC2065332900E8E83F /* CapableAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFCB2065332900E8E83F /* CapableAppTests.swift */; };
-		83B5FFD72065332900E8E83F /* CapableAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFD62065332900E8E83F /* CapableAppUITests.swift */; };
 		83B5FFE42065336F00E8E83F /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE32065336F00E8E83F /* Capable.swift */; };
 		83B5FFE62065352500E8E83F /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE52065352500E8E83F /* CapableFeature.swift */; };
 		83B5FFEB206542FC00E8E83F /* StatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFEA206542FC00E8E83F /* StatusesProtocol.swift */; };
-		83B5FFEE2065495500E8E83F /* Capable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DA75E82065167600303D8F /* Capable.framework */; };
 		83DA75F72065167600303D8F /* CapableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA75F62065167600303D8F /* CapableSpec.swift */; };
 		83DA75F92065167600303D8F /* Capable.h in Headers */ = {isa = PBXBuildFile; fileRef = 83DA75EB2065167600303D8F /* Capable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83DB72462069891200384B3F /* UIContentSizeCategory+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB72452069891200384B3F /* UIContentSizeCategory+stringValue.swift */; };
@@ -39,20 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		83B5FFC82065332900E8E83F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83DA75DF2065167600303D8F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 83B5FFB12065332900E8E83F;
-			remoteInfo = "Low Vision App";
-		};
-		83B5FFD32065332900E8E83F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83DA75DF2065167600303D8F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 83B5FFB12065332900E8E83F;
-			remoteInfo = "Low Vision App";
-		};
 		83DA75F32065167600303D8F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83DA75DF2065167600303D8F /* Project object */;
@@ -85,23 +61,8 @@
 		83973AD9206FD22C0057CD4F /* UIFont+ScaledFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+ScaledFont.swift"; sourceTree = "<group>"; };
 		83973ADC206FD3A40057CD4F /* FontMetricsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProtocol.swift; sourceTree = "<group>"; };
 		83973ADE206FD4080057CD4F /* FontMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetrics.swift; sourceTree = "<group>"; };
-		83973AE1206FDCA90057CD4F /* Cardo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cardo-Regular.ttf"; sourceTree = "<group>"; };
-		83973AE3206FDD050057CD4F /* FontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
 		83A8EE59206FB8410043EB34 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		83A8EE5B206FB8660043EB34 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		83B5FFB22065332900E8E83F /* CapableApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapableApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		83B5FFB42065332900E8E83F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		83B5FFB62065332900E8E83F /* FeatureOverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureOverviewController.swift; sourceTree = "<group>"; };
-		83B5FFBB2065332900E8E83F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		83B5FFBD2065332900E8E83F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		83B5FFC02065332900E8E83F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		83B5FFC22065332900E8E83F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83B5FFC72065332900E8E83F /* Capable AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Capable AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		83B5FFCB2065332900E8E83F /* CapableAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapableAppTests.swift; sourceTree = "<group>"; };
-		83B5FFCD2065332900E8E83F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83B5FFD22065332900E8E83F /* Capable AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Capable AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		83B5FFD62065332900E8E83F /* CapableAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapableAppUITests.swift; sourceTree = "<group>"; };
-		83B5FFD82065332A00E8E83F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83B5FFE32065336F00E8E83F /* Capable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capable.swift; sourceTree = "<group>"; };
 		83B5FFE52065352500E8E83F /* CapableFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapableFeature.swift; sourceTree = "<group>"; };
 		83B5FFEA206542FC00E8E83F /* StatusesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusesProtocol.swift; sourceTree = "<group>"; };
@@ -116,28 +77,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		83B5FFAF2065332900E8E83F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				83B5FFEE2065495500E8E83F /* Capable.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83B5FFC42065332900E8E83F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83B5FFCF2065332900E8E83F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		83DA75E42065167600303D8F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,63 +152,6 @@
 			path = FontMetrics;
 			sourceTree = "<group>";
 		};
-		83973AE0206FDC8C0057CD4F /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				83973AE1206FDCA90057CD4F /* Cardo-Regular.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		83973AE5206FDD300057CD4F /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				83B5FFBF2065332900E8E83F /* LaunchScreen.storyboard */,
-				83B5FFBA2065332900E8E83F /* Main.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		83973AE6206FDD3B0057CD4F /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				83B5FFB62065332900E8E83F /* FeatureOverviewController.swift */,
-				83973AE3206FDD050057CD4F /* FontsViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		83B5FFB32065332900E8E83F /* CapableApp */ = {
-			isa = PBXGroup;
-			children = (
-				83973AE0206FDC8C0057CD4F /* Fonts */,
-				83973AE5206FDD300057CD4F /* Storyboards */,
-				83973AE6206FDD3B0057CD4F /* ViewControllers */,
-				83B5FFB42065332900E8E83F /* AppDelegate.swift */,
-				83B5FFBD2065332900E8E83F /* Assets.xcassets */,
-				83B5FFC22065332900E8E83F /* Info.plist */,
-			);
-			path = CapableApp;
-			sourceTree = "<group>";
-		};
-		83B5FFCA2065332900E8E83F /* CapableAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				83B5FFCB2065332900E8E83F /* CapableAppTests.swift */,
-				83B5FFCD2065332900E8E83F /* Info.plist */,
-			);
-			path = CapableAppTests;
-			sourceTree = "<group>";
-		};
-		83B5FFD52065332900E8E83F /* CapableAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				83B5FFD62065332900E8E83F /* CapableAppUITests.swift */,
-				83B5FFD82065332A00E8E83F /* Info.plist */,
-			);
-			path = CapableAppUITests;
-			sourceTree = "<group>";
-		};
 		83B5FFE720653AC000E8E83F /* Statuses */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,11 +173,8 @@
 		83DA75DE2065167600303D8F = {
 			isa = PBXGroup;
 			children = (
-				83DA75EA2065167600303D8F /* Capable */,
-				83DA75F52065167600303D8F /* CapableTests */,
-				83B5FFB32065332900E8E83F /* CapableApp */,
-				83B5FFCA2065332900E8E83F /* CapableAppTests */,
-				83B5FFD52065332900E8E83F /* CapableAppUITests */,
+				83DA75EA2065167600303D8F /* Source */,
+				83DA75F52065167600303D8F /* Tests */,
 				83DA75E92065167600303D8F /* Products */,
 				83B5FFEC2065449B00E8E83F /* Frameworks */,
 			);
@@ -306,14 +185,11 @@
 			children = (
 				83DA75E82065167600303D8F /* Capable.framework */,
 				83DA75F12065167600303D8F /* CapableTests.xctest */,
-				83B5FFB22065332900E8E83F /* CapableApp.app */,
-				83B5FFC72065332900E8E83F /* Capable AppTests.xctest */,
-				83B5FFD22065332900E8E83F /* Capable AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		83DA75EA2065167600303D8F /* Capable */ = {
+		83DA75EA2065167600303D8F /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				83973AD7206FD1E00057CD4F /* Fonts */,
@@ -321,16 +197,16 @@
 				83DA75EB2065167600303D8F /* Capable.h */,
 				83DA75EC2065167600303D8F /* Info.plist */,
 			);
-			path = Capable;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		83DA75F52065167600303D8F /* CapableTests */ = {
+		83DA75F52065167600303D8F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				83DA75F62065167600303D8F /* CapableSpec.swift */,
 				83DA75F82065167600303D8F /* Info.plist */,
 			);
-			path = CapableTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		83DB7243206988DC00384B3F /* Extensions */ = {
@@ -357,59 +233,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		83B5FFB12065332900E8E83F /* CapableApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 83B5FFDF2065332A00E8E83F /* Build configuration list for PBXNativeTarget "CapableApp" */;
-			buildPhases = (
-				83B5FFAE2065332900E8E83F /* Sources */,
-				83B5FFAF2065332900E8E83F /* Frameworks */,
-				83B5FFB02065332900E8E83F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CapableApp;
-			productName = "Low Vision App";
-			productReference = 83B5FFB22065332900E8E83F /* CapableApp.app */;
-			productType = "com.apple.product-type.application";
-		};
-		83B5FFC62065332900E8E83F /* Capable AppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 83B5FFE02065332A00E8E83F /* Build configuration list for PBXNativeTarget "Capable AppTests" */;
-			buildPhases = (
-				83B5FFC32065332900E8E83F /* Sources */,
-				83B5FFC42065332900E8E83F /* Frameworks */,
-				83B5FFC52065332900E8E83F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				83B5FFC92065332900E8E83F /* PBXTargetDependency */,
-			);
-			name = "Capable AppTests";
-			productName = "Low Vision AppTests";
-			productReference = 83B5FFC72065332900E8E83F /* Capable AppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		83B5FFD12065332900E8E83F /* Capable AppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 83B5FFE12065332A00E8E83F /* Build configuration list for PBXNativeTarget "Capable AppUITests" */;
-			buildPhases = (
-				83B5FFCE2065332900E8E83F /* Sources */,
-				83B5FFCF2065332900E8E83F /* Frameworks */,
-				83B5FFD02065332900E8E83F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				83B5FFD42065332900E8E83F /* PBXTargetDependency */,
-			);
-			name = "Capable AppUITests";
-			productName = "Low Vision AppUITests";
-			productReference = 83B5FFD22065332900E8E83F /* Capable AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		83DA75E72065167600303D8F /* Capable */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83DA75FC2065167600303D8F /* Build configuration list for PBXNativeTarget "Capable" */;
@@ -455,20 +278,6 @@
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				TargetAttributes = {
-					83B5FFB12065332900E8E83F = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
-					83B5FFC62065332900E8E83F = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 83B5FFB12065332900E8E83F;
-					};
-					83B5FFD12065332900E8E83F = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 83B5FFB12065332900E8E83F;
-					};
 					83DA75E72065167600303D8F = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -495,39 +304,11 @@
 			targets = (
 				83DA75E72065167600303D8F /* Capable */,
 				83DA75F02065167600303D8F /* CapableTests */,
-				83B5FFB12065332900E8E83F /* CapableApp */,
-				83B5FFC62065332900E8E83F /* Capable AppTests */,
-				83B5FFD12065332900E8E83F /* Capable AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		83B5FFB02065332900E8E83F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				83B5FFC12065332900E8E83F /* LaunchScreen.storyboard in Resources */,
-				83973AE2206FDCA90057CD4F /* Cardo-Regular.ttf in Resources */,
-				83B5FFBE2065332900E8E83F /* Assets.xcassets in Resources */,
-				83B5FFBC2065332900E8E83F /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83B5FFC52065332900E8E83F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83B5FFD02065332900E8E83F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		83DA75E62065167600303D8F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,32 +319,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		83B5FFAE2065332900E8E83F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				83B5FFB72065332900E8E83F /* FeatureOverviewController.swift in Sources */,
-				83973AE4206FDD050057CD4F /* FontsViewController.swift in Sources */,
-				83B5FFB52065332900E8E83F /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83B5FFC32065332900E8E83F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				83B5FFCC2065332900E8E83F /* CapableAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83B5FFCE2065332900E8E83F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				83B5FFD72065332900E8E83F /* CapableAppUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		83DA75E32065167600303D8F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -595,16 +350,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		83B5FFC92065332900E8E83F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 83B5FFB12065332900E8E83F /* CapableApp */;
-			targetProxy = 83B5FFC82065332900E8E83F /* PBXContainerItemProxy */;
-		};
-		83B5FFD42065332900E8E83F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 83B5FFB12065332900E8E83F /* CapableApp */;
-			targetProxy = 83B5FFD32065332900E8E83F /* PBXContainerItemProxy */;
-		};
 		83DA75F42065167600303D8F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 83DA75E72065167600303D8F /* Capable */;
@@ -612,122 +357,7 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		83B5FFBA2065332900E8E83F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				83B5FFBB2065332900E8E83F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		83B5FFBF2065332900E8E83F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				83B5FFC02065332900E8E83F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		83B5FFD92065332A00E8E83F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
-				INFOPLIST_FILE = CapableApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.CapableApp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		83B5FFDA2065332A00E8E83F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
-				INFOPLIST_FILE = CapableApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.CapableApp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		83B5FFDB2065332A00E8E83F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
-				INFOPLIST_FILE = CapableAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.CapableAppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Capable App.app/Capable App";
-			};
-			name = Debug;
-		};
-		83B5FFDC2065332A00E8E83F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
-				INFOPLIST_FILE = CapableAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.CapableAppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Capable App.app/Capable App";
-			};
-			name = Release;
-		};
-		83B5FFDD2065332A00E8E83F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
-				INFOPLIST_FILE = CapableAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.CapableAppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CapableApp;
-			};
-			name = Debug;
-		};
-		83B5FFDE2065332A00E8E83F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
-				INFOPLIST_FILE = CapableAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.CapableAppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CapableApp;
-			};
-			name = Release;
-		};
 		83DA75FA2065167600303D8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -852,7 +482,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Capable/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.Capable";
@@ -875,7 +505,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Capable/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.Capable";
@@ -927,33 +557,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		83B5FFDF2065332A00E8E83F /* Build configuration list for PBXNativeTarget "CapableApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				83B5FFD92065332A00E8E83F /* Debug */,
-				83B5FFDA2065332A00E8E83F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		83B5FFE02065332A00E8E83F /* Build configuration list for PBXNativeTarget "Capable AppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				83B5FFDB2065332A00E8E83F /* Debug */,
-				83B5FFDC2065332A00E8E83F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		83B5FFE12065332A00E8E83F /* Build configuration list for PBXNativeTarget "Capable AppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				83B5FFDD2065332A00E8E83F /* Debug */,
-				83B5FFDE2065332A00E8E83F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		83DA75E22065167600303D8F /* Build configuration list for PBXProject "Capable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

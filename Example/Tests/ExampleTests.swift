@@ -1,14 +1,15 @@
 //
-//  CapableAppTests.swift
-//  CapableAppTests
+//  ExampleTests.swift
+//  ExampleTests
 //
-//  Created by Christoph Wendt on 23.03.18.
+//  Created by Christoph Wendt on 06.04.18.
+//  Copyright © 2018 Christoph Wendt. All rights reserved.
 //
 
 import XCTest
-@testable import CapableApp
+@testable import Example
 
-class CapableAppTests: XCTestCase {
+class ExampleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
