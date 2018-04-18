@@ -22,6 +22,8 @@
 		83B5FFE42065336F00E8E83F /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE32065336F00E8E83F /* Capable.swift */; };
 		83B5FFE62065352500E8E83F /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE52065352500E8E83F /* CapableFeature.swift */; };
 		83B5FFEB206542FC00E8E83F /* StatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFEA206542FC00E8E83F /* StatusesProtocol.swift */; };
+		83BB09D22087CE4C000420C5 /* NotificationsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB09D12087CE4C000420C5 /* NotificationsMock.swift */; };
+		83BB09D42087D8F8000420C5 /* StatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB09D32087D8F8000420C5 /* StatusesMock.swift */; };
 		83DA75F72065167600303D8F /* CapableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA75F62065167600303D8F /* CapableSpec.swift */; };
 		83DA75F92065167600303D8F /* Capable.h in Headers */ = {isa = PBXBuildFile; fileRef = 83DA75EB2065167600303D8F /* Capable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83DB72462069891200384B3F /* UIContentSizeCategory+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB72452069891200384B3F /* UIContentSizeCategory+stringValue.swift */; };
@@ -66,6 +68,8 @@
 		83B5FFE32065336F00E8E83F /* Capable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capable.swift; sourceTree = "<group>"; };
 		83B5FFE52065352500E8E83F /* CapableFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapableFeature.swift; sourceTree = "<group>"; };
 		83B5FFEA206542FC00E8E83F /* StatusesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusesProtocol.swift; sourceTree = "<group>"; };
+		83BB09D12087CE4C000420C5 /* NotificationsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationsMock.swift; path = Tests/Mocks/NotificationsMock.swift; sourceTree = SOURCE_ROOT; };
+		83BB09D32087D8F8000420C5 /* StatusesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusesMock.swift; sourceTree = "<group>"; };
 		83DA75E82065167600303D8F /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DA75EB2065167600303D8F /* Capable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capable.h; sourceTree = "<group>"; };
 		83DA75EC2065167600303D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -170,6 +174,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		83BB09D02087CE29000420C5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				83BB09D12087CE4C000420C5 /* NotificationsMock.swift */,
+				83BB09D32087D8F8000420C5 /* StatusesMock.swift */,
+			);
+			name = Mocks;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		83DA75DE2065167600303D8F = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +217,7 @@
 		83DA75F52065167600303D8F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				83BB09D02087CE29000420C5 /* Mocks */,
 				83DA75F62065167600303D8F /* CapableSpec.swift */,
 				83DA75F82065167600303D8F /* Info.plist */,
 			);
@@ -325,6 +340,7 @@
 			files = (
 				83973ADF206FD4080057CD4F /* FontMetrics.swift in Sources */,
 				8382A324206EB40500E264A3 /* NotificationsProtocol.swift in Sources */,
+				83BB09D22087CE4C000420C5 /* NotificationsMock.swift in Sources */,
 				83973ADA206FD22C0057CD4F /* UIFont+ScaledFont.swift in Sources */,
 				83B5FFE42065336F00E8E83F /* Capable.swift in Sources */,
 				83DB72462069891200384B3F /* UIContentSizeCategory+stringValue.swift in Sources */,
@@ -334,6 +350,7 @@
 				8382A326206EB46E00E264A3 /* Notifications.swift in Sources */,
 				833DB9BF206C164B00C8DA02 /* Notification+Name.swift in Sources */,
 				83B5FFEB206542FC00E8E83F /* StatusesProtocol.swift in Sources */,
+				83BB09D42087D8F8000420C5 /* StatusesMock.swift in Sources */,
 				83B5FFE62065352500E8E83F /* CapableFeature.swift in Sources */,
 				8382A322206E350F00E264A3 /* Statuses.swift in Sources */,
 			);
