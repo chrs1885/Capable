@@ -7,7 +7,9 @@
 
 import Foundation
 
-public protocol NotificationsProtocol {
+protocol NotificationsProtocol {
+    init(statusesModule: StatusesProtocol)
+    
     func enableNotifications(for features: [CapableFeature])
     func disableNotifications()
 }

@@ -34,7 +34,7 @@ class CapableSpec: QuickSpec {
                     sut = Capable(with: testedFeatures)
                 }
                 
-                it("returns a status map with all features") {
+                it("returns a status map with features that were registered") {
                     let statusMap = sut!.statusMap
                     expect(statusMap.count).to(equal(testedFeatures.count))
                     expect(Array(statusMap.keys)).to(contain(testedFeatures))

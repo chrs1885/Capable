@@ -7,21 +7,21 @@
 
 import Foundation
 
-public class Statuses: StatusesProtocol {
-    public var features: [CapableFeature]
+class Statuses: StatusesProtocol {
+    var features: [CapableFeature]
     
-    public required convenience init() {
+    required convenience init() {
         self.init(with: CapableFeature.allValues())
     }
     
-    public required init(with features: [CapableFeature]) {
+    required init(with features: [CapableFeature]) {
         self.features = features
     }
 }
 
 // MARK: Statuses
 extension Statuses {
-    public var statusMap: [CapableFeature: String] {
+    var statusMap: [CapableFeature: String] {
         get {
             var featuresStatusMap = [CapableFeature: String]()
             if (self.features.contains(.AssistiveTouch)) {
@@ -76,103 +76,103 @@ extension Statuses {
         }
     }
     
-    public var isAssistiveTouchEnabled: Bool {
+    var isAssistiveTouchEnabled: Bool {
         get {
             return UIAccessibilityIsAssistiveTouchRunning()
         }
     }
     
-    public var isBoldTextEnabled: Bool {
+    var isBoldTextEnabled: Bool {
         get {
             return UIAccessibilityIsBoldTextEnabled()
         }
     }
     
-    public var isClosedCaptioningEnabled: Bool {
+    var isClosedCaptioningEnabled: Bool {
         get {
             return UIAccessibilityIsClosedCaptioningEnabled()
         }
     }
     
-    public var isDarkerSystemColorsEnabled: Bool {
+    var isDarkerSystemColorsEnabled: Bool {
         get {
             return UIAccessibilityDarkerSystemColorsEnabled()
         }
     }
     
-    public var isGrayscaleEnabled: Bool {
+    var isGrayscaleEnabled: Bool {
         get {
             return UIAccessibilityIsGrayscaleEnabled()
         }
     }
     
-    public var isGuidedAccessEnabled: Bool {
+    var isGuidedAccessEnabled: Bool {
         get {
             return UIAccessibilityIsGuidedAccessEnabled()
         }
     }
     
-    public var isInvertColorsEnabled: Bool {
+    var isInvertColorsEnabled: Bool {
         get {
             return UIAccessibilityIsInvertColorsEnabled()
         }
     }
     
-    public var largerTextCatagory: UIContentSizeCategory {
+    var largerTextCatagory: UIContentSizeCategory {
         get {
             return UIScreen.main.traitCollection.preferredContentSizeCategory
         }
     }
     
-    public var isMonoAudioEnabled: Bool {
+    var isMonoAudioEnabled: Bool {
         get {
             return UIAccessibilityIsSpeakScreenEnabled()
         }
     }
     
-    public var isShakeToUndoEnabled: Bool {
+    var isShakeToUndoEnabled: Bool {
         get {
             return UIAccessibilityIsShakeToUndoEnabled()
         }
     }
     
-    public var isSpeakScreenEnabled: Bool {
+    var isSpeakScreenEnabled: Bool {
         get {
             return UIAccessibilityIsSpeakScreenEnabled()
         }
     }
     
-    public var isSpeakSelectionEnabled: Bool {
+    var isSpeakSelectionEnabled: Bool {
         get {
             return UIAccessibilityIsSpeakSelectionEnabled()
         }
     }
     
-    public var isSwitchControlEnabled: Bool {
+    var isSwitchControlEnabled: Bool {
         get {
             return UIAccessibilityIsSwitchControlRunning()
         }
     }
     
-    public var isReduceMotionEnabled: Bool {
+    var isReduceMotionEnabled: Bool {
         get {
             return UIAccessibilityIsReduceMotionEnabled()
         }
     }
     
-    public var isReduceTransparencyEnabled: Bool {
+    var isReduceTransparencyEnabled: Bool {
         get {
             return UIAccessibilityIsReduceTransparencyEnabled()
         }
     }
     
-    public var isVoiceOverEnabled: Bool {
+    var isVoiceOverEnabled: Bool {
         get {
             return UIAccessibilityIsVoiceOverRunning()
         }
     }
     
-    public func isFeatureEnable(feature: CapableFeature) -> Bool {
+    func isFeatureEnable(feature: CapableFeature) -> Bool {
         switch feature {
         case .AssistiveTouch:
             return self.isAssistiveTouchEnabled

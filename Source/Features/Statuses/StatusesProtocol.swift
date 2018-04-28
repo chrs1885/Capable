@@ -5,7 +5,7 @@
 //  Created by Christoph Wendt on 23.03.18.
 //
 
-public protocol StatusesProtocol {
+protocol StatusesProtocol {
     var features: [CapableFeature] { get set }
     var statusMap: [CapableFeature: String] { get }
     
