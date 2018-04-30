@@ -23,7 +23,7 @@ public enum CapableFeature: String {
     case SwitchControl
     case VoiceOver
     
-    static func allValues() -> [CapableFeature] {
+    public static func allValues() -> [CapableFeature] {
         return [
             .AssistiveTouch,
             .BoldText,

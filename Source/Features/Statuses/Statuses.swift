@@ -17,64 +17,6 @@ class Statuses: StatusesProtocol {
     required init(with features: [CapableFeature]) {
         self.features = features
     }
-}
-
-// MARK: Statuses
-extension Statuses {
-    var statusMap: [CapableFeature: String] {
-        get {
-            var featuresStatusMap = [CapableFeature: String]()
-            if (self.features.contains(.AssistiveTouch)) {
-                featuresStatusMap[.AssistiveTouch] = self.isAssistiveTouchEnabled.statusString
-            }
-            if (self.features.contains(.BoldText)) {
-                featuresStatusMap[.BoldText] = self.isBoldTextEnabled.statusString
-            }
-            if (self.features.contains(.ClosedCaptioning)) {
-                featuresStatusMap[.ClosedCaptioning] = self.isClosedCaptioningEnabled.statusString
-            }
-            if (self.features.contains(.DarkerSystemColors)) {
-                featuresStatusMap[.DarkerSystemColors] = self.isDarkerSystemColorsEnabled.statusString
-            }
-            if (self.features.contains(.Grayscale)) {
-                featuresStatusMap[.Grayscale] = self.isGrayscaleEnabled.statusString
-            }
-            if (self.features.contains(.GuidedAccess)) {
-                featuresStatusMap[.GuidedAccess] = self.isGuidedAccessEnabled.statusString
-            }
-            if (self.features.contains(.InvertColors)) {
-                featuresStatusMap[.InvertColors] = self.isInvertColorsEnabled.statusString
-            }
-            if (self.features.contains(.LargerText)) {
-                featuresStatusMap[.LargerText] = self.largerTextCatagory.stringValue
-            }
-            if (self.features.contains(.MonoAudio)) {
-                featuresStatusMap[.MonoAudio] = self.isMonoAudioEnabled.statusString
-            }
-            if (self.features.contains(.ShakeToUndo)) {
-                featuresStatusMap[.ShakeToUndo] = self.isShakeToUndoEnabled.statusString
-            }
-            if (self.features.contains(.SpeakScreen)) {
-                featuresStatusMap[.SpeakScreen] = self.isSpeakScreenEnabled.statusString
-            }
-            if (self.features.contains(.SpeakSelection)) {
-                featuresStatusMap[.SpeakSelection] = self.isSpeakSelectionEnabled.statusString
-            }
-            if (self.features.contains(.SwitchControl)) {
-                featuresStatusMap[.SwitchControl] = self.isSwitchControlEnabled.statusString
-            }
-            if (self.features.contains(.ReduceMotion)) {
-                featuresStatusMap[.ReduceMotion] = self.isReduceMotionEnabled.statusString
-            }
-            if (self.features.contains(.ReduceTransparency)) {
-                featuresStatusMap[.ReduceTransparency] = self.isReduceTransparencyEnabled.statusString
-            }
-            if (self.features.contains(.VoiceOver)) {
-                featuresStatusMap[.VoiceOver] = self.isVoiceOverEnabled.statusString
-            }
-            return featuresStatusMap
-        }
-    }
     
     var isAssistiveTouchEnabled: Bool {
         get {
@@ -169,6 +111,64 @@ extension Statuses {
     var isVoiceOverEnabled: Bool {
         get {
             return UIAccessibilityIsVoiceOverRunning()
+        }
+    }
+}
+
+// MARK: Statuses
+extension Statuses {
+    var statusMap: [CapableFeature: String] {
+        get {
+            var featuresStatusMap = [CapableFeature: String]()
+            if (self.features.contains(.AssistiveTouch)) {
+                featuresStatusMap[.AssistiveTouch] = self.isAssistiveTouchEnabled.statusString
+            }
+            if (self.features.contains(.BoldText)) {
+                featuresStatusMap[.BoldText] = self.isBoldTextEnabled.statusString
+            }
+            if (self.features.contains(.ClosedCaptioning)) {
+                featuresStatusMap[.ClosedCaptioning] = self.isClosedCaptioningEnabled.statusString
+            }
+            if (self.features.contains(.DarkerSystemColors)) {
+                featuresStatusMap[.DarkerSystemColors] = self.isDarkerSystemColorsEnabled.statusString
+            }
+            if (self.features.contains(.Grayscale)) {
+                featuresStatusMap[.Grayscale] = self.isGrayscaleEnabled.statusString
+            }
+            if (self.features.contains(.GuidedAccess)) {
+                featuresStatusMap[.GuidedAccess] = self.isGuidedAccessEnabled.statusString
+            }
+            if (self.features.contains(.InvertColors)) {
+                featuresStatusMap[.InvertColors] = self.isInvertColorsEnabled.statusString
+            }
+            if (self.features.contains(.LargerText)) {
+                featuresStatusMap[.LargerText] = self.largerTextCatagory.stringValue
+            }
+            if (self.features.contains(.MonoAudio)) {
+                featuresStatusMap[.MonoAudio] = self.isMonoAudioEnabled.statusString
+            }
+            if (self.features.contains(.ShakeToUndo)) {
+                featuresStatusMap[.ShakeToUndo] = self.isShakeToUndoEnabled.statusString
+            }
+            if (self.features.contains(.SpeakScreen)) {
+                featuresStatusMap[.SpeakScreen] = self.isSpeakScreenEnabled.statusString
+            }
+            if (self.features.contains(.SpeakSelection)) {
+                featuresStatusMap[.SpeakSelection] = self.isSpeakSelectionEnabled.statusString
+            }
+            if (self.features.contains(.SwitchControl)) {
+                featuresStatusMap[.SwitchControl] = self.isSwitchControlEnabled.statusString
+            }
+            if (self.features.contains(.ReduceMotion)) {
+                featuresStatusMap[.ReduceMotion] = self.isReduceMotionEnabled.statusString
+            }
+            if (self.features.contains(.ReduceTransparency)) {
+                featuresStatusMap[.ReduceTransparency] = self.isReduceTransparencyEnabled.statusString
+            }
+            if (self.features.contains(.VoiceOver)) {
+                featuresStatusMap[.VoiceOver] = self.isVoiceOverEnabled.statusString
+            }
+            return featuresStatusMap
         }
     }
     

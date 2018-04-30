@@ -19,23 +19,27 @@ public struct Capable {
     }
     public var notificationsEnabled: Bool = false {
         didSet {
-            if self.notificationsEnabled != oldValue {
-                self.notificationsEnabled ?
+            if (notificationsEnabled != oldValue) {
+                notificationsEnabled ?
                     self.notificationsModule.enableNotifications(for: self.features) :
                     self.notificationsModule.disableNotifications()
             }
         }
     }
     
-    public init() {
-        self.init(with: CapableFeature.allValues())
+    public init(with features: [CapableFeature] = CapableFeature.allValues()) {
+        let statusesModule = Statuses(with: features)
+        let notificationsModule = Notifications(statusesModule: statusesModule)
+        self.init(with: statusesModule, notificationModule: notificationsModule, features: features)
     }
     
-    public init(with features: [CapableFeature]) {
+    init(with statusesModule: StatusesProtocol, notificationModule: NotificationsProtocol, features: [CapableFeature] = CapableFeature.allValues()) {
         self.features = features
-        self.statusesModule = Statuses(with: self.features)
-        self.notificationsModule = Notifications(statusesModule: statusesModule)
-        self.notificationsModule.enableNotifications(for: self.features)
+        self.statusesModule = statusesModule
+        self.notificationsModule = notificationModule
+        defer {
+            self.notificationsEnabled = true
+        }
     }
     
     public func isFeatureEnable(feature: CapableFeature) -> Bool {
