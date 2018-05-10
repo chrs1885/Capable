@@ -30,10 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		83C6F5DC20780FE700F0C74D /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83C6F5DC20780FE700F0C74D /* Example-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C6F5F420780FE700F0C74D /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
 		83C6F5F620780FE700F0C74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83C6F5FB20780FE700F0C74D /* ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83C6F5FB20780FE700F0C74D /* Example-iOS-UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Example-iOS-UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C6F5FF20780FE700F0C74D /* ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITests.swift; sourceTree = "<group>"; };
 		83C6F60120780FE700F0C74D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83C6F6212078138D00F0C74D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,8 +81,8 @@
 		83C6F5DD20780FE700F0C74D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83C6F5DC20780FE700F0C74D /* Example.app */,
-				83C6F5FB20780FE700F0C74D /* ExampleUITests.xctest */,
+				83C6F5DC20780FE700F0C74D /* Example-iOS.app */,
+				83C6F5FB20780FE700F0C74D /* Example-iOS-UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,9 +146,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		83C6F5DB20780FE700F0C74D /* Example */ = {
+		83C6F5DB20780FE700F0C74D /* Example-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83C6F60420780FE700F0C74D /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = 83C6F60420780FE700F0C74D /* Build configuration list for PBXNativeTarget "Example-iOS" */;
 			buildPhases = (
 				83C6F5D820780FE700F0C74D /* Sources */,
 				83C6F5D920780FE700F0C74D /* Frameworks */,
@@ -158,14 +158,14 @@
 			);
 			dependencies = (
 			);
-			name = Example;
+			name = "Example-iOS";
 			productName = Example;
-			productReference = 83C6F5DC20780FE700F0C74D /* Example.app */;
+			productReference = 83C6F5DC20780FE700F0C74D /* Example-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		83C6F5FA20780FE700F0C74D /* ExampleUITests */ = {
+		83C6F5FA20780FE700F0C74D /* Example-iOS-UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83C6F60A20780FE700F0C74D /* Build configuration list for PBXNativeTarget "ExampleUITests" */;
+			buildConfigurationList = 83C6F60A20780FE700F0C74D /* Build configuration list for PBXNativeTarget "Example-iOS-UITests" */;
 			buildPhases = (
 				83C6F5F720780FE700F0C74D /* Sources */,
 				83C6F5F820780FE700F0C74D /* Frameworks */,
@@ -176,9 +176,9 @@
 			dependencies = (
 				83C6F5FD20780FE700F0C74D /* PBXTargetDependency */,
 			);
-			name = ExampleUITests;
+			name = "Example-iOS-UITests";
 			productName = ExampleUITests;
-			productReference = 83C6F5FB20780FE700F0C74D /* ExampleUITests.xctest */;
+			productReference = 83C6F5FB20780FE700F0C74D /* Example-iOS-UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -215,8 +215,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83C6F5DB20780FE700F0C74D /* Example */,
-				83C6F5FA20780FE700F0C74D /* ExampleUITests */,
+				83C6F5DB20780FE700F0C74D /* Example-iOS */,
+				83C6F5FA20780FE700F0C74D /* Example-iOS-UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -267,7 +267,7 @@
 /* Begin PBXTargetDependency section */
 		83C6F5FD20780FE700F0C74D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 83C6F5DB20780FE700F0C74D /* Example */;
+			target = 83C6F5DB20780FE700F0C74D /* Example-iOS */;
 			targetProxy = 83C6F5FC20780FE700F0C74D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -408,7 +408,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.capable.Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -424,7 +424,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.capable.Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,7 +439,7 @@
 				DEVELOPMENT_TEAM = P6TTE9K9RG;
 				INFOPLIST_FILE = UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.capable.ExampleUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,7 +455,7 @@
 				DEVELOPMENT_TEAM = P6TTE9K9RG;
 				INFOPLIST_FILE = UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.capable.ExampleUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -475,7 +475,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83C6F60420780FE700F0C74D /* Build configuration list for PBXNativeTarget "Example" */ = {
+		83C6F60420780FE700F0C74D /* Build configuration list for PBXNativeTarget "Example-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83C6F60520780FE700F0C74D /* Debug */,
@@ -484,7 +484,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83C6F60A20780FE700F0C74D /* Build configuration list for PBXNativeTarget "ExampleUITests" */ = {
+		83C6F60A20780FE700F0C74D /* Build configuration list for PBXNativeTarget "Example-iOS-UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83C6F60B20780FE700F0C74D /* Debug */,
