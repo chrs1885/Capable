@@ -9,4 +9,6 @@ import Foundation
 
 protocol FontMetricsProtocol {
     func scaledFont(for font: UIFont) -> UIFont
+    func scaledFontPriorIOS11(for font: UIFont) -> UIFont
+    func scaledFontSinceIOS11(for font: UIFont) -> UIFont
 }

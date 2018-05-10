@@ -5,8 +5,7 @@
 //  Created by Christoph Wendt on 23.03.18.
 //
 
-public protocol StatusesProtocol {
-    var features: [CapableFeature] { get set }
+protocol StatusesProtocol {
     var statusMap: [CapableFeature: String] { get }
     
     #if os(iOS) || os(tvOS)
