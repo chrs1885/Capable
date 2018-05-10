@@ -11,6 +11,7 @@
 		831B4EF820A4A25A00F1BB94 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F0479920A49F6900C4CA60 /* Nimble.framework */; };
 		831B4EF920A4A25A00F1BB94 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A8EE5B206FB8660043EB34 /* Quick.framework */; };
 		831B4EFA20A4A25A00F1BB94 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A8EE59206FB8410043EB34 /* Nimble.framework */; };
+		831B4F2F20A4EEA700F1BB94 /* StatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B4F2E20A4EEA700F1BB94 /* StatusesMock.swift */; };
 		833DB9BF206C164B00C8DA02 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9BE206C164B00C8DA02 /* Notification+Name.swift */; };
 		833DB9C2206C188B00C8DA02 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */; };
 		8382A322206E350F00E264A3 /* Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A321206E350F00E264A3 /* Statuses.swift */; };
@@ -23,7 +24,6 @@
 		83B5FFE62065352500E8E83F /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE52065352500E8E83F /* CapableFeature.swift */; };
 		83B5FFEB206542FC00E8E83F /* StatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFEA206542FC00E8E83F /* StatusesProtocol.swift */; };
 		83BB09D22087CE4C000420C5 /* NotificationsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB09D12087CE4C000420C5 /* NotificationsMock.swift */; };
-		83BB09D42087D8F8000420C5 /* StatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB09D32087D8F8000420C5 /* StatusesMock.swift */; };
 		83CAA3F82097BEEC003F231D /* OsVersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3F72097BEEC003F231D /* OsVersionProvider.swift */; };
 		83CAA3FA2097BF9B003F231D /* OsVersionProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3F92097BF9B003F231D /* OsVersionProviderProtocol.swift */; };
 		83CAA3FC2097C216003F231D /* OsVersionProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3FB2097C216003F231D /* OsVersionProviderMock.swift */; };
@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		831B4F2E20A4EEA700F1BB94 /* StatusesMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusesMock.swift; path = Tests/Mocks/StatusesMock.swift; sourceTree = SOURCE_ROOT; };
 		833DB9BE206C164B00C8DA02 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 		833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatus.swift; sourceTree = "<group>"; };
 		8382A321206E350F00E264A3 /* Statuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statuses.swift; sourceTree = "<group>"; };
@@ -59,12 +60,10 @@
 		83B5FFE52065352500E8E83F /* CapableFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapableFeature.swift; sourceTree = "<group>"; };
 		83B5FFEA206542FC00E8E83F /* StatusesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusesProtocol.swift; sourceTree = "<group>"; };
 		83BB09D12087CE4C000420C5 /* NotificationsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationsMock.swift; path = Tests/Mocks/NotificationsMock.swift; sourceTree = SOURCE_ROOT; };
-		83BB09D32087D8F8000420C5 /* StatusesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatusesMock.swift; path = ../Mocks/StatusesMock.swift; sourceTree = "<group>"; };
 		83CAA3F72097BEEC003F231D /* OsVersionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OsVersionProvider.swift; sourceTree = "<group>"; };
 		83CAA3F92097BF9B003F231D /* OsVersionProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OsVersionProviderProtocol.swift; sourceTree = "<group>"; };
 		83CAA3FB2097C216003F231D /* OsVersionProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OsVersionProviderMock.swift; path = Tests/Mocks/OsVersionProviderMock.swift; sourceTree = SOURCE_ROOT; };
 		83CAA3FD2097C2D5003F231D /* FontMetricsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FontMetricsMock.swift; path = Tests/Mocks/FontMetricsMock.swift; sourceTree = SOURCE_ROOT; };
-		83CAA40120990AB5003F231D /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		83CAA40120990AB5003F231D /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		83DA75E82065167600303D8F /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DA75EB2065167600303D8F /* Capable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capable.h; sourceTree = "<group>"; };
@@ -185,7 +184,7 @@
 				83CAA3FD2097C2D5003F231D /* FontMetricsMock.swift */,
 				83BB09D12087CE4C000420C5 /* NotificationsMock.swift */,
 				83CAA3FB2097C216003F231D /* OsVersionProviderMock.swift */,
-				83BB09D32087D8F8000420C5 /* StatusesMock.swift */,
+				831B4F2E20A4EEA700F1BB94 /* StatusesMock.swift */,
 			);
 			name = Mocks;
 			path = "New Group";
@@ -369,6 +368,7 @@
 				83B5FFE42065336F00E8E83F /* Capable.swift in Sources */,
 				83CAA3FA2097BF9B003F231D /* OsVersionProviderProtocol.swift in Sources */,
 				83CAA3F82097BEEC003F231D /* OsVersionProvider.swift in Sources */,
+				831B4F2F20A4EEA700F1BB94 /* StatusesMock.swift in Sources */,
 				83DB72462069891200384B3F /* UIContentSizeCategory+stringValue.swift in Sources */,
 				83973ADD206FD3A40057CD4F /* FontMetricsProtocol.swift in Sources */,
 				83DB724820698EB400384B3F /* Bool+statusString.swift in Sources */,
@@ -376,7 +376,6 @@
 				8382A326206EB46E00E264A3 /* Notifications.swift in Sources */,
 				833DB9BF206C164B00C8DA02 /* Notification+Name.swift in Sources */,
 				83B5FFEB206542FC00E8E83F /* StatusesProtocol.swift in Sources */,
-				83BB09D42087D8F8000420C5 /* StatusesMock.swift in Sources */,
 				83CAA3FC2097C216003F231D /* OsVersionProviderMock.swift in Sources */,
 				83CAA3FE2097C2D5003F231D /* FontMetricsMock.swift in Sources */,
 				83B5FFE62065352500E8E83F /* CapableFeature.swift in Sources */,
