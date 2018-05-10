@@ -9,6 +9,7 @@ public protocol StatusesProtocol {
     var features: [CapableFeature] { get set }
     var statusMap: [CapableFeature: String] { get }
     
+    #if os(iOS) || os(tvOS)
     var isAssistiveTouchEnabled: Bool { get }
     var isBoldTextEnabled: Bool { get }
     var isClosedCaptioningEnabled: Bool { get }
@@ -18,12 +19,14 @@ public protocol StatusesProtocol {
     var isInvertColorsEnabled: Bool { get }
     var largerTextCatagory: UIContentSizeCategory { get }
     var isMonoAudioEnabled: Bool { get }
-    var isReduceMotionEnabled: Bool { get }
     var isReduceTransparencyEnabled: Bool { get }
     var isShakeToUndoEnabled: Bool { get }
     var isSpeakScreenEnabled: Bool { get }
     var isSpeakSelectionEnabled: Bool { get }
     var isSwitchControlEnabled: Bool { get }
+    #endif
+    
+    var isReduceMotionEnabled: Bool { get }
     var isVoiceOverEnabled: Bool { get }
     
     init()

@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(watchOS)
+    import WatchKit
+#endif
 
 public class Notifications: NotificationsProtocol {
     private(set) var statusesModule: StatusesProtocol
@@ -18,58 +21,67 @@ public class Notifications: NotificationsProtocol {
 // MARK: Register Observers
 extension Notifications {
     public func enableNotifications(for features: [CapableFeature]) {
-        if features.contains(.AssistiveTouch) {
-            addObserver(for: .UIAccessibilityAssistiveTouchStatusDidChange, selector: #selector(self.assistiveTouchStatusChanged))
-        }
-        if features.contains(.BoldText) {
-            addObserver(for: .UIAccessibilityBoldTextStatusDidChange, selector: #selector(self.boldTextStatusChanged))
-        }
-        if features.contains(.ClosedCaptioning) {
-            addObserver(for: .UIAccessibilityClosedCaptioningStatusDidChange, selector: #selector(self.closedCaptioningStatusChanged))
-        }
-        if features.contains(.DarkerSystemColors) {
-            addObserver(for: .UIAccessibilityDarkerSystemColorsStatusDidChange, selector: #selector(self.darkerSystemColorsStatusChanged))
-        }
-        if features.contains(.Grayscale) {
-            addObserver(for: .UIAccessibilityGrayscaleStatusDidChange, selector: #selector(self.grayscaleStatusChanged))
-        }
-        if features.contains(.GuidedAccess) {
-            addObserver(for: .UIAccessibilityGuidedAccessStatusDidChange, selector: #selector(self.guidedAccessStatusChanged))
-        }
-        if features.contains(.InvertColors) {
-            addObserver(for: .UIAccessibilityInvertColorsStatusDidChange, selector: #selector(self.invertColorsStatusChanged))
-        }
-        if features.contains(.LargerText) {
-            addObserver(for: .UIContentSizeCategoryDidChange, selector: #selector(self.largerTextStatusChanged))
-        }
-        if features.contains(.MonoAudio) {
-            addObserver(for: .UIAccessibilityMonoAudioStatusDidChange, selector: #selector(self.monoAudioStatusChanged))
-        }
-        if features.contains(.ShakeToUndo) {
-            addObserver(for: .UIAccessibilityShakeToUndoDidChange, selector: #selector(self.shakeToUndoStatusChanged))
-        }
-        if features.contains(.SpeakScreen) {
-            addObserver(for: .UIAccessibilitySpeakScreenStatusDidChange, selector: #selector(self.speakScreenStatusChanged))
-        }
-        if features.contains(.SpeakSelection) {
-            addObserver(for: .UIAccessibilitySpeakSelectionStatusDidChange, selector: #selector(self.speakSelectionStatusChanged))
-        }
-        if features.contains(.SwitchControl) {
-            addObserver(for: .UIAccessibilitySwitchControlStatusDidChange, selector: #selector(self.switchControlStatusChanged))
-        }
-        if features.contains(.ReduceMotion) {
-            addObserver(for: .UIAccessibilityReduceMotionStatusDidChange, selector: #selector(self.reduceMotionStatusChanged))
-        }
-        if features.contains(.ReduceTransparency) {
-            addObserver(for: .UIAccessibilityReduceTransparencyStatusDidChange, selector: #selector(self.reduceTransparencyStatusChanged))
-        }
-        if features.contains(.VoiceOver) {
-            if #available(iOS 11.0, *) {
-                addObserver(for: .UIAccessibilityVoiceOverStatusDidChange, selector: #selector(self.voiceOverStatusChanged))
-            } else {
-                addObserver(for: Notification.Name(UIAccessibilityVoiceOverStatusChanged), selector: #selector(self.voiceOverStatusChanged))
+        #if os(iOS) || os(tvOS)
+            if features.contains(.AssistiveTouch) {
+                addObserver(for: .UIAccessibilityAssistiveTouchStatusDidChange, selector: #selector(self.assistiveTouchStatusChanged))
             }
-        }
+            if features.contains(.BoldText) {
+                addObserver(for: .UIAccessibilityBoldTextStatusDidChange, selector: #selector(self.boldTextStatusChanged))
+            }
+            if features.contains(.ClosedCaptioning) {
+                addObserver(for: .UIAccessibilityClosedCaptioningStatusDidChange, selector: #selector(self.closedCaptioningStatusChanged))
+            }
+            if features.contains(.DarkerSystemColors) {
+                addObserver(for: .UIAccessibilityDarkerSystemColorsStatusDidChange, selector: #selector(self.darkerSystemColorsStatusChanged))
+            }
+            if features.contains(.Grayscale) {
+                addObserver(for: .UIAccessibilityGrayscaleStatusDidChange, selector: #selector(self.grayscaleStatusChanged))
+            }
+            if features.contains(.GuidedAccess) {
+                addObserver(for: .UIAccessibilityGuidedAccessStatusDidChange, selector: #selector(self.guidedAccessStatusChanged))
+            }
+            if features.contains(.InvertColors) {
+                addObserver(for: .UIAccessibilityInvertColorsStatusDidChange, selector: #selector(self.invertColorsStatusChanged))
+            }
+            if features.contains(.LargerText) {
+                addObserver(for: .UIContentSizeCategoryDidChange, selector: #selector(self.largerTextStatusChanged))
+            }
+            if features.contains(.MonoAudio) {
+                addObserver(for: .UIAccessibilityMonoAudioStatusDidChange, selector: #selector(self.monoAudioStatusChanged))
+            }
+            if features.contains(.ShakeToUndo) {
+                addObserver(for: .UIAccessibilityShakeToUndoDidChange, selector: #selector(self.shakeToUndoStatusChanged))
+            }
+            if features.contains(.SpeakScreen) {
+                addObserver(for: .UIAccessibilitySpeakScreenStatusDidChange, selector: #selector(self.speakScreenStatusChanged))
+            }
+            if features.contains(.SpeakSelection) {
+                addObserver(for: .UIAccessibilitySpeakSelectionStatusDidChange, selector: #selector(self.speakSelectionStatusChanged))
+            }
+            if features.contains(.SwitchControl) {
+                addObserver(for: .UIAccessibilitySwitchControlStatusDidChange, selector: #selector(self.switchControlStatusChanged))
+            }
+            if features.contains(.ReduceMotion) {
+                addObserver(for: .UIAccessibilityReduceMotionStatusDidChange, selector: #selector(self.reduceMotionStatusChanged))
+            }
+            if features.contains(.ReduceTransparency) {
+                addObserver(for: .UIAccessibilityReduceTransparencyStatusDidChange, selector: #selector(self.reduceTransparencyStatusChanged))
+            }
+            if features.contains(.VoiceOver) {
+                if #available(iOS 11.0, tvOS 11.0, *) {
+                    addObserver(for: .UIAccessibilityVoiceOverStatusDidChange, selector: #selector(self.voiceOverStatusChanged))
+                } else {
+                    addObserver(for: Notification.Name(UIAccessibilityVoiceOverStatusChanged), selector: #selector(self.voiceOverStatusChanged))
+                }
+            }
+        #elseif os(watchOS)
+            if #available(watchOS 4.0, *), features.contains(.ReduceMotion) {
+                addObserver(for: .WKAccessibilityReduceMotionStatusDidChange, selector: #selector(self.reduceMotionStatusChanged))
+            }
+            if features.contains(.VoiceOver) {
+                addObserver(for: NSNotification.Name(rawValue: WKAccessibilityVoiceOverStatusChanged), selector: #selector(self.voiceOverStatusChanged))
+            }
+        #endif
     }
 }
 
@@ -87,6 +99,7 @@ extension Notifications {
         NotificationCenter.default.removeObserver(self)
     }
     
+    #if os(iOS) || os(tvOS)
     @objc private func assistiveTouchStatusChanged(notification: NSNotification) {
         postNotification(with: .AssistiveTouch, statusString: self.statusesModule.isAssistiveTouchEnabled.statusString)
     }
@@ -139,12 +152,13 @@ extension Notifications {
         self.postNotification(with: .SwitchControl, statusString: self.statusesModule.isSwitchControlEnabled.statusString)
     }
     
-    @objc private func reduceMotionStatusChanged(notification: NSNotification) {
-        self.postNotification(with: .ReduceMotion, statusString: self.statusesModule.isReduceMotionEnabled.statusString)
-    }
-    
     @objc private func reduceTransparencyStatusChanged(notification: NSNotification) {
         self.postNotification(with: .ReduceTransparency, statusString: self.statusesModule.isReduceTransparencyEnabled.statusString)
+    }
+    #endif
+
+    @objc private func reduceMotionStatusChanged(notification: NSNotification) {
+        self.postNotification(with: .ReduceMotion, statusString: self.statusesModule.isReduceMotionEnabled.statusString)
     }
     
     @objc private func voiceOverStatusChanged(notification: NSNotification) {

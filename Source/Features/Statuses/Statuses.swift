@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(watchOS)
+import WatchKit
+#endif
 
 public class Statuses: StatusesProtocol {
     public var features: [CapableFeature]
@@ -24,6 +27,8 @@ extension Statuses {
     public var statusMap: [CapableFeature: String] {
         get {
             var featuresStatusMap = [CapableFeature: String]()
+            
+            #if os(iOS) || os(tvOS)
             if (self.features.contains(.AssistiveTouch)) {
                 featuresStatusMap[.AssistiveTouch] = self.isAssistiveTouchEnabled.statusString
             }
@@ -51,6 +56,9 @@ extension Statuses {
             if (self.features.contains(.MonoAudio)) {
                 featuresStatusMap[.MonoAudio] = self.isMonoAudioEnabled.statusString
             }
+            if (self.features.contains(.ReduceTransparency)) {
+                featuresStatusMap[.ReduceTransparency] = self.isReduceTransparencyEnabled.statusString
+            }
             if (self.features.contains(.ShakeToUndo)) {
                 featuresStatusMap[.ShakeToUndo] = self.isShakeToUndoEnabled.statusString
             }
@@ -63,11 +71,10 @@ extension Statuses {
             if (self.features.contains(.SwitchControl)) {
                 featuresStatusMap[.SwitchControl] = self.isSwitchControlEnabled.statusString
             }
+            #endif
+            
             if (self.features.contains(.ReduceMotion)) {
                 featuresStatusMap[.ReduceMotion] = self.isReduceMotionEnabled.statusString
-            }
-            if (self.features.contains(.ReduceTransparency)) {
-                featuresStatusMap[.ReduceTransparency] = self.isReduceTransparencyEnabled.statusString
             }
             if (self.features.contains(.VoiceOver)) {
                 featuresStatusMap[.VoiceOver] = self.isVoiceOverEnabled.statusString
@@ -76,6 +83,7 @@ extension Statuses {
         }
     }
     
+    #if os(iOS) || os(tvOS)
     public var isAssistiveTouchEnabled: Bool {
         get {
             return UIAccessibilityIsAssistiveTouchRunning()
@@ -117,46 +125,16 @@ extension Statuses {
             return UIAccessibilityIsInvertColorsEnabled()
         }
     }
-    
+
     public var largerTextCatagory: UIContentSizeCategory {
         get {
             return UIScreen.main.traitCollection.preferredContentSizeCategory
         }
     }
-    
+
     public var isMonoAudioEnabled: Bool {
         get {
             return UIAccessibilityIsSpeakScreenEnabled()
-        }
-    }
-    
-    public var isShakeToUndoEnabled: Bool {
-        get {
-            return UIAccessibilityIsShakeToUndoEnabled()
-        }
-    }
-    
-    public var isSpeakScreenEnabled: Bool {
-        get {
-            return UIAccessibilityIsSpeakScreenEnabled()
-        }
-    }
-    
-    public var isSpeakSelectionEnabled: Bool {
-        get {
-            return UIAccessibilityIsSpeakSelectionEnabled()
-        }
-    }
-    
-    public var isSwitchControlEnabled: Bool {
-        get {
-            return UIAccessibilityIsSwitchControlRunning()
-        }
-    }
-    
-    public var isReduceMotionEnabled: Bool {
-        get {
-            return UIAccessibilityIsReduceMotionEnabled()
         }
     }
     
@@ -165,14 +143,58 @@ extension Statuses {
             return UIAccessibilityIsReduceTransparencyEnabled()
         }
     }
+
+    public var isShakeToUndoEnabled: Bool {
+        get {
+            return UIAccessibilityIsShakeToUndoEnabled()
+        }
+    }
+
+    public var isSpeakScreenEnabled: Bool {
+        get {
+            return UIAccessibilityIsSpeakScreenEnabled()
+        }
+    }
+
+    public var isSpeakSelectionEnabled: Bool {
+        get {
+            return UIAccessibilityIsSpeakSelectionEnabled()
+        }
+    }
+
+    public var isSwitchControlEnabled: Bool {
+        get {
+            return UIAccessibilityIsSwitchControlRunning()
+        }
+    }
+    #endif
+    
+    public var isReduceMotionEnabled: Bool {
+        get {
+            #if os(watchOS)
+                if #available(watchOS 4.0, *) {
+                    return WKAccessibilityIsReduceMotionEnabled()
+                } else {
+                    return false
+                }
+            #else
+                return UIAccessibilityIsReduceMotionEnabled()
+            #endif
+        }
+    }
     
     public var isVoiceOverEnabled: Bool {
         get {
-            return UIAccessibilityIsVoiceOverRunning()
+            #if os(watchOS)
+                return WKAccessibilityIsVoiceOverRunning()
+            #else
+                return UIAccessibilityIsVoiceOverRunning()
+            #endif
         }
     }
     
     public func isFeatureEnable(feature: CapableFeature) -> Bool {
+        #if os(iOS) || os(tvOS)
         switch feature {
         case .AssistiveTouch:
             return self.isAssistiveTouchEnabled
@@ -207,6 +229,14 @@ extension Statuses {
         case .VoiceOver:
             return self.isVoiceOverEnabled
         }
+        #elseif os(watchOS)
+        switch feature {
+        case .ReduceMotion:
+            return self.isReduceMotionEnabled
+        case .VoiceOver:
+            return self.isVoiceOverEnabled
+        }
+        #endif
     }
 }
 

@@ -7,6 +7,7 @@
 
 import Foundation
 
+#if os(iOS) || os(tvOS)
 extension UIContentSizeCategory {
     var stringValue: String {
         get {
@@ -41,3 +42,4 @@ extension UIContentSizeCategory {
         }
     }
 }
+#endif
