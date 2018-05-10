@@ -35,7 +35,7 @@ class FontMetrics: FontMetricsProtocol {
     }
     
     func scaledFontSinceIOS11(for font: UIFont) -> UIFont {
-        if #available(iOS 11.0, *) {
+        if #available(iOS 11.0, tvOS 11.0, watchOS 4.0, *) {
             let fontMetrics = UIFontMetrics.default
             return fontMetrics.scaledFont(for: font)
         }

@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if os(watchOS)
+import WatchKit
+#endif
 
 class Statuses: StatusesProtocol {
     var features: [CapableFeature]
@@ -18,7 +21,8 @@ class Statuses: StatusesProtocol {
         self.features = features
     }
     
-    var isAssistiveTouchEnabled: Bool {
+    #if os(iOS) || os(tvOS)
+   var isAssistiveTouchEnabled: Bool {
         get {
             return UIAccessibilityIsAssistiveTouchRunning()
         }
@@ -95,22 +99,29 @@ class Statuses: StatusesProtocol {
             return UIAccessibilityIsSwitchControlRunning()
         }
     }
+    #endif
     
     var isReduceMotionEnabled: Bool {
         get {
-            return UIAccessibilityIsReduceMotionEnabled()
+            #if os(watchOS)
+                if #available(watchOS 4.0, *) {
+                    return WKAccessibilityIsReduceMotionEnabled()
+                } else {
+                    return false
+                }
+            #else
+                return UIAccessibilityIsReduceMotionEnabled()
+            #endif
         }
     }
     
-    var isReduceTransparencyEnabled: Bool {
+   var isVoiceOverEnabled: Bool {
         get {
-            return UIAccessibilityIsReduceTransparencyEnabled()
-        }
-    }
-    
-    var isVoiceOverEnabled: Bool {
-        get {
-            return UIAccessibilityIsVoiceOverRunning()
+            #if os(watchOS)
+                return WKAccessibilityIsVoiceOverRunning()
+            #else
+                return UIAccessibilityIsVoiceOverRunning()
+            #endif
         }
     }
 }
@@ -120,6 +131,7 @@ extension Statuses {
     var statusMap: [CapableFeature: String] {
         get {
             var featuresStatusMap = [CapableFeature: String]()
+            #if os(iOS) || os(tvOS)
             if (self.features.contains(.AssistiveTouch)) {
                 featuresStatusMap[.AssistiveTouch] = self.isAssistiveTouchEnabled.statusString
             }
@@ -147,6 +159,9 @@ extension Statuses {
             if (self.features.contains(.MonoAudio)) {
                 featuresStatusMap[.MonoAudio] = self.isMonoAudioEnabled.statusString
             }
+            if (self.features.contains(.ReduceTransparency)) {
+                featuresStatusMap[.ReduceTransparency] = self.isReduceTransparencyEnabled.statusString
+            }
             if (self.features.contains(.ShakeToUndo)) {
                 featuresStatusMap[.ShakeToUndo] = self.isShakeToUndoEnabled.statusString
             }
@@ -159,11 +174,10 @@ extension Statuses {
             if (self.features.contains(.SwitchControl)) {
                 featuresStatusMap[.SwitchControl] = self.isSwitchControlEnabled.statusString
             }
+            #endif
+            
             if (self.features.contains(.ReduceMotion)) {
                 featuresStatusMap[.ReduceMotion] = self.isReduceMotionEnabled.statusString
-            }
-            if (self.features.contains(.ReduceTransparency)) {
-                featuresStatusMap[.ReduceTransparency] = self.isReduceTransparencyEnabled.statusString
             }
             if (self.features.contains(.VoiceOver)) {
                 featuresStatusMap[.VoiceOver] = self.isVoiceOverEnabled.statusString
@@ -172,7 +186,8 @@ extension Statuses {
         }
     }
     
-    func isFeatureEnable(feature: CapableFeature) -> Bool {
+   func isFeatureEnable(feature: CapableFeature) -> Bool {
+        #if os(iOS) || os(tvOS)
         switch feature {
         case .AssistiveTouch:
             return self.isAssistiveTouchEnabled
@@ -207,6 +222,14 @@ extension Statuses {
         case .VoiceOver:
             return self.isVoiceOverEnabled
         }
+        #elseif os(watchOS)
+        switch feature {
+        case .ReduceMotion:
+            return self.isReduceMotionEnabled
+        case .VoiceOver:
+            return self.isVoiceOverEnabled
+        }
+        #endif
     }
 }
 

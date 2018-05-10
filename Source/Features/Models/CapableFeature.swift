@@ -6,6 +6,7 @@
 //
 
 public enum CapableFeature: String {
+    #if os(iOS) || os(tvOS)
     case AssistiveTouch
     case BoldText
     case ClosedCaptioning
@@ -15,15 +16,18 @@ public enum CapableFeature: String {
     case InvertColors
     case LargerText
     case MonoAudio
-    case ReduceMotion
     case ReduceTransparency
     case ShakeToUndo
     case SpeakScreen
     case SpeakSelection
     case SwitchControl
+    #endif
+    
+    case ReduceMotion
     case VoiceOver
     
     public static func allValues() -> [CapableFeature] {
+        #if os(iOS) || os(tvOS)
         return [
             .AssistiveTouch,
             .BoldText,
@@ -41,5 +45,10 @@ public enum CapableFeature: String {
             .SpeakSelection,
             .SwitchControl,
             .VoiceOver,]
+        #elseif os(watchOS)
+        return [
+            .ReduceMotion,
+            .VoiceOver,]
+        #endif
     }
 }
