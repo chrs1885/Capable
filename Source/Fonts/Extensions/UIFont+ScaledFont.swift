@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension UIFont {
     public class func scaledFont(for font: UIFont) -> UIFont {
