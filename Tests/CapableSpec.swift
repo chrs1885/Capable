@@ -4,7 +4,7 @@
 //
 //  Created by Christoph Wendt on 23.03.18.
 //
-
+#if os(iOS) || os(tvOS)
 import Quick
 import Nimble
 @testable import Capable
@@ -252,3 +252,4 @@ class CapableSpec: QuickSpec {
         }
     }
 }
+#endif

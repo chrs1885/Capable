@@ -4,7 +4,7 @@
 //
 //  Created by Christoph Wendt on 18.04.18.
 //
-
+#if os(iOS) || os(tvOS)
 import Foundation
 
 class StatusesMock: Statuses {
@@ -130,3 +130,4 @@ class StatusesMock: Statuses {
         }
     }
 }
+#endif
