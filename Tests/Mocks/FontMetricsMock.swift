@@ -6,7 +6,8 @@
 //
 #if os(iOS) || os(tvOS)
 import Foundation
-
+import UIKit
+    
 class FontMetricsMock: FontMetrics {
     var scaledFontPriorIOS11Called = false
     var scaledFontSinceIOS11Called = false
