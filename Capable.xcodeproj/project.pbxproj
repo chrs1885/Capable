@@ -186,8 +186,7 @@
 				83CAA3FB2097C216003F231D /* OsVersionProviderMock.swift */,
 				831B4F2E20A4EEA700F1BB94 /* StatusesMock.swift */,
 			);
-			name = Mocks;
-			path = "New Group";
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		83DA75DE2065167600303D8F = {
@@ -531,7 +530,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.Capable";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.Capable";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				RESOURCES_TARGETED_DEVICE_FAMILY = "";
 				SDKROOT = "";
@@ -559,7 +558,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.Capable";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.Capable";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				RESOURCES_TARGETED_DEVICE_FAMILY = "";
 				SDKROOT = "";
@@ -589,7 +588,7 @@
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.CapableTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.CapableTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos11.2;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator appletvos appletvsimulator";
@@ -617,7 +616,7 @@
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.ios.CapableTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.CapableTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator appletvos appletvsimulator";

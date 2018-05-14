@@ -4,7 +4,7 @@
 //
 //  Created by Christoph Wendt on 30.04.18.
 //
-
+#if os(iOS) || os(tvOS)
 import Foundation
 
 class FontMetricsMock: FontMetrics {
@@ -21,3 +21,4 @@ class FontMetricsMock: FontMetrics {
         return font
     }
 }
+#endif

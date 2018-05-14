@@ -4,7 +4,7 @@
 //
 //  Created by Christoph Wendt on 30.04.18.
 //
-
+#if os(iOS) || os(tvOS)
 import Foundation
 
 class OsVersionProviderMock: OsVersionProviderProtocol {
@@ -14,3 +14,4 @@ class OsVersionProviderMock: OsVersionProviderProtocol {
         return self.osVersionPrior11
     }
 }
+#endif
