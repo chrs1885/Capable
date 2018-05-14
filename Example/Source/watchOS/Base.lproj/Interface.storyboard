@@ -9,10 +9,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
-        <!--Capable-->
+        <!--Example-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="Capable" hidesWhenLoading="NO" id="AgC-eL-Hgc" customClass="FeatureOverviewController" customModule="Example_watchOS_Extension">
+                <controller title="Example" hidesWhenLoading="NO" id="AgC-eL-Hgc" customClass="FeatureOverviewController" customModule="Example_watchOS_Extension">
                     <items>
                         <table alignment="left" id="kTW-8M-JOg">
                             <items>
