@@ -26,7 +26,7 @@ public enum CapableFeature: String {
     case ReduceMotion
     case VoiceOver
     
-    static func allValues() -> [CapableFeature] {
+    public static func allValues() -> [CapableFeature] {
         #if os(iOS) || os(tvOS)
         return [
             .AssistiveTouch,
