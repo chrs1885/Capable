@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol FontMetricsProtocol {
     func scaledFont(for font: UIFont) -> UIFont
