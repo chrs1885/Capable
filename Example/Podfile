@@ -1,0 +1,34 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Example-iOS' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Example-iOS
+  pod 'AppCenter/Analytics'
+  pod 'Fabric'
+  pod 'Answers'
+  pod 'Firebase/Core'
+end
+
+target 'Example-tvOS' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Example-tvOS
+end
+
+target 'Example-watchOS' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Example-watchOS
+end
+
+target 'Example-watchOS Extension' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Example-watchOS Extension
+end
