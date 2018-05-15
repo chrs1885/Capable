@@ -8,6 +8,14 @@
 import UIKit
 import Capable
 
+#if os(iOS)
+import Fabric
+import Answers
+import AppCenter
+import AppCenterAnalytics
+import Firebase
+#endif
+
 class FeatureOverviewController: UITableViewController {
     var alert: UIAlertController?
     var objects: [String: String]?
@@ -38,6 +46,19 @@ class FeatureOverviewController: UITableViewController {
         if let capable = self.capable {
             self.objects = capable.statusMap
         }
+    }
+    
+    func sendMetrics() {
+        // The purpose of this function is to test API compatibility. To actually send telemetry, register each SDK
+        // in the AppDelegate's didFinishLaunchingWithOptions callback
+        #if os(iOS)
+        if let statusMap = self.capable?.statusMap {
+            let eventName = "Capable features received"
+            MSAnalytics.trackEvent(eventName, withProperties: statusMap)
+            Analytics.logEvent(eventName, parameters: statusMap)
+            Answers.logCustomEvent(withName: eventName, customAttributes: statusMap)
+        }
+        #endif
     }
 }
 
