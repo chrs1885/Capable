@@ -51,4 +51,8 @@ public enum CapableFeature: String {
             .VoiceOver,]
         #endif
     }
+    
+    public static func keys(forFeatures features: [CapableFeature]) -> [String] {
+        return features.map {$0.rawValue}
+    }
 }

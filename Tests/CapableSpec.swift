@@ -22,7 +22,7 @@ class CapableSpec: QuickSpec {
                 it("returns a status map with all features") {
                     let statusMap = sut!.statusMap
                     expect(statusMap.count).to(equal(CapableFeature.allValues().count))
-                    expect(Array(statusMap.keys)).to(contain(CapableFeature.allValues()))
+                    expect(Array(statusMap.keys)).to(contain(CapableFeature.keys(forFeatures: CapableFeature.allValues())))
                 }
             }
             
@@ -37,7 +37,7 @@ class CapableSpec: QuickSpec {
                 it("returns a status map with features that were registered") {
                     let statusMap = sut!.statusMap
                     expect(statusMap.count).to(equal(testedFeatures.count))
-                    expect(Array(statusMap.keys)).to(contain(testedFeatures))
+                    expect(Array(statusMap.keys)).to(contain(CapableFeature.keys(forFeatures: testedFeatures)))
                 }
             }
             
