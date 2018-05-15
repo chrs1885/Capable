@@ -10,7 +10,7 @@ import Capable
 
 class FeatureOverviewController: UITableViewController {
     var alert: UIAlertController?
-    var objects: [CapableFeature: String]?
+    var objects: [String: String]?
     var capable: Capable?
     
     override func viewDidLoad() {
@@ -54,13 +54,13 @@ extension FeatureOverviewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let feature = self.value(forRow: indexPath.row)
-        cell.textLabel!.text = feature.key.rawValue
+        cell.textLabel!.text = feature.key
         cell.detailTextLabel!.text = feature.value
         
         return cell
     }
 
-    private func value(forRow row: Int) -> (key: CapableFeature, value: String) {
+    private func value(forRow row: Int) -> (key: String, value: String) {
         if let objects = self.objects {
             let featuresArray = Array(objects)
             return featuresArray[row]

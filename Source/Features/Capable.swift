@@ -12,7 +12,7 @@ public struct Capable {
     private var notificationsModule: NotificationsProtocol
     private(set) var features: [CapableFeature]
     
-    public var statusMap: [CapableFeature: String] {
+    public var statusMap: [String: String] {
         get {
             return self.statusesModule.statusMap
         }
