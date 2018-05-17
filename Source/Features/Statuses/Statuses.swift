@@ -21,60 +21,60 @@ class Statuses: StatusesProtocol {
         self.features = features
     }
 
-    var statusMap: [CapableFeature: String] {
+    var statusMap: [String: String] {
         get {
-            var featuresStatusMap = [CapableFeature: String]()
+            var featuresStatusMap = [String: String]()
             
             #if os(iOS) || os(tvOS)
                 if (self.features.contains(.AssistiveTouch)) {
-                    featuresStatusMap[.AssistiveTouch] = self.isAssistiveTouchEnabled.statusString
+                    featuresStatusMap[CapableFeature.AssistiveTouch.rawValue] = self.isAssistiveTouchEnabled.statusString
                 }
                 if (self.features.contains(.BoldText)) {
-                    featuresStatusMap[.BoldText] = self.isBoldTextEnabled.statusString
+                    featuresStatusMap[CapableFeature.BoldText.rawValue] = self.isBoldTextEnabled.statusString
                 }
                 if (self.features.contains(.ClosedCaptioning)) {
-                    featuresStatusMap[.ClosedCaptioning] = self.isClosedCaptioningEnabled.statusString
+                    featuresStatusMap[CapableFeature.ClosedCaptioning.rawValue] = self.isClosedCaptioningEnabled.statusString
                 }
                 if (self.features.contains(.DarkerSystemColors)) {
-                    featuresStatusMap[.DarkerSystemColors] = self.isDarkerSystemColorsEnabled.statusString
+                    featuresStatusMap[CapableFeature.DarkerSystemColors.rawValue] = self.isDarkerSystemColorsEnabled.statusString
                 }
                 if (self.features.contains(.Grayscale)) {
-                    featuresStatusMap[.Grayscale] = self.isGrayscaleEnabled.statusString
+                    featuresStatusMap[CapableFeature.Grayscale.rawValue] = self.isGrayscaleEnabled.statusString
                 }
                 if (self.features.contains(.GuidedAccess)) {
-                    featuresStatusMap[.GuidedAccess] = self.isGuidedAccessEnabled.statusString
+                    featuresStatusMap[CapableFeature.GuidedAccess.rawValue] = self.isGuidedAccessEnabled.statusString
                 }
                 if (self.features.contains(.InvertColors)) {
-                    featuresStatusMap[.InvertColors] = self.isInvertColorsEnabled.statusString
+                    featuresStatusMap[CapableFeature.InvertColors.rawValue] = self.isInvertColorsEnabled.statusString
                 }
                 if (self.features.contains(.LargerText)) {
-                    featuresStatusMap[.LargerText] = self.largerTextCatagory.stringValue
+                    featuresStatusMap[CapableFeature.LargerText.rawValue] = self.largerTextCatagory.stringValue
                 }
                 if (self.features.contains(.MonoAudio)) {
-                    featuresStatusMap[.MonoAudio] = self.isMonoAudioEnabled.statusString
+                    featuresStatusMap[CapableFeature.MonoAudio.rawValue] = self.isMonoAudioEnabled.statusString
                 }
                 if (self.features.contains(.ReduceTransparency)) {
-                    featuresStatusMap[.ReduceTransparency] = self.isReduceTransparencyEnabled.statusString
+                    featuresStatusMap[CapableFeature.ReduceTransparency.rawValue] = self.isReduceTransparencyEnabled.statusString
                 }
                 if (self.features.contains(.ShakeToUndo)) {
-                    featuresStatusMap[.ShakeToUndo] = self.isShakeToUndoEnabled.statusString
+                    featuresStatusMap[CapableFeature.ShakeToUndo.rawValue] = self.isShakeToUndoEnabled.statusString
                 }
                 if (self.features.contains(.SpeakScreen)) {
-                    featuresStatusMap[.SpeakScreen] = self.isSpeakScreenEnabled.statusString
+                    featuresStatusMap[CapableFeature.SpeakScreen.rawValue] = self.isSpeakScreenEnabled.statusString
                 }
                 if (self.features.contains(.SpeakSelection)) {
-                    featuresStatusMap[.SpeakSelection] = self.isSpeakSelectionEnabled.statusString
+                    featuresStatusMap[CapableFeature.SpeakSelection.rawValue] = self.isSpeakSelectionEnabled.statusString
                 }
                 if (self.features.contains(.SwitchControl)) {
-                    featuresStatusMap[.SwitchControl] = self.isSwitchControlEnabled.statusString
+                    featuresStatusMap[CapableFeature.SwitchControl.rawValue] = self.isSwitchControlEnabled.statusString
                 }
             #endif
             
             if (self.features.contains(.ReduceMotion)) {
-                featuresStatusMap[.ReduceMotion] = self.isReduceMotionEnabled.statusString
+                featuresStatusMap[CapableFeature.ReduceMotion.rawValue] = self.isReduceMotionEnabled.statusString
             }
             if (self.features.contains(.VoiceOver)) {
-                featuresStatusMap[.VoiceOver] = self.isVoiceOverEnabled.statusString
+                featuresStatusMap[CapableFeature.VoiceOver.rawValue] = self.isVoiceOverEnabled.statusString
             }
             return featuresStatusMap
         }

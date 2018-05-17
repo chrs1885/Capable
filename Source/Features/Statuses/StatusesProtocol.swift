@@ -6,7 +6,7 @@
 //
 
 protocol StatusesProtocol {
-    var statusMap: [CapableFeature: String] { get }
+    var statusMap: [String: String] { get }
     
     #if os(iOS) || os(tvOS)
     var isAssistiveTouchEnabled: Bool { get }

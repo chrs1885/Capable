@@ -8,9 +8,17 @@
 import UIKit
 import Capable
 
+#if os(iOS)
+import Fabric
+import Answers
+import AppCenter
+import AppCenterAnalytics
+import Firebase
+#endif
+
 class FeatureOverviewController: UITableViewController {
     var alert: UIAlertController?
-    var objects: [CapableFeature: String]?
+    var objects: [String: String]?
     var capable: Capable?
     
     override func viewDidLoad() {
@@ -39,6 +47,19 @@ class FeatureOverviewController: UITableViewController {
             self.objects = capable.statusMap
         }
     }
+    
+    func sendMetrics() {
+        // The purpose of this function is to test API compatibility. To actually send telemetry, register each SDK
+        // in the AppDelegate's didFinishLaunchingWithOptions callback
+        #if os(iOS)
+        if let statusMap = self.capable?.statusMap {
+            let eventName = "Capable features received"
+            MSAnalytics.trackEvent(eventName, withProperties: statusMap)
+            Analytics.logEvent(eventName, parameters: statusMap)
+            Answers.logCustomEvent(withName: eventName, customAttributes: statusMap)
+        }
+        #endif
+    }
 }
 
 // MARK: - Table View
@@ -54,13 +75,13 @@ extension FeatureOverviewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let feature = self.value(forRow: indexPath.row)
-        cell.textLabel!.text = feature.key.rawValue
+        cell.textLabel!.text = feature.key
         cell.detailTextLabel!.text = feature.value
         
         return cell
     }
 
-    private func value(forRow row: Int) -> (key: CapableFeature, value: String) {
+    private func value(forRow row: Int) -> (key: String, value: String) {
         if let objects = self.objects {
             let featuresArray = Array(objects)
             return featuresArray[row]
