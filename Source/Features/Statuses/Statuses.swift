@@ -25,21 +25,12 @@ class Statuses: StatusesProtocol {
         get {
             var featuresStatusMap = [String: String]()
             
-            #if os(iOS) || os(tvOS)
+            #if os(iOS)
                 if (self.features.contains(.AssistiveTouch)) {
                     featuresStatusMap[CapableFeature.AssistiveTouch.rawValue] = self.isAssistiveTouchEnabled.statusString
                 }
-                if (self.features.contains(.BoldText)) {
-                    featuresStatusMap[CapableFeature.BoldText.rawValue] = self.isBoldTextEnabled.statusString
-                }
-                if (self.features.contains(.ClosedCaptioning)) {
-                    featuresStatusMap[CapableFeature.ClosedCaptioning.rawValue] = self.isClosedCaptioningEnabled.statusString
-                }
                 if (self.features.contains(.DarkerSystemColors)) {
                     featuresStatusMap[CapableFeature.DarkerSystemColors.rawValue] = self.isDarkerSystemColorsEnabled.statusString
-                }
-                if (self.features.contains(.Grayscale)) {
-                    featuresStatusMap[CapableFeature.Grayscale.rawValue] = self.isGrayscaleEnabled.statusString
                 }
                 if (self.features.contains(.GuidedAccess)) {
                     featuresStatusMap[CapableFeature.GuidedAccess.rawValue] = self.isGuidedAccessEnabled.statusString
@@ -50,12 +41,6 @@ class Statuses: StatusesProtocol {
                 if (self.features.contains(.LargerText)) {
                     featuresStatusMap[CapableFeature.LargerText.rawValue] = self.largerTextCatagory.stringValue
                 }
-                if (self.features.contains(.MonoAudio)) {
-                    featuresStatusMap[CapableFeature.MonoAudio.rawValue] = self.isMonoAudioEnabled.statusString
-                }
-                if (self.features.contains(.ReduceTransparency)) {
-                    featuresStatusMap[CapableFeature.ReduceTransparency.rawValue] = self.isReduceTransparencyEnabled.statusString
-                }
                 if (self.features.contains(.ShakeToUndo)) {
                     featuresStatusMap[CapableFeature.ShakeToUndo.rawValue] = self.isShakeToUndoEnabled.statusString
                 }
@@ -64,6 +49,24 @@ class Statuses: StatusesProtocol {
                 }
                 if (self.features.contains(.SpeakSelection)) {
                     featuresStatusMap[CapableFeature.SpeakSelection.rawValue] = self.isSpeakSelectionEnabled.statusString
+                }
+            #endif
+            
+            #if os(iOS) || os(tvOS)
+                if (self.features.contains(.BoldText)) {
+                    featuresStatusMap[CapableFeature.BoldText.rawValue] = self.isBoldTextEnabled.statusString
+                }
+                if (self.features.contains(.ClosedCaptioning)) {
+                    featuresStatusMap[CapableFeature.ClosedCaptioning.rawValue] = self.isClosedCaptioningEnabled.statusString
+                }
+                if (self.features.contains(.Grayscale)) {
+                    featuresStatusMap[CapableFeature.Grayscale.rawValue] = self.isGrayscaleEnabled.statusString
+                }
+                if (self.features.contains(.MonoAudio)) {
+                    featuresStatusMap[CapableFeature.MonoAudio.rawValue] = self.isMonoAudioEnabled.statusString
+                }
+                if (self.features.contains(.ReduceTransparency)) {
+                    featuresStatusMap[CapableFeature.ReduceTransparency.rawValue] = self.isReduceTransparencyEnabled.statusString
                 }
                 if (self.features.contains(.SwitchControl)) {
                     featuresStatusMap[CapableFeature.SwitchControl.rawValue] = self.isSwitchControlEnabled.statusString
@@ -191,7 +194,7 @@ class Statuses: StatusesProtocol {
     }
     
     func isFeatureEnable(feature: CapableFeature) -> Bool {
-        #if os(iOS) || os(tvOS)
+        #if os(iOS)
         switch feature {
         case .AssistiveTouch:
             return self.isAssistiveTouchEnabled
@@ -217,6 +220,25 @@ class Statuses: StatusesProtocol {
             return self.isSpeakScreenEnabled
         case .SpeakSelection:
             return self.isSpeakSelectionEnabled
+        case .SwitchControl:
+            return self.isSwitchControlEnabled
+        case .ReduceMotion:
+            return self.isReduceMotionEnabled
+        case .ReduceTransparency:
+            return self.isReduceTransparencyEnabled
+        case .VoiceOver:
+            return self.isVoiceOverEnabled
+        }
+        #elseif os(tvOS)
+        switch feature {
+        case .BoldText:
+            return self.isBoldTextEnabled
+        case .ClosedCaptioning:
+            return self.isClosedCaptioningEnabled
+        case .Grayscale:
+            return self.isGrayscaleEnabled
+        case .MonoAudio:
+            return self.isMonoAudioEnabled
         case .SwitchControl:
             return self.isSwitchControlEnabled
         case .ReduceMotion:

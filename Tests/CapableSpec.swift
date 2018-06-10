@@ -28,7 +28,7 @@ class CapableSpec: QuickSpec {
             
             context("after initialization with specific features") {
                 var sut: Capable?
-                let testedFeatures: [CapableFeature] = [.AssistiveTouch, .BoldText]
+                let testedFeatures: [CapableFeature] = [.BoldText, .ReduceMotion]
                 
                 beforeEach() {
                     sut = Capable(with: testedFeatures)
@@ -89,6 +89,7 @@ class CapableSpec: QuickSpec {
                     sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
                 }
                 
+                #if os(iOS)
                 context("for AssistiveTouch") {
                     beforeEach() {
                        statusesMock?.assistiveTouchEnabled = true
@@ -99,26 +100,6 @@ class CapableSpec: QuickSpec {
                     }
                 }
                 
-                context("for BoldText") {
-                    beforeEach() {
-                        statusesMock?.boldTextEnabled = true
-                    }
-                    
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .BoldText)).to(beTrue())
-                    }
-                }
-                
-                context("for ClosedCaptioning") {
-                    beforeEach() {
-                        statusesMock?.closedCaptioningEnabled = true
-                    }
-                    
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .ClosedCaptioning)).to(beTrue())
-                    }
-                }
-                
                 context("for DarkerSystemColors") {
                     beforeEach() {
                         statusesMock?.darkerSystemColorsEnabled = true
@@ -126,16 +107,6 @@ class CapableSpec: QuickSpec {
                     
                     it("returns correct state") {
                         expect(sut?.isFeatureEnable(feature: .DarkerSystemColors)).to(beTrue())
-                    }
-                }
-                
-                context("for Grayscale") {
-                    beforeEach() {
-                        statusesMock?.grayscaleEnabled = true
-                    }
-                    
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .Grayscale)).to(beTrue())
                     }
                 }
                 
@@ -169,35 +140,6 @@ class CapableSpec: QuickSpec {
                     }
                 }
                 
-                context("for MonoAudio") {
-                    beforeEach() {
-                        statusesMock?.monoAudioEnabled = true
-                    }
-                    
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .MonoAudio)).to(beTrue())
-                    }
-                }
-                
-                context("for ReduceMotion") {
-                    beforeEach() {
-                        statusesMock?.reduceMotionEnabled = true
-                    }
-                    
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .ReduceMotion)).to(beTrue())
-                    }
-                }
-                
-                context("for ReduceTransparency") {
-                    beforeEach() {
-                        statusesMock?.reduceTransparencyEnabled = true
-                    }
-                    
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .ReduceTransparency)).to(beTrue())
-                    }
-                }
                 
                 context("for ShakeToUndo") {
                     beforeEach() {
@@ -228,7 +170,68 @@ class CapableSpec: QuickSpec {
                         expect(sut?.isFeatureEnable(feature: .SpeakSelection)).to(beTrue())
                     }
                 }
+                #endif
                 
+                context("for BoldText") {
+                    beforeEach() {
+                        statusesMock?.boldTextEnabled = true
+                    }
+                    
+                    it("returns correct state") {
+                        expect(sut?.isFeatureEnable(feature: .BoldText)).to(beTrue())
+                    }
+                }
+                
+                context("for ClosedCaptioning") {
+                    beforeEach() {
+                        statusesMock?.closedCaptioningEnabled = true
+                    }
+                    
+                    it("returns correct state") {
+                        expect(sut?.isFeatureEnable(feature: .ClosedCaptioning)).to(beTrue())
+                    }
+                }
+                
+                context("for Grayscale") {
+                    beforeEach() {
+                        statusesMock?.grayscaleEnabled = true
+                    }
+                    
+                    it("returns correct state") {
+                        expect(sut?.isFeatureEnable(feature: .Grayscale)).to(beTrue())
+                    }
+                }
+                
+                context("for MonoAudio") {
+                    beforeEach() {
+                        statusesMock?.monoAudioEnabled = true
+                    }
+                    
+                    it("returns correct state") {
+                        expect(sut?.isFeatureEnable(feature: .MonoAudio)).to(beTrue())
+                    }
+                }
+                
+                context("for ReduceMotion") {
+                    beforeEach() {
+                        statusesMock?.reduceMotionEnabled = true
+                    }
+                    
+                    it("returns correct state") {
+                        expect(sut?.isFeatureEnable(feature: .ReduceMotion)).to(beTrue())
+                    }
+                }
+                
+                context("for ReduceTransparency") {
+                    beforeEach() {
+                        statusesMock?.reduceTransparencyEnabled = true
+                    }
+                    
+                    it("returns correct state") {
+                        expect(sut?.isFeatureEnable(feature: .ReduceTransparency)).to(beTrue())
+                    }
+                }
+
                 context("for SwitchControl") {
                     beforeEach() {
                         statusesMock?.switchControlEnabled = true
