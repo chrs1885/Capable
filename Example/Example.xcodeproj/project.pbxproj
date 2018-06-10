@@ -16,10 +16,6 @@
 		831B4F2920A4DDD100F1BB94 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62B2078138E00F0C74D /* FontsViewController.swift */; };
 		831B4F2A20A4DDD800F1BB94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
 		831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
-		837C106D20AB7FA80085D993 /* Capable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837C106E20AB7FA80085D993 /* Capable.framework */; };
-		837C106F20AB7FAF0085D993 /* Capable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837C107020AB7FAF0085D993 /* Capable.framework */; };
-		837C107720AB80990085D993 /* Capable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837C107820AB80990085D993 /* Capable.framework */; };
-		837C107920AB809E0085D993 /* Capable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837C107A20AB809E0085D993 /* Capable.framework */; };
 		837C191A20AA27970003D237 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837C191820AA27970003D237 /* Interface.storyboard */; };
 		837C192320AA27970003D237 /* Example-watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 837C192220AA27970003D237 /* Example-watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		837C192A20AA27970003D237 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C192920AA27970003D237 /* ExtensionDelegate.swift */; };
@@ -36,6 +32,8 @@
 		83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
 		83C6F6332078138E00F0C74D /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62B2078138E00F0C74D /* FontsViewController.swift */; };
 		83C6F6342078138E00F0C74D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F62C2078138E00F0C74D /* Info.plist */; };
+		83E67A2E20CD94C300FE6FC2 /* Capable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E67A2C20CD94B800FE6FC2 /* Capable.framework */; };
+		83E67A2F20CD94C300FE6FC2 /* Capable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83E67A2C20CD94B800FE6FC2 /* Capable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D9BD8F0470D72CAC5F44979 /* Pods_Example_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A34BF8D95976311A017335 /* Pods_Example_tvOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +77,17 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83E67A2B20CD946200FE6FC2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				83E67A2F20CD94C300FE6FC2 /* Capable.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -91,12 +100,6 @@
 		831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		831B4F1D20A4D4F200F1BB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		831B4F2120A4D4F200F1BB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		837C106E20AB7FA80085D993 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		837C107020AB7FAF0085D993 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		837C107220AB7FC20085D993 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		837C107420AB7FF80085D993 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		837C107820AB80990085D993 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		837C107A20AB809E0085D993 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		837C191620AA27960003D237 /* Example-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		837C191920AA27970003D237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		837C191D20AA27970003D237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 		83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureOverviewController.swift; sourceTree = "<group>"; };
 		83C6F62B2078138E00F0C74D /* FontsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
 		83C6F62C2078138E00F0C74D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83E67A2C20CD94B800FE6FC2 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DCF956DE661B9787EAE334 /* Pods-Example-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A69A8636A1A206955AF20AA4 /* Pods-Example-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B607B9D61AC82056D25E2B77 /* Pods-Example-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,7 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D9BD8F0470D72CAC5F44979 /* Pods_Example_tvOS.framework in Frameworks */,
-				837C106F20AB7FAF0085D993 /* Capable.framework in Frameworks */,
+				83E67A2E20CD94C300FE6FC2 /* Capable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +142,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				55A2015AF8E67D0BAC01DA73 /* Pods_Example_watchOS_Extension.framework in Frameworks */,
-				837C107720AB80990085D993 /* Capable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +150,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6180FD25002FD5791E4E3C36 /* Pods_Example_iOS.framework in Frameworks */,
-				837C106D20AB7FA80085D993 /* Capable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +158,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				791054B3341540F931275BD6 /* Pods_Example_watchOS.framework in Frameworks */,
-				837C107920AB809E0085D993 /* Capable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,13 +260,8 @@
 		83C6F6352078189700F0C74D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83E67A2C20CD94B800FE6FC2 /* Capable.framework */,
 				61C8CF8E1603FFD70061B7CA /* Pods_Example_iOS.framework */,
-				837C107A20AB809E0085D993 /* Capable.framework */,
-				837C107820AB80990085D993 /* Capable.framework */,
-				837C107420AB7FF80085D993 /* Capable.framework */,
-				837C107220AB7FC20085D993 /* Capable.framework */,
-				837C107020AB7FAF0085D993 /* Capable.framework */,
-				837C106E20AB7FA80085D993 /* Capable.framework */,
 				73A34BF8D95976311A017335 /* Pods_Example_tvOS.framework */,
 				CDA97E99795B6631F2DB0EB5 /* Pods_Example_watchOS.framework */,
 				06A4614933CCE311EC4CAD3C /* Pods_Example_watchOS_Extension.framework */,
@@ -299,6 +295,7 @@
 				831B4F1020A4D4F200F1BB94 /* Sources */,
 				831B4F1120A4D4F200F1BB94 /* Frameworks */,
 				831B4F1220A4D4F200F1BB94 /* Resources */,
+				83E67A2B20CD946200FE6FC2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
