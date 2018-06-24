@@ -1,4 +1,6 @@
-# Capable
+<center><img src="https://user-images.githubusercontent.com/1390908/41822361-a14fafd2-77ee-11e8-8aa6-f18960566d0c.png" width="400"></center>
+
+## About
 
 Have you ever thought about adopting accessibilty features within you apps to gain your user base instead of spending a lot of time implementing features noone really ever asked for? 
 
@@ -141,8 +143,3 @@ While most features can only have a status set to **enabled** or **disabled**, t
 * Accessibility XL
 * Accessibility XXL
 * Accessibility XXXL
-
-## Accessibility ressources
-
-## Contributing
-
