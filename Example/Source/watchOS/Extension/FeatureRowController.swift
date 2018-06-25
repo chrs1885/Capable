@@ -14,10 +14,10 @@ class FeatureRowController: NSObject {
     @IBOutlet var titleLabel: WKInterfaceLabel!
     @IBOutlet var statusLabel: WKInterfaceLabel!
     
-    var feature: (key: CapableFeature, value: String)? {
+    var feature: (key: String, value: String)? {
         didSet {
             guard let feature = feature else { return }
-            titleLabel.setText(feature.key.rawValue)
+            titleLabel.setText(feature.key)
             statusLabel.setText(feature.value)
         }
     }
