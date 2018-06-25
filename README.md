@@ -201,3 +201,10 @@ While most features can only have a status set to **enabled** or **disabled**, t
 * Accessibility XL
 * Accessibility XXL
 * Accessibility XXXL
+
+## Ressources
+
+* [Apple - WWDC Session Videos](https://developer.apple.com/videos/frameworks/accessibility/
+)
+* [Apple - Accessibility for Developers](https://developer.apple.com/accessibility/)
+
