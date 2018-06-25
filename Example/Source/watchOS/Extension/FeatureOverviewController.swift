@@ -11,7 +11,7 @@ import Foundation
 import Capable
 
 class FeatureOverviewController: WKInterfaceController {
-    var objects: [CapableFeature: String]?
+    var objects: [String: String]?
     var capable: Capable?
     @IBOutlet var featuresTable: WKInterfaceTable!
     
@@ -28,8 +28,8 @@ class FeatureOverviewController: WKInterfaceController {
             self.featuresTable.setNumberOfRows(objects.count, withRowType: "FeatureRow")
             for index in 0..<featuresTable.numberOfRows {
                 guard let controller = featuresTable.rowController(at: index) as? FeatureRowController else { continue }
-                let item = self.value(forRow: index)
-                controller.feature = item
+                let feature = self.value(forRow: index)
+                controller.feature = feature
             }
         }
     }
@@ -50,7 +50,7 @@ class FeatureOverviewController: WKInterfaceController {
         }
     }
     
-    func value(forRow row: Int) -> (key: CapableFeature, value: String) {
+    private func value(forRow row: Int) -> (key: String, value: String) {
         if let objects = self.objects {
             let featuresArray = Array(objects)
             return featuresArray[row]
