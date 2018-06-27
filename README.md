@@ -211,4 +211,4 @@ While most features can only have a status set to **enabled** or **disabled**, t
 
 ## License
 
-Capable is available under the MIT license. See the LICENSE file for more info.
+Capable is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
