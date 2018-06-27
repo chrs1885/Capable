@@ -16,6 +16,7 @@ What if there was a simple way to figure out if there's a real need to support a
 Check out the *Example.xcworkspace* to get a quick overview.
 
 ## Features
+
 * Get the user's accessibility settings
 * Send it with your favorite analytics SDK such as Fabric Answers, App Center Analytics, or Firebase Analytics
 * Get notified about any changes
@@ -25,7 +26,7 @@ Check out the *Example.xcworkspace* to get a quick overview.
 
 There are currently three different ways to integrate Capable into your apps.
 
-## CocoaPods
+### CocoaPods
 
 ```ruby
 use_frameworks!
@@ -35,13 +36,13 @@ target 'MyApp' do
 end
 ```
 
-## Carthage
+### Carthage
 
 ```ruby
 github "chrs1885/Capable"
 ```
 
-## Manually
+### Manually
 
 Simply drop `Capable.xcodeproj` into your project. Also make sure to add
 `Capable.framework` to your app’s embedded frameworks found in the General tab of your main project.
