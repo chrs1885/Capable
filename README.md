@@ -28,7 +28,6 @@ There are currently three different ways to integrate Capable into your apps.
 ## CocoaPods
 
 ```ruby
-platform :ios, '8.0'
 use_frameworks!
 
 target 'MyApp' do
@@ -51,7 +50,7 @@ Simply drop `Capable.xcodeproj` into your project. Also make sure to add
 
 ### Register for (specific) accessibility settings
 
-Firstly, you need to import the Capable framework in your class by adding the following import statement to your class:
+Firstly, you need to import the Capable framework in your class by adding the following import statement:
 
 ```swift
 import Capable
@@ -77,17 +76,18 @@ If you are interested in a specific accessibility feature, you can retrieve its 
 
 ```swift
 let capable = Capable()
-capable.isFeatureEnable(feature: .VoiceOver)
+let isVoiceOverEnabled: Bool = capable.isFeatureEnable(feature: .VoiceOver)
 ```
 
 To get a dictionary of all features, that the `Capable` instance has been initialized with you can use:
+
 ```swift
 let capable = Capable()
-let statusMap = self.capable.statusMap
+let statusMap = capable.statusMap
 ```
 This will return each feature name (key) along with its current value as described in the [accessibility feature overview](#accessibility-feature-overview) section.
 
-The statusMap object is compatible with most analytic SDK APIs. Here's a quick example of how to send your data along with user properties or custom events.
+The `statusMap` object is compatible with most analytic SDK APIs. Here's a quick example of how to send your data along with user properties or custom events.
 
 ```swift
 func sendMetrics() {
@@ -106,6 +106,7 @@ func sendMetrics() {
 ```
 
 ### Listen for settings changes
+
 After initialization, notifications for all features that have been registered are automatically enabled. To react to changes, you need to add your class as an observer as follows:
 
 ```swift
@@ -208,3 +209,6 @@ While most features can only have a status set to **enabled** or **disabled**, t
 )
 * [Apple - Accessibility for Developers](https://developer.apple.com/accessibility/)
 
+## License
+
+Capable is available under the MIT license. See the LICENSE file for more info.
