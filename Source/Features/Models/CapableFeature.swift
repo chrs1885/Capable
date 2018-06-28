@@ -11,7 +11,6 @@ public enum CapableFeature: String {
     case DarkerSystemColors
     case GuidedAccess
     case InvertColors
-    case LargerText
     case ShakeToUndo
     case SpeakScreen
     case SpeakSelection
@@ -24,6 +23,10 @@ public enum CapableFeature: String {
     case MonoAudio
     case ReduceTransparency
     case SwitchControl
+    #endif
+    
+    #if os(iOS) || os(watchOS)
+    case LargerText
     #endif
     
     case ReduceMotion
@@ -60,6 +63,7 @@ public enum CapableFeature: String {
             .VoiceOver,]
         #elseif os(watchOS)
         return [
+            .LargerText,
             .ReduceMotion,
             .VoiceOver,]
         #endif

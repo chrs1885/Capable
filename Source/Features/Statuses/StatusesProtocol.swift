@@ -25,6 +25,10 @@ protocol StatusesProtocol {
     var isSwitchControlEnabled: Bool { get }
     #endif
     
+    #if os(watchOS)
+    var largerTextCatagory: String { get }
+    #endif
+    
     var isReduceMotionEnabled: Bool { get }
     var isVoiceOverEnabled: Bool { get }
     
