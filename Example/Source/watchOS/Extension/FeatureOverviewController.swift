@@ -35,12 +35,12 @@ class FeatureOverviewController: WKInterfaceController {
     }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
+        self.capable?.notificationsEnabled = true
         super.willActivate()
     }
     
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
+        self.capable?.notificationsEnabled = false
         super.didDeactivate()
     }
     
@@ -62,6 +62,20 @@ class FeatureOverviewController: WKInterfaceController {
 // MARK: Capable Notification
 extension FeatureOverviewController {
     @objc private func featureStatusChanged(notification: NSNotification) {
-        
+        if let featureStatus = notification.object as? FeatureStatus {
+            self.refreshData()
+            self.showAlert(for: featureStatus)
+        }
+    }
+    
+    private func showAlert(for featureStatus: FeatureStatus) {
+        let alertTitle = "Feature status changed"
+        let alertMessage = "\(featureStatus.feature.rawValue) changed to \(featureStatus.statusString)"
+        let okAction = WKAlertAction(title: "OK",
+                                     style: WKAlertActionStyle.default) {}
+        presentAlert(withTitle: alertTitle,
+                                        message: alertMessage,
+                                        preferredStyle: WKAlertControllerStyle.alert,
+                                        actions: [okAction])
     }
 }
