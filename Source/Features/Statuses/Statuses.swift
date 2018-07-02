@@ -29,17 +29,8 @@ class Statuses: StatusesProtocol {
                 if (self.features.contains(.AssistiveTouch)) {
                     featuresStatusMap[CapableFeature.AssistiveTouch.rawValue] = self.isAssistiveTouchEnabled.statusString
                 }
-                if (self.features.contains(.BoldText)) {
-                    featuresStatusMap[CapableFeature.BoldText.rawValue] = self.isBoldTextEnabled.statusString
-                }
-                if (self.features.contains(.ClosedCaptioning)) {
-                    featuresStatusMap[CapableFeature.ClosedCaptioning.rawValue] = self.isClosedCaptioningEnabled.statusString
-                }
                 if (self.features.contains(.DarkerSystemColors)) {
                     featuresStatusMap[CapableFeature.DarkerSystemColors.rawValue] = self.isDarkerSystemColorsEnabled.statusString
-                }
-                if (self.features.contains(.Grayscale)) {
-                    featuresStatusMap[CapableFeature.Grayscale.rawValue] = self.isGrayscaleEnabled.statusString
                 }
                 if (self.features.contains(.GuidedAccess)) {
                     featuresStatusMap[CapableFeature.GuidedAccess.rawValue] = self.isGuidedAccessEnabled.statusString
@@ -47,15 +38,8 @@ class Statuses: StatusesProtocol {
                 if (self.features.contains(.InvertColors)) {
                     featuresStatusMap[CapableFeature.InvertColors.rawValue] = self.isInvertColorsEnabled.statusString
                 }
-            
                 if (self.features.contains(.LargerText)) {
                     featuresStatusMap[CapableFeature.LargerText.rawValue] = self.largerTextCatagory.stringValue
-                }
-                if (self.features.contains(.MonoAudio)) {
-                    featuresStatusMap[CapableFeature.MonoAudio.rawValue] = self.isMonoAudioEnabled.statusString
-                }
-                if (self.features.contains(.ReduceTransparency)) {
-                    featuresStatusMap[CapableFeature.ReduceTransparency.rawValue] = self.isReduceTransparencyEnabled.statusString
                 }
                 if (self.features.contains(.ShakeToUndo)) {
                     featuresStatusMap[CapableFeature.ShakeToUndo.rawValue] = self.isShakeToUndoEnabled.statusString
@@ -65,6 +49,22 @@ class Statuses: StatusesProtocol {
                 }
                 if (self.features.contains(.SpeakSelection)) {
                     featuresStatusMap[CapableFeature.SpeakSelection.rawValue] = self.isSpeakSelectionEnabled.statusString
+                }
+            #elseif os(iOS) || os(tvOS)
+                if (self.features.contains(.BoldText)) {
+                    featuresStatusMap[CapableFeature.BoldText.rawValue] = self.isBoldTextEnabled.statusString
+                }
+                if (self.features.contains(.ClosedCaptioning)) {
+                    featuresStatusMap[CapableFeature.ClosedCaptioning.rawValue] = self.isClosedCaptioningEnabled.statusString
+                }
+                if (self.features.contains(.Grayscale)) {
+                    featuresStatusMap[CapableFeature.Grayscale.rawValue] = self.isGrayscaleEnabled.statusString
+                }
+                if (self.features.contains(.MonoAudio)) {
+                    featuresStatusMap[CapableFeature.MonoAudio.rawValue] = self.isMonoAudioEnabled.statusString
+                }
+                if (self.features.contains(.ReduceTransparency)) {
+                    featuresStatusMap[CapableFeature.ReduceTransparency.rawValue] = self.isReduceTransparencyEnabled.statusString
                 }
                 if (self.features.contains(.SwitchControl)) {
                     featuresStatusMap[CapableFeature.SwitchControl.rawValue] = self.isSwitchControlEnabled.statusString
@@ -170,6 +170,8 @@ class Statuses: StatusesProtocol {
         }
     #elseif os(watchOS)
         var largerTextCatagory: String {
+            let font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+            print(font.pointSize)
             return WKInterfaceDevice.current().preferredContentSizeCategory
         }
     #endif
@@ -244,19 +246,19 @@ class Statuses: StatusesProtocol {
                 return self.isGrayscaleEnabled
             case .MonoAudio:
                 return self.isMonoAudioEnabled
-            case .SwitchControl:
-                return self.isSwitchControlEnabled
             case .ReduceMotion:
                 return self.isReduceMotionEnabled
             case .ReduceTransparency:
                 return self.isReduceTransparencyEnabled
+            case .SwitchControl:
+                return self.isSwitchControlEnabled
             case .VoiceOver:
                 return self.isVoiceOverEnabled
             }
         #elseif os(watchOS)
             switch feature {
             case .LargerText:
-                return true
+                return self.largerTextCatagory == "hello"
             case .ReduceMotion:
                 return self.isReduceMotionEnabled
             case .VoiceOver:
