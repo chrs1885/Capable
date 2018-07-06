@@ -42,7 +42,7 @@ public struct Capable {
         }
     }
     
-    public func isFeatureEnable(feature: CapableFeature) -> Bool {
-        return self.statusesModule.isFeatureEnable(feature: feature)
+    public func isFeatureEnabled(feature: CapableFeature) -> Bool {
+        return self.statusesModule.isFeatureEnabled(feature: feature)
     }
 }

@@ -35,5 +35,5 @@ protocol StatusesProtocol {
     init()
     init(with features: [CapableFeature])
 
-    func isFeatureEnable(feature: CapableFeature) -> Bool
+    func isFeatureEnabled(feature: CapableFeature) -> Bool
 }

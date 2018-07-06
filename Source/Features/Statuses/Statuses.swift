@@ -200,7 +200,7 @@ class Statuses: StatusesProtocol {
         }
     }
     
-    func isFeatureEnable(feature: CapableFeature) -> Bool {
+    func isFeatureEnabled(feature: CapableFeature) -> Bool {
         #if os(iOS)
             switch feature {
             case .AssistiveTouch:
