@@ -170,9 +170,10 @@ class Statuses: StatusesProtocol {
         }
     #elseif os(watchOS)
         var largerTextCatagory: String {
-            let font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
-            print(font.pointSize)
-            return WKInterfaceDevice.current().preferredContentSizeCategory
+            get {
+                let referenceFontSize = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body).pointSize
+                return referenceFontSize.contentSizeString
+            }
         }
     #endif
     
@@ -256,9 +257,12 @@ class Statuses: StatusesProtocol {
                 return self.isVoiceOverEnabled
             }
         #elseif os(watchOS)
+            let watchSize = WKInterfaceDevice.current().preferredContentSizeCategory
             switch feature {
-            case .LargerText:
-                return self.largerTextCatagory == "hello"
+            case .LargerText, watchSize == "UICTContentSizeCategoryS":
+                return self.largerTextCatagory != "S"
+            case .LargerText, watchSize == "UICTContentSizeCategoryL":
+                return self.largerTextCatagory != "L"
             case .ReduceMotion:
                 return self.isReduceMotionEnabled
             case .VoiceOver:
