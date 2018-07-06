@@ -28,6 +28,7 @@
 		83CAA3FA2097BF9B003F231D /* OsVersionProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3F92097BF9B003F231D /* OsVersionProviderProtocol.swift */; };
 		83CAA3FC2097C216003F231D /* OsVersionProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3FB2097C216003F231D /* OsVersionProviderMock.swift */; };
 		83CAA3FE2097C2D5003F231D /* FontMetricsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3FD2097C2D5003F231D /* FontMetricsMock.swift */; };
+		83D2A46920F006000032054C /* String+ContentSizeCategoryString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2A46820F006000032054C /* String+ContentSizeCategoryString.swift */; };
 		83DA75F72065167600303D8F /* CapableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA75F62065167600303D8F /* CapableSpec.swift */; };
 		83DA75F92065167600303D8F /* Capable.h in Headers */ = {isa = PBXBuildFile; fileRef = 83DA75EB2065167600303D8F /* Capable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83DB72462069891200384B3F /* UIContentSizeCategory+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB72452069891200384B3F /* UIContentSizeCategory+stringValue.swift */; };
@@ -65,6 +66,7 @@
 		83CAA3FB2097C216003F231D /* OsVersionProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OsVersionProviderMock.swift; path = Tests/Mocks/OsVersionProviderMock.swift; sourceTree = SOURCE_ROOT; };
 		83CAA3FD2097C2D5003F231D /* FontMetricsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FontMetricsMock.swift; path = Tests/Mocks/FontMetricsMock.swift; sourceTree = SOURCE_ROOT; };
 		83CAA40120990AB5003F231D /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		83D2A46820F006000032054C /* String+ContentSizeCategoryString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ContentSizeCategoryString.swift"; sourceTree = "<group>"; };
 		83DA75E82065167600303D8F /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DA75EB2065167600303D8F /* Capable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capable.h; sourceTree = "<group>"; };
 		83DA75EC2065167600303D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				83DB72452069891200384B3F /* UIContentSizeCategory+stringValue.swift */,
 				83DB724720698EB400384B3F /* Bool+statusString.swift */,
 				833DB9BE206C164B00C8DA02 /* Notification+Name.swift */,
+				83D2A46820F006000032054C /* String+ContentSizeCategoryString.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			files = (
 				83973ADF206FD4080057CD4F /* FontMetrics.swift in Sources */,
 				8382A324206EB40500E264A3 /* NotificationsProtocol.swift in Sources */,
+				83D2A46920F006000032054C /* String+ContentSizeCategoryString.swift in Sources */,
 				83BB09D22087CE4C000420C5 /* NotificationsMock.swift in Sources */,
 				83973ADA206FD22C0057CD4F /* UIFont+ScaledFont.swift in Sources */,
 				83B5FFE42065336F00E8E83F /* Capable.swift in Sources */,
