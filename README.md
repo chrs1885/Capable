@@ -173,7 +173,7 @@ The following table contains all features that are available AND settable on eac
 |                     | iOS                | tvOS               | watchOS                  |
 | ------------------- |:------------------:| :-----------------:| :-----------------------:|
 | .AssistiveTouch     | :white_check_mark: |                    |                          |
-| .BoldText           | :white_check_mark: | :white_check_mark: |                          |
+| .BoldText           | :white_check_mark: | :white_check_mark: | :white_check_mark:**\*** |
 | .ClosedCaptioning   | :white_check_mark: | :white_check_mark: |                          |
 | .DarkerSystemColors | :white_check_mark: |                    |                          |
 | .Grayscale          | :white_check_mark: | :white_check_mark: |                          |
