@@ -170,26 +170,30 @@ While these extension APIs are available on tvOS and watchOS as well, setting th
 
 The following table contains all features that are available AND settable on each platform.
 
-|                     | iOS                | tvOS               | watchOS            |
-| ------------------- |:------------------:| :-----------------:| :-----------------:|
-| .AssistiveTouch     | :white_check_mark: |                    |                    |
-| .BoldText           | :white_check_mark: | :white_check_mark: |                    |
-| .ClosedCaptioning   | :white_check_mark: | :white_check_mark: |                    |
-| .DarkerSystemColors | :white_check_mark: |                    |                    |
-| .Grayscale          | :white_check_mark: | :white_check_mark: |                    |
-| .GuidedAccess       | :white_check_mark: |                    |                    |
-| .InvertColors       | :white_check_mark: |                    |                    |
-| .LargerText.        | :white_check_mark: |                    |                    |
-| .MonoAudio          | :white_check_mark: | :white_check_mark: |                    |
-| .ReduceMotion       | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| .ReduceTransparency | :white_check_mark: | :white_check_mark: |                    |
-| .ShakeToUndo        | :white_check_mark: |                    |                    |
-| .SpeakScreen        | :white_check_mark: |                    |                    |
-| .SpeakSelection     | :white_check_mark: |                    |                    |
-| .SwitchControl      | :white_check_mark: | :white_check_mark: |                    |
-| .VoiceOver          | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|                     | iOS                | tvOS               | watchOS                  |
+| ------------------- |:------------------:| :-----------------:| :-----------------------:|
+| .AssistiveTouch     | :white_check_mark: |                    |                          |
+| .BoldText           | :white_check_mark: | :white_check_mark: |                          |
+| .ClosedCaptioning   | :white_check_mark: | :white_check_mark: |                          |
+| .DarkerSystemColors | :white_check_mark: |                    |                          |
+| .Grayscale          | :white_check_mark: | :white_check_mark: |                          |
+| .GuidedAccess       | :white_check_mark: |                    |                          |
+| .InvertColors       | :white_check_mark: |                    |                          |
+| .LargerText.        | :white_check_mark: |                    | :white_check_mark:**\*** |
+| .MonoAudio          | :white_check_mark: | :white_check_mark: |                          |
+| .ReduceMotion       | :white_check_mark: | :white_check_mark: | :white_check_mark:       |
+| .ReduceTransparency | :white_check_mark: | :white_check_mark: |                          |
+| .ShakeToUndo        | :white_check_mark: |                    |                          |
+| .SpeakScreen        | :white_check_mark: |                    |                          |
+| .SpeakSelection     | :white_check_mark: |                    |                          |
+| .SwitchControl      | :white_check_mark: | :white_check_mark: |                          |
+| .VoiceOver          | :white_check_mark: | :white_check_mark: | :white_check_mark:       |
+
+*\* Feature status can be read but notifications are not available.*
 
 While most features can only have a status set to **enabled** or **disabled**, the `.LargerText` feature offers the font scale set by the user:
+
+### iOS
 
 * XS
 * S
@@ -203,6 +207,16 @@ While most features can only have a status set to **enabled** or **disabled**, t
 * Accessibility XL
 * Accessibility XXL
 * Accessibility XXXL
+* Unknown
+
+### watchOS
+* XS
+* S *(default watch with 38mm)*
+* L *(default watch with 42mm)*
+* XL
+* XXL
+* XXXL
+* Unknown
 
 ## Ressources
 
