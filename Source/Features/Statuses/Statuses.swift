@@ -219,7 +219,7 @@ class Statuses: StatusesProtocol {
             case .InvertColors:
                 return self.isInvertColorsEnabled
             case .LargerText:
-                return !(self.largerTextCatagory == .medium)
+                return !ContentSizeHelper.isDefaultContentSizeCategory(contentSizeCategory: self.largerTextCatagory)
             case .MonoAudio:
                 return self.isMonoAudioEnabled
             case .ShakeToUndo:
@@ -259,10 +259,8 @@ class Statuses: StatusesProtocol {
         #elseif os(watchOS)
             let watchSize = WKInterfaceDevice.current().preferredContentSizeCategory
             switch feature {
-            case .LargerText, watchSize == "UICTContentSizeCategoryS":
-                return self.largerTextCatagory != "S"
-            case .LargerText, watchSize == "UICTContentSizeCategoryL":
-                return self.largerTextCatagory != "L"
+            case .LargerText:
+                return !ContentSizeHelper.isDefaultContentSize(contentSize: self.largerTextCatagory)
             case .ReduceMotion:
                 return self.isReduceMotionEnabled
             case .VoiceOver:
