@@ -53,9 +53,6 @@ class Statuses: StatusesProtocol {
             #endif
         
             #if os(iOS) || os(tvOS)
-                if (self.features.contains(.BoldText)) {
-                    featuresStatusMap[CapableFeature.BoldText.rawValue] = self.isBoldTextEnabled.statusString
-                }
                 if (self.features.contains(.ClosedCaptioning)) {
                     featuresStatusMap[CapableFeature.ClosedCaptioning.rawValue] = self.isClosedCaptioningEnabled.statusString
                 }
@@ -79,6 +76,9 @@ class Statuses: StatusesProtocol {
                 }
             #endif
             
+            if (self.features.contains(.BoldText)) {
+                featuresStatusMap[CapableFeature.BoldText.rawValue] = self.isBoldTextEnabled.statusString
+            }
             if (self.features.contains(.ReduceMotion)) {
                 featuresStatusMap[CapableFeature.ReduceMotion.rawValue] = self.isReduceMotionEnabled.statusString
             }
@@ -173,6 +173,14 @@ class Statuses: StatusesProtocol {
             }
         }
     #elseif os(watchOS)
+        var isBoldTextEnabled: Bool {
+            get {
+                let referenceFont = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+                let isBoldText = referenceFont.fontName.localizedCaseInsensitiveContains("bold")
+                return isBoldText
+            }
+        }
+    
         var largerTextCatagory: String {
             get {
                 let referenceFontSize = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body).pointSize
@@ -262,6 +270,8 @@ class Statuses: StatusesProtocol {
             }
         #elseif os(watchOS)
             switch feature {
+            case .BoldText:
+                return self.isBoldTextEnabled
             case .LargerText:
                 return !ContentSizeHelper.isDefaultContentSize(contentSize: self.largerTextCatagory)
             case .ReduceMotion:

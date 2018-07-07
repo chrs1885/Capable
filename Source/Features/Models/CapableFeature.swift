@@ -63,6 +63,7 @@ public enum CapableFeature: String {
             .VoiceOver,]
         #elseif os(watchOS)
         return [
+            .BoldText,
             .LargerText,
             .ReduceMotion,
             .VoiceOver,]

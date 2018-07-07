@@ -10,7 +10,6 @@ protocol StatusesProtocol {
     
     #if os(iOS) || os(tvOS)
     var isAssistiveTouchEnabled: Bool { get }
-    var isBoldTextEnabled: Bool { get }
     var isClosedCaptioningEnabled: Bool { get }
     var isDarkerSystemColorsEnabled: Bool { get }
     var isGrayscaleEnabled: Bool { get }
@@ -29,6 +28,7 @@ protocol StatusesProtocol {
     var largerTextCatagory: String { get }
     #endif
     
+    var isBoldTextEnabled: Bool { get }
     var isReduceMotionEnabled: Bool { get }
     var isVoiceOverEnabled: Bool { get }
     

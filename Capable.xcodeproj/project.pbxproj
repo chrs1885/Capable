@@ -245,10 +245,10 @@
 		83DB7243206988DC00384B3F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				83DB72452069891200384B3F /* UIContentSizeCategory+stringValue.swift */,
 				83DB724720698EB400384B3F /* Bool+statusString.swift */,
 				833DB9BE206C164B00C8DA02 /* Notification+Name.swift */,
 				83D2A46820F006000032054C /* String+ContentSizeCategoryString.swift */,
+				83DB72452069891200384B3F /* UIContentSizeCategory+stringValue.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
