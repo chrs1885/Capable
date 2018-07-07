@@ -10,7 +10,7 @@ import Foundation
 class ContentSizeHelper {
     
     #if os(iOS)
-    static func isDefaultContentSizeCategory(contentSizeCategory: UIContentSizeCategory): Bool {
+    static func isDefaultContentSizeCategory(contentSizeCategory: UIContentSizeCategory) -> Bool {
         return contentSizeCategory == .medium
     }
     #endif
@@ -23,7 +23,7 @@ class ContentSizeHelper {
         let large = "UICTContentSizeCategoryL"
     }
     
-    static func isDefaultContentSize(contentSize: String): Bool {
+    static func isDefaultContentSize(contentSize: String) -> Bool {
         let watchSize = WKInterfaceDevice.current().preferredContentSizeCategory
         if watchSize == DefaultContentSize.small {
             return contentSize == "S"

@@ -50,7 +50,9 @@ class Statuses: StatusesProtocol {
                 if (self.features.contains(.SpeakSelection)) {
                     featuresStatusMap[CapableFeature.SpeakSelection.rawValue] = self.isSpeakSelectionEnabled.statusString
                 }
-            #elseif os(iOS) || os(tvOS)
+            #endif
+        
+            #if os(iOS) || os(tvOS)
                 if (self.features.contains(.BoldText)) {
                     featuresStatusMap[CapableFeature.BoldText.rawValue] = self.isBoldTextEnabled.statusString
                 }
@@ -69,7 +71,9 @@ class Statuses: StatusesProtocol {
                 if (self.features.contains(.SwitchControl)) {
                     featuresStatusMap[CapableFeature.SwitchControl.rawValue] = self.isSwitchControlEnabled.statusString
                 }
-            #elseif os(watchOS)
+            #endif
+            
+            #if os(watchOS)
                 if (self.features.contains(.LargerText)) {
                     featuresStatusMap[CapableFeature.LargerText.rawValue] = self.largerTextCatagory
                 }
