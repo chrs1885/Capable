@@ -14,6 +14,7 @@
 		831B4F2F20A4EEA700F1BB94 /* StatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B4F2E20A4EEA700F1BB94 /* StatusesMock.swift */; };
 		833DB9BF206C164B00C8DA02 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9BE206C164B00C8DA02 /* Notification+Name.swift */; };
 		833DB9C2206C188B00C8DA02 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */; };
+		837EE71420F1592A00AC8A11 /* ContentSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EE71320F1592A00AC8A11 /* ContentSizeHelper.swift */; };
 		8382A322206E350F00E264A3 /* Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A321206E350F00E264A3 /* Statuses.swift */; };
 		8382A324206EB40500E264A3 /* NotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A323206EB40500E264A3 /* NotificationsProtocol.swift */; };
 		8382A326206EB46E00E264A3 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A325206EB46E00E264A3 /* Notifications.swift */; };
@@ -49,6 +50,7 @@
 		831B4F2E20A4EEA700F1BB94 /* StatusesMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusesMock.swift; path = Tests/Mocks/StatusesMock.swift; sourceTree = SOURCE_ROOT; };
 		833DB9BE206C164B00C8DA02 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 		833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatus.swift; sourceTree = "<group>"; };
+		837EE71320F1592A00AC8A11 /* ContentSizeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSizeHelper.swift; sourceTree = "<group>"; };
 		8382A321206E350F00E264A3 /* Statuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statuses.swift; sourceTree = "<group>"; };
 		8382A323206EB40500E264A3 /* NotificationsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsProtocol.swift; sourceTree = "<group>"; };
 		8382A325206EB46E00E264A3 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		837EE71220F1590500AC8A11 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				837EE71320F1592A00AC8A11 /* ContentSizeHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		8382A327206EC73400E264A3 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 				833DB9C0206C187C00C8DA02 /* Models */,
 				8382A327206EC73400E264A3 /* Notifications */,
 				83B5FFE720653AC000E8E83F /* Statuses */,
+				837EE71220F1590500AC8A11 /* Utilities */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -372,6 +383,7 @@
 				83CAA3FA2097BF9B003F231D /* OsVersionProviderProtocol.swift in Sources */,
 				83CAA3F82097BEEC003F231D /* OsVersionProvider.swift in Sources */,
 				831B4F2F20A4EEA700F1BB94 /* StatusesMock.swift in Sources */,
+				837EE71420F1592A00AC8A11 /* ContentSizeHelper.swift in Sources */,
 				83DB72462069891200384B3F /* UIContentSizeCategory+stringValue.swift in Sources */,
 				83973ADD206FD3A40057CD4F /* FontMetricsProtocol.swift in Sources */,
 				83DB724820698EB400384B3F /* Bool+statusString.swift in Sources */,
