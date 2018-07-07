@@ -17,7 +17,6 @@ public enum CapableFeature: String {
     #endif
     
     #if os(iOS) || os(tvOS)
-    case BoldText
     case ClosedCaptioning
     case Grayscale
     case MonoAudio
@@ -27,6 +26,10 @@ public enum CapableFeature: String {
     
     #if os(iOS) || os(watchOS)
     case LargerText
+    #endif
+    
+    #if os(iOS) || os(tvOS) || os(watchOS)
+    case BoldText
     #endif
     
     case ReduceMotion
