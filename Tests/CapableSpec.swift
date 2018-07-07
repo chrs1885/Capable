@@ -96,7 +96,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .AssistiveTouch)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .AssistiveTouch)).to(beTrue())
                     }
                 }
                 
@@ -106,7 +106,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .DarkerSystemColors)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .DarkerSystemColors)).to(beTrue())
                     }
                 }
                 
@@ -116,7 +116,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .GuidedAccess)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .GuidedAccess)).to(beTrue())
                     }
                 }
                 
@@ -126,7 +126,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .InvertColors)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .InvertColors)).to(beTrue())
                     }
                 }
                 
@@ -136,7 +136,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .LargerText)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .LargerText)).to(beTrue())
                     }
                 }
                 
@@ -147,7 +147,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .ShakeToUndo)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .ShakeToUndo)).to(beTrue())
                     }
                 }
                 
@@ -157,7 +157,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .SpeakScreen)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .SpeakScreen)).to(beTrue())
                     }
                 }
                 
@@ -167,7 +167,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .SpeakSelection)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .SpeakSelection)).to(beTrue())
                     }
                 }
                 #endif
@@ -178,7 +178,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .BoldText)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .BoldText)).to(beTrue())
                     }
                 }
                 
@@ -188,7 +188,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .ClosedCaptioning)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .ClosedCaptioning)).to(beTrue())
                     }
                 }
                 
@@ -198,7 +198,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .Grayscale)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .Grayscale)).to(beTrue())
                     }
                 }
                 
@@ -208,7 +208,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .MonoAudio)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .MonoAudio)).to(beTrue())
                     }
                 }
                 
@@ -218,7 +218,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .ReduceMotion)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .ReduceMotion)).to(beTrue())
                     }
                 }
                 
@@ -228,7 +228,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .ReduceTransparency)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .ReduceTransparency)).to(beTrue())
                     }
                 }
 
@@ -238,7 +238,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .SwitchControl)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .SwitchControl)).to(beTrue())
                     }
                 }
                 
@@ -248,7 +248,7 @@ class CapableSpec: QuickSpec {
                     }
                     
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnable(feature: .VoiceOver)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .VoiceOver)).to(beTrue())
                     }
                 }
             }

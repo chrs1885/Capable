@@ -25,11 +25,15 @@ protocol StatusesProtocol {
     var isSwitchControlEnabled: Bool { get }
     #endif
     
+    #if os(watchOS)
+    var largerTextCatagory: String { get }
+    #endif
+    
     var isReduceMotionEnabled: Bool { get }
     var isVoiceOverEnabled: Bool { get }
     
     init()
     init(with features: [CapableFeature])
 
-    func isFeatureEnable(feature: CapableFeature) -> Bool
+    func isFeatureEnabled(feature: CapableFeature) -> Bool
 }
