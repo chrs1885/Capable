@@ -261,7 +261,6 @@ class Statuses: StatusesProtocol {
                 return self.isVoiceOverEnabled
             }
         #elseif os(watchOS)
-            let watchSize = WKInterfaceDevice.current().preferredContentSizeCategory
             switch feature {
             case .LargerText:
                 return !ContentSizeHelper.isDefaultContentSize(contentSize: self.largerTextCatagory)

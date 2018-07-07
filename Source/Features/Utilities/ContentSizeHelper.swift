@@ -5,7 +5,9 @@
 //  Created by Christoph Wendt on 07.07.18.
 //
 
-import Foundation
+#if os(watchOS)
+import WatchKit
+#endif
 
 class ContentSizeHelper {
     
@@ -18,9 +20,9 @@ class ContentSizeHelper {
     #if os(watchOS)
     struct DefaultContentSize {
         // 38mm
-        let small = "UICTContentSizeCategoryS"
+        static let small = "UICTContentSizeCategoryS"
         // 42mm
-        let large = "UICTContentSizeCategoryL"
+        static let large = "UICTContentSizeCategoryL"
     }
     
     static func isDefaultContentSize(contentSize: String) -> Bool {
