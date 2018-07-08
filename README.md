@@ -141,7 +141,7 @@ capable.notificationsEnabled = false
 
 Supporting Dynamic Type along with different OS versions such as iOS 10 and iOS 11 can be a huge pain, since both versions provide different APIs.
 
-Capable easily auto scales system fonts as well as your custom fonts by providing on line of code:
+Capable easily auto scales system fonts as well as your custom fonts by providing one line of code:
 
 ```swift
 let myLabel = UILabel(frame: frame)
@@ -179,15 +179,15 @@ The following table contains all features that are available AND settable on eac
 | .Grayscale          | :white_check_mark: | :white_check_mark: |                          |
 | .GuidedAccess       | :white_check_mark: |                    |                          |
 | .InvertColors       | :white_check_mark: |                    |                          |
-| .LargerText.        | :white_check_mark: |                    | :white_check_mark:**\*** |
+| .LargerText         | :white_check_mark: |                    | :white_check_mark:**\*** |
 | .MonoAudio          | :white_check_mark: | :white_check_mark: |                          |
-| .ReduceMotion       | :white_check_mark: | :white_check_mark: | :white_check_mark:       |
+| .ReduceMotion       | :white_check_mark: | :white_check_mark: | :white_check_mark:&nbsp; |
 | .ReduceTransparency | :white_check_mark: | :white_check_mark: |                          |
 | .ShakeToUndo        | :white_check_mark: |                    |                          |
 | .SpeakScreen        | :white_check_mark: |                    |                          |
 | .SpeakSelection     | :white_check_mark: |                    |                          |
 | .SwitchControl      | :white_check_mark: | :white_check_mark: |                          |
-| .VoiceOver          | :white_check_mark: | :white_check_mark: | :white_check_mark:       |
+| .VoiceOver          | :white_check_mark: | :white_check_mark: | :white_check_mark:&nbsp; |
 
 *\* Feature status can be read but notifications are not available.*
 
