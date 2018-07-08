@@ -178,7 +178,7 @@ The following table contains all features that are available AND settable on eac
 | .DarkerSystemColors | :white_check_mark: |                    |                          |
 | .Grayscale          | :white_check_mark: | :white_check_mark: |                          |
 | .GuidedAccess       | :white_check_mark: |                    |                          |
-| .InvertColors       | :white_check_mark: |                    |                          |
+| .InvertColors       | :white_check_mark: | :white_check_mark: |                          |
 | .LargerText         | :white_check_mark: |                    | :white_check_mark:**\*** |
 | .MonoAudio          | :white_check_mark: | :white_check_mark: |                          |
 | .ReduceMotion       | :white_check_mark: | :white_check_mark: | :white_check_mark:&nbsp; |

@@ -10,7 +10,6 @@ public enum CapableFeature: String {
     case AssistiveTouch
     case DarkerSystemColors
     case GuidedAccess
-    case InvertColors
     case ShakeToUndo
     case SpeakScreen
     case SpeakSelection
@@ -19,6 +18,7 @@ public enum CapableFeature: String {
     #if os(iOS) || os(tvOS)
     case ClosedCaptioning
     case Grayscale
+    case InvertColors
     case MonoAudio
     case ReduceTransparency
     case SwitchControl
@@ -59,6 +59,7 @@ public enum CapableFeature: String {
             .BoldText,
             .ClosedCaptioning,
             .Grayscale,
+            .InvertColors,
             .MonoAudio,
             .ReduceMotion,
             .ReduceTransparency,
