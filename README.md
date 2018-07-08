@@ -139,7 +139,7 @@ capable.notificationsEnabled = false
 
 ### Dynamic Type with custom fonts (Capable UIFont extension)
 
-Supporting Dynamic Type along with different OS versions such as iOS 10 and iOS 11 can be a huge pain, since both versions provide different APIs.
+Supporting Dynamic Type along with different OS versions such as iOS 10 and iOS 11 (watchOS 3 and watchOS 4) can be a huge pain, since both versions provide different APIs.
 
 Capable easily auto scales system fonts as well as your custom fonts by providing one line of code:
 
@@ -163,7 +163,7 @@ myLabel.font = UIFont.scaledItalicSystemFont(ofSize: defaultFontSize)
 myLabel.font = UIFont.scaledBoldSystemFont(ofSize: defaultFontSize)
 ```
 
-While these extension APIs are available on tvOS and watchOS as well, setting the font size in the system settings is not supported on those platforms.
+While these extension APIs are available on tvOS as well, setting the font size in the system settings is not supported on this platforms.
 
 <a id="accessibility-feature-overview"></a> 
 ## Accessibility feature overview
