@@ -8,10 +8,10 @@
 import Foundation
 
 class OsVersionProviderMock: OsVersionProviderProtocol {
-    var osVersionPrior11 = false
+    var osVersionWithoutUIFontMetrics = false
     
-    func isOsVersionPrior11() -> Bool {
-        return self.osVersionPrior11
+    func isOsVersionWithoutUIFontMetrics() -> Bool {
+        return self.osVersionWithoutUIFontMetrics
     }
 }
 #endif
