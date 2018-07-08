@@ -14,7 +14,6 @@
 		831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F6252078138E00F0C74D /* AppDelegate.swift */; };
 		831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
 		831B4F2920A4DDD100F1BB94 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62B2078138E00F0C74D /* FontsViewController.swift */; };
-		831B4F2A20A4DDD800F1BB94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
 		831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
 		837C191A20AA27970003D237 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837C191820AA27970003D237 /* Interface.storyboard */; };
 		837C192320AA27970003D237 /* Example-watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 837C192220AA27970003D237 /* Example-watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -24,6 +23,7 @@
 		837C193920AA27F10003D237 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C193820AA27F10003D237 /* FeatureOverviewController.swift */; };
 		837C193B20AA2D960003D237 /* FeatureRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C193A20AA2D960003D237 /* FeatureRowController.swift */; };
 		837C193D20AA32710003D237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
+		83C6D6EF20F2AE6200D95E02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
 		83C6F62D2078138E00F0C74D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
 		83C6F62E2078138E00F0C74D /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
 		83C6F62F2078138E00F0C74D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F6252078138E00F0C74D /* AppDelegate.swift */; };
@@ -419,7 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */,
-				831B4F2A20A4DDD800F1BB94 /* Assets.xcassets in Resources */,
+				83C6D6EF20F2AE6200D95E02 /* Assets.xcassets in Resources */,
 				831B4F1E20A4D4F200F1BB94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,7 +713,7 @@
 			baseConfigurationReference = FEECBAFC5F7980884EBE6AA3 /* Pods-Example-watchOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-watchOS";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6TTE9K9RG;
 				IBSC_MODULE = Example_watchOS_Extension;
@@ -733,7 +733,7 @@
 			baseConfigurationReference = 1004E7F9A4E366DF66B525B0 /* Pods-Example-watchOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-watchOS";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6TTE9K9RG;
 				IBSC_MODULE = Example_watchOS_Extension;
@@ -859,8 +859,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B707690BAFBA32861CBBF6F3 /* Pods-Example-iOS.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-iOS";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6TTE9K9RG;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/iOS/Info.plist";
@@ -876,8 +876,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A5DCF956DE661B9787EAE334 /* Pods-Example-iOS.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-iOS";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6TTE9K9RG;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/iOS/Info.plist";
