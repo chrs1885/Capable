@@ -13,7 +13,6 @@
 		831B4F1E20A4D4F200F1BB94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831B4F1C20A4D4F200F1BB94 /* Main.storyboard */; };
 		831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F6252078138E00F0C74D /* AppDelegate.swift */; };
 		831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
-		831B4F2920A4DDD100F1BB94 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62B2078138E00F0C74D /* FontsViewController.swift */; };
 		831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
 		837C191A20AA27970003D237 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837C191820AA27970003D237 /* Interface.storyboard */; };
 		837C192320AA27970003D237 /* Example-watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 837C192220AA27970003D237 /* Example-watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -167,6 +166,7 @@
 		831B4F2520A4D51D00F1BB94 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				83C6F62B2078138E00F0C74D /* FontsViewController.swift */,
 				83C6F6282078138E00F0C74D /* Main.storyboard */,
 				83C6F62C2078138E00F0C74D /* Info.plist */,
 			);
@@ -248,7 +248,6 @@
 			children = (
 				83C6F6252078138E00F0C74D /* AppDelegate.swift */,
 				83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */,
-				83C6F62B2078138E00F0C74D /* FontsViewController.swift */,
 				831B4F2520A4D51D00F1BB94 /* iOS */,
 				831B4F2620A4D53100F1BB94 /* tvOS */,
 				837C193C20AA31E60003D237 /* watchOS */,
@@ -556,7 +555,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */,
-				831B4F2920A4DDD100F1BB94 /* FontsViewController.swift in Sources */,
 				831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
