@@ -1,7 +1,9 @@
 disabled_rules: # rule identifiers to exclude from running
-  - variable_name
-  - nesting
+  - function_body_length
   - function_parameter_count
+  - line_length
+  - nesting
+  - variable_name
 opt_in_rules: # some rules are only opt-in
   - control_statement
   - empty_count

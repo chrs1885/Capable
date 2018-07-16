@@ -15,7 +15,7 @@ public enum CapableFeature: String {
     case SpeakScreen
     case SpeakSelection
     #endif
-    
+
     #if os(iOS) || os(tvOS)
     case ClosedCaptioning
     case Grayscale
@@ -23,18 +23,18 @@ public enum CapableFeature: String {
     case ReduceTransparency
     case SwitchControl
     #endif
-    
+
     #if os(iOS) || os(watchOS)
     case LargerText
     #endif
-    
+
     #if os(iOS) || os(tvOS) || os(watchOS)
     case BoldText
     #endif
-    
+
     case ReduceMotion
     case VoiceOver
-    
+
     public static func allValues() -> [CapableFeature] {
         #if os(iOS)
         return [
@@ -53,7 +53,7 @@ public enum CapableFeature: String {
             .SpeakScreen,
             .SpeakSelection,
             .SwitchControl,
-            .VoiceOver,]
+            .VoiceOver ]
         #elseif os(tvOS)
         return [
             .BoldText,
@@ -63,16 +63,16 @@ public enum CapableFeature: String {
             .ReduceMotion,
             .ReduceTransparency,
             .SwitchControl,
-            .VoiceOver,]
+            .VoiceOver ]
         #elseif os(watchOS)
         return [
             .BoldText,
             .LargerText,
             .ReduceMotion,
-            .VoiceOver,]
+            .VoiceOver ]
         #endif
     }
-    
+
     public static func keys(forFeatures features: [CapableFeature]) -> [String] {
         return features.map {$0.rawValue}
     }
