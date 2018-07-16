@@ -66,7 +66,7 @@ let capable = Capable()
 or by passing in only specific feature names
 
 ```swift
-let capable = Capable(with: [.LargerText, .BoldText, .ShakeToUndo])
+let capable = Capable(with: [.largerText, .boldText, .shakeToUndo])
 ```
 
 You can find all list of all accessibility features available on each platform in the [accessibility feature overview](#accessibility-feature-overview) section.
@@ -77,7 +77,7 @@ If you are interested in a specific accessibility feature, you can retrieve its 
 
 ```swift
 let capable = Capable()
-let isVoiceOverEnabled: Bool = capable.isFeatureEnable(feature: .VoiceOver)
+let isVoiceOverEnabled: Bool = capable.isFeatureEnable(feature: .voiceOver)
 ```
 
 To get a dictionary of all features, that the `Capable` instance has been initialized with you can use:
@@ -172,26 +172,26 @@ The following table contains all features that are available AND settable on eac
 
 |                     | iOS                | tvOS               | watchOS                  |
 | ------------------- |:------------------:| :-----------------:| :-----------------------:|
-| .AssistiveTouch     | :white_check_mark: |                    |                          |
-| .BoldText           | :white_check_mark: | :white_check_mark: | :white_check_mark:**\*** |
-| .ClosedCaptioning   | :white_check_mark: | :white_check_mark: |                          |
-| .DarkerSystemColors | :white_check_mark: |                    |                          |
-| .Grayscale          | :white_check_mark: | :white_check_mark: |                          |
-| .GuidedAccess       | :white_check_mark: |                    |                          |
-| .InvertColors       | :white_check_mark: |                    |                          |
-| .LargerText.        | :white_check_mark: |                    | :white_check_mark:**\*** |
-| .MonoAudio          | :white_check_mark: | :white_check_mark: |                          |
-| .ReduceMotion       | :white_check_mark: | :white_check_mark: | :white_check_mark:       |
-| .ReduceTransparency | :white_check_mark: | :white_check_mark: |                          |
-| .ShakeToUndo        | :white_check_mark: |                    |                          |
-| .SpeakScreen        | :white_check_mark: |                    |                          |
-| .SpeakSelection     | :white_check_mark: |                    |                          |
-| .SwitchControl      | :white_check_mark: | :white_check_mark: |                          |
-| .VoiceOver          | :white_check_mark: | :white_check_mark: | :white_check_mark:       |
+| .assistiveTouch     | :white_check_mark: |                    |                          |
+| .boldText           | :white_check_mark: | :white_check_mark: | :white_check_mark:**\*** |
+| .closedCaptioning   | :white_check_mark: | :white_check_mark: |                          |
+| .darkerSystemColors | :white_check_mark: |                    |                          |
+| .grayscale          | :white_check_mark: | :white_check_mark: |                          |
+| .guidedAccess       | :white_check_mark: |                    |                          |
+| .invertColors       | :white_check_mark: |                    |                          |
+| .largerText         | :white_check_mark: |                    | :white_check_mark:**\*** |
+| .monoAudio          | :white_check_mark: | :white_check_mark: |                          |
+| .reduceMotion       | :white_check_mark: | :white_check_mark: | :white_check_mark:       |
+| .reduceTransparency | :white_check_mark: | :white_check_mark: |                          |
+| .shakeToUndo        | :white_check_mark: |                    |                          |
+| .speakScreen        | :white_check_mark: |                    |                          |
+| .speakSelection     | :white_check_mark: |                    |                          |
+| .switchControl      | :white_check_mark: | :white_check_mark: |                          |
+| .voiceOver          | :white_check_mark: | :white_check_mark: | :white_check_mark:       |
 
 *\* Feature status can be read but notifications are not available.*
 
-While most features can only have a status set to **enabled** or **disabled**, the `.LargerText` feature offers the font scale set by the user:
+While most features can only have a status set to **enabled** or **disabled**, the `.largerText` feature offers the font scale set by the user:
 
 ### iOS
 
