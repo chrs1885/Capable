@@ -9,7 +9,7 @@ import Foundation
 
 class OsVersionProviderMock: OsVersionProviderProtocol {
     var osVersionPrior11 = false
-    
+
     func isOsVersionPrior11() -> Bool {
         return self.osVersionPrior11
     }
