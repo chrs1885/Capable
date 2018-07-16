@@ -33,9 +33,6 @@ extension Notifications {
             if features.contains(.GuidedAccess) {
                 addObserver(for: .UIAccessibilityGuidedAccessStatusDidChange, selector: #selector(self.guidedAccessStatusChanged))
             }
-            if features.contains(.InvertColors) {
-                addObserver(for: .UIAccessibilityInvertColorsStatusDidChange, selector: #selector(self.invertColorsStatusChanged))
-            }
             if features.contains(.LargerText) {
                 addObserver(for: .UIContentSizeCategoryDidChange, selector: #selector(self.largerTextStatusChanged))
             }
@@ -59,6 +56,9 @@ extension Notifications {
             }
             if features.contains(.Grayscale) {
                 addObserver(for: .UIAccessibilityGrayscaleStatusDidChange, selector: #selector(self.grayscaleStatusChanged))
+            }
+            if features.contains(.InvertColors) {
+                addObserver(for: .UIAccessibilityInvertColorsStatusDidChange, selector: #selector(self.invertColorsStatusChanged))
             }
             if features.contains(.MonoAudio) {
                 addObserver(for: .UIAccessibilityMonoAudioStatusDidChange, selector: #selector(self.monoAudioStatusChanged))

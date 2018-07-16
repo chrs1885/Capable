@@ -9,16 +9,16 @@ import Foundation
 import UIKit
 
 class FontMetricsMock: FontMetrics {
-    var scaledFontPriorIOS11Called = false
-    var scaledFontSinceIOS11Called = false
+    var scaledFontWithoutUIFontMetricsCalled = false
+    var scaledFontWithUIFontMetricsCalled = false
 
-    override func scaledFontPriorIOS11(for font: UIFont) -> UIFont {
-        scaledFontPriorIOS11Called = true
+    override func scaledFontWithoutUIFontMetrics(for font: UIFont) -> UIFont {
+        scaledFontWithoutUIFontMetricsCalled = true
         return font
     }
 
-    override func scaledFontSinceIOS11(for font: UIFont) -> UIFont {
-        scaledFontSinceIOS11Called = true
+    override func scaledFontWithUIFontMetrics(for font: UIFont) -> UIFont {
+        scaledFontWithUIFontMetricsCalled = true
         return font
     }
 }

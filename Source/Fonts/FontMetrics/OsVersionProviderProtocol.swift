@@ -8,5 +8,5 @@
 import Foundation
 
 protocol OsVersionProviderProtocol {
-    func isOsVersionPrior11() -> Bool
+    func isOsVersionWithoutUIFontMetrics() -> Bool
 }

@@ -34,9 +34,6 @@ class Statuses: StatusesProtocol {
             if self.features.contains(.GuidedAccess) {
                 featuresStatusMap[CapableFeature.GuidedAccess.rawValue] = self.isGuidedAccessEnabled.statusString
             }
-            if self.features.contains(.InvertColors) {
-                featuresStatusMap[CapableFeature.InvertColors.rawValue] = self.isInvertColorsEnabled.statusString
-            }
             if self.features.contains(.LargerText) {
                 featuresStatusMap[CapableFeature.LargerText.rawValue] = self.largerTextCatagory.stringValue
             }
@@ -57,6 +54,9 @@ class Statuses: StatusesProtocol {
             }
             if self.features.contains(.Grayscale) {
                 featuresStatusMap[CapableFeature.Grayscale.rawValue] = self.isGrayscaleEnabled.statusString
+            }
+            if self.features.contains(.InvertColors) {
+                featuresStatusMap[CapableFeature.InvertColors.rawValue] = self.isInvertColorsEnabled.statusString
             }
             if self.features.contains(.MonoAudio) {
                 featuresStatusMap[CapableFeature.MonoAudio.rawValue] = self.isMonoAudioEnabled.statusString
@@ -222,6 +222,8 @@ class Statuses: StatusesProtocol {
                 return self.isClosedCaptioningEnabled
             case .Grayscale:
                 return self.isGrayscaleEnabled
+            case .InvertColors:
+                return self.isInvertColorsEnabled
             case .MonoAudio:
                 return self.isMonoAudioEnabled
             case .ReduceMotion:

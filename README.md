@@ -2,7 +2,7 @@
 </center>
 
 ---
-[![Build Status](https://www.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg&branch=develop)](https://www.bitrise.io/app/7596a076a75ab2ab)
+[![Build Status](https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg)](https://www.bitrise.io/app/7596a076a75ab2ab)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![Cocoapods compatible](https://img.shields.io/cocoapods/v/Capable.svg)](https://cocoapods.org/pods/Capable)
 ![CocoaPods](https://img.shields.io/cocoapods/p/Capable.svg)
@@ -139,9 +139,9 @@ capable.notificationsEnabled = false
 
 ### Dynamic Type with custom fonts (Capable UIFont extension)
 
-Supporting Dynamic Type along with different OS versions such as iOS 10 and iOS 11 can be a huge pain, since both versions provide different APIs.
+Supporting Dynamic Type along with different OS versions such as iOS 10 and iOS 11 (watchOS 3 and watchOS 4) can be a huge pain, since both versions provide different APIs.
 
-Capable easily auto scales system fonts as well as your custom fonts by providing on line of code:
+Capable easily auto scales system fonts as well as your custom fonts by providing one line of code:
 
 ```swift
 let myLabel = UILabel(frame: frame)
@@ -163,7 +163,7 @@ myLabel.font = UIFont.scaledItalicSystemFont(ofSize: defaultFontSize)
 myLabel.font = UIFont.scaledBoldSystemFont(ofSize: defaultFontSize)
 ```
 
-While these extension APIs are available on tvOS and watchOS as well, setting the font size in the system settings is not supported on those platforms.
+While these extension APIs are available on tvOS as well, setting the font size in the system settings is not supported on this platforms.
 
 <a id="accessibility-feature-overview"></a> 
 ## Accessibility feature overview
@@ -178,16 +178,16 @@ The following table contains all features that are available AND settable on eac
 | .DarkerSystemColors | :white_check_mark: |                    |                          |
 | .Grayscale          | :white_check_mark: | :white_check_mark: |                          |
 | .GuidedAccess       | :white_check_mark: |                    |                          |
-| .InvertColors       | :white_check_mark: |                    |                          |
+| .InvertColors       | :white_check_mark: | :white_check_mark: |                          |
 | .LargerText         | :white_check_mark: |                    | :white_check_mark:**\*** |
 | .MonoAudio          | :white_check_mark: | :white_check_mark: |                          |
-| .ReduceMotion       | :white_check_mark: | :white_check_mark: | :white_check_mark:       |
+| .ReduceMotion       | :white_check_mark: | :white_check_mark: | :white_check_mark:&nbsp; |
 | .ReduceTransparency | :white_check_mark: | :white_check_mark: |                          |
 | .ShakeToUndo        | :white_check_mark: |                    |                          |
 | .SpeakScreen        | :white_check_mark: |                    |                          |
 | .SpeakSelection     | :white_check_mark: |                    |                          |
 | .SwitchControl      | :white_check_mark: | :white_check_mark: |                          |
-| .VoiceOver          | :white_check_mark: | :white_check_mark: | :white_check_mark:       |
+| .VoiceOver          | :white_check_mark: | :white_check_mark: | :white_check_mark:&nbsp; |
 
 *\* Feature status can be read but notifications are not available.*
 
