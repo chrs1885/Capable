@@ -92,7 +92,7 @@ The `statusMap` object is compatible with most analytic SDK APIs. Here's a quick
 
 ```swift
 func sendMetrics() {
-    let statusMap = self.capable.statusMap {
+    let statusMap = self.capable.statusMap
     let eventName = "Capable features received"
     
     // App Center

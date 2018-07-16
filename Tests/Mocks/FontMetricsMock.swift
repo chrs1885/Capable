@@ -7,11 +7,11 @@
 #if os(iOS) || os(tvOS)
 import Foundation
 import UIKit
-    
+
 class FontMetricsMock: FontMetrics {
     var scaledFontWithoutUIFontMetricsCalled = false
     var scaledFontWithUIFontMetricsCalled = false
-    
+
     override func scaledFontWithoutUIFontMetrics(for font: UIFont) -> UIFont {
         scaledFontWithoutUIFontMetricsCalled = true
         return font

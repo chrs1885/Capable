@@ -9,19 +9,17 @@ import Foundation
 import UIKit
 
 class FontMetrics: FontMetricsProtocol {
-    
+
     var osVersionProvider: OsVersionProviderProtocol
 
     init() {
         self.osVersionProvider = OsVersionProvider()
     }
-    
+
     var scaler: CGFloat {
-        get {
-            return UIFont.preferredFont(forTextStyle: .body).pointSize / 17.0
-        }
+        return UIFont.preferredFont(forTextStyle: .body).pointSize / 17.0
     }
-    
+
     func scaledFont(for font: UIFont) -> UIFont {
         if(self.osVersionProvider.isOsVersionWithoutUIFontMetrics()) {
             return self.scaledFontWithoutUIFontMetrics(for: font)

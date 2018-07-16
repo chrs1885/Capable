@@ -7,7 +7,7 @@
 
 protocol StatusesProtocol {
     var statusMap: [String: String] { get }
-    
+
     #if os(iOS) || os(tvOS)
     var isAssistiveTouchEnabled: Bool { get }
     var isClosedCaptioningEnabled: Bool { get }
@@ -23,15 +23,15 @@ protocol StatusesProtocol {
     var isSpeakSelectionEnabled: Bool { get }
     var isSwitchControlEnabled: Bool { get }
     #endif
-    
+
     #if os(watchOS)
     var largerTextCatagory: String { get }
     #endif
-    
+
     var isBoldTextEnabled: Bool { get }
     var isReduceMotionEnabled: Bool { get }
     var isVoiceOverEnabled: Bool { get }
-    
+
     init()
     init(with features: [CapableFeature])
 

@@ -9,7 +9,7 @@ import Foundation
 
 class OsVersionProviderMock: OsVersionProviderProtocol {
     var osVersionWithoutUIFontMetrics = false
-    
+
     func isOsVersionWithoutUIFontMetrics() -> Bool {
         return self.osVersionWithoutUIFontMetrics
     }

@@ -1,0 +1,16 @@
+disabled_rules: # rule identifiers to exclude from running
+  - function_body_length
+  - function_parameter_count
+  - line_length
+  - nesting
+  - variable_name
+opt_in_rules: # some rules are only opt-in
+  - control_statement
+  - empty_count
+  - trailing_newline
+  - colon
+  - comma
+included: # paths to include during linting. `--path` is ignored if present.
+  - Source
+  - Tests
+excluded: # paths to ignore during linting. Takes precedence over `included`.
