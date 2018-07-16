@@ -16,7 +16,7 @@ class FontMetricsMock: FontMetrics {
         scaledFontWithoutUIFontMetricsCalled = true
         return font
     }
-    
+
     override func scaledFontWithUIFontMetrics(for font: UIFont) -> UIFont {
         scaledFontWithUIFontMetricsCalled = true
         return font

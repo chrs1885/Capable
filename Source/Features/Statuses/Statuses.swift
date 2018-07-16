@@ -55,7 +55,7 @@ class Statuses: StatusesProtocol {
             if self.features.contains(.Grayscale) {
                 featuresStatusMap[CapableFeature.Grayscale.rawValue] = self.isGrayscaleEnabled.statusString
             }
-            if (self.features.contains(.InvertColors)) {
+            if self.features.contains(.InvertColors) {
                 featuresStatusMap[CapableFeature.InvertColors.rawValue] = self.isInvertColorsEnabled.statusString
             }
             if self.features.contains(.MonoAudio) {

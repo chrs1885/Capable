@@ -21,18 +21,18 @@ class FontMetrics: FontMetricsProtocol {
     }
 
     func scaledFont(for font: UIFont) -> UIFont {
-        if(self.osVersionProvider.isOsVersionWithoutUIFontMetrics()) {
+        if self.osVersionProvider.isOsVersionWithoutUIFontMetrics() {
             return self.scaledFontWithoutUIFontMetrics(for: font)
         } else {
             return self.scaledFontWithUIFontMetrics(for: font)
         }
     }
-    
+
     func scaledFontWithoutUIFontMetrics(for font: UIFont) -> UIFont {
         let scaledFontSize = font.pointSize * self.scaler
         return font.withSize(scaledFontSize)
     }
-    
+
     func scaledFontWithUIFontMetrics(for font: UIFont) -> UIFont {
         if #available(iOS 11.0, tvOS 11.0, watchOS 4.0, *) {
             let fontMetrics = UIFontMetrics.default
