@@ -12,7 +12,7 @@ import Foundation
 
 class Notifications: NotificationsProtocol {
     var statusesModule: StatusesProtocol
-    
+
     required init(statusesModule: StatusesProtocol) {
         self.statusesModule = statusesModule
     }
@@ -20,7 +20,9 @@ class Notifications: NotificationsProtocol {
 
 // MARK: Register Observers
 extension Notifications {
-   func enableNotifications(for features: [CapableFeature]) {
+
+    // swiftlint:disable cyclomatic_complexity
+    func enableNotifications(for features: [CapableFeature]) {
         #if os(iOS)
             if features.contains(.assistiveTouch) {
                 addObserver(for: .UIAccessibilityAssistiveTouchStatusDidChange, selector: #selector(self.assistiveTouchStatusChanged))
@@ -47,7 +49,7 @@ extension Notifications {
                 addObserver(for: .UIAccessibilitySpeakSelectionStatusDidChange, selector: #selector(self.speakSelectionStatusChanged))
             }
         #endif
-    
+
         #if os(iOS) || os(tvOS)
             if features.contains(.boldText) {
                 addObserver(for: .UIAccessibilityBoldTextStatusDidChange, selector: #selector(self.boldTextStatusChanged))
@@ -78,7 +80,7 @@ extension Notifications {
                 }
             }
         #endif
-    
+
         #if os(watchOS)
             if #available(watchOS 4.0, *), features.contains(.reduceMotion) {
                 addObserver(for: .WKAccessibilityReduceMotionStatusDidChange, selector: #selector(self.reduceMotionStatusChanged))
@@ -88,6 +90,8 @@ extension Notifications {
             }
         #endif
     }
+
+    // swiftlint:enable cyclomatic_complexity
 }
 
 // MARK: Handle notifications
@@ -99,66 +103,66 @@ extension Notifications {
             name: notificationName,
             object: nil)
     }
-    
+
     func disableNotifications() {
         NotificationCenter.default.removeObserver(self)
     }
-    
+
     #if os(iOS)
     @objc func assistiveTouchStatusChanged(notification: NSNotification) {
         postNotification(with: .assistiveTouch, statusString: self.statusesModule.isAssistiveTouchEnabled.statusString)
     }
-    
+
     @objc func darkerSystemColorsStatusChanged(notification: NSNotification) {
         self.postNotification(with: .darkerSystemColors, statusString: self.statusesModule.isDarkerSystemColorsEnabled.statusString)
     }
-    
+
     @objc func guidedAccessStatusChanged(notification: NSNotification) {
         self.postNotification(with: .guidedAccess, statusString: self.statusesModule.isGuidedAccessEnabled.statusString)
     }
-    
+
     @objc func invertColorsStatusChanged(notification: NSNotification) {
         self.postNotification(with: .invertColors, statusString: self.statusesModule.isInvertColorsEnabled.statusString)
     }
-    
+
     @objc func largerTextStatusChanged(notification: NSNotification) {
         self.postNotification(with: .largerText, statusString: self.statusesModule.largerTextCatagory.stringValue)
     }
-    
+
     @objc func shakeToUndoStatusChanged(notification: NSNotification) {
         self.postNotification(with: .shakeToUndo, statusString: self.statusesModule.isShakeToUndoEnabled.statusString)
     }
-    
+
     @objc func speakScreenStatusChanged(notification: NSNotification) {
         self.postNotification(with: .speakScreen, statusString: self.statusesModule.isSpeakScreenEnabled.statusString)
     }
-    
+
     @objc func speakSelectionStatusChanged(notification: NSNotification) {
         self.postNotification(with: .speakSelection, statusString: self.statusesModule.isSpeakSelectionEnabled.statusString)
     }
     #endif
-    
+
     #if os(iOS) || os(tvOS)
     @objc func boldTextStatusChanged(notification: NSNotification) {
         self.postNotification(with: .boldText, statusString: self.statusesModule.isBoldTextEnabled.statusString)
     }
-    
+
     @objc func closedCaptioningStatusChanged(notification: NSNotification) {
         self.postNotification(with: .closedCaptioning, statusString: self.statusesModule.isClosedCaptioningEnabled.statusString)
     }
-    
+
     @objc func grayscaleStatusChanged(notification: NSNotification) {
         self.postNotification(with: .grayscale, statusString: self.statusesModule.isGrayscaleEnabled.statusString)
     }
-    
+
     @objc func monoAudioStatusChanged(notification: NSNotification) {
         self.postNotification(with: .monoAudio, statusString: self.statusesModule.isMonoAudioEnabled.statusString)
     }
-    
+
     @objc func switchControlStatusChanged(notification: NSNotification) {
         self.postNotification(with: .switchControl, statusString: self.statusesModule.isSwitchControlEnabled.statusString)
     }
-    
+
     @objc func reduceTransparencyStatusChanged(notification: NSNotification) {
         self.postNotification(with: .reduceTransparency, statusString: self.statusesModule.isReduceTransparencyEnabled.statusString)
     }
@@ -167,7 +171,7 @@ extension Notifications {
     @objc func reduceMotionStatusChanged(notification: NSNotification) {
         self.postNotification(with: .reduceMotion, statusString: self.statusesModule.isReduceMotionEnabled.statusString)
     }
-    
+
     @objc private func voiceOverStatusChanged(notification: NSNotification) {
         self.postNotification(with: .voiceOver, statusString: self.statusesModule.isVoiceOverEnabled.statusString)
     }

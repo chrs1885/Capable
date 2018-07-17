@@ -10,13 +10,13 @@ import WatchKit
 #endif
 
 class ContentSizeHelper {
-    
+
     #if os(iOS)
     static func isDefaultContentSizeCategory(contentSizeCategory: UIContentSizeCategory) -> Bool {
         return contentSizeCategory == .medium
     }
     #endif
-    
+
     #if os(watchOS)
     struct DefaultContentSize {
         // 38mm
@@ -24,7 +24,7 @@ class ContentSizeHelper {
         // 42mm
         static let large = "UICTContentSizeCategoryL"
     }
-    
+
     static func isDefaultContentSize(contentSize: String) -> Bool {
         let watchSize = WKInterfaceDevice.current().preferredContentSizeCategory
         if watchSize == DefaultContentSize.small {
@@ -36,5 +36,5 @@ class ContentSizeHelper {
         }
     }
     #endif
-    
+
 }

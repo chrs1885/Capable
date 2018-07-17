@@ -9,8 +9,6 @@ import Foundation
 
 extension Bool {
     var statusString: String {
-        get {
-            return self ? "enabled" : "disabled"
-        }
+        return self ? "enabled" : "disabled"
     }
 }

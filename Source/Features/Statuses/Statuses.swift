@@ -12,11 +12,11 @@ import WatchKit
 
 class Statuses: StatusesProtocol {
     var features: [CapableFeature]
-    
+
     required convenience init() {
         self.init(with: CapableFeature.allValues())
     }
-    
+
     required init(with features: [CapableFeature]) {
         self.features = features
     }
@@ -89,130 +89,97 @@ class Statuses: StatusesProtocol {
             return featuresStatusMap
         }
     }
-    
+
     #if os(iOS) || os(tvOS)
         var isAssistiveTouchEnabled: Bool {
-            get {
-                return UIAccessibilityIsAssistiveTouchRunning()
-            }
+            return UIAccessibilityIsAssistiveTouchRunning()
         }
-    
+
         var isBoldTextEnabled: Bool {
-            get {
-                return UIAccessibilityIsBoldTextEnabled()
-            }
+            return UIAccessibilityIsBoldTextEnabled()
         }
-    
+
         var isClosedCaptioningEnabled: Bool {
-            get {
-                return UIAccessibilityIsClosedCaptioningEnabled()
-            }
+            return UIAccessibilityIsClosedCaptioningEnabled()
         }
-    
+
         var isDarkerSystemColorsEnabled: Bool {
-            get {
-                return UIAccessibilityDarkerSystemColorsEnabled()
-            }
+            return UIAccessibilityDarkerSystemColorsEnabled()
         }
-    
+
         var isGrayscaleEnabled: Bool {
-            get {
-                return UIAccessibilityIsGrayscaleEnabled()
-            }
+            return UIAccessibilityIsGrayscaleEnabled()
         }
-    
+
         var isGuidedAccessEnabled: Bool {
-            get {
-                return UIAccessibilityIsGuidedAccessEnabled()
-            }
+            return UIAccessibilityIsGuidedAccessEnabled()
         }
-    
+
         var isInvertColorsEnabled: Bool {
-            get {
-                return UIAccessibilityIsInvertColorsEnabled()
-            }
+            return UIAccessibilityIsInvertColorsEnabled()
         }
-    
+
         var largerTextCatagory: UIContentSizeCategory {
             return UIScreen.main.traitCollection.preferredContentSizeCategory
         }
-    
+
         var isMonoAudioEnabled: Bool {
-            get {
-                return UIAccessibilityIsSpeakScreenEnabled()
-            }
+            return UIAccessibilityIsSpeakScreenEnabled()
         }
-    
+
         var isReduceTransparencyEnabled: Bool {
-            get {
-                return UIAccessibilityIsReduceTransparencyEnabled()
-            }
+            return UIAccessibilityIsReduceTransparencyEnabled()
         }
-    
+
         var isShakeToUndoEnabled: Bool {
-            get {
-                return UIAccessibilityIsShakeToUndoEnabled()
-            }
+            return UIAccessibilityIsShakeToUndoEnabled()
         }
-    
+
         var isSpeakScreenEnabled: Bool {
-            get {
-                return UIAccessibilityIsSpeakScreenEnabled()
-            }
+            return UIAccessibilityIsSpeakScreenEnabled()
         }
-    
+
         var isSpeakSelectionEnabled: Bool {
-            get {
-                return UIAccessibilityIsSpeakSelectionEnabled()
-            }
+            return UIAccessibilityIsSpeakSelectionEnabled()
         }
-    
+
         var isSwitchControlEnabled: Bool {
-            get {
-                return UIAccessibilityIsSwitchControlRunning()
-            }
+            return UIAccessibilityIsSwitchControlRunning()
         }
     #elseif os(watchOS)
         var isBoldTextEnabled: Bool {
-            get {
-                let referenceFont = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
-                let isBoldText = referenceFont.fontName.localizedCaseInsensitiveContains("bold")
-                return isBoldText
-            }
+            let referenceFont = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+            let isBoldText = referenceFont.fontName.localizedCaseInsensitiveContains("bold")
+            return isBoldText
         }
-    
+
         var largerTextCatagory: String {
-            get {
-                let referenceFontSize = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body).pointSize
-                return referenceFontSize.contentSizeString
-            }
+            let referenceFontSize = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body).pointSize
+            return referenceFontSize.contentSizeString
         }
     #endif
-    
+
     var isReduceMotionEnabled: Bool {
-        get {
-            #if os(watchOS)
-                if #available(watchOS 4.0, *) {
-                    return WKAccessibilityIsReduceMotionEnabled()
-                } else {
-                    return false
-                }
-            #else
-                return UIAccessibilityIsReduceMotionEnabled()
-            #endif
-        }
+        #if os(watchOS)
+            if #available(watchOS 4.0, *) {
+                return WKAccessibilityIsReduceMotionEnabled()
+            } else {
+                return false
+            }
+        #else
+            return UIAccessibilityIsReduceMotionEnabled()
+        #endif
     }
-    
+
     var isVoiceOverEnabled: Bool {
-        get {
-            #if os(watchOS)
-                return WKAccessibilityIsVoiceOverRunning()
-            #else
-                return UIAccessibilityIsVoiceOverRunning()
-            #endif
-        }
+        #if os(watchOS)
+            return WKAccessibilityIsVoiceOverRunning()
+        #else
+            return UIAccessibilityIsVoiceOverRunning()
+        #endif
     }
-    
+
+    // swiftlint:disable cyclomatic_complexity
     func isFeatureEnabled(feature: CapableFeature) -> Bool {
         #if os(iOS)
             switch feature {
@@ -281,4 +248,5 @@ class Statuses: StatusesProtocol {
             }
         #endif
     }
+    // swiftlint:enable cyclomatic_complexity
 }
