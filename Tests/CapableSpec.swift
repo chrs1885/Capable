@@ -29,8 +29,8 @@ class CapableSpec: QuickSpec {
             context("after initialization with specific features") {
                 var sut: Capable?
                 let testedFeatures: [CapableFeature] = [.boldText, .reduceMotion]
-                
-                beforeEach() {
+
+                beforeEach {
                     sut = Capable(with: testedFeatures)
                 }
 

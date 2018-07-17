@@ -31,10 +31,10 @@ public enum CapableFeature: String {
     #if os(iOS) || os(tvOS) || os(watchOS)
     case boldText
     #endif
-    
+
     case reduceMotion
     case voiceOver
-    
+
     public static func allValues() -> [CapableFeature] {
         #if os(iOS)
         return [
@@ -53,7 +53,7 @@ public enum CapableFeature: String {
             .speakScreen,
             .speakSelection,
             .switchControl,
-            .voiceOver,]
+            .voiceOver]
         #elseif os(tvOS)
         return [
             .boldText,
@@ -63,13 +63,13 @@ public enum CapableFeature: String {
             .reduceMotion,
             .reduceTransparency,
             .switchControl,
-            .voiceOver,]
+            .voiceOver]
         #elseif os(watchOS)
         return [
             .boldText,
             .largerText,
             .reduceMotion,
-            .voiceOver,]
+            .voiceOver]
         #endif
     }
 
