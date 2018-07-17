@@ -28,7 +28,7 @@ class CapableSpec: QuickSpec {
 
             context("after initialization with specific features") {
                 var sut: Capable?
-                let testedFeatures: [CapableFeature] = [.BoldText, .ReduceMotion]
+                let testedFeatures: [CapableFeature] = [.boldText, .reduceMotion]
 
                 beforeEach {
                     sut = Capable(with: testedFeatures)
@@ -96,7 +96,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .AssistiveTouch)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .assistiveTouch)).to(beTrue())
                     }
                 }
 
@@ -106,7 +106,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .DarkerSystemColors)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .darkerSystemColors)).to(beTrue())
                     }
                 }
 
@@ -116,7 +116,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .GuidedAccess)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .guidedAccess)).to(beTrue())
                     }
                 }
 
@@ -126,7 +126,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .InvertColors)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .invertColors)).to(beTrue())
                     }
                 }
 
@@ -136,7 +136,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .LargerText)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .largerText)).to(beTrue())
                     }
                 }
 
@@ -146,7 +146,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .ShakeToUndo)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .shakeToUndo)).to(beTrue())
                     }
                 }
 
@@ -156,7 +156,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .SpeakScreen)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .speakScreen)).to(beTrue())
                     }
                 }
 
@@ -166,7 +166,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .SpeakSelection)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .speakSelection)).to(beTrue())
                     }
                 }
                 #endif
@@ -177,7 +177,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .BoldText)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .boldText)).to(beTrue())
                     }
                 }
 
@@ -187,7 +187,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .ClosedCaptioning)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .closedCaptioning)).to(beTrue())
                     }
                 }
 
@@ -197,7 +197,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .Grayscale)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .grayscale)).to(beTrue())
                     }
                 }
 
@@ -207,7 +207,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .MonoAudio)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .monoAudio)).to(beTrue())
                     }
                 }
 
@@ -217,7 +217,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .ReduceMotion)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .reduceMotion)).to(beTrue())
                     }
                 }
 
@@ -227,7 +227,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .ReduceTransparency)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .reduceTransparency)).to(beTrue())
                     }
                 }
 
@@ -237,7 +237,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .SwitchControl)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .switchControl)).to(beTrue())
                     }
                 }
 
@@ -247,7 +247,7 @@ class CapableSpec: QuickSpec {
                     }
 
                     it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .VoiceOver)).to(beTrue())
+                        expect(sut?.isFeatureEnabled(feature: .voiceOver)).to(beTrue())
                     }
                 }
             }

@@ -7,70 +7,69 @@
 
 public enum CapableFeature: String {
     #if os(iOS)
-    case AssistiveTouch
-    case DarkerSystemColors
-    case GuidedAccess
-    case ShakeToUndo
-    case SpeakScreen
-    case SpeakSelection
+    case assistiveTouch
+    case darkerSystemColors
+    case guidedAccess
+    case invertColors
+    case shakeToUndo
+    case speakScreen
+    case speakSelection
     #endif
 
     #if os(iOS) || os(tvOS)
-    case ClosedCaptioning
-    case Grayscale
-    case InvertColors
-    case MonoAudio
-    case ReduceTransparency
-    case SwitchControl
+    case closedCaptioning
+    case grayscale
+    case monoAudio
+    case reduceTransparency
+    case switchControl
     #endif
 
     #if os(iOS) || os(watchOS)
-    case LargerText
+    case largerText
     #endif
 
     #if os(iOS) || os(tvOS) || os(watchOS)
-    case BoldText
+    case boldText
     #endif
 
-    case ReduceMotion
-    case VoiceOver
+    case reduceMotion
+    case voiceOver
 
     public static func allValues() -> [CapableFeature] {
         #if os(iOS)
         return [
-            .AssistiveTouch,
-            .BoldText,
-            .ClosedCaptioning,
-            .DarkerSystemColors,
-            .Grayscale,
-            .GuidedAccess,
-            .InvertColors,
-            .LargerText,
-            .MonoAudio,
-            .ReduceMotion,
-            .ReduceTransparency,
-            .ShakeToUndo,
-            .SpeakScreen,
-            .SpeakSelection,
-            .SwitchControl,
-            .VoiceOver ]
+            .assistiveTouch,
+            .boldText,
+            .closedCaptioning,
+            .darkerSystemColors,
+            .grayscale,
+            .guidedAccess,
+            .invertColors,
+            .largerText,
+            .monoAudio,
+            .reduceMotion,
+            .reduceTransparency,
+            .shakeToUndo,
+            .speakScreen,
+            .speakSelection,
+            .switchControl,
+            .voiceOver]
         #elseif os(tvOS)
         return [
-            .BoldText,
-            .ClosedCaptioning,
-            .Grayscale,
-            .InvertColors,
-            .MonoAudio,
-            .ReduceMotion,
-            .ReduceTransparency,
-            .SwitchControl,
-            .VoiceOver ]
+            .boldText,
+            .closedCaptioning,
+            .grayscale,
+            .monoAudio,
+            .reduceMotion,
+            .reduceTransparency,
+            .switchControl,
+            .voiceOver]
         #elseif os(watchOS)
         return [
-            .BoldText,
-            .LargerText,
-            .ReduceMotion,
-            .VoiceOver ]
+            .boldText,
+            .largerText,
+            .reduceMotion,
+            .voiceOver]
         #endif
     }
 
