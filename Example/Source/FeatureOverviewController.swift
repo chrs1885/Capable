@@ -22,7 +22,7 @@ class FeatureOverviewController: UITableViewController {
     var capable: Capable?
     
     override func viewDidLoad() {
-//        self.capable = Capable(with: [.LargerText, .BoldText, .ShakeToUndo])
+//      self.capable = Capable(with: [.largerText, .boldText, .shakeToUndo])
         self.capable = Capable()
         refreshData()
         NotificationCenter.default.addObserver(
