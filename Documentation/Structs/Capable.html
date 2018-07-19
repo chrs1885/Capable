@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Capable Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/Capable" class="dashAnchor"></a>
+    <a title="Capable Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Capable Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/chrs1885/Capable"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Capable Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Capable Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CapableFeature.html">CapableFeature</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification.html">Notification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification/Name.html">– Name</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIFont.html">UIFont</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Capable.html">Capable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FeatureStatus.html">FeatureStatus</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Capable</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Capable</span></code></pre>
+
+                </div>
+              </div>
+            <p>This class defines the main interface of the Capable framework.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7CapableAAV9statusMaps10DictionaryVyS2SGvp"></a>
+                    <a name="//apple_ref/swift/Property/statusMap" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7CapableAAV9statusMaps10DictionaryVyS2SGvp">statusMap</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>statusMap</code> property returns a dictionary of all features, that the Capable instance has been initialized with along with their current statuses. This object is compatible with most analytic SDKs such as <strong>Fabric Answers</strong>, <strong>Firebase Analytics</strong>, <strong>AppCenter Analytics</strong>, or <strong>HockeyApp</strong>.
+While most features can only have a status set to <strong>enabled</strong> or <strong>disabled</strong>, the <code>.largerText</code> feature offers the font scale set by the user.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">statusMap</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7CapableAAVABSayAA0A7FeatureOG12withFeatures_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(withFeatures:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7CapableAAVABSayAA0A7FeatureOG12withFeatures_tcfc">init(withFeatures:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes the framework instance with a specified set of features. If no feature was provided, this defaults to all features available on the current platform.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">withFeatures</span> <span class="nv">features</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/CapableFeature.html">CapableFeature</a></span><span class="p">]</span> <span class="o">=</span> <span class="kt"><a href="../Enums/CapableFeature.html">CapableFeature</a></span><span class="o">.</span><span class="nf">allValues</span><span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>features</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An optional array containing the features of interest. This will default to all features available on the current platform.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7CapableAAV16isFeatureEnabledSbAA0aC0O7feature_tF"></a>
+                    <a name="//apple_ref/swift/Method/isFeatureEnabled(feature:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7CapableAAV16isFeatureEnabledSbAA0aC0O7feature_tF">isFeatureEnabled(feature:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides information regarding the current status of a provided feature.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isFeatureEnabled</span><span class="p">(</span><span class="nv">feature</span><span class="p">:</span> <span class="kt"><a href="../Enums/CapableFeature.html">CapableFeature</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>feature</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The feature of interest.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if the given feature has been enabled, otherwise <code>false</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/chrs1885" target="_blank" rel="external">Christoph Wendt</a>. All rights reserved. (Last updated: 2018-07-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

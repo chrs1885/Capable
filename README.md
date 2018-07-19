@@ -69,7 +69,7 @@ or by passing in only specific feature names
 let capable = Capable(with: [.largerText, .boldText, .shakeToUndo])
 ```
 
-You can find all list of all accessibility features available on each platform in the [accessibility feature overview](#accessibility-feature-overview) section.
+You can find a list of all accessibility features available on each platform in the [accessibility feature overview](#accessibility-feature-overview) section.
 
 ### Get & send accessibility status
 
@@ -108,7 +108,7 @@ func sendMetrics() {
 
 ### Listen for settings changes
 
-After initialization, notifications for all features that have been registered are automatically enabled. To react to changes, you need to add your class as an observer as follows:
+After initialization, notifications for all features that have been registered can be retrieved. To react to changes, you need to add your class as an observer as follows:
 
 ```swift
 NotificationCenter.default.addObserver(
@@ -127,14 +127,6 @@ Inside your `featureStatusChanged` you can parse the specific feature and value:
         let currentValue = featureStatus.statusString
     }
 }
-```
-
-You can also enable or disable notifications at a later point:
-
-```swift
-let capable = Capable()
-...
-capable.notificationsEnabled = false
 ```
 
 ### Dynamic Type with custom fonts (Capable UIFont extension)

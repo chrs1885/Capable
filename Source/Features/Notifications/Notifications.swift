@@ -90,7 +90,6 @@ extension Notifications {
             }
         #endif
     }
-
     // swiftlint:enable cyclomatic_complexity
 }
 
@@ -102,10 +101,6 @@ extension Notifications {
             selector: selector,
             name: notificationName,
             object: nil)
-    }
-
-    func disableNotifications() {
-        NotificationCenter.default.removeObserver(self)
     }
 
     #if os(iOS)

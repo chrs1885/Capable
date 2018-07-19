@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Capable  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Capable  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Capable Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/chrs1885/Capable"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Capable Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Capable  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/CapableFeature.html">CapableFeature</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Notification.html">Notification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Notification/Name.html">– Name</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIFont.html">UIFont</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Capable.html">Capable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FeatureStatus.html">FeatureStatus</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <p><center><img src="https://user-images.githubusercontent.com/1390908/41822361-a14fafd2-77ee-11e8-8aa6-f18960566d0c.png" width="400">
+</center></p>
+
+<hr>
+
+<p><a href="https://www.bitrise.io/app/7596a076a75ab2ab"><img src="https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg" alt="Build Status"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg" alt="Carthage compatible"></a>
+<a href="https://cocoapods.org/pods/Capable"><img src="https://img.shields.io/cocoapods/v/Capable.svg" alt="Cocoapods compatible"></a>
+<img src="https://img.shields.io/cocoapods/p/Capable.svg" alt="CocoaPods"></p>
+
+<p>Have you ever thought about adopting accessibility features within you apps to gain your user base instead of spending a lot of time implementing features no-one really ever asked for? </p>
+
+<p>Most of us did, however there has never been an easy way to tell if anyone benefits from that. Adjusting layouts to be usable for people with low vision can be quite complex in some situations and tracking the user&rsquo;s accessibility settings adds a lot of boilerplate code to your app.</p>
+
+<p>What if there was a simple way to figure out if there&rsquo;s a real need to support accessibility right now. Or even better, which disability exists most across your user base.</p>
+
+<p>Check out the <em>Example.xcworkspace</em> to get a quick overview.</p>
+<h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li>Get the user&rsquo;s accessibility settings</li>
+<li>Send it with your favorite analytics SDK such as Fabric Answers, App Center Analytics, or Firebase Analytics</li>
+<li>Get notified about any changes</li>
+<li>Use dynamic type with custom fonts by using one line of code without caring about the OS version the user is running on</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>There are currently three different ways to integrate Capable into your apps.</p>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+<pre class="highlight ruby"><code><span class="n">use_frameworks!</span>
+
+<span class="n">target</span> <span class="s1">'MyApp'</span> <span class="k">do</span>
+  <span class="n">pod</span> <span class="s1">'Capable'</span>
+<span class="k">end</span>
+</code></pre>
+<h3 id='carthage' class='heading'>Carthage</h3>
+<pre class="highlight ruby"><code><span class="n">github</span> <span class="s2">"chrs1885/Capable"</span>
+</code></pre>
+<h3 id='manually' class='heading'>Manually</h3>
+
+<p>Simply drop <code>Capable.xcodeproj</code> into your project. Also make sure to add
+<code>Capable.framework</code> to your app’s embedded frameworks found in the General tab of your main project.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+<h3 id='register-for-specific-accessibility-settings' class='heading'>Register for (specific) accessibility settings</h3>
+
+<p>Firstly, you need to import the Capable framework in your class by adding the following import statement:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Capable</span>
+</code></pre>
+
+<p>There are two different ways to initialize the framework instance. You can either set it up to consider all accessibility features</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">capable</span> <span class="o">=</span> <span class="kt">Capable</span><span class="p">()</span>
+</code></pre>
+
+<p>or by passing in only specific feature names</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">capable</span> <span class="o">=</span> <span class="kt">Capable</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">largerText</span><span class="p">,</span> <span class="o">.</span><span class="n">boldText</span><span class="p">,</span> <span class="o">.</span><span class="n">shakeToUndo</span><span class="p">])</span>
+</code></pre>
+
+<p>You can find a list of all accessibility features available on each platform in the <a href="#accessibility-feature-overview">accessibility feature overview</a> section.</p>
+<h3 id='get-amp-send-accessibility-status' class='heading'>Get &amp; send accessibility status</h3>
+
+<p>If you are interested in a specific accessibility feature, you can retrieve its current status as follows:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">capable</span> <span class="o">=</span> <span class="kt">Capable</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">isVoiceOverEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="n">capable</span><span class="o">.</span><span class="nf">isFeatureEnable</span><span class="p">(</span><span class="nv">feature</span><span class="p">:</span> <span class="o">.</span><span class="n">voiceOver</span><span class="p">)</span>
+</code></pre>
+
+<p>To get a dictionary of all features, that the <code><a href="Structs/Capable.html">Capable</a></code> instance has been initialized with you can use:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">capable</span> <span class="o">=</span> <span class="kt">Capable</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">statusMap</span> <span class="o">=</span> <span class="n">capable</span><span class="o">.</span><span class="n">statusMap</span>
+</code></pre>
+
+<p>This will return each feature name (key) along with its current value as described in the <a href="#accessibility-feature-overview">accessibility feature overview</a> section.</p>
+
+<p>The <code>statusMap</code> object is compatible with most analytic SDK APIs. Here&rsquo;s a quick example of how to send your data along with user properties or custom events.</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sendMetrics</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">statusMap</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">capable</span><span class="o">.</span><span class="n">statusMap</span>
+    <span class="k">let</span> <span class="nv">eventName</span> <span class="o">=</span> <span class="s">"Capable features received"</span>
+
+    <span class="c1">// App Center</span>
+    <span class="kt">MSAnalytics</span><span class="o">.</span><span class="nf">trackEvent</span><span class="p">(</span><span class="n">eventName</span><span class="p">,</span> <span class="nv">withProperties</span><span class="p">:</span> <span class="n">statusMap</span><span class="p">)</span>
+
+    <span class="c1">// Firebase</span>
+    <span class="kt">Analytics</span><span class="o">.</span><span class="nf">logEvent</span><span class="p">(</span><span class="n">eventName</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">statusMap</span><span class="p">)</span>
+
+    <span class="c1">// Fabric</span>
+    <span class="kt">Answers</span><span class="o">.</span><span class="nf">logCustomEvent</span><span class="p">(</span><span class="nv">withName</span><span class="p">:</span> <span class="n">eventName</span><span class="p">,</span> <span class="nv">customAttributes</span><span class="p">:</span> <span class="n">statusMap</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='listen-for-settings-changes' class='heading'>Listen for settings changes</h3>
+
+<p>After initialization, notifications for all features that have been registered can be retrieved. To react to changes, you need to add your class as an observer as follows:</p>
+<pre class="highlight swift"><code><span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span>
+    <span class="k">self</span><span class="p">,</span>
+    <span class="nv">selector</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">self.featureStatusChanged</span><span class="kd">)</span><span class="p">,</span>
+    <span class="nv">name</span><span class="p">:</span> <span class="o">.</span><span class="kt">CapableFeatureStatusDidChange</span><span class="p">,</span>
+    <span class="nv">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</code></pre>
+
+<p>Inside your <code>featureStatusChanged</code> you can parse the specific feature and value:</p>
+<pre class="highlight swift"><code><span class="kd">@objc</span> <span class="kd">private</span> <span class="kd">func</span> <span class="nf">featureStatusChanged</span><span class="p">(</span><span class="nv">notification</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">featureStatus</span> <span class="o">=</span> <span class="n">notification</span><span class="o">.</span><span class="n">object</span> <span class="k">as?</span> <span class="kt">FeatureStatus</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">feature</span> <span class="o">=</span> <span class="n">featureStatus</span><span class="o">.</span><span class="n">feature</span>
+        <span class="k">let</span> <span class="nv">currentValue</span> <span class="o">=</span> <span class="n">featureStatus</span><span class="o">.</span><span class="n">statusString</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='dynamic-type-with-custom-fonts-capable-uifont-extension' class='heading'>Dynamic Type with custom fonts (Capable UIFont extension)</h3>
+
+<p>Supporting Dynamic Type along with different OS versions such as iOS 10 and iOS 11 (watchOS 3 and watchOS 4) can be a huge pain, since both versions provide different APIs.</p>
+
+<p>Capable easily auto scales system fonts as well as your custom fonts by providing one line of code:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">myLabel</span> <span class="o">=</span> <span class="kt">UILabel</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="n">frame</span><span class="p">)</span>
+
+<span class="c1">// Scalable custom font</span>
+<span class="k">let</span> <span class="nv">myCustomFont</span> <span class="o">=</span> <span class="kt">UIFont</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Custom Font Name"</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="n">defaultFontSize</span><span class="p">)</span><span class="o">!</span>
+<span class="n">myLabel</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="kt">UIFont</span><span class="o">.</span><span class="nf">scaledFont</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">myCustomFont</span><span class="p">)</span>
+
+<span class="c1">// or</span>
+<span class="n">myLabel</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="kt">UIFont</span><span class="o">.</span><span class="nf">scaledFont</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Custom Font Name"</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="n">defaultFontSize</span><span class="p">)</span>
+
+<span class="c1">// Scalable system font</span>
+<span class="n">myLabel</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="kt">UIFont</span><span class="o">.</span><span class="nf">scaledSystemFont</span><span class="p">(</span><span class="nv">ofSize</span><span class="p">:</span> <span class="n">defaultFontSize</span><span class="p">)</span>
+
+<span class="c1">// Scalable italic system font</span>
+<span class="n">myLabel</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="kt">UIFont</span><span class="o">.</span><span class="nf">scaledItalicSystemFont</span><span class="p">(</span><span class="nv">ofSize</span><span class="p">:</span> <span class="n">defaultFontSize</span><span class="p">)</span>
+
+<span class="c1">// Scalable bold system font</span>
+<span class="n">myLabel</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="kt">UIFont</span><span class="o">.</span><span class="nf">scaledBoldSystemFont</span><span class="p">(</span><span class="nv">ofSize</span><span class="p">:</span> <span class="n">defaultFontSize</span><span class="p">)</span>
+</code></pre>
+
+<p>While these extension APIs are available on tvOS as well, setting the font size in the system settings is not supported on this platforms.</p>
+
+<p><a id="accessibility-feature-overview"></a> </p>
+<h2 id='accessibility-feature-overview' class='heading'>Accessibility feature overview</h2>
+
+<p>The following table contains all features that are available AND settable on each platform.</p>
+
+<table><thead>
+<tr>
+<th></th>
+<th style="text-align: center">iOS</th>
+<th style="text-align: center">tvOS</th>
+<th style="text-align: center">watchOS</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>.assistiveTouch</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>.boldText</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:white_check_mark:<strong>*</strong></td>
+</tr>
+<tr>
+<td>.closedCaptioning</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>.darkerSystemColors</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>.grayscale</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>.guidedAccess</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>.invertColors</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>.largerText</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">:white_check_mark:<strong>*</strong></td>
+</tr>
+<tr>
+<td>.monoAudio</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>.reduceMotion</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:white_check_mark:</td>
+</tr>
+<tr>
+<td>.reduceTransparency</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>.shakeToUndo</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>.speakScreen</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>.speakSelection</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>.switchControl</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>.voiceOver</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:white_check_mark:</td>
+</tr>
+</tbody></table>
+
+<p><em>* Feature status can be read but notifications are not available.</em></p>
+
+<p>While most features can only have a status set to <strong>enabled</strong> or <strong>disabled</strong>, the <code>.largerText</code> feature offers the font scale set by the user:</p>
+<h3 id='ios' class='heading'>iOS</h3>
+
+<ul>
+<li>XS</li>
+<li>S</li>
+<li>M <em>(default)</em></li>
+<li>L</li>
+<li>XL</li>
+<li>XXL</li>
+<li>XXXL</li>
+<li>Accessibility M</li>
+<li>Accessibility L</li>
+<li>Accessibility XL</li>
+<li>Accessibility XXL</li>
+<li>Accessibility XXXL</li>
+<li>Unknown</li>
+</ul>
+<h3 id='watchos' class='heading'>watchOS</h3>
+
+<ul>
+<li>XS</li>
+<li>S <em>(default watch with 38mm)</em></li>
+<li>L <em>(default watch with 42mm)</em></li>
+<li>XL</li>
+<li>XXL</li>
+<li>XXXL</li>
+<li>Unknown</li>
+</ul>
+<h2 id='ressources' class='heading'>Ressources</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/videos/frameworks/accessibility/">Apple - WWDC Session Videos</a></li>
+<li><a href="https://developer.apple.com/accessibility/">Apple - Accessibility for Developers</a></li>
+</ul>
+<h2 id='license' class='heading'>License</h2>
+
+<p>Capable is available under the MIT license. See the <a href="LICENSE">LICENSE</a> file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/chrs1885" target="_blank" rel="external">Christoph Wendt</a>. All rights reserved. (Last updated: 2018-07-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
