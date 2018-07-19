@@ -18,7 +18,7 @@ public enum CapableFeature: String {
         /// Restricts access to certain features of a single app to keep the user focused.
         case guidedAccess
 
-        /// Delete the last command by shaking the phone.
+        /// Deletes the last command by shaking the phone.
         case shakeToUndo
 
         /// Reads out the content of the current screen.
@@ -29,16 +29,16 @@ public enum CapableFeature: String {
     #endif
 
     #if os(iOS) || os(tvOS)
-        /// Display subtitles when playing videos.
+        /// Displays subtitles when playing videos.
         case closedCaptioning
 
         /// Makes the display more readable for color blind people by using gray tones instead of colors.
         case grayscale
 
-        /// Helps people with low vision, color blindness, sensitivity to brightness to read the display content.
+        /// Helps people with low vision, color blindness, or sensitivity to brightness to read the display content.
         case invertColors
 
-        /// Merges stereo channels to help users that are hard of hearing or deaf in one ear.
+        /// Merges stereo audio channels to help users that are hard of hearing or deaf in one ear.
         case monoAudio
 
         /// Removes transparency from layers to make them readable for users with visual impairment.
