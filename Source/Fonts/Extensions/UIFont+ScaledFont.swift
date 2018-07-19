@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// Extension that adds functionality for creating scalable UIFont objects.
 extension UIFont {
 
     /**
