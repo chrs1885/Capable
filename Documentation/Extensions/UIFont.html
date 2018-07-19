@@ -14,7 +14,7 @@
     <a title="UIFont Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Capable Docs</a> (81% documented)</p>
+        <p><a href="../index.html">Capable Docs</a> (96% documented)</p>
         <p class="header-right"><a href="https://github.com/chrs1885/Capable"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -91,7 +91,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Makes the given font scalable.</p>
 
                       </div>
                       <div class="declaration">
@@ -101,6 +101,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">scaledFont</span><span class="p">(</span><span class="k">for</span> <span class="nv">font</span><span class="p">:</span> <span class="kt">UIFont</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIFont</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>font</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The font to make scalable.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A scalable font object.</p>
                       </div>
                     </section>
                   </div>
@@ -118,7 +141,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a scalable font with the given font name and reference font size.</p>
 
                       </div>
                       <div class="declaration">
@@ -128,6 +151,41 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">scaledFont</span><span class="p">(</span><span class="n">name</span> <span class="nv">fontName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">size</span> <span class="nv">fontSize</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIFont</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fontName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the font that should be used.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fontSize</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The reference font size to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A scalable font object.</p>
                       </div>
                     </section>
                   </div>
@@ -145,7 +203,11 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a scalable system font with a given reference font size.</p>
+
+<ul>
+<li><p>fontSize: The reference font size to use.</p></li>
+</ul>
 
                       </div>
                       <div class="declaration">
@@ -155,6 +217,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">scaledSystemFont</span><span class="p">(</span><span class="n">ofSize</span> <span class="nv">fontSize</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIFont</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A scalable font object.</p>
                       </div>
                     </section>
                   </div>
@@ -172,7 +238,11 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a scalable bold system font with a given reference font size.</p>
+
+<ul>
+<li><p>fontSize: The reference font size to use.</p></li>
+</ul>
 
                       </div>
                       <div class="declaration">
@@ -182,6 +252,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">scaledBoldSystemFont</span><span class="p">(</span><span class="n">ofSize</span> <span class="nv">fontSize</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIFont</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A scalable font object.</p>
                       </div>
                     </section>
                   </div>
@@ -199,7 +273,11 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a scalable italic system font with a given reference font size.</p>
+
+<ul>
+<li><p>fontSize: The reference font size to use.</p></li>
+</ul>
 
                       </div>
                       <div class="declaration">
@@ -209,6 +287,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">scaledItalicSystemFont</span><span class="p">(</span><span class="n">ofSize</span> <span class="nv">fontSize</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIFont</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A scalable font object.</p>
                       </div>
                     </section>
                   </div>

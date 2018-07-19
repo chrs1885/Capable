@@ -6,41 +6,6 @@
       "symbol": "Capable.notificationsEnabled",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
-    },
-    {
-      "file": "/Users/chris/Documents/Workspace/Capable-iOS/Source/Fonts/Extensions/UIFont+ScaledFont.swift",
-      "line": 12,
-      "symbol": "UIFont.scaledFont(for:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/chris/Documents/Workspace/Capable-iOS/Source/Fonts/Extensions/UIFont+ScaledFont.swift",
-      "line": 17,
-      "symbol": "UIFont.scaledFont(name:size:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/chris/Documents/Workspace/Capable-iOS/Source/Fonts/Extensions/UIFont+ScaledFont.swift",
-      "line": 25,
-      "symbol": "UIFont.scaledSystemFont(ofSize:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/chris/Documents/Workspace/Capable-iOS/Source/Fonts/Extensions/UIFont+ScaledFont.swift",
-      "line": 30,
-      "symbol": "UIFont.scaledBoldSystemFont(ofSize:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/chris/Documents/Workspace/Capable-iOS/Source/Fonts/Extensions/UIFont+ScaledFont.swift",
-      "line": 35,
-      "symbol": "UIFont.scaledItalicSystemFont(ofSize:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.class",
-      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/chris/Documents/Workspace/Capable-iOS"
