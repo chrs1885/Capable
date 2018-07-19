@@ -6,10 +6,7 @@
 //
 
 /**
- Model class that describes the content of a Capable notification
-
- @see Notification+Name.swift
- */
+ Model class that describes the content of a Capable notification (see `Notification.Name.CapableFeatureStatusDidChange`) */
 public struct FeatureStatus {
 
     /// The feature type.

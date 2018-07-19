@@ -21,23 +21,13 @@ public struct Capable {
         return self.statusesModule.statusMap
     }
 
-    public var notificationsEnabled: Bool = false {
-        didSet {
-            if notificationsEnabled != oldValue {
-                notificationsEnabled ?
-                    self.notificationsModule.enableNotifications(for: self.features) :
-                    self.notificationsModule.disableNotifications()
-            }
-        }
-    }
-
     /**
      Initializes the framework instance with a specified set of features. If no feature was provided, this defaults to all features available on the current platform.
 
      - Parameters:
         - features: An optional array containing the features of interest. This will default to all features available on the current platform.
     */
-    public init(with features: [CapableFeature] = CapableFeature.allValues()) {
+    public init(withFeatures features: [CapableFeature] = CapableFeature.allValues()) {
         let statusesModule = Statuses(with: features)
         let notificationsModule = Notifications(statusesModule: statusesModule)
         self.init(with: statusesModule, notificationModule: notificationsModule, features: features)
@@ -47,9 +37,7 @@ public struct Capable {
         self.features = features
         self.statusesModule = statusesModule
         self.notificationsModule = notificationModule
-        defer {
-            self.notificationsEnabled = true
-        }
+        self.notificationModule.enableNotifications(for: self.features)
     }
 
     /**

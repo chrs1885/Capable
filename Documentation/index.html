@@ -13,7 +13,7 @@
     <a title="Capable  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Capable Docs</a> (96% documented)</p>
+        <p><a href="index.html">Capable Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/chrs1885/Capable"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -155,7 +155,7 @@
 </code></pre>
 <h3 id='listen-for-settings-changes' class='heading'>Listen for settings changes</h3>
 
-<p>After initialization, notifications for all features that have been registered are automatically enabled. To react to changes, you need to add your class as an observer as follows:</p>
+<p>After initialization, notifications for all features that have been registered can be retrieved. To react to changes, you need to add your class as an observer as follows:</p>
 <pre class="highlight swift"><code><span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span>
     <span class="k">self</span><span class="p">,</span>
     <span class="nv">selector</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">self.featureStatusChanged</span><span class="kd">)</span><span class="p">,</span>
@@ -170,12 +170,6 @@
         <span class="k">let</span> <span class="nv">currentValue</span> <span class="o">=</span> <span class="n">featureStatus</span><span class="o">.</span><span class="n">statusString</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre>
-
-<p>You can also enable or disable notifications at a later point:</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">capable</span> <span class="o">=</span> <span class="kt">Capable</span><span class="p">()</span>
-<span class="o">...</span>
-<span class="n">capable</span><span class="o">.</span><span class="n">notificationsEnabled</span> <span class="o">=</span> <span class="kc">false</span>
 </code></pre>
 <h3 id='dynamic-type-with-custom-fonts-capable-uifont-extension' class='heading'>Dynamic Type with custom fonts (Capable UIFont extension)</h3>
 

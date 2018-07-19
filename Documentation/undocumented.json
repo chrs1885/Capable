@@ -1,12 +1,6 @@
 {
   "warnings": [
-    {
-      "file": "/Users/chris/Documents/Workspace/Capable-iOS/Source/Features/Capable.swift",
-      "line": 24,
-      "symbol": "Capable.notificationsEnabled",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    }
+
   ],
   "source_directory": "/Users/chris/Documents/Workspace/Capable-iOS"
 }
