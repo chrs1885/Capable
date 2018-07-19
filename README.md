@@ -69,7 +69,7 @@ or by passing in only specific feature names
 let capable = Capable(with: [.largerText, .boldText, .shakeToUndo])
 ```
 
-You can find all list of all accessibility features available on each platform in the [accessibility feature overview](#accessibility-feature-overview) section.
+You can find a list of all accessibility features available on each platform in the [accessibility feature overview](#accessibility-feature-overview) section.
 
 ### Get & send accessibility status
 
