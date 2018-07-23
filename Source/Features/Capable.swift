@@ -37,7 +37,7 @@ public struct Capable {
         self.features = features
         self.statusesModule = statusesModule
         self.notificationsModule = notificationModule
-        self.notificationModule.enableNotifications(for: self.features)
+        self.notificationsModule.enableNotifications(for: self.features)
     }
 
     /**

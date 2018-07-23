@@ -11,5 +11,4 @@ protocol NotificationsProtocol {
     init(statusesModule: StatusesProtocol)
 
     func enableNotifications(for features: [CapableFeature])
-    func disableNotifications()
 }
