@@ -635,7 +635,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-tvOS";
@@ -654,7 +654,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-tvOS";
@@ -672,7 +672,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/watchOS/Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS.watchkitapp.watchkitextension";
@@ -681,7 +681,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
@@ -691,7 +691,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/watchOS/Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS.watchkitapp.watchkitextension";
@@ -700,7 +700,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
@@ -711,7 +711,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-watchOS";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				IBSC_MODULE = Example_watchOS_Extension;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/watchOS/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS.watchkitapp";
@@ -720,7 +720,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
@@ -731,7 +731,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-watchOS";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				IBSC_MODULE = Example_watchOS_Extension;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/watchOS/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS.watchkitapp";
@@ -740,7 +740,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
@@ -862,8 +862,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-iOS";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -879,8 +880,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-iOS";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
