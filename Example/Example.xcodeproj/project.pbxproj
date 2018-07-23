@@ -30,7 +30,6 @@
 		83C6F6312078138E00F0C74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6282078138E00F0C74D /* Main.storyboard */; };
 		83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
 		83C6F6332078138E00F0C74D /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62B2078138E00F0C74D /* FontsViewController.swift */; };
-		83C6F6342078138E00F0C74D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F62C2078138E00F0C74D /* Info.plist */; };
 		83E67A2E20CD94C300FE6FC2 /* Capable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E67A2C20CD94B800FE6FC2 /* Capable.framework */; };
 		83E67A2F20CD94C300FE6FC2 /* Capable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83E67A2C20CD94B800FE6FC2 /* Capable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D9BD8F0470D72CAC5F44979 /* Pods_Example_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A34BF8D95976311A017335 /* Pods_Example_tvOS.framework */; };
@@ -370,7 +369,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Christoph Wendt";
 				TargetAttributes = {
 					831B4F1320A4D4F200F1BB94 = {
@@ -447,7 +446,6 @@
 				83C6F6302078138E00F0C74D /* LaunchScreen.storyboard in Resources */,
 				83C6F62D2078138E00F0C74D /* Assets.xcassets in Resources */,
 				83C6F62E2078138E00F0C74D /* Cardo-Regular.ttf in Resources */,
-				83C6F6342078138E00F0C74D /* Info.plist in Resources */,
 				83C6F6312078138E00F0C74D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,6 +758,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -767,6 +766,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -817,6 +817,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -824,6 +825,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
