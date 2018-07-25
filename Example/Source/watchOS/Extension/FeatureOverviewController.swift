@@ -34,16 +34,6 @@ class FeatureOverviewController: WKInterfaceController {
         }
     }
     
-    override func willActivate() {
-        self.capable?.notificationsEnabled = true
-        super.willActivate()
-    }
-    
-    override func didDeactivate() {
-        self.capable?.notificationsEnabled = false
-        super.didDeactivate()
-    }
-    
     func refreshData() {
         if let capable = self.capable {
             self.objects = capable.statusMap

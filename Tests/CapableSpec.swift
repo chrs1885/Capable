@@ -31,7 +31,7 @@ class CapableSpec: QuickSpec {
                 let testedFeatures: [CapableFeature] = [.boldText, .reduceMotion]
 
                 beforeEach {
-                    sut = Capable(with: testedFeatures)
+                    sut = Capable(withFeatures: testedFeatures)
                 }
 
                 it("returns a status map with features that were registered") {
@@ -54,27 +54,6 @@ class CapableSpec: QuickSpec {
 
                 it("enables notifications") {
                     expect(notificationsMock!.numEnableNotificationsCalled).to(equal(1))
-                }
-
-                context("when setting notificationsEnabled to true") {
-                    it("does not register notifications again") {
-                        sut?.notificationsEnabled = true
-                        expect(notificationsMock!.numEnableNotificationsCalled).to(equal(1))
-                    }
-                }
-
-                context("when setting notificationsEnabled to false") {
-                    it("does unregister Notifications") {
-                        sut?.notificationsEnabled = false
-                        expect(notificationsMock!.numDisableNotificationsCalled).to(equal(1))
-                    }
-                }
-
-                context("when setting notificationsEnabled to false again") {
-                    it("does not unregister Notifications again") {
-                        sut?.notificationsEnabled = false
-                        expect(notificationsMock!.numDisableNotificationsCalled).to(equal(1))
-                    }
                 }
             }
 
