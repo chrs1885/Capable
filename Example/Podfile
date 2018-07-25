@@ -1,11 +1,15 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
-pod 'Capable', :path => '../'
+
+def sharedPods
+  pod 'Capable', :path => '../'
+end
 
 target 'Example-iOS' do
   platform :ios, '10.0'
   use_frameworks!
 
+  sharedPods
   pod 'AppCenter/Analytics'
   pod 'Fabric'
   pod 'Answers'
@@ -15,6 +19,8 @@ end
 target 'Example-tvOS' do
   platform :tvos, '10.0'
   use_frameworks!
+
+  sharedPods
 end
 
 target 'Example-watchOS' do
@@ -25,4 +31,6 @@ end
 target 'Example-watchOS Extension' do
   platform :watchos, '4.0'
   use_frameworks!
+
+  sharedPods
 end

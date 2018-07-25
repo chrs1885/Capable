@@ -30,7 +30,6 @@
 		83C6F6312078138E00F0C74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6282078138E00F0C74D /* Main.storyboard */; };
 		83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
 		83C6F6332078138E00F0C74D /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62B2078138E00F0C74D /* FontsViewController.swift */; };
-		83E67A2E20CD94C300FE6FC2 /* Capable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E67A2C20CD94B800FE6FC2 /* Capable.framework */; };
 		83E67A2F20CD94C300FE6FC2 /* Capable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83E67A2C20CD94B800FE6FC2 /* Capable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D9BD8F0470D72CAC5F44979 /* Pods_Example_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A34BF8D95976311A017335 /* Pods_Example_tvOS.framework */; };
 /* End PBXBuildFile section */
@@ -131,7 +130,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D9BD8F0470D72CAC5F44979 /* Pods_Example_tvOS.framework in Frameworks */,
-				83E67A2E20CD94C300FE6FC2 /* Capable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
