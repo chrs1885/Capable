@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UvY-Ep-fCe">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
-        <!--Example-->
+        <!--Features-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="Example" hidesWhenLoading="NO" id="AgC-eL-Hgc" customClass="FeatureOverviewController" customModule="Example_watchOS_Extension">
+                <controller identifier="Features" title="Features" hidesWhenLoading="NO" id="AgC-eL-Hgc" customClass="FeatureOverviewController" customModule="Example_watchOS" customModuleProvider="target">
                     <items>
                         <table alignment="left" id="kTW-8M-JOg">
                             <items>
@@ -46,6 +46,37 @@
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="47" y="104"/>
+        </scene>
+        <!--Example-->
+        <scene sceneID="RsJ-uP-dAJ">
+            <objects>
+                <controller title="Example" hidesWhenLoading="NO" id="UvY-Ep-fCe" customClass="OverviewController" customModule="Example_watchOS" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="Jkh-AK-UHg">
+                            <items>
+                                <tableRow identifier="OverviewRow" id="eaG-of-S5c" customClass="OverviewRowController" customModule="Example_watchOS_Extension">
+                                    <group key="rootItem" width="1" alignment="left" spacing="6" id="rg2-ot-9Zl">
+                                        <items>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="Y1n-ED-KBJ">
+                                                <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </separator>
+                                            <label alignment="left" verticalAlignment="center" text="Label" textAlignment="left" id="Ic6-wr-rwh"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="Ic6-wr-rwh" id="l7d-Mn-sYi"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="overviewTable" destination="Jkh-AK-UHg" id="M1b-mC-qjj"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-242" y="104"/>
         </scene>
     </scenes>
 </document>

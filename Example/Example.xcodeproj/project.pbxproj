@@ -14,6 +14,8 @@
 		831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F6252078138E00F0C74D /* AppDelegate.swift */; };
 		831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
 		831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
+		836725CF210A71780008ABF7 /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836725CB210A6A7A0008ABF7 /* OverviewController.swift */; };
+		836725D0210A71780008ABF7 /* OverviewRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836725CD210A6A920008ABF7 /* OverviewRowController.swift */; };
 		837C191A20AA27970003D237 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837C191820AA27970003D237 /* Interface.storyboard */; };
 		837C192320AA27970003D237 /* Example-watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 837C192220AA27970003D237 /* Example-watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		837C192A20AA27970003D237 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C192920AA27970003D237 /* ExtensionDelegate.swift */; };
@@ -95,6 +97,8 @@
 		831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		831B4F1D20A4D4F200F1BB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		831B4F2120A4D4F200F1BB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		836725CB210A6A7A0008ABF7 /* OverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewController.swift; sourceTree = "<group>"; };
+		836725CD210A6A920008ABF7 /* OverviewRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewRowController.swift; sourceTree = "<group>"; };
 		837C191620AA27960003D237 /* Example-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		837C191920AA27970003D237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		837C191D20AA27970003D237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 				837C192920AA27970003D237 /* ExtensionDelegate.swift */,
 				837C193820AA27F10003D237 /* FeatureOverviewController.swift */,
 				837C193A20AA2D960003D237 /* FeatureRowController.swift */,
+				836725CB210A6A7A0008ABF7 /* OverviewController.swift */,
+				836725CD210A6A920008ABF7 /* OverviewRowController.swift */,
 				837C192B20AA27970003D237 /* Assets.xcassets */,
 				837C192D20AA27970003D237 /* Info.plist */,
 			);
@@ -663,6 +669,8 @@
 			files = (
 				837C193B20AA2D960003D237 /* FeatureRowController.swift in Sources */,
 				837C192A20AA27970003D237 /* ExtensionDelegate.swift in Sources */,
+				836725CF210A71780008ABF7 /* OverviewController.swift in Sources */,
+				836725D0210A71780008ABF7 /* OverviewRowController.swift in Sources */,
 				837C193920AA27F10003D237 /* FeatureOverviewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
