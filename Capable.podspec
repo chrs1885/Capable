@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Capable'
-  s.version          = '0.1.5'
+  s.version          = '0.2.0'
   s.summary          = 'Keep track of accessibility settings and enable users with disabilities to use your iOS, tvOS, and watchOS app.'
  
   s.description      = <<-DESC
