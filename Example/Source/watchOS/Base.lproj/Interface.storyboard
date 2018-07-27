@@ -46,7 +46,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="47" y="104"/>
+            <point key="canvasLocation" x="47" y="-50"/>
         </scene>
         <!--Example-->
         <scene sceneID="RsJ-uP-dAJ">
@@ -77,6 +77,45 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="-242" y="104"/>
+        </scene>
+        <!--Fonts-->
+        <scene sceneID="Ag0-Yb-Di1">
+            <objects>
+                <controller identifier="Fonts" title="Fonts" hidesWhenLoading="NO" id="MVV-C6-vy0" customClass="FontsViewController" customModule="Example_watchOS" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="fr9-St-bPc">
+                            <items>
+                                <tableRow identifier="FontRow" selectable="NO" id="rfu-qF-Ejh" customClass="FontRowController" customModule="Example_watchOS_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="pTf-U0-MDZ">
+                                        <items>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="ANr-wO-rHp">
+                                                <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </separator>
+                                            <group alignment="left" layout="vertical" spacing="0.0" id="Xql-DF-CHb">
+                                                <items>
+                                                    <label alignment="left" text="Label" id="ipK-kU-RRt"/>
+                                                    <label alignment="left" text="Label" id="qkM-vk-gJ5">
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="descriptionLabel" destination="qkM-vk-gJ5" id="Pnh-oU-Wsf"/>
+                                        <outlet property="fontLabel" destination="ipK-kU-RRt" id="5Yg-vz-SmM"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="fontsTable" destination="fr9-St-bPc" id="v27-oo-MVU"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="47" y="281"/>
         </scene>
     </scenes>
 </document>

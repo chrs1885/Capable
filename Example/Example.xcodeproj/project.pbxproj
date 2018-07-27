@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4478927B210B4073000D5939 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927A210B4073000D5939 /* FontsViewController.swift */; };
+		4478927D210B4288000D5939 /* FontRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927C210B4288000D5939 /* FontRowController.swift */; };
 		4478927E210B4401000D5939 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
 		44789280210B4AEA000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
 		44789281210B4AED000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
@@ -94,6 +96,8 @@
 		06A4614933CCE311EC4CAD3C /* Pods_Example_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_watchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC32891E19486D26B764F86 /* Pods-Example-watchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-watchOS Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		1004E7F9A4E366DF66B525B0 /* Pods-Example-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-watchOS/Pods-Example-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		4478927A210B4073000D5939 /* FontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
+		4478927C210B4288000D5939 /* FontRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontRowController.swift; sourceTree = "<group>"; };
 		4478927F210B4AEA000D5939 /* FontsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsConstants.swift; sourceTree = "<group>"; };
 		4A59D50AB7E59EBA9F953814 /* Pods-Example-watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-watchOS Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
 		61C8CF8E1603FFD70061B7CA /* Pods_Example_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +195,8 @@
 				837C192920AA27970003D237 /* ExtensionDelegate.swift */,
 				837C193820AA27F10003D237 /* FeatureOverviewController.swift */,
 				837C193A20AA2D960003D237 /* FeatureRowController.swift */,
+				4478927C210B4288000D5939 /* FontRowController.swift */,
+				4478927A210B4073000D5939 /* FontsViewController.swift */,
 				836725CB210A6A7A0008ABF7 /* OverviewController.swift */,
 				836725CD210A6A920008ABF7 /* OverviewRowController.swift */,
 				837C192B20AA27970003D237 /* Assets.xcassets */,
@@ -674,8 +680,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				837C193B20AA2D960003D237 /* FeatureRowController.swift in Sources */,
+				4478927D210B4288000D5939 /* FontRowController.swift in Sources */,
 				837C192A20AA27970003D237 /* ExtensionDelegate.swift in Sources */,
 				836725CF210A71780008ABF7 /* OverviewController.swift in Sources */,
+				4478927B210B4073000D5939 /* FontsViewController.swift in Sources */,
 				836725D0210A71780008ABF7 /* OverviewRowController.swift in Sources */,
 				44789281210B4AED000D5939 /* FontsConstants.swift in Sources */,
 				837C193920AA27F10003D237 /* FeatureOverviewController.swift in Sources */,

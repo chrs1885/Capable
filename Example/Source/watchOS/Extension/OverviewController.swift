@@ -32,6 +32,8 @@ class OverviewController: WKInterfaceController {
         let entryTitle = Content.items[rowIndex]
         if entryTitle == Content.featuresTitle {
             presentController(withName: "Features", context: entryTitle)
+        } else if entryTitle == Content.fontsTitle {
+            presentController(withName: "Fonts", context: entryTitle)
         }
     }
 }
