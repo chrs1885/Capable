@@ -5,7 +5,7 @@
 //  Created by Christoph Wendt on 23.03.18.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/NSObjCRuntime.h>
 
 //! Project version number for Capable.
 FOUNDATION_EXPORT double CapableVersionNumber;
