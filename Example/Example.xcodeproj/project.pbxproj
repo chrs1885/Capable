@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4478927E210B4401000D5939 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
 		44789280210B4AEA000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
 		44789281210B4AED000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
 		55A2015AF8E67D0BAC01DA73 /* Pods_Example_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A4614933CCE311EC4CAD3C /* Pods_Example_watchOS_Extension.framework */; };
@@ -448,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				837C192C20AA27970003D237 /* Assets.xcassets in Resources */,
+				4478927E210B4401000D5939 /* Cardo-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
