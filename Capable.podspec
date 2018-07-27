@@ -17,6 +17,6 @@ Capable lets you easily keep track of accessibility settings used by your app us
   s.framework      = 'UIKit', 'Foundation'
   s.ios.deployment_target = '10.0'
   s.tvos.deployment_target = '10.0'
-  s.watchos.deployment_target = '2.0'
+  s.watchos.deployment_target = '4.0'
   s.watchos.framework  = 'WatchKit'
 end
