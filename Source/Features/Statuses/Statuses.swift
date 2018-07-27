@@ -222,6 +222,8 @@ class Statuses: StatusesProtocol {
                 return self.isClosedCaptioningEnabled
             case .grayscale:
                 return self.isGrayscaleEnabled
+            case .invertColors:
+                return self.isInvertColorsEnabled
             case .monoAudio:
                 return self.isMonoAudioEnabled
             case .reduceMotion:
@@ -232,7 +234,7 @@ class Statuses: StatusesProtocol {
                 return self.isSwitchControlEnabled
             case .voiceOver:
                 return self.isVoiceOverEnabled
-            }
+        }
         #elseif os(watchOS)
             switch feature {
             case .boldText:

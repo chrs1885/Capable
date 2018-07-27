@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4478927B210B4073000D5939 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927A210B4073000D5939 /* FontsViewController.swift */; };
+		4478927D210B4288000D5939 /* FontRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927C210B4288000D5939 /* FontRowController.swift */; };
+		4478927E210B4401000D5939 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
+		44789280210B4AEA000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
+		44789281210B4AED000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
 		55A2015AF8E67D0BAC01DA73 /* Pods_Example_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A4614933CCE311EC4CAD3C /* Pods_Example_watchOS_Extension.framework */; };
 		6180FD25002FD5791E4E3C36 /* Pods_Example_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C8CF8E1603FFD70061B7CA /* Pods_Example_iOS.framework */; };
 		791054B3341540F931275BD6 /* Pods_Example_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA97E99795B6631F2DB0EB5 /* Pods_Example_watchOS.framework */; };
@@ -14,6 +19,8 @@
 		831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F6252078138E00F0C74D /* AppDelegate.swift */; };
 		831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
 		831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
+		836725CF210A71780008ABF7 /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836725CB210A6A7A0008ABF7 /* OverviewController.swift */; };
+		836725D0210A71780008ABF7 /* OverviewRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836725CD210A6A920008ABF7 /* OverviewRowController.swift */; };
 		837C191A20AA27970003D237 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837C191820AA27970003D237 /* Interface.storyboard */; };
 		837C192320AA27970003D237 /* Example-watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 837C192220AA27970003D237 /* Example-watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		837C192A20AA27970003D237 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C192920AA27970003D237 /* ExtensionDelegate.swift */; };
@@ -30,9 +37,6 @@
 		83C6F6312078138E00F0C74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6282078138E00F0C74D /* Main.storyboard */; };
 		83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
 		83C6F6332078138E00F0C74D /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62B2078138E00F0C74D /* FontsViewController.swift */; };
-		83C6F6342078138E00F0C74D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F62C2078138E00F0C74D /* Info.plist */; };
-		83E67A2E20CD94C300FE6FC2 /* Capable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E67A2C20CD94B800FE6FC2 /* Capable.framework */; };
-		83E67A2F20CD94C300FE6FC2 /* Capable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83E67A2C20CD94B800FE6FC2 /* Capable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D9BD8F0470D72CAC5F44979 /* Pods_Example_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A34BF8D95976311A017335 /* Pods_Example_tvOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,7 +86,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				83E67A2F20CD94C300FE6FC2 /* Capable.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,12 +96,17 @@
 		06A4614933CCE311EC4CAD3C /* Pods_Example_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_watchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC32891E19486D26B764F86 /* Pods-Example-watchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-watchOS Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		1004E7F9A4E366DF66B525B0 /* Pods-Example-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-watchOS/Pods-Example-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		4478927A210B4073000D5939 /* FontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
+		4478927C210B4288000D5939 /* FontRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontRowController.swift; sourceTree = "<group>"; };
+		4478927F210B4AEA000D5939 /* FontsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsConstants.swift; sourceTree = "<group>"; };
 		4A59D50AB7E59EBA9F953814 /* Pods-Example-watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-watchOS Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
 		61C8CF8E1603FFD70061B7CA /* Pods_Example_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A34BF8D95976311A017335 /* Pods_Example_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		831B4F1D20A4D4F200F1BB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		831B4F2120A4D4F200F1BB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		836725CB210A6A7A0008ABF7 /* OverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewController.swift; sourceTree = "<group>"; };
+		836725CD210A6A920008ABF7 /* OverviewRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewRowController.swift; sourceTree = "<group>"; };
 		837C191620AA27960003D237 /* Example-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		837C191920AA27970003D237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		837C191D20AA27970003D237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,7 +140,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D9BD8F0470D72CAC5F44979 /* Pods_Example_tvOS.framework in Frameworks */,
-				83E67A2E20CD94C300FE6FC2 /* Capable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +195,10 @@
 				837C192920AA27970003D237 /* ExtensionDelegate.swift */,
 				837C193820AA27F10003D237 /* FeatureOverviewController.swift */,
 				837C193A20AA2D960003D237 /* FeatureRowController.swift */,
+				4478927C210B4288000D5939 /* FontRowController.swift */,
+				4478927A210B4073000D5939 /* FontsViewController.swift */,
+				836725CB210A6A7A0008ABF7 /* OverviewController.swift */,
+				836725CD210A6A920008ABF7 /* OverviewRowController.swift */,
 				837C192B20AA27970003D237 /* Assets.xcassets */,
 				837C192D20AA27970003D237 /* Info.plist */,
 			);
@@ -248,6 +259,7 @@
 			children = (
 				83C6F6252078138E00F0C74D /* AppDelegate.swift */,
 				83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */,
+				4478927F210B4AEA000D5939 /* FontsConstants.swift */,
 				831B4F2520A4D51D00F1BB94 /* iOS */,
 				831B4F2620A4D53100F1BB94 /* tvOS */,
 				837C193C20AA31E60003D237 /* watchOS */,
@@ -295,6 +307,8 @@
 				831B4F1120A4D4F200F1BB94 /* Frameworks */,
 				831B4F1220A4D4F200F1BB94 /* Resources */,
 				83E67A2B20CD946200FE6FC2 /* Embed Frameworks */,
+				CD63CA07C089828CF543BBC4 /* [CP] Embed Pods Frameworks */,
+				D48382659C0D3A5943711C0D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -313,6 +327,7 @@
 				837C191420AA27960003D237 /* Resources */,
 				837C193420AA27970003D237 /* Embed App Extensions */,
 				F05E2059260BD9015112DEF2 /* Frameworks */,
+				C7239960E75F9845B6B5ED6A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -332,6 +347,8 @@
 				837C191E20AA27970003D237 /* Sources */,
 				837C191F20AA27970003D237 /* Frameworks */,
 				837C192020AA27970003D237 /* Resources */,
+				F67097C47BDCE4F9878E7D3B /* [CP] Embed Pods Frameworks */,
+				1E4FB09657A9B466F6EBA2BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -352,6 +369,7 @@
 				83C6F5DA20780FE700F0C74D /* Resources */,
 				831B4F5420A4F0AA00F1BB94 /* Embed Watch Content */,
 				06147DD848B4478BE2B0CAAD /* [CP] Embed Pods Frameworks */,
+				448F55CB7EA0EF8A3B1BF8B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -370,7 +388,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Christoph Wendt";
 				TargetAttributes = {
 					831B4F1320A4D4F200F1BB94 = {
@@ -437,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				837C192C20AA27970003D237 /* Assets.xcassets in Resources */,
+				4478927E210B4401000D5939 /* Cardo-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +466,6 @@
 				83C6F6302078138E00F0C74D /* LaunchScreen.storyboard in Resources */,
 				83C6F62D2078138E00F0C74D /* Assets.xcassets in Resources */,
 				83C6F62E2078138E00F0C74D /* Cardo-Regular.ttf in Resources */,
-				83C6F6342078138E00F0C74D /* Info.plist in Resources */,
 				83C6F6312078138E00F0C74D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,17 +480,49 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Capable-iOS/Capable.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E4FB09657A9B466F6EBA2BB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		448F55CB7EA0EF8A3B1BF8B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		908CD651F925C69DAD7AE2BB /* [CP] Check Pods Manifest.lock */ = {
@@ -529,6 +579,54 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C7239960E75F9845B6B5ED6A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-watchOS/Pods-Example-watchOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD63CA07C089828CF543BBC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Capable-tvOS/Capable.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D48382659C0D3A5943711C0D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E0FC5F3AA5CB3DA8BF3D6D8B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -545,6 +643,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F67097C47BDCE4F9878E7D3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Capable-watchOS/Capable.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -564,7 +680,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				837C193B20AA2D960003D237 /* FeatureRowController.swift in Sources */,
+				4478927D210B4288000D5939 /* FontRowController.swift in Sources */,
 				837C192A20AA27970003D237 /* ExtensionDelegate.swift in Sources */,
+				836725CF210A71780008ABF7 /* OverviewController.swift in Sources */,
+				4478927B210B4073000D5939 /* FontsViewController.swift in Sources */,
+				836725D0210A71780008ABF7 /* OverviewRowController.swift in Sources */,
+				44789281210B4AED000D5939 /* FontsConstants.swift in Sources */,
 				837C193920AA27F10003D237 /* FeatureOverviewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,6 +696,7 @@
 			files = (
 				83C6F62F2078138E00F0C74D /* AppDelegate.swift in Sources */,
 				83C6F6332078138E00F0C74D /* FontsViewController.swift in Sources */,
+				44789280210B4AEA000D5939 /* FontsConstants.swift in Sources */,
 				83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,7 +759,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-tvOS";
@@ -656,7 +778,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-tvOS";
@@ -674,7 +796,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/watchOS/Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS.watchkitapp.watchkitextension";
@@ -683,7 +805,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -693,7 +815,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/watchOS/Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS.watchkitapp.watchkitextension";
@@ -702,7 +824,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -710,10 +832,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FEECBAFC5F7980884EBE6AA3 /* Pods-Example-watchOS.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-watchOS";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				IBSC_MODULE = Example_watchOS_Extension;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/watchOS/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS.watchkitapp";
@@ -722,7 +843,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -730,10 +851,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1004E7F9A4E366DF66B525B0 /* Pods-Example-watchOS.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-watchOS";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				IBSC_MODULE = Example_watchOS_Extension;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/watchOS/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS.watchkitapp";
@@ -742,7 +862,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -760,6 +880,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -767,6 +888,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -817,6 +939,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -824,6 +947,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -860,8 +984,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-iOS";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -877,8 +1002,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-iOS";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";

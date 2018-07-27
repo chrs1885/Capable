@@ -32,16 +32,6 @@ class FeatureOverviewController: UITableViewController {
             object: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.capable?.notificationsEnabled = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.capable?.notificationsEnabled = false
-    }
-    
     func refreshData() {
         if let capable = self.capable {
             self.objects = capable.statusMap

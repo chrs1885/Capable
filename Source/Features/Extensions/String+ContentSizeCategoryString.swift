@@ -6,6 +6,8 @@
 //
 
 #if os(watchOS) || os(tvOS)
+import UIKit
+
 extension CGFloat {
     var contentSizeString: String {
         switch self {
