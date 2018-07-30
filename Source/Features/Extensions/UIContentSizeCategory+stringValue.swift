@@ -5,9 +5,11 @@
 //  Created by Christoph Wendt on 26.03.18.
 //
 
-import Foundation
+#if os(iOS)
 
-#if os(iOS) || os(tvOS)
+import Foundation
+import UIKit
+
 extension UIContentSizeCategory {
     var stringValue: String {
         switch self {
@@ -40,4 +42,5 @@ extension UIContentSizeCategory {
         }
     }
 }
+
 #endif

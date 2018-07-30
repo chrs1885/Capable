@@ -5,6 +5,8 @@
 //  Created by Christoph Wendt on 31.03.18.
 //
 
+#if os(iOS) || os(tvOS) || os(watchOS)
+
 import Foundation
 import UIKit
 
@@ -80,3 +82,5 @@ extension UIFont {
         return UIFont.scaledFont(for: font)
     }
 }
+
+#endif

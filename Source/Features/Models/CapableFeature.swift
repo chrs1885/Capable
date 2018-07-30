@@ -35,22 +35,24 @@ public enum CapableFeature: String {
         /// Makes the display more readable for color blind people by using gray tones instead of colors.
         case grayscale
 
-        /// Helps people with low vision, color blindness, or sensitivity to brightness to read the display content.
-        case invertColors
-
         /// Merges stereo audio channels to help users that are hard of hearing or deaf in one ear.
         case monoAudio
 
         /// Removes transparency from layers to make them readable for users with visual impairment.
         case reduceTransparency
-
-        /// Allows users with limited mobility to control their device with the help of ability switches and other adaptive devices.
-        case switchControl
     #endif
 
     #if os(iOS) || os(watchOS)
         /// Increases legibility by making fonts bigger.
         case largerText
+    #endif
+
+    #if os(iOS) || os(tvOS) || os(OSX)
+        /// Helps people with low vision, color blindness, or sensitivity to brightness to read the display content.
+        case invertColors
+
+        /// Allows users with limited mobility to control their device with the help of ability switches and other adaptive devices.
+        case switchControl
     #endif
 
     #if os(iOS) || os(tvOS) || os(watchOS)
@@ -93,6 +95,7 @@ public enum CapableFeature: String {
             .boldText,
             .closedCaptioning,
             .grayscale,
+            .invertColors,
             .monoAudio,
             .reduceMotion,
             .reduceTransparency,
@@ -103,6 +106,12 @@ public enum CapableFeature: String {
             .boldText,
             .largerText,
             .reduceMotion,
+            .voiceOver]
+        #elseif os(OSX)
+        return [
+            .invertColors,
+            .reduceMotion,
+            .switchControl,
             .voiceOver]
         #endif
     }

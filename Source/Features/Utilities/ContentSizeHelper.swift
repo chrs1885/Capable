@@ -5,6 +5,10 @@
 //  Created by Christoph Wendt on 07.07.18.
 //
 
+#if os(iOS)
+import UIKit
+#endif
+
 #if os(watchOS)
 import WatchKit
 #endif
