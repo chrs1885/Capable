@@ -28,6 +28,14 @@ public enum CapableFeature: String {
         case speakSelection
     #endif
 
+    #if os(OSX)
+        /// Helps color blind users to differentiate settings differently, e.g. by using shapes rather than colors.
+        case differentiateWithoutColor
+
+        /// Increases contrast to make out text and interface elements.
+        case increaseContrast
+    #endif
+
     #if os(iOS) || os(tvOS)
         /// Displays subtitles when playing videos.
         case closedCaptioning
@@ -37,9 +45,6 @@ public enum CapableFeature: String {
 
         /// Merges stereo audio channels to help users that are hard of hearing or deaf in one ear.
         case monoAudio
-
-        /// Removes transparency from layers to make them readable for users with visual impairment.
-        case reduceTransparency
     #endif
 
     #if os(iOS) || os(watchOS)
@@ -50,6 +55,9 @@ public enum CapableFeature: String {
     #if os(iOS) || os(tvOS) || os(OSX)
         /// Helps people with low vision, color blindness, or sensitivity to brightness to read the display content.
         case invertColors
+
+        /// Removes transparency from layers to make them readable for users with visual impairment.
+        case reduceTransparency
 
         /// Allows users with limited mobility to control their device with the help of ability switches and other adaptive devices.
         case switchControl
@@ -109,8 +117,11 @@ public enum CapableFeature: String {
             .voiceOver]
         #elseif os(OSX)
         return [
+            .differentiateWithoutColor,
+            .increaseContrast,
             .invertColors,
             .reduceMotion,
+            .reduceTransparency,
             .switchControl,
             .voiceOver]
         #endif
