@@ -24,19 +24,21 @@ class StatusesMock: Statuses {
     var speakSelectionEnabled: Bool = false
     #endif
 
+    #if os(OSX)
+    var differentiateWithoutColor: Bool = false
+    var increaseContrast: Bool = false
+    #endif
+
     #if os(iOS) || os(tvOS)
     var boldTextEnabled: Bool = false
     var closedCaptioningEnabled: Bool = false
     var grayscaleEnabled: Bool = false
     var monoAudioEnabled: Bool = false
-    var reduceTransparencyEnabled: Bool = false
     #endif
 
-    #if os(iOS) || os(OSX)
     var invertColorsEnabled: Bool = false
-    #endif
-
     var reduceMotionEnabled: Bool = false
+    var reduceTransparencyEnabled: Bool = false
     var switchControlEnabled: Bool = false
     var voiceOverEnabled: Bool = false
 
@@ -78,6 +80,16 @@ class StatusesMock: Statuses {
         }
     #endif
 
+    #if os(OSX)
+        override var isDifferentiateWithoutColorEnabled: Bool {
+            return differentiateWithoutColor
+        }
+
+        override var isIncreaseContrastEnabled: Bool {
+            return increaseContrast
+        }
+    #endif
+
     #if os(iOS) || os(tvOS)
         override var isBoldTextEnabled: Bool {
             return boldTextEnabled
@@ -94,20 +106,18 @@ class StatusesMock: Statuses {
         override var isMonoAudioEnabled: Bool {
             return monoAudioEnabled
         }
-
-        override var isReduceTransparencyEnabled: Bool {
-            return reduceTransparencyEnabled
-        }
     #endif
 
-    #if os(iOS) || os(OSX)
-        override var isInvertColorsEnabled: Bool {
-            return invertColorsEnabled
-        }
-    #endif
+    override var isInvertColorsEnabled: Bool {
+        return invertColorsEnabled
+    }
 
     override var isReduceMotionEnabled: Bool {
         return reduceMotionEnabled
+    }
+
+    override var isReduceTransparencyEnabled: Bool {
+        return reduceTransparencyEnabled
     }
 
     override var isSwitchControlEnabled: Bool {
