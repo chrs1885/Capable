@@ -4,7 +4,7 @@
 //
 //  Created by Christoph Wendt on 23.03.18.
 //
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(OSX)
 import Quick
 import Nimble
 @testable import Capable
@@ -28,7 +28,7 @@ class CapableSpec: QuickSpec {
 
             context("after initialization with specific features") {
                 var sut: Capable?
-                let testedFeatures: [CapableFeature] = [.boldText, .reduceMotion]
+                let testedFeatures: [CapableFeature] = [.reduceMotion, .voiceOver]
 
                 beforeEach {
                     sut = Capable(withFeatures: testedFeatures)
@@ -42,14 +42,13 @@ class CapableSpec: QuickSpec {
             }
 
             context("after initialization") {
-                var sut: Capable?
                 var notificationsMock: NotificationsMock?
                 var statusesMock: StatusesMock?
 
                 beforeEach {
                     statusesMock = StatusesMock()
                     notificationsMock = NotificationsMock(statusesModule: statusesMock!)
-                    sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
+                    _ = Capable(with: statusesMock!, notificationModule: notificationsMock!)
                 }
 
                 it("enables notifications") {
@@ -150,6 +149,29 @@ class CapableSpec: QuickSpec {
                 }
                 #endif
 
+                #if os(OSX)
+                context("for DifferentiateWithoutColor") {
+                    beforeEach {
+                        statusesMock?.differentiateWithoutColor = true
+                    }
+
+                    it("returns correct state") {
+                        expect(sut?.isFeatureEnabled(feature: .differentiateWithoutColor)).to(beTrue())
+                    }
+                }
+
+                context("for IncreaseContrast") {
+                    beforeEach {
+                        statusesMock?.increaseContrast = true
+                    }
+
+                    it("returns correct state") {
+                        expect(sut?.isFeatureEnabled(feature: .increaseContrast)).to(beTrue())
+                    }
+                }
+                #endif
+
+                #if os(iOS) || os(tvOS)
                 context("for BoldText") {
                     beforeEach {
                         statusesMock?.boldTextEnabled = true
@@ -189,6 +211,7 @@ class CapableSpec: QuickSpec {
                         expect(sut?.isFeatureEnabled(feature: .monoAudio)).to(beTrue())
                     }
                 }
+                #endif
 
                 context("for ReduceMotion") {
                     beforeEach {
