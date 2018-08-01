@@ -19,6 +19,10 @@
 		831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F6252078138E00F0C74D /* AppDelegate.swift */; };
 		831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
 		831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
+		832953D721121EAA00072EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953D621121EAA00072EB9 /* AppDelegate.swift */; };
+		832953D921121EAA00072EB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953D821121EAA00072EB9 /* ViewController.swift */; };
+		832953DB21121EAC00072EB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 832953DA21121EAC00072EB9 /* Assets.xcassets */; };
+		832953DE21121EAC00072EB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832953DC21121EAC00072EB9 /* Main.storyboard */; };
 		836725CF210A71780008ABF7 /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836725CB210A6A7A0008ABF7 /* OverviewController.swift */; };
 		836725D0210A71780008ABF7 /* OverviewRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836725CD210A6A920008ABF7 /* OverviewRowController.swift */; };
 		837C191A20AA27970003D237 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837C191820AA27970003D237 /* Interface.storyboard */; };
@@ -105,6 +109,13 @@
 		831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		831B4F1D20A4D4F200F1BB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		831B4F2120A4D4F200F1BB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		832953D421121EAA00072EB9 /* Example-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		832953D621121EAA00072EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		832953D821121EAA00072EB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		832953DA21121EAC00072EB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		832953DD21121EAC00072EB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		832953DF21121EAC00072EB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		832953E021121EAC00072EB9 /* Example_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example_macOS.entitlements; sourceTree = "<group>"; };
 		836725CB210A6A7A0008ABF7 /* OverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewController.swift; sourceTree = "<group>"; };
 		836725CD210A6A920008ABF7 /* OverviewRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewRowController.swift; sourceTree = "<group>"; };
 		837C191620AA27960003D237 /* Example-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +151,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D9BD8F0470D72CAC5F44979 /* Pods_Example_tvOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832953D121121EAA00072EB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +207,19 @@
 			path = tvOS;
 			sourceTree = "<group>";
 		};
+		832953D521121EAA00072EB9 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				832953D621121EAA00072EB9 /* AppDelegate.swift */,
+				832953D821121EAA00072EB9 /* ViewController.swift */,
+				832953DA21121EAC00072EB9 /* Assets.xcassets */,
+				832953DC21121EAC00072EB9 /* Main.storyboard */,
+				832953DF21121EAC00072EB9 /* Info.plist */,
+				832953E021121EAC00072EB9 /* Example_macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
 		837C192620AA27970003D237 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +264,7 @@
 				831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */,
 				837C191620AA27960003D237 /* Example-watchOS.app */,
 				837C192220AA27970003D237 /* Example-watchOS Extension.appex */,
+				832953D421121EAA00072EB9 /* Example-macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -261,6 +293,7 @@
 				83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */,
 				4478927F210B4AEA000D5939 /* FontsConstants.swift */,
 				831B4F2520A4D51D00F1BB94 /* iOS */,
+				832953D521121EAA00072EB9 /* macOS */,
 				831B4F2620A4D53100F1BB94 /* tvOS */,
 				837C193C20AA31E60003D237 /* watchOS */,
 				83C6F6262078138E00F0C74D /* LaunchScreen.storyboard */,
@@ -317,6 +350,23 @@
 			name = "Example-tvOS";
 			productName = "Example-tvOS";
 			productReference = 831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		832953D321121EAA00072EB9 /* Example-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 832953E321121EAC00072EB9 /* Build configuration list for PBXNativeTarget "Example-macOS" */;
+			buildPhases = (
+				832953D021121EAA00072EB9 /* Sources */,
+				832953D121121EAA00072EB9 /* Frameworks */,
+				832953D221121EAA00072EB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Example-macOS";
+			productName = "Example-macOS";
+			productReference = 832953D421121EAA00072EB9 /* Example-macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		837C191520AA27960003D237 /* Example-watchOS */ = {
@@ -387,12 +437,16 @@
 		83C6F5D420780FE700F0C74D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Christoph Wendt";
 				TargetAttributes = {
 					831B4F1320A4D4F200F1BB94 = {
 						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					832953D321121EAA00072EB9 = {
+						CreatedOnToolsVersion = 9.4;
 						ProvisioningStyle = Automatic;
 					};
 					837C191520AA27960003D237 = {
@@ -426,6 +480,7 @@
 				831B4F1320A4D4F200F1BB94 /* Example-tvOS */,
 				837C191520AA27960003D237 /* Example-watchOS */,
 				837C192120AA27970003D237 /* Example-watchOS Extension */,
+				832953D321121EAA00072EB9 /* Example-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -438,6 +493,15 @@
 				831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */,
 				83C6D6EF20F2AE6200D95E02 /* Assets.xcassets in Resources */,
 				831B4F1E20A4D4F200F1BB94 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832953D221121EAA00072EB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832953DB21121EAC00072EB9 /* Assets.xcassets in Resources */,
+				832953DE21121EAC00072EB9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +739,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		832953D021121EAA00072EB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832953D921121EAA00072EB9 /* ViewController.swift in Sources */,
+				832953D721121EAA00072EB9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		837C191E20AA27970003D237 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -721,6 +794,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				831B4F1D20A4D4F200F1BB94 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		832953DC21121EAC00072EB9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				832953DD21121EAC00072EB9 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -787,6 +868,44 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		832953E121121EAC00072EB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = Source/macOS/Example_macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.chrs1885.Example-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		832953E221121EAC00072EB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = Source/macOS/Example_macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.chrs1885.Example-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1021,6 +1140,15 @@
 			buildConfigurations = (
 				831B4F2320A4D4F200F1BB94 /* Debug */,
 				831B4F2420A4D4F200F1BB94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		832953E321121EAC00072EB9 /* Build configuration list for PBXNativeTarget "Example-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832953E121121EAC00072EB9 /* Debug */,
+				832953E221121EAC00072EB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
