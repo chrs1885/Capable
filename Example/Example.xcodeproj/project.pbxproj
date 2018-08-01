@@ -20,8 +20,9 @@
 		831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
 		831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
 		832953D721121EAA00072EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953D621121EAA00072EB9 /* AppDelegate.swift */; };
-		832953D921121EAA00072EB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953D821121EAA00072EB9 /* ViewController.swift */; };
+		832953D921121EAA00072EB9 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953D821121EAA00072EB9 /* FeatureOverviewController.swift */; };
 		832953DE21121EAC00072EB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832953DC21121EAC00072EB9 /* Main.storyboard */; };
+		832953E621124C9600072EB9 /* FeatureTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953E42112496300072EB9 /* FeatureTableCellView.swift */; };
 		836725CF210A71780008ABF7 /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836725CB210A6A7A0008ABF7 /* OverviewController.swift */; };
 		836725D0210A71780008ABF7 /* OverviewRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836725CD210A6A920008ABF7 /* OverviewRowController.swift */; };
 		837C191A20AA27970003D237 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837C191820AA27970003D237 /* Interface.storyboard */; };
@@ -110,10 +111,11 @@
 		831B4F2120A4D4F200F1BB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		832953D421121EAA00072EB9 /* Example-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		832953D621121EAA00072EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		832953D821121EAA00072EB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		832953D821121EAA00072EB9 /* FeatureOverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureOverviewController.swift; sourceTree = "<group>"; };
 		832953DD21121EAC00072EB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		832953DF21121EAC00072EB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		832953E021121EAC00072EB9 /* Example_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example_macOS.entitlements; sourceTree = "<group>"; };
+		832953E42112496300072EB9 /* FeatureTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTableCellView.swift; sourceTree = "<group>"; };
 		836725CB210A6A7A0008ABF7 /* OverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewController.swift; sourceTree = "<group>"; };
 		836725CD210A6A920008ABF7 /* OverviewRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewRowController.swift; sourceTree = "<group>"; };
 		837C191620AA27960003D237 /* Example-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,7 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				832953D621121EAA00072EB9 /* AppDelegate.swift */,
-				832953D821121EAA00072EB9 /* ViewController.swift */,
+				832953D821121EAA00072EB9 /* FeatureOverviewController.swift */,
+				832953E42112496300072EB9 /* FeatureTableCellView.swift */,
 				832953DC21121EAC00072EB9 /* Main.storyboard */,
 				832953DF21121EAC00072EB9 /* Info.plist */,
 				832953E021121EAC00072EB9 /* Example_macOS.entitlements */,
@@ -474,10 +477,10 @@
 			projectRoot = "";
 			targets = (
 				83C6F5DB20780FE700F0C74D /* Example-iOS */,
+				832953D321121EAA00072EB9 /* Example-macOS */,
 				831B4F1320A4D4F200F1BB94 /* Example-tvOS */,
 				837C191520AA27960003D237 /* Example-watchOS */,
 				837C192120AA27970003D237 /* Example-watchOS Extension */,
-				832953D321121EAA00072EB9 /* Example-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -739,7 +742,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				832953D921121EAA00072EB9 /* ViewController.swift in Sources */,
+				832953E621124C9600072EB9 /* FeatureTableCellView.swift in Sources */,
+				832953D921121EAA00072EB9 /* FeatureOverviewController.swift in Sources */,
 				832953D721121EAA00072EB9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
