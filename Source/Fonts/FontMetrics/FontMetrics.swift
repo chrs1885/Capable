@@ -11,7 +11,6 @@ import Foundation
 import UIKit
 
 class FontMetrics: FontMetricsProtocol {
-
     var osVersionProvider: OsVersionProviderProtocol
 
     init() {

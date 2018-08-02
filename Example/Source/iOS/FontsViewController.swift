@@ -10,7 +10,6 @@ import Foundation
 import Capable
 
 class FontsController: UITableViewController {
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -30,7 +29,7 @@ class FontsController: UITableViewController {
         cell.textLabel?.numberOfLines = 0
         
         cell.detailTextLabel!.text = FontsConstants.fontsList[row].description
-        cell.detailTextLabel!.font = UIFont.preferredFont(forTextStyle: .caption2)
+        cell.detailTextLabel!.font = UIFont.preferredFont(forTextStyle: .caption1)
             
         return cell
     }
