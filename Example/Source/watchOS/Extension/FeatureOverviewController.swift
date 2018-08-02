@@ -11,7 +11,7 @@ import Foundation
 import Capable
 
 class FeatureOverviewController: WKInterfaceController {
-    var objects: [CapableFeature: String]?
+    var objects: [String: String]?
     var capable: Capable?
     @IBOutlet var featuresTable: WKInterfaceTable!
     
@@ -28,20 +28,10 @@ class FeatureOverviewController: WKInterfaceController {
             self.featuresTable.setNumberOfRows(objects.count, withRowType: "FeatureRow")
             for index in 0..<featuresTable.numberOfRows {
                 guard let controller = featuresTable.rowController(at: index) as? FeatureRowController else { continue }
-                let item = self.value(forRow: index)
-                controller.feature = item
+                let feature = self.value(forRow: index)
+                controller.feature = feature
             }
         }
-    }
-    
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-    
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
     }
     
     func refreshData() {
@@ -50,7 +40,7 @@ class FeatureOverviewController: WKInterfaceController {
         }
     }
     
-    func value(forRow row: Int) -> (key: CapableFeature, value: String) {
+    private func value(forRow row: Int) -> (key: String, value: String) {
         if let objects = self.objects {
             let featuresArray = Array(objects)
             return featuresArray[row]
@@ -62,6 +52,20 @@ class FeatureOverviewController: WKInterfaceController {
 // MARK: Capable Notification
 extension FeatureOverviewController {
     @objc private func featureStatusChanged(notification: NSNotification) {
-        
+        if let featureStatus = notification.object as? FeatureStatus {
+            self.refreshData()
+            self.showAlert(for: featureStatus)
+        }
+    }
+    
+    private func showAlert(for featureStatus: FeatureStatus) {
+        let alertTitle = "Feature status changed"
+        let alertMessage = "\(featureStatus.feature.rawValue) changed to \(featureStatus.statusString)"
+        let okAction = WKAlertAction(title: "OK",
+                                     style: WKAlertActionStyle.default) {}
+        presentAlert(withTitle: alertTitle,
+                                        message: alertMessage,
+                                        preferredStyle: WKAlertControllerStyle.alert,
+                                        actions: [okAction])
     }
 }

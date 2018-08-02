@@ -1,34 +1,43 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
+def sharedPods
+  pod 'Capable', :path => '../'
+end
+
 target 'Example-iOS' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  platform :ios, '10.0'
   use_frameworks!
 
-  # Pods for Example-iOS
+  sharedPods
   pod 'AppCenter/Analytics'
   pod 'Fabric'
   pod 'Answers'
   pod 'Firebase/Core'
 end
 
-target 'Example-tvOS' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+target 'Example-macOS' do
+  platform :osx, '10.12'
   use_frameworks!
 
-  # Pods for Example-tvOS
+  sharedPods
+end
+
+target 'Example-tvOS' do
+  platform :tvos, '10.0'
+  use_frameworks!
+
+  sharedPods
 end
 
 target 'Example-watchOS' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  platform :watchos, '4.0'
   use_frameworks!
-
-  # Pods for Example-watchOS
 end
 
 target 'Example-watchOS Extension' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  platform :watchos, '4.0'
   use_frameworks!
 
-  # Pods for Example-watchOS Extension
+  sharedPods
 end

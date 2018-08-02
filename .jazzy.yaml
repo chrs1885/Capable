@@ -1,0 +1,8 @@
+author: Christoph Wendt
+author_url: https://github.com/chrs1885
+github_url: https://github.com/chrs1885/Capable
+module: Capable
+readme: README.md
+output: Documentation
+theme: apple
+xcodebuild_arguments: [-scheme, Capable, -project, ./Capable.xcodeproj]

@@ -5,8 +5,12 @@
 //  Created by Christoph Wendt on 30.04.18.
 //
 
+#if os(iOS) || os(tvOS) || os(watchOS)
+
 import Foundation
 
 protocol OsVersionProviderProtocol {
-    func isOsVersionPrior11() -> Bool
+    func isOsVersionWithoutUIFontMetrics() -> Bool
 }
+
+#endif

@@ -12,8 +12,11 @@
 		831B4EF920A4A25A00F1BB94 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A8EE5B206FB8660043EB34 /* Quick.framework */; };
 		831B4EFA20A4A25A00F1BB94 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A8EE59206FB8410043EB34 /* Nimble.framework */; };
 		831B4F2F20A4EEA700F1BB94 /* StatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B4F2E20A4EEA700F1BB94 /* StatusesMock.swift */; };
+		832953CE2110D9E200072EB9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832953CC2110D9E100072EB9 /* Quick.framework */; };
+		832953CF2110D9E200072EB9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832953CD2110D9E200072EB9 /* Nimble.framework */; };
 		833DB9BF206C164B00C8DA02 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9BE206C164B00C8DA02 /* Notification+Name.swift */; };
 		833DB9C2206C188B00C8DA02 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */; };
+		837EE71420F1592A00AC8A11 /* ContentSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EE71320F1592A00AC8A11 /* ContentSizeHelper.swift */; };
 		8382A322206E350F00E264A3 /* Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A321206E350F00E264A3 /* Statuses.swift */; };
 		8382A324206EB40500E264A3 /* NotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A323206EB40500E264A3 /* NotificationsProtocol.swift */; };
 		8382A326206EB46E00E264A3 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A325206EB46E00E264A3 /* Notifications.swift */; };
@@ -28,6 +31,7 @@
 		83CAA3FA2097BF9B003F231D /* OsVersionProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3F92097BF9B003F231D /* OsVersionProviderProtocol.swift */; };
 		83CAA3FC2097C216003F231D /* OsVersionProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3FB2097C216003F231D /* OsVersionProviderMock.swift */; };
 		83CAA3FE2097C2D5003F231D /* FontMetricsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3FD2097C2D5003F231D /* FontMetricsMock.swift */; };
+		83D2A46920F006000032054C /* String+ContentSizeCategoryString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2A46820F006000032054C /* String+ContentSizeCategoryString.swift */; };
 		83DA75F72065167600303D8F /* CapableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA75F62065167600303D8F /* CapableSpec.swift */; };
 		83DA75F92065167600303D8F /* Capable.h in Headers */ = {isa = PBXBuildFile; fileRef = 83DA75EB2065167600303D8F /* Capable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83DB72462069891200384B3F /* UIContentSizeCategory+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB72452069891200384B3F /* UIContentSizeCategory+stringValue.swift */; };
@@ -46,8 +50,11 @@
 
 /* Begin PBXFileReference section */
 		831B4F2E20A4EEA700F1BB94 /* StatusesMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusesMock.swift; path = Tests/Mocks/StatusesMock.swift; sourceTree = SOURCE_ROOT; };
+		832953CC2110D9E100072EB9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		832953CD2110D9E200072EB9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		833DB9BE206C164B00C8DA02 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 		833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatus.swift; sourceTree = "<group>"; };
+		837EE71320F1592A00AC8A11 /* ContentSizeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSizeHelper.swift; sourceTree = "<group>"; };
 		8382A321206E350F00E264A3 /* Statuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statuses.swift; sourceTree = "<group>"; };
 		8382A323206EB40500E264A3 /* NotificationsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsProtocol.swift; sourceTree = "<group>"; };
 		8382A325206EB46E00E264A3 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
@@ -65,6 +72,7 @@
 		83CAA3FB2097C216003F231D /* OsVersionProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OsVersionProviderMock.swift; path = Tests/Mocks/OsVersionProviderMock.swift; sourceTree = SOURCE_ROOT; };
 		83CAA3FD2097C2D5003F231D /* FontMetricsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FontMetricsMock.swift; path = Tests/Mocks/FontMetricsMock.swift; sourceTree = SOURCE_ROOT; };
 		83CAA40120990AB5003F231D /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		83D2A46820F006000032054C /* String+ContentSizeCategoryString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ContentSizeCategoryString.swift"; sourceTree = "<group>"; };
 		83DA75E82065167600303D8F /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DA75EB2065167600303D8F /* Capable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capable.h; sourceTree = "<group>"; };
 		83DA75EC2065167600303D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832953CE2110D9E200072EB9 /* Quick.framework in Frameworks */,
+				832953CF2110D9E200072EB9 /* Nimble.framework in Frameworks */,
 				831B4EF720A4A25A00F1BB94 /* Quick.framework in Frameworks */,
 				831B4EF820A4A25A00F1BB94 /* Nimble.framework in Frameworks */,
 				831B4EF920A4A25A00F1BB94 /* Quick.framework in Frameworks */,
@@ -108,6 +118,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		837EE71220F1590500AC8A11 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				837EE71320F1592A00AC8A11 /* ContentSizeHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		8382A327206EC73400E264A3 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +143,7 @@
 				833DB9C0206C187C00C8DA02 /* Models */,
 				8382A327206EC73400E264A3 /* Notifications */,
 				83B5FFE720653AC000E8E83F /* Statuses */,
+				837EE71220F1590500AC8A11 /* Utilities */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -169,8 +188,10 @@
 		83B5FFEC2065449B00E8E83F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				832953CD2110D9E200072EB9 /* Nimble.framework */,
 				83F0479D20A49F7400C4CA60 /* Quick.framework */,
 				83F0479920A49F6900C4CA60 /* Nimble.framework */,
+				832953CC2110D9E100072EB9 /* Quick.framework */,
 				83CAA40120990AB5003F231D /* WatchKit.framework */,
 				83A8EE5B206FB8660043EB34 /* Quick.framework */,
 				83A8EE59206FB8410043EB34 /* Nimble.framework */,
@@ -232,9 +253,10 @@
 		83DB7243206988DC00384B3F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				83DB72452069891200384B3F /* UIContentSizeCategory+stringValue.swift */,
 				83DB724720698EB400384B3F /* Bool+statusString.swift */,
 				833DB9BE206C164B00C8DA02 /* Notification+Name.swift */,
+				83D2A46820F006000032054C /* String+ContentSizeCategoryString.swift */,
+				83DB72452069891200384B3F /* UIContentSizeCategory+stringValue.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -261,6 +283,7 @@
 				83DA75E42065167600303D8F /* Frameworks */,
 				83DA75E52065167600303D8F /* Headers */,
 				83DA75E62065167600303D8F /* Resources */,
+				83C7DA5620FD2EB200C32F52 /* Run SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -296,7 +319,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				TargetAttributes = {
 					83DA75E72065167600303D8F = {
 						CreatedOnToolsVersion = 9.2;
@@ -339,6 +362,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		83C7DA5620FD2EB200C32F52 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		83F0479620A499F100C4CA60 /* Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,12 +399,14 @@
 			files = (
 				83973ADF206FD4080057CD4F /* FontMetrics.swift in Sources */,
 				8382A324206EB40500E264A3 /* NotificationsProtocol.swift in Sources */,
+				83D2A46920F006000032054C /* String+ContentSizeCategoryString.swift in Sources */,
 				83BB09D22087CE4C000420C5 /* NotificationsMock.swift in Sources */,
 				83973ADA206FD22C0057CD4F /* UIFont+ScaledFont.swift in Sources */,
 				83B5FFE42065336F00E8E83F /* Capable.swift in Sources */,
 				83CAA3FA2097BF9B003F231D /* OsVersionProviderProtocol.swift in Sources */,
 				83CAA3F82097BEEC003F231D /* OsVersionProvider.swift in Sources */,
 				831B4F2F20A4EEA700F1BB94 /* StatusesMock.swift in Sources */,
+				837EE71420F1592A00AC8A11 /* ContentSizeHelper.swift in Sources */,
 				83DB72462069891200384B3F /* UIContentSizeCategory+stringValue.swift in Sources */,
 				83973ADD206FD3A40057CD4F /* FontMetricsProtocol.swift in Sources */,
 				83DB724820698EB400384B3F /* Bool+statusString.swift in Sources */,
@@ -415,6 +454,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -422,6 +462,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -457,8 +498,10 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -476,6 +519,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -483,6 +527,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -510,9 +555,11 @@
 				"OTHER_LDFLAGS[arch=*]" = "-WatchKit.framework";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -523,24 +570,25 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.Capable";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				RESOURCES_TARGETED_DEVICE_FAMILY = "";
 				SDKROOT = "";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TVOS_DEPLOYMENT_TARGET = 10.0;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -551,23 +599,24 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.Capable";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				RESOURCES_TARGETED_DEVICE_FAMILY = "";
 				SDKROOT = "";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TVOS_DEPLOYMENT_TARGET = 10.0;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -575,27 +624,34 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				"FRAMEWORK_SEARCH_PATHS[sdk=appletvos*]" = "$(SRCROOT)/Carthage/Build/tvOS";
 				"FRAMEWORK_SEARCH_PATHS[sdk=appletvsimulator*]" = "$(SRCROOT)/Carthage/Build/tvOS";
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/Carthage/Build/iOS";
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/Carthage/Build/iOS";
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = "$(PROJECT_DIR)/Carthage/Build/Mac";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.CapableTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos11.2;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator appletvos appletvsimulator";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TVOS_DEPLOYMENT_TARGET = 10.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -604,26 +660,29 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				"FRAMEWORK_SEARCH_PATHS[sdk=appletvos*]" = "$(SRCROOT)/Carthage/Build/tvOS";
 				"FRAMEWORK_SEARCH_PATHS[sdk=appletvsimulator*]" = "$(SRCROOT)/Carthage/Build/tvOS";
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/Carthage/Build/iOS";
 				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/Carthage/Build/iOS";
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = "$(PROJECT_DIR)/Carthage/Build/Mac";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.CapableTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator appletvos appletvsimulator";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TVOS_DEPLOYMENT_TARGET = 10.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};

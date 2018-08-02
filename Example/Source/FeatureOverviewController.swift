@@ -22,7 +22,8 @@ class FeatureOverviewController: UITableViewController {
     var capable: Capable?
     
     override func viewDidLoad() {
-//        self.capable = Capable(with: [.LargerText, .BoldText, .ShakeToUndo])
+        super.viewDidLoad()
+//      self.capable = Capable(with: [.largerText, .boldText, .shakeToUndo])
         self.capable = Capable()
         refreshData()
         NotificationCenter.default.addObserver(
@@ -30,16 +31,6 @@ class FeatureOverviewController: UITableViewController {
             selector: #selector(self.featureStatusChanged),
             name: .CapableFeatureStatusDidChange,
             object: nil)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.capable?.notificationsEnabled = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.capable?.notificationsEnabled = false
     }
     
     func refreshData() {
