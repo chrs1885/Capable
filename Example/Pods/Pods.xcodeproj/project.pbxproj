@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -235,7 +235,7 @@
 		02A49616353F6F821D62B93F52C6C9FA /* FIRErrorCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRErrorCode.h; path = Firebase/Core/Private/FIRErrorCode.h; sourceTree = "<group>"; };
 		030062B9A4157AECD3B3C40ED9B89B9F /* Pods-Example-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-tvOS-resources.sh"; sourceTree = "<group>"; };
 		03B88CFAC25725D4DF82E4A802E15034 /* Pods-Example-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-macOS-umbrella.h"; sourceTree = "<group>"; };
-		041C9A2BFD1F1D216D649E6322B988C3 /* Pods_Example_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example_tvOS.framework; path = "Pods-Example-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		041C9A2BFD1F1D216D649E6322B988C3 /* Pods_Example_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05414CF4FE3E0CC3B2616FB49AA50117 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		06DDFC916C844F72DF9864BB093DE568 /* FIRAnalyticsConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAnalyticsConfiguration.h; path = Firebase/Core/Public/FIRAnalyticsConfiguration.h; sourceTree = "<group>"; };
 		08982403F917D0821F51ECD6B7AB73FC /* FIRNetworkURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRNetworkURLSession.h; path = Firebase/Core/Private/FIRNetworkURLSession.h; sourceTree = "<group>"; };
@@ -249,11 +249,11 @@
 		0E3683B6933CC3F28C48ABA45527E9A4 /* Capable-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Capable-macOS.modulemap"; path = "../Capable-macOS/Capable-macOS.modulemap"; sourceTree = "<group>"; };
 		0FA055561E110866283D54321D7754CE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Capable-watchOS/Info.plist"; sourceTree = "<group>"; };
 		110B44B3784847EF2D3663F7CD3ED06C /* nanopb.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.xcconfig; sourceTree = "<group>"; };
-		117277E74A0DFC6EA6CBB2EC4ABC3A26 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Capable.framework; path = "Capable-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		117277E74A0DFC6EA6CBB2EC4ABC3A26 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12A0213ECB5C44145C168C95117233CB /* FIRNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRNetwork.h; path = Firebase/Core/Private/FIRNetwork.h; sourceTree = "<group>"; };
 		15261BFCE79EC05A6283D15F2983AA27 /* Pods-Example-watchOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-watchOS-frameworks.sh"; sourceTree = "<group>"; };
 		1739594954F1AC2E1BABB1E53518A04E /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = CoreOnly/Sources/Firebase.h; sourceTree = "<group>"; };
-		1751866E6712CEB8817CE241A3E245F9 /* Pods_Example_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example_macOS.framework; path = "Pods-Example-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1751866E6712CEB8817CE241A3E245F9 /* Pods_Example_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF35C8654A42502BF305E0BA950C1CE /* pb_encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
 		1D9A41D9CD3633046FAA8E9377506E45 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DA754A2D79F81B023729CCFB24377CC /* Pods-Example-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-iOS-dummy.m"; sourceTree = "<group>"; };
@@ -266,13 +266,13 @@
 		2BDBC8F8C77D349D2625246E1C7FB22A /* FIRReachabilityChecker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRReachabilityChecker.h; path = Firebase/Core/Private/FIRReachabilityChecker.h; sourceTree = "<group>"; };
 		2CBBB57B1AA28CC8D0453446FC18BD76 /* FIRApp.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRApp.m; path = Firebase/Core/FIRApp.m; sourceTree = "<group>"; };
 		2E11AFFEF6177A4BA5AF703C3D8AB975 /* FIRApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRApp.h; path = Firebase/Core/Public/FIRApp.h; sourceTree = "<group>"; };
-		2FD55289D6BC49A8D0B9958F00BCBD3A /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Capable.framework; path = "Capable-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FD55289D6BC49A8D0B9958F00BCBD3A /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30CC48889537975230BE014DBC32D965 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3112E2EE1FE143F130D66A4D373F8BF1 /* Pods-Example-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		31326955FBBC1A90C3FFDA8AE8E47ABA /* FIRAnalyticsConfiguration+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FIRAnalyticsConfiguration+Internal.h"; path = "Firebase/Core/Private/FIRAnalyticsConfiguration+Internal.h"; sourceTree = "<group>"; };
 		33DE7920D29E7AE5BB3D64A26DE6AB7C /* Pods-Example-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example-iOS.modulemap"; sourceTree = "<group>"; };
 		393666339E4A3CB66433D5FBB78A2358 /* Pods-Example-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-macOS-dummy.m"; sourceTree = "<group>"; };
-		3945D8F5BACE87E1340E30AC53034EFE /* Pods_Example_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example_watchOS.framework; path = "Pods-Example-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3945D8F5BACE87E1340E30AC53034EFE /* Pods_Example_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BF18FA3BDF0376E0A65D04EE43B3A6D /* NotificationsProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationsProtocol.swift; sourceTree = "<group>"; };
 		3D82C8081D7C9507005BF23B1E2FA897 /* Pods-Example-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		3DB221F01CFCDB216DAB78BC6F80907A /* Pods-Example-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-iOS-resources.sh"; sourceTree = "<group>"; };
@@ -281,13 +281,13 @@
 		4164D0E4C4B41B637C78FD1CEE521E49 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43D33FFA31CE01AA95026554C37AE11A /* FIRNetworkLoggerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRNetworkLoggerProtocol.h; path = Firebase/Core/Private/FIRNetworkLoggerProtocol.h; sourceTree = "<group>"; };
 		43EEC1E5946C9DFEB49C6E57AB80C790 /* FontMetricsProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FontMetricsProtocol.swift; sourceTree = "<group>"; };
-		44A63F54FA67C549127F44631E364A08 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		44A63F54FA67C549127F44631E364A08 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		45A587D87EE891A8439B14231C2FA34D /* Pods-Example-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		45F5A76D69B879B6A5878B21F814A653 /* AppCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenter.framework; path = "AppCenter-SDK-Apple/iOS/AppCenter.framework"; sourceTree = "<group>"; };
-		493C9978FE90826E235535603F42425C /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Capable.framework; path = "Capable-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		493C9978FE90826E235535603F42425C /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DD1BA561ABFA2FAD955904B34195415 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
 		4E529EB9A9734BB6851AC15C01F61868 /* Capable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Capable.swift; sourceTree = "<group>"; };
-		55F2245CB424232B2C2490490C7FC0FF /* Pods_Example_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example_watchOS_Extension.framework; path = "Pods-Example-watchOS Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55F2245CB424232B2C2490490C7FC0FF /* Pods_Example_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_watchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		578388EB1D0B15A1A5A566084494D60E /* Capable-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Capable-tvOS-dummy.m"; path = "../Capable-tvOS/Capable-tvOS-dummy.m"; sourceTree = "<group>"; };
 		5AD76EA337732E2C0710E5FD6098181B /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
 		5B653C2D5FD9FC84F34207FE8C9EE2BE /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseNanoPB.framework; path = Frameworks/FirebaseNanoPB.framework; sourceTree = "<group>"; };
@@ -312,14 +312,14 @@
 		74CF69DD16C0FDD170E9B4E996CC0F0D /* UIFont+ScaledFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIFont+ScaledFont.swift"; sourceTree = "<group>"; };
 		76649A98207D0952C1D1DFC68FB7AA3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		793A9657ADD45D7CA84C3826D8C5B60A /* Capable-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Capable-watchOS.modulemap"; path = "../Capable-watchOS/Capable-watchOS.modulemap"; sourceTree = "<group>"; };
-		7AB3724488B68B7B5CEDD10DC70EED14 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		7AB3724488B68B7B5CEDD10DC70EED14 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7C3FBF74811329625C91E461D5702F3D /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Answers.framework/Headers/Answers.h; sourceTree = "<group>"; };
 		7F3BECC4641ADDE8B33E9A81BB6C21CC /* FIRAppAssociationRegistration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAppAssociationRegistration.m; path = Firebase/Core/FIRAppAssociationRegistration.m; sourceTree = "<group>"; };
 		7F670530051BC4F048C2959738C48584 /* pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
 		80F8BEAFF3109D767BD932B9FAE0994F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		828FF846DFD919E98D288B631BC41500 /* Pods-Example-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-tvOS-umbrella.h"; sourceTree = "<group>"; };
 		83241E17DB2FE796BAD5780BEE898B2D /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
-		83E840EB3AD7A7DA3DC99A5E2A842467 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
+		83E840EB3AD7A7DA3DC99A5E2A842467 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_decode.c; sourceTree = "<group>"; };
 		84AE3BDFBE90B33E31EF427408F3376D /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		84C48B1B71BC512F0C1567C38A44DC54 /* Pods-Example-watchOS Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-watchOS Extension-dummy.m"; sourceTree = "<group>"; };
 		857AB1A30662052B83FACE08C7013D72 /* Notification+Name.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
@@ -337,7 +337,7 @@
 		8F7758BA9A10E63D4626CBF455AE664C /* Pods-Example-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		9037FF89037EB7A294AE191C099FA06D /* FIRLoggerLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLoggerLevel.h; path = Firebase/Core/Public/FIRLoggerLevel.h; sourceTree = "<group>"; };
 		91CD6946620C81E05186DCAD5D56048E /* FIRNetworkConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRNetworkConstants.m; path = Firebase/Core/FIRNetworkConstants.m; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93B8A8F6F1F2FF3FEA578E6D024FEF19 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93FA9234191E8D53EE19C284005CFE46 /* AppCenterAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterAnalytics.framework; path = "AppCenter-SDK-Apple/iOS/AppCenterAnalytics.framework"; sourceTree = "<group>"; };
 		96155C60F0D30B8949D5D349ACDF8C8C /* Pods-Example-watchOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-watchOS-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -352,30 +352,30 @@
 		9E8F1B93F3D2EB65CCD083DF4956003A /* Capable-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Capable-watchOS.xcconfig"; path = "../Capable-watchOS/Capable-watchOS.xcconfig"; sourceTree = "<group>"; };
 		9F94ADADC7929A30A527CEC91029A231 /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
 		A014F4B17A24978818C5D7303601EA15 /* FeatureStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeatureStatus.swift; sourceTree = "<group>"; };
-		A01812BAEEA275C41F297351640E1632 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Capable.framework; path = "Capable-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A01812BAEEA275C41F297351640E1632 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A24ED8774BAE92211868850DCDC62340 /* Pods-Example-watchOS Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-watchOS Extension-acknowledgements.plist"; sourceTree = "<group>"; };
 		A3793E3A079DB398CCA3CB4F603196BC /* Capable-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Capable-iOS-umbrella.h"; sourceTree = "<group>"; };
 		A3AFD7E0F65A81C3B4891053B470BA17 /* FIRAppAssociationRegistration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppAssociationRegistration.h; path = Firebase/Core/Private/FIRAppAssociationRegistration.h; sourceTree = "<group>"; };
 		A5D7124B34B2C050BF2FAE07B065AAC1 /* Pods-Example-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		A76D5F4D10F8A82DB378F4690250DC45 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A934101166CFE0A0CBAB2251BAAC2BB8 /* Pods_Example_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example_iOS.framework; path = "Pods-Example-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A934101166CFE0A0CBAB2251BAAC2BB8 /* Pods_Example_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A991F33B307DCBE93E61641FCD933B1B /* Capable-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Capable-watchOS-umbrella.h"; path = "../Capable-watchOS/Capable-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		AAFA4AB1A8B0CDA5FD5671ACE716162A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		ACF554FA01458445582A528B04E32572 /* Pods-Example-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		AFEEDC1462462BFC8AFEB23F73A31ABC /* ContentSizeHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContentSizeHelper.swift; sourceTree = "<group>"; };
 		B15D0744F994C251ACE085191509AA29 /* FIRAppEnvironmentUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAppEnvironmentUtil.m; path = Firebase/Core/third_party/FIRAppEnvironmentUtil.m; sourceTree = "<group>"; };
 		B2606FE5F1F763F5A82C79C932C2A675 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B27DD1FD7779D96807CF33FCFCA2805D /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
+		B27DD1FD7779D96807CF33FCFCA2805D /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_common.c; sourceTree = "<group>"; };
 		B5FADA2982F4AA61FF518DC6B1CED53B /* Capable-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Capable-tvOS-prefix.pch"; path = "../Capable-tvOS/Capable-tvOS-prefix.pch"; sourceTree = "<group>"; };
 		B70B42936F3A676878AE2C4438553973 /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
 		B7206F26509F9E93BF291F5430275C31 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		BC169BF1646CF82C5EAEB8E0FA4B54F5 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Frameworks/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
-		BC32CEC45E227277E4B0D655E516D1BF /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC32CEC45E227277E4B0D655E516D1BF /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD28FA6D599A1B1ADC2F63CB3C4C7E86 /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
 		BEA5C9140FDE7DC49F03CD04A135095B /* FIRReachabilityChecker+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FIRReachabilityChecker+Internal.h"; path = "Firebase/Core/Private/FIRReachabilityChecker+Internal.h"; sourceTree = "<group>"; };
 		BF1E1A8D6EC5AC4283DA987093D6D756 /* FIRLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRLogger.m; path = Firebase/Core/FIRLogger.m; sourceTree = "<group>"; };
 		BF7A54EE7B7680F6BEC8594AEAFC82D9 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
-		C129A03771D8792BDDBC91EF583EFB7D /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FirebaseCore.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C129A03771D8792BDDBC91EF583EFB7D /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E119B83EF8A6098A5E9880599F9599 /* CapableFeature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CapableFeature.swift; sourceTree = "<group>"; };
 		C3464316249468025D84F9824E4D9B05 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		C52D517D3E20852B3FA3286A4AD432AF /* Pods-Example-watchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-watchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -398,9 +398,9 @@
 		DFF9C965837D1D924346938D0F1E9D41 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0C026D137BFA25703BDC25F66068EB6 /* UIContentSizeCategory+stringValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIContentSizeCategory+stringValue.swift"; sourceTree = "<group>"; };
 		E2DF3F5954C6B568AC4EA6C8759F197F /* Capable-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Capable-macOS-prefix.pch"; path = "../Capable-macOS/Capable-macOS-prefix.pch"; sourceTree = "<group>"; };
-		E35618C142850A82A9C83A68414FBD2F /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_encode.c; sourceTree = "<group>"; };
+		E35618C142850A82A9C83A68414FBD2F /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_encode.c; sourceTree = "<group>"; };
 		E48235499503BF11A46A357739A6A5B7 /* Pods-Example-macOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-macOS-frameworks.sh"; sourceTree = "<group>"; };
-		E5BA81780C80503D1A0CA4E196C9B94D /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5BA81780C80503D1A0CA4E196C9B94D /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97CB4951E8609FE39CF62A1F61DAC66 /* FIRErrors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRErrors.m; path = Firebase/Core/FIRErrors.m; sourceTree = "<group>"; };
 		E9C2498D31BF3BC7B3438B3C2143D991 /* Pods-Example-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EAD6BCE013B40838667933C4D3E59767 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
@@ -422,7 +422,7 @@
 		FD614595CA86CD3BD9C0278549C62122 /* Pods-Example-watchOS Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example-watchOS Extension.modulemap"; sourceTree = "<group>"; };
 		FDC0E8D5793890D16AF6433FEE3162A1 /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
 		FE73FD918BC38A7FA7289D152A41DBDC /* Capable-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Capable-macOS-dummy.m"; path = "../Capable-macOS/Capable-macOS-dummy.m"; sourceTree = "<group>"; };
-		FFA5B9B386728FAC8BF9F6A5A4FAF310 /* Capable.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Capable.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FFA5B9B386728FAC8BF9F6A5A4FAF310 /* Capable.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = Capable.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -595,7 +595,6 @@
 				C2E119B83EF8A6098A5E9880599F9599 /* CapableFeature.swift */,
 				A014F4B17A24978818C5D7303601EA15 /* FeatureStatus.swift */,
 			);
-			name = Models;
 			path = Models;
 			sourceTree = "<group>";
 		};
@@ -604,7 +603,6 @@
 			children = (
 				06B56098878D14A6AF203DF32290F387 /* Frameworks */,
 			);
-			name = FirebaseInstanceID;
 			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
@@ -615,7 +613,6 @@
 				7C3FBF74811329625C91E461D5702F3D /* Answers.h */,
 				3B5F7CD6E71F53D81AD42C21BF5FE49F /* Frameworks */,
 			);
-			name = Answers;
 			path = Answers;
 			sourceTree = "<group>";
 		};
@@ -625,7 +622,6 @@
 				FF7E705E2AF31C9D02AB7CBB65841C56 /* Analytics */,
 				C4F5E5B8119547C8C228A3ABFEB3A177 /* Core */,
 			);
-			name = AppCenter;
 			path = AppCenter;
 			sourceTree = "<group>";
 		};
@@ -634,7 +630,6 @@
 			children = (
 				AFEEDC1462462BFC8AFEB23F73A31ABC /* ContentSizeHelper.swift */,
 			);
-			name = Utilities;
 			path = Utilities;
 			sourceTree = "<group>";
 		};
@@ -643,7 +638,6 @@
 			children = (
 				74CF69DD16C0FDD170E9B4E996CC0F0D /* UIFont+ScaledFont.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -654,7 +648,6 @@
 				83241E17DB2FE796BAD5780BEE898B2D /* Fabric.h */,
 				B19C802291F6E55625EBCAC894BBFBE5 /* Frameworks */,
 			);
-			name = Fabric;
 			path = Fabric;
 			sourceTree = "<group>";
 		};
@@ -666,7 +659,6 @@
 				EC64CC71EAF955045E28D47496E05DF7 /* osVersionProvider.swift */,
 				6B0524B0AFC80453B2DC91DB75D4D720 /* OsVersionProviderProtocol.swift */,
 			);
-			name = FontMetrics;
 			path = FontMetrics;
 			sourceTree = "<group>";
 		};
@@ -694,7 +686,6 @@
 				58E553739C34E1F3B956AFF21CEA4890 /* encode */,
 				7836D7C5914C8D66FB73136BD3DE80CF /* Support Files */,
 			);
-			name = nanopb;
 			path = nanopb;
 			sourceTree = "<group>";
 		};
@@ -715,7 +706,6 @@
 				560A1B608E1B6E76D75C8384BB0A2F1D /* NSData+zlib */,
 				B6172909E192810CCCA9325AB7285C7B /* Support Files */,
 			);
-			name = GoogleToolboxForMac;
 			path = GoogleToolboxForMac;
 			sourceTree = "<group>";
 		};
@@ -773,7 +763,6 @@
 				D52C19D6D933ED5D68CB95FE2654C367 /* FIRVersion.m */,
 				04BAB00BA0C8814CDB7B4383E81D9CEC /* Support Files */,
 			);
-			name = FirebaseCore;
 			path = FirebaseCore;
 			sourceTree = "<group>";
 		};
@@ -808,7 +797,6 @@
 			children = (
 				CF23BEE576D444AA51A31E2CE096A972 /* CoreOnly */,
 			);
-			name = Firebase;
 			path = Firebase;
 			sourceTree = "<group>";
 		};
@@ -992,7 +980,6 @@
 				84AE3BDFBE90B33E31EF427408F3376D /* Notifications.swift */,
 				3BF18FA3BDF0376E0A65D04EE43B3A6D /* NotificationsProtocol.swift */,
 			);
-			name = Notifications;
 			path = Notifications;
 			sourceTree = "<group>";
 		};
@@ -1032,7 +1019,6 @@
 				6B80D98594B1A8CC5F60AEAB7FCD41C3 /* Statuses.swift */,
 				DC87670D0581B830D2ED14AAAB3CF9EF /* StatusesProtocol.swift */,
 			);
-			name = Statuses;
 			path = Statuses;
 			sourceTree = "<group>";
 		};
@@ -1041,7 +1027,6 @@
 			children = (
 				3529F02DDE5BC8CD8E55546E75B7B3E7 /* Frameworks */,
 			);
-			name = FirebaseAnalytics;
 			path = FirebaseAnalytics;
 			sourceTree = "<group>";
 		};
@@ -1139,7 +1124,6 @@
 				C94A1D56303FF57A1B8F0C05296C5F11 /* String+ContentSizeCategoryString.swift */,
 				E0C026D137BFA25703BDC25F66068EB6 /* UIContentSizeCategory+stringValue.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -1519,7 +1503,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 0940;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2718,6 +2702,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
