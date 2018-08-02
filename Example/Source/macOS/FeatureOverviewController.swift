@@ -10,7 +10,7 @@ import Cocoa
 import Capable
 
 class FeatureOverviewController: NSViewController {
-    @IBOutlet weak var featuresTableView:NSTableView!
+    @IBOutlet weak var featuresTableView: NSTableView!
     var objects: [String: String]?
     var capable: Capable?
 
@@ -27,6 +27,7 @@ class FeatureOverviewController: NSViewController {
     }
 }
 
+// MARK: - Table View
 extension FeatureOverviewController: NSTableViewDataSource, NSTableViewDelegate{
     func numberOfRows(in tableView: NSTableView) -> Int {
         return objects?.count ?? 0
@@ -47,5 +48,13 @@ extension FeatureOverviewController: NSTableViewDataSource, NSTableViewDelegate{
             return featuresArray[row]
         }
         fatalError("Requested item does not exist")
+    }
+}
+
+// MARK: - Toolbar actions
+extension FeatureOverviewController {
+    @IBAction func refresh(_ sender: Any) {
+        self.refreshData()
+        self.featuresTableView.reloadData()
     }
 }

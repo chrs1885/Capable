@@ -60,6 +60,9 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <action selector="refresh:" target="Oky-zY-oP4" id="bq3-zx-jDC"/>
+                                    </connections>
                                 </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
@@ -177,6 +180,9 @@
                             <constraint firstItem="3SA-hl-2lg" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="kzY-2l-XKY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="featuresTableView" destination="irR-L8-QYl" id="T4c-9f-pGb"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
