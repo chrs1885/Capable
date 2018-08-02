@@ -22,6 +22,7 @@ class FeatureOverviewController: UITableViewController {
     var capable: Capable?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
 //      self.capable = Capable(with: [.largerText, .boldText, .shakeToUndo])
         self.capable = Capable()
         refreshData()

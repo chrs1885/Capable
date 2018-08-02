@@ -5,11 +5,12 @@
 //  Created by Christoph Wendt on 31.03.18.
 //
 
+#if os(iOS) || os(tvOS) || os(watchOS)
+
 import Foundation
 import UIKit
 
 class FontMetrics: FontMetricsProtocol {
-
     var osVersionProvider: OsVersionProviderProtocol
 
     init() {
@@ -41,3 +42,5 @@ class FontMetrics: FontMetricsProtocol {
         fatalError()
     }
 }
+
+#endif

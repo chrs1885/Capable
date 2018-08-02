@@ -6,8 +6,13 @@
 //
 
 import Foundation
+
+#if os(iOS) || os(tvOS)
+import UIKit
+#endif
+
 #if os(watchOS)
-    import WatchKit
+import WatchKit
 #endif
 
 class Notifications: NotificationsProtocol {

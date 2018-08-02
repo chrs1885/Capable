@@ -4,7 +4,7 @@
 //
 //  Created by Christoph Wendt on 18.04.18.
 //
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(OSX)
 import Foundation
 
 class NotificationsMock: NotificationsProtocol {

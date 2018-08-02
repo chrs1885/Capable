@@ -5,6 +5,8 @@
 //  Created by Christoph Wendt on 30.04.18.
 //
 
+#if os(iOS) || os(tvOS) || os(watchOS)
+
 import Foundation
 
 class OsVersionProvider: OsVersionProviderProtocol {
@@ -16,3 +18,5 @@ class OsVersionProvider: OsVersionProviderProtocol {
         }
     }
 }
+
+#endif

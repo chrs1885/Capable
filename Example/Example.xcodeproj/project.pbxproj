@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29882843319156428E5159E1 /* Pods_Example_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9D86F10DB1D691B906F54E /* Pods_Example_macOS.framework */; };
 		4478927B210B4073000D5939 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927A210B4073000D5939 /* FontsViewController.swift */; };
 		4478927D210B4288000D5939 /* FontRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927C210B4288000D5939 /* FontRowController.swift */; };
 		4478927E210B4401000D5939 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
@@ -19,6 +20,10 @@
 		831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F6252078138E00F0C74D /* AppDelegate.swift */; };
 		831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
 		831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
+		832953D721121EAA00072EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953D621121EAA00072EB9 /* AppDelegate.swift */; };
+		832953D921121EAA00072EB9 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953D821121EAA00072EB9 /* FeatureOverviewController.swift */; };
+		832953DE21121EAC00072EB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832953DC21121EAC00072EB9 /* Main.storyboard */; };
+		832953E621124C9600072EB9 /* FeatureTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953E42112496300072EB9 /* FeatureTableCellView.swift */; };
 		836725CF210A71780008ABF7 /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836725CB210A6A7A0008ABF7 /* OverviewController.swift */; };
 		836725D0210A71780008ABF7 /* OverviewRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836725CD210A6A920008ABF7 /* OverviewRowController.swift */; };
 		837C191A20AA27970003D237 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837C191820AA27970003D237 /* Interface.storyboard */; };
@@ -96,6 +101,7 @@
 		06A4614933CCE311EC4CAD3C /* Pods_Example_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_watchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC32891E19486D26B764F86 /* Pods-Example-watchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-watchOS Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		1004E7F9A4E366DF66B525B0 /* Pods-Example-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-watchOS/Pods-Example-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		1A9D86F10DB1D691B906F54E /* Pods_Example_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4478927A210B4073000D5939 /* FontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
 		4478927C210B4288000D5939 /* FontRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontRowController.swift; sourceTree = "<group>"; };
 		4478927F210B4AEA000D5939 /* FontsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsConstants.swift; sourceTree = "<group>"; };
@@ -105,6 +111,13 @@
 		831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		831B4F1D20A4D4F200F1BB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		831B4F2120A4D4F200F1BB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		832953D421121EAA00072EB9 /* Example-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		832953D621121EAA00072EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		832953D821121EAA00072EB9 /* FeatureOverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureOverviewController.swift; sourceTree = "<group>"; };
+		832953DD21121EAC00072EB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		832953DF21121EAC00072EB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		832953E021121EAC00072EB9 /* Example_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example_macOS.entitlements; sourceTree = "<group>"; };
+		832953E42112496300072EB9 /* FeatureTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTableCellView.swift; sourceTree = "<group>"; };
 		836725CB210A6A7A0008ABF7 /* OverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewController.swift; sourceTree = "<group>"; };
 		836725CD210A6A920008ABF7 /* OverviewRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewRowController.swift; sourceTree = "<group>"; };
 		837C191620AA27960003D237 /* Example-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,11 +139,13 @@
 		83C6F62B2078138E00F0C74D /* FontsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
 		83C6F62C2078138E00F0C74D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83E67A2C20CD94B800FE6FC2 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C45A1F5FCFA4768DC33403B /* Pods-Example-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-macOS/Pods-Example-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		A5DCF956DE661B9787EAE334 /* Pods-Example-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A69A8636A1A206955AF20AA4 /* Pods-Example-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B607B9D61AC82056D25E2B77 /* Pods-Example-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		B707690BAFBA32861CBBF6F3 /* Pods-Example-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CDA97E99795B6631F2DB0EB5 /* Pods_Example_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB296F840F14F09371040629 /* Pods-Example-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example-macOS/Pods-Example-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		FEECBAFC5F7980884EBE6AA3 /* Pods-Example-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example-watchOS/Pods-Example-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +155,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D9BD8F0470D72CAC5F44979 /* Pods_Example_tvOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832953D121121EAA00072EB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29882843319156428E5159E1 /* Pods_Example_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +212,19 @@
 			path = tvOS;
 			sourceTree = "<group>";
 		};
+		832953D521121EAA00072EB9 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				832953D621121EAA00072EB9 /* AppDelegate.swift */,
+				832953D821121EAA00072EB9 /* FeatureOverviewController.swift */,
+				832953E42112496300072EB9 /* FeatureTableCellView.swift */,
+				832953DC21121EAC00072EB9 /* Main.storyboard */,
+				832953DF21121EAC00072EB9 /* Info.plist */,
+				832953E021121EAC00072EB9 /* Example_macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
 		837C192620AA27970003D237 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +269,7 @@
 				831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */,
 				837C191620AA27960003D237 /* Example-watchOS.app */,
 				837C192220AA27970003D237 /* Example-watchOS Extension.appex */,
+				832953D421121EAA00072EB9 /* Example-macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -261,6 +298,7 @@
 				83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */,
 				4478927F210B4AEA000D5939 /* FontsConstants.swift */,
 				831B4F2520A4D51D00F1BB94 /* iOS */,
+				832953D521121EAA00072EB9 /* macOS */,
 				831B4F2620A4D53100F1BB94 /* tvOS */,
 				837C193C20AA31E60003D237 /* watchOS */,
 				83C6F6262078138E00F0C74D /* LaunchScreen.storyboard */,
@@ -276,6 +314,7 @@
 				73A34BF8D95976311A017335 /* Pods_Example_tvOS.framework */,
 				CDA97E99795B6631F2DB0EB5 /* Pods_Example_watchOS.framework */,
 				06A4614933CCE311EC4CAD3C /* Pods_Example_watchOS_Extension.framework */,
+				1A9D86F10DB1D691B906F54E /* Pods_Example_macOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -291,6 +330,8 @@
 				1004E7F9A4E366DF66B525B0 /* Pods-Example-watchOS.release.xcconfig */,
 				0DC32891E19486D26B764F86 /* Pods-Example-watchOS Extension.debug.xcconfig */,
 				4A59D50AB7E59EBA9F953814 /* Pods-Example-watchOS Extension.release.xcconfig */,
+				EB296F840F14F09371040629 /* Pods-Example-macOS.debug.xcconfig */,
+				9C45A1F5FCFA4768DC33403B /* Pods-Example-macOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -308,7 +349,6 @@
 				831B4F1220A4D4F200F1BB94 /* Resources */,
 				83E67A2B20CD946200FE6FC2 /* Embed Frameworks */,
 				CD63CA07C089828CF543BBC4 /* [CP] Embed Pods Frameworks */,
-				D48382659C0D3A5943711C0D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -319,6 +359,25 @@
 			productReference = 831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		832953D321121EAA00072EB9 /* Example-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 832953E321121EAC00072EB9 /* Build configuration list for PBXNativeTarget "Example-macOS" */;
+			buildPhases = (
+				0B305DAF6497E3528DC81849 /* [CP] Check Pods Manifest.lock */,
+				832953D021121EAA00072EB9 /* Sources */,
+				832953D121121EAA00072EB9 /* Frameworks */,
+				832953D221121EAA00072EB9 /* Resources */,
+				66EBB1053BB87E5FD2CD23AA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Example-macOS";
+			productName = "Example-macOS";
+			productReference = 832953D421121EAA00072EB9 /* Example-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		837C191520AA27960003D237 /* Example-watchOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 837C193520AA27970003D237 /* Build configuration list for PBXNativeTarget "Example-watchOS" */;
@@ -327,7 +386,6 @@
 				837C191420AA27960003D237 /* Resources */,
 				837C193420AA27970003D237 /* Embed App Extensions */,
 				F05E2059260BD9015112DEF2 /* Frameworks */,
-				C7239960E75F9845B6B5ED6A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -348,7 +406,6 @@
 				837C191F20AA27970003D237 /* Frameworks */,
 				837C192020AA27970003D237 /* Resources */,
 				F67097C47BDCE4F9878E7D3B /* [CP] Embed Pods Frameworks */,
-				1E4FB09657A9B466F6EBA2BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -369,7 +426,6 @@
 				83C6F5DA20780FE700F0C74D /* Resources */,
 				831B4F5420A4F0AA00F1BB94 /* Embed Watch Content */,
 				06147DD848B4478BE2B0CAAD /* [CP] Embed Pods Frameworks */,
-				448F55CB7EA0EF8A3B1BF8B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -387,12 +443,16 @@
 		83C6F5D420780FE700F0C74D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Christoph Wendt";
 				TargetAttributes = {
 					831B4F1320A4D4F200F1BB94 = {
 						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					832953D321121EAA00072EB9 = {
+						CreatedOnToolsVersion = 9.4;
 						ProvisioningStyle = Automatic;
 					};
 					837C191520AA27960003D237 = {
@@ -423,6 +483,7 @@
 			projectRoot = "";
 			targets = (
 				83C6F5DB20780FE700F0C74D /* Example-iOS */,
+				832953D321121EAA00072EB9 /* Example-macOS */,
 				831B4F1320A4D4F200F1BB94 /* Example-tvOS */,
 				837C191520AA27960003D237 /* Example-watchOS */,
 				837C192120AA27970003D237 /* Example-watchOS Extension */,
@@ -438,6 +499,14 @@
 				831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */,
 				83C6D6EF20F2AE6200D95E02 /* Assets.xcassets in Resources */,
 				831B4F1E20A4D4F200F1BB94 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832953D221121EAA00072EB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832953DE21121EAC00072EB9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,34 +564,40 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1E4FB09657A9B466F6EBA2BB /* [CP] Copy Pods Resources */ = {
+		0B305DAF6497E3528DC81849 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-macOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		448F55CB7EA0EF8A3B1BF8B8 /* [CP] Copy Pods Resources */ = {
+		66EBB1053BB87E5FD2CD23AA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example-macOS/Pods-Example-macOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Capable-macOS/Capable.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-macOS/Pods-Example-macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		908CD651F925C69DAD7AE2BB /* [CP] Check Pods Manifest.lock */ = {
@@ -579,21 +654,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C7239960E75F9845B6B5ED6A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-watchOS/Pods-Example-watchOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CD63CA07C089828CF543BBC4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -610,21 +670,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D48382659C0D3A5943711C0D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E0FC5F3AA5CB3DA8BF3D6D8B /* [CP] Check Pods Manifest.lock */ = {
@@ -675,6 +720,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		832953D021121EAA00072EB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832953E621124C9600072EB9 /* FeatureTableCellView.swift in Sources */,
+				832953D921121EAA00072EB9 /* FeatureOverviewController.swift in Sources */,
+				832953D721121EAA00072EB9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		837C191E20AA27970003D237 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -721,6 +776,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				831B4F1D20A4D4F200F1BB94 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		832953DC21121EAC00072EB9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				832953DD21121EAC00072EB9 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -787,6 +850,46 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		832953E121121EAC00072EB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB296F840F14F09371040629 /* Pods-Example-macOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-macOS";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = Source/macOS/Example_macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.chrs1885.Example-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		832953E221121EAC00072EB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C45A1F5FCFA4768DC33403B /* Pods-Example-macOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-macOS";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = Source/macOS/Example_macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.chrs1885.Example-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1021,6 +1124,15 @@
 			buildConfigurations = (
 				831B4F2320A4D4F200F1BB94 /* Debug */,
 				831B4F2420A4D4F200F1BB94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		832953E321121EAC00072EB9 /* Build configuration list for PBXNativeTarget "Example-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832953E121121EAC00072EB9 /* Debug */,
+				832953E221121EAC00072EB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

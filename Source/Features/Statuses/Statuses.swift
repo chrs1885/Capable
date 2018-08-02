@@ -6,11 +6,21 @@
 //
 
 import Foundation
+
+#if os(iOS) || os(tvOS)
+import UIKit
+#endif
+
+#if os(OSX)
+import AppKit
+#endif
+
 #if os(watchOS)
 import WatchKit
 #endif
 
 class Statuses: StatusesProtocol {
+
     var features: [CapableFeature]
 
     required convenience init() {
@@ -34,9 +44,6 @@ class Statuses: StatusesProtocol {
             if self.features.contains(.guidedAccess) {
                 featuresStatusMap[CapableFeature.guidedAccess.rawValue] = self.isGuidedAccessEnabled.statusString
             }
-            if self.features.contains(.invertColors) {
-                featuresStatusMap[CapableFeature.invertColors.rawValue] = self.isInvertColorsEnabled.statusString
-            }
             if self.features.contains(.largerText) {
                 featuresStatusMap[CapableFeature.largerText.rawValue] = self.largerTextCatagory.stringValue
             }
@@ -51,22 +58,13 @@ class Statuses: StatusesProtocol {
             }
         #endif
 
-        #if os(iOS) || os(tvOS)
-            if self.features.contains(.closedCaptioning) {
-                featuresStatusMap[CapableFeature.closedCaptioning.rawValue] = self.isClosedCaptioningEnabled.statusString
-            }
-            if self.features.contains(.grayscale) {
-                featuresStatusMap[CapableFeature.grayscale.rawValue] = self.isGrayscaleEnabled.statusString
-            }
-            if self.features.contains(.monoAudio) {
-                featuresStatusMap[CapableFeature.monoAudio.rawValue] = self.isMonoAudioEnabled.statusString
-            }
-            if self.features.contains(.reduceTransparency) {
-                featuresStatusMap[CapableFeature.reduceTransparency.rawValue] = self.isReduceTransparencyEnabled.statusString
-            }
-            if self.features.contains(.switchControl) {
-                featuresStatusMap[CapableFeature.switchControl.rawValue] = self.isSwitchControlEnabled.statusString
-            }
+        #if os(OSX)
+        if self.features.contains(.differentiateWithoutColor) {
+            featuresStatusMap[CapableFeature.differentiateWithoutColor.rawValue] = self.isDifferentiateWithoutColorEnabled.statusString
+        }
+        if self.features.contains(.increaseContrast) {
+            featuresStatusMap[CapableFeature.increaseContrast.rawValue] = self.isIncreaseContrastEnabled.statusString
+        }
         #endif
 
         #if os(watchOS)
@@ -75,9 +73,42 @@ class Statuses: StatusesProtocol {
             }
         #endif
 
-        if self.features.contains(.boldText) {
-            featuresStatusMap[CapableFeature.boldText.rawValue] = self.isBoldTextEnabled.statusString
-        }
+        #if os(iOS) || os(tvOS)
+            if self.features.contains(.closedCaptioning) {
+                featuresStatusMap[CapableFeature.closedCaptioning.rawValue] = self.isClosedCaptioningEnabled.statusString
+            }
+            if self.features.contains(.grayscale) {
+                featuresStatusMap[CapableFeature.grayscale.rawValue] = self.isGrayscaleEnabled.statusString
+            }
+            if self.features.contains(.invertColors) {
+                featuresStatusMap[CapableFeature.invertColors.rawValue] = self.isInvertColorsEnabled.statusString
+            }
+            if self.features.contains(.monoAudio) {
+                featuresStatusMap[CapableFeature.monoAudio.rawValue] = self.isMonoAudioEnabled.statusString
+            }
+        #endif
+
+        #if os(iOS) || os(OSX)
+            if self.features.contains(.invertColors) {
+                featuresStatusMap[CapableFeature.invertColors.rawValue] = self.isInvertColorsEnabled.statusString
+            }
+        #endif
+
+        #if os(iOS) || os(tvOS) || os(watchOS)
+            if self.features.contains(.boldText) {
+                featuresStatusMap[CapableFeature.boldText.rawValue] = self.isBoldTextEnabled.statusString
+            }
+        #endif
+
+        #if os(iOS) || os(tvOS) || os(OSX)
+            if self.features.contains(.reduceTransparency) {
+                featuresStatusMap[CapableFeature.reduceTransparency.rawValue] = self.isReduceTransparencyEnabled.statusString
+            }
+            if self.features.contains(.switchControl) {
+                featuresStatusMap[CapableFeature.switchControl.rawValue] = self.isSwitchControlEnabled.statusString
+            }
+        #endif
+
         if self.features.contains(.reduceMotion) {
             featuresStatusMap[CapableFeature.reduceMotion.rawValue] = self.isReduceMotionEnabled.statusString
         }
@@ -88,45 +119,21 @@ class Statuses: StatusesProtocol {
         return featuresStatusMap
     }
 
-    #if os(iOS) || os(tvOS)
+    #if os(iOS)
         var isAssistiveTouchEnabled: Bool {
             return UIAccessibilityIsAssistiveTouchRunning()
-        }
-
-        var isBoldTextEnabled: Bool {
-            return UIAccessibilityIsBoldTextEnabled()
-        }
-
-        var isClosedCaptioningEnabled: Bool {
-            return UIAccessibilityIsClosedCaptioningEnabled()
         }
 
         var isDarkerSystemColorsEnabled: Bool {
             return UIAccessibilityDarkerSystemColorsEnabled()
         }
 
-        var isGrayscaleEnabled: Bool {
-            return UIAccessibilityIsGrayscaleEnabled()
-        }
-
         var isGuidedAccessEnabled: Bool {
             return UIAccessibilityIsGuidedAccessEnabled()
         }
 
-        var isInvertColorsEnabled: Bool {
-            return UIAccessibilityIsInvertColorsEnabled()
-        }
-
         var largerTextCatagory: UIContentSizeCategory {
             return UIScreen.main.traitCollection.preferredContentSizeCategory
-        }
-
-        var isMonoAudioEnabled: Bool {
-            return UIAccessibilityIsSpeakScreenEnabled()
-        }
-
-        var isReduceTransparencyEnabled: Bool {
-            return UIAccessibilityIsReduceTransparencyEnabled()
         }
 
         var isShakeToUndoEnabled: Bool {
@@ -140,11 +147,47 @@ class Statuses: StatusesProtocol {
         var isSpeakSelectionEnabled: Bool {
             return UIAccessibilityIsSpeakSelectionEnabled()
         }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+        var isBoldTextEnabled: Bool {
+            return UIAccessibilityIsBoldTextEnabled()
+        }
+
+        var isClosedCaptioningEnabled: Bool {
+            return UIAccessibilityIsClosedCaptioningEnabled()
+        }
+
+        var isGrayscaleEnabled: Bool {
+            return UIAccessibilityIsGrayscaleEnabled()
+        }
+
+        var isInvertColorsEnabled: Bool {
+            return UIAccessibilityIsInvertColorsEnabled()
+        }
+
+        var isMonoAudioEnabled: Bool {
+            return UIAccessibilityIsSpeakScreenEnabled()
+        }
+
+        var isReduceMotionEnabled: Bool {
+            return UIAccessibilityIsReduceMotionEnabled()
+        }
+
+        var isReduceTransparencyEnabled: Bool {
+            return UIAccessibilityIsReduceTransparencyEnabled()
+        }
 
         var isSwitchControlEnabled: Bool {
             return UIAccessibilityIsSwitchControlRunning()
         }
-    #elseif os(watchOS)
+
+        var isVoiceOverEnabled: Bool {
+            return UIAccessibilityIsVoiceOverRunning()
+        }
+    #endif
+
+    #if os(watchOS)
         var isBoldTextEnabled: Bool {
             let referenceFont = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
             let isBoldText = referenceFont.fontName.localizedCaseInsensitiveContains("bold")
@@ -155,27 +198,57 @@ class Statuses: StatusesProtocol {
             let referenceFontSize = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body).pointSize
             return referenceFontSize.contentSizeString
         }
-    #endif
 
-    var isReduceMotionEnabled: Bool {
-        #if os(watchOS)
+        var isReduceMotionEnabled: Bool {
             if #available(watchOS 4.0, *) {
                 return WKAccessibilityIsReduceMotionEnabled()
             } else {
                 return false
             }
-        #else
-            return UIAccessibilityIsReduceMotionEnabled()
-        #endif
-    }
+        }
 
-    var isVoiceOverEnabled: Bool {
-        #if os(watchOS)
+        var isVoiceOverEnabled: Bool {
             return WKAccessibilityIsVoiceOverRunning()
-        #else
-            return UIAccessibilityIsVoiceOverRunning()
-        #endif
-    }
+        }
+    #endif
+
+    #if os(OSX)
+        var isDifferentiateWithoutColorEnabled: Bool {
+            return NSWorkspace.shared.accessibilityDisplayShouldDifferentiateWithoutColor
+        }
+
+        var isIncreaseContrastEnabled: Bool {
+            return NSWorkspace.shared.accessibilityDisplayShouldIncreaseContrast
+        }
+
+        var isInvertColorsEnabled: Bool {
+            return NSWorkspace.shared.accessibilityDisplayShouldInvertColors
+        }
+
+        var isReduceMotionEnabled: Bool {
+            return NSWorkspace.shared.accessibilityDisplayShouldReduceMotion
+        }
+
+        var isReduceTransparencyEnabled: Bool {
+            return NSWorkspace.shared.accessibilityDisplayShouldReduceTransparency
+        }
+
+        var isSwitchControlEnabled: Bool {
+            if #available(OSX 10.13, *) {
+                return NSWorkspace.shared.isSwitchControlEnabled
+            } else {
+                return false
+            }
+        }
+
+        var isVoiceOverEnabled: Bool {
+            if #available(OSX 10.13, *) {
+                return NSWorkspace.shared.isVoiceOverEnabled
+            } else {
+                return false
+            }
+        }
+    #endif
 
     // swiftlint:disable cyclomatic_complexity
     func isFeatureEnabled(feature: CapableFeature) -> Bool {
@@ -246,6 +319,23 @@ class Statuses: StatusesProtocol {
             case .voiceOver:
                 return self.isVoiceOverEnabled
             }
+        #elseif os(OSX)
+            switch feature {
+            case .differentiateWithoutColor:
+                return self.isDifferentiateWithoutColorEnabled
+            case .increaseContrast:
+                return self.isIncreaseContrastEnabled
+            case .invertColors:
+                return self.isInvertColorsEnabled
+            case .reduceMotion:
+                return self.isReduceMotionEnabled
+            case .reduceTransparency:
+                return self.isReduceTransparencyEnabled
+            case .switchControl:
+                return self.isSwitchControlEnabled
+            case .voiceOver:
+                return self.isVoiceOverEnabled
+        }
         #endif
     }
     // swiftlint:enable cyclomatic_complexity
