@@ -1,3 +1,8 @@
+## Version 0.3.0
+
+### Features
+* [MacOS support](https://github.com/chrs1885/Capable/issues/1)
+
 ## Version 0.2.0
 
 ### Enhancements
