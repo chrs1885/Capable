@@ -7,6 +7,8 @@
 
 #if os(iOS) || os(tvOS) || os(OSX)
 
+@testable import Capable
+
 #if os(iOS)
 import UIKit
 #endif
