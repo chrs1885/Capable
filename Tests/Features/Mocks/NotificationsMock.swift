@@ -7,7 +7,7 @@
 
 #if os(iOS) || os(tvOS) || os(OSX)
 
-import Foundation
+@testable import Capable
 
 class NotificationsMock: NotificationsProtocol {
 
