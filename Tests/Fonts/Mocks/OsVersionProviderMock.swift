@@ -4,14 +4,17 @@
 //
 //  Created by Christoph Wendt on 30.04.18.
 //
+
 #if os(iOS) || os(tvOS)
-import Foundation
+
+@testable import Capable
 
 class OsVersionProviderMock: OsVersionProviderProtocol {
-    var osVersionWithoutUIFontMetrics = false
+    var osVersionWithUIFontMetrics = false
 
-    func isOsVersionWithoutUIFontMetrics() -> Bool {
-        return self.osVersionWithoutUIFontMetrics
+    func isOsVersionWithUIFontMetrics() -> Bool {
+        return self.osVersionWithUIFontMetrics
     }
 }
+
 #endif

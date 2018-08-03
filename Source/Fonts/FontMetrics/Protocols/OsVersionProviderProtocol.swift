@@ -7,10 +7,8 @@
 
 #if os(iOS) || os(tvOS) || os(watchOS)
 
-import Foundation
-
 protocol OsVersionProviderProtocol {
-    func isOsVersionWithoutUIFontMetrics() -> Bool
+    func isOsVersionWithUIFontMetrics() -> Bool
 }
 
 #endif

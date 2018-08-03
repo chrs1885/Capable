@@ -7,14 +7,12 @@
 
 #if os(iOS) || os(tvOS) || os(watchOS)
 
-import Foundation
-
 class OsVersionProvider: OsVersionProviderProtocol {
-    func isOsVersionWithoutUIFontMetrics() -> Bool {
+    func isOsVersionWithUIFontMetrics() -> Bool {
         if #available(iOS 11.0, tvOS 11.0, watchOS 4.0, *) {
-            return false
-        } else {
             return true
+        } else {
+            return false
         }
     }
 }
