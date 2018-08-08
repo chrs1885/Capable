@@ -5,8 +5,6 @@
 //  Created by Christoph Wendt on 23.03.18.
 //
 
-import Foundation
-
 /// This class defines the main interface of the Capable framework.
 public struct Capable {
     private var statusesModule: StatusesProtocol

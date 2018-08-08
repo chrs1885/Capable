@@ -5,8 +5,6 @@
 //  Created by Christoph Wendt on 30.03.18.
 //
 
-import Foundation
-
 #if os(iOS) || os(tvOS)
 import UIKit
 #endif
