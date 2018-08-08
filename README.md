@@ -3,9 +3,10 @@
 
 ---
 [![Build Status](https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg)](https://www.bitrise.io/app/7596a076a75ab2ab)
+![Platforms](https://img.shields.io/cocoapods/p/Capable.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![Cocoapods compatible](https://img.shields.io/cocoapods/v/Capable.svg)](https://cocoapods.org/pods/Capable)
-![CocoaPods](https://img.shields.io/cocoapods/p/Capable.svg)
+![SPM](https://img.shields.io/badge/Swift%20Package%20Manager-macOS-blue.svg)
 
 Have you ever thought about adopting accessibility features within you apps to gain your user base instead of spending a lot of time implementing features no-one really ever asked for? 
 
@@ -24,7 +25,7 @@ Check out the *Example.xcworkspace* to get a quick overview.
 
 ## Installation
 
-There are currently three different ways to integrate Capable into your apps.
+There are currently four different ways to integrate Capable into your apps.
 
 ### CocoaPods
 
@@ -40,6 +41,14 @@ end
 
 ```ruby
 github "chrs1885/Capable"
+```
+
+### Swift Package Manager (macOS)
+
+```ruby
+dependencies: [
+    .package(url: "https://github.com/chrs1885/Capable.git", from: "0.1.0")
+]
 ```
 
 ### Manually
