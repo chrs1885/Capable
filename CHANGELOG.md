@@ -1,3 +1,9 @@
+## Version 0.4.0
+
+### Enhancements
+* [Separate issue templates for bug and feature request](https://github.com/chrs1885/Capable/issues/18)
+* [Swift package manager support](https://github.com/chrs1885/Capable/issues/12)
+
 ## Version 0.3.0
 
 ### Features
