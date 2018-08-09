@@ -6,7 +6,8 @@
 //
 
 #if os(iOS) || os(tvOS) || os(OSX)
-import Foundation
+
+@testable import Capable
 
 #if os(iOS)
 import UIKit
@@ -128,4 +129,5 @@ class StatusesMock: Statuses {
         return voiceOverEnabled
     }
 }
+
 #endif

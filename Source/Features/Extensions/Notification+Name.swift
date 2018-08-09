@@ -5,6 +5,8 @@
 //  Created by Christoph Wendt on 28.03.18.
 //
 
+import Foundation
+
 /// Extension that defines notification names provided by the Capable framework.
 extension Notification.Name {
 

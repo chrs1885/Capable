@@ -4,8 +4,10 @@
 //
 //  Created by Christoph Wendt on 18.04.18.
 //
+
 #if os(iOS) || os(tvOS) || os(OSX)
-import Foundation
+
+@testable import Capable
 
 class NotificationsMock: NotificationsProtocol {
 
@@ -23,4 +25,5 @@ class NotificationsMock: NotificationsProtocol {
         self.numDisableNotificationsCalled += 1
     }
 }
+
 #endif
