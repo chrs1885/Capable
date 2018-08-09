@@ -50,6 +50,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/FontMetricsProtocol.html">FontMetricsProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -72,9 +80,10 @@
 <hr>
 
 <p><a href="https://www.bitrise.io/app/7596a076a75ab2ab"><img src="https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg" alt="Build Status"></a>
+<img src="https://img.shields.io/cocoapods/p/Capable.svg" alt="Platforms">
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg" alt="Carthage compatible"></a>
 <a href="https://cocoapods.org/pods/Capable"><img src="https://img.shields.io/cocoapods/v/Capable.svg" alt="Cocoapods compatible"></a>
-<img src="https://img.shields.io/cocoapods/p/Capable.svg" alt="CocoaPods"></p>
+<img src="https://img.shields.io/badge/Swift%20Package%20Manager-macOS-blue.svg" alt="SPM"></p>
 
 <p>Have you ever thought about adopting accessibility features within you apps to gain your user base instead of spending a lot of time implementing features no-one really ever asked for? </p>
 
@@ -93,7 +102,7 @@
 </ul>
 <h2 id='installation' class='heading'>Installation</h2>
 
-<p>There are currently three different ways to integrate Capable into your apps.</p>
+<p>There are currently four different ways to integrate Capable into your apps.</p>
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 <pre class="highlight ruby"><code><span class="n">use_frameworks!</span>
 
@@ -103,6 +112,11 @@
 </code></pre>
 <h3 id='carthage' class='heading'>Carthage</h3>
 <pre class="highlight ruby"><code><span class="n">github</span> <span class="s2">"chrs1885/Capable"</span>
+</code></pre>
+<h3 id='swift-package-manager-macos' class='heading'>Swift Package Manager (macOS)</h3>
+<pre class="highlight ruby"><code><span class="ss">dependencies: </span><span class="p">[</span>
+    <span class="p">.</span><span class="nf">package</span><span class="p">(</span><span class="ss">url: </span><span class="s2">"https://github.com/chrs1885/Capable.git"</span><span class="p">,</span> <span class="ss">from: </span><span class="s2">"0.1.0"</span><span class="p">)</span>
+<span class="p">]</span>
 </code></pre>
 <h3 id='manually' class='heading'>Manually</h3>
 
@@ -206,6 +220,7 @@
 <tr>
 <th></th>
 <th style="text-align: center">iOS</th>
+<th style="text-align: center">macOS</th>
 <th style="text-align: center">tvOS</th>
 <th style="text-align: center">watchOS</th>
 </tr>
@@ -215,16 +230,19 @@
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
+<td style="text-align: center"></td>
 </tr>
 <tr>
 <td>.boldText</td>
 <td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
 <td style="text-align: center">:white_check_mark:</td>
-<td style="text-align: center">:white_check_mark:<strong>*</strong></td>
+<td style="text-align: center">&nbsp;:white_check_mark:<strong>*</strong></td>
 </tr>
 <tr>
 <td>.closedCaptioning</td>
 <td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center"></td>
 </tr>
@@ -233,10 +251,19 @@
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>.differentiateWithoutColor</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">&nbsp;:white_check_mark:<strong>*</strong></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
 </tr>
 <tr>
 <td>.grayscale</td>
 <td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center"></td>
 </tr>
@@ -245,34 +272,47 @@
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>.increaseContrast</td>
+<td style="text-align: center"></td>
+<td style="text-align: center">&nbsp;:white_check_mark:<strong>*</strong></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
 </tr>
 <tr>
 <td>.invertColors</td>
 <td style="text-align: center">:white_check_mark:</td>
-<td style="text-align: center"></td>
+<td style="text-align: center">&nbsp;:white_check_mark:<strong>*</strong></td>
+<td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center"></td>
 </tr>
 <tr>
 <td>.largerText</td>
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center"></td>
-<td style="text-align: center">:white_check_mark:<strong>*</strong></td>
+<td style="text-align: center"></td>
+<td style="text-align: center">&nbsp;:white_check_mark:<strong>*</strong></td>
 </tr>
 <tr>
 <td>.monoAudio</td>
 <td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center"></td>
 </tr>
 <tr>
 <td>.reduceMotion</td>
 <td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">&nbsp;:white_check_mark:<strong>*</strong></td>
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center">:white_check_mark:</td>
 </tr>
 <tr>
 <td>.reduceTransparency</td>
 <td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">&nbsp;:white_check_mark:<strong>*</strong></td>
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center"></td>
 </tr>
@@ -281,10 +321,12 @@
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
+<td style="text-align: center"></td>
 </tr>
 <tr>
 <td>.speakScreen</td>
 <td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
 </tr>
@@ -293,16 +335,19 @@
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
+<td style="text-align: center"></td>
 </tr>
 <tr>
 <td>.switchControl</td>
 <td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">&nbsp;:white_check_mark:<strong>*</strong></td>
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center"></td>
 </tr>
 <tr>
 <td>.voiceOver</td>
 <td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">&nbsp;:white_check_mark:<strong>*</strong></td>
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center">:white_check_mark:</td>
 </tr>
@@ -352,7 +397,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/chrs1885" target="_blank" rel="external">Christoph Wendt</a>. All rights reserved. (Last updated: 2018-07-19)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/chrs1885" target="_blank" rel="external">Christoph Wendt</a>. All rights reserved. (Last updated: 2018-08-09)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
