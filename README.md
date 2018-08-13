@@ -7,6 +7,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![Cocoapods compatible](https://img.shields.io/cocoapods/v/Capable.svg)](https://cocoapods.org/pods/Capable)
 ![SPM](https://img.shields.io/badge/Swift%20Package%20Manager-macOS-blue.svg)
+![Documentation](Documentation/badge.svg)
 
 Have you ever thought about adopting accessibility features within you apps to gain your user base instead of spending a lot of time implementing features no-one really ever asked for? 
 
