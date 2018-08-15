@@ -13,7 +13,7 @@ import Nimble
 
 class CapableSpec: QuickSpec {
     override func spec() {
-        describe("the Capable class") {
+        describe("The Capable class") {
             context("after default initialization") {
                 var sut: Capable?
 
