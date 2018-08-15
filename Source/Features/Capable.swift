@@ -9,11 +9,12 @@
 public struct Capable {
     private var statusesModule: StatusesProtocol
     private var notificationsModule: NotificationsProtocol
-    private(set) var features: [CapableFeature]
+    private(set) var features: [CapableFeature]?
+    private(set) var handicaps: [Handicap]?
 
     /**
-     The `statusMap` property returns a dictionary of all features, that the Capable instance has been initialized with along with their current statuses. This object is compatible with most analytic SDKs such as **Fabric Answers**, **Firebase Analytics**, **AppCenter Analytics**, or **HockeyApp**.
-     While most features can only have a status set to **enabled** or **disabled**, the `.largerText` feature offers the font scale set by the user.
+     The `statusMap` property returns a dictionary of all `CapableFeature`s or `Handicap`s , that the Capable instance has been initialized with along with their current statuses. This object is compatible with most analytic SDKs such as **Fabric Answers**, **Firebase Analytics**, **AppCenter Analytics**, or **HockeyApp**.
+     While most entries can only have a status set to **enabled** or **disabled**, the `.largerText` feature offers the font scale set by the user.
      */
     public var statusMap: [String: String] {
         return self.statusesModule.statusMap
@@ -26,16 +27,35 @@ public struct Capable {
         - features: An optional array containing the features of interest. This will default to all features available on the current platform.
     */
     public init(withFeatures features: [CapableFeature] = CapableFeature.allValues()) {
-        let statusesModule = Statuses(with: features)
+        let statusesModule = Statuses(withFeatures: features)
         let notificationsModule = Notifications(statusesModule: statusesModule)
         self.init(with: statusesModule, notificationModule: notificationsModule, features: features)
+    }
+
+    /**
+     Initializes the framework instance with a set of `Handicap`s.
+
+     - Parameters:
+     - handicaps: An optional array containing the `Handicaps`s specified by the caller.
+     */
+    public init(withHandicaps handicaps: [Handicap]) {
+        let statusesModule = Statuses(withHandicaps: handicaps)
+        let notificationsModule = Notifications(statusesModule: statusesModule)
+        self.init(with: statusesModule, notificationModule: notificationsModule, handicaps: handicaps)
     }
 
     init(with statusesModule: StatusesProtocol, notificationModule: NotificationsProtocol, features: [CapableFeature] = CapableFeature.allValues()) {
         self.features = features
         self.statusesModule = statusesModule
         self.notificationsModule = notificationModule
-        self.notificationsModule.enableNotifications(for: self.features)
+        self.notificationsModule.enableNotifications(forFeatures: self.features)
+    }
+
+    init(with statusesModule: StatusesProtocol, notificationModule: NotificationsProtocol, handicaps: [Handicap]) {
+        self.handicaps = handicaps
+        self.statusesModule = statusesModule
+        self.notificationsModule = notificationModule
+        self.notificationsModule.enableNotifications(forHandicaps: self.handicaps)
     }
 
     /**
