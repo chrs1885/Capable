@@ -21,6 +21,8 @@
 		831B4EF920A4A25A00F1BB94 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A8EE5B206FB8660043EB34 /* Quick.framework */; };
 		831B4EFA20A4A25A00F1BB94 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A8EE59206FB8410043EB34 /* Nimble.framework */; };
 		831E8EEC212479930096930C /* HandicapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E8EEB212479930096930C /* HandicapTests.swift */; };
+		831E8EEE21247C620096930C /* Handicap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E8EED21247C620096930C /* Handicap.swift */; };
+		831E8EF021247EAD0096930C /* HandicapEnabledMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E8EEF21247EAD0096930C /* HandicapEnabledMode.swift */; };
 		832953CE2110D9E200072EB9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832953CC2110D9E100072EB9 /* Quick.framework */; };
 		832953CF2110D9E200072EB9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832953CD2110D9E200072EB9 /* Nimble.framework */; };
 		833DB9BF206C164B00C8DA02 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9BE206C164B00C8DA02 /* Notification+Name.swift */; };
@@ -67,6 +69,8 @@
 		44FE2E432114833700029869 /* FontMetricsProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProviderMock.swift; sourceTree = "<group>"; };
 		831B4F2E20A4EEA700F1BB94 /* StatusesMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusesMock.swift; path = Tests/Features/Mocks/StatusesMock.swift; sourceTree = SOURCE_ROOT; };
 		831E8EEB212479930096930C /* HandicapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapTests.swift; sourceTree = "<group>"; };
+		831E8EED21247C620096930C /* Handicap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handicap.swift; sourceTree = "<group>"; };
+		831E8EEF21247EAD0096930C /* HandicapEnabledMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapEnabledMode.swift; sourceTree = "<group>"; };
 		832953CC2110D9E100072EB9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		832953CD2110D9E200072EB9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		833DB9BE206C164B00C8DA02 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
@@ -171,6 +175,8 @@
 			children = (
 				83B5FFE52065352500E8E83F /* CapableFeature.swift */,
 				833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */,
+				831E8EED21247C620096930C /* Handicap.swift */,
+				831E8EEF21247EAD0096930C /* HandicapEnabledMode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -455,11 +461,13 @@
 			files = (
 				83973ADF206FD4080057CD4F /* FontMetrics.swift in Sources */,
 				8382A324206EB40500E264A3 /* NotificationsProtocol.swift in Sources */,
+				831E8EEE21247C620096930C /* Handicap.swift in Sources */,
 				83D2A46920F006000032054C /* String+ContentSizeCategoryString.swift in Sources */,
 				83973ADA206FD22C0057CD4F /* UIFont+ScaledFont.swift in Sources */,
 				83B5FFE42065336F00E8E83F /* Capable.swift in Sources */,
 				44FE2E3621147A6F00029869 /* FontMetricsSupport.swift in Sources */,
 				83CAA3FA2097BF9B003F231D /* OsVersionProviderProtocol.swift in Sources */,
+				831E8EF021247EAD0096930C /* HandicapEnabledMode.swift in Sources */,
 				83CAA3F82097BEEC003F231D /* OsVersionProvider.swift in Sources */,
 				837EE71420F1592A00AC8A11 /* ContentSizeHelper.swift in Sources */,
 				83DB72462069891200384B3F /* UIContentSizeCategory+stringValue.swift in Sources */,
