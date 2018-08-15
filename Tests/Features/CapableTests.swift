@@ -276,6 +276,70 @@ class CapableTests: QuickSpec {
                     }
                 }
             }
+
+            context("when calling isHandicapEnabled") {
+                var sut: Capable?
+                var notificationsMock: NotificationsMock?
+                var statusesMock: StatusesMock?
+                var testHandicapName: String?
+
+                beforeEach {
+                    statusesMock = StatusesMock()
+                    notificationsMock = NotificationsMock(statusesModule: statusesMock!)
+                    testHandicapName = "TestHandicap"
+                    let testFeatures = [.reduceMotion, .voiceOver]
+                    let testHandicap = Handicap(with: testFeatures!, name: testHandicapName!, enabledIf: .allFeaturesEnabled!)
+                    sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
+                }
+
+                context("when enabledIf is set to .allFeaturesEnabled") {
+                    context("when all features are enabled") {
+                        beforeEach {
+                            statusesMock?.reduceMotionEnabled = true
+                            statusesMock?.voiceOverEnabled = true
+                        }
+
+                        it("returns true") {
+                            expect(sut?.isHandicapEnabled(name: testHandicapName)).to(beTrue())
+                        }
+                    }
+
+                    context("when one features are enabled") {
+                        beforeEach {
+                            statusesMock?.reduceMotionEnabled = true
+                            statusesMock?.voiceOverEnabled = false
+                        }
+
+                        it("returns false") {
+                            expect(sut?.isHandicapEnabled(name: testHandicapName)).to(beFalse())
+                        }
+                    }
+                }
+
+                context("when enabledIf is set to .oneFeatureEnabled") {
+                    context("when one features are enabled") {
+                        beforeEach {
+                            statusesMock?.reduceMotionEnabled = true
+                            statusesMock?.voiceOverEnabled = false
+                        }
+
+                        it("returns true") {
+                            expect(sut?.isHandicapEnabled(name: testHandicapName)).to(beTrue())
+                        }
+                    }
+
+                    context("when no features is enabled") {
+                        beforeEach {
+                            statusesMock?.reduceMotionEnabled = true
+                            statusesMock?.voiceOverEnabled = false
+                        }
+
+                        it("returns false") {
+                            expect(sut?.isHandicapEnabled(name: testHandicapName)).to(beFalse())
+                        }
+                    }
+                }
+            }
         }
     }
 }
