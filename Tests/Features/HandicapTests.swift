@@ -20,11 +20,11 @@ class CpableTests: QuickSpec {
                 var testName: String?
                 var testMode: HandicapEnabledMode?
 
-
                 beforeEach {
                     testName = "TestHandicap"
-                    testedFeatures = [.reduceMotion, .voiceOver]
-                    sut = Handicap(with: testedFeatures, name:testName, enabledIf: .allFeaturesEnabled)
+                    testFeatures = [.reduceMotion, .voiceOver]
+                    testMode = .allFeaturesEnabled
+                    sut = Handicap(with: testFeatures!, name: testName!, enabledIf: testMode!)
                 }
 
                 it("returns a Handicap instance") {
@@ -42,4 +42,3 @@ class CpableTests: QuickSpec {
 }
 
 #endif
-

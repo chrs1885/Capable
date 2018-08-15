@@ -13,4 +13,3 @@ public enum HandicapEnabledMode: String {
     /// The `Handicap`'s status is enabled if all its features are currently set to **enabled**.
     case allFeaturesEnabled
 }
-
