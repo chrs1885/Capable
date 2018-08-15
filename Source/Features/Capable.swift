@@ -69,4 +69,16 @@ public struct Capable {
     public func isFeatureEnabled(feature: CapableFeature) -> Bool {
         return self.statusesModule.isFeatureEnabled(feature: feature)
     }
+
+    /**
+     Provides information regarding the current status of a provided `Handicap`.
+
+     - Parameters:
+     - handicapName: The name of the requested of `Handicap`.
+
+     - Returns: `true` if the given feature has been enabled, otherwise `false`. Note that the status depends on the `Handicap`'s `enabledIf` value (see `HandicapEnabledMode`).
+     */
+    public func isHandicapEnabled(handicapName: String) -> Bool {
+        return self.statusesModule.isHandicapEnabled(handicapName: handicapName)
+    }
 }
