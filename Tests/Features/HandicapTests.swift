@@ -11,7 +11,7 @@ import Quick
 import Nimble
 @testable import Capable
 
-class CpableTests: QuickSpec {
+class HandicapTests: QuickSpec {
     override func spec() {
         describe("The Handicap class") {
             context("after initialization with features") {
