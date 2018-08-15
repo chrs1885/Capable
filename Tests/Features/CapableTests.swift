@@ -43,6 +43,27 @@ class CapableTests: QuickSpec {
                 }
             }
 
+            context("after initialization with Handicaps") {
+                var sut: Capable?
+                var testHandicapNames: [String]?
+
+                beforeEach {
+                    let testFeatures = [.reduceMotion, .voiceOver]
+                    let testName1 = "TestHandicap1"
+                    let testHandicap1 = Handicap(with: testFeatures!, name: testName1!, enabledIf: .allFeaturesEnabled!)
+                    let testName2 = "TestHandicap2"
+                    let testHandicap2 = Handicap(with: testFeatures!, name: testName2!, enabledIf: .allFeaturesEnabled!)
+                    let testHandicaps = [testHandicap1, testHandicap2]
+                    sut = Capable(withHandicaps: testHandicaps)
+                }
+
+                it("returns a status map with all Handicap names that were registered") {
+                    let statusMap = sut!.statusMap
+                    expect(statusMap.count).to(equal(testHandicapNames!.count))
+                    expect(Array(statusMap.keys)).to(contain(testHandicapNames!))
+                }
+            }
+
             context("after initialization") {
                 var notificationsMock: NotificationsMock?
                 var statusesMock: StatusesMock?
