@@ -11,6 +11,7 @@
 		44580D13212606BB00F9940A /* FeatureStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D12212606BB00F9940A /* FeatureStatuses.swift */; };
 		44580D1521260E3500F9940A /* HandicapStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D1421260E3500F9940A /* HandicapStatusesMock.swift */; };
 		44580D1721260EAA00F9940A /* FeatureStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D1621260EAA00F9940A /* FeatureStatusesMock.swift */; };
+		44580D1921261D4E00F9940A /* CapablePerfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D1821261D4E00F9940A /* CapablePerfTests.swift */; };
 		44E1055A2125CC7B00D85BBC /* HandicapStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E105592125CC7B00D85BBC /* HandicapStatus.swift */; };
 		44FE2E32211479A300029869 /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E31211479A300029869 /* FontMetricsProvider.swift */; };
 		44FE2E34211479F700029869 /* FontMetricsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E33211479F700029869 /* FontMetricsProviderProtocol.swift */; };
@@ -65,6 +66,9 @@
 /* Begin PBXFileReference section */
 		44580D10212605D500F9940A /* HandicapStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatuses.swift; sourceTree = "<group>"; };
 		44580D12212606BB00F9940A /* FeatureStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatuses.swift; sourceTree = "<group>"; };
+		44580D1421260E3500F9940A /* HandicapStatusesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatusesMock.swift; sourceTree = "<group>"; };
+		44580D1621260EAA00F9940A /* FeatureStatusesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesMock.swift; sourceTree = "<group>"; };
+		44580D1821261D4E00F9940A /* CapablePerfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapablePerfTests.swift; sourceTree = "<group>"; };
 		44E105592125CC7B00D85BBC /* HandicapStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatus.swift; sourceTree = "<group>"; };
 		44FE2E31211479A300029869 /* FontMetricsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProvider.swift; sourceTree = "<group>"; };
 		44FE2E33211479F700029869 /* FontMetricsProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProviderProtocol.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				83BB09D02087CE29000420C5 /* Mocks */,
+				44580D1821261D4E00F9940A /* CapablePerfTests.swift */,
 				83DA75F62065167600303D8F /* CapableTests.swift */,
 				831E8EEB212479930096930C /* HandicapTests.swift */,
 			);
@@ -510,6 +515,7 @@
 				44FE2E422114832300029869 /* FontMetricsMock.swift in Sources */,
 				831E8EEC212479930096930C /* HandicapTests.swift in Sources */,
 				83AB3FDE2114F8BE00B86E64 /* NotificationsMock.swift in Sources */,
+				44580D1921261D4E00F9940A /* CapablePerfTests.swift in Sources */,
 				44580D1521260E3500F9940A /* HandicapStatusesMock.swift in Sources */,
 				44FE2E3D211482F500029869 /* FontMetricsSupportTests.swift in Sources */,
 			);
