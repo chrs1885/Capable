@@ -349,6 +349,7 @@
 				831B4F1220A4D4F200F1BB94 /* Resources */,
 				83E67A2B20CD946200FE6FC2 /* Embed Frameworks */,
 				CD63CA07C089828CF543BBC4 /* [CP] Embed Pods Frameworks */,
+				A86012A7DDC056692E6C094E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -368,6 +369,7 @@
 				832953D121121EAA00072EB9 /* Frameworks */,
 				832953D221121EAA00072EB9 /* Resources */,
 				66EBB1053BB87E5FD2CD23AA /* [CP] Embed Pods Frameworks */,
+				DAB2260962367566775CAB2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -386,6 +388,7 @@
 				837C191420AA27960003D237 /* Resources */,
 				837C193420AA27970003D237 /* Embed App Extensions */,
 				F05E2059260BD9015112DEF2 /* Frameworks */,
+				018F45EE6D2541B7FBCAD7AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -406,6 +409,7 @@
 				837C191F20AA27970003D237 /* Frameworks */,
 				837C192020AA27970003D237 /* Resources */,
 				F67097C47BDCE4F9878E7D3B /* [CP] Embed Pods Frameworks */,
+				28D322ACFB68EE89F4192A39 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -426,6 +430,7 @@
 				83C6F5DA20780FE700F0C74D /* Resources */,
 				831B4F5420A4F0AA00F1BB94 /* Embed Watch Content */,
 				06147DD848B4478BE2B0CAAD /* [CP] Embed Pods Frameworks */,
+				B195152B5142143C1DAFC45F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -542,6 +547,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		018F45EE6D2541B7FBCAD7AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-watchOS/Pods-Example-watchOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		06147DD848B4478BE2B0CAAD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -580,6 +600,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28D322ACFB68EE89F4192A39 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		66EBB1053BB87E5FD2CD23AA /* [CP] Embed Pods Frameworks */ = {
@@ -636,6 +671,36 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A86012A7DDC056692E6C094E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B195152B5142143C1DAFC45F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C70D01AECEEE31D19B3E4595 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -670,6 +735,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAB2260962367566775CAB2E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-macOS/Pods-Example-macOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E0FC5F3AA5CB3DA8BF3D6D8B /* [CP] Check Pods Manifest.lock */ = {
