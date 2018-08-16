@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>UIFont Extension Reference</title>
+    <title>HandicapStatus Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/UIFont" class="dashAnchor"></a>
-    <a title="UIFont Extension Reference"></a>
+    <a name="//apple_ref/swift/Struct/HandicapStatus" class="dashAnchor"></a>
+    <a title="HandicapStatus Structure Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Capable Docs</a> (100% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Capable Reference</a>
         <img id="carat" src="../img/carat.png" />
-        UIFont Extension Reference
+        HandicapStatus Structure Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -83,8 +83,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>UIFont</h1>
-            <p>Extension that adds functionality for creating scalable UIFont objects.</p>
+            <h1>HandicapStatus</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">HandicapStatus</span></code></pre>
+
+                </div>
+              </div>
+            <p>Model class that describes the content of a Capable notification (see <code><a href="../Extensions/Notification/Name.html#/s:So14NSNotificationC4NameV7CapableE0C23HandicapStatusDidChangeADvpZ">Notification.Name.CapableHandicapStatusDidChange</a></code>)</p>
 
           </section>
           <section class="section task-group-section">
@@ -93,9 +99,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/scaledFont(for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">scaledFont(for:)</a>
+                    <a name="/s:7Capable14HandicapStatusV8handicapAA0B0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/handicap" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Capable14HandicapStatusV8handicapAA0B0Vvp">handicap</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -103,8 +109,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Makes the given font scalable.</p>
+                        <p>The <code><a href="../Structs/Handicap.html">Handicap</a></code> that has changed.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">handicap</span><span class="p">:</span> <span class="kt"><a href="../Structs/Handicap.html">Handicap</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -112,9 +126,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/scaledFont(name:size:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">scaledFont(name:size:)</a>
+                    <a name="/s:7Capable14HandicapStatusV12statusStringSSvp"></a>
+                    <a name="//apple_ref/swift/Property/statusString" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7Capable14HandicapStatusV12statusStringSSvp">statusString</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -122,77 +136,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a scalable font with the given font name and reference font size.</p>
+                        <p>The <code><a href="../Structs/Handicap.html">Handicap</a></code>&lsquo;s status (<strong>enabled</strong> or <strong>disabled</strong>). Note that the status depends on the <code><a href="../Structs/Handicap.html">Handicap</a></code>&rsquo;s <code>enabledIf</code> value (see <code><a href="../Enums/HandicapEnabledMode.html">HandicapEnabledMode</a></code>).</p>
 
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/scaledSystemFont(ofSize:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">scaledSystemFont(ofSize:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a scalable system font with a given reference font size.</p>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">statusString</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
-<ul>
-<li><p>fontSize: The reference font size to use.</p></li>
-</ul>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/scaledBoldSystemFont(ofSize:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">scaledBoldSystemFont(ofSize:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a scalable bold system font with a given reference font size.</p>
-
-<ul>
-<li><p>fontSize: The reference font size to use.</p></li>
-</ul>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Method/scaledItalicSystemFont(ofSize:)" class="dashAnchor"></a>
-                    <a class="token" href="#/">scaledItalicSystemFont(ofSize:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a scalable italic system font with a given reference font size.</p>
-
-<ul>
-<li><p>fontSize: The reference font size to use.</p></li>
-</ul>
-
+                        </div>
                       </div>
                     </section>
                   </div>
