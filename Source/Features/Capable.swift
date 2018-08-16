@@ -27,7 +27,7 @@ public struct Capable {
         - features: An optional array containing the features of interest. This will default to all features available on the current platform.
     */
     public init(withFeatures features: [CapableFeature] = CapableFeature.allValues()) {
-        let statusesModule = Statuses(withFeatures: features)
+        let statusesModule = FeatureStatuses(withFeatures: features)
         let notificationsModule = Notifications(statusesModule: statusesModule)
         self.init(with: statusesModule, notificationModule: notificationsModule, features: features)
     }
@@ -39,8 +39,8 @@ public struct Capable {
      - handicaps: An optional array containing the `Handicaps`s specified by the caller.
      */
     public init(withHandicaps handicaps: [Handicap]) {
-        let statusesModule = Statuses(withHandicaps: handicaps)
         let notificationsModule = Notifications(statusesModule: statusesModule)
+        let statusesModule = HandicapStatuses(withHandicaps: handicaps)
         self.init(with: statusesModule, notificationModule: notificationsModule, handicaps: handicaps)
     }
 
