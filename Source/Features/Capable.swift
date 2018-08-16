@@ -39,8 +39,8 @@ public struct Capable {
      - handicaps: An optional array containing the `Handicaps`s specified by the caller.
      */
     public init(withHandicaps handicaps: [Handicap]) {
-        let notificationsModule = Notifications(statusesModule: statusesModule)
         let statusesModule = HandicapStatuses(withHandicaps: handicaps)
+        let notificationsModule = Notifications(statusesModule: statusesModule, handicaps: handicaps)
         self.init(with: statusesModule, notificationModule: notificationsModule, handicaps: handicaps)
     }
 
@@ -48,14 +48,14 @@ public struct Capable {
         self.features = features
         self.statusesModule = statusesModule
         self.notificationsModule = notificationModule
-        self.notificationsModule.enableNotifications(forFeatures: self.features)
+        self.notificationsModule.enableNotifications(forFeatures: features)
     }
 
     init(with statusesModule: StatusesProtocol, notificationModule: NotificationsProtocol, handicaps: [Handicap]) {
         self.handicaps = handicaps
         self.statusesModule = statusesModule
         self.notificationsModule = notificationModule
-        self.notificationsModule.enableNotifications(forHandicaps: self.handicaps)
+        self.notificationsModule.enableNotifications(forHandicaps: handicaps)
     }
 
     /**

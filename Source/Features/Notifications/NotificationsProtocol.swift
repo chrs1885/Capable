@@ -7,6 +7,8 @@
 
 protocol NotificationsProtocol {
     init(statusesModule: StatusesProtocol)
+    init(statusesModule: StatusesProtocol, handicaps: [Handicap])
 
-    func enableNotifications(for features: [CapableFeature])
+    func enableNotifications(forFeatures features: [CapableFeature])
+    func enableNotifications(forHandicaps handicaps: [Handicap])
 }
