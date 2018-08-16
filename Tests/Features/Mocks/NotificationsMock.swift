@@ -10,19 +10,20 @@
 @testable import Capable
 
 class NotificationsMock: NotificationsProtocol {
-
     var numEnableNotificationsCalled = 0
-    var numDisableNotificationsCalled = 0
 
     required init(statusesModule: StatusesProtocol) {
     }
 
-    public func enableNotifications(for features: [CapableFeature]) {
+    required init(statusesModule: StatusesProtocol, handicaps: [Handicap]) {
+    }
+
+    public func enableNotifications(forFeatures features: [CapableFeature]) {
         self.numEnableNotificationsCalled += 1
     }
 
-    public func disableNotifications() {
-        self.numDisableNotificationsCalled += 1
+    func enableNotifications(forHandicaps handicaps: [Handicap]) {
+        self.numEnableNotificationsCalled += 1
     }
 }
 

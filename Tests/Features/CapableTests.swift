@@ -48,13 +48,13 @@ class CapableTests: QuickSpec {
                 var testHandicapNames: [String]?
 
                 beforeEach {
-                    let testFeatures = [.reduceMotion, .voiceOver]
+                    let testFeatures: [CapableFeature] = [.reduceMotion, .voiceOver]
                     let testName1 = "TestHandicap1"
-                    let testHandicap1 = Handicap(with: testFeatures!, name: testName1!, enabledIf: .allFeaturesEnabled!)
+                    let testHandicap1 = Handicap(with: testFeatures, name: testName1, enabledIf: .allFeaturesEnabled)
                     let testName2 = "TestHandicap2"
-                    let testHandicap2 = Handicap(with: testFeatures!, name: testName2!, enabledIf: .allFeaturesEnabled!)
-                    let testHandicaps = [testHandicap1, testHandicap2]
-                    sut = Capable(withHandicaps: testHandicaps)
+                    let testHandicap2 = Handicap(with: testFeatures, name: testName2, enabledIf: .allFeaturesEnabled)
+                    testHandicapNames = [testName1, testName2]
+                    sut = Capable(withHandicaps: [testHandicap1, testHandicap2])
                 }
 
                 it("returns a status map with all Handicap names that were registered") {
@@ -66,10 +66,10 @@ class CapableTests: QuickSpec {
 
             context("after initialization") {
                 var notificationsMock: NotificationsMock?
-                var statusesMock: StatusesMock?
+                var statusesMock: FeatureStatusesMock?
 
                 beforeEach {
-                    statusesMock = StatusesMock()
+                    statusesMock = FeatureStatusesMock(withFeatures: [])
                     notificationsMock = NotificationsMock(statusesModule: statusesMock!)
                     _ = Capable(with: statusesMock!, notificationModule: notificationsMock!)
                 }
@@ -82,10 +82,10 @@ class CapableTests: QuickSpec {
             context("when calling isFeatureEnabled") {
                 var sut: Capable?
                 var notificationsMock: NotificationsMock?
-                var statusesMock: StatusesMock?
+                var statusesMock: FeatureStatusesMock?
 
                 beforeEach {
-                    statusesMock = StatusesMock()
+                    statusesMock = FeatureStatusesMock(withFeatures: [])
                     notificationsMock = NotificationsMock(statusesModule: statusesMock!)
                     sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
                 }
@@ -280,19 +280,23 @@ class CapableTests: QuickSpec {
             context("when calling isHandicapEnabled") {
                 var sut: Capable?
                 var notificationsMock: NotificationsMock?
-                var statusesMock: StatusesMock?
+                var statusesMock: HandicapStatusesMock?
                 var testHandicapName: String?
+                var testFeatures: [CapableFeature]?
 
                 beforeEach {
-                    statusesMock = StatusesMock()
-                    notificationsMock = NotificationsMock(statusesModule: statusesMock!)
                     testHandicapName = "TestHandicap"
-                    let testFeatures = [.reduceMotion, .voiceOver]
-                    let testHandicap = Handicap(with: testFeatures!, name: testHandicapName!, enabledIf: .allFeaturesEnabled!)
-                    sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
+                    testFeatures = [.reduceMotion, .voiceOver]
                 }
 
                 context("when enabledIf is set to .allFeaturesEnabled") {
+                    beforeEach {
+                        let testHandicap = Handicap(with: testFeatures!, name: testHandicapName!, enabledIf: .allFeaturesEnabled)
+                        statusesMock = HandicapStatusesMock(withHandicaps: [testHandicap])
+                        notificationsMock = NotificationsMock(statusesModule: statusesMock!)
+                        sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
+                    }
+
                     context("when all features are enabled") {
                         beforeEach {
                             statusesMock?.reduceMotionEnabled = true
@@ -300,7 +304,7 @@ class CapableTests: QuickSpec {
                         }
 
                         it("returns true") {
-                            expect(sut?.isHandicapEnabled(name: testHandicapName)).to(beTrue())
+                            expect(sut?.isHandicapEnabled(handicapName: testHandicapName!)).to(beTrue())
                         }
                     }
 
@@ -311,12 +315,19 @@ class CapableTests: QuickSpec {
                         }
 
                         it("returns false") {
-                            expect(sut?.isHandicapEnabled(name: testHandicapName)).to(beFalse())
+                            expect(sut?.isHandicapEnabled(handicapName: testHandicapName!)).to(beFalse())
                         }
                     }
                 }
 
                 context("when enabledIf is set to .oneFeatureEnabled") {
+                    beforeEach {
+                        let testHandicap = Handicap(with: testFeatures!, name: testHandicapName!, enabledIf: .oneFeatureEnabled)
+                        statusesMock = HandicapStatusesMock(withHandicaps: [testHandicap])
+                        notificationsMock = NotificationsMock(statusesModule: statusesMock!)
+                        sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
+                    }
+
                     context("when one features are enabled") {
                         beforeEach {
                             statusesMock?.reduceMotionEnabled = true
@@ -324,18 +335,18 @@ class CapableTests: QuickSpec {
                         }
 
                         it("returns true") {
-                            expect(sut?.isHandicapEnabled(name: testHandicapName)).to(beTrue())
+                            expect(sut?.isHandicapEnabled(handicapName: testHandicapName!)).to(beTrue())
                         }
                     }
 
                     context("when no features is enabled") {
                         beforeEach {
-                            statusesMock?.reduceMotionEnabled = true
+                            statusesMock?.reduceMotionEnabled = false
                             statusesMock?.voiceOverEnabled = false
                         }
 
                         it("returns false") {
-                            expect(sut?.isHandicapEnabled(name: testHandicapName)).to(beFalse())
+                            expect(sut?.isHandicapEnabled(handicapName: testHandicapName!)).to(beFalse())
                         }
                     }
                 }
