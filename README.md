@@ -19,10 +19,11 @@ Check out the *Example.xcworkspace* to get a quick overview.
 
 ## Features
 
-* Get the user's accessibility settings
-* Send it with your favorite analytics SDK such as Fabric Answers, App Center Analytics, or Firebase Analytics
-* Get notified about any changes
-* Use dynamic type with custom fonts by using one line of code without caring about the OS version the user is running on
+* [Get the user's accessibility settings](#accessibility-status)
+* [Define handicaps by grouping accessibility features](#handicaps)
+* [Send status with your favorite analytics SDK](#send-status)
+* [Get notified about any changes](#notifications)
+* [Use dynamic type with custom fonts](#dynamic-type)
 
 ## Installation
 
@@ -81,7 +82,8 @@ let capable = Capable(with: [.largerText, .boldText, .shakeToUndo])
 
 You can find a list of all accessibility features available on each platform in the [accessibility feature overview](#accessibility-feature-overview) section.
 
-### Get & send accessibility status
+<a id="accessibility-status"></a> 
+### Get accessibility status
 
 If you are interested in a specific accessibility feature, you can retrieve its current status as follows:
 
@@ -97,6 +99,29 @@ let capable = Capable()
 let statusMap = capable.statusMap
 ```
 This will return each feature name (key) along with its current value as described in the [accessibility feature overview](#accessibility-feature-overview) section.
+
+<a id="accessibility-status"></a> 
+### Handicaps - grouped accessibility features
+
+You can also group accessibility features to represent a specific handicap:
+
+```swift
+// Define a set of features that represent a handicap
+let features: [CapableFeature] = [.voiceOver, .speakScreen, .speakSelection]
+
+// Use the Handicap object to group them
+let blindness = Handicap(with: features, name: "Blindness", enabledIf: .allFeaturesEnabled)
+
+// Initialize the framework instance by providing the Handicap
+let capable = Capable(withHandicaps: [blindness])
+```
+
+The value of the `name` parameter will be used inside the `statusMap` provided by the Capable framework instance. Based on the value of `enabledIf`, you can specify if all features need to be set to **enabled** in order to set the Handicap to **enabled** as well.
+ 
+As accessibility feature, the `Handicap` type works great with [notifications](#notifications). 
+
+<a id="send-status"></a> 
+### Send accessibility status
 
 The `statusMap` object is compatible with most analytic SDK APIs. Here's a quick example of how to send your data along with user properties or custom events.
 
@@ -116,6 +141,7 @@ func sendMetrics() {
 }
 ```
 
+<a id="notifications"></a> 
 ### Listen for settings changes
 
 After initialization, notifications for all features that have been registered can be retrieved. To react to changes, you need to add your class as an observer as follows:
@@ -139,6 +165,30 @@ Inside your `featureStatusChanged` you can parse the specific feature and value:
 }
 ```
 
+If your framework instance has been set up with `Handicap`s instead, you can use the `CapableHandicapStatusDidChange ` notification:
+
+```swift
+NotificationCenter.default.addObserver(
+    self,
+    selector: #selector(self.handicapStatusChanged),
+    name: .CapableHandicapStatusDidChange,
+    object: nil)
+```
+
+Once the notification has been sent, you can parse the `Handicap`and its current status as follows:
+
+```swift
+@objc private func handicapStatusChanged(notification: NSNotification) {
+    if let handicapStatus = notification.object as? HandicapStatus {
+        let handicap = handicapStatus.handicap
+        let currentValue = handicapStatus.statusString
+    }
+}
+```
+
+Please note that when using notifications with `Handicap`s on macOS or watchOS, you might not get notified about all changes since [not all accessibility features do support notifications](#feature-overview), yet. 
+
+<a id="dynamic-type"></a> 
 ### Dynamic Type with custom fonts (Capable UIFont extension)
 
 Supporting Dynamic Type along with different OS versions such as iOS 10 and iOS 11 (watchOS 3 and watchOS 4) can be a huge pain, since both versions provide different APIs.
@@ -167,7 +217,7 @@ myLabel.font = UIFont.scaledBoldSystemFont(ofSize: defaultFontSize)
 
 While these extension APIs are available on tvOS as well, setting the font size in the system settings is not supported on this platforms.
 
-<a id="accessibility-feature-overview"></a> 
+<a id="feature-overview"></a> 
 ## Accessibility feature overview
 
 The following table contains all features that are available AND settable on each platform.
