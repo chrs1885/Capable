@@ -20,7 +20,7 @@ import WatchKit
 class Statuses: StatusesProtocol {
 
     var statusMap: [String: String] {
-        fatalError("statusMap: Computed property needs to be implemented by its subclass.")
+        fatalError("Capable.Statuses.statusMap: Computed property needs to be implemented by its subclass.")
     }
 
     #if os(iOS)

@@ -32,3 +32,13 @@ public struct Handicap {
         self.enabledIf = enabledIf
     }
 }
+
+// MARK: - Equatable
+extension Handicap: Equatable {
+    public static func == (lhs: Handicap, rhs: Handicap) -> Bool {
+        return
+            lhs.features == rhs.features &&
+            lhs.name == rhs.name &&
+            lhs.enabledIf == rhs.enabledIf
+    }
+}
