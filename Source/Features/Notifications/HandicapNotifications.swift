@@ -38,7 +38,7 @@ extension Notifications {
 
         for handicap in handicaps {
             for feature in handicap.features {
-                if observedFeatures.contains(feature) {
+                if !observedFeatures.contains(feature) {
                     observedFeatures.append(feature)
                 }
             }
