@@ -26,7 +26,7 @@ public struct Handicap {
      - name: The name of the `Handicap` that can be used to uniquely identify the `Handicap`. This name is also used inside the status map.
      - enabledIf: This mode defines whether all features need to be enabled to set the `Handicap`'s status to enabled or only one of them.
      */
-    init(with features: [CapableFeature], name: String, enabledIf: HandicapEnabledMode) {
+    public init(with features: [CapableFeature], name: String, enabledIf: HandicapEnabledMode) {
         self.features = features
         self.name = name
         self.enabledIf = enabledIf
