@@ -28,7 +28,7 @@ public struct Capable {
     */
     public init(withFeatures features: [CapableFeature] = CapableFeature.allValues()) {
         let statusesModule = FeatureStatuses(withFeatures: features)
-        let notificationsModule = Notifications(statusesModule: statusesModule)
+        let notificationsModule = FeatureNotifications(statusesModule: statusesModule)
         self.init(with: statusesModule, notificationModule: notificationsModule, features: features)
     }
 
@@ -40,7 +40,7 @@ public struct Capable {
      */
     public init(withHandicaps handicaps: [Handicap]) {
         let statusesModule = HandicapStatuses(withHandicaps: handicaps)
-        let notificationsModule = Notifications(statusesModule: statusesModule, handicaps: handicaps)
+        let notificationsModule = HandicapNotifications(statusesModule: statusesModule, handicaps: handicaps)
         self.init(with: statusesModule, notificationModule: notificationsModule, handicaps: handicaps)
     }
 
@@ -48,14 +48,12 @@ public struct Capable {
         self.features = features
         self.statusesModule = statusesModule
         self.notificationsModule = notificationModule
-        self.notificationsModule.enableNotifications(forFeatures: features)
     }
 
     init(with statusesModule: StatusesProtocol, notificationModule: NotificationsProtocol, handicaps: [Handicap]) {
         self.handicaps = handicaps
         self.statusesModule = statusesModule
         self.notificationsModule = notificationModule
-        self.notificationsModule.enableNotifications(forHandicaps: handicaps)
     }
 
     /**

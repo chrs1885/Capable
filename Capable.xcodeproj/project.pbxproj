@@ -14,6 +14,8 @@
 		44580D1921261D4E00F9940A /* CapablePerfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D1821261D4E00F9940A /* CapablePerfTests.swift */; };
 		4486976421270B5F00A06BFF /* FeatureStatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486976321270B5F00A06BFF /* FeatureStatusTests.swift */; };
 		4486976621270CDA00A06BFF /* HandicapStatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486976521270CDA00A06BFF /* HandicapStatusTests.swift */; };
+		448697682127133A00A06BFF /* HandicapNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448697672127133A00A06BFF /* HandicapNotifications.swift */; };
+		4486976A2127148700A06BFF /* FeatureNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448697692127148700A06BFF /* FeatureNotifications.swift */; };
 		44E1055A2125CC7B00D85BBC /* HandicapStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E105592125CC7B00D85BBC /* HandicapStatus.swift */; };
 		44FE2E32211479A300029869 /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E31211479A300029869 /* FontMetricsProvider.swift */; };
 		44FE2E34211479F700029869 /* FontMetricsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E33211479F700029869 /* FontMetricsProviderProtocol.swift */; };
@@ -73,6 +75,8 @@
 		44580D1821261D4E00F9940A /* CapablePerfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapablePerfTests.swift; sourceTree = "<group>"; };
 		4486976321270B5F00A06BFF /* FeatureStatusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusTests.swift; sourceTree = "<group>"; };
 		4486976521270CDA00A06BFF /* HandicapStatusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatusTests.swift; sourceTree = "<group>"; };
+		448697672127133A00A06BFF /* HandicapNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapNotifications.swift; sourceTree = "<group>"; };
+		448697692127148700A06BFF /* FeatureNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureNotifications.swift; sourceTree = "<group>"; };
 		44E105592125CC7B00D85BBC /* HandicapStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatus.swift; sourceTree = "<group>"; };
 		44FE2E31211479A300029869 /* FontMetricsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProvider.swift; sourceTree = "<group>"; };
 		44FE2E33211479F700029869 /* FontMetricsProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProviderProtocol.swift; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 		8382A327206EC73400E264A3 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				448697692127148700A06BFF /* FeatureNotifications.swift */,
+				448697672127133A00A06BFF /* HandicapNotifications.swift */,
 				8382A325206EB46E00E264A3 /* Notifications.swift */,
 				8382A323206EB40500E264A3 /* NotificationsProtocol.swift */,
 			);
@@ -494,6 +500,7 @@
 				83CAA3F82097BEEC003F231D /* OsVersionProvider.swift in Sources */,
 				837EE71420F1592A00AC8A11 /* ContentSizeHelper.swift in Sources */,
 				83DB72462069891200384B3F /* UIContentSizeCategory+stringValue.swift in Sources */,
+				448697682127133A00A06BFF /* HandicapNotifications.swift in Sources */,
 				44580D11212605D500F9940A /* HandicapStatuses.swift in Sources */,
 				44FE2E34211479F700029869 /* FontMetricsProviderProtocol.swift in Sources */,
 				83973ADD206FD3A40057CD4F /* FontMetricsProtocol.swift in Sources */,
@@ -504,6 +511,7 @@
 				833DB9BF206C164B00C8DA02 /* Notification+Name.swift in Sources */,
 				83B5FFEB206542FC00E8E83F /* StatusesProtocol.swift in Sources */,
 				83B5FFE62065352500E8E83F /* CapableFeature.swift in Sources */,
+				4486976A2127148700A06BFF /* FeatureNotifications.swift in Sources */,
 				8382A322206E350F00E264A3 /* Statuses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

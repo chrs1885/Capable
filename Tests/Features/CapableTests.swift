@@ -112,21 +112,6 @@ class CapableTests: QuickSpec {
             }
             #endif
 
-            context("after initialization") {
-                var notificationsMock: NotificationsMock?
-                var statusesMock: FeatureStatusesMock?
-
-                beforeEach {
-                    statusesMock = FeatureStatusesMock(withFeatures: [])
-                    notificationsMock = NotificationsMock(statusesModule: statusesMock!)
-                    _ = Capable(with: statusesMock!, notificationModule: notificationsMock!)
-                }
-
-                it("enables notifications") {
-                    expect(notificationsMock!.numEnableNotificationsCalled).to(equal(1))
-                }
-            }
-
             context("when calling isFeatureEnabled") {
                 var sut: Capable?
                 var notificationsMock: NotificationsMock?
