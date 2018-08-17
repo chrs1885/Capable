@@ -23,18 +23,21 @@ class FeatureStatuses: Statuses {
     override var statusMap: [String: String] {
         var statusMap = [String: String]()
 
-        for feature in features {
+        for feature in self.features {
             #if os(iOS)
             if feature == .largerText {
                 statusMap[feature.rawValue] = self.largerTextCatagory.stringValue
+                continue
             }
             #elseif os(watchOS)
             if feature == .largerText {
                 statusMap[feature.rawValue] = self.largerTextCatagory
+                continue
             }
             #endif
             statusMap[feature.rawValue] = self.isFeatureEnabled(feature: feature).statusString
         }
+
         return statusMap
     }
 }

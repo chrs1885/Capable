@@ -43,6 +43,30 @@ class CapableTests: QuickSpec {
                 }
             }
 
+            #if os(iOS)
+            context("after initialization with .largerText feature") {
+                var sut: Capable?
+                var notificationsMock: NotificationsMock?
+                var statusesMock: FeatureStatusesMock?
+                var textCategoryString: String?
+
+                beforeEach {
+                    statusesMock = FeatureStatusesMock(withFeatures: [.largerText])
+                    let testTextCategory: UIContentSizeCategory = .accessibilityExtraExtraExtraLarge
+                    textCategoryString = testTextCategory.stringValue
+                    statusesMock?.textCatagory = testTextCategory
+                    notificationsMock = NotificationsMock(statusesModule: statusesMock!)
+                    sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
+                }
+
+                it("returns a status map containing the actual content size rather than a status of enabled/disabled for largerText") {
+                    let statusMap = sut!.statusMap
+                    let largerTextKey = CapableFeature.largerText.rawValue
+                    expect(statusMap[largerTextKey]).to(equal(textCategoryString))
+                }
+            }
+            #endif
+
             context("after initialization with Handicaps") {
                 var sut: Capable?
                 var testHandicapNames: [String]?
@@ -63,6 +87,30 @@ class CapableTests: QuickSpec {
                     expect(Array(statusMap.keys)).to(contain(testHandicapNames!))
                 }
             }
+
+            #if os(iOS)
+            context("after initialization with a Handicap holding the .largerText feature") {
+                var sut: Capable?
+                var notificationsMock: NotificationsMock?
+                var statusesMock: HandicapStatusesMock?
+                var testHandicapName: String?
+
+                beforeEach {
+                    testHandicapName = "TestHandicap"
+                    let testHandicap = Handicap(with: [.largerText], name: testHandicapName!, enabledIf: .allFeaturesEnabled)
+                    statusesMock = HandicapStatusesMock(withHandicaps: [testHandicap])
+                    let testTextCategory: UIContentSizeCategory = .accessibilityExtraExtraExtraLarge
+                    statusesMock?.textCatagory = testTextCategory
+                    notificationsMock = NotificationsMock(statusesModule: statusesMock!)
+                    sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
+                }
+
+                it("returns a status map containing enabled/disabled rather than the actual text category for the Handicap") {
+                    let statusMap = sut!.statusMap
+                    expect(statusMap[testHandicapName!]).to(equal("enabled"))
+                }
+            }
+            #endif
 
             context("after initialization") {
                 var notificationsMock: NotificationsMock?
