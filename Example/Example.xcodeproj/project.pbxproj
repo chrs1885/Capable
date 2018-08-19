@@ -42,6 +42,10 @@
 		83C6F6312078138E00F0C74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6282078138E00F0C74D /* Main.storyboard */; };
 		83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
 		83C6F6332078138E00F0C74D /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62B2078138E00F0C74D /* FontsViewController.swift */; };
+		83FF01FA2129FE6300D26E0D /* HandicapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01F92129FE6300D26E0D /* HandicapViewController.swift */; };
+		83FF01FB2129FE6300D26E0D /* HandicapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01F92129FE6300D26E0D /* HandicapViewController.swift */; };
+		83FF01FD2129FE8D00D26E0D /* HandicapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01FC2129FE8D00D26E0D /* HandicapViewController.swift */; };
+		83FF01FF2129FEAB00D26E0D /* HandicapTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01FE2129FEAB00D26E0D /* HandicapTableCellView.swift */; };
 		9D9BD8F0470D72CAC5F44979 /* Pods_Example_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A34BF8D95976311A017335 /* Pods_Example_tvOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +99,16 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83FF01F62129FDF900D26E0D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +153,11 @@
 		83C6F62B2078138E00F0C74D /* FontsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
 		83C6F62C2078138E00F0C74D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83E67A2C20CD94B800FE6FC2 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83FF01F72129FE2400D26E0D /* Capable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Capable.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Example-enhbiqqbvspdgvbxeefqumtrwxbb/Build/Products/Debug-iphoneos/Capable.framework"; sourceTree = "<group>"; };
+		83FF01F82129FE2900D26E0D /* Capable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Capable.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Example-enhbiqqbvspdgvbxeefqumtrwxbb/Build/Products/Debug-iphoneos/Capable.framework"; sourceTree = "<group>"; };
+		83FF01F92129FE6300D26E0D /* HandicapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandicapViewController.swift; sourceTree = "<group>"; };
+		83FF01FC2129FE8D00D26E0D /* HandicapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapViewController.swift; sourceTree = "<group>"; };
+		83FF01FE2129FEAB00D26E0D /* HandicapTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapTableCellView.swift; sourceTree = "<group>"; };
 		9C45A1F5FCFA4768DC33403B /* Pods-Example-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-macOS/Pods-Example-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		A5DCF956DE661B9787EAE334 /* Pods-Example-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A69A8636A1A206955AF20AA4 /* Pods-Example-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +237,8 @@
 				832953D621121EAA00072EB9 /* AppDelegate.swift */,
 				832953D821121EAA00072EB9 /* FeatureOverviewController.swift */,
 				832953E42112496300072EB9 /* FeatureTableCellView.swift */,
+				83FF01FE2129FEAB00D26E0D /* HandicapTableCellView.swift */,
+				83FF01FC2129FE8D00D26E0D /* HandicapViewController.swift */,
 				832953DC21121EAC00072EB9 /* Main.storyboard */,
 				832953DF21121EAC00072EB9 /* Info.plist */,
 				832953E021121EAC00072EB9 /* Example_macOS.entitlements */,
@@ -297,6 +318,7 @@
 				83C6F6252078138E00F0C74D /* AppDelegate.swift */,
 				83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */,
 				4478927F210B4AEA000D5939 /* FontsConstants.swift */,
+				83FF01F92129FE6300D26E0D /* HandicapViewController.swift */,
 				831B4F2520A4D51D00F1BB94 /* iOS */,
 				832953D521121EAA00072EB9 /* macOS */,
 				831B4F2620A4D53100F1BB94 /* tvOS */,
@@ -310,6 +332,8 @@
 			isa = PBXGroup;
 			children = (
 				83E67A2C20CD94B800FE6FC2 /* Capable.framework */,
+				83FF01F72129FE2400D26E0D /* Capable.framework */,
+				83FF01F82129FE2900D26E0D /* Capable.framework */,
 				61C8CF8E1603FFD70061B7CA /* Pods_Example_iOS.framework */,
 				73A34BF8D95976311A017335 /* Pods_Example_tvOS.framework */,
 				CDA97E99795B6631F2DB0EB5 /* Pods_Example_watchOS.framework */,
@@ -349,7 +373,6 @@
 				831B4F1220A4D4F200F1BB94 /* Resources */,
 				83E67A2B20CD946200FE6FC2 /* Embed Frameworks */,
 				CD63CA07C089828CF543BBC4 /* [CP] Embed Pods Frameworks */,
-				A86012A7DDC056692E6C094E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -369,7 +392,7 @@
 				832953D121121EAA00072EB9 /* Frameworks */,
 				832953D221121EAA00072EB9 /* Resources */,
 				66EBB1053BB87E5FD2CD23AA /* [CP] Embed Pods Frameworks */,
-				DAB2260962367566775CAB2E /* [CP] Copy Pods Resources */,
+				83FF01F62129FDF900D26E0D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -388,7 +411,6 @@
 				837C191420AA27960003D237 /* Resources */,
 				837C193420AA27970003D237 /* Embed App Extensions */,
 				F05E2059260BD9015112DEF2 /* Frameworks */,
-				018F45EE6D2541B7FBCAD7AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -409,7 +431,6 @@
 				837C191F20AA27970003D237 /* Frameworks */,
 				837C192020AA27970003D237 /* Resources */,
 				F67097C47BDCE4F9878E7D3B /* [CP] Embed Pods Frameworks */,
-				28D322ACFB68EE89F4192A39 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -430,7 +451,6 @@
 				83C6F5DA20780FE700F0C74D /* Resources */,
 				831B4F5420A4F0AA00F1BB94 /* Embed Watch Content */,
 				06147DD848B4478BE2B0CAAD /* [CP] Embed Pods Frameworks */,
-				B195152B5142143C1DAFC45F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -547,21 +567,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		018F45EE6D2541B7FBCAD7AD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-watchOS/Pods-Example-watchOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		06147DD848B4478BE2B0CAAD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -600,21 +605,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		28D322ACFB68EE89F4192A39 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		66EBB1053BB87E5FD2CD23AA /* [CP] Embed Pods Frameworks */ = {
@@ -671,36 +661,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A86012A7DDC056692E6C094E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B195152B5142143C1DAFC45F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C70D01AECEEE31D19B3E4595 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -735,21 +695,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DAB2260962367566775CAB2E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example-macOS/Pods-Example-macOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E0FC5F3AA5CB3DA8BF3D6D8B /* [CP] Check Pods Manifest.lock */ = {
@@ -797,6 +742,7 @@
 			files = (
 				831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */,
 				831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */,
+				83FF01FB2129FE6300D26E0D /* HandicapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,8 +750,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83FF01FF2129FEAB00D26E0D /* HandicapTableCellView.swift in Sources */,
 				832953E621124C9600072EB9 /* FeatureTableCellView.swift in Sources */,
 				832953D921121EAA00072EB9 /* FeatureOverviewController.swift in Sources */,
+				83FF01FD2129FE8D00D26E0D /* HandicapViewController.swift in Sources */,
 				832953D721121EAA00072EB9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -831,6 +779,7 @@
 			files = (
 				83C6F62F2078138E00F0C74D /* AppDelegate.swift in Sources */,
 				83C6F6332078138E00F0C74D /* FontsViewController.swift in Sources */,
+				83FF01FA2129FE6300D26E0D /* HandicapViewController.swift in Sources */,
 				44789280210B4AEA000D5939 /* FontsConstants.swift in Sources */,
 				83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */,
 			);
