@@ -9,14 +9,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
-        <!--Features-->
+        <!--Handicaps-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="Features" title="Features" hidesWhenLoading="NO" id="AgC-eL-Hgc" customClass="FeatureOverviewController" customModule="Example_watchOS" customModuleProvider="target">
+                <controller identifier="Handicaps" title="Handicaps" hidesWhenLoading="NO" id="AgC-eL-Hgc" customClass="HandicapOverviewController" customModule="Example_watchOS" customModuleProvider="target">
                     <items>
                         <table alignment="left" id="kTW-8M-JOg">
                             <items>
-                                <tableRow identifier="FeatureRow" selectable="NO" id="uKP-if-vpn" customClass="FeatureRowController" customModule="Example_watchOS_Extension">
+                                <tableRow identifier="HandicapRow" selectable="NO" id="uKP-if-vpn" customClass="HandicapRowController" customModule="Example_watchOS" customModuleProvider="target">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="reE-2p-wK0">
                                         <items>
                                             <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="dnE-wg-LgM">
@@ -29,24 +29,29 @@
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                                     </label>
+                                                    <label alignment="left" text="Label" id="JLr-12-dRk">
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                    </label>
                                                 </items>
                                             </group>
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="statusLabel" destination="WJt-9b-Nqr" id="Uhv-Yn-Z53"/>
-                                        <outlet property="titleLabel" destination="dTe-k9-1zo" id="ann-Uo-cVo"/>
+                                        <outlet property="detailTextLabel" destination="JLr-12-dRk" id="ViZ-8y-Zf4"/>
+                                        <outlet property="subtitleTextLabel" destination="WJt-9b-Nqr" id="Bwg-uj-12h"/>
+                                        <outlet property="textLabel" destination="dTe-k9-1zo" id="Kwg-qV-l7z"/>
                                     </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
                     <connections>
-                        <outlet property="featuresTable" destination="kTW-8M-JOg" id="zEm-YI-tNB"/>
+                        <outlet property="handicapsTable" destination="kTW-8M-JOg" id="z7q-0I-g5L"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="47" y="-50"/>
+            <point key="canvasLocation" x="47" y="104"/>
         </scene>
         <!--Example-->
         <scene sceneID="RsJ-uP-dAJ">
@@ -115,7 +120,46 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="47" y="281"/>
+            <point key="canvasLocation" x="47" y="390"/>
+        </scene>
+        <!--Features-->
+        <scene sceneID="1Ml-oe-1ck">
+            <objects>
+                <controller identifier="Features" title="Features" hidesWhenLoading="NO" id="DEE-Qs-4Fz" customClass="FeatureOverviewController" customModule="Example_watchOS" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="W2y-I5-Uc4">
+                            <items>
+                                <tableRow identifier="FeatureRow" selectable="NO" id="e6p-om-5Q6" customClass="FeatureRowController" customModule="Example_watchOS_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="iSb-km-t7c">
+                                        <items>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="a9b-A0-yRl">
+                                                <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </separator>
+                                            <group alignment="left" layout="vertical" spacing="0.0" id="FD8-pK-8l3">
+                                                <items>
+                                                    <label alignment="left" text="Label" id="FCp-X4-BWA"/>
+                                                    <label alignment="left" text="Label" id="DAk-70-L87">
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="statusLabel" destination="DAk-70-L87" id="HGi-21-Vdy"/>
+                                        <outlet property="titleLabel" destination="FCp-X4-BWA" id="qST-0T-N38"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="featuresTable" destination="W2y-I5-Uc4" id="wbM-jU-p54"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="47" y="-185"/>
         </scene>
     </scenes>
 </document>
