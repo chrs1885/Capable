@@ -91,7 +91,7 @@
                             <outlet property="delegate" destination="o0H-Sf-Je2" id="NRe-3g-w2V"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Handicaps" badgeValue="New" id="6wN-oz-bw9"/>
+                    <tabBarItem key="tabBarItem" title="Handicaps" image="groups" badgeValue="New" id="6wN-oz-bw9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qqf-G2-OvK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,6 +117,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="groups" width="30" height="30"/>
         <image name="list" width="30" height="30"/>
     </resources>
 </document>

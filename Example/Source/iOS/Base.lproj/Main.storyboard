@@ -32,7 +32,7 @@
         <scene sceneID="emO-QR-pPh">
             <objects>
                 <navigationController id="Fnm-BP-Yi8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Handicaps" badgeValue="New" id="7TC-ub-vJy"/>
+                    <tabBarItem key="tabBarItem" title="Handicaps" image="groups" badgeValue="New" id="7TC-ub-vJy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="shf-Mg-sbE">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -218,6 +218,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="groups" width="30" height="30"/>
         <image name="list" width="30" height="30"/>
         <image name="pencil" width="30" height="30"/>
     </resources>
