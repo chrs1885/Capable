@@ -25,8 +25,8 @@
                                             <group alignment="left" layout="vertical" spacing="0.0" id="MQA-fT-Ekn">
                                                 <items>
                                                     <label alignment="left" text="Label" id="dTe-k9-1zo"/>
-                                                    <label alignment="left" text="Label" id="WJt-9b-Nqr">
-                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <label alignment="left" text="Label" numberOfLines="0" id="WJt-9b-Nqr">
+                                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                                     </label>
                                                     <label alignment="left" text="Label" id="JLr-12-dRk">

@@ -18,15 +18,15 @@ class HandicapOverviewController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        let blindness = Handicap(with: [.voiceOver], name: "Blindness", enabledIf: .oneFeatureEnabled)
-        self.capable = Capable(withHandicaps: [blindness])
-        self.handicaps = [blindness]
-        refreshData()
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(self.handicapStatusChanged),
-            name: .CapableHandicapStatusDidChange,
-            object: nil)
+        let lowVision = Handicap(with: [.boldText, .largerText], name: "Low Vision", enabledIf: .oneFeatureEnabled)
+        self.capable = Capable(withHandicaps: [lowVision])
+        self.handicaps = [lowVision]
+        self.refreshData()
+        self.populateTableData()
+        self.registerObservers()
+    }
+
+    func populateTableData() {
         if let objects = self.objects {
             self.handicapsTable.setNumberOfRows(objects.count, withRowType: "HandicapRow")
             for index in 0..<handicapsTable.numberOfRows {
@@ -45,7 +45,7 @@ class HandicapOverviewController: WKInterfaceController {
         }
     }
 
-    private func value(forRow row: Int) -> (key: String, value: String) {
+    func value(forRow row: Int) -> (key: String, value: String) {
         if let objects = self.objects {
             let handicapsArray = Array(objects)
             return handicapsArray[row]
@@ -53,7 +53,7 @@ class HandicapOverviewController: WKInterfaceController {
         fatalError("Requested item does not exist")
     }
 
-    private func handicap(forName name: String) -> Handicap {
+    func handicap(forName name: String) -> Handicap {
         for handicap in self.handicaps! {
             if handicap.name == name {
                 return handicap
@@ -72,7 +72,15 @@ extension HandicapOverviewController {
         }
     }
 
-    private func showAlert(for handicapStatus: HandicapStatus) {
+    func registerObservers() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.handicapStatusChanged),
+            name: .CapableHandicapStatusDidChange,
+            object: nil)
+    }
+
+    func showAlert(for handicapStatus: HandicapStatus) {
         let alertTitle = "Feature status changed"
         let alertMessage = "\(handicapStatus.handicap.name) changed to \(handicapStatus.statusString)"
         let okAction = WKAlertAction(title: "OK",
@@ -83,4 +91,3 @@ extension HandicapOverviewController {
                      actions: [okAction])
     }
 }
-

@@ -17,7 +17,7 @@ class FeatureOverviewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.capable = Capable()
-        refreshData()
+        self.refreshData()
     }
 
     func refreshData() {

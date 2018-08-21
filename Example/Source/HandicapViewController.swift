@@ -17,15 +17,18 @@ class HandicapViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let blindness = Handicap(with: [.speakScreen, .invertColors, .voiceOver], name: "Blindness", enabledIf: .oneFeatureEnabled)
-        self.capable = Capable(withHandicaps: [blindness])
-        self.handicaps = [blindness]
-        refreshData()
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(self.handicapStatusChanged),
-            name: .CapableHandicapStatusDidChange,
-            object: nil)
+        #if os(iOS)
+            let blindness = Handicap(with: [.speakScreen, .speakSelection, .voiceOver], name: "Blindness", enabledIf: .oneFeatureEnabled)
+            self.capable = Capable(withHandicaps: [blindness])
+            self.handicaps = [blindness]
+        #else
+            let lowVision = Handicap(with: [.boldText, .invertColors, .reduceTransparency], name: "Low Vision ", enabledIf: .oneFeatureEnabled)
+            self.capable = Capable(withHandicaps: [lowVision])
+            self.handicaps = [lowVision]
+        #endif
+
+        self.registerObservers()
+        self.refreshData()
     }
 
     func refreshData() {
@@ -83,6 +86,14 @@ extension HandicapViewController {
             refreshData()
             self.tableView.reloadData()
         }
+    }
+
+    func registerObservers() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.handicapStatusChanged),
+            name: .CapableHandicapStatusDidChange,
+            object: nil)
     }
 }
 

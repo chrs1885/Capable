@@ -17,10 +17,10 @@ class HandicapViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let blindness = Handicap(with: [.invertColors, .voiceOver], name: "Blindness", enabledIf: .oneFeatureEnabled)
-        self.capable = Capable(withHandicaps: [blindness])
-        self.handicaps = [blindness]
-        refreshData()
+        let lowVision = Handicap(with: [.increaseContrast, .invertColors, .reduceTransparency], name: "Low Vision", enabledIf: .oneFeatureEnabled)
+        self.capable = Capable(withHandicaps: [lowVision])
+        self.handicaps = [lowVision]
+        self.refreshData()
     }
 
     func refreshData() {
@@ -47,7 +47,7 @@ extension HandicapViewController: NSTableViewDataSource, NSTableViewDelegate{
         return cell
     }
 
-    private func value(forRow row: Int) -> (key: String, value: String) {
+    func value(forRow row: Int) -> (key: String, value: String) {
         if let objects = self.objects {
             let featuresArray = Array(objects)
             return featuresArray[row]
@@ -55,7 +55,7 @@ extension HandicapViewController: NSTableViewDataSource, NSTableViewDelegate{
         fatalError("Requested item does not exist")
     }
 
-    private func handicap(forName name: String) -> Handicap {
+    func handicap(forName name: String) -> Handicap {
         for handicap in self.handicaps! {
             if handicap.name == name {
                 return handicap
@@ -72,4 +72,3 @@ extension HandicapViewController {
         self.handicapTableView.reloadData()
     }
 }
-
