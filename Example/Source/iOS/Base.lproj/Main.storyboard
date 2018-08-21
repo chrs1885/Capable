@@ -45,7 +45,7 @@
             </objects>
             <point key="canvasLocation" x="-135" y="143"/>
         </scene>
-        <!--Handicap View Controller-->
+        <!--Handicaps-->
         <scene sceneID="YKc-Z8-jwD">
             <objects>
                 <tableViewController id="HS6-Gx-QHY" customClass="HandicapViewController" customModule="Example_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,7 +84,7 @@
                             <outlet property="delegate" destination="HS6-Gx-QHY" id="heR-RE-Geh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ZHn-uf-iWj"/>
+                    <navigationItem key="navigationItem" title="Handicaps" id="ZHn-uf-iWj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qax-9O-0zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
