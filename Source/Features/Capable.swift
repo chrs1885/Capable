@@ -28,7 +28,7 @@ public struct Capable {
     */
     public init(withFeatures features: [CapableFeature] = CapableFeature.allValues()) {
         let statusesModule = FeatureStatuses(withFeatures: features)
-        let notificationsModule = FeatureNotifications(statusesModule: statusesModule)
+        let notificationsModule = FeatureNotifications(statusesModule: statusesModule, features: features)
         self.init(with: statusesModule, notificationModule: notificationsModule, features: features)
     }
 
