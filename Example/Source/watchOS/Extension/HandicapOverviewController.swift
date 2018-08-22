@@ -23,7 +23,14 @@ class HandicapOverviewController: WKInterfaceController {
         self.handicaps = [lowVision]
         self.refreshData()
         self.populateTableData()
+    }
+
+    override func didAppear() {
         self.registerObservers()
+    }
+
+    override func willDisappear() {
+        self.unregisterObservers()
     }
 
     func populateTableData() {
@@ -78,6 +85,10 @@ extension HandicapOverviewController {
             selector: #selector(self.handicapStatusChanged),
             name: .CapableHandicapStatusDidChange,
             object: nil)
+    }
+
+    func unregisterObservers() {
+        NotificationCenter.default.removeObserver(self)
     }
 
     func showAlert(for handicapStatus: HandicapStatus) {

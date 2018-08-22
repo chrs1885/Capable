@@ -31,6 +31,14 @@ class HandicapViewController: UITableViewController {
         self.refreshData()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.registerObservers()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        self.unregisterObservers()
+    }
+
     func refreshData() {
         if let capable = self.capable {
             self.objects = capable.statusMap
@@ -94,6 +102,10 @@ extension HandicapViewController {
             selector: #selector(self.handicapStatusChanged),
             name: .CapableHandicapStatusDidChange,
             object: nil)
+    }
+
+    func unregisterObservers(){
+        NotificationCenter.default.removeObserver(self)
     }
 }
 

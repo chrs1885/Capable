@@ -28,6 +28,14 @@ class FeatureOverviewController: UITableViewController {
         self.registerObservers()
         self.refreshData()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.registerObservers()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        self.unregisterObservers()
+    }
     
     func refreshData() {
         if let capable = self.capable {
@@ -93,6 +101,10 @@ extension FeatureOverviewController {
             selector: #selector(self.featureStatusChanged),
             name: .CapableFeatureStatusDidChange,
             object: nil)
+    }
+
+    func unregisterObservers() {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 

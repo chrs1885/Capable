@@ -20,7 +20,14 @@ class FeatureOverviewController: WKInterfaceController {
         self.capable = Capable()
         self.refreshData()
         self.populateTableData()
+    }
+
+    override func didAppear() {
         self.registerObservers()
+    }
+
+    override func willDisappear() {
+        self.unregisterObservers()
     }
 
     func populateTableData() {
@@ -64,6 +71,10 @@ extension FeatureOverviewController {
             selector: #selector(self.featureStatusChanged),
             name: .CapableFeatureStatusDidChange,
             object: nil)
+    }
+
+    func unregisterObservers() {
+        NotificationCenter.default.removeObserver(self)
     }
     
     func showAlert(for featureStatus: FeatureStatus) {
