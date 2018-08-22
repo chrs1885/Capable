@@ -9,10 +9,12 @@ import Foundation
 
 class HandicapNotifications: Notifications {
     var handicaps: [Handicap] = []
+    var lastValues: [String: String] = [:]
 
     convenience init(statusesModule: StatusesProtocol, handicaps: [Handicap]) {
         self.init(statusesModule: statusesModule)
         self.handicaps = handicaps
+        self.lastValues = Dictionary(uniqueKeysWithValues: self.handicaps.map { ($0.name, self.statusesModule.isHandicapEnabled(handicapName: $0.name).statusString) })
         self.enableNotifications(forHandicaps: handicaps)
     }
 
@@ -22,12 +24,19 @@ class HandicapNotifications: Notifications {
 
     override func postNotification(withFeature feature: CapableFeature, statusString: String) {
         for handicap in self.handicaps {
-            if handicap.features.contains(feature) {
-                let statusString = self.statusesModule.isHandicapEnabled(handicapName: handicap.name).statusString
-                let featureStatus = HandicapStatus(with: handicap, statusString: statusString)
-                NotificationCenter.default.post(name: .CapableHandicapStatusDidChange, object: featureStatus)
+            if handicap.features.contains(feature), self.hasStatusChanged(handicap: handicap) {
+                self.lastValues[handicap.name] = statusString
+                let handicapStatus = HandicapStatus(with: handicap, statusString: statusString)
+                NotificationCenter.default.post(name: .CapableHandicapStatusDidChange, object: handicapStatus)
             }
         }
+    }
+
+    func hasStatusChanged(handicap: Handicap) -> Bool {
+        let currentStatus = self.statusesModule.isHandicapEnabled(handicapName: handicap.name).statusString
+        let lastStatus = self.lastValues[handicap.name]
+
+        return currentStatus != lastStatus
     }
 }
 
