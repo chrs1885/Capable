@@ -42,9 +42,6 @@ extension Notifications {
             if features.contains(.guidedAccess) {
                 addObserver(for: .UIAccessibilityGuidedAccessStatusDidChange, selector: #selector(self.guidedAccessStatusChanged))
             }
-            if features.contains(.invertColors) {
-                addObserver(for: .UIAccessibilityInvertColorsStatusDidChange, selector: #selector(self.invertColorsStatusChanged))
-            }
             if features.contains(.largerText) {
                 addObserver(for: .UIContentSizeCategoryDidChange, selector: #selector(self.largerTextStatusChanged))
             }
@@ -68,6 +65,9 @@ extension Notifications {
             }
             if features.contains(.grayscale) {
                 addObserver(for: .UIAccessibilityGrayscaleStatusDidChange, selector: #selector(self.grayscaleStatusChanged))
+            }
+            if features.contains(.invertColors) {
+                addObserver(for: .UIAccessibilityInvertColorsStatusDidChange, selector: #selector(self.invertColorsStatusChanged))
             }
             if features.contains(.monoAudio) {
                 addObserver(for: .UIAccessibilityMonoAudioStatusDidChange, selector: #selector(self.monoAudioStatusChanged))
@@ -157,6 +157,10 @@ extension Notifications {
 
     @objc func grayscaleStatusChanged(notification: NSNotification) {
         self.postNotification(withFeature: .grayscale, statusString: self.statusesModule.isGrayscaleEnabled.statusString)
+    }
+
+    @objc func invertColorsStatusChanged(notification: NSNotification) {
+        self.postNotification(withFeature: .invertColors, statusString: self.statusesModule.isInvertColorsEnabled.statusString)
     }
 
     @objc func monoAudioStatusChanged(notification: NSNotification) {
