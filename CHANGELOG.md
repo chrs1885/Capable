@@ -1,3 +1,12 @@
+## Version 0.5.0
+
+### Features
+* [New Handicap type for client-side grouping of accessibility features](https://github.com/chrs1885/Capable/issues/21)
+
+### Bugfixes
+* [Fix CocoaPods documentation link](https://github.com/chrs1885/Capable/issues/22)
+* tvOS: Post `CapableFeatureStatusDidChange` if `.invertColors` feature status changes
+
 ## Version 0.4.0
 
 ### Enhancements
