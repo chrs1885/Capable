@@ -41,3 +41,11 @@ class FeatureStatuses: Statuses {
         return statusMap
     }
 }
+
+// MARK: - Equatable
+extension FeatureStatuses: Equatable {
+    public static func == (lhs: FeatureStatuses, rhs: FeatureStatuses) -> Bool {
+        return
+            lhs.features == rhs.features
+    }
+}

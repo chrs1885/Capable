@@ -38,3 +38,11 @@ class HandicapStatuses: Statuses {
         return handicap.enabledIf == .allFeaturesEnabled
     }
 }
+
+// MARK: - Equatable
+extension HandicapStatuses: Equatable {
+    public static func == (lhs: HandicapStatuses, rhs: HandicapStatuses) -> Bool {
+        return
+            lhs.handicapMap == rhs.handicapMap
+    }
+}
