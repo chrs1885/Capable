@@ -11,9 +11,9 @@ import Quick
 import Nimble
 @testable import Capable
 
-class CapableSpec: QuickSpec {
+class CapableTests: QuickSpec {
     override func spec() {
-        describe("the Capable class") {
+        describe("The Capable class") {
             context("after default initialization") {
                 var sut: Capable?
 
@@ -43,29 +43,83 @@ class CapableSpec: QuickSpec {
                 }
             }
 
-            context("after initialization") {
-                var notificationsMock: NotificationsMock?
-                var statusesMock: StatusesMock?
+            #if os(iOS)
+            context("after initialization with .largerText feature") {
+                var sut: Capable?
+                var notificationsMock: FeatureNotificationsMock?
+                var statusesMock: FeatureStatusesMock?
+                var textCategoryString: String?
 
                 beforeEach {
-                    statusesMock = StatusesMock()
-                    notificationsMock = NotificationsMock(statusesModule: statusesMock!)
-                    _ = Capable(with: statusesMock!, notificationModule: notificationsMock!)
+                    statusesMock = FeatureStatusesMock(withFeatures: [.largerText])
+                    let testTextCategory: UIContentSizeCategory = .accessibilityExtraExtraExtraLarge
+                    textCategoryString = testTextCategory.stringValue
+                    statusesMock?.textCatagory = testTextCategory
+                    notificationsMock = FeatureNotificationsMock(statusesModule: statusesMock!)
+                    sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
                 }
 
-                it("enables notifications") {
-                    expect(notificationsMock!.numEnableNotificationsCalled).to(equal(1))
+                it("returns a status map containing the actual content size rather than a status of enabled/disabled for largerText") {
+                    let statusMap = sut!.statusMap
+                    let largerTextKey = CapableFeature.largerText.rawValue
+                    expect(statusMap[largerTextKey]).to(equal(textCategoryString))
+                }
+            }
+            #endif
+
+            context("after initialization with Handicaps") {
+                var sut: Capable?
+                var testHandicapNames: [String]?
+
+                beforeEach {
+                    let testFeatures: [CapableFeature] = [.reduceMotion, .voiceOver]
+                    let testName1 = "TestHandicap1"
+                    let testHandicap1 = Handicap(with: testFeatures, name: testName1, enabledIf: .allFeaturesEnabled)
+                    let testName2 = "TestHandicap2"
+                    let testHandicap2 = Handicap(with: testFeatures, name: testName2, enabledIf: .allFeaturesEnabled)
+                    testHandicapNames = [testName1, testName2]
+                    sut = Capable(withHandicaps: [testHandicap1, testHandicap2])
+                }
+
+                it("returns a status map with all Handicap names that were registered") {
+                    let statusMap = sut!.statusMap
+                    expect(statusMap.count).to(equal(testHandicapNames!.count))
+                    expect(Array(statusMap.keys)).to(contain(testHandicapNames!))
                 }
             }
 
-            context("when calling isFeatureEnabled") {
+            #if os(iOS)
+            context("after initialization with a Handicap holding the .largerText feature") {
                 var sut: Capable?
-                var notificationsMock: NotificationsMock?
-                var statusesMock: StatusesMock?
+                var notificationsMock: HandicapNotificationsMock?
+                var statusesMock: HandicapStatusesMock?
+                var testHandicapName: String?
 
                 beforeEach {
-                    statusesMock = StatusesMock()
-                    notificationsMock = NotificationsMock(statusesModule: statusesMock!)
+                    testHandicapName = "TestHandicap"
+                    let testHandicap = Handicap(with: [.largerText], name: testHandicapName!, enabledIf: .allFeaturesEnabled)
+                    statusesMock = HandicapStatusesMock(withHandicaps: [testHandicap])
+                    let testTextCategory: UIContentSizeCategory = .accessibilityExtraExtraExtraLarge
+                    statusesMock?.textCatagory = testTextCategory
+                    notificationsMock = HandicapNotificationsMock(statusesModule: statusesMock!)
+                    sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
+                }
+
+                it("returns a status map containing enabled/disabled rather than the actual text category for the Handicap") {
+                    let statusMap = sut!.statusMap
+                    expect(statusMap[testHandicapName!]).to(equal("enabled"))
+                }
+            }
+            #endif
+
+            context("when calling isFeatureEnabled") {
+                var sut: Capable?
+                var notificationsMock: FeatureNotificationsMock?
+                var statusesMock: FeatureStatusesMock?
+
+                beforeEach {
+                    statusesMock = FeatureStatusesMock(withFeatures: [])
+                    notificationsMock = FeatureNotificationsMock(statusesModule: statusesMock!)
                     sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
                 }
 
@@ -252,6 +306,81 @@ class CapableSpec: QuickSpec {
 
                     it("returns correct state") {
                         expect(sut?.isFeatureEnabled(feature: .voiceOver)).to(beTrue())
+                    }
+                }
+            }
+
+            context("when calling isHandicapEnabled") {
+                var sut: Capable?
+                var notificationsMock: HandicapNotificationsMock?
+                var statusesMock: HandicapStatusesMock?
+                var testHandicapName: String?
+                var testFeatures: [CapableFeature]?
+
+                beforeEach {
+                    testHandicapName = "TestHandicap"
+                    testFeatures = [.reduceMotion, .voiceOver]
+                }
+
+                context("when enabledIf is set to .allFeaturesEnabled") {
+                    beforeEach {
+                        let testHandicap = Handicap(with: testFeatures!, name: testHandicapName!, enabledIf: .allFeaturesEnabled)
+                        statusesMock = HandicapStatusesMock(withHandicaps: [testHandicap])
+                        notificationsMock = HandicapNotificationsMock(statusesModule: statusesMock!)
+                        sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
+                    }
+
+                    context("when all features are enabled") {
+                        beforeEach {
+                            statusesMock?.reduceMotionEnabled = true
+                            statusesMock?.voiceOverEnabled = true
+                        }
+
+                        it("returns true") {
+                            expect(sut?.isHandicapEnabled(handicapName: testHandicapName!)).to(beTrue())
+                        }
+                    }
+
+                    context("when one features are enabled") {
+                        beforeEach {
+                            statusesMock?.reduceMotionEnabled = true
+                            statusesMock?.voiceOverEnabled = false
+                        }
+
+                        it("returns false") {
+                            expect(sut?.isHandicapEnabled(handicapName: testHandicapName!)).to(beFalse())
+                        }
+                    }
+                }
+
+                context("when enabledIf is set to .oneFeatureEnabled") {
+                    beforeEach {
+                        let testHandicap = Handicap(with: testFeatures!, name: testHandicapName!, enabledIf: .oneFeatureEnabled)
+                        statusesMock = HandicapStatusesMock(withHandicaps: [testHandicap])
+                        notificationsMock = HandicapNotificationsMock(statusesModule: statusesMock!)
+                        sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
+                    }
+
+                    context("when one features are enabled") {
+                        beforeEach {
+                            statusesMock?.reduceMotionEnabled = true
+                            statusesMock?.voiceOverEnabled = false
+                        }
+
+                        it("returns true") {
+                            expect(sut?.isHandicapEnabled(handicapName: testHandicapName!)).to(beTrue())
+                        }
+                    }
+
+                    context("when no features is enabled") {
+                        beforeEach {
+                            statusesMock?.reduceMotionEnabled = false
+                            statusesMock?.voiceOverEnabled = false
+                        }
+
+                        it("returns false") {
+                            expect(sut?.isHandicapEnabled(handicapName: testHandicapName!)).to(beFalse())
+                        }
                     }
                 }
             }

@@ -45,8 +45,6 @@ protocol StatusesProtocol {
     var isReduceMotionEnabled: Bool { get }
     var isVoiceOverEnabled: Bool { get }
 
-    init()
-    init(with features: [CapableFeature])
-
     func isFeatureEnabled(feature: CapableFeature) -> Bool
+    func isHandicapEnabled(handicapName: String) -> Bool
 }

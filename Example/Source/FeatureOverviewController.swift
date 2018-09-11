@@ -25,12 +25,16 @@ class FeatureOverviewController: UITableViewController {
         super.viewDidLoad()
 //      self.capable = Capable(with: [.largerText, .boldText, .shakeToUndo])
         self.capable = Capable()
-        refreshData()
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(self.featureStatusChanged),
-            name: .CapableFeatureStatusDidChange,
-            object: nil)
+        self.registerObservers()
+        self.refreshData()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.registerObservers()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        self.unregisterObservers()
     }
     
     func refreshData() {
@@ -89,6 +93,18 @@ extension FeatureOverviewController {
             refreshData()
             self.tableView.reloadData()
         }
+    }
+
+    func registerObservers() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.featureStatusChanged),
+            name: .CapableFeatureStatusDidChange,
+            object: nil)
+    }
+
+    func unregisterObservers() {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 

@@ -7,177 +7,209 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0398856F1F02455557C8EC82ACD3B2C2 /* NotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF18FA3BDF0376E0A65D04EE43B3A6D /* NotificationsProtocol.swift */; };
+		00818DA47BEF71251643219FE97ABBF5 /* NotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FE8E208C1AEDD4EBF1E1577FE66569 /* NotificationsProtocol.swift */; };
+		014D7E221E0A3AF8709402557BD3B431 /* Bool+statusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375E1AC30CE38BECC931634EF5D53B5 /* Bool+statusString.swift */; };
+		0367A380D5F1CA46DD6E466F951AA065 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71F32595ECF52AE4B75AF28699CE84 /* FeatureStatus.swift */; };
+		03FF479F8819EE40AEBE248822CAF7F2 /* FontMetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D190EA51A8116C07B8A9FE75A2BA5 /* FontMetricsProtocol.swift */; };
 		05B1F02560378D28FEBD4E8F6D293216 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30CC48889537975230BE014DBC32D965 /* Foundation.framework */; };
-		05B9677D6BEC94BB1A798855CF1D25A1 /* Capable-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D448F4072EB86EB434C16198B2435215 /* Capable-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05F97FB862DED24F1B1905C862373C6F /* FIRBundleUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E41D3120CCE01C2B9AE5120ABB170CD /* FIRBundleUtil.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0ABB0212BBD1E77AF2084ABF7E705B42 /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E529EB9A9734BB6851AC15C01F61868 /* Capable.swift */; };
 		0ABF3961C14F4E2D012936D83C5C724A /* FIRErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = E97CB4951E8609FE39CF62A1F61DAC66 /* FIRErrors.m */; };
-		0FBDB0D4B6C5724DA66D69CA4E24A69A /* FontMetricsSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E0CA3C698BF01C2DF8DF0DD5B504D /* FontMetricsSupport.swift */; };
-		10D39B2E9A97B7DD32A085810999F784 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857AB1A30662052B83FACE08C7013D72 /* Notification+Name.swift */; };
-		198CD16E974EF852E3C7679C4313D500 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C94A08BDE21BCD070DACEA36CC95FF /* UIKit.framework */; };
-		1AC1CDA76839D64551F3552FD5187A0B /* String+ContentSizeCategoryString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94A1D56303FF57A1B8F0C05296C5F11 /* String+ContentSizeCategoryString.swift */; };
-		1E072DA26D9220E239D8D519ADAAC7CC /* String+ContentSizeCategoryString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94A1D56303FF57A1B8F0C05296C5F11 /* String+ContentSizeCategoryString.swift */; };
+		0C0E580633C32C708FAB855DC5790DDD /* FeatureStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB836851E8B7BC671DEF7608EC033D1 /* FeatureStatuses.swift */; };
+		0E2B49395AE7F40D518F26CC0A56AD42 /* Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766517003EFD18421F5BBD2FA72F68FB /* Statuses.swift */; };
+		11EA130FC21D2D61BAC5E601360B37BC /* UIContentSizeCategory+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791691A876938EE9CBC05F9BAFAC4698 /* UIContentSizeCategory+stringValue.swift */; };
+		18E5C3A74ADA47E92A548FF9D8E64471 /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FFF5B596756371F3E358CC799F757 /* FontMetrics.swift */; };
+		1A906A3E4835286411FD20014604D65D /* Handicap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A803E1B2DA841A1FE591D2C43A19EF /* Handicap.swift */; };
 		1F19C59101F5F9B66F8730F9EF625A1F /* FIRAppAssociationRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3BECC4641ADDE8B33E9A81BB6C21CC /* FIRAppAssociationRegistration.m */; };
-		1F43353E4EA730C917EF6AD60CA385F4 /* StatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87670D0581B830D2ED14AAAB3CF9EF /* StatusesProtocol.swift */; };
 		1FD11A578D78250D186EADB1DE6732F7 /* FIRBundleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D1535A51B7B9A02D29AD56934ECE1E /* FIRBundleUtil.m */; };
-		1FFCC1AFD491BA0121CF9C2E345F1247 /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E119B83EF8A6098A5E9880599F9599 /* CapableFeature.swift */; };
 		21055EDD18E53092E12F13E1B022C9E6 /* Pods-Example-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0911E14934BA3060470911532298406B /* Pods-Example-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21105353D8C8989E154723AC9DFD57B3 /* Pods-Example-watchOS Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BCFFA63B870F6300BDC1FF907100BEF /* Pods-Example-watchOS Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29342A5CAEF158B59F61705D91388EC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DAC1B5F816438FE4DD0B1DA00BC676 /* Foundation.framework */; };
-		29E0EE6B2D727045E2F24DA642B4787C /* UIFont+ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F92D5AC7AF6C514ACD50A4A4F6B6E /* UIFont+ScaledFont.swift */; };
+		23C9635BB0B266B0B7362C19DCEFF6EE /* HandicapStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0CAAB95F4439433942D6A9E9AAC400 /* HandicapStatus.swift */; };
+		269D07D7C8950018937F4179C308083C /* HandicapNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA26D774CD6D3FA3789EDF73461300E /* HandicapNotifications.swift */; };
+		28727F9BB5A63D2E75DD9EB1BA7D71F8 /* StatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5B1AC236BE647781F4758DDABBA50 /* StatusesProtocol.swift */; };
+		2995997C0F22FB3C1F82199118144FA0 /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48806F652EB22C278EA45D5FED0B2A20 /* Capable.swift */; };
 		29FEADDF2086FDEA7D5BA87DD23B08C6 /* pb_decode.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B2BED7E13DD50720A1F98DC2256E8A7 /* pb_decode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2AC8E5D368E26D5B25AFE96FDB91B585 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A014F4B17A24978818C5D7303601EA15 /* FeatureStatus.swift */; };
-		2CCF0900B6069FE0F6EBB6DAFCBF18D9 /* Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B80D98594B1A8CC5F60AEAB7FCD41C3 /* Statuses.swift */; };
+		2B189B6C85030D6A8D29F944D21F406E /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19614403D9FAEF3378F8958151EF50 /* CapableFeature.swift */; };
+		2EE366B1921CCBCF3BBA4047641290C2 /* UIFont+ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F92D5AC7AF6C514ACD50A4A4F6B6E /* UIFont+ScaledFont.swift */; };
 		2FAFE7A2E5F7C163B3F9A55000557F72 /* FIRNetworkURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 09889C06B7691AF8F23CBF5E7B7B1CC2 /* FIRNetworkURLSession.m */; };
-		324659DF0509182402E290C67A70C06B /* NotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF18FA3BDF0376E0A65D04EE43B3A6D /* NotificationsProtocol.swift */; };
-		3486B108FB5DE5806BE05394F6F265D1 /* Capable-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE73FD918BC38A7FA7289D152A41DBDC /* Capable-macOS-dummy.m */; };
-		3744C5B451B40FE2BC400D54A0AF3766 /* String+ContentSizeCategoryString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94A1D56303FF57A1B8F0C05296C5F11 /* String+ContentSizeCategoryString.swift */; };
+		31001CEDEFBEBD237A1D9FA5241393EA /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BAD840D7281FA4356B5D279F09D1E86 /* WatchKit.framework */; };
+		32C785375DEF749D6CB8DEBE5F747CE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3464316249468025D84F9824E4D9B05 /* Foundation.framework */; };
+		33895C370269BAFD7D3B797BD6CA0200 /* Capable-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE73FD918BC38A7FA7289D152A41DBDC /* Capable-macOS-dummy.m */; };
+		3412A3777C66BCB90F097A56B26EA1B1 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083160104C946ABC1818F1B1BF631E23 /* Notification+Name.swift */; };
+		341FAAEB3E59DE9AF8C7F4765F01C370 /* UIContentSizeCategory+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791691A876938EE9CBC05F9BAFAC4698 /* UIContentSizeCategory+stringValue.swift */; };
+		3497F9A110801B691149EEAA0E92B9D3 /* FontMetricsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72D2CDBE108B81ADDAA5D98D6CB60EA /* FontMetricsProviderProtocol.swift */; };
+		3501B43CB86CA67D8215657B32ACCBAF /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411904516D85C8015674F2083DACA336 /* NotificationCenterProtocol.swift */; };
+		35E3EC6D96704929DE1B428A0B2A62B7 /* HandicapStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0CAAB95F4439433942D6A9E9AAC400 /* HandicapStatus.swift */; };
 		381AED7B43FE7EAD4E6C7A48FE4CB740 /* FIRLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 01DFCEE4C5054E451502ADF3F7874878 /* FIRLogger.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		384A3166EF374499206DA8362C393F26 /* OsVersionProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F88B6F42922EC0382DA58ACE512CB9 /* OsVersionProviderProtocol.swift */; };
 		3883B72198499726B04F847CA9D1F627 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 98F93C84613DD8F0DB8DCE33B42ECB1E /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		392F2CF142BAA751AC1BB61D8B757D98 /* pb.h in Headers */ = {isa = PBXBuildFile; fileRef = FC4B0016DAD9C7BD1DCB233453A4E022 /* pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A0E196FA7E0B3910020D3D3151FD944 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD1BA561ABFA2FAD955904B34195415 /* AppKit.framework */; };
+		395CCB511B5C5D0B492398B3FA625A2B /* HandicapStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C246C058CE5799AB8A77B0655912FC6 /* HandicapStatuses.swift */; };
 		3A50F5C8ECED9627F2EBD97F61BD376D /* pb_common.c in Sources */ = {isa = PBXBuildFile; fileRef = B27DD1FD7779D96807CF33FCFCA2805D /* pb_common.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc -fno-objc-arc"; }; };
 		3AB98F150C423FF51B0C5A32246CE82F /* Pods-Example-watchOS Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C48B1B71BC512F0C1567C38A44DC54 /* Pods-Example-watchOS Extension-dummy.m */; };
+		3B3A827FE6A6558DC3B6C0193F1D3EEF /* HandicapEnabledMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7147FCFDE7EA9BDECED9E4E1A5D20EF0 /* HandicapEnabledMode.swift */; };
 		3BD66D6656842D316A18D8F595045BF0 /* FIRConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E33EAAF711BAF551822F4F6890681C /* FIRConfiguration.m */; };
 		3D87E3A862C9B32F401A6F6F561B5046 /* FIRReachabilityChecker+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = BEA5C9140FDE7DC49F03CD04A135095B /* FIRReachabilityChecker+Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		4062F34902E7EB039082FCB52DED2104 /* ContentSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEEDC1462462BFC8AFEB23F73A31ABC /* ContentSizeHelper.swift */; };
+		3DC5524B910C02A393B9B7B38733C516 /* FontMetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D190EA51A8116C07B8A9FE75A2BA5 /* FontMetricsProtocol.swift */; };
+		3DEA4EECD2E13636CE9971BD5E4CFDC7 /* Handicap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A803E1B2DA841A1FE591D2C43A19EF /* Handicap.swift */; };
+		3E772550CCE059AA8C4F4515C98AE750 /* OsVersionProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F88B6F42922EC0382DA58ACE512CB9 /* OsVersionProviderProtocol.swift */; };
+		3EC286F29C971C70D84445C71F9DBC20 /* HandicapNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA26D774CD6D3FA3789EDF73461300E /* HandicapNotifications.swift */; };
+		40544D0BB05CCED5DAB6800380B70D12 /* Bool+statusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375E1AC30CE38BECC931634EF5D53B5 /* Bool+statusString.swift */; };
+		405B3419109CC3EFF07C24FDEB812A14 /* FontMetricsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72D2CDBE108B81ADDAA5D98D6CB60EA /* FontMetricsProviderProtocol.swift */; };
+		40C5145E27D0DF6029AC1E1085A48310 /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411904516D85C8015674F2083DACA336 /* NotificationCenterProtocol.swift */; };
+		4124BDC16DC459628DCFD5A0B9C4C2ED /* FeatureStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB836851E8B7BC671DEF7608EC033D1 /* FeatureStatuses.swift */; };
 		41D10CE405433B469CBE8C40B42865E1 /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4B65E48B1600259F89A9B3E14C1363 /* GoogleToolboxForMac-dummy.m */; };
-		443255FA147CBF1796E1FF2CBB46FB4B /* Capable-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3793E3A079DB398CCA3CB4F603196BC /* Capable-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		449C60C92CADB674D551E3C6E886AF59 /* HandicapStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C246C058CE5799AB8A77B0655912FC6 /* HandicapStatuses.swift */; };
+		461C6C7DD1B97BF98D3A7728A58EA476 /* Bool+statusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375E1AC30CE38BECC931634EF5D53B5 /* Bool+statusString.swift */; };
 		468DFD90B6C4DA2F7CFA0C1C89F1B615 /* nanopb-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B70B42936F3A676878AE2C4438553973 /* nanopb-dummy.m */; };
-		46DD12541A93BC307BF3CB6937BAAAA5 /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E529EB9A9734BB6851AC15C01F61868 /* Capable.swift */; };
-		49D38903BC68AA6430A02F53F3821AB1 /* StatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87670D0581B830D2ED14AAAB3CF9EF /* StatusesProtocol.swift */; };
+		46A3876F535426727E282D84CB2A4960 /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19614403D9FAEF3378F8958151EF50 /* CapableFeature.swift */; };
+		47A15E1CDF226F6864E7A939C1676305 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DAC1B5F816438FE4DD0B1DA00BC676 /* Foundation.framework */; };
+		47CC28B99254B0D7D4F8C918A446A5CF /* HandicapNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA26D774CD6D3FA3789EDF73461300E /* HandicapNotifications.swift */; };
 		4A54CDFFA967F1F0D100818E254B3423 /* Pods-Example-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F00A251DE61EB23717E8F200E6684B6C /* Pods-Example-watchOS-dummy.m */; };
-		4A93FB98462C9A3BECE6AC58334DFC12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30CC48889537975230BE014DBC32D965 /* Foundation.framework */; };
-		4B61DA9AEC340A9B764ED34D4E2A7FFC /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E529EB9A9734BB6851AC15C01F61868 /* Capable.swift */; };
-		4D8C3DDA14448E465A144AF0C1DCBCE3 /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E119B83EF8A6098A5E9880599F9599 /* CapableFeature.swift */; };
-		4E18BB0DE1C5E8D2C372659A44E2FD47 /* osVersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D74FBF88D39DAA91C6F8910E7E7822 /* osVersionProvider.swift */; };
+		4C184F71EB416D3A8953641EB5FA1366 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083160104C946ABC1818F1B1BF631E23 /* Notification+Name.swift */; };
+		4E39724BA727283BE5223D6F67B5803A /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDCD3BD871F42C685B898A7349734B3 /* FontMetricsProvider.swift */; };
 		4E9E3F4C76FDD56538C1D94D6E004488 /* FIRAppEnvironmentUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 66376D3741CCF1D88AF760BA133044A2 /* FIRAppEnvironmentUtil.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4FB56F6CF1214292B65508F5374418AE /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7A54EE7B7680F6BEC8594AEAFC82D9 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C031708C874F39AF39CE5E8136142B /* FeatureStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB836851E8B7BC671DEF7608EC033D1 /* FeatureStatuses.swift */; };
 		5176D8C2F911883FC75A97525B5567CB /* FIRReachabilityChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BDBC8F8C77D349D2625246E1C7FB22A /* FIRReachabilityChecker.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		519671268442F00B991AB6E72A2476C8 /* FeatureNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C1D04A6FF0FA201BCE6F6303460624 /* FeatureNotifications.swift */; };
+		5238C04F3729DA23E944343172DD0BC9 /* Capable-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7BDECCB04FBA0E42D0406D1FC868A /* Capable-iOS-dummy.m */; };
+		546E613CF221461B2BFCED55462E5BC2 /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411904516D85C8015674F2083DACA336 /* NotificationCenterProtocol.swift */; };
 		54F580BF4588159D6A61F21D15591805 /* pb_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 83E840EB3AD7A7DA3DC99A5E2A842467 /* pb_decode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
 		55D8D5D912CFD2F3584E4553C2EAD734 /* pb_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = E35618C142850A82A9C83A68414FBD2F /* pb_encode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
-		570FD48F3DA79128649DC74E1A9A1407 /* Bool+statusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C5549FFD82D29806638153D8FC977 /* Bool+statusString.swift */; };
-		571BD7C408E8888E662371D9A6B74F2F /* UIContentSizeCategory+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C026D137BFA25703BDC25F66068EB6 /* UIContentSizeCategory+stringValue.swift */; };
 		58A4DA15799705E46B6A18BA48838897 /* FirebaseCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D21DAD62797728939D7F44330F0199D2 /* FirebaseCore-dummy.m */; };
-		5B0D8276BB7ACE95D77A45E36D0CA9D3 /* Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B80D98594B1A8CC5F60AEAB7FCD41C3 /* Statuses.swift */; };
+		59997B6C9C734AA4A9957AEBA9460304 /* StatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5B1AC236BE647781F4758DDABBA50 /* StatusesProtocol.swift */; };
+		5A45D20E89ECA48406C0EE01706D0479 /* ContentSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A686A77DDF3C9E5964F274CA86DDE6 /* ContentSizeHelper.swift */; };
+		5A77AD8AECB156685C4E2498E1C85FA4 /* StatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5B1AC236BE647781F4758DDABBA50 /* StatusesProtocol.swift */; };
 		5B3052E7D344A6FB2D76A7D399D6B25E /* Pods-Example-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF341A1554480A02F8CD5DFCCFFCE29 /* Pods-Example-tvOS-dummy.m */; };
 		5B46B9D656F626D2AB2033FE60A5FDF3 /* FIRNetworkLoggerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 43D33FFA31CE01AA95026554C37AE11A /* FIRNetworkLoggerProtocol.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		5F4572D09D615668359BC5667F7E1CAC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76649A98207D0952C1D1DFC68FB7AA3C /* UIKit.framework */; };
-		5FCE2C52090D5FA5877D3AC9C1ED9E35 /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E119B83EF8A6098A5E9880599F9599 /* CapableFeature.swift */; };
-		6044E0A80B0C08EC1DC423EC8C123353 /* UIContentSizeCategory+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C026D137BFA25703BDC25F66068EB6 /* UIContentSizeCategory+stringValue.swift */; };
-		644567324CCF37C7B946E374C280BC06 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A014F4B17A24978818C5D7303601EA15 /* FeatureStatus.swift */; };
-		64CCB4B55702873DE031BE57F452C4CC /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BAD840D7281FA4356B5D279F09D1E86 /* WatchKit.framework */; };
+		5D0C1E4E8BCD8C108522A3CB510367C8 /* Capable-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 578388EB1D0B15A1A5A566084494D60E /* Capable-tvOS-dummy.m */; };
+		5D0C5E2CF57840BE9BE19F13AC1E854F /* FontMetricsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72D2CDBE108B81ADDAA5D98D6CB60EA /* FontMetricsProviderProtocol.swift */; };
+		5E159D9809B6C3EBF49BF6BF9D351BB9 /* HandicapStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0CAAB95F4439433942D6A9E9AAC400 /* HandicapStatus.swift */; };
+		603D0C4E6F4861EF97755F55C880DF95 /* HandicapStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C246C058CE5799AB8A77B0655912FC6 /* HandicapStatuses.swift */; };
+		608935B78A85352DDD62855E69554C2D /* HandicapEnabledMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7147FCFDE7EA9BDECED9E4E1A5D20EF0 /* HandicapEnabledMode.swift */; };
+		60FC7DB281C46D8BF9DBD27E78F8BD47 /* String+ContentSizeCategoryString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EE8EA546E98B3912A75F2AB5693747 /* String+ContentSizeCategoryString.swift */; };
+		638EE1A9434CCA3AF47D400D0424FCCA /* Capable-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A3793E3A079DB398CCA3CB4F603196BC /* Capable-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65736E1FDF516AE1EF4927AA623D5486 /* FIRAppAssociationRegistration.h in Headers */ = {isa = PBXBuildFile; fileRef = A3AFD7E0F65A81C3B4891053B470BA17 /* FIRAppAssociationRegistration.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		67EF4941A0B8039767298286385845D1 /* OsVersionProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F88B6F42922EC0382DA58ACE512CB9 /* OsVersionProviderProtocol.swift */; };
-		68A79A779C2774B17E1ADE931C766B98 /* UIContentSizeCategory+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C026D137BFA25703BDC25F66068EB6 /* UIContentSizeCategory+stringValue.swift */; };
+		671BFE0110CBBB37EC7A7B0FA6DBB65C /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FFF5B596756371F3E358CC799F757 /* FontMetrics.swift */; };
+		67693258E280A622B84C4F9B76412801 /* OsVersionProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F88B6F42922EC0382DA58ACE512CB9 /* OsVersionProviderProtocol.swift */; };
+		6A3497E09E825119622A3FAE7EED8D15 /* UIFont+ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F92D5AC7AF6C514ACD50A4A4F6B6E /* UIFont+ScaledFont.swift */; };
+		6C4E5A436389303DE12F9BE41B5BA308 /* FontMetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D190EA51A8116C07B8A9FE75A2BA5 /* FontMetricsProtocol.swift */; };
+		6EA396D65149E273483BBE8710D5A3D9 /* UIFont+ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F92D5AC7AF6C514ACD50A4A4F6B6E /* UIFont+ScaledFont.swift */; };
 		7022D4F56C0166D3859F95D553F55137 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3464316249468025D84F9824E4D9B05 /* Foundation.framework */; };
-		72969D7F0182492BD98866F72F9AE71A /* Capable-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E0117E5966881CDF53BB446973B7BC /* Capable-watchOS-dummy.m */; };
+		705E82DEB43B4946C44695A0357521DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76649A98207D0952C1D1DFC68FB7AA3C /* UIKit.framework */; };
 		734B4DEF489BE9680D61B2EBFAD75014 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30CC48889537975230BE014DBC32D965 /* Foundation.framework */; };
+		74F3E4C9FF847AFFF4327735A7A92D3D /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FFF5B596756371F3E358CC799F757 /* FontMetrics.swift */; };
 		7525390045039F998FF0DADC322488CB /* FIRAnalyticsConfiguration+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 31326955FBBC1A90C3FFDA8AE8E47ABA /* FIRAnalyticsConfiguration+Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		754B32D1CEABEBB47FF7F0DDBE37370F /* ContentSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEEDC1462462BFC8AFEB23F73A31ABC /* ContentSizeHelper.swift */; };
-		7591190AEB2D6AD298346071ABBD5F5D /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDCD3BD871F42C685B898A7349734B3 /* FontMetricsProvider.swift */; };
+		7663B889D9F27EA5CB205E88827BA78C /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083160104C946ABC1818F1B1BF631E23 /* Notification+Name.swift */; };
+		76C8F12F57DB34FF6C13D15EBD9E56B0 /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48806F652EB22C278EA45D5FED0B2A20 /* Capable.swift */; };
+		77CDBD5D5C3C64C9FB542FD8648F83B3 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71F32595ECF52AE4B75AF28699CE84 /* FeatureStatus.swift */; };
 		77DCE5FE8DCD17664BAFDE801054B001 /* Pods-Example-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D20E97DF3AC2B49DD957DB10DF1043FD /* Pods-Example-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78284B5D0194D355A4E0CD76680FC559 /* osVersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D74FBF88D39DAA91C6F8910E7E7822 /* osVersionProvider.swift */; };
-		78B2DEC01EE07F32E415BB1A62FFCFD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3464316249468025D84F9824E4D9B05 /* Foundation.framework */; };
-		7A68E82D51EFB124D6F40CC3CF9F2ED0 /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDCD3BD871F42C685B898A7349734B3 /* FontMetricsProvider.swift */; };
+		7CDA39BB9D3F3D345590C92A624CF49D /* Capable-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A991F33B307DCBE93E61641FCD933B1B /* Capable-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7EF7379A0CC562D025B9F38F0B087CFF /* FIRLoggerLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9037FF89037EB7A294AE191C099FA06D /* FIRLoggerLevel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		803759F9F51C9A64A0006E334EE16F45 /* Capable-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D448F4072EB86EB434C16198B2435215 /* Capable-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		806BAA4E00218D70995697C4400BE7A0 /* pb_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F670530051BC4F048C2959738C48584 /* pb_common.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		872C8BCAEB235BE25F2771C0638EA1FD /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FFF5B596756371F3E358CC799F757 /* FontMetrics.swift */; };
-		8A2A162E39CEAC089247EA72F5D7C035 /* FontMetricsSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E0CA3C698BF01C2DF8DF0DD5B504D /* FontMetricsSupport.swift */; };
-		8ADAD72B5FD2FCA42BD5C5920E29318A /* OsVersionProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F88B6F42922EC0382DA58ACE512CB9 /* OsVersionProviderProtocol.swift */; };
-		8B0AC15DD673D64305B37F73A9E69D3C /* osVersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D74FBF88D39DAA91C6F8910E7E7822 /* osVersionProvider.swift */; };
+		86AE09428B5C16B90A16195DE8196389 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846D8D6B365633568F17F632DA1EF1E /* Notifications.swift */; };
+		8965797C9E6506CDCB5DE1CAEC753263 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71F32595ECF52AE4B75AF28699CE84 /* FeatureStatus.swift */; };
 		8B595D1E703A57549BB98A1AF0F257DA /* FIRAppEnvironmentUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B15D0744F994C251ACE085191509AA29 /* FIRAppEnvironmentUtil.m */; };
-		8B78BDE825EE7555F9D49AA9E131785E /* Capable-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A991F33B307DCBE93E61641FCD933B1B /* Capable-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B9BC5964D67448FB880EEE1610C8EF2 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A014F4B17A24978818C5D7303601EA15 /* FeatureStatus.swift */; };
-		8D35108458F303A7F283C9DC7B1D2B08 /* UIFont+ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F92D5AC7AF6C514ACD50A4A4F6B6E /* UIFont+ScaledFont.swift */; };
+		8E34F67FB9F70E84DDD082FAD78687A5 /* Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766517003EFD18421F5BBD2FA72F68FB /* Statuses.swift */; };
+		8EBCDF7063FC9DF3D463BFF9911AEC6B /* osVersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D74FBF88D39DAA91C6F8910E7E7822 /* osVersionProvider.swift */; };
 		8EE159FBED69B43B9C83CD37195753F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30CC48889537975230BE014DBC32D965 /* Foundation.framework */; };
 		8F0FFA270E768BC335C0AB4DDC229B9A /* FIRAnalyticsConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 06DDFC916C844F72DF9864BB093DE568 /* FIRAnalyticsConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8FD261A289311FA20BBE0FC54CAB8BDD /* FontMetricsSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E0CA3C698BF01C2DF8DF0DD5B504D /* FontMetricsSupport.swift */; };
-		906CE4847319541203B4B5D65B3C1E58 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE3BDFBE90B33E31EF427408F3376D /* Notifications.swift */; };
-		93AECD5E16F3A7E2445733E8E37B6ACB /* UIFont+ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F92D5AC7AF6C514ACD50A4A4F6B6E /* UIFont+ScaledFont.swift */; };
-		953092EDB3651D74176E1AECF604833D /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE3BDFBE90B33E31EF427408F3376D /* Notifications.swift */; };
-		953CCC6D965C920515E434285B17754C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76D5F4D10F8A82DB378F4690250DC45 /* Foundation.framework */; };
-		9634CEBD42A2CE06E2D228B3012BE71B /* UIContentSizeCategory+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C026D137BFA25703BDC25F66068EB6 /* UIContentSizeCategory+stringValue.swift */; };
-		97FD1FB41C327860306CD3ACA972CBA3 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857AB1A30662052B83FACE08C7013D72 /* Notification+Name.swift */; };
-		9A8CB6092FD0B51DC3033399443B47C4 /* ContentSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEEDC1462462BFC8AFEB23F73A31ABC /* ContentSizeHelper.swift */; };
+		937E1E2376D2B69E213762BB12A04131 /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48806F652EB22C278EA45D5FED0B2A20 /* Capable.swift */; };
+		9556025CC89C1F6A7721C7222EEDC246 /* NotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FE8E208C1AEDD4EBF1E1577FE66569 /* NotificationsProtocol.swift */; };
+		966EF3ADB2E09101F60A99CCC99D3231 /* UIContentSizeCategory+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791691A876938EE9CBC05F9BAFAC4698 /* UIContentSizeCategory+stringValue.swift */; };
+		972290204E0C8C62F5BB10A6205C322D /* FeatureNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C1D04A6FF0FA201BCE6F6303460624 /* FeatureNotifications.swift */; };
+		987E5859FE72FEEB0475BC9138F3E56F /* FeatureNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C1D04A6FF0FA201BCE6F6303460624 /* FeatureNotifications.swift */; };
+		9A353AD2D2C12A6450714AC5AFC32C34 /* HandicapStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C246C058CE5799AB8A77B0655912FC6 /* HandicapStatuses.swift */; };
+		9B0CDBD60B925491A1B6D5D220F3CED6 /* ContentSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A686A77DDF3C9E5964F274CA86DDE6 /* ContentSizeHelper.swift */; };
 		9B3BB0BB63055112AE0B41146D80AA04 /* FIRNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 12A0213ECB5C44145C168C95117233CB /* FIRNetwork.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9B5D704DAC80836F6625957465709727 /* Pods-Example-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 828FF846DFD919E98D288B631BC41500 /* Pods-Example-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B7F93E8B94947AFE79B74728D40A0C0 /* FontMetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D190EA51A8116C07B8A9FE75A2BA5 /* FontMetricsProtocol.swift */; };
-		9C1548A73DA363B907025CE6D7F0397A /* Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B80D98594B1A8CC5F60AEAB7FCD41C3 /* Statuses.swift */; };
-		9DB24F6459C387B9C524415FEEBC6F96 /* FontMetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D190EA51A8116C07B8A9FE75A2BA5 /* FontMetricsProtocol.swift */; };
+		9C758FFD8FAD7710CDE9E4E545969347 /* Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766517003EFD18421F5BBD2FA72F68FB /* Statuses.swift */; };
+		9D46C38B02DCFD6805D5B70205CCEEB6 /* FeatureStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB836851E8B7BC671DEF7608EC033D1 /* FeatureStatuses.swift */; };
 		9E562CE4A6EEB6EBAC2147250258687D /* Pods-Example-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA754A2D79F81B023729CCFB24377CC /* Pods-Example-iOS-dummy.m */; };
-		9F8624A19F7BF0041CAF3D0C9B1C6ECD /* StatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87670D0581B830D2ED14AAAB3CF9EF /* StatusesProtocol.swift */; };
+		A1153A8C531A07C9F5876C8591ADC309 /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19614403D9FAEF3378F8958151EF50 /* CapableFeature.swift */; };
+		A149C28163D8ED2258DA9D3F069A5C21 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083160104C946ABC1818F1B1BF631E23 /* Notification+Name.swift */; };
 		A15175D0F55A112DECECE5E705395274 /* Pods-Example-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 03B88CFAC25725D4DF82E4A802E15034 /* Pods-Example-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1910C42D44099DC241B389D9BCC26C1 /* FIRConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 861E5649B02516209F8E46A96E8A36EF /* FIRConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A288617FB8C4A63F2356125CA4339337 /* OsVersionProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F88B6F42922EC0382DA58ACE512CB9 /* OsVersionProviderProtocol.swift */; };
 		A2F909CC11B88E87A6596EA0C29ECB1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30CC48889537975230BE014DBC32D965 /* Foundation.framework */; };
 		A35A2907EF7AD95AFB7242D3D17E94F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76D5F4D10F8A82DB378F4690250DC45 /* Foundation.framework */; };
-		A8B5DD95C72AEB0576ABFE25FF9A8B6B /* FontMetricsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72D2CDBE108B81ADDAA5D98D6CB60EA /* FontMetricsProviderProtocol.swift */; };
-		AB0DB35EBDA35C143367668B0A30DFC9 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A014F4B17A24978818C5D7303601EA15 /* FeatureStatus.swift */; };
-		ACF27515F025FFC27B8BC1792157E270 /* Bool+statusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C5549FFD82D29806638153D8FC977 /* Bool+statusString.swift */; };
-		B08B6FCA160153FE41EB74E19F5EBE85 /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FFF5B596756371F3E358CC799F757 /* FontMetrics.swift */; };
-		B0A21EB9C4F13F4B984EDC2498B9F7A7 /* Capable-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC77A54703EC4ABED2E0503E0FC41C2 /* Capable-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5DA83CD9D710950BE46E239DA9A9062 /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FFF5B596756371F3E358CC799F757 /* FontMetrics.swift */; };
+		A3EB91AAE9287909EC62385C367E58B0 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846D8D6B365633568F17F632DA1EF1E /* Notifications.swift */; };
+		A3F9C005A3498BEC9C66F7E7928CFEF0 /* Bool+statusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375E1AC30CE38BECC931634EF5D53B5 /* Bool+statusString.swift */; };
+		A51B3E735C508DA538B488884E949B64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76D5F4D10F8A82DB378F4690250DC45 /* Foundation.framework */; };
+		A5D3D427E9C2A1A822B65E84C9E9569D /* FontMetricsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72D2CDBE108B81ADDAA5D98D6CB60EA /* FontMetricsProviderProtocol.swift */; };
+		A88BFE7DC8EB239276F1182D533F66DA /* Handicap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A803E1B2DA841A1FE591D2C43A19EF /* Handicap.swift */; };
+		A9410590A66797DDC31E48F1D5BF8C31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C94A08BDE21BCD070DACEA36CC95FF /* UIKit.framework */; };
+		AE15E5E37AAA04681977822F9B728CFD /* ContentSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A686A77DDF3C9E5964F274CA86DDE6 /* ContentSizeHelper.swift */; };
+		AF15A43C2BC6791EFA1967C9B0BAD62A /* FontMetricsSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E0CA3C698BF01C2DF8DF0DD5B504D /* FontMetricsSupport.swift */; };
+		AFBFE0F6C5CA026973C552A76F45284B /* osVersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D74FBF88D39DAA91C6F8910E7E7822 /* osVersionProvider.swift */; };
+		B2654661F803AE97C15EF726A4C4958C /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19614403D9FAEF3378F8958151EF50 /* CapableFeature.swift */; };
+		B48891EAAB58AB599C32253A2B29AC1F /* osVersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D74FBF88D39DAA91C6F8910E7E7822 /* osVersionProvider.swift */; };
+		B5C7650242CC2D5B0FAFA587DE943D86 /* NotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FE8E208C1AEDD4EBF1E1577FE66569 /* NotificationsProtocol.swift */; };
 		B65CB6EF3292BEB782D1C68597EB362F /* FIRReachabilityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0B09AB63220695C9890C01298C2150 /* FIRReachabilityChecker.m */; };
 		B7762CCB1BF67C5F8451AF095A678D42 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD28FA6D599A1B1ADC2F63CB3C4C7E86 /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA7A9B4BD7595A6B2348D0A8A344404D /* ContentSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEEDC1462462BFC8AFEB23F73A31ABC /* ContentSizeHelper.swift */; };
-		BB3C28C22D9855EB3145933E5DDE84CD /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E119B83EF8A6098A5E9880599F9599 /* CapableFeature.swift */; };
-		BD15D3DF95E13D0EACD5B59968B3D035 /* FontMetricsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72D2CDBE108B81ADDAA5D98D6CB60EA /* FontMetricsProviderProtocol.swift */; };
-		BD2964C5A09CF852C346C0FE06667295 /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E529EB9A9734BB6851AC15C01F61868 /* Capable.swift */; };
-		BF87304D96388E6FC0E8ADE95090C5AE /* osVersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D74FBF88D39DAA91C6F8910E7E7822 /* osVersionProvider.swift */; };
+		BA115881184E9CF857582462088BD19F /* Handicap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A803E1B2DA841A1FE591D2C43A19EF /* Handicap.swift */; };
+		BDEC04C9A62B76D5804E3F9818F9E21B /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846D8D6B365633568F17F632DA1EF1E /* Notifications.swift */; };
 		C04AADE8E4A470C4074FCA8EE90CF4C2 /* FIROptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C481E0788681AC80C620CFB621CF38 /* FIROptions.m */; };
 		C14BCC00F75331E60F28F82F7D3F9EA9 /* FIRVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C19D6D933ED5D68CB95FE2654C367 /* FIRVersion.m */; };
-		C1C709C6B9C4F1F5608E01B635BC67A1 /* Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B80D98594B1A8CC5F60AEAB7FCD41C3 /* Statuses.swift */; };
-		C227315F05C43DB96C4B342367B0AF74 /* NotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF18FA3BDF0376E0A65D04EE43B3A6D /* NotificationsProtocol.swift */; };
-		C28255C8E69939A073B02B20154CA6FA /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857AB1A30662052B83FACE08C7013D72 /* Notification+Name.swift */; };
-		C82B0B701CBB2259CF5A6CEE2731A264 /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FFF5B596756371F3E358CC799F757 /* FontMetrics.swift */; };
-		C8BABCC8D73337AA1F1058A7B35880E0 /* FontMetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D190EA51A8116C07B8A9FE75A2BA5 /* FontMetricsProtocol.swift */; };
+		C4E15C2F6929EAD1E12939180CA4E29D /* Capable-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC77A54703EC4ABED2E0503E0FC41C2 /* Capable-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C69CA8513315080681E7C7ACF6D850BD /* NotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FE8E208C1AEDD4EBF1E1577FE66569 /* NotificationsProtocol.swift */; };
+		C6E19F38498D1F7F717046C49285F81E /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDCD3BD871F42C685B898A7349734B3 /* FontMetricsProvider.swift */; };
 		C90C7F0C221C834D74182CBE60BACDC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFA4AB1A8B0CDA5FD5671ACE716162A /* SystemConfiguration.framework */; };
-		C9FB5934A14B6F52345FD392EBE2DCE2 /* Capable-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 578388EB1D0B15A1A5A566084494D60E /* Capable-tvOS-dummy.m */; };
+		CA8C3454DE4F81E0BF03B9D42B7364B1 /* HandicapNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA26D774CD6D3FA3789EDF73461300E /* HandicapNotifications.swift */; };
+		CA9F3C68E335E762E52950F0F698BDB2 /* FontMetricsSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E0CA3C698BF01C2DF8DF0DD5B504D /* FontMetricsSupport.swift */; };
 		CAAD8C8007C5868AEC3DEB72D6D1D74A /* FIRLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1E1A8D6EC5AC4283DA987093D6D756 /* FIRLogger.m */; };
+		CB704D38993949445F37AA0FEDE2516E /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDCD3BD871F42C685B898A7349734B3 /* FontMetricsProvider.swift */; };
+		CC5095D2C9AC78CB99ABF7BE2CB8B713 /* FeatureNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C1D04A6FF0FA201BCE6F6303460624 /* FeatureNotifications.swift */; };
+		CD3F7FEA9CF770C6B23369F535CAFAF9 /* HandicapEnabledMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7147FCFDE7EA9BDECED9E4E1A5D20EF0 /* HandicapEnabledMode.swift */; };
 		CDB2195B09973FF1A90E093B2DA73FEE /* FirebaseCore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00908C867755A06F587E6AA624DC05AC /* FirebaseCore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEE0F11B7D13AF6CDA079F544A127554 /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C049BC294412EE41C879E734452FFED /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D031481EA4BB1FFA24C051E7C08A8BFE /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDCD3BD871F42C685B898A7349734B3 /* FontMetricsProvider.swift */; };
-		D15001F6B9B4CB576E2F83488B8F4BDB /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE3BDFBE90B33E31EF427408F3376D /* Notifications.swift */; };
-		D1A870DCE04E02FF183492CB325E6CFB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7206F26509F9E93BF291F5430275C31 /* Cocoa.framework */; };
-		D2243982CEC99FA5FBB8D495C06F85A9 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE3BDFBE90B33E31EF427408F3376D /* Notifications.swift */; };
-		D3BC91E9346EFD479B0614BBE15892B0 /* Capable-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7BDECCB04FBA0E42D0406D1FC868A /* Capable-iOS-dummy.m */; };
+		CF14471A8E16030C8E35B79D94BC03C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30CC48889537975230BE014DBC32D965 /* Foundation.framework */; };
+		D05437C3E31A97E6FA40B81EA58EAEC6 /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48806F652EB22C278EA45D5FED0B2A20 /* Capable.swift */; };
+		D1D85E6115025D522E74D72ED498D375 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7206F26509F9E93BF291F5430275C31 /* Cocoa.framework */; };
+		D2F826245DA72F19C51925F057AFE8D5 /* Capable-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E0117E5966881CDF53BB446973B7BC /* Capable-watchOS-dummy.m */; };
 		D4D85DCC77C00686249407005DBAA53E /* FIRMutableDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = D032A19CB2E0BFCAACB917DA38072120 /* FIRMutableDictionary.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D4F7277296E5EF146078B236D408BA15 /* OsVersionProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F88B6F42922EC0382DA58ACE512CB9 /* OsVersionProviderProtocol.swift */; };
 		D5111B16A401E35C52D6060D1DD7340B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3464316249468025D84F9824E4D9B05 /* Foundation.framework */; };
-		D6F4C48A69E2704BD11FBA736D15C9A6 /* NotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF18FA3BDF0376E0A65D04EE43B3A6D /* NotificationsProtocol.swift */; };
 		DA625BE200A2E8AD3A51CB233D33B598 /* FIRNetworkURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 08982403F917D0821F51ECD6B7AB73FC /* FIRNetworkURLSession.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		DC5FC4716B558B40F6DF768B3509EC3A /* FontMetricsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72D2CDBE108B81ADDAA5D98D6CB60EA /* FontMetricsProviderProtocol.swift */; };
+		DC9873BAEE9FD89FB32A4A49B093ADE4 /* HandicapStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0CAAB95F4439433942D6A9E9AAC400 /* HandicapStatus.swift */; };
+		DD6073E7651AEE2375FD0DB51C62E032 /* FontMetricsSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E0CA3C698BF01C2DF8DF0DD5B504D /* FontMetricsSupport.swift */; };
+		DEC8ACC9D12B55587C8E99B14790F0EF /* String+ContentSizeCategoryString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EE8EA546E98B3912A75F2AB5693747 /* String+ContentSizeCategoryString.swift */; };
 		DFB4D54E24E9B7EBD4A66946569162E6 /* FIRNetworkConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CD6946620C81E05186DCAD5D56048E /* FIRNetworkConstants.m */; };
-		E089D1870DDAFAC43270FFA2F895FF9B /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDCD3BD871F42C685B898A7349734B3 /* FontMetricsProvider.swift */; };
-		E164DE258E4C9A373F18B801E3A95BCA /* FontMetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D190EA51A8116C07B8A9FE75A2BA5 /* FontMetricsProtocol.swift */; };
+		E066E97DFC89961BEEE791A47B95F21B /* FontMetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D190EA51A8116C07B8A9FE75A2BA5 /* FontMetricsProtocol.swift */; };
 		E181395E73163EB702FCE9A21403D67B /* pb_encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AF35C8654A42502BF305E0BA950C1CE /* pb_encode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1959EA54A2CBA1858855C530C844337 /* FIRNetworkConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D3B80236AC5656B8A1CE4DDFF22B46 /* FIRNetworkConstants.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E4F1BC8DD672439E55E6100FDA4D5E28 /* String+ContentSizeCategoryString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94A1D56303FF57A1B8F0C05296C5F11 /* String+ContentSizeCategoryString.swift */; };
+		E4BBF13F7DF11E7FB5CF070C5C76715F /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDCD3BD871F42C685B898A7349734B3 /* FontMetricsProvider.swift */; };
 		E5A5D0A0FE946574D88719130B234B84 /* FIRErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 02A49616353F6F821D62B93F52C6C9FA /* FIRErrorCode.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E5D01D1436ED6AED3103E3ECA01F6C4E /* FIRMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8FA514DD06703EF6D66CFE7AE5A267 /* FIRMutableDictionary.m */; };
+		EA7C4F28123C877FD37723575F6FEFD7 /* osVersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D74FBF88D39DAA91C6F8910E7E7822 /* osVersionProvider.swift */; };
 		EAB71E2333316227F4AA7647B238DBA5 /* Pods-Example-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 393666339E4A3CB66433D5FBB78A2358 /* Pods-Example-macOS-dummy.m */; };
 		EBDEB68E8A470B9A82FA5AF8315E1CC4 /* FIRErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 69E137529C4204E56464EE4FE4CA5651 /* FIRErrors.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EC8966FD45AB2385B3D5E716CF525293 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7846D8D6B365633568F17F632DA1EF1E /* Notifications.swift */; };
 		ECDED525D94D5EB2C6E2A2430C263091 /* FIRApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E11AFFEF6177A4BA5AF703C3D8AB975 /* FIRApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFC8479B992E561F5EAE6E1522C5E7D5 /* FontMetricsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72D2CDBE108B81ADDAA5D98D6CB60EA /* FontMetricsProviderProtocol.swift */; };
+		EDFBE91ECA311D46176DEBA4F01E8B67 /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14FFF5B596756371F3E358CC799F757 /* FontMetrics.swift */; };
+		EE214F27F226C799AAE6CF32CCEB4BFA /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD1BA561ABFA2FAD955904B34195415 /* AppKit.framework */; };
+		EFD7E8A81EED1395AB14C25880300DEC /* StatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E5B1AC236BE647781F4758DDABBA50 /* StatusesProtocol.swift */; };
 		F14DE07709E12D0D1913F2590548B202 /* FIRNetworkMessageCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E55D04ACC2EFDDB0912797221940155 /* FIRNetworkMessageCode.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F16E09948B12272E743CEC8317D36AF2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7206F26509F9E93BF291F5430275C31 /* Cocoa.framework */; };
+		F1D89310C873E4F00A3B2C530DD0471F /* UIContentSizeCategory+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791691A876938EE9CBC05F9BAFAC4698 /* UIContentSizeCategory+stringValue.swift */; };
+		F26E333B65A09B4CED8E43383CD9702F /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E71F32595ECF52AE4B75AF28699CE84 /* FeatureStatus.swift */; };
 		F48F32411C56B14902BD1CD937E74716 /* FIRAnalyticsConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 9988FDF489DF308DC3EA4E54B3628A9C /* FIRAnalyticsConfiguration.m */; };
+		F4BEE595000452E8DC37703656A0DAE9 /* HandicapEnabledMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7147FCFDE7EA9BDECED9E4E1A5D20EF0 /* HandicapEnabledMode.swift */; };
 		F4D8DA24C4BF579C3BC481E2C376A988 /* FIRVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 98938884F690715C73A6951EF755752E /* FIRVersion.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F64F86324983F0A13FB1DE74634B505C /* OsVersionProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F88B6F42922EC0382DA58ACE512CB9 /* OsVersionProviderProtocol.swift */; };
+		F6021F4E4DC1D1D2A465D7102764CD8F /* String+ContentSizeCategoryString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EE8EA546E98B3912A75F2AB5693747 /* String+ContentSizeCategoryString.swift */; };
 		F6E4719DEDBA73D6404445A113521CA2 /* FIROptionsInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 27CDD25807B191B2288C92EC042688A8 /* FIROptionsInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F749DDD88794AF4B01C4649DA22ABF0C /* Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766517003EFD18421F5BBD2FA72F68FB /* Statuses.swift */; };
 		F82C7DF4CBBE4EFF86EEB12C209720EB /* FIRNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0248DFF438CB92F39CAF62CFD5632135 /* FIRNetwork.m */; };
-		F8FCE47FBFA06210112ADE6783970A19 /* UIFont+ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F92D5AC7AF6C514ACD50A4A4F6B6E /* UIFont+ScaledFont.swift */; };
-		F9A239B693B8BD8CCC73291ED7F7D349 /* FontMetricsSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E0CA3C698BF01C2DF8DF0DD5B504D /* FontMetricsSupport.swift */; };
+		F89FD756516107C3B79AF3D20C36A829 /* UIFont+ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F92D5AC7AF6C514ACD50A4A4F6B6E /* UIFont+ScaledFont.swift */; };
+		F94247DED7CAF15E05814F0C5C48CE0D /* ContentSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A686A77DDF3C9E5964F274CA86DDE6 /* ContentSizeHelper.swift */; };
 		F9D92BA503505CB48EF4ECF0DDF57686 /* nanopb-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1B5A15C1F8C32F06C8D4A56D1928A1 /* nanopb-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA06A9DBC2A323D615164A4F5E750155 /* FontMetricsSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E0CA3C698BF01C2DF8DF0DD5B504D /* FontMetricsSupport.swift */; };
+		FA2BC1F78BD247DC14FBF4E1159D11A2 /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411904516D85C8015674F2083DACA336 /* NotificationCenterProtocol.swift */; };
 		FA5FD415B2981BB2D8F0DBEAC41F705B /* FIROptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B2702BFD69EA4CE5E3E812752C4BF8A /* FIROptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB11BD2C3420AB15D25927163B7B5883 /* FIRAppInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = CD705AF34BED72550503B8EBE7B4FB75 /* FIRAppInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		FCACAF077993DF21F5E359FC6747AA37 /* Bool+statusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C5549FFD82D29806638153D8FC977 /* Bool+statusString.swift */; };
-		FDE38F96359CED9872CD48C76ECA4C9D /* Bool+statusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C5549FFD82D29806638153D8FC977 /* Bool+statusString.swift */; };
 		FDF3FB90B18F1F4C211F38110EE750A3 /* FIRApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBBB57B1AA28CC8D0453446FC18BD76 /* FIRApp.m */; };
 		FE57FA66A59CFE7BF9DEE193BA04EA63 /* FirebaseCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB2E5437754B6FD0BA755EBCA732ACB /* FirebaseCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FED1AD0E9E798183D5552BFCC2FCC4B5 /* StatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC87670D0581B830D2ED14AAAB3CF9EF /* StatusesProtocol.swift */; };
-		FFC257FF0E5ED5C32FFEFCCC7EF03C18 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857AB1A30662052B83FACE08C7013D72 /* Notification+Name.swift */; };
+		FFA42B152E309F82F4A621064D64F5B9 /* String+ContentSizeCategoryString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EE8EA546E98B3912A75F2AB5693747 /* String+ContentSizeCategoryString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,21 +217,21 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 459F697B0D698520BFF35865FCBF665E;
+			remoteGlobalIDString = 767411F4B2B9937AD3D2D6E8754205D3;
 			remoteInfo = "Capable-watchOS";
 		};
 		145888559836445D4B89EB911F98CE86 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 772E83B1F29BCC166F64B1C89B809321;
+			remoteGlobalIDString = 0A0A1C8F9DDDC08AFEAD7434CD08F9C2;
 			remoteInfo = "Capable-tvOS";
 		};
 		1A04429221444E288C4F844F43EDF0F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 26C7DF67B5611BCD9D80D6C1874BFB27;
+			remoteGlobalIDString = 062792007CC97883245C7FE87279BA09;
 			remoteInfo = "Capable-macOS";
 		};
 		34153FB5DD40AED0D56990975A15139A /* PBXContainerItemProxy */ = {
@@ -234,7 +266,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AD5538D261863A9D2A76FE6A2382703D;
+			remoteGlobalIDString = 4950B8A3D65C8D54CA06A76BBF9864C1;
 			remoteInfo = "Capable-iOS";
 		};
 /* End PBXContainerItemProxy section */
@@ -250,6 +282,7 @@
 		041C9A2BFD1F1D216D649E6322B988C3 /* Pods_Example_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example_tvOS.framework; path = "Pods-Example-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05414CF4FE3E0CC3B2616FB49AA50117 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		06DDFC916C844F72DF9864BB093DE568 /* FIRAnalyticsConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAnalyticsConfiguration.h; path = Firebase/Core/Public/FIRAnalyticsConfiguration.h; sourceTree = "<group>"; };
+		083160104C946ABC1818F1B1BF631E23 /* Notification+Name.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 		08982403F917D0821F51ECD6B7AB73FC /* FIRNetworkURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRNetworkURLSession.h; path = Firebase/Core/Private/FIRNetworkURLSession.h; sourceTree = "<group>"; };
 		0911E14934BA3060470911532298406B /* Pods-Example-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-iOS-umbrella.h"; sourceTree = "<group>"; };
 		09889C06B7691AF8F23CBF5E7B7B1CC2 /* FIRNetworkURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRNetworkURLSession.m; path = Firebase/Core/FIRNetworkURLSession.m; sourceTree = "<group>"; };
@@ -259,20 +292,24 @@
 		0D9EFFCA76DE09F44F62463719227604 /* Capable-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Capable-iOS.xcconfig"; sourceTree = "<group>"; };
 		0E0B09AB63220695C9890C01298C2150 /* FIRReachabilityChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRReachabilityChecker.m; path = Firebase/Core/FIRReachabilityChecker.m; sourceTree = "<group>"; };
 		0E3683B6933CC3F28C48ABA45527E9A4 /* Capable-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Capable-macOS.modulemap"; path = "../Capable-macOS/Capable-macOS.modulemap"; sourceTree = "<group>"; };
+		0E71F32595ECF52AE4B75AF28699CE84 /* FeatureStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeatureStatus.swift; sourceTree = "<group>"; };
 		0FA055561E110866283D54321D7754CE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Capable-watchOS/Info.plist"; sourceTree = "<group>"; };
 		110B44B3784847EF2D3663F7CD3ED06C /* nanopb.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.xcconfig; sourceTree = "<group>"; };
 		117277E74A0DFC6EA6CBB2EC4ABC3A26 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Capable.framework; path = "Capable-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12A0213ECB5C44145C168C95117233CB /* FIRNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRNetwork.h; path = Firebase/Core/Private/FIRNetwork.h; sourceTree = "<group>"; };
+		13FE8E208C1AEDD4EBF1E1577FE66569 /* NotificationsProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationsProtocol.swift; sourceTree = "<group>"; };
 		15261BFCE79EC05A6283D15F2983AA27 /* Pods-Example-watchOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-watchOS-frameworks.sh"; sourceTree = "<group>"; };
 		1739594954F1AC2E1BABB1E53518A04E /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = CoreOnly/Sources/Firebase.h; sourceTree = "<group>"; };
 		1751866E6712CEB8817CE241A3E245F9 /* Pods_Example_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example_macOS.framework; path = "Pods-Example-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF35C8654A42502BF305E0BA950C1CE /* pb_encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
+		1B19614403D9FAEF3378F8958151EF50 /* CapableFeature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CapableFeature.swift; sourceTree = "<group>"; };
 		1BDCD3BD871F42C685B898A7349734B3 /* FontMetricsProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FontMetricsProvider.swift; sourceTree = "<group>"; };
 		1D9A41D9CD3633046FAA8E9377506E45 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DA754A2D79F81B023729CCFB24377CC /* Pods-Example-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-iOS-dummy.m"; sourceTree = "<group>"; };
 		1E41D3120CCE01C2B9AE5120ABB170CD /* FIRBundleUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRBundleUtil.h; path = Firebase/Core/Private/FIRBundleUtil.h; sourceTree = "<group>"; };
 		2016DACF67FEDDA8A819A03A5826F09E /* Pods-Example-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example-macOS.modulemap"; sourceTree = "<group>"; };
 		220438936C92C5EA69C0D2778864308C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Capable-tvOS/Info.plist"; sourceTree = "<group>"; };
+		25EE8EA546E98B3912A75F2AB5693747 /* String+ContentSizeCategoryString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+ContentSizeCategoryString.swift"; sourceTree = "<group>"; };
 		27CDD25807B191B2288C92EC042688A8 /* FIROptionsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIROptionsInternal.h; path = Firebase/Core/Private/FIROptionsInternal.h; sourceTree = "<group>"; };
 		2A9D26857D9AF01D8737D99AFE7453CA /* FirebaseCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FirebaseCore.xcconfig; sourceTree = "<group>"; };
 		2BDBC8F8C77D349D2625246E1C7FB22A /* FIRReachabilityChecker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRReachabilityChecker.h; path = Firebase/Core/Private/FIRReachabilityChecker.h; sourceTree = "<group>"; };
@@ -280,25 +317,29 @@
 		2E11AFFEF6177A4BA5AF703C3D8AB975 /* FIRApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRApp.h; path = Firebase/Core/Public/FIRApp.h; sourceTree = "<group>"; };
 		2FD55289D6BC49A8D0B9958F00BCBD3A /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Capable.framework; path = "Capable-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		306F92D5AC7AF6C514ACD50A4A4F6B6E /* UIFont+ScaledFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIFont+ScaledFont.swift"; sourceTree = "<group>"; };
+		30C1D04A6FF0FA201BCE6F6303460624 /* FeatureNotifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeatureNotifications.swift; sourceTree = "<group>"; };
 		30CC48889537975230BE014DBC32D965 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3112E2EE1FE143F130D66A4D373F8BF1 /* Pods-Example-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		31326955FBBC1A90C3FFDA8AE8E47ABA /* FIRAnalyticsConfiguration+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FIRAnalyticsConfiguration+Internal.h"; path = "Firebase/Core/Private/FIRAnalyticsConfiguration+Internal.h"; sourceTree = "<group>"; };
 		33DE7920D29E7AE5BB3D64A26DE6AB7C /* Pods-Example-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example-iOS.modulemap"; sourceTree = "<group>"; };
 		393666339E4A3CB66433D5FBB78A2358 /* Pods-Example-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-macOS-dummy.m"; sourceTree = "<group>"; };
 		3945D8F5BACE87E1340E30AC53034EFE /* Pods_Example_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example_watchOS.framework; path = "Pods-Example-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BF18FA3BDF0376E0A65D04EE43B3A6D /* NotificationsProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationsProtocol.swift; sourceTree = "<group>"; };
 		3D82C8081D7C9507005BF23B1E2FA897 /* Pods-Example-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		3DB221F01CFCDB216DAB78BC6F80907A /* Pods-Example-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-iOS-resources.sh"; sourceTree = "<group>"; };
+		3DB836851E8B7BC671DEF7608EC033D1 /* FeatureStatuses.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeatureStatuses.swift; sourceTree = "<group>"; };
 		3E55D04ACC2EFDDB0912797221940155 /* FIRNetworkMessageCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRNetworkMessageCode.h; path = Firebase/Core/Private/FIRNetworkMessageCode.h; sourceTree = "<group>"; };
 		3F455D8305AD3066B56682CAF431756E /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Answers.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
+		411904516D85C8015674F2083DACA336 /* NotificationCenterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationCenterProtocol.swift; sourceTree = "<group>"; };
 		4164D0E4C4B41B637C78FD1CEE521E49 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43D33FFA31CE01AA95026554C37AE11A /* FIRNetworkLoggerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRNetworkLoggerProtocol.h; path = Firebase/Core/Private/FIRNetworkLoggerProtocol.h; sourceTree = "<group>"; };
 		44A63F54FA67C549127F44631E364A08 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		45A587D87EE891A8439B14231C2FA34D /* Pods-Example-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		45F5A76D69B879B6A5878B21F814A653 /* AppCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenter.framework; path = "AppCenter-SDK-Apple/iOS/AppCenter.framework"; sourceTree = "<group>"; };
+		48806F652EB22C278EA45D5FED0B2A20 /* Capable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Capable.swift; sourceTree = "<group>"; };
 		493C9978FE90826E235535603F42425C /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Capable.framework; path = "Capable-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C246C058CE5799AB8A77B0655912FC6 /* HandicapStatuses.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandicapStatuses.swift; sourceTree = "<group>"; };
 		4DD1BA561ABFA2FAD955904B34195415 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
-		4E529EB9A9734BB6851AC15C01F61868 /* Capable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Capable.swift; sourceTree = "<group>"; };
+		4E0CAAB95F4439433942D6A9E9AAC400 /* HandicapStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandicapStatus.swift; sourceTree = "<group>"; };
 		55F2245CB424232B2C2490490C7FC0FF /* Pods_Example_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example_watchOS_Extension.framework; path = "Pods-Example-watchOS Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		578388EB1D0B15A1A5A566084494D60E /* Capable-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Capable-tvOS-dummy.m"; path = "../Capable-tvOS/Capable-tvOS-dummy.m"; sourceTree = "<group>"; };
 		5AD76EA337732E2C0710E5FD6098181B /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
@@ -308,19 +349,22 @@
 		5D3A947F8B3CBE84F9BF06C647128FBC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DB2E5437754B6FD0BA755EBCA732ACB /* FirebaseCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FirebaseCore.h; path = Firebase/Core/Public/FirebaseCore.h; sourceTree = "<group>"; };
 		5FE6304A4A6D68215C05EFD37F670D1B /* Pods-Example-watchOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-watchOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		622C5549FFD82D29806638153D8FC977 /* Bool+statusString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bool+statusString.swift"; sourceTree = "<group>"; };
 		62CF8CA121864E7F439FDAA56843C196 /* Pods-Example-macOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-macOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		63D96F6257B20CDB2A1043F2BCDB440E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		642D77B8C7D8DC08D9D6A2D5F97A78FC /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
 		66376D3741CCF1D88AF760BA133044A2 /* FIRAppEnvironmentUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppEnvironmentUtil.h; path = Firebase/Core/third_party/FIRAppEnvironmentUtil.h; sourceTree = "<group>"; };
 		69E137529C4204E56464EE4FE4CA5651 /* FIRErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRErrors.h; path = Firebase/Core/Private/FIRErrors.h; sourceTree = "<group>"; };
 		6B3CE6B0172E8087075915C27E1A1E64 /* Pods-Example-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
-		6B80D98594B1A8CC5F60AEAB7FCD41C3 /* Statuses.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Statuses.swift; sourceTree = "<group>"; };
 		6D8FA514DD06703EF6D66CFE7AE5A267 /* FIRMutableDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRMutableDictionary.m; path = Firebase/Core/FIRMutableDictionary.m; sourceTree = "<group>"; };
 		6E7BCE4BFF89DAA7F64A715B4C857FEA /* Pods-Example-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-tvOS-frameworks.sh"; sourceTree = "<group>"; };
+		7147FCFDE7EA9BDECED9E4E1A5D20EF0 /* HandicapEnabledMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandicapEnabledMode.swift; sourceTree = "<group>"; };
+		72A686A77DDF3C9E5964F274CA86DDE6 /* ContentSizeHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContentSizeHelper.swift; sourceTree = "<group>"; };
 		7336CB72F7B10ED6D3D7661A7B291312 /* nanopb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = nanopb.modulemap; sourceTree = "<group>"; };
 		743D082E87B5400A3270AD0ACB215A44 /* Pods-Example-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-iOS-frameworks.sh"; sourceTree = "<group>"; };
 		76649A98207D0952C1D1DFC68FB7AA3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		766517003EFD18421F5BBD2FA72F68FB /* Statuses.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Statuses.swift; sourceTree = "<group>"; };
+		7846D8D6B365633568F17F632DA1EF1E /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		791691A876938EE9CBC05F9BAFAC4698 /* UIContentSizeCategory+stringValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIContentSizeCategory+stringValue.swift"; sourceTree = "<group>"; };
 		793A9657ADD45D7CA84C3826D8C5B60A /* Capable-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Capable-watchOS.modulemap"; path = "../Capable-watchOS/Capable-watchOS.modulemap"; sourceTree = "<group>"; };
 		79F88B6F42922EC0382DA58ACE512CB9 /* OsVersionProviderProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OsVersionProviderProtocol.swift; sourceTree = "<group>"; };
 		7AB3724488B68B7B5CEDD10DC70EED14 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
@@ -331,9 +375,7 @@
 		828FF846DFD919E98D288B631BC41500 /* Pods-Example-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-tvOS-umbrella.h"; sourceTree = "<group>"; };
 		83241E17DB2FE796BAD5780BEE898B2D /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
 		83E840EB3AD7A7DA3DC99A5E2A842467 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
-		84AE3BDFBE90B33E31EF427408F3376D /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		84C48B1B71BC512F0C1567C38A44DC54 /* Pods-Example-watchOS Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-watchOS Extension-dummy.m"; sourceTree = "<group>"; };
-		857AB1A30662052B83FACE08C7013D72 /* Notification+Name.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 		861E5649B02516209F8E46A96E8A36EF /* FIRConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRConfiguration.h; path = Firebase/Core/Public/FIRConfiguration.h; sourceTree = "<group>"; };
 		88F3C37D0E721EE5369775D289B2A97B /* Pods-Example-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		89C481E0788681AC80C620CFB621CF38 /* FIROptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIROptions.m; path = Firebase/Core/FIROptions.m; sourceTree = "<group>"; };
@@ -363,8 +405,8 @@
 		9DB9048C274F6E6CC996866697709895 /* Pods-Example-watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
 		9E8F1B93F3D2EB65CCD083DF4956003A /* Capable-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Capable-watchOS.xcconfig"; path = "../Capable-watchOS/Capable-watchOS.xcconfig"; sourceTree = "<group>"; };
 		9F94ADADC7929A30A527CEC91029A231 /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
-		A014F4B17A24978818C5D7303601EA15 /* FeatureStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeatureStatus.swift; sourceTree = "<group>"; };
 		A01812BAEEA275C41F297351640E1632 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Capable.framework; path = "Capable-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A803E1B2DA841A1FE591D2C43A19EF /* Handicap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Handicap.swift; sourceTree = "<group>"; };
 		A24ED8774BAE92211868850DCDC62340 /* Pods-Example-watchOS Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-watchOS Extension-acknowledgements.plist"; sourceTree = "<group>"; };
 		A3793E3A079DB398CCA3CB4F603196BC /* Capable-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Capable-iOS-umbrella.h"; sourceTree = "<group>"; };
 		A3AFD7E0F65A81C3B4891053B470BA17 /* FIRAppAssociationRegistration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppAssociationRegistration.h; path = Firebase/Core/Private/FIRAppAssociationRegistration.h; sourceTree = "<group>"; };
@@ -374,10 +416,11 @@
 		A991F33B307DCBE93E61641FCD933B1B /* Capable-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Capable-watchOS-umbrella.h"; path = "../Capable-watchOS/Capable-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		AAFA4AB1A8B0CDA5FD5671ACE716162A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		ACF554FA01458445582A528B04E32572 /* Pods-Example-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		AFEEDC1462462BFC8AFEB23F73A31ABC /* ContentSizeHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContentSizeHelper.swift; sourceTree = "<group>"; };
+		AFA26D774CD6D3FA3789EDF73461300E /* HandicapNotifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HandicapNotifications.swift; sourceTree = "<group>"; };
 		B15D0744F994C251ACE085191509AA29 /* FIRAppEnvironmentUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAppEnvironmentUtil.m; path = Firebase/Core/third_party/FIRAppEnvironmentUtil.m; sourceTree = "<group>"; };
 		B2606FE5F1F763F5A82C79C932C2A675 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27DD1FD7779D96807CF33FCFCA2805D /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
+		B5E5B1AC236BE647781F4758DDABBA50 /* StatusesProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatusesProtocol.swift; sourceTree = "<group>"; };
 		B5FADA2982F4AA61FF518DC6B1CED53B /* Capable-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Capable-tvOS-prefix.pch"; path = "../Capable-tvOS/Capable-tvOS-prefix.pch"; sourceTree = "<group>"; };
 		B70B42936F3A676878AE2C4438553973 /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
 		B7206F26509F9E93BF291F5430275C31 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
@@ -389,12 +432,11 @@
 		BF7A54EE7B7680F6BEC8594AEAFC82D9 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
 		C129A03771D8792BDDBC91EF583EFB7D /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FirebaseCore.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C23E0CA3C698BF01C2DF8DF0DD5B504D /* FontMetricsSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FontMetricsSupport.swift; sourceTree = "<group>"; };
-		C2E119B83EF8A6098A5E9880599F9599 /* CapableFeature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CapableFeature.swift; sourceTree = "<group>"; };
 		C3464316249468025D84F9824E4D9B05 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C375E1AC30CE38BECC931634EF5D53B5 /* Bool+statusString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bool+statusString.swift"; sourceTree = "<group>"; };
 		C52D517D3E20852B3FA3286A4AD432AF /* Pods-Example-watchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example-watchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		C6E0117E5966881CDF53BB446973B7BC /* Capable-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Capable-watchOS-dummy.m"; path = "../Capable-watchOS/Capable-watchOS-dummy.m"; sourceTree = "<group>"; };
 		C8FAB4E10E7F853AD2F014C6988ED6E2 /* Pods-Example-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example-watchOS.modulemap"; sourceTree = "<group>"; };
-		C94A1D56303FF57A1B8F0C05296C5F11 /* String+ContentSizeCategoryString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+ContentSizeCategoryString.swift"; sourceTree = "<group>"; };
 		C9DFEF12ADF7D5FBA5A64A0EF00706BA /* Capable-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Capable-tvOS.modulemap"; path = "../Capable-tvOS/Capable-tvOS.modulemap"; sourceTree = "<group>"; };
 		CD705AF34BED72550503B8EBE7B4FB75 /* FIRAppInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAppInternal.h; path = Firebase/Core/Private/FIRAppInternal.h; sourceTree = "<group>"; };
 		D027DC34587142195EC8EBE3B681A165 /* Pods-Example-watchOS Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-watchOS Extension-frameworks.sh"; sourceTree = "<group>"; };
@@ -407,11 +449,9 @@
 		D72D2CDBE108B81ADDAA5D98D6CB60EA /* FontMetricsProviderProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FontMetricsProviderProtocol.swift; sourceTree = "<group>"; };
 		D73A90D9CF381A81B43D661327A1271B /* Capable-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Capable-iOS.modulemap"; sourceTree = "<group>"; };
 		D7D2E30DBF9F723D28F214894F6A5AF1 /* Pods-Example-macOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-macOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		DC87670D0581B830D2ED14AAAB3CF9EF /* StatusesProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StatusesProtocol.swift; sourceTree = "<group>"; };
 		DCF341A1554480A02F8CD5DFCCFFCE29 /* Pods-Example-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-tvOS-dummy.m"; sourceTree = "<group>"; };
 		DFB7E1AB413C0F8EA8792FFC1DAF8B11 /* Capable-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Capable-watchOS-prefix.pch"; path = "../Capable-watchOS/Capable-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		DFF9C965837D1D924346938D0F1E9D41 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0C026D137BFA25703BDC25F66068EB6 /* UIContentSizeCategory+stringValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIContentSizeCategory+stringValue.swift"; sourceTree = "<group>"; };
 		E2DF3F5954C6B568AC4EA6C8759F197F /* Capable-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Capable-macOS-prefix.pch"; path = "../Capable-macOS/Capable-macOS-prefix.pch"; sourceTree = "<group>"; };
 		E35618C142850A82A9C83A68414FBD2F /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_encode.c; sourceTree = "<group>"; };
 		E48235499503BF11A46A357739A6A5B7 /* Pods-Example-macOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-macOS-frameworks.sh"; sourceTree = "<group>"; };
@@ -441,11 +481,29 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0D3BAC4AF96887ECA3A08478AE7E5751 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF14471A8E16030C8E35B79D94BC03C7 /* Foundation.framework in Frameworks */,
+				A9410590A66797DDC31E48F1D5BF8C31 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		14716C80503FBEDD0B71962193BB1FCA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F16E09948B12272E743CEC8317D36AF2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C0FD4A6D0AA10405F40AFF672D3A6FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A51B3E735C508DA538B488884E949B64 /* Foundation.framework in Frameworks */,
+				705E82DEB43B4946C44695A0357521DC /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,30 +515,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4390A09E3BB1E62933C30CF3985BED71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE214F27F226C799AAE6CF32CCEB4BFA /* AppKit.framework in Frameworks */,
+				D1D85E6115025D522E74D72ED498D375 /* Cocoa.framework in Frameworks */,
+				47A15E1CDF226F6864E7A939C1676305 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		486C952AF3A0AE9AFD1F2F2E8A74CF73 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A35A2907EF7AD95AFB7242D3D17E94F7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5A5C3520D323C72B2560C772F0417793 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4A93FB98462C9A3BECE6AC58334DFC12 /* Foundation.framework in Frameworks */,
-				198CD16E974EF852E3C7679C4313D500 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		661796BFD407166C7CBC3E2D0F51BB0E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A0E196FA7E0B3910020D3D3151FD944 /* AppKit.framework in Frameworks */,
-				D1A870DCE04E02FF183492CB325E6CFB /* Cocoa.framework in Frameworks */,
-				29342A5CAEF158B59F61705D91388EC2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,15 +565,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA181683C97D6F6FD18C5206D9DE469E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				953CCC6D965C920515E434285B17754C /* Foundation.framework in Frameworks */,
-				5F4572D09D615668359BC5667F7E1CAC /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CE41125430BCF410B9E4B1B44E90786F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -534,12 +574,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E07E0587162562A86D47A6F1D935978B /* Frameworks */ = {
+		F6F3B38E5E880FDDF34FA602ED4D6C87 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78B2DEC01EE07F32E415BB1A62FFCFD5 /* Foundation.framework in Frameworks */,
-				64CCB4B55702873DE031BE57F452C4CC /* WatchKit.framework in Frameworks */,
+				32C785375DEF749D6CB8DEBE5F747CE0 /* Foundation.framework in Frameworks */,
+				31001CEDEFBEBD237A1D9FA5241393EA /* WatchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,16 +644,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		08F2520C2B8C25C34E777932AA997819 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				C2E119B83EF8A6098A5E9880599F9599 /* CapableFeature.swift */,
-				A014F4B17A24978818C5D7303601EA15 /* FeatureStatus.swift */,
-			);
-			name = Models;
-			path = Models;
-			sourceTree = "<group>";
-		};
 		0A2890291CF428E36C22CC162411CEE1 /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
@@ -644,15 +674,6 @@
 			path = AppCenter;
 			sourceTree = "<group>";
 		};
-		16A5F225BD484BBF7F7CCEB1E8DE6E5E /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				AFEEDC1462462BFC8AFEB23F73A31ABC /* ContentSizeHelper.swift */,
-			);
-			name = Utilities;
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		1D89E337EACE55882107C6211F63E21A /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
@@ -662,6 +683,20 @@
 			);
 			name = Fabric;
 			path = Fabric;
+			sourceTree = "<group>";
+		};
+		21D5D852F2FDF103E3E6BB1A456284EA /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				48806F652EB22C278EA45D5FED0B2A20 /* Capable.swift */,
+				DF2EF895A0644B2BA4F9253F0C3811C4 /* Extensions */,
+				C1FE18B66BEEA0BCBEEB94D785ABFBEF /* Models */,
+				AE59EF65E9F6EAC9652296046919DC4F /* Notifications */,
+				C674A5767C739CE50837FB3B5C941D5B /* Statuses */,
+				F2E42B80158A4CB8BB42ABDDAEABDC73 /* Utilities */,
+			);
+			name = Features;
+			path = Source/Features;
 			sourceTree = "<group>";
 		};
 		256AAF358D0DAC6FB83ABE3FD288ABFD /* OS X */ = {
@@ -1005,22 +1040,25 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		AE59EF65E9F6EAC9652296046919DC4F /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				30C1D04A6FF0FA201BCE6F6303460624 /* FeatureNotifications.swift */,
+				AFA26D774CD6D3FA3789EDF73461300E /* HandicapNotifications.swift */,
+				411904516D85C8015674F2083DACA336 /* NotificationCenterProtocol.swift */,
+				7846D8D6B365633568F17F632DA1EF1E /* Notifications.swift */,
+				13FE8E208C1AEDD4EBF1E1577FE66569 /* NotificationsProtocol.swift */,
+			);
+			name = Notifications;
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		B19C802291F6E55625EBCAC894BBFBE5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				8D6E0817CC1194C03F2333854C2FF4BD /* Fabric.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B40A25E5E70B3921D137D487E7FFEBFC /* Notifications */ = {
-			isa = PBXGroup;
-			children = (
-				84AE3BDFBE90B33E31EF427408F3376D /* Notifications.swift */,
-				3BF18FA3BDF0376E0A65D04EE43B3A6D /* NotificationsProtocol.swift */,
-			);
-			name = Notifications;
-			path = Notifications;
 			sourceTree = "<group>";
 		};
 		B6172909E192810CCCA9325AB7285C7B /* Support Files */ = {
@@ -1045,6 +1083,19 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		C1FE18B66BEEA0BCBEEB94D785ABFBEF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B19614403D9FAEF3378F8958151EF50 /* CapableFeature.swift */,
+				0E71F32595ECF52AE4B75AF28699CE84 /* FeatureStatus.swift */,
+				A1A803E1B2DA841A1FE591D2C43A19EF /* Handicap.swift */,
+				7147FCFDE7EA9BDECED9E4E1A5D20EF0 /* HandicapEnabledMode.swift */,
+				4E0CAAB95F4439433942D6A9E9AAC400 /* HandicapStatus.swift */,
+			);
+			name = Models;
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C4F5E5B8119547C8C228A3ABFEB3A177 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -1053,11 +1104,13 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		CB9BC97584697E9F182AE3905742D2BA /* Statuses */ = {
+		C674A5767C739CE50837FB3B5C941D5B /* Statuses */ = {
 			isa = PBXGroup;
 			children = (
-				6B80D98594B1A8CC5F60AEAB7FCD41C3 /* Statuses.swift */,
-				DC87670D0581B830D2ED14AAAB3CF9EF /* StatusesProtocol.swift */,
+				3DB836851E8B7BC671DEF7608EC033D1 /* FeatureStatuses.swift */,
+				4C246C058CE5799AB8A77B0655912FC6 /* HandicapStatuses.swift */,
+				766517003EFD18421F5BBD2FA72F68FB /* Statuses.swift */,
+				B5E5B1AC236BE647781F4758DDABBA50 /* StatusesProtocol.swift */,
 			);
 			name = Statuses;
 			path = Statuses;
@@ -1108,13 +1161,25 @@
 		D564CAFFAC93D2507161963479786767 /* Capable */ = {
 			isa = PBXGroup;
 			children = (
-				E1C35FF315008454C40CDA80BC14A954 /* Features */,
+				21D5D852F2FDF103E3E6BB1A456284EA /* Features */,
 				2A6AD0795F1DAAF8EEFC20C462F39F4F /* Fonts */,
 				2E8DC7530139D57286C686DC0827F34E /* Pod */,
 				805032DEED977C506AAA70FBA064E676 /* Support Files */,
 			);
 			name = Capable;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		DF2EF895A0644B2BA4F9253F0C3811C4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C375E1AC30CE38BECC931634EF5D53B5 /* Bool+statusString.swift */,
+				083160104C946ABC1818F1B1BF631E23 /* Notification+Name.swift */,
+				25EE8EA546E98B3912A75F2AB5693747 /* String+ContentSizeCategoryString.swift */,
+				791691A876938EE9CBC05F9BAFAC4698 /* UIContentSizeCategory+stringValue.swift */,
+			);
+			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E02E6FFE84F90A2665A61F07B55449F0 /* Frameworks */ = {
@@ -1126,20 +1191,6 @@
 				45640D410F3C24C0A0622B4A2B98A4BF /* watchOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E1C35FF315008454C40CDA80BC14A954 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				4E529EB9A9734BB6851AC15C01F61868 /* Capable.swift */,
-				F2AC3E3A843B147865C0C5C7D92D39DA /* Extensions */,
-				08F2520C2B8C25C34E777932AA997819 /* Models */,
-				B40A25E5E70B3921D137D487E7FFEBFC /* Notifications */,
-				CB9BC97584697E9F182AE3905742D2BA /* Statuses */,
-				16A5F225BD484BBF7F7CCEB1E8DE6E5E /* Utilities */,
-			);
-			name = Features;
-			path = Source/Features;
 			sourceTree = "<group>";
 		};
 		E44D8684F877E310202AB069F18261B5 /* Pods */ = {
@@ -1158,18 +1209,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		F2AC3E3A843B147865C0C5C7D92D39DA /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				622C5549FFD82D29806638153D8FC977 /* Bool+statusString.swift */,
-				857AB1A30662052B83FACE08C7013D72 /* Notification+Name.swift */,
-				C94A1D56303FF57A1B8F0C05296C5F11 /* String+ContentSizeCategoryString.swift */,
-				E0C026D137BFA25703BDC25F66068EB6 /* UIContentSizeCategory+stringValue.swift */,
-			);
-			name = Extensions;
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		F2C2494CED27CF744E2FD8DC9D7745F9 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -1177,6 +1216,15 @@
 				76649A98207D0952C1D1DFC68FB7AA3C /* UIKit.framework */,
 			);
 			name = tvOS;
+			sourceTree = "<group>";
+		};
+		F2E42B80158A4CB8BB42ABDDAEABDC73 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				72A686A77DDF3C9E5964F274CA86DDE6 /* ContentSizeHelper.swift */,
+			);
+			name = Utilities;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		F3B7FF6BB665A8F37EFAC724B23B0B86 /* Frameworks */ = {
@@ -1206,6 +1254,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2C676F6B64A9193086E1606B8D179F4D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CDA39BB9D3F3D345590C92A624CF49D /* Capable-watchOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3BC8A0CB9A8C097737D6A2D4ED1BDA35 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1226,11 +1282,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A80AAF46C4C83012F4B3EE9DD5C3BBE /* Headers */ = {
+		66BFB8A99B89BCF64453AB2023188E80 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B78BDE825EE7555F9D49AA9E131785E /* Capable-watchOS-umbrella.h in Headers */,
+				803759F9F51C9A64A0006E334EE16F45 /* Capable-macOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8072BED1AE525BFFA143B3557CB0FBF1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				638EE1A9434CCA3AF47D400D0424FCCA /* Capable-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1244,35 +1308,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8890794CC4B56EC435DC8186E7F28297 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B0A21EB9C4F13F4B984EDC2498B9F7A7 /* Capable-tvOS-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9FBD85AA34276D8EA0C5F778E30330D5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				77DCE5FE8DCD17664BAFDE801054B001 /* Pods-Example-watchOS-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1D96920C148DDA0F0D8DAB2AE0D5EDA /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				443255FA147CBF1796E1FF2CBB46FB4B /* Capable-iOS-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BBC22165B4B1DEFFC0C343E445E6159F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				05B9677D6BEC94BB1A798855CF1D25A1 /* Capable-macOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1316,6 +1356,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7A5FAD3D33AF582866CED2E7A7F9ACA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4E15C2F6929EAD1E12939180CA4E29D /* Capable-tvOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC4E1DDE2B78C85BB723B525945B51C7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1327,6 +1375,40 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		062792007CC97883245C7FE87279BA09 /* Capable-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 109F7FEDE69D2849A7B625973D275BAE /* Build configuration list for PBXNativeTarget "Capable-macOS" */;
+			buildPhases = (
+				A29B2725BE3EF8CDAD18E9A2B9CF5578 /* Sources */,
+				4390A09E3BB1E62933C30CF3985BED71 /* Frameworks */,
+				66BFB8A99B89BCF64453AB2023188E80 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Capable-macOS";
+			productName = "Capable-macOS";
+			productReference = 2FD55289D6BC49A8D0B9958F00BCBD3A /* Capable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0A0A1C8F9DDDC08AFEAD7434CD08F9C2 /* Capable-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A5EFC2DBE18E22B7BBC0C98DF8AFD43 /* Build configuration list for PBXNativeTarget "Capable-tvOS" */;
+			buildPhases = (
+				9E1B35678E31690B965654AB430D05B9 /* Sources */,
+				1C0FD4A6D0AA10405F40AFF672D3A6FE /* Frameworks */,
+				E7A5FAD3D33AF582866CED2E7A7F9ACA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Capable-tvOS";
+			productName = "Capable-tvOS";
+			productReference = A01812BAEEA275C41F297351640E1632 /* Capable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		1BC96BED8E82CC4984352C8705A764D8 /* FirebaseCore */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E2CFBFB1D71ECBB0CAC96391D572369 /* Build configuration list for PBXNativeTarget "FirebaseCore" */;
@@ -1343,23 +1425,6 @@
 			name = FirebaseCore;
 			productName = FirebaseCore;
 			productReference = C129A03771D8792BDDBC91EF583EFB7D /* FirebaseCore.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		26C7DF67B5611BCD9D80D6C1874BFB27 /* Capable-macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7BBB0C5B27DE1DBAE09723CD5CD01405 /* Build configuration list for PBXNativeTarget "Capable-macOS" */;
-			buildPhases = (
-				09B71BF797C4E3D5EB815637595ECD52 /* Sources */,
-				661796BFD407166C7CBC3E2D0F51BB0E /* Frameworks */,
-				BBC22165B4B1DEFFC0C343E445E6159F /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Capable-macOS";
-			productName = "Capable-macOS";
-			productReference = 2FD55289D6BC49A8D0B9958F00BCBD3A /* Capable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		29E434FB9FDD7AB6C69A918DD41A0904 /* Pods-Example-watchOS */ = {
@@ -1418,21 +1483,21 @@
 			productReference = 1751866E6712CEB8817CE241A3E245F9 /* Pods_Example_macOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		459F697B0D698520BFF35865FCBF665E /* Capable-watchOS */ = {
+		4950B8A3D65C8D54CA06A76BBF9864C1 /* Capable-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF85E868468CF96447AA2EBD9A417D0F /* Build configuration list for PBXNativeTarget "Capable-watchOS" */;
+			buildConfigurationList = 5E3403544626B51FF2A9CB4DF7B40E40 /* Build configuration list for PBXNativeTarget "Capable-iOS" */;
 			buildPhases = (
-				1DA6EA9F7C4213C0831EB1D5B328F7FB /* Sources */,
-				E07E0587162562A86D47A6F1D935978B /* Frameworks */,
-				5A80AAF46C4C83012F4B3EE9DD5C3BBE /* Headers */,
+				10DB6C71C3B5CB279F93ED8212EB2CDB /* Sources */,
+				0D3BAC4AF96887ECA3A08478AE7E5751 /* Frameworks */,
+				8072BED1AE525BFFA143B3557CB0FBF1 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Capable-watchOS";
-			productName = "Capable-watchOS";
-			productReference = 493C9978FE90826E235535603F42425C /* Capable.framework */;
+			name = "Capable-iOS";
+			productName = "Capable-iOS";
+			productReference = 117277E74A0DFC6EA6CBB2EC4ABC3A26 /* Capable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		65B5D3B0561AC5F0CB291A87E09F83E4 /* Pods-Example-tvOS */ = {
@@ -1453,38 +1518,21 @@
 			productReference = 041C9A2BFD1F1D216D649E6322B988C3 /* Pods_Example_tvOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		772E83B1F29BCC166F64B1C89B809321 /* Capable-tvOS */ = {
+		767411F4B2B9937AD3D2D6E8754205D3 /* Capable-watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7C185530F9946CBE0467178C8887AF10 /* Build configuration list for PBXNativeTarget "Capable-tvOS" */;
+			buildConfigurationList = A2280F1EFECE69CB74B6D2981EBB20C3 /* Build configuration list for PBXNativeTarget "Capable-watchOS" */;
 			buildPhases = (
-				10ACEF2EAC3D228B10FA45AAAFD06EFF /* Sources */,
-				CA181683C97D6F6FD18C5206D9DE469E /* Frameworks */,
-				8890794CC4B56EC435DC8186E7F28297 /* Headers */,
+				47A22AB805DEEA814A1B97A141B5CEF7 /* Sources */,
+				F6F3B38E5E880FDDF34FA602ED4D6C87 /* Frameworks */,
+				2C676F6B64A9193086E1606B8D179F4D /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Capable-tvOS";
-			productName = "Capable-tvOS";
-			productReference = A01812BAEEA275C41F297351640E1632 /* Capable.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		AD5538D261863A9D2A76FE6A2382703D /* Capable-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F5A584516EC0B8F63E2459DACDA7508C /* Build configuration list for PBXNativeTarget "Capable-iOS" */;
-			buildPhases = (
-				DAD3F7528A33C0BA8336FA297668A02E /* Sources */,
-				5A5C3520D323C72B2560C772F0417793 /* Frameworks */,
-				B1D96920C148DDA0F0D8DAB2AE0D5EDA /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Capable-iOS";
-			productName = "Capable-iOS";
-			productReference = 117277E74A0DFC6EA6CBB2EC4ABC3A26 /* Capable.framework */;
+			name = "Capable-watchOS";
+			productName = "Capable-watchOS";
+			productReference = 493C9978FE90826E235535603F42425C /* Capable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */ = {
@@ -1560,10 +1608,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AD5538D261863A9D2A76FE6A2382703D /* Capable-iOS */,
-				26C7DF67B5611BCD9D80D6C1874BFB27 /* Capable-macOS */,
-				772E83B1F29BCC166F64B1C89B809321 /* Capable-tvOS */,
-				459F697B0D698520BFF35865FCBF665E /* Capable-watchOS */,
+				4950B8A3D65C8D54CA06A76BBF9864C1 /* Capable-iOS */,
+				062792007CC97883245C7FE87279BA09 /* Capable-macOS */,
+				0A0A1C8F9DDDC08AFEAD7434CD08F9C2 /* Capable-tvOS */,
+				767411F4B2B9937AD3D2D6E8754205D3 /* Capable-watchOS */,
 				1BC96BED8E82CC4984352C8705A764D8 /* FirebaseCore */,
 				F3535EDFA606E7F458C510BC81D8F03A /* GoogleToolboxForMac */,
 				E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */,
@@ -1577,87 +1625,39 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		09B71BF797C4E3D5EB815637595ECD52 /* Sources */ = {
+		10DB6C71C3B5CB279F93ED8212EB2CDB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCACAF077993DF21F5E359FC6747AA37 /* Bool+statusString.swift in Sources */,
-				3486B108FB5DE5806BE05394F6F265D1 /* Capable-macOS-dummy.m in Sources */,
-				46DD12541A93BC307BF3CB6937BAAAA5 /* Capable.swift in Sources */,
-				1FFCC1AFD491BA0121CF9C2E345F1247 /* CapableFeature.swift in Sources */,
-				9A8CB6092FD0B51DC3033399443B47C4 /* ContentSizeHelper.swift in Sources */,
-				2AC8E5D368E26D5B25AFE96FDB91B585 /* FeatureStatus.swift in Sources */,
-				872C8BCAEB235BE25F2771C0638EA1FD /* FontMetrics.swift in Sources */,
-				9DB24F6459C387B9C524415FEEBC6F96 /* FontMetricsProtocol.swift in Sources */,
-				E089D1870DDAFAC43270FFA2F895FF9B /* FontMetricsProvider.swift in Sources */,
-				BD15D3DF95E13D0EACD5B59968B3D035 /* FontMetricsProviderProtocol.swift in Sources */,
-				8FD261A289311FA20BBE0FC54CAB8BDD /* FontMetricsSupport.swift in Sources */,
-				10D39B2E9A97B7DD32A085810999F784 /* Notification+Name.swift in Sources */,
-				D2243982CEC99FA5FBB8D495C06F85A9 /* Notifications.swift in Sources */,
-				0398856F1F02455557C8EC82ACD3B2C2 /* NotificationsProtocol.swift in Sources */,
-				78284B5D0194D355A4E0CD76680FC559 /* osVersionProvider.swift in Sources */,
-				F64F86324983F0A13FB1DE74634B505C /* OsVersionProviderProtocol.swift in Sources */,
-				2CCF0900B6069FE0F6EBB6DAFCBF18D9 /* Statuses.swift in Sources */,
-				9F8624A19F7BF0041CAF3D0C9B1C6ECD /* StatusesProtocol.swift in Sources */,
-				1E072DA26D9220E239D8D519ADAAC7CC /* String+ContentSizeCategoryString.swift in Sources */,
-				6044E0A80B0C08EC1DC423EC8C123353 /* UIContentSizeCategory+stringValue.swift in Sources */,
-				8D35108458F303A7F283C9DC7B1D2B08 /* UIFont+ScaledFont.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		10ACEF2EAC3D228B10FA45AAAFD06EFF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FDE38F96359CED9872CD48C76ECA4C9D /* Bool+statusString.swift in Sources */,
-				C9FB5934A14B6F52345FD392EBE2DCE2 /* Capable-tvOS-dummy.m in Sources */,
-				4B61DA9AEC340A9B764ED34D4E2A7FFC /* Capable.swift in Sources */,
-				5FCE2C52090D5FA5877D3AC9C1ED9E35 /* CapableFeature.swift in Sources */,
-				4062F34902E7EB039082FCB52DED2104 /* ContentSizeHelper.swift in Sources */,
-				644567324CCF37C7B946E374C280BC06 /* FeatureStatus.swift in Sources */,
-				B5DA83CD9D710950BE46E239DA9A9062 /* FontMetrics.swift in Sources */,
-				C8BABCC8D73337AA1F1058A7B35880E0 /* FontMetricsProtocol.swift in Sources */,
-				7A68E82D51EFB124D6F40CC3CF9F2ED0 /* FontMetricsProvider.swift in Sources */,
-				A8B5DD95C72AEB0576ABFE25FF9A8B6B /* FontMetricsProviderProtocol.swift in Sources */,
-				0FBDB0D4B6C5724DA66D69CA4E24A69A /* FontMetricsSupport.swift in Sources */,
-				97FD1FB41C327860306CD3ACA972CBA3 /* Notification+Name.swift in Sources */,
-				953092EDB3651D74176E1AECF604833D /* Notifications.swift in Sources */,
-				324659DF0509182402E290C67A70C06B /* NotificationsProtocol.swift in Sources */,
-				BF87304D96388E6FC0E8ADE95090C5AE /* osVersionProvider.swift in Sources */,
-				8ADAD72B5FD2FCA42BD5C5920E29318A /* OsVersionProviderProtocol.swift in Sources */,
-				5B0D8276BB7ACE95D77A45E36D0CA9D3 /* Statuses.swift in Sources */,
-				49D38903BC68AA6430A02F53F3821AB1 /* StatusesProtocol.swift in Sources */,
-				E4F1BC8DD672439E55E6100FDA4D5E28 /* String+ContentSizeCategoryString.swift in Sources */,
-				9634CEBD42A2CE06E2D228B3012BE71B /* UIContentSizeCategory+stringValue.swift in Sources */,
-				93AECD5E16F3A7E2445733E8E37B6ACB /* UIFont+ScaledFont.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1DA6EA9F7C4213C0831EB1D5B328F7FB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				570FD48F3DA79128649DC74E1A9A1407 /* Bool+statusString.swift in Sources */,
-				72969D7F0182492BD98866F72F9AE71A /* Capable-watchOS-dummy.m in Sources */,
-				0ABB0212BBD1E77AF2084ABF7E705B42 /* Capable.swift in Sources */,
-				BB3C28C22D9855EB3145933E5DDE84CD /* CapableFeature.swift in Sources */,
-				754B32D1CEABEBB47FF7F0DDBE37370F /* ContentSizeHelper.swift in Sources */,
-				8B9BC5964D67448FB880EEE1610C8EF2 /* FeatureStatus.swift in Sources */,
-				C82B0B701CBB2259CF5A6CEE2731A264 /* FontMetrics.swift in Sources */,
-				9B7F93E8B94947AFE79B74728D40A0C0 /* FontMetricsProtocol.swift in Sources */,
-				D031481EA4BB1FFA24C051E7C08A8BFE /* FontMetricsProvider.swift in Sources */,
-				DC5FC4716B558B40F6DF768B3509EC3A /* FontMetricsProviderProtocol.swift in Sources */,
-				F9A239B693B8BD8CCC73291ED7F7D349 /* FontMetricsSupport.swift in Sources */,
-				C28255C8E69939A073B02B20154CA6FA /* Notification+Name.swift in Sources */,
-				D15001F6B9B4CB576E2F83488B8F4BDB /* Notifications.swift in Sources */,
-				C227315F05C43DB96C4B342367B0AF74 /* NotificationsProtocol.swift in Sources */,
-				8B0AC15DD673D64305B37F73A9E69D3C /* osVersionProvider.swift in Sources */,
-				67EF4941A0B8039767298286385845D1 /* OsVersionProviderProtocol.swift in Sources */,
-				9C1548A73DA363B907025CE6D7F0397A /* Statuses.swift in Sources */,
-				1F43353E4EA730C917EF6AD60CA385F4 /* StatusesProtocol.swift in Sources */,
-				1AC1CDA76839D64551F3552FD5187A0B /* String+ContentSizeCategoryString.swift in Sources */,
-				571BD7C408E8888E662371D9A6B74F2F /* UIContentSizeCategory+stringValue.swift in Sources */,
-				F8FCE47FBFA06210112ADE6783970A19 /* UIFont+ScaledFont.swift in Sources */,
+				461C6C7DD1B97BF98D3A7728A58EA476 /* Bool+statusString.swift in Sources */,
+				5238C04F3729DA23E944343172DD0BC9 /* Capable-iOS-dummy.m in Sources */,
+				2995997C0F22FB3C1F82199118144FA0 /* Capable.swift in Sources */,
+				A1153A8C531A07C9F5876C8591ADC309 /* CapableFeature.swift in Sources */,
+				9B0CDBD60B925491A1B6D5D220F3CED6 /* ContentSizeHelper.swift in Sources */,
+				972290204E0C8C62F5BB10A6205C322D /* FeatureNotifications.swift in Sources */,
+				8965797C9E6506CDCB5DE1CAEC753263 /* FeatureStatus.swift in Sources */,
+				0C0E580633C32C708FAB855DC5790DDD /* FeatureStatuses.swift in Sources */,
+				18E5C3A74ADA47E92A548FF9D8E64471 /* FontMetrics.swift in Sources */,
+				6C4E5A436389303DE12F9BE41B5BA308 /* FontMetricsProtocol.swift in Sources */,
+				4E39724BA727283BE5223D6F67B5803A /* FontMetricsProvider.swift in Sources */,
+				A5D3D427E9C2A1A822B65E84C9E9569D /* FontMetricsProviderProtocol.swift in Sources */,
+				DD6073E7651AEE2375FD0DB51C62E032 /* FontMetricsSupport.swift in Sources */,
+				3DEA4EECD2E13636CE9971BD5E4CFDC7 /* Handicap.swift in Sources */,
+				CD3F7FEA9CF770C6B23369F535CAFAF9 /* HandicapEnabledMode.swift in Sources */,
+				47CC28B99254B0D7D4F8C918A446A5CF /* HandicapNotifications.swift in Sources */,
+				DC9873BAEE9FD89FB32A4A49B093ADE4 /* HandicapStatus.swift in Sources */,
+				395CCB511B5C5D0B492398B3FA625A2B /* HandicapStatuses.swift in Sources */,
+				4C184F71EB416D3A8953641EB5FA1366 /* Notification+Name.swift in Sources */,
+				FA2BC1F78BD247DC14FBF4E1159D11A2 /* NotificationCenterProtocol.swift in Sources */,
+				A3EB91AAE9287909EC62385C367E58B0 /* Notifications.swift in Sources */,
+				B5C7650242CC2D5B0FAFA587DE943D86 /* NotificationsProtocol.swift in Sources */,
+				EA7C4F28123C877FD37723575F6FEFD7 /* osVersionProvider.swift in Sources */,
+				3E772550CCE059AA8C4F4515C98AE750 /* OsVersionProviderProtocol.swift in Sources */,
+				F749DDD88794AF4B01C4649DA22ABF0C /* Statuses.swift in Sources */,
+				5A77AD8AECB156685C4E2498E1C85FA4 /* StatusesProtocol.swift in Sources */,
+				FFA42B152E309F82F4A621064D64F5B9 /* String+ContentSizeCategoryString.swift in Sources */,
+				341FAAEB3E59DE9AF8C7F4765F01C370 /* UIContentSizeCategory+stringValue.swift in Sources */,
+				6A3497E09E825119622A3FAE7EED8D15 /* UIFont+ScaledFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1681,6 +1681,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		47A22AB805DEEA814A1B97A141B5CEF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				014D7E221E0A3AF8709402557BD3B431 /* Bool+statusString.swift in Sources */,
+				D2F826245DA72F19C51925F057AFE8D5 /* Capable-watchOS-dummy.m in Sources */,
+				D05437C3E31A97E6FA40B81EA58EAEC6 /* Capable.swift in Sources */,
+				2B189B6C85030D6A8D29F944D21F406E /* CapableFeature.swift in Sources */,
+				F94247DED7CAF15E05814F0C5C48CE0D /* ContentSizeHelper.swift in Sources */,
+				519671268442F00B991AB6E72A2476C8 /* FeatureNotifications.swift in Sources */,
+				0367A380D5F1CA46DD6E466F951AA065 /* FeatureStatus.swift in Sources */,
+				50C031708C874F39AF39CE5E8136142B /* FeatureStatuses.swift in Sources */,
+				671BFE0110CBBB37EC7A7B0FA6DBB65C /* FontMetrics.swift in Sources */,
+				E066E97DFC89961BEEE791A47B95F21B /* FontMetricsProtocol.swift in Sources */,
+				E4BBF13F7DF11E7FB5CF070C5C76715F /* FontMetricsProvider.swift in Sources */,
+				405B3419109CC3EFF07C24FDEB812A14 /* FontMetricsProviderProtocol.swift in Sources */,
+				FA06A9DBC2A323D615164A4F5E750155 /* FontMetricsSupport.swift in Sources */,
+				A88BFE7DC8EB239276F1182D533F66DA /* Handicap.swift in Sources */,
+				F4BEE595000452E8DC37703656A0DAE9 /* HandicapEnabledMode.swift in Sources */,
+				3EC286F29C971C70D84445C71F9DBC20 /* HandicapNotifications.swift in Sources */,
+				35E3EC6D96704929DE1B428A0B2A62B7 /* HandicapStatus.swift in Sources */,
+				603D0C4E6F4861EF97755F55C880DF95 /* HandicapStatuses.swift in Sources */,
+				7663B889D9F27EA5CB205E88827BA78C /* Notification+Name.swift in Sources */,
+				3501B43CB86CA67D8215657B32ACCBAF /* NotificationCenterProtocol.swift in Sources */,
+				BDEC04C9A62B76D5804E3F9818F9E21B /* Notifications.swift in Sources */,
+				C69CA8513315080681E7C7ACF6D850BD /* NotificationsProtocol.swift in Sources */,
+				8EBCDF7063FC9DF3D463BFF9911AEC6B /* osVersionProvider.swift in Sources */,
+				A288617FB8C4A63F2356125CA4339337 /* OsVersionProviderProtocol.swift in Sources */,
+				0E2B49395AE7F40D518F26CC0A56AD42 /* Statuses.swift in Sources */,
+				59997B6C9C734AA4A9957AEBA9460304 /* StatusesProtocol.swift in Sources */,
+				DEC8ACC9D12B55587C8E99B14790F0EF /* String+ContentSizeCategoryString.swift in Sources */,
+				F1D89310C873E4F00A3B2C530DD0471F /* UIContentSizeCategory+stringValue.swift in Sources */,
+				6EA396D65149E273483BBE8710D5A3D9 /* UIFont+ScaledFont.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		67AB38A0129BEB8917DC926D8D1DF3D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1697,11 +1733,83 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9E1B35678E31690B965654AB430D05B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40544D0BB05CCED5DAB6800380B70D12 /* Bool+statusString.swift in Sources */,
+				5D0C1E4E8BCD8C108522A3CB510367C8 /* Capable-tvOS-dummy.m in Sources */,
+				937E1E2376D2B69E213762BB12A04131 /* Capable.swift in Sources */,
+				B2654661F803AE97C15EF726A4C4958C /* CapableFeature.swift in Sources */,
+				AE15E5E37AAA04681977822F9B728CFD /* ContentSizeHelper.swift in Sources */,
+				CC5095D2C9AC78CB99ABF7BE2CB8B713 /* FeatureNotifications.swift in Sources */,
+				F26E333B65A09B4CED8E43383CD9702F /* FeatureStatus.swift in Sources */,
+				9D46C38B02DCFD6805D5B70205CCEEB6 /* FeatureStatuses.swift in Sources */,
+				EDFBE91ECA311D46176DEBA4F01E8B67 /* FontMetrics.swift in Sources */,
+				03FF479F8819EE40AEBE248822CAF7F2 /* FontMetricsProtocol.swift in Sources */,
+				CB704D38993949445F37AA0FEDE2516E /* FontMetricsProvider.swift in Sources */,
+				5D0C5E2CF57840BE9BE19F13AC1E854F /* FontMetricsProviderProtocol.swift in Sources */,
+				AF15A43C2BC6791EFA1967C9B0BAD62A /* FontMetricsSupport.swift in Sources */,
+				BA115881184E9CF857582462088BD19F /* Handicap.swift in Sources */,
+				608935B78A85352DDD62855E69554C2D /* HandicapEnabledMode.swift in Sources */,
+				269D07D7C8950018937F4179C308083C /* HandicapNotifications.swift in Sources */,
+				23C9635BB0B266B0B7362C19DCEFF6EE /* HandicapStatus.swift in Sources */,
+				449C60C92CADB674D551E3C6E886AF59 /* HandicapStatuses.swift in Sources */,
+				A149C28163D8ED2258DA9D3F069A5C21 /* Notification+Name.swift in Sources */,
+				40C5145E27D0DF6029AC1E1085A48310 /* NotificationCenterProtocol.swift in Sources */,
+				EC8966FD45AB2385B3D5E716CF525293 /* Notifications.swift in Sources */,
+				9556025CC89C1F6A7721C7222EEDC246 /* NotificationsProtocol.swift in Sources */,
+				B48891EAAB58AB599C32253A2B29AC1F /* osVersionProvider.swift in Sources */,
+				67693258E280A622B84C4F9B76412801 /* OsVersionProviderProtocol.swift in Sources */,
+				9C758FFD8FAD7710CDE9E4E545969347 /* Statuses.swift in Sources */,
+				28727F9BB5A63D2E75DD9EB1BA7D71F8 /* StatusesProtocol.swift in Sources */,
+				60FC7DB281C46D8BF9DBD27E78F8BD47 /* String+ContentSizeCategoryString.swift in Sources */,
+				11EA130FC21D2D61BAC5E601360B37BC /* UIContentSizeCategory+stringValue.swift in Sources */,
+				F89FD756516107C3B79AF3D20C36A829 /* UIFont+ScaledFont.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A06E3B0939AD183E07793E9520CE6A1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5B3052E7D344A6FB2D76A7D399D6B25E /* Pods-Example-tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A29B2725BE3EF8CDAD18E9A2B9CF5578 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3F9C005A3498BEC9C66F7E7928CFEF0 /* Bool+statusString.swift in Sources */,
+				33895C370269BAFD7D3B797BD6CA0200 /* Capable-macOS-dummy.m in Sources */,
+				76C8F12F57DB34FF6C13D15EBD9E56B0 /* Capable.swift in Sources */,
+				46A3876F535426727E282D84CB2A4960 /* CapableFeature.swift in Sources */,
+				5A45D20E89ECA48406C0EE01706D0479 /* ContentSizeHelper.swift in Sources */,
+				987E5859FE72FEEB0475BC9138F3E56F /* FeatureNotifications.swift in Sources */,
+				77CDBD5D5C3C64C9FB542FD8648F83B3 /* FeatureStatus.swift in Sources */,
+				4124BDC16DC459628DCFD5A0B9C4C2ED /* FeatureStatuses.swift in Sources */,
+				74F3E4C9FF847AFFF4327735A7A92D3D /* FontMetrics.swift in Sources */,
+				3DC5524B910C02A393B9B7B38733C516 /* FontMetricsProtocol.swift in Sources */,
+				C6E19F38498D1F7F717046C49285F81E /* FontMetricsProvider.swift in Sources */,
+				3497F9A110801B691149EEAA0E92B9D3 /* FontMetricsProviderProtocol.swift in Sources */,
+				CA9F3C68E335E762E52950F0F698BDB2 /* FontMetricsSupport.swift in Sources */,
+				1A906A3E4835286411FD20014604D65D /* Handicap.swift in Sources */,
+				3B3A827FE6A6558DC3B6C0193F1D3EEF /* HandicapEnabledMode.swift in Sources */,
+				CA8C3454DE4F81E0BF03B9D42B7364B1 /* HandicapNotifications.swift in Sources */,
+				5E159D9809B6C3EBF49BF6BF9D351BB9 /* HandicapStatus.swift in Sources */,
+				9A353AD2D2C12A6450714AC5AFC32C34 /* HandicapStatuses.swift in Sources */,
+				3412A3777C66BCB90F097A56B26EA1B1 /* Notification+Name.swift in Sources */,
+				546E613CF221461B2BFCED55462E5BC2 /* NotificationCenterProtocol.swift in Sources */,
+				86AE09428B5C16B90A16195DE8196389 /* Notifications.swift in Sources */,
+				00818DA47BEF71251643219FE97ABBF5 /* NotificationsProtocol.swift in Sources */,
+				AFBFE0F6C5CA026973C552A76F45284B /* osVersionProvider.swift in Sources */,
+				D4F7277296E5EF146078B236D408BA15 /* OsVersionProviderProtocol.swift in Sources */,
+				8E34F67FB9F70E84DDD082FAD78687A5 /* Statuses.swift in Sources */,
+				EFD7E8A81EED1395AB14C25880300DEC /* StatusesProtocol.swift in Sources */,
+				F6021F4E4DC1D1D2A465D7102764CD8F /* String+ContentSizeCategoryString.swift in Sources */,
+				966EF3ADB2E09101F60A99CCC99D3231 /* UIContentSizeCategory+stringValue.swift in Sources */,
+				2EE366B1921CCBCF3BBA4047641290C2 /* UIFont+ScaledFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1744,34 +1852,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DAD3F7528A33C0BA8336FA297668A02E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ACF27515F025FFC27B8BC1792157E270 /* Bool+statusString.swift in Sources */,
-				D3BC91E9346EFD479B0614BBE15892B0 /* Capable-iOS-dummy.m in Sources */,
-				BD2964C5A09CF852C346C0FE06667295 /* Capable.swift in Sources */,
-				4D8C3DDA14448E465A144AF0C1DCBCE3 /* CapableFeature.swift in Sources */,
-				BA7A9B4BD7595A6B2348D0A8A344404D /* ContentSizeHelper.swift in Sources */,
-				AB0DB35EBDA35C143367668B0A30DFC9 /* FeatureStatus.swift in Sources */,
-				B08B6FCA160153FE41EB74E19F5EBE85 /* FontMetrics.swift in Sources */,
-				E164DE258E4C9A373F18B801E3A95BCA /* FontMetricsProtocol.swift in Sources */,
-				7591190AEB2D6AD298346071ABBD5F5D /* FontMetricsProvider.swift in Sources */,
-				EFC8479B992E561F5EAE6E1522C5E7D5 /* FontMetricsProviderProtocol.swift in Sources */,
-				8A2A162E39CEAC089247EA72F5D7C035 /* FontMetricsSupport.swift in Sources */,
-				FFC257FF0E5ED5C32FFEFCCC7EF03C18 /* Notification+Name.swift in Sources */,
-				906CE4847319541203B4B5D65B3C1E58 /* Notifications.swift in Sources */,
-				D6F4C48A69E2704BD11FBA736D15C9A6 /* NotificationsProtocol.swift in Sources */,
-				4E18BB0DE1C5E8D2C372659A44E2FD47 /* osVersionProvider.swift in Sources */,
-				384A3166EF374499206DA8362C393F26 /* OsVersionProviderProtocol.swift in Sources */,
-				C1C709C6B9C4F1F5608E01B635BC67A1 /* Statuses.swift in Sources */,
-				FED1AD0E9E798183D5552BFCC2FCC4B5 /* StatusesProtocol.swift in Sources */,
-				3744C5B451B40FE2BC400D54A0AF3766 /* String+ContentSizeCategoryString.swift in Sources */,
-				68A79A779C2774B17E1ADE931C766B98 /* UIContentSizeCategory+stringValue.swift in Sources */,
-				29E0EE6B2D727045E2F24DA642B4787C /* UIFont+ScaledFont.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1784,7 +1864,7 @@
 		56C0233AAB34757862F3BB1D01006FFF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Capable-iOS";
-			target = AD5538D261863A9D2A76FE6A2382703D /* Capable-iOS */;
+			target = 4950B8A3D65C8D54CA06A76BBF9864C1 /* Capable-iOS */;
 			targetProxy = BF9BAF017F173592FDA7E36521959779 /* PBXContainerItemProxy */;
 		};
 		59314B77B9905E4AF2DC6666A7408221 /* PBXTargetDependency */ = {
@@ -1796,7 +1876,7 @@
 		5AA40DC4E7FD80D25D780BF51729C184 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Capable-watchOS";
-			target = 459F697B0D698520BFF35865FCBF665E /* Capable-watchOS */;
+			target = 767411F4B2B9937AD3D2D6E8754205D3 /* Capable-watchOS */;
 			targetProxy = 072D4524D63584D5EE52F9000DDD3E20 /* PBXContainerItemProxy */;
 		};
 		95655A12517E11DD065F678183D2E5BE /* PBXTargetDependency */ = {
@@ -1814,13 +1894,13 @@
 		B4ECB2C5DCE5C22CC625E55D80FAE5EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Capable-tvOS";
-			target = 772E83B1F29BCC166F64B1C89B809321 /* Capable-tvOS */;
+			target = 0A0A1C8F9DDDC08AFEAD7434CD08F9C2 /* Capable-tvOS */;
 			targetProxy = 145888559836445D4B89EB911F98CE86 /* PBXContainerItemProxy */;
 		};
 		E95DEAD0D5D4E663A8E3F00ED1532465 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Capable-macOS";
-			target = 26C7DF67B5611BCD9D80D6C1874BFB27 /* Capable-macOS */;
+			target = 062792007CC97883245C7FE87279BA09 /* Capable-macOS */;
 			targetProxy = 1A04429221444E288C4F844F43EDF0F7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1856,39 +1936,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		2443655DB304F0428B1F4BC0F0819710 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5016A61A70CE06064AA3BE16DD0D441 /* Capable-tvOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Capable-tvOS/Capable-tvOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Capable-tvOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Capable-tvOS/Capable-tvOS.modulemap";
-				PRODUCT_MODULE_NAME = Capable;
-				PRODUCT_NAME = Capable;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.1;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.0;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		2717EFC205E5663A167A27B19751DACE /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2089,6 +2136,40 @@
 			};
 			name = Debug;
 		};
+		43FAD4E420755AF3384A7D46C2CB7777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D9EFFCA76DE09F44F62463719227604 /* Capable-iOS.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Capable-iOS/Capable-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Capable-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Capable-iOS/Capable-iOS.modulemap";
+				PRODUCT_MODULE_NAME = Capable;
+				PRODUCT_NAME = Capable;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		450F86CC2D755FAFCFAD24D9C7B2DDA8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 110B44B3784847EF2D3663F7CD3ED06C /* nanopb.xcconfig */;
@@ -2120,6 +2201,39 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		47150C161BD086AEEF309E241618A3F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E8F1B93F3D2EB65CCD083DF4956003A /* Capable-watchOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Capable-watchOS/Capable-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Capable-watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Capable-watchOS/Capable-watchOS.modulemap";
+				PRODUCT_MODULE_NAME = Capable;
+				PRODUCT_NAME = Capable;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
 		};
 		4A27D987A6745DE6307A6340DEB3606F /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2224,74 +2338,6 @@
 			};
 			name = Release;
 		};
-		5A3A460B5B362913B4FF2D9490BDBEBC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B87E69443C70D79786D6D35CF33E530 /* Capable-macOS.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/Capable-macOS/Capable-macOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Capable-macOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MODULEMAP_FILE = "Target Support Files/Capable-macOS/Capable-macOS.modulemap";
-				PRODUCT_MODULE_NAME = Capable;
-				PRODUCT_NAME = Capable;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.1;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		645CAB543DB6670747204530C861A30E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B87E69443C70D79786D6D35CF33E530 /* Capable-macOS.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/Capable-macOS/Capable-macOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Capable-macOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MODULEMAP_FILE = "Target Support Files/Capable-macOS/Capable-macOS.modulemap";
-				PRODUCT_MODULE_NAME = Capable;
-				PRODUCT_NAME = Capable;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.1;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		6A9BAB0942F532431B9BAF6161E5EC8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A9D26857D9AF01D8737D99AFE7453CA /* FirebaseCore.xcconfig */;
@@ -2321,40 +2367,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		6BD072291C83F09F6CD74F720383CCEF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E8F1B93F3D2EB65CCD083DF4956003A /* Capable-watchOS.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Capable-watchOS/Capable-watchOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Capable-watchOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Capable-watchOS/Capable-watchOS.modulemap";
-				PRODUCT_MODULE_NAME = Capable;
-				PRODUCT_NAME = Capable;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.1;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
-			};
-			name = Release;
 		};
 		8B08EA3ADCEFA80F974D9A48BEA98BFB /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2390,7 +2402,41 @@
 			};
 			name = Debug;
 		};
-		8F8277026B7B84D77640292C997C0062 /* Release */ = {
+		8F174E9494A5EB3CE7B9EB1CD961CDDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B87E69443C70D79786D6D35CF33E530 /* Capable-macOS.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Capable-macOS/Capable-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Capable-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Capable-macOS/Capable-macOS.modulemap";
+				PRODUCT_MODULE_NAME = Capable;
+				PRODUCT_NAME = Capable;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		93EA3468B15136C2FF037C1A11DF4750 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D9EFFCA76DE09F44F62463719227604 /* Capable-iOS.xcconfig */;
 			buildSettings = {
@@ -2415,14 +2461,13 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		9EF9BB6F5BD922B72905062E81FC5B82 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2497,66 +2542,35 @@
 			};
 			name = Release;
 		};
-		C44C3A32C5201D0FBCF7C2084B2B8E18 /* Debug */ = {
+		C052692EF16205DA19CA632418501665 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5016A61A70CE06064AA3BE16DD0D441 /* Capable-tvOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Capable-tvOS/Capable-tvOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Capable-tvOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Capable-tvOS/Capable-tvOS.modulemap";
-				PRODUCT_MODULE_NAME = Capable;
-				PRODUCT_NAME = Capable;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.1;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C928A4499814A241B9AE3B059F81A61F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D9EFFCA76DE09F44F62463719227604 /* Capable-iOS.xcconfig */;
+			baseConfigurationReference = 8B87E69443C70D79786D6D35CF33E530 /* Capable-macOS.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Capable-iOS/Capable-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Capable-iOS/Info.plist";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Capable-macOS/Capable-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Capable-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Capable-iOS/Capable-iOS.modulemap";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Capable-macOS/Capable-macOS.modulemap";
 				PRODUCT_MODULE_NAME = Capable;
 				PRODUCT_NAME = Capable;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2633,6 +2647,73 @@
 			};
 			name = Debug;
 		};
+		D80230E9FA670A96148EBA5EA8E2FBD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E8F1B93F3D2EB65CCD083DF4956003A /* Capable-watchOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Capable-watchOS/Capable-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Capable-watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Capable-watchOS/Capable-watchOS.modulemap";
+				PRODUCT_MODULE_NAME = Capable;
+				PRODUCT_NAME = Capable;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+		DD958652F39E8A2447B41B87231AB97C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5016A61A70CE06064AA3BE16DD0D441 /* Capable-tvOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Capable-tvOS/Capable-tvOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Capable-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Capable-tvOS/Capable-tvOS.modulemap";
+				PRODUCT_MODULE_NAME = Capable;
+				PRODUCT_NAME = Capable;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		E39347CDE207FACBCAF82628ED30EACC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D82C8081D7C9507005BF23B1E2FA897 /* Pods-Example-iOS.release.xcconfig */;
@@ -2668,6 +2749,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		E898593AF6F0F01688B8C84A94BFFA20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5016A61A70CE06064AA3BE16DD0D441 /* Capable-tvOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Capable-tvOS/Capable-tvOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Capable-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Capable-tvOS/Capable-tvOS.modulemap";
+				PRODUCT_MODULE_NAME = Capable;
+				PRODUCT_NAME = Capable;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		F258DF1FD990A3F2132D8C1C6E890D44 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2730,42 +2843,18 @@
 			};
 			name = Release;
 		};
-		FA45F3201821392BEF6CB8785E11DD59 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E8F1B93F3D2EB65CCD083DF4956003A /* Capable-watchOS.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Capable-watchOS/Capable-watchOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Capable-watchOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Capable-watchOS/Capable-watchOS.modulemap";
-				PRODUCT_MODULE_NAME = Capable;
-				PRODUCT_NAME = Capable;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.1;
-				TARGETED_DEVICE_FAMILY = 4;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		109F7FEDE69D2849A7B625973D275BAE /* Build configuration list for PBXNativeTarget "Capable-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C052692EF16205DA19CA632418501665 /* Debug */,
+				8F174E9494A5EB3CE7B9EB1CD961CDDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2784,20 +2873,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BBB0C5B27DE1DBAE09723CD5CD01405 /* Build configuration list for PBXNativeTarget "Capable-macOS" */ = {
+		4A5EFC2DBE18E22B7BBC0C98DF8AFD43 /* Build configuration list for PBXNativeTarget "Capable-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				645CAB543DB6670747204530C861A30E /* Debug */,
-				5A3A460B5B362913B4FF2D9490BDBEBC /* Release */,
+				E898593AF6F0F01688B8C84A94BFFA20 /* Debug */,
+				DD958652F39E8A2447B41B87231AB97C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7C185530F9946CBE0467178C8887AF10 /* Build configuration list for PBXNativeTarget "Capable-tvOS" */ = {
+		5E3403544626B51FF2A9CB4DF7B40E40 /* Build configuration list for PBXNativeTarget "Capable-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C44C3A32C5201D0FBCF7C2084B2B8E18 /* Debug */,
-				2443655DB304F0428B1F4BC0F0819710 /* Release */,
+				93EA3468B15136C2FF037C1A11DF4750 /* Debug */,
+				43FAD4E420755AF3384A7D46C2CB7777 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2838,20 +2927,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A2280F1EFECE69CB74B6D2981EBB20C3 /* Build configuration list for PBXNativeTarget "Capable-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47150C161BD086AEEF309E241618A3F8 /* Debug */,
+				D80230E9FA670A96148EBA5EA8E2FBD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A6463CEDD5A9E7834B0A6169FCB3B178 /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BA963D9C3A99AACF877282E78659224 /* Debug */,
 				501616EF3C278436C361C89E8A536669 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BF85E868468CF96447AA2EBD9A417D0F /* Build configuration list for PBXNativeTarget "Capable-watchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FA45F3201821392BEF6CB8785E11DD59 /* Debug */,
-				6BD072291C83F09F6CD74F720383CCEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2870,15 +2959,6 @@
 			buildConfigurations = (
 				08DCEECB267ABEEE7E382A779F100D91 /* Debug */,
 				450F86CC2D755FAFCFAD24D9C7B2DDA8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F5A584516EC0B8F63E2459DACDA7508C /* Build configuration list for PBXNativeTarget "Capable-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C928A4499814A241B9AE3B059F81A61F /* Debug */,
-				8F8277026B7B84D77640292C997C0062 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
