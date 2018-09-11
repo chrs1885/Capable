@@ -17,9 +17,11 @@ import WatchKit
 
 class Notifications: NotificationsProtocol {
     var statusesModule: StatusesProtocol
+    var notificationCenter: NotificationCenter
 
-    required init(statusesModule: StatusesProtocol) {
+    required init(statusesModule: StatusesProtocol, notificationCenter: NotificationCenter = NotificationCenter.default) {
         self.statusesModule = statusesModule
+        self.notificationCenter = notificationCenter
     }
 
     func postNotification(withFeature feature: CapableFeature, statusString: String) {
@@ -105,7 +107,7 @@ extension Notifications {
 // MARK: Handle notifications
 extension Notifications {
     func addObserver(for notificationName: NSNotification.Name, selector: Selector) {
-        NotificationCenter.default.addObserver(
+        self.notificationCenter.addObserver(
             self,
             selector: selector,
             name: notificationName,
