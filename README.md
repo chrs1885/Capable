@@ -101,7 +101,7 @@ let statusMap = capable.statusMap
 ```
 This will return each feature name (key) along with its current value as described in the [accessibility feature overview](#accessibility-feature-overview) section.
 
-<a id="accessibility-status"></a> 
+<a id="handicaps"></a> 
 ### Handicaps - grouped accessibility features
 
 You can also group accessibility features to represent a specific handicap:
