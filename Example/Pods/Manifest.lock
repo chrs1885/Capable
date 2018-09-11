@@ -14,14 +14,14 @@ PODS:
   - FirebaseAnalytics (5.0.1):
     - FirebaseCore (~> 5.0)
     - FirebaseInstanceID (~> 3.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - nanopb (~> 0.3)
   - FirebaseCore (5.0.6):
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseInstanceID (3.1.1):
     - FirebaseCore (~> 5.0)
   - GoogleToolboxForMac/Defines (2.1.4)
-  - GoogleToolboxForMac/NSData+zlib (2.1.4):
+  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -36,9 +36,21 @@ DEPENDENCIES:
   - Fabric
   - Firebase/Core
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Answers
+    - AppCenter
+    - Fabric
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseInstanceID
+    - GoogleToolboxForMac
+    - nanopb
+
 EXTERNAL SOURCES:
   Capable:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   Answers: bca35eedaed069c392d01b9dcb2673e0f77d9926
@@ -54,4 +66,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: a8194e1f92ccc891e4ed7525b28c8beb6d69b302
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0
