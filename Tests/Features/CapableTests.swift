@@ -46,7 +46,7 @@ class CapableTests: QuickSpec {
             #if os(iOS)
             context("after initialization with .largerText feature") {
                 var sut: Capable?
-                var notificationsMock: NotificationsMock?
+                var notificationsMock: FeatureNotificationsMock?
                 var statusesMock: FeatureStatusesMock?
                 var textCategoryString: String?
 
@@ -55,7 +55,7 @@ class CapableTests: QuickSpec {
                     let testTextCategory: UIContentSizeCategory = .accessibilityExtraExtraExtraLarge
                     textCategoryString = testTextCategory.stringValue
                     statusesMock?.textCatagory = testTextCategory
-                    notificationsMock = NotificationsMock(statusesModule: statusesMock!)
+                    notificationsMock = FeatureNotificationsMock(statusesModule: statusesMock!)
                     sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
                 }
 
@@ -91,7 +91,7 @@ class CapableTests: QuickSpec {
             #if os(iOS)
             context("after initialization with a Handicap holding the .largerText feature") {
                 var sut: Capable?
-                var notificationsMock: NotificationsMock?
+                var notificationsMock: HandicapNotificationsMock?
                 var statusesMock: HandicapStatusesMock?
                 var testHandicapName: String?
 
@@ -101,7 +101,7 @@ class CapableTests: QuickSpec {
                     statusesMock = HandicapStatusesMock(withHandicaps: [testHandicap])
                     let testTextCategory: UIContentSizeCategory = .accessibilityExtraExtraExtraLarge
                     statusesMock?.textCatagory = testTextCategory
-                    notificationsMock = NotificationsMock(statusesModule: statusesMock!)
+                    notificationsMock = HandicapNotificationsMock(statusesModule: statusesMock!)
                     sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
                 }
 
@@ -114,12 +114,12 @@ class CapableTests: QuickSpec {
 
             context("when calling isFeatureEnabled") {
                 var sut: Capable?
-                var notificationsMock: NotificationsMock?
+                var notificationsMock: FeatureNotificationsMock?
                 var statusesMock: FeatureStatusesMock?
 
                 beforeEach {
                     statusesMock = FeatureStatusesMock(withFeatures: [])
-                    notificationsMock = NotificationsMock(statusesModule: statusesMock!)
+                    notificationsMock = FeatureNotificationsMock(statusesModule: statusesMock!)
                     sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
                 }
 
@@ -312,7 +312,7 @@ class CapableTests: QuickSpec {
 
             context("when calling isHandicapEnabled") {
                 var sut: Capable?
-                var notificationsMock: NotificationsMock?
+                var notificationsMock: HandicapNotificationsMock?
                 var statusesMock: HandicapStatusesMock?
                 var testHandicapName: String?
                 var testFeatures: [CapableFeature]?
@@ -326,7 +326,7 @@ class CapableTests: QuickSpec {
                     beforeEach {
                         let testHandicap = Handicap(with: testFeatures!, name: testHandicapName!, enabledIf: .allFeaturesEnabled)
                         statusesMock = HandicapStatusesMock(withHandicaps: [testHandicap])
-                        notificationsMock = NotificationsMock(statusesModule: statusesMock!)
+                        notificationsMock = HandicapNotificationsMock(statusesModule: statusesMock!)
                         sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
                     }
 
@@ -357,7 +357,7 @@ class CapableTests: QuickSpec {
                     beforeEach {
                         let testHandicap = Handicap(with: testFeatures!, name: testHandicapName!, enabledIf: .oneFeatureEnabled)
                         statusesMock = HandicapStatusesMock(withHandicaps: [testHandicap])
-                        notificationsMock = NotificationsMock(statusesModule: statusesMock!)
+                        notificationsMock = HandicapNotificationsMock(statusesModule: statusesMock!)
                         sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
                     }
 
