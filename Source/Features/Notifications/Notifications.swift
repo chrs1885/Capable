@@ -127,10 +127,6 @@ extension Notifications {
         self.postNotification(withFeature: .guidedAccess, statusString: self.statusesModule.isGuidedAccessEnabled.statusString)
     }
 
-    @objc func invertColorsStatusChanged(notification: NSNotification) {
-        self.postNotification(withFeature: .invertColors, statusString: self.statusesModule.isInvertColorsEnabled.statusString)
-    }
-
     @objc func largerTextStatusChanged(notification: NSNotification) {
         self.postNotification(withFeature: .largerText, statusString: self.statusesModule.largerTextCatagory.stringValue)
     }
@@ -182,7 +178,7 @@ extension Notifications {
         self.postNotification(withFeature: .reduceMotion, statusString: self.statusesModule.isReduceMotionEnabled.statusString)
     }
 
-    @objc private func voiceOverStatusChanged(notification: NSNotification) {
+    @objc func voiceOverStatusChanged(notification: NSNotification) {
         self.postNotification(withFeature: .voiceOver, statusString: self.statusesModule.isVoiceOverEnabled.statusString)
     }
 }
