@@ -14,8 +14,9 @@ class OverviewController: WKInterfaceController {
 
     struct Content {
         static let featuresTitle = "Features"
+        static let handicapsTitle = "Handicaps"
         static let fontsTitle = "Fonts"
-        static let items = [featuresTitle, fontsTitle]
+        static let items = [featuresTitle, handicapsTitle, fontsTitle]
     }
 
     override func awake(withContext context: Any?) {
@@ -32,6 +33,8 @@ class OverviewController: WKInterfaceController {
         let entryTitle = Content.items[rowIndex]
         if entryTitle == Content.featuresTitle {
             presentController(withName: "Features", context: entryTitle)
+        } else if entryTitle == Content.handicapsTitle {
+            presentController(withName: "Handicaps", context: entryTitle)
         } else if entryTitle == Content.fontsTitle {
             presentController(withName: "Fonts", context: entryTitle)
         }

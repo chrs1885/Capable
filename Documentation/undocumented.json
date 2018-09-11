@@ -1,6 +1,47 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/chris/Documents/Workspace/Capable-iOS/Source/Features/Notifications/NotificationCenterProtocol.swift",
+      "line": 8,
+      "symbol": "NotificationCenterProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/chris/Documents/Workspace/Capable-iOS/Source/Features/Notifications/NotificationCenterProtocol.swift",
+      "line": 9,
+      "symbol": "NotificationCenterProtocol.addObserver(_:selector:name:object:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/chris/Documents/Workspace/Capable-iOS/Source/Features/Notifications/NotificationCenterProtocol.swift",
+      "line": 10,
+      "symbol": "NotificationCenterProtocol.post(name:object:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/chris/Documents/Workspace/Capable-iOS/Source/Features/Notifications/NotificationCenterProtocol.swift",
+      "line": 11,
+      "symbol": "NotificationCenterProtocol.removeObserver(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/chris/Documents/Workspace/Capable-iOS/Source/Features/Statuses/FeatureStatuses.swift",
+      "line": null,
+      "symbol": "FeatureStatuses",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/chris/Documents/Workspace/Capable-iOS/Source/Features/Statuses/HandicapStatuses.swift",
+      "line": null,
+      "symbol": "HandicapStatuses",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/chris/Documents/Workspace/Capable-iOS"
 }

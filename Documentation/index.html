@@ -13,7 +13,7 @@
     <a title="Capable  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Capable Docs</a> (100% documented)</p>
+        <p><a href="index.html">Capable Docs</a> (85% documented)</p>
         <p class="header-right"><a href="https://github.com/chrs1885/Capable"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -33,11 +33,20 @@
               <li class="nav-group-task">
                 <a href="Enums/CapableFeature.html">CapableFeature</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Enums/HandicapEnabledMode.html">HandicapEnabledMode</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/FeatureStatuses.html">FeatureStatuses</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/HandicapStatuses.html">HandicapStatuses</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Extensions/Notification.html">Notification</a>
               </li>
@@ -55,6 +64,9 @@
               <li class="nav-group-task">
                 <a href="Protocols/FontMetricsProtocol.html">FontMetricsProtocol</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Protocols/NotificationCenterProtocol.html">NotificationCenterProtocol</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -65,6 +77,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/FeatureStatus.html">FeatureStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Handicap.html">Handicap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HandicapStatus.html">HandicapStatus</a>
               </li>
             </ul>
           </li>
@@ -81,9 +99,11 @@
 
 <p><a href="https://www.bitrise.io/app/7596a076a75ab2ab"><img src="https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg" alt="Build Status"></a>
 <img src="https://img.shields.io/cocoapods/p/Capable.svg" alt="Platforms">
-<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg" alt="Carthage compatible"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/carthage-compatible-4BC51D.svg" alt="Carthage compatible"></a>
 <a href="https://cocoapods.org/pods/Capable"><img src="https://img.shields.io/cocoapods/v/Capable.svg" alt="Cocoapods compatible"></a>
-<img src="https://img.shields.io/badge/Swift%20Package%20Manager-macOS-blue.svg" alt="SPM"></p>
+<img src="https://img.shields.io/badge/swift%20package%20manager-macOS-blue.svg" alt="SPM">
+<img src="Documentation/badge.svg" alt="Documentation">
+<a href="https://twitter.com/chr_wendt"><img src="https://img.shields.io/badge/twitter-%40chr__wendt-58a1f2.svg" alt="Twitter"></a></p>
 
 <p>Have you ever thought about adopting accessibility features within you apps to gain your user base instead of spending a lot of time implementing features no-one really ever asked for? </p>
 
@@ -95,10 +115,11 @@
 <h2 id='features' class='heading'>Features</h2>
 
 <ul>
-<li>Get the user&rsquo;s accessibility settings</li>
-<li>Send it with your favorite analytics SDK such as Fabric Answers, App Center Analytics, or Firebase Analytics</li>
-<li>Get notified about any changes</li>
-<li>Use dynamic type with custom fonts by using one line of code without caring about the OS version the user is running on</li>
+<li><a href="#accessibility-status">Get the user&rsquo;s accessibility settings</a></li>
+<li><a href="#handicaps">Define handicaps by grouping accessibility features</a></li>
+<li><a href="#send-status">Send status with your favorite analytics SDK</a></li>
+<li><a href="#notifications">Get notified about any changes</a></li>
+<li><a href="#dynamic-type">Use dynamic type with custom fonts</a></li>
 </ul>
 <h2 id='installation' class='heading'>Installation</h2>
 
@@ -138,7 +159,9 @@
 </code></pre>
 
 <p>You can find a list of all accessibility features available on each platform in the <a href="#accessibility-feature-overview">accessibility feature overview</a> section.</p>
-<h3 id='get-amp-send-accessibility-status' class='heading'>Get &amp; send accessibility status</h3>
+
+<p><a id="accessibility-status"></a> </p>
+<h3 id='get-accessibility-status' class='heading'>Get accessibility status</h3>
 
 <p>If you are interested in a specific accessibility feature, you can retrieve its current status as follows:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">capable</span> <span class="o">=</span> <span class="kt">Capable</span><span class="p">()</span>
@@ -151,6 +174,27 @@
 </code></pre>
 
 <p>This will return each feature name (key) along with its current value as described in the <a href="#accessibility-feature-overview">accessibility feature overview</a> section.</p>
+
+<p><a id="accessibility-status"></a> </p>
+<h3 id='handicaps-grouped-accessibility-features' class='heading'>Handicaps - grouped accessibility features</h3>
+
+<p>You can also group accessibility features to represent a specific handicap:</p>
+<pre class="highlight swift"><code><span class="c1">// Define a set of features that represent a handicap</span>
+<span class="k">let</span> <span class="nv">features</span><span class="p">:</span> <span class="p">[</span><span class="kt">CapableFeature</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n">voiceOver</span><span class="p">,</span> <span class="o">.</span><span class="n">speakScreen</span><span class="p">,</span> <span class="o">.</span><span class="n">speakSelection</span><span class="p">]</span>
+
+<span class="c1">// Use the Handicap object to group them</span>
+<span class="k">let</span> <span class="nv">blindness</span> <span class="o">=</span> <span class="kt">Handicap</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">features</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"Blindness"</span><span class="p">,</span> <span class="nv">enabledIf</span><span class="p">:</span> <span class="o">.</span><span class="n">allFeaturesEnabled</span><span class="p">)</span>
+
+<span class="c1">// Initialize the framework instance by providing the Handicap</span>
+<span class="k">let</span> <span class="nv">capable</span> <span class="o">=</span> <span class="kt">Capable</span><span class="p">(</span><span class="nv">withHandicaps</span><span class="p">:</span> <span class="p">[</span><span class="n">blindness</span><span class="p">])</span>
+</code></pre>
+
+<p>The value of the <code>name</code> parameter will be used inside the <code>statusMap</code> provided by the Capable framework instance. Based on the value of <code>enabledIf</code>, you can specify if all features need to be set to <strong>enabled</strong> in order to set the Handicap to <strong>enabled</strong> as well.</p>
+
+<p>As accessibility feature, the <code><a href="Structs/Handicap.html">Handicap</a></code> type works great with <a href="#notifications">notifications</a>. </p>
+
+<p><a id="send-status"></a> </p>
+<h3 id='send-accessibility-status' class='heading'>Send accessibility status</h3>
 
 <p>The <code>statusMap</code> object is compatible with most analytic SDK APIs. Here&rsquo;s a quick example of how to send your data along with user properties or custom events.</p>
 <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sendMetrics</span><span class="p">()</span> <span class="p">{</span>
@@ -167,6 +211,8 @@
     <span class="kt">Answers</span><span class="o">.</span><span class="nf">logCustomEvent</span><span class="p">(</span><span class="nv">withName</span><span class="p">:</span> <span class="n">eventName</span><span class="p">,</span> <span class="nv">customAttributes</span><span class="p">:</span> <span class="n">statusMap</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
+
+<p><a id="notifications"></a> </p>
 <h3 id='listen-for-settings-changes' class='heading'>Listen for settings changes</h3>
 
 <p>After initialization, notifications for all features that have been registered can be retrieved. To react to changes, you need to add your class as an observer as follows:</p>
@@ -185,6 +231,27 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
+
+<p>If your framework instance has been set up with <code><a href="Structs/Handicap.html">Handicap</a></code>s instead, you can use the <code>CapableHandicapStatusDidChange</code> notification:</p>
+<pre class="highlight swift"><code><span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span>
+    <span class="k">self</span><span class="p">,</span>
+    <span class="nv">selector</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">self.handicapStatusChanged</span><span class="kd">)</span><span class="p">,</span>
+    <span class="nv">name</span><span class="p">:</span> <span class="o">.</span><span class="kt">CapableHandicapStatusDidChange</span><span class="p">,</span>
+    <span class="nv">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</code></pre>
+
+<p>Once the notification has been sent, you can parse the <code><a href="Structs/Handicap.html">Handicap</a></code>and its current status as follows:</p>
+<pre class="highlight swift"><code><span class="kd">@objc</span> <span class="kd">private</span> <span class="kd">func</span> <span class="nf">handicapStatusChanged</span><span class="p">(</span><span class="nv">notification</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">handicapStatus</span> <span class="o">=</span> <span class="n">notification</span><span class="o">.</span><span class="n">object</span> <span class="k">as?</span> <span class="kt">HandicapStatus</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">handicap</span> <span class="o">=</span> <span class="n">handicapStatus</span><span class="o">.</span><span class="n">handicap</span>
+        <span class="k">let</span> <span class="nv">currentValue</span> <span class="o">=</span> <span class="n">handicapStatus</span><span class="o">.</span><span class="n">statusString</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Please note that when using notifications with <code><a href="Structs/Handicap.html">Handicap</a></code>s on macOS or watchOS, you might not get notified about all changes since <a href="#feature-overview">not all accessibility features do support notifications</a>, yet. </p>
+
+<p><a id="dynamic-type"></a> </p>
 <h3 id='dynamic-type-with-custom-fonts-capable-uifont-extension' class='heading'>Dynamic Type with custom fonts (Capable UIFont extension)</h3>
 
 <p>Supporting Dynamic Type along with different OS versions such as iOS 10 and iOS 11 (watchOS 3 and watchOS 4) can be a huge pain, since both versions provide different APIs.</p>
@@ -211,7 +278,7 @@
 
 <p>While these extension APIs are available on tvOS as well, setting the font size in the system settings is not supported on this platforms.</p>
 
-<p><a id="accessibility-feature-overview"></a> </p>
+<p><a id="feature-overview"></a> </p>
 <h2 id='accessibility-feature-overview' class='heading'>Accessibility feature overview</h2>
 
 <p>The following table contains all features that are available AND settable on each platform.</p>
@@ -397,7 +464,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/chrs1885" target="_blank" rel="external">Christoph Wendt</a>. All rights reserved. (Last updated: 2018-08-09)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/chrs1885" target="_blank" rel="external">Christoph Wendt</a>. All rights reserved. (Last updated: 2018-09-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

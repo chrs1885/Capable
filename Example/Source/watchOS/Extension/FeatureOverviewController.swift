@@ -18,12 +18,19 @@ class FeatureOverviewController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         self.capable = Capable()
-        refreshData()
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(self.featureStatusChanged),
-            name: .CapableFeatureStatusDidChange,
-            object: nil)
+        self.refreshData()
+        self.populateTableData()
+    }
+
+    override func didAppear() {
+        self.registerObservers()
+    }
+
+    override func willDisappear() {
+        self.unregisterObservers()
+    }
+
+    func populateTableData() {
         if let objects = self.objects {
             self.featuresTable.setNumberOfRows(objects.count, withRowType: "FeatureRow")
             for index in 0..<featuresTable.numberOfRows {
@@ -40,7 +47,7 @@ class FeatureOverviewController: WKInterfaceController {
         }
     }
     
-    private func value(forRow row: Int) -> (key: String, value: String) {
+    func value(forRow row: Int) -> (key: String, value: String) {
         if let objects = self.objects {
             let featuresArray = Array(objects)
             return featuresArray[row]
@@ -57,8 +64,20 @@ extension FeatureOverviewController {
             self.showAlert(for: featureStatus)
         }
     }
+
+    func registerObservers() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.featureStatusChanged),
+            name: .CapableFeatureStatusDidChange,
+            object: nil)
+    }
+
+    func unregisterObservers() {
+        NotificationCenter.default.removeObserver(self)
+    }
     
-    private func showAlert(for featureStatus: FeatureStatus) {
+    func showAlert(for featureStatus: FeatureStatus) {
         let alertTitle = "Feature status changed"
         let alertMessage = "\(featureStatus.feature.rawValue) changed to \(featureStatus.statusString)"
         let okAction = WKAlertAction(title: "OK",
