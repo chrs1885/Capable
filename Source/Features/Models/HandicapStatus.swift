@@ -5,8 +5,7 @@
 //  Created by Wendt, Christoph on 16.08.18.
 //
 
-/**
- Model class that describes the content of a Capable notification (see `Notification.Name.CapableHandicapStatusDidChange`) */
+/// Model class that describes the content of a Capable notification (see `Notification.Name.CapableHandicapStatusDidChange`)
 public struct HandicapStatus {
 
     /// The `Handicap` that has changed.

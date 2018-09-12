@@ -4,7 +4,7 @@ PODS:
   - AppCenter/Analytics (1.8.0):
     - AppCenter/Core
   - AppCenter/Core (1.8.0)
-  - Capable (0.4.0)
+  - Capable (0.5.0)
   - Fabric (1.7.9)
   - Firebase/Core (5.4.1):
     - Firebase/CoreOnly
@@ -55,7 +55,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Answers: bca35eedaed069c392d01b9dcb2673e0f77d9926
   AppCenter: 7e7b42e94b70294d1de3d747f164f0c1668a28e1
-  Capable: 868ac9bf66686d119c639eade3a70d0811b0c5ef
+  Capable: 8489078ca22f9352d4bb125a18f0d72db6f7df86
   Fabric: a2917d3895e4c1569b9c3170de7320ea1b1e6661
   Firebase: 355bd535bfdacaa82a7fe8d9784115edefd6fc03
   FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2

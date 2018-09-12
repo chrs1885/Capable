@@ -41,7 +41,7 @@ class HandicapStatuses: Statuses {
 
 // MARK: - Equatable
 extension HandicapStatuses: Equatable {
-    public static func == (lhs: HandicapStatuses, rhs: HandicapStatuses) -> Bool {
+    static func == (lhs: HandicapStatuses, rhs: HandicapStatuses) -> Bool {
         return
             lhs.handicapMap == rhs.handicapMap
     }
