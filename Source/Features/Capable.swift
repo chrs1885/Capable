@@ -28,7 +28,7 @@ public struct Capable {
     */
     public init(withFeatures features: [CapableFeature] = CapableFeature.allValues()) {
         let statusesModule = FeatureStatuses(withFeatures: features)
-        let notificationsModule = FeatureNotifications(statusesModule: statusesModule, features: features)
+        let notificationsModule = FeatureNotifications(featureStatusesProvider: FeatureStatusesProvider(), features: features)
         self.init(with: statusesModule, notificationModule: notificationsModule, features: features)
     }
 
@@ -40,7 +40,7 @@ public struct Capable {
      */
     public init(withHandicaps handicaps: [Handicap]) {
         let statusesModule = HandicapStatuses(withHandicaps: handicaps)
-        let notificationsModule = HandicapNotifications(statusesModule: statusesModule, handicaps: handicaps)
+        let notificationsModule = HandicapNotifications(statusesModule: statusesModule, handicaps: handicaps, featureStatusesProvider: FeatureStatusesProvider())
         self.init(with: statusesModule, notificationModule: notificationsModule, handicaps: handicaps)
     }
 
@@ -65,7 +65,7 @@ public struct Capable {
      - Returns: `true` if the given feature has been enabled, otherwise `false`.
      */
     public func isFeatureEnabled(feature: CapableFeature) -> Bool {
-        return self.statusesModule.isFeatureEnabled(feature: feature)
+        return FeatureStatusesProvider().isFeatureEnabled(feature: feature)
     }
 
     /**
@@ -77,6 +77,7 @@ public struct Capable {
      - Returns: `true` if the given feature has been enabled, otherwise `false`. Note that the status depends on the `Handicap`'s `enabledIf` value (see `HandicapEnabledMode`).
      */
     public func isHandicapEnabled(handicapName: String) -> Bool {
-        return self.statusesModule.isHandicapEnabled(handicapName: handicapName)
+        guard let handicapStatuses = self.statusesModule as? HandicapStatuses else { return false }
+        return handicapStatuses.isHandicapEnabled(handicapName: handicapName)
     }
 }

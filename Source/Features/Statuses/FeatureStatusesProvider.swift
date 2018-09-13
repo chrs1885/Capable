@@ -1,5 +1,5 @@
 //
-//  Statuses.swift
+//  FeatureStatusesProvider.swift
 //  Capable
 //
 //  Created by Christoph Wendt on 30.03.18.
@@ -17,11 +17,7 @@ import AppKit
 import WatchKit
 #endif
 
-class Statuses: StatusesProtocol {
-
-    var statusMap: [String: String] {
-        fatalError("Capable.Statuses.statusMap: Computed property needs to be implemented by its subclass.")
-    }
+class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
 
     #if os(iOS)
         var isAssistiveTouchEnabled: Bool {
@@ -243,8 +239,4 @@ class Statuses: StatusesProtocol {
         #endif
     }
     // swiftlint:enable cyclomatic_complexity
-
-    func isHandicapEnabled(handicapName: String) -> Bool {
-        fatalError("Capable.Statuses.isHandicapEnabled: Function needs to be implemented by its subclass.")
-    }
 }

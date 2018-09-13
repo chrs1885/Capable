@@ -6,6 +6,6 @@
 //
 
 protocol NotificationsProtocol {
-    init(statusesModule: StatusesProtocol, notificationCenter: NotificationCenter)
+    init(featureStatusesProvider: FeatureStatusesProviderProtocol, notificationCenter: NotificationCenter)
     func postNotification(withFeature feature: CapableFeature, statusString: String)
 }

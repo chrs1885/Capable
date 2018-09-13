@@ -13,29 +13,30 @@ import UIKit
 import WatchKit
 #endif
 
-class FeatureStatuses: Statuses {
+class FeatureStatuses: StatusesProtocol {
     var features: [CapableFeature]
 
     init(withFeatures features: [CapableFeature]) {
         self.features = features
     }
 
-    override var statusMap: [String: String] {
+    var statusMap: [String: String] {
         var statusMap = [String: String]()
+        let statusesProvider = FeatureStatusesProvider()
 
         for feature in self.features {
             #if os(iOS)
             if feature == .largerText {
-                statusMap[feature.rawValue] = self.largerTextCatagory.stringValue
+                statusMap[feature.rawValue] = statusesProvider.largerTextCatagory.stringValue
                 continue
             }
             #elseif os(watchOS)
             if feature == .largerText {
-                statusMap[feature.rawValue] = self.largerTextCatagory
+                statusMap[feature.rawValue] = statusesProvider.largerTextCatagory
                 continue
             }
             #endif
-            statusMap[feature.rawValue] = self.isFeatureEnabled(feature: feature).statusString
+            statusMap[feature.rawValue] = statusesProvider.isFeatureEnabled(feature: feature).statusString
         }
 
         return statusMap

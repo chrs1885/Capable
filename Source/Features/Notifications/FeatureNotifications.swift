@@ -6,13 +6,13 @@
 //
 
 class FeatureNotifications: Notifications {
-    convenience init(statusesModule: StatusesProtocol, features: [CapableFeature], notificationCenter: NotificationCenter = NotificationCenter.default) {
-        self.init(statusesModule: statusesModule, notificationCenter: notificationCenter)
+    convenience init(featureStatusesProvider: FeatureStatusesProviderProtocol, features: [CapableFeature], notificationCenter: NotificationCenter = NotificationCenter.default) {
+        self.init(featureStatusesProvider: featureStatusesProvider, notificationCenter: notificationCenter)
         self.enableNotifications(forFeatures: features)
     }
 
-    required init(statusesModule: StatusesProtocol, notificationCenter: NotificationCenter = NotificationCenter.default) {
-        super.init(statusesModule: statusesModule, notificationCenter: notificationCenter)
+    required init(featureStatusesProvider: FeatureStatusesProviderProtocol, notificationCenter: NotificationCenter = NotificationCenter.default) {
+        super.init(featureStatusesProvider: featureStatusesProvider, notificationCenter: notificationCenter)
     }
 
     override func postNotification(withFeature feature: CapableFeature, statusString: String) {
