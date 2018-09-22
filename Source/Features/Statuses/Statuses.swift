@@ -71,7 +71,7 @@ class Statuses: StatusesProtocol {
         }
 
         var isMonoAudioEnabled: Bool {
-            return UIAccessibilityIsSpeakScreenEnabled()
+            return UIAccessibilityIsMonoAudioEnabled()
         }
 
         var isReduceMotionEnabled: Bool {
