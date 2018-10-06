@@ -21,10 +21,6 @@ class FontMetricsSupportTests: QuickSpec {
                     sut = FontMetricsSupport()
                 }
 
-                afterEach {
-                    sut = nil
-                }
-
                 it("conforms to UIFontMetricsProtocol") {
                     expect(sut!).to(beAKindOf(FontMetricsProtocol.self))
                 }

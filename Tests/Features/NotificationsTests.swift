@@ -15,38 +15,32 @@ class NotificationsTests: QuickSpec {
     override func spec() {
         describe("The Notifications class") {
             var notificationCenterMock: NotificationCenterMock?
+            var featureStatusesProviderMock: FeatureStatusesProviderMock?
 
             beforeEach {
                 notificationCenterMock = NotificationCenterMock()
-            }
-
-            afterEach {
-                notificationCenterMock = nil
+                featureStatusesProviderMock = FeatureStatusesProviderMock()
             }
 
             context("after initialization") {
                 var sut: Notifications?
-                var testStatuses: FeatureStatusesMock?
 
                 beforeEach {
-                    testStatuses = FeatureStatusesMock(withFeatures: [])
-                    sut = Notifications(statusesModule: testStatuses!, notificationCenter: notificationCenterMock!)
+                    sut = Notifications(featureStatusesProvider: featureStatusesProviderMock!, notificationCenter: notificationCenterMock!)
                 }
 
                 it("creates a Notifications intsance") {
                     expect(sut!).to(beAnInstanceOf(Notifications.self))
                 }
 
-                // swiftlint:disable force_cast
                 it("sets properties correctly") {
-                    expect((sut!.statusesModule as! FeatureStatusesMock)).to(equal(testStatuses!))
+                    expect(sut!.featureStatusesProvider).to(be(featureStatusesProviderMock!))
                     expect((sut!.notificationCenter)).to(equal(notificationCenterMock!))
                 }
-                // swiftlint:enable force_cast
 
                 context("when calling postNotification") {
                     it("throws an error") {
-                        expect(sut!.postNotification(withFeature: .assistiveTouch, statusString: "enabled")).to(throwAssertion())
+                        expect(sut!.postNotification(withFeature: .voiceOver, statusString: "enabled")).to(throwAssertion())
                     }
                 }
             }

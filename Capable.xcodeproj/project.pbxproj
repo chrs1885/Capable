@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		44580D11212605D500F9940A /* HandicapStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D10212605D500F9940A /* HandicapStatuses.swift */; };
 		44580D13212606BB00F9940A /* FeatureStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D12212606BB00F9940A /* FeatureStatuses.swift */; };
-		44580D1521260E3500F9940A /* HandicapStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D1421260E3500F9940A /* HandicapStatusesMock.swift */; };
-		44580D1721260EAA00F9940A /* FeatureStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D1621260EAA00F9940A /* FeatureStatusesMock.swift */; };
+		44580D1721260EAA00F9940A /* FeatureStatusesProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D1621260EAA00F9940A /* FeatureStatusesProviderMock.swift */; };
 		44580D1921261D4E00F9940A /* CapablePerfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D1821261D4E00F9940A /* CapablePerfTests.swift */; };
 		4486976421270B5F00A06BFF /* FeatureStatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486976321270B5F00A06BFF /* FeatureStatusTests.swift */; };
 		4486976621270CDA00A06BFF /* HandicapStatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486976521270CDA00A06BFF /* HandicapStatusTests.swift */; };
@@ -35,11 +34,14 @@
 		831E8EEC212479930096930C /* HandicapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E8EEB212479930096930C /* HandicapTests.swift */; };
 		831E8EEE21247C620096930C /* Handicap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E8EED21247C620096930C /* Handicap.swift */; };
 		831E8EF021247EAD0096930C /* HandicapEnabledMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E8EEF21247EAD0096930C /* HandicapEnabledMode.swift */; };
+		8323D8E62167B8C80015F8A3 /* FeatureStatusesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323D8E52167B8C80015F8A3 /* FeatureStatusesTests.swift */; };
+		8323D8E82167C2550015F8A3 /* HandicapStatusesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323D8E72167C2550015F8A3 /* HandicapStatusesTests.swift */; };
+		8323D8EA2167D0670015F8A3 /* HandicapStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323D8E92167D0670015F8A3 /* HandicapStatusesMock.swift */; };
+		8323D8EC2167D1980015F8A3 /* FeatureStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323D8EB2167D1980015F8A3 /* FeatureStatusesMock.swift */; };
 		832953CE2110D9E200072EB9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832953CC2110D9E100072EB9 /* Quick.framework */; };
 		832953CF2110D9E200072EB9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832953CD2110D9E200072EB9 /* Nimble.framework */; };
 		833DB9BF206C164B00C8DA02 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9BE206C164B00C8DA02 /* Notification+Name.swift */; };
 		833DB9C2206C188B00C8DA02 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */; };
-		834C72302130591600DCEBDC /* FeatureNotificationsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834C722F2130591600DCEBDC /* FeatureNotificationsMock.swift */; };
 		834C7232213072B300DCEBDC /* FeatureNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834C7231213072B300DCEBDC /* FeatureNotificationsTests.swift */; };
 		834C72342131F55100DCEBDC /* HandicapNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834C72332131F55100DCEBDC /* HandicapNotificationsTests.swift */; };
 		837EE71420F1592A00AC8A11 /* ContentSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EE71320F1592A00AC8A11 /* ContentSizeHelper.swift */; };
@@ -49,7 +51,6 @@
 		83973ADA206FD22C0057CD4F /* UIFont+ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973AD9206FD22C0057CD4F /* UIFont+ScaledFont.swift */; };
 		83973ADD206FD3A40057CD4F /* FontMetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973ADC206FD3A40057CD4F /* FontMetricsProtocol.swift */; };
 		83973ADF206FD4080057CD4F /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973ADE206FD4080057CD4F /* FontMetrics.swift */; };
-		83AB3FDE2114F8BE00B86E64 /* HandicapNotificationsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB09D12087CE4C000420C5 /* HandicapNotificationsMock.swift */; };
 		83B5FFE42065336F00E8E83F /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE32065336F00E8E83F /* Capable.swift */; };
 		83B5FFE62065352500E8E83F /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE52065352500E8E83F /* CapableFeature.swift */; };
 		83B5FFEB206542FC00E8E83F /* FeatureStatusesProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFEA206542FC00E8E83F /* FeatureStatusesProviderProtocol.swift */; };
@@ -79,8 +80,7 @@
 /* Begin PBXFileReference section */
 		44580D10212605D500F9940A /* HandicapStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatuses.swift; sourceTree = "<group>"; };
 		44580D12212606BB00F9940A /* FeatureStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatuses.swift; sourceTree = "<group>"; };
-		44580D1421260E3500F9940A /* HandicapStatusesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatusesMock.swift; sourceTree = "<group>"; };
-		44580D1621260EAA00F9940A /* FeatureStatusesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesMock.swift; sourceTree = "<group>"; };
+		44580D1621260EAA00F9940A /* FeatureStatusesProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProviderMock.swift; sourceTree = "<group>"; };
 		44580D1821261D4E00F9940A /* CapablePerfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapablePerfTests.swift; sourceTree = "<group>"; };
 		4486976321270B5F00A06BFF /* FeatureStatusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusTests.swift; sourceTree = "<group>"; };
 		4486976521270CDA00A06BFF /* HandicapStatusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatusTests.swift; sourceTree = "<group>"; };
@@ -100,11 +100,14 @@
 		831E8EEB212479930096930C /* HandicapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapTests.swift; sourceTree = "<group>"; };
 		831E8EED21247C620096930C /* Handicap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handicap.swift; sourceTree = "<group>"; };
 		831E8EEF21247EAD0096930C /* HandicapEnabledMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapEnabledMode.swift; sourceTree = "<group>"; };
+		8323D8E52167B8C80015F8A3 /* FeatureStatusesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesTests.swift; sourceTree = "<group>"; };
+		8323D8E72167C2550015F8A3 /* HandicapStatusesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatusesTests.swift; sourceTree = "<group>"; };
+		8323D8E92167D0670015F8A3 /* HandicapStatusesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatusesMock.swift; sourceTree = "<group>"; };
+		8323D8EB2167D1980015F8A3 /* FeatureStatusesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesMock.swift; sourceTree = "<group>"; };
 		832953CC2110D9E100072EB9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		832953CD2110D9E200072EB9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		833DB9BE206C164B00C8DA02 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 		833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatus.swift; sourceTree = "<group>"; };
-		834C722F2130591600DCEBDC /* FeatureNotificationsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureNotificationsMock.swift; sourceTree = "<group>"; };
 		834C7231213072B300DCEBDC /* FeatureNotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureNotificationsTests.swift; sourceTree = "<group>"; };
 		834C72332131F55100DCEBDC /* HandicapNotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapNotificationsTests.swift; sourceTree = "<group>"; };
 		837EE71320F1592A00AC8A11 /* ContentSizeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSizeHelper.swift; sourceTree = "<group>"; };
@@ -119,7 +122,6 @@
 		83B5FFE32065336F00E8E83F /* Capable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capable.swift; sourceTree = "<group>"; };
 		83B5FFE52065352500E8E83F /* CapableFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapableFeature.swift; sourceTree = "<group>"; };
 		83B5FFEA206542FC00E8E83F /* FeatureStatusesProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProviderProtocol.swift; sourceTree = "<group>"; };
-		83BB09D12087CE4C000420C5 /* HandicapNotificationsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HandicapNotificationsMock.swift; path = Tests/Features/Mocks/HandicapNotificationsMock.swift; sourceTree = SOURCE_ROOT; };
 		83CAA3F72097BEEC003F231D /* OsVersionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OsVersionProvider.swift; sourceTree = "<group>"; };
 		83CAA3F92097BF9B003F231D /* OsVersionProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OsVersionProviderProtocol.swift; sourceTree = "<group>"; };
 		83CAA3FB2097C216003F231D /* OsVersionProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OsVersionProviderMock.swift; path = Tests/Fonts/Mocks/OsVersionProviderMock.swift; sourceTree = SOURCE_ROOT; };
@@ -182,9 +184,11 @@
 				44580D1821261D4E00F9940A /* CapablePerfTests.swift */,
 				83DA75F62065167600303D8F /* CapableTests.swift */,
 				834C7231213072B300DCEBDC /* FeatureNotificationsTests.swift */,
+				8323D8E52167B8C80015F8A3 /* FeatureStatusesTests.swift */,
 				4486976321270B5F00A06BFF /* FeatureStatusTests.swift */,
-				831E8EEB212479930096930C /* HandicapTests.swift */,
+				8323D8E72167C2550015F8A3 /* HandicapStatusesTests.swift */,
 				4486976521270CDA00A06BFF /* HandicapStatusTests.swift */,
+				831E8EEB212479930096930C /* HandicapTests.swift */,
 				834C72332131F55100DCEBDC /* HandicapNotificationsTests.swift */,
 				83DC7B5F2149BB4800AF12A7 /* NotificationsTests.swift */,
 			);
@@ -317,10 +321,9 @@
 		83BB09D02087CE29000420C5 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				834C722F2130591600DCEBDC /* FeatureNotificationsMock.swift */,
-				44580D1621260EAA00F9940A /* FeatureStatusesMock.swift */,
-				83BB09D12087CE4C000420C5 /* HandicapNotificationsMock.swift */,
-				44580D1421260E3500F9940A /* HandicapStatusesMock.swift */,
+				8323D8EB2167D1980015F8A3 /* FeatureStatusesMock.swift */,
+				44580D1621260EAA00F9940A /* FeatureStatusesProviderMock.swift */,
+				8323D8E92167D0670015F8A3 /* HandicapStatusesMock.swift */,
 				831AA4DD212F437800AEAC44 /* NotificationCenterMock.swift */,
 			);
 			path = Mocks;
@@ -551,24 +554,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8323D8EA2167D0670015F8A3 /* HandicapStatusesMock.swift in Sources */,
+				8323D8E62167B8C80015F8A3 /* FeatureStatusesTests.swift in Sources */,
 				834C72342131F55100DCEBDC /* HandicapNotificationsTests.swift in Sources */,
 				83DA75F72065167600303D8F /* CapableTests.swift in Sources */,
 				4486976621270CDA00A06BFF /* HandicapStatusTests.swift in Sources */,
 				831AA4DE212F437800AEAC44 /* NotificationCenterMock.swift in Sources */,
 				44FE2E452114849100029869 /* OsVersionProviderMock.swift in Sources */,
 				44FE2E442114833700029869 /* FontMetricsProviderMock.swift in Sources */,
+				8323D8E82167C2550015F8A3 /* HandicapStatusesTests.swift in Sources */,
 				44FE2E3B211482DD00029869 /* FontMetricsProviderTests.swift in Sources */,
 				83DC7B602149BB4800AF12A7 /* NotificationsTests.swift in Sources */,
-				44580D1721260EAA00F9940A /* FeatureStatusesMock.swift in Sources */,
+				44580D1721260EAA00F9940A /* FeatureStatusesProviderMock.swift in Sources */,
 				44FE2E3F2114830B00029869 /* FontMetricsTests.swift in Sources */,
 				44FE2E422114832300029869 /* FontMetricsMock.swift in Sources */,
-				834C72302130591600DCEBDC /* FeatureNotificationsMock.swift in Sources */,
 				834C7232213072B300DCEBDC /* FeatureNotificationsTests.swift in Sources */,
 				831E8EEC212479930096930C /* HandicapTests.swift in Sources */,
-				83AB3FDE2114F8BE00B86E64 /* HandicapNotificationsMock.swift in Sources */,
 				44580D1921261D4E00F9940A /* CapablePerfTests.swift in Sources */,
-				44580D1521260E3500F9940A /* HandicapStatusesMock.swift in Sources */,
 				4486976421270B5F00A06BFF /* FeatureStatusTests.swift in Sources */,
+				8323D8EC2167D1980015F8A3 /* FeatureStatusesMock.swift in Sources */,
 				44FE2E3D211482F500029869 /* FontMetricsSupportTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

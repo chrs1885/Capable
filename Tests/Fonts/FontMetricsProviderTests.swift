@@ -24,10 +24,6 @@ class FontMetricsProviderTests: QuickSpec {
                         sut = FontMetricsProvider(osVersionProvider: osVersionProviderMock)
                     }
 
-                    afterEach {
-                        sut = nil
-                    }
-
                     it("provides the default UIFontMetrics") {
                         expect((sut!.fontMetrics as? UIFontMetrics)).to(beIdenticalTo(UIFontMetrics.default))
                     }
@@ -39,10 +35,6 @@ class FontMetricsProviderTests: QuickSpec {
                     let osVersionProviderMock = OsVersionProviderMock()
                     osVersionProviderMock.osVersionWithUIFontMetrics = false
                     sut = FontMetricsProvider(osVersionProvider: osVersionProviderMock)
-                }
-
-                afterEach {
-                    sut = nil
                 }
 
                 it("provides an instance of FontMetricsSupport") {
