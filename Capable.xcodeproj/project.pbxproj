@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4404835E2168F1940051FCE7 /* FeatureStatusesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404835D2168F1940051FCE7 /* FeatureStatusesProviderTests.swift */; };
 		44580D11212605D500F9940A /* HandicapStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D10212605D500F9940A /* HandicapStatuses.swift */; };
 		44580D13212606BB00F9940A /* FeatureStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D12212606BB00F9940A /* FeatureStatuses.swift */; };
 		44580D1721260EAA00F9940A /* FeatureStatusesProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D1621260EAA00F9940A /* FeatureStatusesProviderMock.swift */; };
@@ -78,6 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4404835D2168F1940051FCE7 /* FeatureStatusesProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProviderTests.swift; sourceTree = "<group>"; };
 		44580D10212605D500F9940A /* HandicapStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatuses.swift; sourceTree = "<group>"; };
 		44580D12212606BB00F9940A /* FeatureStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatuses.swift; sourceTree = "<group>"; };
 		44580D1621260EAA00F9940A /* FeatureStatusesProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProviderMock.swift; sourceTree = "<group>"; };
@@ -184,12 +186,13 @@
 				44580D1821261D4E00F9940A /* CapablePerfTests.swift */,
 				83DA75F62065167600303D8F /* CapableTests.swift */,
 				834C7231213072B300DCEBDC /* FeatureNotificationsTests.swift */,
+				4404835D2168F1940051FCE7 /* FeatureStatusesProviderTests.swift */,
 				8323D8E52167B8C80015F8A3 /* FeatureStatusesTests.swift */,
 				4486976321270B5F00A06BFF /* FeatureStatusTests.swift */,
+				834C72332131F55100DCEBDC /* HandicapNotificationsTests.swift */,
 				8323D8E72167C2550015F8A3 /* HandicapStatusesTests.swift */,
 				4486976521270CDA00A06BFF /* HandicapStatusTests.swift */,
 				831E8EEB212479930096930C /* HandicapTests.swift */,
-				834C72332131F55100DCEBDC /* HandicapNotificationsTests.swift */,
 				83DC7B5F2149BB4800AF12A7 /* NotificationsTests.swift */,
 			);
 			path = Features;
@@ -571,6 +574,7 @@
 				834C7232213072B300DCEBDC /* FeatureNotificationsTests.swift in Sources */,
 				831E8EEC212479930096930C /* HandicapTests.swift in Sources */,
 				44580D1921261D4E00F9940A /* CapablePerfTests.swift in Sources */,
+				4404835E2168F1940051FCE7 /* FeatureStatusesProviderTests.swift in Sources */,
 				4486976421270B5F00A06BFF /* FeatureStatusTests.swift in Sources */,
 				8323D8EC2167D1980015F8A3 /* FeatureStatusesMock.swift in Sources */,
 				44FE2E3D211482F500029869 /* FontMetricsSupportTests.swift in Sources */,
