@@ -1,3 +1,8 @@
+## Version 0.7.0
+
+### Features
+* [Add fullKeyboardAccess feature on macOS](https://github.com/chrs1885/Capable/issues/26)
+
 ## Version 0.6.0
 
 ### Enhancements
