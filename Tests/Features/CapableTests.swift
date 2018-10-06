@@ -14,372 +14,162 @@ import Nimble
 class CapableTests: QuickSpec {
     override func spec() {
         describe("The Capable class") {
-            context("after default initialization") {
-                var sut: Capable?
+            var featureStatusesProviderMock: FeatureStatusesProviderMock?
 
-                beforeEach {
-                    sut = Capable()
-                }
-
-                it("returns a status map with all features") {
-                    let statusMap = sut!.statusMap
-                    expect(statusMap.count).to(equal(CapableFeature.allValues().count))
-                    expect(Array(statusMap.keys)).to(contain(CapableFeature.keys(forFeatures: CapableFeature.allValues())))
-                }
+            beforeEach {
+                featureStatusesProviderMock = FeatureStatusesProviderMock()
             }
 
-            context("after initialization with specific features") {
-                var sut: Capable?
-                let testedFeatures: [CapableFeature] = [.reduceMotion, .voiceOver]
+            context("after initialization with features") {
+                context("when providing specific features") {
+                    var sut: Capable?
+                    var testedFeatures: [CapableFeature]?
 
-                beforeEach {
-                    sut = Capable(withFeatures: testedFeatures)
+                    beforeEach {
+                        testedFeatures = [.reduceMotion, .voiceOver]
+                        sut = Capable(withFeatures: testedFeatures!)
+                    }
+
+                    it("creates a Capable instance") {
+                        expect(sut!).to(beAnInstanceOf(Capable.self))
+                    }
+
+                    it("initializes its feature statuses provider correctly") {
+                        expect(sut!.featureStatusesProvider).to(beAnInstanceOf(FeatureStatusesProvider.self))
+                    }
+
+                    it("initializes its statuses module correctly") {
+                        expect(sut!.statusesModule).to(beAnInstanceOf(FeatureStatuses.self))
+                        // swiftlint:disable force_cast
+                        let featureStatuses = sut!.statusesModule as! FeatureStatuses
+                        // swiftlint:enable force_cast
+                        expect(featureStatuses.features).to(equal(sut!.features))
+                        expect(featureStatuses.featureStatusesProvider).to(be(sut!.featureStatusesProvider))
+                    }
+
+                    it("initializes its notifications module correctly") {
+                        expect(sut!.notificationsModule).to(beAnInstanceOf(FeatureNotifications.self))
+                        // swiftlint:disable force_cast
+                        let featureNotifications = sut!.notificationsModule as! FeatureNotifications
+                        // swiftlint:enable force_cast
+                        expect(featureNotifications.notificationCenter).to(equal(NotificationCenter.default))
+                        expect(featureNotifications.featureStatusesProvider).to(be(sut!.featureStatusesProvider))
+                    }
+
+                    it("sets the features property correctly") {
+                        expect(sut!.features).to(equal(testedFeatures))
+                    }
                 }
 
-                it("returns a status map with features that were registered") {
-                    let statusMap = sut!.statusMap
-                    expect(statusMap.count).to(equal(testedFeatures.count))
-                    expect(Array(statusMap.keys)).to(contain(CapableFeature.keys(forFeatures: testedFeatures)))
+                context("when providing no parameters") {
+                    var sut: Capable?
+
+                    beforeEach {
+                        sut = Capable()
+                    }
+
+                    it("registeres all features") {
+                        expect(sut!.features).to(equal(CapableFeature.allValues()))
+                    }
+                }
+
+                context("after initialization") {
+                    var sut: Capable?
+                    var testStatuses: FeatureStatusesMock?
+
+                    beforeEach {
+                        testStatuses = FeatureStatusesMock()
+                        sut = Capable(withFeatures: [], featureStatusesProvider: featureStatusesProviderMock!, statusesModule: testStatuses!, notificationModule: FeatureNotifications(featureStatusesProvider: featureStatusesProviderMock!))
+                    }
+
+                    context("when calling statusMap") {
+                        beforeEach {
+                            _ = sut?.statusMap
+                        }
+
+                        it("requests the status map from the statuses module") {
+                            expect(testStatuses?.didCallStatusMap).to(beTrue())
+                        }
+                    }
+
+                    context("when calling isFeatureEnabled") {
+                        beforeEach {
+                            _ = sut?.isFeatureEnabled(feature: .voiceOver)
+                        }
+
+                        it("requests the status map from the statuses module") {
+                            expect(featureStatusesProviderMock?.didCallIsFeatureEnabled).to(beTrue())
+                        }
+                    }
                 }
             }
-
-            #if os(iOS)
-            context("after initialization with .largerText feature") {
-                var sut: Capable?
-                var notificationsMock: FeatureNotificationsMock?
-                var statusesMock: FeatureStatusesMock?
-                var textCategoryString: String?
-
-                beforeEach {
-                    statusesMock = FeatureStatusesMock(withFeatures: [.largerText])
-                    let testTextCategory: UIContentSizeCategory = .accessibilityExtraExtraExtraLarge
-                    textCategoryString = testTextCategory.stringValue
-                    statusesMock?.textCatagory = testTextCategory
-                    notificationsMock = FeatureNotificationsMock(statusesModule: statusesMock!)
-                    sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
-                }
-
-                it("returns a status map containing the actual content size rather than a status of enabled/disabled for largerText") {
-                    let statusMap = sut!.statusMap
-                    let largerTextKey = CapableFeature.largerText.rawValue
-                    expect(statusMap[largerTextKey]).to(equal(textCategoryString))
-                }
-            }
-            #endif
 
             context("after initialization with Handicaps") {
-                var sut: Capable?
-                var testHandicapNames: [String]?
+                context("when providing a Handicap ") {
+                    var sut: Capable?
+                    var testHandicap: Handicap?
 
-                beforeEach {
-                    let testFeatures: [CapableFeature] = [.reduceMotion, .voiceOver]
-                    let testName1 = "TestHandicap1"
-                    let testHandicap1 = Handicap(with: testFeatures, name: testName1, enabledIf: .allFeaturesEnabled)
-                    let testName2 = "TestHandicap2"
-                    let testHandicap2 = Handicap(with: testFeatures, name: testName2, enabledIf: .allFeaturesEnabled)
-                    testHandicapNames = [testName1, testName2]
-                    sut = Capable(withHandicaps: [testHandicap1, testHandicap2])
-                }
-
-                it("returns a status map with all Handicap names that were registered") {
-                    let statusMap = sut!.statusMap
-                    expect(statusMap.count).to(equal(testHandicapNames!.count))
-                    expect(Array(statusMap.keys)).to(contain(testHandicapNames!))
-                }
-            }
-
-            #if os(iOS)
-            context("after initialization with a Handicap holding the .largerText feature") {
-                var sut: Capable?
-                var notificationsMock: HandicapNotificationsMock?
-                var statusesMock: HandicapStatusesMock?
-                var testHandicapName: String?
-
-                beforeEach {
-                    testHandicapName = "TestHandicap"
-                    let testHandicap = Handicap(with: [.largerText], name: testHandicapName!, enabledIf: .allFeaturesEnabled)
-                    statusesMock = HandicapStatusesMock(withHandicaps: [testHandicap])
-                    let testTextCategory: UIContentSizeCategory = .accessibilityExtraExtraExtraLarge
-                    statusesMock?.textCatagory = testTextCategory
-                    notificationsMock = HandicapNotificationsMock(statusesModule: statusesMock!)
-                    sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
-                }
-
-                it("returns a status map containing enabled/disabled rather than the actual text category for the Handicap") {
-                    let statusMap = sut!.statusMap
-                    expect(statusMap[testHandicapName!]).to(equal("enabled"))
-                }
-            }
-            #endif
-
-            context("when calling isFeatureEnabled") {
-                var sut: Capable?
-                var notificationsMock: FeatureNotificationsMock?
-                var statusesMock: FeatureStatusesMock?
-
-                beforeEach {
-                    statusesMock = FeatureStatusesMock(withFeatures: [])
-                    notificationsMock = FeatureNotificationsMock(statusesModule: statusesMock!)
-                    sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
-                }
-
-                #if os(iOS)
-                context("for AssistiveTouch") {
                     beforeEach {
-                       statusesMock?.assistiveTouchEnabled = true
+                        testHandicap = Handicap(with: [.voiceOver], name: "TestHandicap", enabledIf: .allFeaturesEnabled)
+                        sut = Capable(withHandicaps: [testHandicap!])
                     }
 
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .assistiveTouch)).to(beTrue())
+                    it("creates a Capable instance") {
+                        expect(sut!).to(beAnInstanceOf(Capable.self))
+                    }
+
+                    it("initializes its feature statuses provider correctly") {
+                        expect(sut!.featureStatusesProvider).to(beAnInstanceOf(FeatureStatusesProvider.self))
+                    }
+
+                    it("initializes its statuses module correctly") {
+                        expect(sut!.statusesModule).to(beAnInstanceOf(HandicapStatuses.self))
+                        // swiftlint:disable force_cast
+                        let handicapStatuses = sut!.statusesModule as! HandicapStatuses
+                        // swiftlint:enable force_cast
+                        expect(handicapStatuses.featureStatusesProvider).to(be(sut!.featureStatusesProvider))
+                    }
+
+                    it("initializes its notifications module correctly") {
+                        expect(sut!.notificationsModule).to(beAnInstanceOf(HandicapNotifications.self))
+                        // swiftlint:disable force_cast
+                        let handicapNotifications = sut!.notificationsModule as! HandicapNotifications
+                        // swiftlint:enable force_cast
+                        expect(handicapNotifications.notificationCenter).to(equal(NotificationCenter.default))
+                        expect(handicapNotifications.featureStatusesProvider).to(be(sut!.featureStatusesProvider))
+                    }
+
+                    it("sets the handicaps property correctly") {
+                        expect(sut!.handicaps).to(equal([testHandicap]))
                     }
                 }
 
-                context("for DarkerSystemColors") {
+                context("after initialization") {
+                    var sut: Capable?
+                    var testStatuses: HandicapStatusesMock?
+
                     beforeEach {
-                        statusesMock?.darkerSystemColorsEnabled = true
+                        testStatuses = HandicapStatusesMock()
+                        sut = Capable(withHandicaps: [], featureStatusesProvider: featureStatusesProviderMock!, statusesModule: testStatuses!, notificationModule: HandicapNotifications(featureStatusesProvider: featureStatusesProviderMock!))
                     }
 
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .darkerSystemColors)).to(beTrue())
-                    }
-                }
-
-                context("for GuidedAccess") {
-                    beforeEach {
-                        statusesMock?.guidedAccessEnabled = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .guidedAccess)).to(beTrue())
-                    }
-                }
-
-                context("for InvertColors") {
-                    beforeEach {
-                        statusesMock?.invertColorsEnabled = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .invertColors)).to(beTrue())
-                    }
-                }
-
-                context("for LargerText") {
-                    beforeEach {
-                        statusesMock?.textCatagory = .accessibilityLarge
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .largerText)).to(beTrue())
-                    }
-                }
-
-                context("for ShakeToUndo") {
-                    beforeEach {
-                        statusesMock?.shakeToUndoEnabled = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .shakeToUndo)).to(beTrue())
-                    }
-                }
-
-                context("for SpeakScreen") {
-                    beforeEach {
-                        statusesMock?.speakScreenEnabled = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .speakScreen)).to(beTrue())
-                    }
-                }
-
-                context("for SpeakSelection") {
-                    beforeEach {
-                        statusesMock?.speakSelectionEnabled = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .speakSelection)).to(beTrue())
-                    }
-                }
-                #endif
-
-                #if os(OSX)
-                context("for DifferentiateWithoutColor") {
-                    beforeEach {
-                        statusesMock?.differentiateWithoutColor = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .differentiateWithoutColor)).to(beTrue())
-                    }
-                }
-
-                context("for IncreaseContrast") {
-                    beforeEach {
-                        statusesMock?.increaseContrast = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .increaseContrast)).to(beTrue())
-                    }
-                }
-                #endif
-
-                #if os(iOS) || os(tvOS)
-                context("for BoldText") {
-                    beforeEach {
-                        statusesMock?.boldTextEnabled = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .boldText)).to(beTrue())
-                    }
-                }
-
-                context("for ClosedCaptioning") {
-                    beforeEach {
-                        statusesMock?.closedCaptioningEnabled = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .closedCaptioning)).to(beTrue())
-                    }
-                }
-
-                context("for Grayscale") {
-                    beforeEach {
-                        statusesMock?.grayscaleEnabled = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .grayscale)).to(beTrue())
-                    }
-                }
-
-                context("for MonoAudio") {
-                    beforeEach {
-                        statusesMock?.monoAudioEnabled = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .monoAudio)).to(beTrue())
-                    }
-                }
-                #endif
-
-                context("for ReduceMotion") {
-                    beforeEach {
-                        statusesMock?.reduceMotionEnabled = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .reduceMotion)).to(beTrue())
-                    }
-                }
-
-                context("for ReduceTransparency") {
-                    beforeEach {
-                        statusesMock?.reduceTransparencyEnabled = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .reduceTransparency)).to(beTrue())
-                    }
-                }
-
-                context("for SwitchControl") {
-                    beforeEach {
-                        statusesMock?.switchControlEnabled = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .switchControl)).to(beTrue())
-                    }
-                }
-
-                context("for VoiceOver") {
-                    beforeEach {
-                        statusesMock?.voiceOverEnabled = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut?.isFeatureEnabled(feature: .voiceOver)).to(beTrue())
-                    }
-                }
-            }
-
-            context("when calling isHandicapEnabled") {
-                var sut: Capable?
-                var notificationsMock: HandicapNotificationsMock?
-                var statusesMock: HandicapStatusesMock?
-                var testHandicapName: String?
-                var testFeatures: [CapableFeature]?
-
-                beforeEach {
-                    testHandicapName = "TestHandicap"
-                    testFeatures = [.reduceMotion, .voiceOver]
-                }
-
-                context("when enabledIf is set to .allFeaturesEnabled") {
-                    beforeEach {
-                        let testHandicap = Handicap(with: testFeatures!, name: testHandicapName!, enabledIf: .allFeaturesEnabled)
-                        statusesMock = HandicapStatusesMock(withHandicaps: [testHandicap])
-                        notificationsMock = HandicapNotificationsMock(statusesModule: statusesMock!)
-                        sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
-                    }
-
-                    context("when all features are enabled") {
+                    context("when calling statusMap") {
                         beforeEach {
-                            statusesMock?.reduceMotionEnabled = true
-                            statusesMock?.voiceOverEnabled = true
+                            _ = sut?.statusMap
                         }
 
-                        it("returns true") {
-                            expect(sut?.isHandicapEnabled(handicapName: testHandicapName!)).to(beTrue())
+                        it("requests the status map from the statuses module") {
+                            expect(testStatuses?.didCallStatusMap).to(beTrue())
                         }
                     }
 
-                    context("when one features are enabled") {
+                    context("when calling isHandicapEnabled") {
                         beforeEach {
-                            statusesMock?.reduceMotionEnabled = true
-                            statusesMock?.voiceOverEnabled = false
+                            _ = sut?.isHandicapEnabled(handicapName: "TestHandicap")
                         }
 
                         it("returns false") {
-                            expect(sut?.isHandicapEnabled(handicapName: testHandicapName!)).to(beFalse())
-                        }
-                    }
-                }
-
-                context("when enabledIf is set to .oneFeatureEnabled") {
-                    beforeEach {
-                        let testHandicap = Handicap(with: testFeatures!, name: testHandicapName!, enabledIf: .oneFeatureEnabled)
-                        statusesMock = HandicapStatusesMock(withHandicaps: [testHandicap])
-                        notificationsMock = HandicapNotificationsMock(statusesModule: statusesMock!)
-                        sut = Capable(with: statusesMock!, notificationModule: notificationsMock!)
-                    }
-
-                    context("when one features are enabled") {
-                        beforeEach {
-                            statusesMock?.reduceMotionEnabled = true
-                            statusesMock?.voiceOverEnabled = false
-                        }
-
-                        it("returns true") {
-                            expect(sut?.isHandicapEnabled(handicapName: testHandicapName!)).to(beTrue())
-                        }
-                    }
-
-                    context("when no features is enabled") {
-                        beforeEach {
-                            statusesMock?.reduceMotionEnabled = false
-                            statusesMock?.voiceOverEnabled = false
-                        }
-
-                        it("returns false") {
-                            expect(sut?.isHandicapEnabled(handicapName: testHandicapName!)).to(beFalse())
+                            expect(testStatuses?.didCallIsHandicapEnabled).to(beTrue())
                         }
                     }
                 }
