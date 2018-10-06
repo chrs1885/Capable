@@ -23,7 +23,7 @@ class FeatureOverviewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//      self.capable = Capable(with: [.largerText, .boldText, .shakeToUndo])
+//        self.capable = Capable(withFeatures: [.largerText, .boldText, .shakeToUndo])
         self.capable = Capable()
         self.registerObservers()
         self.refreshData()
