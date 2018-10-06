@@ -117,6 +117,10 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
             return NSWorkspace.shared.accessibilityDisplayShouldDifferentiateWithoutColor
         }
 
+        var isFullKeyboardAccessEnabled: Bool {
+            return NSApplication.shared.isFullKeyboardAccessEnabled
+        }
+
         var isIncreaseContrastEnabled: Bool {
             return NSWorkspace.shared.accessibilityDisplayShouldIncreaseContrast
         }
@@ -223,6 +227,8 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
             switch feature {
             case .differentiateWithoutColor:
                 return self.isDifferentiateWithoutColorEnabled
+            case .fullKeyboardAccess:
+                return self.isFullKeyboardAccessEnabled
             case .increaseContrast:
                 return self.isIncreaseContrastEnabled
             case .invertColors:
