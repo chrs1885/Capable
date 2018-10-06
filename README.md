@@ -2,12 +2,14 @@
 </center>
 
 ---
+[![Awesome](https://camo.githubusercontent.com/13c4e50d88df7178ae1882a203ed57b641674f94/68747470733a2f2f63646e2e7261776769742e636f6d2f73696e647265736f726875732f617765736f6d652f643733303566333864323966656437386661383536353265336136336531353464643865383832392f6d656469612f62616467652e737667)](https://github.com/vsouza/awesome-ios#accessibility)
 [![Build Status](https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg)](https://www.bitrise.io/app/7596a076a75ab2ab)
 ![Platforms](https://img.shields.io/cocoapods/p/Capable.svg)
 [![Carthage compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![Cocoapods compatible](https://img.shields.io/cocoapods/v/Capable.svg)](https://cocoapods.org/pods/Capable)
 ![SPM](https://img.shields.io/badge/swift%20package%20manager-macOS-blue.svg)
 ![Documentation](Documentation/badge.svg)
+[![codecov](https://codecov.io/gh/chrs1885/Capable/branch/develop/graph/badge.svg)](https://codecov.io/gh/chrs1885/Capable)
 [![Twitter](https://img.shields.io/badge/twitter-%40chr__wendt-58a1f2.svg)](https://twitter.com/chr_wendt)
 
 Have you ever thought about adopting accessibility features within you apps to gain your user base instead of spending a lot of time implementing features no-one really ever asked for? 
@@ -50,7 +52,7 @@ github "chrs1885/Capable"
 
 ```ruby
 dependencies: [
-    .package(url: "https://github.com/chrs1885/Capable.git", from: "0.1.0")
+    .package(url: "https://github.com/chrs1885/Capable.git", from: "0.6.0")
 ]
 ```
 
@@ -78,7 +80,7 @@ let capable = Capable()
 or by passing in only specific feature names
 
 ```swift
-let capable = Capable(with: [.largerText, .boldText, .shakeToUndo])
+let capable = Capable(withFeatures: [.largerText, .boldText, .shakeToUndo])
 ```
 
 You can find a list of all accessibility features available on each platform in the [accessibility feature overview](#accessibility-feature-overview) section.
@@ -101,7 +103,7 @@ let statusMap = capable.statusMap
 ```
 This will return each feature name (key) along with its current value as described in the [accessibility feature overview](#accessibility-feature-overview) section.
 
-<a id="accessibility-status"></a> 
+<a id="handicaps"></a> 
 ### Handicaps - grouped accessibility features
 
 You can also group accessibility features to represent a specific handicap:

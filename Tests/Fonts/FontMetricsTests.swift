@@ -26,12 +26,6 @@ class FontMetricsTests: QuickSpec {
                 sut = FontMetrics(fontMetricsProvider: fontMetricsProviderMock)
             }
 
-            afterEach {
-                sut = nil
-                testFont = nil
-                fontMetricsMock = nil
-            }
-
             context("after initialization") {
                 it("has the fontMetrics instance from the provider") {
                     expect((sut!.fontMetrics as? FontMetricsMock)).to(beIdenticalTo(fontMetricsMock!))

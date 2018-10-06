@@ -9,17 +9,19 @@ import Foundation
 
 class HandicapNotifications: Notifications {
     var handicaps: [Handicap] = []
+    var statusesModule: HandicapStatusesProtocol?
     var lastValues: [String: String] = [:]
 
-    convenience init(statusesModule: StatusesProtocol, handicaps: [Handicap], notificationCenter: NotificationCenter = NotificationCenter.default) {
-        self.init(statusesModule: statusesModule, notificationCenter: notificationCenter)
+    convenience init(statusesModule: HandicapStatusesProtocol, handicaps: [Handicap], featureStatusesProvider: FeatureStatusesProviderProtocol, notificationCenter: NotificationCenter = NotificationCenter.default) {
+        self.init(featureStatusesProvider: featureStatusesProvider, notificationCenter: notificationCenter)
+        self.statusesModule = statusesModule
         self.handicaps = handicaps
-        self.lastValues = Dictionary(uniqueKeysWithValues: self.handicaps.map { ($0.name, self.statusesModule.isHandicapEnabled(handicapName: $0.name).statusString) })
+        self.lastValues = Dictionary(uniqueKeysWithValues: self.handicaps.map { ($0.name, statusesModule.isHandicapEnabled(handicapName: $0.name).statusString) })
         self.enableNotifications(forHandicaps: handicaps)
     }
 
-    required init(statusesModule: StatusesProtocol, notificationCenter: NotificationCenter = NotificationCenter.default) {
-        super.init(statusesModule: statusesModule, notificationCenter: notificationCenter)
+    required init(featureStatusesProvider: FeatureStatusesProviderProtocol, notificationCenter: NotificationCenter = NotificationCenter.default) {
+        super.init(featureStatusesProvider: featureStatusesProvider, notificationCenter: notificationCenter)
     }
 
     override func postNotification(withFeature feature: CapableFeature, statusString: String) {
@@ -33,7 +35,10 @@ class HandicapNotifications: Notifications {
     }
 
     func hasStatusChanged(handicap: Handicap) -> Bool {
-        let currentStatus = self.statusesModule.isHandicapEnabled(handicapName: handicap.name).statusString
+        guard let handicapStatuses = self.statusesModule as? HandicapStatuses else {
+            fatalError("Capable.HandicapStatuses.hasStatusChanged: The instance hasnot been initialized with a HandicapStatuses instance.")
+        }
+        let currentStatus = handicapStatuses.isHandicapEnabled(handicapName: handicap.name).statusString
         let lastStatus = self.lastValues[handicap.name]
 
         return currentStatus != lastStatus

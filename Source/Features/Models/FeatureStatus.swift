@@ -5,8 +5,7 @@
 //  Created by Christoph Wendt on 28.03.18.
 //
 
-/**
- Model class that describes the content of a Capable notification (see `Notification.Name.CapableFeatureStatusDidChange`) */
+/// Model class that describes the content of a Capable notification (see `Notification.Name.CapableFeatureStatusDidChange`)
 public struct FeatureStatus {
 
     /// The feature type.

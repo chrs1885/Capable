@@ -5,14 +5,16 @@
 //  Created by Wendt, Christoph on 16.08.18.
 //
 
-class HandicapStatuses: Statuses {
+class HandicapStatuses: HandicapStatusesProtocol {
     var handicapMap: [String: Handicap]
+    let featureStatusesProvider: FeatureStatusesProviderProtocol
 
-    init(withHandicaps handicaps: [Handicap]) {
+    init(withHandicaps handicaps: [Handicap], featureStatusesProvider: FeatureStatusesProviderProtocol) {
         self.handicapMap = Dictionary(uniqueKeysWithValues: handicaps.map { ($0.name, $0) })
+        self.featureStatusesProvider = featureStatusesProvider
     }
 
-    override var statusMap: [String: String] {
+    var statusMap: [String: String] {
         var statusMap = [String: String]()
         for handicapName in handicapMap.keys {
             statusMap[handicapName] = self.isHandicapEnabled(handicapName: handicapName).statusString
@@ -21,13 +23,13 @@ class HandicapStatuses: Statuses {
         return statusMap
     }
 
-    override func isHandicapEnabled(handicapName: String) -> Bool {
+    func isHandicapEnabled(handicapName: String) -> Bool {
         guard let handicap = self.handicapMap[handicapName] else {
             return false
         }
 
         for feature in handicap.features {
-            let isFeatureEnabled = self.isFeatureEnabled(feature: feature)
+            let isFeatureEnabled = self.featureStatusesProvider.isFeatureEnabled(feature: feature)
             if isFeatureEnabled, handicap.enabledIf == .oneFeatureEnabled {
                 return true
             } else if !isFeatureEnabled, handicap.enabledIf == .allFeaturesEnabled {
@@ -41,7 +43,7 @@ class HandicapStatuses: Statuses {
 
 // MARK: - Equatable
 extension HandicapStatuses: Equatable {
-    public static func == (lhs: HandicapStatuses, rhs: HandicapStatuses) -> Bool {
+    static func == (lhs: HandicapStatuses, rhs: HandicapStatuses) -> Bool {
         return
             lhs.handicapMap == rhs.handicapMap
     }

@@ -6,7 +6,8 @@
 //
 
 /**
- Model class that groups a number of `CapableFeature`s to represent a user's handicap. */
+ Model class that groups a number of `CapableFeature`s to represent a user's handicap.
+ */
 public struct Handicap {
 
     /// A list of `CapableFeature`s that are expected to be enabled if a user has this handicap.
@@ -34,6 +35,7 @@ public struct Handicap {
 }
 
 // MARK: - Equatable
+/// Compares to Handicap instances with one of each other.
 extension Handicap: Equatable {
     public static func == (lhs: Handicap, rhs: Handicap) -> Bool {
         return
