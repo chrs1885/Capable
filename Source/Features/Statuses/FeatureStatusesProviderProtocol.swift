@@ -37,6 +37,12 @@ protocol FeatureStatusesProviderProtocol {
     var isSwitchControlEnabled: Bool { get }
     #endif
 
+    #if os(OSX)
+    var isDifferentiateWithoutColorEnabled: Bool { get }
+    var isFullKeyboardAccessEnabled: Bool { get }
+    var isIncreaseContrastEnabled: Bool  { get }
+    #endif
+
     #if os(watchOS)
     var largerTextCatagory: String { get }
     #endif

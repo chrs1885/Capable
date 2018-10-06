@@ -28,6 +28,7 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
 
     #if os(OSX)
     var differentiateWithoutColor = false
+    var fullKeyboardAccess = false
     var increaseContrast = false
     #endif
 
@@ -77,6 +78,10 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
     #if os(OSX)
     override var isDifferentiateWithoutColorEnabled: Bool {
         return differentiateWithoutColor
+    }
+
+    override var isFullKeyboardAccessEnabled: Bool {
+        return fullKeyboardAccess
     }
 
     override var isIncreaseContrastEnabled: Bool {
@@ -135,6 +140,7 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
 
         #if os(OSX)
         differentiateWithoutColor = true
+        fullKeyboardAccess = true
         increaseContrast = true
         #endif
 

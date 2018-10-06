@@ -115,6 +115,16 @@ class FeatureStatusesProviderTests: QuickSpec {
                     }
                 }
 
+                context("for FullKeyboardAccess") {
+                    beforeEach {
+                        sut!.fullKeyboardAccess = true
+                    }
+
+                    it("returns correct state") {
+                        expect(sut!.isFeatureEnabled(feature: .fullKeyboardAccess)).to(beTrue())
+                    }
+                }
+
                 context("for IncreaseContrast") {
                     beforeEach {
                         sut!.increaseContrast = true

@@ -32,6 +32,9 @@ public enum CapableFeature: String {
         /// Helps color blind users to differentiate settings differently, e.g. by using shapes rather than colors.
         case differentiateWithoutColor
 
+        /// Enables users to navigate through items of the screen without having to use a mouse.
+        case fullKeyboardAccess
+
         /// Increases contrast to make out text and interface elements.
         case increaseContrast
     #endif
@@ -118,6 +121,7 @@ public enum CapableFeature: String {
         #elseif os(OSX)
         return [
             .differentiateWithoutColor,
+            .fullKeyboardAccess,
             .increaseContrast,
             .invertColors,
             .reduceMotion,
