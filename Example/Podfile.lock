@@ -37,7 +37,7 @@ DEPENDENCIES:
   - Firebase/Core
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Answers
     - AppCenter
     - Fabric
@@ -66,4 +66,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: a8194e1f92ccc891e4ed7525b28c8beb6d69b302
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

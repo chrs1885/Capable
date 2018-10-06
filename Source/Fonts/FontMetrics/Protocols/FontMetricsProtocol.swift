@@ -9,7 +9,7 @@
 
 import UIKit
 
-public protocol FontMetricsProtocol {
+protocol FontMetricsProtocol {
     func scaledFont(for: UIFont) -> UIFont
 }
 
