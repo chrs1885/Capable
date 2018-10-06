@@ -43,4 +43,6 @@ protocol FeatureStatusesProviderProtocol {
 
     var isReduceMotionEnabled: Bool { get }
     var isVoiceOverEnabled: Bool { get }
+
+    func isFeatureEnabled(feature: CapableFeature) -> Bool
 }
