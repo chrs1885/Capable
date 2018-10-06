@@ -10,8 +10,8 @@ public struct Capable {
     var statusesModule: StatusesProtocol
     var notificationsModule: NotificationsProtocol
     var featureStatusesProvider: FeatureStatusesProviderProtocol
-    internal(set) var features: [CapableFeature]?
-    internal(set) var handicaps: [Handicap]?
+    var features: [CapableFeature]?
+    var handicaps: [Handicap]?
 
     /**
      The `statusMap` property returns a dictionary of all `CapableFeature`s or `Handicap`s , that the Capable instance has been initialized with along with their current statuses. This object is compatible with most analytic SDKs such as **Fabric Answers**, **Firebase Analytics**, **AppCenter Analytics**, or **HockeyApp**.
