@@ -82,7 +82,7 @@ public struct Capable {
      - Returns: `true` if the given feature has been enabled, otherwise `false`. Note that the status depends on the `Handicap`'s `enabledIf` value (see `HandicapEnabledMode`).
      */
     public func isHandicapEnabled(handicapName: String) -> Bool {
-        guard let handicapStatuses = self.statusesModule as? HandicapStatuses else { return false }
+        guard let handicapStatuses = self.statusesModule as? HandicapStatusesProtocol else { return false }
         return handicapStatuses.isHandicapEnabled(handicapName: handicapName)
     }
 }
