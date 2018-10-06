@@ -232,6 +232,7 @@ The following table contains all features that are available AND settable on eac
 | .closedCaptioning          | :white_check_mark: |                                | :white_check_mark: |                                |
 | .darkerSystemColors        | :white_check_mark: |                                |                    |                                |
 | .differentiateWithoutColor |                    | &nbsp;:white_check_mark:**\*** |                    |                                |
+| .fullKeyboardAccess        |                    | &nbsp;:white_check_mark:**\*** |                    |                                |
 | .grayscale                 | :white_check_mark: |                                | :white_check_mark: |                                |
 | .guidedAccess              | :white_check_mark: |                                |                    |                                |
 | .increaseContrast          |                    | &nbsp;:white_check_mark:**\*** |                    |                                |
