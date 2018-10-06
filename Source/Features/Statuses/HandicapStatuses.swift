@@ -7,9 +7,11 @@
 
 class HandicapStatuses: HandicapStatusesProtocol {
     var handicapMap: [String: Handicap]
+    let featureStatusesProvider: FeatureStatusesProviderProtocol
 
-    init(withHandicaps handicaps: [Handicap]) {
+    init(withHandicaps handicaps: [Handicap], featureStatusesProvider: FeatureStatusesProviderProtocol) {
         self.handicapMap = Dictionary(uniqueKeysWithValues: handicaps.map { ($0.name, $0) })
+        self.featureStatusesProvider = featureStatusesProvider
     }
 
     var statusMap: [String: String] {
@@ -26,10 +28,8 @@ class HandicapStatuses: HandicapStatusesProtocol {
             return false
         }
 
-        let statusesProvider = FeatureStatusesProvider()
-
         for feature in handicap.features {
-            let isFeatureEnabled = statusesProvider.isFeatureEnabled(feature: feature)
+            let isFeatureEnabled = self.featureStatusesProvider.isFeatureEnabled(feature: feature)
             if isFeatureEnabled, handicap.enabledIf == .oneFeatureEnabled {
                 return true
             } else if !isFeatureEnabled, handicap.enabledIf == .allFeaturesEnabled {

@@ -14,29 +14,30 @@ import WatchKit
 #endif
 
 class FeatureStatuses: StatusesProtocol {
-    var features: [CapableFeature]
+    let features: [CapableFeature]
+    let featureStatusesProvider: FeatureStatusesProviderProtocol
 
-    init(withFeatures features: [CapableFeature]) {
+    init(withFeatures features: [CapableFeature], featureStatusesProvider: FeatureStatusesProviderProtocol) {
         self.features = features
+        self.featureStatusesProvider = featureStatusesProvider
     }
 
     var statusMap: [String: String] {
         var statusMap = [String: String]()
-        let statusesProvider = FeatureStatusesProvider()
 
         for feature in self.features {
             #if os(iOS)
             if feature == .largerText {
-                statusMap[feature.rawValue] = statusesProvider.largerTextCatagory.stringValue
+                statusMap[feature.rawValue] = self.featureStatusesProvider.largerTextCatagory.stringValue
                 continue
             }
             #elseif os(watchOS)
             if feature == .largerText {
-                statusMap[feature.rawValue] = statusesProvider.largerTextCatagory
+                statusMap[feature.rawValue] = self.featureStatusesProvider.largerTextCatagory
                 continue
             }
             #endif
-            statusMap[feature.rawValue] = statusesProvider.isFeatureEnabled(feature: feature).statusString
+            statusMap[feature.rawValue] = self.featureStatusesProvider.isFeatureEnabled(feature: feature).statusString
         }
 
         return statusMap
@@ -47,6 +48,7 @@ class FeatureStatuses: StatusesProtocol {
 extension FeatureStatuses: Equatable {
     static func == (lhs: FeatureStatuses, rhs: FeatureStatuses) -> Bool {
         return
-            lhs.features == rhs.features
+            lhs.features == rhs.features &&
+            type(of: lhs.featureStatusesProvider) == type(of: rhs.featureStatusesProvider)
     }
 }
