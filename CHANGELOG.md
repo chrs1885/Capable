@@ -1,3 +1,12 @@
+## Version 0.6.0
+
+### Enhancements
+* [Refactor architecture of statuses modules](https://github.com/chrs1885/Capable/pull/25)
+* Improve test coverage
+
+### Bugfixes
+* [Fix isMonoAudioEnabled accessibility method](https://github.com/chrs1885/Capable/pull/24) *(Thanks to [Ed Wellbrook](https://github.com/edwellbrook))*
+
 ## Version 0.5.0
 
 ### Features

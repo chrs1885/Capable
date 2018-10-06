@@ -80,12 +80,14 @@
 
 <hr>
 
-<p><a href="https://www.bitrise.io/app/7596a076a75ab2ab"><img src="https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg" alt="Build Status"></a>
+<p><a href="https://github.com/vsouza/awesome-ios#accessibility"><img src="https://camo.githubusercontent.com/13c4e50d88df7178ae1882a203ed57b641674f94/68747470733a2f2f63646e2e7261776769742e636f6d2f73696e647265736f726875732f617765736f6d652f643733303566333864323966656437386661383536353265336136336531353464643865383832392f6d656469612f62616467652e737667" alt="Awesome"></a>
+<a href="https://www.bitrise.io/app/7596a076a75ab2ab"><img src="https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg" alt="Build Status"></a>
 <img src="https://img.shields.io/cocoapods/p/Capable.svg" alt="Platforms">
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/carthage-compatible-4BC51D.svg" alt="Carthage compatible"></a>
 <a href="https://cocoapods.org/pods/Capable"><img src="https://img.shields.io/cocoapods/v/Capable.svg" alt="Cocoapods compatible"></a>
 <img src="https://img.shields.io/badge/swift%20package%20manager-macOS-blue.svg" alt="SPM">
 <img src="Documentation/badge.svg" alt="Documentation">
+<a href="https://codecov.io/gh/chrs1885/Capable"><img src="https://codecov.io/gh/chrs1885/Capable/branch/develop/graph/badge.svg" alt="codecov"></a>
 <a href="https://twitter.com/chr_wendt"><img src="https://img.shields.io/badge/twitter-%40chr__wendt-58a1f2.svg" alt="Twitter"></a></p>
 
 <p>Have you ever thought about adopting accessibility features within you apps to gain your user base instead of spending a lot of time implementing features no-one really ever asked for? </p>
@@ -119,7 +121,7 @@
 </code></pre>
 <h3 id='swift-package-manager-macos' class='heading'>Swift Package Manager (macOS)</h3>
 <pre class="highlight ruby"><code><span class="ss">dependencies: </span><span class="p">[</span>
-    <span class="p">.</span><span class="nf">package</span><span class="p">(</span><span class="ss">url: </span><span class="s2">"https://github.com/chrs1885/Capable.git"</span><span class="p">,</span> <span class="ss">from: </span><span class="s2">"0.1.0"</span><span class="p">)</span>
+    <span class="p">.</span><span class="nf">package</span><span class="p">(</span><span class="ss">url: </span><span class="s2">"https://github.com/chrs1885/Capable.git"</span><span class="p">,</span> <span class="ss">from: </span><span class="s2">"0.6.0"</span><span class="p">)</span>
 <span class="p">]</span>
 </code></pre>
 <h3 id='manually' class='heading'>Manually</h3>
@@ -138,7 +140,7 @@
 </code></pre>
 
 <p>or by passing in only specific feature names</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">capable</span> <span class="o">=</span> <span class="kt">Capable</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">largerText</span><span class="p">,</span> <span class="o">.</span><span class="n">boldText</span><span class="p">,</span> <span class="o">.</span><span class="n">shakeToUndo</span><span class="p">])</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">capable</span> <span class="o">=</span> <span class="kt">Capable</span><span class="p">(</span><span class="nv">withFeatures</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">largerText</span><span class="p">,</span> <span class="o">.</span><span class="n">boldText</span><span class="p">,</span> <span class="o">.</span><span class="n">shakeToUndo</span><span class="p">])</span>
 </code></pre>
 
 <p>You can find a list of all accessibility features available on each platform in the <a href="#accessibility-feature-overview">accessibility feature overview</a> section.</p>
