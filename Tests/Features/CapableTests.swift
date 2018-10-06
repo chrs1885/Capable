@@ -84,21 +84,21 @@ class CapableTests: QuickSpec {
 
                     context("when calling statusMap") {
                         beforeEach {
-                            _ = sut?.statusMap
+                            _ = sut!.statusMap
                         }
 
                         it("requests the status map from the statuses module") {
-                            expect(testStatuses?.didCallStatusMap).to(beTrue())
+                            expect(testStatuses!.didCallStatusMap).to(beTrue())
                         }
                     }
 
                     context("when calling isFeatureEnabled") {
                         beforeEach {
-                            _ = sut?.isFeatureEnabled(feature: .voiceOver)
+                            _ = sut!.isFeatureEnabled(feature: .voiceOver)
                         }
 
                         it("requests the status map from the statuses module") {
-                            expect(featureStatusesProviderMock?.didCallIsFeatureEnabled).to(beTrue())
+                            expect(featureStatusesProviderMock!.didCallIsFeatureEnabled).to(beTrue())
                         }
                     }
                 }
@@ -155,21 +155,21 @@ class CapableTests: QuickSpec {
 
                     context("when calling statusMap") {
                         beforeEach {
-                            _ = sut?.statusMap
+                            _ = sut!.statusMap
                         }
 
                         it("requests the status map from the statuses module") {
-                            expect(testStatuses?.didCallStatusMap).to(beTrue())
+                            expect(testStatuses!.didCallStatusMap).to(beTrue())
                         }
                     }
 
                     context("when calling isHandicapEnabled") {
                         beforeEach {
-                            _ = sut?.isHandicapEnabled(handicapName: "TestHandicap")
+                            _ = sut!.isHandicapEnabled(handicapName: "TestHandicap")
                         }
 
                         it("returns false") {
-                            expect(testStatuses?.didCallIsHandicapEnabled).to(beTrue())
+                            expect(testStatuses!.didCallIsHandicapEnabled).to(beTrue())
                         }
                     }
                 }

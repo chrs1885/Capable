@@ -88,8 +88,8 @@ class HandicapNotificationsTests: QuickSpec {
                 }
 
                 it("registers itself as observer for the feature notification only once") {
-                    expect(notificationCenterMock?.observedNotifications.count).to(equal(1))
-                    expect(notificationCenterMock?.hasRegisteredNotification(forFeature: testFeature!)).to(beTrue())
+                    expect(notificationCenterMock!.observedNotifications.count).to(equal(1))
+                    expect(notificationCenterMock!.hasRegisteredNotification(forFeature: testFeature!)).to(beTrue())
                 }
             }
 
@@ -109,41 +109,41 @@ class HandicapNotificationsTests: QuickSpec {
                     beforeEach {
                         testHandicap = Handicap(with: [testFeature1!, testFeature2!], name: "testHandicap", enabledIf: .oneFeatureEnabled)
                         testStatuses = HandicapStatuses(withHandicaps: [testHandicap!], featureStatusesProvider: featureStatusesProviderMock!)
-                        featureStatusesProviderMock?.voiceOverEnabled = false
-                        featureStatusesProviderMock?.reduceMotionEnabled = false
+                        featureStatusesProviderMock!.voiceOverEnabled = false
+                        featureStatusesProviderMock!.reduceMotionEnabled = false
                         sut = HandicapNotifications(statusesModule: testStatuses!, handicaps: [testHandicap!], featureStatusesProvider: featureStatusesProviderMock!, notificationCenter: notificationCenterMock!)
                     }
 
                     afterEach {
-                        featureStatusesProviderMock?.voiceOverEnabled = false
-                        featureStatusesProviderMock?.reduceMotionEnabled = false
+                        featureStatusesProviderMock!.voiceOverEnabled = false
+                        featureStatusesProviderMock!.reduceMotionEnabled = false
                     }
 
                     it("registers itself as observer for both notifications") {
-                        expect(notificationCenterMock?.observedNotifications.count).to(equal(2))
-                        expect(notificationCenterMock?.hasRegisteredNotification(forFeature: testFeature1!)).to(beTrue())
-                        expect(notificationCenterMock?.hasRegisteredNotification(forFeature: testFeature2!)).to(beTrue())
+                        expect(notificationCenterMock!.observedNotifications.count).to(equal(2))
+                        expect(notificationCenterMock!.hasRegisteredNotification(forFeature: testFeature1!)).to(beTrue())
+                        expect(notificationCenterMock!.hasRegisteredNotification(forFeature: testFeature2!)).to(beTrue())
                     }
 
                     context("when features get enabled one by one") {
                         it("posts a CapableHandicapStatusDidChange notification with the correct HandicapStatus only if needed") {
                             // Enable feature 1 => a notification is posted with status "enabled"
-                            featureStatusesProviderMock?.voiceOverEnabled = true
+                            featureStatusesProviderMock!.voiceOverEnabled = true
                             sut!.voiceOverStatusChanged(notification: placeholderNotification)
                             verifyHandicapDidChangeNotificationWasPosted(withHandicap: testHandicap!, statusString: "enabled")
 
                             // Enable feature 2 => no notification is posted
-                            featureStatusesProviderMock?.reduceMotionEnabled = true
+                            featureStatusesProviderMock!.reduceMotionEnabled = true
                             sut!.reduceMotionStatusChanged(notification: placeholderNotification)
-                            expect(notificationCenterMock?.postedNotifications.count).to(equal(1))
+                            expect(notificationCenterMock!.postedNotifications.count).to(equal(1))
 
                             // Disable feature 2 => no notification is posted
-                            featureStatusesProviderMock?.reduceMotionEnabled = false
+                            featureStatusesProviderMock!.reduceMotionEnabled = false
                             sut!.reduceMotionStatusChanged(notification: placeholderNotification)
-                            expect(notificationCenterMock?.postedNotifications.count).to(equal(1))
+                            expect(notificationCenterMock!.postedNotifications.count).to(equal(1))
 
                             // Disable feature 2 => a notification is posted with status "disabled"
-                            featureStatusesProviderMock?.voiceOverEnabled = false
+                            featureStatusesProviderMock!.voiceOverEnabled = false
                             sut!.voiceOverStatusChanged(notification: placeholderNotification)
                             verifyHandicapDidChangeNotificationWasPosted(withHandicap: testHandicap!, statusString: "disabled")
                         }
@@ -154,30 +154,30 @@ class HandicapNotificationsTests: QuickSpec {
                     beforeEach {
                         testHandicap = Handicap(with: [testFeature1!, testFeature2!], name: "testHandicap", enabledIf: .allFeaturesEnabled)
                         testStatuses = HandicapStatuses(withHandicaps: [testHandicap!], featureStatusesProvider: featureStatusesProviderMock!)
-                        featureStatusesProviderMock?.voiceOverEnabled = false
-                        featureStatusesProviderMock?.reduceMotionEnabled = false
+                        featureStatusesProviderMock!.voiceOverEnabled = false
+                        featureStatusesProviderMock!.reduceMotionEnabled = false
                         sut = HandicapNotifications(statusesModule: testStatuses!, handicaps: [testHandicap!], featureStatusesProvider: featureStatusesProviderMock!, notificationCenter: notificationCenterMock!)
                     }
 
                     afterEach {
-                        featureStatusesProviderMock?.voiceOverEnabled = false
-                        featureStatusesProviderMock?.reduceMotionEnabled = false
+                        featureStatusesProviderMock!.voiceOverEnabled = false
+                        featureStatusesProviderMock!.reduceMotionEnabled = false
                     }
 
                     context("when features get enabled one by one") {
                         it("posts a CapableHandicapStatusDidChange notification with the correct HandicapStatus only if needed") {
                             // Enable feature 1 => no notification is posted
-                            featureStatusesProviderMock?.voiceOverEnabled = true
+                            featureStatusesProviderMock!.voiceOverEnabled = true
                             sut!.voiceOverStatusChanged(notification: placeholderNotification)
-                            expect(notificationCenterMock?.postedNotifications.count).to(equal(0))
+                            expect(notificationCenterMock!.postedNotifications.count).to(equal(0))
 
                             // Enable feature 2 => a notification is posted with status "enabled"
-                            featureStatusesProviderMock?.reduceMotionEnabled = true
+                            featureStatusesProviderMock!.reduceMotionEnabled = true
                             sut!.reduceMotionStatusChanged(notification: placeholderNotification)
                             verifyHandicapDidChangeNotificationWasPosted(withHandicap: testHandicap!, statusString: "enabled")
 
                             // Disable feature 1 => a notification is posted with status "disabled"
-                            featureStatusesProviderMock?.voiceOverEnabled = false
+                            featureStatusesProviderMock!.voiceOverEnabled = false
                             sut!.voiceOverStatusChanged(notification: placeholderNotification)
                             verifyHandicapDidChangeNotificationWasPosted(withHandicap: testHandicap!, statusString: "disabled")
                         }
@@ -186,9 +186,9 @@ class HandicapNotificationsTests: QuickSpec {
             }
 
             func verifyHandicapDidChangeNotificationWasPosted(withHandicap handicap: Handicap, statusString: String) {
-                expect(notificationCenterMock?.postedNotifications.count).to(equal(1))
+                expect(notificationCenterMock!.postedNotifications.count).to(equal(1))
 
-                let notificationObject = notificationCenterMock?.postedNotifications[handicapDidChangeNotification]
+                let notificationObject = notificationCenterMock!.postedNotifications[handicapDidChangeNotification]
                 guard let handicapStatus = notificationObject as? HandicapStatus else {
                     fail("Notification does not contain a HandicapStatus object.")
                     return

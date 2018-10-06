@@ -45,7 +45,7 @@ class HandicapStatusesTests: QuickSpec {
                     var statusMap: [String: String]?
 
                     beforeEach {
-                        featureStatusesProviderMock?.enableAllFeatures()
+                        featureStatusesProviderMock!.enableAllFeatures()
                         statusMap = sut!.statusMap
                     }
 
@@ -65,11 +65,11 @@ class HandicapStatusesTests: QuickSpec {
                     context("when requested Handicap has not been registered") {
 
                         beforeEach {
-                            featureStatusesProviderMock?.enableAllFeatures()
+                            featureStatusesProviderMock!.enableAllFeatures()
                         }
 
                         it("returns false") {
-                            expect(sut?.isHandicapEnabled(handicapName: "notAvailable")).to(beFalse())
+                            expect(sut!.isHandicapEnabled(handicapName: "notAvailable")).to(beFalse())
                         }
                     }
 
@@ -82,23 +82,23 @@ class HandicapStatusesTests: QuickSpec {
 
                         context("when all features are enabled") {
                             beforeEach {
-                                featureStatusesProviderMock?.reduceMotionEnabled = true
-                                featureStatusesProviderMock?.voiceOverEnabled = true
+                                featureStatusesProviderMock!.reduceMotionEnabled = true
+                                featureStatusesProviderMock!.voiceOverEnabled = true
                             }
 
                             it("returns true") {
-                                expect(sut?.isHandicapEnabled(handicapName: testHandicap!.name)).to(beTrue())
+                                expect(sut!.isHandicapEnabled(handicapName: testHandicap!.name)).to(beTrue())
                             }
                         }
 
                         context("when one features is enabled") {
                             beforeEach {
-                                featureStatusesProviderMock?.reduceMotionEnabled = true
-                                featureStatusesProviderMock?.voiceOverEnabled = false
+                                featureStatusesProviderMock!.reduceMotionEnabled = true
+                                featureStatusesProviderMock!.voiceOverEnabled = false
                             }
 
                             it("returns false") {
-                                expect(sut?.isHandicapEnabled(handicapName: testHandicap!.name)).to(beFalse())
+                                expect(sut!.isHandicapEnabled(handicapName: testHandicap!.name)).to(beFalse())
                             }
                         }
                     }
@@ -112,23 +112,23 @@ class HandicapStatusesTests: QuickSpec {
 
                         context("when one features are enabled") {
                             beforeEach {
-                                featureStatusesProviderMock?.reduceMotionEnabled = true
-                                featureStatusesProviderMock?.voiceOverEnabled = false
+                                featureStatusesProviderMock!.reduceMotionEnabled = true
+                                featureStatusesProviderMock!.voiceOverEnabled = false
                             }
 
                             it("returns true") {
-                                expect(sut?.isHandicapEnabled(handicapName: testHandicap!.name)).to(beTrue())
+                                expect(sut!.isHandicapEnabled(handicapName: testHandicap!.name)).to(beTrue())
                             }
                         }
 
                         context("when no features is enabled") {
                             beforeEach {
-                                featureStatusesProviderMock?.reduceMotionEnabled = false
-                                featureStatusesProviderMock?.voiceOverEnabled = false
+                                featureStatusesProviderMock!.reduceMotionEnabled = false
+                                featureStatusesProviderMock!.voiceOverEnabled = false
                             }
 
                             it("returns false") {
-                                expect(sut?.isHandicapEnabled(handicapName: testHandicap!.name)).to(beFalse())
+                                expect(sut!.isHandicapEnabled(handicapName: testHandicap!.name)).to(beFalse())
                             }
                         }
                     }
@@ -143,7 +143,7 @@ class HandicapStatusesTests: QuickSpec {
                     testHandicapName = "TestHandicap"
                     let testHandicap = Handicap(with: [.largerText], name: testHandicapName!, enabledIf: .allFeaturesEnabled)
                     let testTextCategory: UIContentSizeCategory = .accessibilityExtraExtraExtraLarge
-                    featureStatusesProviderMock?.textCatagory = testTextCategory
+                    featureStatusesProviderMock!.textCatagory = testTextCategory
                     sut = HandicapStatuses(withHandicaps: [testHandicap], featureStatusesProvider: featureStatusesProviderMock!)
                 }
 

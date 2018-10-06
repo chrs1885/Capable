@@ -39,7 +39,7 @@ class FeatureStatusesTests: QuickSpec {
                     var statusMap: [String: String]?
 
                     beforeEach {
-                        featureStatusesProviderMock?.enableAllFeatures()
+                        featureStatusesProviderMock!.enableAllFeatures()
                         statusMap = sut!.statusMap
                     }
 
