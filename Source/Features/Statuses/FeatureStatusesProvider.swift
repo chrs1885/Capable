@@ -67,7 +67,7 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
         }
 
         var isMonoAudioEnabled: Bool {
-            return UIAccessibilityIsSpeakScreenEnabled()
+            return UIAccessibilityIsMonoAudioEnabled()
         }
 
         var isReduceMotionEnabled: Bool {
