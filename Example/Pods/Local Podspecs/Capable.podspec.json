@@ -1,6 +1,6 @@
 {
   "name": "Capable",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "summary": "Keep track of accessibility settings and enable users with disabilities to use your iOS, tvOS, and watchOS app.",
   "description": "Capable lets you easily keep track of accessibility settings used by your app users. Send this info along with user properties and find out about where to improve accessibility within your app. Capable also comes with additional features that will help you to solve common accessibility problems.",
   "homepage": "https://github.com/chrs1885/Capable",
@@ -13,9 +13,9 @@
   },
   "source": {
     "git": "https://github.com/chrs1885/Capable.git",
-    "tag": "0.6.0"
+    "tag": "0.7.0"
   },
-  "documentation_url": "http://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/0.6.0/Documentation/index.html",
+  "documentation_url": "http://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/0.7.0/Documentation/index.html",
   "swift_version": "4.2",
   "source_files": "Source/**/*.swift",
   "frameworks": "Foundation",
