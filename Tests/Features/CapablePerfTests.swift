@@ -15,7 +15,7 @@ class CapablePerfTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        sut = Capable(withFeatures: CapableFeature.allValues())
+        sut = Capable(withFeatures: CapableFeature.allCases)
     }
 
     func testStatusMapPerformance() {

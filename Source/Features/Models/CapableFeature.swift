@@ -6,7 +6,7 @@
 //
 
 /// An enum specifying all features available on the current platform.
-public enum CapableFeature: String {
+public enum CapableFeature: String, CaseIterable {
 
     #if os(iOS)
         /// Menu that helps people with motor skill impairments to do certain actions or gestures by using a single tap.
@@ -76,60 +76,6 @@ public enum CapableFeature: String {
 
     /// The screen reader available on Apple platforms.
     case voiceOver
-
-    /**
-     Returns an array containing all `CapableFaeture` types available on the current platform.
-
-     - Returns: An array containing all `CapableFaeture` types available on the current platform.
-     */
-    public static func allValues() -> [CapableFeature] {
-        #if os(iOS)
-        return [
-            .assistiveTouch,
-            .boldText,
-            .closedCaptioning,
-            .darkerSystemColors,
-            .grayscale,
-            .guidedAccess,
-            .invertColors,
-            .largerText,
-            .monoAudio,
-            .reduceMotion,
-            .reduceTransparency,
-            .shakeToUndo,
-            .speakScreen,
-            .speakSelection,
-            .switchControl,
-            .voiceOver]
-        #elseif os(tvOS)
-        return [
-            .boldText,
-            .closedCaptioning,
-            .grayscale,
-            .invertColors,
-            .monoAudio,
-            .reduceMotion,
-            .reduceTransparency,
-            .switchControl,
-            .voiceOver]
-        #elseif os(watchOS)
-        return [
-            .boldText,
-            .largerText,
-            .reduceMotion,
-            .voiceOver]
-        #elseif os(OSX)
-        return [
-            .differentiateWithoutColor,
-            .fullKeyboardAccess,
-            .increaseContrast,
-            .invertColors,
-            .reduceMotion,
-            .reduceTransparency,
-            .switchControl,
-            .voiceOver]
-        #endif
-    }
 
     /**
      Iterates through a given list of feature types and returns an array containing the feature names as strings.

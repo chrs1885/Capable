@@ -72,7 +72,7 @@ class FeatureNotificationsTests: QuickSpec {
                 var testFeatures: [CapableFeature]?
 
                 beforeEach {
-                    testFeatures = CapableFeature.allValues()
+                    testFeatures = CapableFeature.allCases
                     sut = FeatureNotifications(featureStatusesProvider: featureStatusesProviderMock!, features: testFeatures!, notificationCenter: notificationCenterMock!)
                 }
 

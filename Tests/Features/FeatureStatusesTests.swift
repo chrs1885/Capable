@@ -25,7 +25,7 @@ class FeatureStatusesTests: QuickSpec {
                 var testFeatures: [CapableFeature]?
 
                 beforeEach {
-                    testFeatures = CapableFeature.allValues()
+                    testFeatures = CapableFeature.allCases
                     sut = FeatureStatuses(withFeatures: testFeatures!, featureStatusesProvider: featureStatusesProviderMock!)
                 }
 
