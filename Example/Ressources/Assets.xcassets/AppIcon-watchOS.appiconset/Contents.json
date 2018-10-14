@@ -80,14 +80,6 @@
       "idiom" : "watch-marketing",
       "filename" : "iTunesArtwork@2x.png",
       "scale" : "1x"
-    },
-    {
-      "size" : "44x44",
-      "idiom" : "watch",
-      "filename" : "Icon-44@2x.png",
-      "scale" : "2x",
-      "role" : "longLook",
-      "subtype" : "42mm"
     }
   ],
   "info" : {
