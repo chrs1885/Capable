@@ -480,6 +480,7 @@
 				TargetAttributes = {
 					831B4F1320A4D4F200F1BB94 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					832953D321121EAA00072EB9 = {
@@ -867,7 +868,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
@@ -886,7 +887,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
