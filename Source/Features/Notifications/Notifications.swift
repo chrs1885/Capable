@@ -36,56 +36,56 @@ extension Notifications {
     func enableNotifications(forFeatures features: [CapableFeature]) {
         #if os(iOS)
             if features.contains(.assistiveTouch) {
-                addObserver(for: .UIAccessibilityAssistiveTouchStatusDidChange, selector: #selector(self.assistiveTouchStatusChanged))
+                addObserver(for: UIAccessibility.assistiveTouchStatusDidChangeNotification, selector: #selector(self.assistiveTouchStatusChanged))
             }
             if features.contains(.darkerSystemColors) {
-                addObserver(for: .UIAccessibilityDarkerSystemColorsStatusDidChange, selector: #selector(self.darkerSystemColorsStatusChanged))
+                addObserver(for: UIAccessibility.darkerSystemColorsStatusDidChangeNotification, selector: #selector(self.darkerSystemColorsStatusChanged))
             }
             if features.contains(.guidedAccess) {
-                addObserver(for: .UIAccessibilityGuidedAccessStatusDidChange, selector: #selector(self.guidedAccessStatusChanged))
+                addObserver(for: UIAccessibility.guidedAccessStatusDidChangeNotification, selector: #selector(self.guidedAccessStatusChanged))
             }
             if features.contains(.largerText) {
-                addObserver(for: .UIContentSizeCategoryDidChange, selector: #selector(self.largerTextStatusChanged))
+                addObserver(for: UIContentSizeCategory.didChangeNotification, selector: #selector(self.largerTextStatusChanged))
             }
             if features.contains(.shakeToUndo) {
-                addObserver(for: .UIAccessibilityShakeToUndoDidChange, selector: #selector(self.shakeToUndoStatusChanged))
+                addObserver(for: UIAccessibility.shakeToUndoDidChangeNotification, selector: #selector(self.shakeToUndoStatusChanged))
             }
             if features.contains(.speakScreen) {
-                addObserver(for: .UIAccessibilitySpeakScreenStatusDidChange, selector: #selector(self.speakScreenStatusChanged))
+                addObserver(for: UIAccessibility.speakScreenStatusDidChangeNotification, selector: #selector(self.speakScreenStatusChanged))
             }
             if features.contains(.speakSelection) {
-                addObserver(for: .UIAccessibilitySpeakSelectionStatusDidChange, selector: #selector(self.speakSelectionStatusChanged))
+                addObserver(for: UIAccessibility.speakSelectionStatusDidChangeNotification, selector: #selector(self.speakSelectionStatusChanged))
             }
         #endif
 
         #if os(iOS) || os(tvOS)
             if features.contains(.boldText) {
-                addObserver(for: .UIAccessibilityBoldTextStatusDidChange, selector: #selector(self.boldTextStatusChanged))
+                addObserver(for: UIAccessibility.boldTextStatusDidChangeNotification, selector: #selector(self.boldTextStatusChanged))
             }
             if features.contains(.closedCaptioning) {
-                addObserver(for: .UIAccessibilityClosedCaptioningStatusDidChange, selector: #selector(self.closedCaptioningStatusChanged))
+                addObserver(for: UIAccessibility.closedCaptioningStatusDidChangeNotification, selector: #selector(self.closedCaptioningStatusChanged))
             }
             if features.contains(.grayscale) {
-                addObserver(for: .UIAccessibilityGrayscaleStatusDidChange, selector: #selector(self.grayscaleStatusChanged))
+                addObserver(for: UIAccessibility.grayscaleStatusDidChangeNotification, selector: #selector(self.grayscaleStatusChanged))
             }
             if features.contains(.invertColors) {
-                addObserver(for: .UIAccessibilityInvertColorsStatusDidChange, selector: #selector(self.invertColorsStatusChanged))
+                addObserver(for: UIAccessibility.invertColorsStatusDidChangeNotification, selector: #selector(self.invertColorsStatusChanged))
             }
             if features.contains(.monoAudio) {
-                addObserver(for: .UIAccessibilityMonoAudioStatusDidChange, selector: #selector(self.monoAudioStatusChanged))
+                addObserver(for: UIAccessibility.monoAudioStatusDidChangeNotification, selector: #selector(self.monoAudioStatusChanged))
             }
             if features.contains(.switchControl) {
-                addObserver(for: .UIAccessibilitySwitchControlStatusDidChange, selector: #selector(self.switchControlStatusChanged))
+                addObserver(for: UIAccessibility.switchControlStatusDidChangeNotification, selector: #selector(self.switchControlStatusChanged))
             }
             if features.contains(.reduceMotion) {
-                addObserver(for: .UIAccessibilityReduceMotionStatusDidChange, selector: #selector(self.reduceMotionStatusChanged))
+                addObserver(for: UIAccessibility.reduceMotionStatusDidChangeNotification, selector: #selector(self.reduceMotionStatusChanged))
             }
             if features.contains(.reduceTransparency) {
-                addObserver(for: .UIAccessibilityReduceTransparencyStatusDidChange, selector: #selector(self.reduceTransparencyStatusChanged))
+                addObserver(for: UIAccessibility.reduceTransparencyStatusDidChangeNotification, selector: #selector(self.reduceTransparencyStatusChanged))
             }
             if features.contains(.voiceOver) {
                 if #available(iOS 11.0, tvOS 11.0, *) {
-                    addObserver(for: .UIAccessibilityVoiceOverStatusDidChange, selector: #selector(self.voiceOverStatusChanged))
+                    addObserver(for: UIAccessibility.voiceOverStatusDidChangeNotification, selector: #selector(self.voiceOverStatusChanged))
                 } else {
                     addObserver(for: Notification.Name(UIAccessibilityVoiceOverStatusChanged), selector: #selector(self.voiceOverStatusChanged))
                 }

@@ -70,7 +70,7 @@ class HandicapNotificationsTests: QuickSpec {
 
             #if os(iOS) || os(tvOS)
 
-            let placeholderNotification = NSNotification(name: .UIAccessibilitySpeakScreenStatusDidChange, object: nil)
+            let placeholderNotification = NSNotification(name: UIAccessibility.speakScreenStatusDidChangeNotification, object: nil)
 
             context("after initialization with two Handicaps containing the same feature") {
                 var sut: HandicapNotifications?

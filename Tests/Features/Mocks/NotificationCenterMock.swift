@@ -28,7 +28,7 @@ class NotificationCenterMock: NotificationCenter {
     func hasRegisteredNotification(forFeature feature: CapableFeature) -> Bool {
         #if os(iOS)
         if feature == .largerText {
-            return self.observedNotifications.contains(.UIContentSizeCategoryDidChange)
+            return self.observedNotifications.contains(UIContentSizeCategory.didChangeNotification)
         }
         #endif
 
@@ -46,7 +46,7 @@ class NotificationCenterMock: NotificationCenter {
 
         #if os(iOS)
         if feature == .largerText {
-            return notificationNames.contains(.UIContentSizeCategoryDidChange)
+            return notificationNames.contains(UIContentSizeCategory.didChangeNotification)
         }
         #endif
 
