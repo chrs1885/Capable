@@ -15,8 +15,8 @@
     "git": "https://github.com/chrs1885/Capable.git",
     "tag": "0.6.0"
   },
-  "documentation_url": "http://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/#{s.version}/Documentation/index.html",
-  "swift_version": "4.1",
+  "documentation_url": "http://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/0.6.0/Documentation/index.html",
+  "swift_version": "4.2",
   "source_files": "Source/**/*.swift",
   "frameworks": "Foundation",
   "watchos": {

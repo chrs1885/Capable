@@ -65,14 +65,14 @@ class FeatureNotificationsTests: QuickSpec {
 
             #if os(iOS) || os(tvOS)
 
-            let placeholderNotification = NSNotification(name: .UIAccessibilitySpeakScreenStatusDidChange, object: nil)
+            let placeholderNotification = NSNotification(name: UIAccessibility.speakScreenStatusDidChangeNotification, object: nil)
 
             context("after initialization with all features available") {
                 var sut: FeatureNotifications?
                 var testFeatures: [CapableFeature]?
 
                 beforeEach {
-                    testFeatures = CapableFeature.allValues()
+                    testFeatures = CapableFeature.allCases
                     sut = FeatureNotifications(featureStatusesProvider: featureStatusesProviderMock!, features: testFeatures!, notificationCenter: notificationCenterMock!)
                 }
 

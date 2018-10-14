@@ -69,7 +69,7 @@ class CapableTests: QuickSpec {
                     }
 
                     it("registeres all features") {
-                        expect(sut!.features).to(equal(CapableFeature.allValues()))
+                        expect(sut!.features).to(equal(CapableFeature.allCases))
                     }
                 }
 

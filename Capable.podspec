@@ -12,7 +12,7 @@ Capable lets you easily keep track of accessibility settings used by your app us
   s.author = { 'Christoph Wendt' => 'christoph.wendt@me.com' }
   s.source = { :git => 'https://github.com/chrs1885/Capable.git', :tag => s.version }
   s.documentation_url = 'http://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/0.6.0/Documentation/index.html'
-  s.swift_version = '4.1'
+  s.swift_version = '4.2'
   s.source_files = 'Source/**/*.swift'
 
   s.framework = 'Foundation'

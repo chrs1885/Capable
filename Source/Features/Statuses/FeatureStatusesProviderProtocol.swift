@@ -40,7 +40,7 @@ protocol FeatureStatusesProviderProtocol {
     #if os(OSX)
     var isDifferentiateWithoutColorEnabled: Bool { get }
     var isFullKeyboardAccessEnabled: Bool { get }
-    var isIncreaseContrastEnabled: Bool  { get }
+    var isIncreaseContrastEnabled: Bool { get }
     #endif
 
     #if os(watchOS)

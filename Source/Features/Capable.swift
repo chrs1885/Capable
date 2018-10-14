@@ -27,7 +27,7 @@ public struct Capable {
      - Parameters:
         - features: An optional array containing the features of interest. This will default to all features available on the current platform.
     */
-    public init(withFeatures features: [CapableFeature] = CapableFeature.allValues()) {
+    public init(withFeatures features: [CapableFeature] = CapableFeature.allCases) {
         let featureStatusesProvider = FeatureStatusesProvider()
         let statusesModule = FeatureStatuses(withFeatures: features, featureStatusesProvider: featureStatusesProvider)
         let notificationsModule = FeatureNotifications(featureStatusesProvider: featureStatusesProvider, features: features)

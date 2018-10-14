@@ -21,15 +21,15 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
 
     #if os(iOS)
         var isAssistiveTouchEnabled: Bool {
-            return UIAccessibilityIsAssistiveTouchRunning()
+            return UIAccessibility.isAssistiveTouchRunning
         }
 
         var isDarkerSystemColorsEnabled: Bool {
-            return UIAccessibilityDarkerSystemColorsEnabled()
+            return UIAccessibility.isDarkerSystemColorsEnabled
         }
 
         var isGuidedAccessEnabled: Bool {
-            return UIAccessibilityIsGuidedAccessEnabled()
+            return UIAccessibility.isGuidedAccessEnabled
         }
 
         var largerTextCatagory: UIContentSizeCategory {
@@ -37,65 +37,65 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
         }
 
         var isShakeToUndoEnabled: Bool {
-            return UIAccessibilityIsShakeToUndoEnabled()
+            return UIAccessibility.isShakeToUndoEnabled
         }
 
         var isSpeakScreenEnabled: Bool {
-            return UIAccessibilityIsSpeakScreenEnabled()
+            return UIAccessibility.isSpeakScreenEnabled
         }
 
         var isSpeakSelectionEnabled: Bool {
-            return UIAccessibilityIsSpeakSelectionEnabled()
+            return UIAccessibility.isSpeakSelectionEnabled
         }
     #endif
 
     #if os(iOS) || os(tvOS)
         var isBoldTextEnabled: Bool {
-            return UIAccessibilityIsBoldTextEnabled()
+            return UIAccessibility.isBoldTextEnabled
         }
 
         var isClosedCaptioningEnabled: Bool {
-            return UIAccessibilityIsClosedCaptioningEnabled()
+            return UIAccessibility.isClosedCaptioningEnabled
         }
 
         var isGrayscaleEnabled: Bool {
-            return UIAccessibilityIsGrayscaleEnabled()
+            return UIAccessibility.isGrayscaleEnabled
         }
 
         var isInvertColorsEnabled: Bool {
-            return UIAccessibilityIsInvertColorsEnabled()
+            return UIAccessibility.isInvertColorsEnabled
         }
 
         var isMonoAudioEnabled: Bool {
-            return UIAccessibilityIsMonoAudioEnabled()
+            return UIAccessibility.isMonoAudioEnabled
         }
 
         var isReduceMotionEnabled: Bool {
-            return UIAccessibilityIsReduceMotionEnabled()
+            return UIAccessibility.isReduceMotionEnabled
         }
 
         var isReduceTransparencyEnabled: Bool {
-            return UIAccessibilityIsReduceTransparencyEnabled()
+            return UIAccessibility.isReduceTransparencyEnabled
         }
 
         var isSwitchControlEnabled: Bool {
-            return UIAccessibilityIsSwitchControlRunning()
+            return UIAccessibility.isSwitchControlRunning
         }
 
         var isVoiceOverEnabled: Bool {
-            return UIAccessibilityIsVoiceOverRunning()
+            return UIAccessibility.isVoiceOverRunning
         }
     #endif
 
     #if os(watchOS)
         var isBoldTextEnabled: Bool {
-            let referenceFont = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+            let referenceFont = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
             let isBoldText = referenceFont.fontName.localizedCaseInsensitiveContains("bold")
             return isBoldText
         }
 
         var largerTextCatagory: String {
-            let referenceFontSize = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body).pointSize
+            let referenceFontSize = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body).pointSize
             return referenceFontSize.contentSizeString
         }
 

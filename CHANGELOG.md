@@ -3,6 +3,9 @@
 ### Features
 * [Add fullKeyboardAccess feature on macOS](https://github.com/chrs1885/Capable/issues/26)
 
+### Enhancements
+* [Swift 4.2 and Xcode 10 support](https://github.com/chrs1885/Capable/pull/28)
+
 ## Version 0.6.0
 
 ### Enhancements
