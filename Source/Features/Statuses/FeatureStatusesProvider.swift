@@ -89,13 +89,13 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
 
     #if os(watchOS)
         var isBoldTextEnabled: Bool {
-            let referenceFont = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+            let referenceFont = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
             let isBoldText = referenceFont.fontName.localizedCaseInsensitiveContains("bold")
             return isBoldText
         }
 
         var largerTextCatagory: String {
-            let referenceFontSize = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body).pointSize
+            let referenceFontSize = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body).pointSize
             return referenceFontSize.contentSizeString
         }
 
