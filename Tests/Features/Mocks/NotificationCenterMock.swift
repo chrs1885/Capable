@@ -7,6 +7,10 @@
 
 #if os(iOS) || os(tvOS) || os(OSX)
 
+#if os(iOS) || os(tvOS)
+import UIKit
+#endif
+
 @testable import Capable
 
 class NotificationCenterMock: NotificationCenter {
