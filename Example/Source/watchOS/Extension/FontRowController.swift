@@ -16,7 +16,7 @@ class FontRowController: NSObject {
     var font: UIFont? {
         didSet {
             guard let font = font else { return }
-            fontLabel.setAttributedText(NSAttributedString(string: FontsConstants.defaultText, attributes: [NSAttributedStringKey.font: font]))
+            fontLabel.setAttributedText(NSAttributedString(string: FontsConstants.defaultText, attributes: [NSAttributedString.Key.font: font]))
         }
     }
 
