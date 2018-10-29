@@ -15,11 +15,13 @@ class FeatureNotificationsTests: QuickSpec {
     override func spec() {
         describe("The FeatureNotifications class") {
             let featureDidChangeNotification = Notification.Name.CapableFeatureStatusDidChange
-            var notificationCenterMock: NotificationCenterMock?
+            var targetNotificationCenterMock: NotificationCenterMock?
+            var systemNotificationCenterMock: NotificationCenterMock?
             var featureStatusesProviderMock: FeatureStatusesProviderMock?
 
             beforeEach {
-                notificationCenterMock = NotificationCenterMock()
+                targetNotificationCenterMock = NotificationCenterMock()
+                systemNotificationCenterMock = NotificationCenterMock()
                 featureStatusesProviderMock = FeatureStatusesProviderMock()
             }
 
@@ -29,43 +31,43 @@ class FeatureNotificationsTests: QuickSpec {
 
                 beforeEach {
                     testFeatures = []
-                    sut = FeatureNotifications(featureStatusesProvider: featureStatusesProviderMock!, features: testFeatures!, notificationCenter: notificationCenterMock!)
+                    sut = FeatureNotifications(featureStatusesProvider: featureStatusesProviderMock!, features: testFeatures!, targetNotificationCenter: targetNotificationCenterMock!, systemNotificationCenter: systemNotificationCenterMock!)
                 }
 
                 it("creates a FeatureNotifications intsance") {
                     expect(sut!).to(beAnInstanceOf(FeatureNotifications.self))
                 }
 
-                // swiftlint:disable force_cast
                 it("sets properties correctly") {
+                    // swiftlint:disable force_cast
                     expect((sut!.featureStatusesProvider as! FeatureStatusesProviderMock)).to(be(featureStatusesProviderMock!))
-                    expect((sut!.notificationCenter)).to(equal(notificationCenterMock!))
+                    // swiftlint:enable force_cast
+                    expect((sut!.targetNotificationCenter)).to(equal(targetNotificationCenterMock!))
+                    expect((sut!.systemNotificationCenter)).to(equal(systemNotificationCenterMock!))
                 }
-                // swiftlint:enable force_cast
             }
 
             context("after initialization with required initializer") {
                 var sut: FeatureNotifications?
 
                 beforeEach {
-                    sut = FeatureNotifications(featureStatusesProvider: featureStatusesProviderMock!, notificationCenter: notificationCenterMock!)
+                    sut = FeatureNotifications(featureStatusesProvider: featureStatusesProviderMock!, targetNotificationCenter: targetNotificationCenterMock!, systemNotificationCenter: systemNotificationCenterMock!)
                 }
 
                 it("creates a FeatureNotifications intsance") {
                     expect(sut!).to(beAnInstanceOf(FeatureNotifications.self))
                 }
 
-                // swiftlint:disable force_cast
                 it("sets statuses property correctly") {
+                    // swiftlint:disable force_cast
                     expect((sut!.featureStatusesProvider as! FeatureStatusesProviderMock)).to(be(featureStatusesProviderMock!))
-                    expect((sut!.notificationCenter)).to(equal(notificationCenterMock!))
+                    // swiftlint:enable force_cast
+                    expect((sut!.targetNotificationCenter)).to(equal(targetNotificationCenterMock!))
+                    expect((sut!.systemNotificationCenter)).to(equal(systemNotificationCenterMock!))
                 }
-                // swiftlint:enable force_cast
             }
 
-            #if os(iOS) || os(tvOS)
-
-            let placeholderNotification = NSNotification(name: UIAccessibility.speakScreenStatusDidChangeNotification, object: nil)
+            #if os(iOS) || os(tvOS) || os(OSX)
 
             context("after initialization with all features available") {
                 var sut: FeatureNotifications?
@@ -73,13 +75,15 @@ class FeatureNotificationsTests: QuickSpec {
 
                 beforeEach {
                     testFeatures = CapableFeature.allCases
-                    sut = FeatureNotifications(featureStatusesProvider: featureStatusesProviderMock!, features: testFeatures!, notificationCenter: notificationCenterMock!)
+                    sut = FeatureNotifications(featureStatusesProvider: featureStatusesProviderMock!, features: testFeatures!, targetNotificationCenter: targetNotificationCenterMock!, systemNotificationCenter: systemNotificationCenterMock!)
                 }
 
+                #if os(iOS) || os(tvOS)
+
                 it("registers itself as observer for feature related notifications") {
-                    expect(notificationCenterMock!.observedNotifications.count).to(equal(testFeatures!.count))
+                    expect(systemNotificationCenterMock!.observedNotifications).to(haveCount(testFeatures!.count))
                     for feature in testFeatures! {
-                        expect(notificationCenterMock!.hasRegisteredNotification(forFeature: feature)).to(beTrue())
+                        expect(systemNotificationCenterMock!.hasRegisteredNotification(forFeature: feature)).to(beTrue())
                     }
                 }
 

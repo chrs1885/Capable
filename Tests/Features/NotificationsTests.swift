@@ -14,11 +14,13 @@ import Nimble
 class NotificationsTests: QuickSpec {
     override func spec() {
         describe("The Notifications class") {
-            var notificationCenterMock: NotificationCenterMock?
+            var targetNotificationCenterMock: NotificationCenterMock?
+            var systemNotificationCenterMock: NotificationCenterMock?
             var featureStatusesProviderMock: FeatureStatusesProviderMock?
 
             beforeEach {
-                notificationCenterMock = NotificationCenterMock()
+                targetNotificationCenterMock = NotificationCenterMock()
+                systemNotificationCenterMock = NotificationCenterMock()
                 featureStatusesProviderMock = FeatureStatusesProviderMock()
             }
 
@@ -26,7 +28,7 @@ class NotificationsTests: QuickSpec {
                 var sut: Notifications?
 
                 beforeEach {
-                    sut = Notifications(featureStatusesProvider: featureStatusesProviderMock!, notificationCenter: notificationCenterMock!)
+                    sut = Notifications(featureStatusesProvider: featureStatusesProviderMock!, targetNotificationCenter: targetNotificationCenterMock!, systemNotificationCenter: systemNotificationCenterMock!)
                 }
 
                 it("creates a Notifications intsance") {
@@ -35,7 +37,8 @@ class NotificationsTests: QuickSpec {
 
                 it("sets properties correctly") {
                     expect(sut!.featureStatusesProvider).to(be(featureStatusesProviderMock!))
-                    expect((sut!.notificationCenter)).to(equal(notificationCenterMock!))
+                    expect((sut!.targetNotificationCenter)).to(equal(targetNotificationCenterMock!))
+                    expect((sut!.systemNotificationCenter)).to(equal(systemNotificationCenterMock!))
                 }
 
                 context("when calling postNotification") {

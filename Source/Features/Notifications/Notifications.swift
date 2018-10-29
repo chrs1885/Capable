@@ -11,17 +11,32 @@ import Foundation
 import UIKit
 #endif
 
+#if os(OSX)
+import AppKit
+#endif
+
 #if os(watchOS)
 import WatchKit
 #endif
 
-class Notifications: NotificationsProtocol {
+class Notifications: NSObject, NotificationsProtocol {
     var featureStatusesProvider: FeatureStatusesProviderProtocol
-    var notificationCenter: NotificationCenter
+    var targetNotificationCenter: NotificationCenter
+    var systemNotificationCenter: NotificationCenter
 
-    required init(featureStatusesProvider: FeatureStatusesProviderProtocol, notificationCenter: NotificationCenter = NotificationCenter.default) {
+
+    required init(featureStatusesProvider: FeatureStatusesProviderProtocol, targetNotificationCenter: NotificationCenter = NotificationCenter.default, systemNotificationCenter: NotificationCenter = Notifications.systemNotificationCenter) {
         self.featureStatusesProvider = featureStatusesProvider
-        self.notificationCenter = notificationCenter
+        self.targetNotificationCenter = targetNotificationCenter
+        self.systemNotificationCenter = systemNotificationCenter
+    }
+
+    static var systemNotificationCenter: NotificationCenter {
+        #if os(OSX)
+        return NSWorkspace.shared.notificationCenter
+        #else
+        return NotificationCenter.default
+        #endif
     }
 
     func postNotification(withFeature feature: CapableFeature, statusString: String) {
