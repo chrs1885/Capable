@@ -97,7 +97,18 @@ class HandicapNotificationsTests: QuickSpec {
                 }
 
                 #endif
+
+                #if os(OSX)
+
+                it("registers itself as observer for the display options notification only once") {
+                    expect(systemNotificationCenterMock!.observedNotifications).to(haveCount(1))
+                    expect(systemNotificationCenterMock!.hasRegisteredNotification(forName: NSWorkspace.accessibilityDisplayOptionsDidChangeNotification)).to(beTrue())
                 }
+
+                }
+
+                #endif
+
             }
 
             context("after initialization with a Handicap containing two features") {
@@ -133,6 +144,16 @@ class HandicapNotificationsTests: QuickSpec {
                         expect(systemNotificationCenterMock!.hasRegisteredNotification(forFeature: testFeature1!)).to(beTrue())
                         expect(systemNotificationCenterMock!.hasRegisteredNotification(forFeature: testFeature2!)).to(beTrue())
                     }
+
+                    #endif
+
+                    #if os(OSX)
+
+                    it("registers itself as observer for the display options notification (ReduceMotion)") {
+                        expect(systemNotificationCenterMock!.observedNotifications).to(haveCount(1))
+                        expect(systemNotificationCenterMock!.hasRegisteredNotification(forName: NSWorkspace.accessibilityDisplayOptionsDidChangeNotification)).to(beTrue())
+                    }
+
 
                     #endif
 
@@ -207,9 +228,6 @@ class HandicapNotificationsTests: QuickSpec {
                 expect(handicapStatus.handicap).to(equal(handicap))
                 expect(handicapStatus.statusString).to(equal(statusString))
             }
-
-            #endif
-
         }
     }
 }

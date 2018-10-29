@@ -24,11 +24,18 @@ class Notifications: NSObject, NotificationsProtocol {
     var targetNotificationCenter: NotificationCenter
     var systemNotificationCenter: NotificationCenter
 
+    #if os(OSX)
+    var displayOptionStatuses: [CapableFeature: Bool]
+    #endif
 
     required init(featureStatusesProvider: FeatureStatusesProviderProtocol, targetNotificationCenter: NotificationCenter = NotificationCenter.default, systemNotificationCenter: NotificationCenter = Notifications.systemNotificationCenter) {
         self.featureStatusesProvider = featureStatusesProvider
         self.targetNotificationCenter = targetNotificationCenter
         self.systemNotificationCenter = systemNotificationCenter
+
+        #if os(OSX)
+        self.displayOptionStatuses = [CapableFeature: Bool]()
+        #endif
     }
 
     static var systemNotificationCenter: NotificationCenter {
@@ -110,6 +117,27 @@ extension Notifications {
         #if os(watchOS)
             if #available(watchOS 4.0, *), features.contains(.reduceMotion) {
                 addObserver(for: .WKAccessibilityReduceMotionStatusDidChange, selector: #selector(self.reduceMotionStatusChanged))
+        #endif
+
+        #if os(OSX)
+
+        if features.contains(.differentiateWithoutColor) {
+            self.displayOptionStatuses[.differentiateWithoutColor] = self.featureStatusesProvider.isDifferentiateWithoutColorEnabled
+        }
+        if features.contains(.increaseContrast) {
+            self.displayOptionStatuses[.increaseContrast] = self.featureStatusesProvider.isIncreaseContrastEnabled
+        }
+        if features.contains(.invertColors) {
+            self.displayOptionStatuses[.invertColors] = self.featureStatusesProvider.isInvertColorsEnabled
+        }
+        if features.contains(.reduceMotion) {
+            self.displayOptionStatuses[.reduceMotion] = self.featureStatusesProvider.isReduceMotionEnabled
+        }
+        if features.contains(.reduceTransparency) {
+            self.displayOptionStatuses[.reduceTransparency] = self.featureStatusesProvider.isReduceTransparencyEnabled
+        }
+
+        addObserver(forNotification: NSWorkspace.accessibilityDisplayOptionsDidChangeNotification, selector: #selector(self.displayOptionsChanged), object: NSWorkspace.shared)
             }
             if features.contains(.voiceOver) {
                 addObserver(for: NSNotification.Name(rawValue: WKAccessibilityVoiceOverStatusChanged), selector: #selector(self.voiceOverStatusChanged))
@@ -121,12 +149,12 @@ extension Notifications {
 
 // MARK: Handle notifications
 extension Notifications {
-    func addObserver(for notificationName: NSNotification.Name, selector: Selector) {
-        self.notificationCenter.addObserver(
+    func addObserver(forNotification notificationName: NSNotification.Name, selector: Selector, object: Any? = nil) {
+        self.systemNotificationCenter.addObserver(
             self,
             selector: selector,
             name: notificationName,
-            object: nil)
+            object: object)
     }
 
     #if os(iOS)
@@ -186,7 +214,20 @@ extension Notifications {
 
     @objc func reduceTransparencyStatusChanged(notification: NSNotification) {
         self.postNotification(withFeature: .reduceTransparency, statusString: self.featureStatusesProvider.isReduceTransparencyEnabled.statusString)
+    #if os(OSX)
+
+    @objc func displayOptionsChanged() {
+        for feature in self.displayOptionStatuses.keys {
+            let newValue = self.featureStatusesProvider.isFeatureEnabled(feature: feature)
+            let oldValue = self.displayOptionStatuses[feature]
+
+            if newValue != oldValue {
+                self.displayOptionStatuses[feature] = newValue
+                self.postNotification(withFeature: feature, statusString: newValue.statusString)
+            }
+        }
     }
+
     #endif
 
     @objc func reduceMotionStatusChanged(notification: NSNotification) {

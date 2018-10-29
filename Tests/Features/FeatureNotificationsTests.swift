@@ -87,6 +87,17 @@ class FeatureNotificationsTests: QuickSpec {
                     }
                 }
 
+                #endif
+
+                #if os(OSX)
+
+                it("registers itself as observer for the display options notification only once") {
+                    expect(systemNotificationCenterMock!.observedNotifications).to(haveCount(1))
+                    expect(systemNotificationCenterMock!.hasRegisteredNotification(forName: NSWorkspace.accessibilityDisplayOptionsDidChangeNotification)).to(beTrue())
+                }
+
+                #endif
+
                 #if os(iOS)
 
                 context("when AssistiveTouch was activated by the user") {
@@ -119,17 +130,6 @@ class FeatureNotificationsTests: QuickSpec {
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
                         verifyFeatureDidChangeNotificationWasPosted(withFeature: .guidedAccess, statusString: "enabled")
-                    }
-                }
-
-                context("when InvertColors was activated by the user") {
-                    beforeEach {
-                        featureStatusesProviderMock!.invertColorsEnabled = true
-                        sut!.invertColorsStatusChanged(notification: placeholderNotification)
-                    }
-
-                    it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
-                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .invertColors, statusString: "enabled")
                     }
                 }
 
@@ -182,6 +182,67 @@ class FeatureNotificationsTests: QuickSpec {
 
                 #endif
 
+                #if os(OSX)
+
+                context("when DifferentiateWithoutColor was activated by the user") {
+                    beforeEach {
+                        featureStatusesProviderMock!.differentiateWithoutColor = true
+                        sut!.displayOptionsChanged()
+                    }
+
+                    it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
+                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .differentiateWithoutColor, statusString: "enabled")
+                    }
+                }
+
+                context("when IncreaseContrast was activated by the user") {
+                    beforeEach {
+                        featureStatusesProviderMock!.increaseContrast = true
+                        sut!.displayOptionsChanged()
+                    }
+
+                    it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
+                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .increaseContrast, statusString: "enabled")
+                    }
+                }
+
+                context("when InvertColors was activated by the user") {
+                    beforeEach {
+                        featureStatusesProviderMock!.invertColorsEnabled = true
+                        sut!.displayOptionsChanged()
+                    }
+
+                    it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
+                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .invertColors, statusString: "enabled")
+                    }
+                }
+
+                context("when ReduceMotion was activated by the user") {
+                    beforeEach {
+                        featureStatusesProviderMock!.reduceMotionEnabled = true
+                        sut!.displayOptionsChanged()
+                    }
+
+                    it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
+                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .reduceMotion, statusString: "enabled")
+                    }
+                }
+
+                context("when ReduceTransparency was activated by the user") {
+                    beforeEach {
+                        featureStatusesProviderMock!.reduceTransparencyEnabled = true
+                        sut!.displayOptionsChanged()
+                    }
+
+                    it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
+                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .reduceTransparency, statusString: "enabled")
+                    }
+                }
+
+                #endif
+
+                #if os(iOS) || os(tvOS)
+
                 context("when BoldText was activated by the user") {
                     beforeEach {
                         featureStatusesProviderMock!.boldTextEnabled = true
@@ -212,6 +273,17 @@ class FeatureNotificationsTests: QuickSpec {
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
                         verifyFeatureDidChangeNotificationWasPosted(withFeature: .grayscale, statusString: "enabled")
+                    }
+                }
+
+                context("when InvertColors was activated by the user") {
+                    beforeEach {
+                        featureStatusesProviderMock!.invertColorsEnabled = true
+                        sut!.invertColorsStatusChanged()
+                    }
+
+                    it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
+                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .invertColors, statusString: "enabled")
                     }
                 }
 
