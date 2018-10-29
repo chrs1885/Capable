@@ -96,6 +96,10 @@ class FeatureNotificationsTests: QuickSpec {
                     expect(systemNotificationCenterMock!.hasRegisteredNotification(forName: NSWorkspace.accessibilityDisplayOptionsDidChangeNotification)).to(beTrue())
                 }
 
+                it("observs key path changes for features not related to display options") {
+                    expect(sut!.keyValueObservations).to(haveCount(2))
+                }
+
                 #endif
 
                 #if os(iOS)

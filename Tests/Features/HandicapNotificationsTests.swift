@@ -105,6 +105,8 @@ class HandicapNotificationsTests: QuickSpec {
                     expect(systemNotificationCenterMock!.hasRegisteredNotification(forName: NSWorkspace.accessibilityDisplayOptionsDidChangeNotification)).to(beTrue())
                 }
 
+                it("observs key path changes for this feature only once") {
+                    expect(sut!.keyValueObservations).to(haveCount(1))
                 }
 
                 #endif
@@ -154,6 +156,9 @@ class HandicapNotificationsTests: QuickSpec {
                         expect(systemNotificationCenterMock!.hasRegisteredNotification(forName: NSWorkspace.accessibilityDisplayOptionsDidChangeNotification)).to(beTrue())
                     }
 
+                    it("observs key path changes (VoiceOver) feature") {
+                        expect(sut!.keyValueObservations).to(haveCount(1))
+                    }
 
                     #endif
 
@@ -184,11 +189,11 @@ class HandicapNotificationsTests: QuickSpec {
 
                 context("when .enabledIf is set to .allFeaturesEnabled and both features are currently disabled") {
                     beforeEach {
-                        testHandicap = Handicap(with: [testFeature1!, testFeature2!], name: "testHandicap", enabledIf: .allFeaturesEnabled)
+                        testHandicap = Handicap(features: [testFeature1!, testFeature2!], name: "testHandicap", enabledIf: .allFeaturesEnabled)
                         testStatuses = HandicapStatuses(withHandicaps: [testHandicap!], featureStatusesProvider: featureStatusesProviderMock!)
                         featureStatusesProviderMock!.voiceOverEnabled = false
                         featureStatusesProviderMock!.reduceMotionEnabled = false
-                        sut = HandicapNotifications(statusesModule: testStatuses!, handicaps: [testHandicap!], featureStatusesProvider: featureStatusesProviderMock!, notificationCenter: notificationCenterMock!)
+                        sut = HandicapNotifications(statusesModule: testStatuses!, handicaps: [testHandicap!], featureStatusesProvider: featureStatusesProviderMock!, targetNotificationCenter: targetNotificationCenterMock!, systemNotificationCenter: systemNotificationCenterMock!)
                     }
 
                     afterEach {
@@ -218,9 +223,9 @@ class HandicapNotificationsTests: QuickSpec {
             }
 
             func verifyHandicapDidChangeNotificationWasPosted(withHandicap handicap: Handicap, statusString: String) {
-                expect(notificationCenterMock!.postedNotifications.count).to(equal(1))
+                expect(targetNotificationCenterMock!.postedNotifications).to(haveCount(1))
 
-                let notificationObject = notificationCenterMock!.postedNotifications[handicapDidChangeNotification]
+                let notificationObject = targetNotificationCenterMock!.postedNotifications[handicapDidChangeNotification]
                 guard let handicapStatus = notificationObject as? HandicapStatus else {
                     fail("Notification does not contain a HandicapStatus object.")
                     return

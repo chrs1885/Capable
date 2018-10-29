@@ -26,6 +26,7 @@ class Notifications: NSObject, NotificationsProtocol {
 
     #if os(OSX)
     var displayOptionStatuses: [CapableFeature: Bool]
+    var keyValueObservations: [NSKeyValueObservation]
     #endif
 
     required init(featureStatusesProvider: FeatureStatusesProviderProtocol, targetNotificationCenter: NotificationCenter = NotificationCenter.default, systemNotificationCenter: NotificationCenter = Notifications.systemNotificationCenter) {
@@ -35,6 +36,7 @@ class Notifications: NSObject, NotificationsProtocol {
 
         #if os(OSX)
         self.displayOptionStatuses = [CapableFeature: Bool]()
+        self.keyValueObservations = [NSKeyValueObservation]()
         #endif
     }
 
@@ -138,10 +140,20 @@ extension Notifications {
         }
 
         addObserver(forNotification: NSWorkspace.accessibilityDisplayOptionsDidChangeNotification, selector: #selector(self.displayOptionsChanged), object: NSWorkspace.shared)
+
+        if features.contains(.switchControl), #available(OSX 10.13, *) {
+            let switchControlObservation = NSWorkspace.shared.observe(\NSWorkspace.isSwitchControlEnabled) { _, _ in
+                self.switchControlStatusChanged()
             }
-            if features.contains(.voiceOver) {
-                addObserver(for: NSNotification.Name(rawValue: WKAccessibilityVoiceOverStatusChanged), selector: #selector(self.voiceOverStatusChanged))
+            self.keyValueObservations.append(switchControlObservation)
+        }
+        if features.contains(.voiceOver), #available(OSX 10.13, *) {
+            let voiceOverObservation = NSWorkspace.shared.observe(\NSWorkspace.isVoiceOverEnabled) { _, _ in
+                self.voiceOverStatusChanged()
             }
+            self.keyValueObservations.append(voiceOverObservation)
+        }
+
         #endif
     }
     // swiftlint:enable cyclomatic_complexity
