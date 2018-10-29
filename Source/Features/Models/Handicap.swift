@@ -18,4 +18,18 @@ public struct Handicap: Equatable {
 
     /// This mode defines whether all features need to be enabled to set the `Handicap`'s status to enabled or only one of them.
     public private(set) var enabledIf: HandicapEnabledMode
+
+    /**
+     Initializes a new `Handicap` object.
+
+     - Parameters:
+     - features: A list of features that are expected to be enabled if a user has this handicap.
+     - name: The name of the `Handicap` that can be used to uniquely identify the `Handicap`. This name is also used inside the status map.
+     - enabledIf: This mode defines whether all features need to be enabled to set the `Handicap`'s status to enabled or only one of them.
+     */
+    public init(features: [CapableFeature], name: String, enabledIf: HandicapEnabledMode) {
+        self.features = features
+        self.name = name
+        self.enabledIf = enabledIf
+    }
 }
