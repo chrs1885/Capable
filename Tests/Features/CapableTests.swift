@@ -52,8 +52,15 @@ class CapableTests: QuickSpec {
                         // swiftlint:disable force_cast
                         let featureNotifications = sut!.notificationsModule as! FeatureNotifications
                         // swiftlint:enable force_cast
-                        expect(featureNotifications.notificationCenter).to(equal(NotificationCenter.default))
+
                         expect(featureNotifications.featureStatusesProvider).to(be(sut!.featureStatusesProvider))
+                        expect(featureNotifications.targetNotificationCenter).to(equal(NotificationCenter.default))
+
+                        #if os(OSX)
+                        expect(featureNotifications.systemNotificationCenter).to(equal(NSWorkspace.shared.notificationCenter))
+                        #else
+                        expect(featureNotifications.systemNotificationCenter).to(equal(NotificationCenter.default))
+                        #endif
                     }
 
                     it("sets the features property correctly") {
@@ -110,7 +117,7 @@ class CapableTests: QuickSpec {
                     var testHandicap: Handicap?
 
                     beforeEach {
-                        testHandicap = Handicap(with: [.voiceOver], name: "TestHandicap", enabledIf: .allFeaturesEnabled)
+                        testHandicap = Handicap(features: [.voiceOver], name: "TestHandicap", enabledIf: .allFeaturesEnabled)
                         sut = Capable(withHandicaps: [testHandicap!])
                     }
 
@@ -135,8 +142,14 @@ class CapableTests: QuickSpec {
                         // swiftlint:disable force_cast
                         let handicapNotifications = sut!.notificationsModule as! HandicapNotifications
                         // swiftlint:enable force_cast
-                        expect(handicapNotifications.notificationCenter).to(equal(NotificationCenter.default))
                         expect(handicapNotifications.featureStatusesProvider).to(be(sut!.featureStatusesProvider))
+                        expect(handicapNotifications.targetNotificationCenter).to(equal(NotificationCenter.default))
+
+                        #if os(OSX)
+                        expect(handicapNotifications.systemNotificationCenter).to(equal(NSWorkspace.shared.notificationCenter))
+                        #else
+                        expect(handicapNotifications.systemNotificationCenter).to(equal(NotificationCenter.default))
+                        #endif
                     }
 
                     it("sets the handicaps property correctly") {

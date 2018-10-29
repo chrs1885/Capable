@@ -13,11 +13,22 @@ class FeatureOverviewController: NSViewController {
     @IBOutlet weak var featuresTableView: NSTableView!
     var objects: [String: String]?
     var capable: Capable?
+    var alert: NSAlert?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.capable = Capable()
         self.refreshData()
+    }
+
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        self.registerObservers()
+    }
+
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        self.unregisterObservers()
     }
 
     func refreshData() {
@@ -56,5 +67,42 @@ extension FeatureOverviewController {
     @IBAction func refresh(_ sender: Any) {
         self.refreshData()
         self.featuresTableView.reloadData()
+    }
+}
+
+// MARK: Capable Notification
+extension FeatureOverviewController {
+    @objc private func featureStatusChanged(notification: NSNotification) {
+        if let featureStatus = notification.object as? FeatureStatus {
+            self.showAlert(for: featureStatus)
+            refreshData()
+            self.featuresTableView.reloadData()
+        }
+    }
+
+    func registerObservers() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.featureStatusChanged),
+            name: .CapableFeatureStatusDidChange,
+            object: nil)
+    }
+
+    func unregisterObservers() {
+        NotificationCenter.default.removeObserver(self)
+    }
+}
+
+// MARK: Alert
+extension FeatureOverviewController {
+    private func showAlert(for featureStatus: FeatureStatus) {
+        let alert = NSAlert()
+        alert.messageText = "Feature status changed"
+        alert.informativeText = "\(featureStatus.feature.rawValue) changed to \(featureStatus.statusString)"
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "OK")
+
+        self.alert = alert
+        self.alert?.runModal()
     }
 }

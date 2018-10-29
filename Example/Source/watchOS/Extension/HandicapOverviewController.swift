@@ -18,7 +18,7 @@ class HandicapOverviewController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        let lowVision = Handicap(with: [.boldText, .largerText], name: "Low Vision", enabledIf: .oneFeatureEnabled)
+        let lowVision = Handicap(features: [.boldText, .largerText], name: "Low Vision", enabledIf: .oneFeatureEnabled)
         self.capable = Capable(withHandicaps: [lowVision])
         self.handicaps = [lowVision]
         self.refreshData()

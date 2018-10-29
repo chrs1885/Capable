@@ -2,7 +2,7 @@
 //  HandicapTests.swift
 //  CapableTests
 //
-//  Created by Christoph Wendt on 15.08.18.
+//  Created by Christoph Wendt on 29.10.18.
 //
 
 #if os(iOS) || os(tvOS) || os(OSX)
@@ -24,7 +24,7 @@ class HandicapTests: QuickSpec {
                     testName = "TestHandicap"
                     testFeatures = [.reduceMotion, .voiceOver]
                     testMode = .allFeaturesEnabled
-                    sut = Handicap(with: testFeatures!, name: testName!, enabledIf: testMode!)
+                    sut = Handicap(features: testFeatures!, name: testName!, enabledIf: testMode!)
                 }
 
                 it("returns a Handicap instance") {

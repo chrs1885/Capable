@@ -18,11 +18,11 @@ class HandicapViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         #if os(iOS)
-            let blindness = Handicap(with: [.speakScreen, .speakSelection, .voiceOver], name: "Blindness", enabledIf: .oneFeatureEnabled)
+            let blindness = Handicap(features: [.speakScreen, .speakSelection, .voiceOver], name: "Blindness", enabledIf: .oneFeatureEnabled)
             self.capable = Capable(withHandicaps: [blindness])
             self.handicaps = [blindness]
         #else
-            let lowVision = Handicap(with: [.boldText, .invertColors, .reduceTransparency], name: "Low Vision ", enabledIf: .oneFeatureEnabled)
+            let lowVision = Handicap(features: [.boldText, .invertColors, .reduceTransparency], name: "Low Vision ", enabledIf: .oneFeatureEnabled)
             self.capable = Capable(withHandicaps: [lowVision])
             self.handicaps = [lowVision]
         #endif
@@ -32,10 +32,12 @@ class HandicapViewController: UITableViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.registerObservers()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         self.unregisterObservers()
     }
 

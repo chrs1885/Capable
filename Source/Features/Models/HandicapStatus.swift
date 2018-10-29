@@ -13,16 +13,4 @@ public struct HandicapStatus {
 
     /// The `Handicap`'s status (**enabled** or **disabled**). Note that the status depends on the `Handicap`'s `enabledIf` value (see `HandicapEnabledMode`).
     public private(set) var statusString: String
-
-    /**
-     Initializes a new `HandicapStatus` object.
-
-     - Parameters:
-     - handicap: The `Handicap` that has changed.
-     - statusString: The current value of the `Handicap` (**enabled** or **disabled**).
-     */
-    init(with handicap: Handicap, statusString: String) {
-        self.handicap = handicap
-        self.statusString = statusString
-    }
 }

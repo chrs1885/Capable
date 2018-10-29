@@ -12,24 +12,24 @@ class HandicapNotifications: Notifications {
     var statusesModule: HandicapStatusesProtocol?
     var lastValues: [String: String] = [:]
 
-    convenience init(statusesModule: HandicapStatusesProtocol, handicaps: [Handicap], featureStatusesProvider: FeatureStatusesProviderProtocol, notificationCenter: NotificationCenter = NotificationCenter.default) {
-        self.init(featureStatusesProvider: featureStatusesProvider, notificationCenter: notificationCenter)
+    convenience init(statusesModule: HandicapStatusesProtocol, handicaps: [Handicap], featureStatusesProvider: FeatureStatusesProviderProtocol, targetNotificationCenter: NotificationCenter = NotificationCenter.default, systemNotificationCenter: NotificationCenter = Notifications.systemNotificationCenter) {
+        self.init(featureStatusesProvider: featureStatusesProvider, targetNotificationCenter: targetNotificationCenter, systemNotificationCenter: systemNotificationCenter)
         self.statusesModule = statusesModule
         self.handicaps = handicaps
         self.lastValues = Dictionary(uniqueKeysWithValues: self.handicaps.map { ($0.name, statusesModule.isHandicapEnabled(handicapName: $0.name).statusString) })
         self.enableNotifications(forHandicaps: handicaps)
     }
 
-    required init(featureStatusesProvider: FeatureStatusesProviderProtocol, notificationCenter: NotificationCenter = NotificationCenter.default) {
-        super.init(featureStatusesProvider: featureStatusesProvider, notificationCenter: notificationCenter)
+    required init(featureStatusesProvider: FeatureStatusesProviderProtocol, targetNotificationCenter: NotificationCenter = NotificationCenter.default, systemNotificationCenter: NotificationCenter = Notifications.systemNotificationCenter) {
+        super.init(featureStatusesProvider: featureStatusesProvider, targetNotificationCenter: targetNotificationCenter, systemNotificationCenter: systemNotificationCenter)
     }
 
     override func postNotification(withFeature feature: CapableFeature, statusString: String) {
         for handicap in self.handicaps {
             if handicap.features.contains(feature), self.hasStatusChanged(handicap: handicap) {
                 self.lastValues[handicap.name] = statusString
-                let handicapStatus = HandicapStatus(with: handicap, statusString: statusString)
-                self.notificationCenter.post(name: .CapableHandicapStatusDidChange, object: handicapStatus)
+                let handicapStatus = HandicapStatus(handicap: handicap, statusString: statusString)
+                self.targetNotificationCenter.post(name: .CapableHandicapStatusDidChange, object: handicapStatus)
             }
         }
     }

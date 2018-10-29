@@ -27,8 +27,8 @@ class HandicapStatusesTests: QuickSpec {
 
                 beforeEach {
                     let testFeatures: [CapableFeature] = [.reduceMotion, .voiceOver]
-                    testHandicap1 = Handicap(with: testFeatures, name: "TestHandicap1", enabledIf: .oneFeatureEnabled)
-                    testHandicap2 = Handicap(with: testFeatures, name: "TestHandicap2", enabledIf: .allFeaturesEnabled)
+                    testHandicap1 = Handicap(features: testFeatures, name: "TestHandicap1", enabledIf: .oneFeatureEnabled)
+                    testHandicap2 = Handicap(features: testFeatures, name: "TestHandicap2", enabledIf: .allFeaturesEnabled)
                     sut = HandicapStatuses(withHandicaps: [testHandicap1!, testHandicap2!], featureStatusesProvider: featureStatusesProviderMock!)
                 }
 
@@ -136,12 +136,13 @@ class HandicapStatusesTests: QuickSpec {
             }
 
             #if os(iOS)
+
             context("after initialization with a Handicap holding the .largerText feature") {
                 var testHandicapName: String?
 
                 beforeEach {
                     testHandicapName = "TestHandicap"
-                    let testHandicap = Handicap(with: [.largerText], name: testHandicapName!, enabledIf: .allFeaturesEnabled)
+                    let testHandicap = Handicap(features: [.largerText], name: testHandicapName!, enabledIf: .allFeaturesEnabled)
                     let testTextCategory: UIContentSizeCategory = .accessibilityExtraExtraExtraLarge
                     featureStatusesProviderMock!.textCatagory = testTextCategory
                     sut = HandicapStatuses(withHandicaps: [testHandicap], featureStatusesProvider: featureStatusesProviderMock!)
@@ -152,7 +153,9 @@ class HandicapStatusesTests: QuickSpec {
                     expect(statusMap[testHandicapName!]).to(equal("enabled"))
                 }
             }
+
             #endif
+
         }
     }
 }

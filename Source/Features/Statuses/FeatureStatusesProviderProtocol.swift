@@ -25,7 +25,6 @@ protocol FeatureStatusesProviderProtocol {
     var isClosedCaptioningEnabled: Bool { get }
     var isGrayscaleEnabled: Bool { get }
     var isMonoAudioEnabled: Bool { get }
-    var isReduceTransparencyEnabled: Bool { get }
     #endif
 
     #if os(iOS) || os(tvOS) || os(watchOS)
@@ -34,6 +33,7 @@ protocol FeatureStatusesProviderProtocol {
 
     #if os(iOS) || os(tvOS) || os(OSX)
     var isInvertColorsEnabled: Bool { get }
+    var isReduceTransparencyEnabled: Bool { get }
     var isSwitchControlEnabled: Bool { get }
     #endif
 
