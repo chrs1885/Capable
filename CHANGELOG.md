@@ -1,3 +1,8 @@
+## Version 0.8.0
+
+### Features
+* [Add notifications for accessibility feature changes on macOS](https://github.com/chrs1885/Capable/issues/31)
+
 ## Version 0.7.0
 
 ### Features
