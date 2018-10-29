@@ -101,6 +101,7 @@ To get a dictionary of all features, that the `Capable` instance has been initia
 let capable = Capable()
 let statusMap = capable.statusMap
 ```
+
 This will return each feature name (key) along with its current value as described in the [accessibility feature overview](#accessibility-feature-overview) section.
 
 <a id="handicaps"></a> 
@@ -231,21 +232,21 @@ The following table contains all features that are available AND settable on eac
 | .boldText                  | :white_check_mark: |                                | :white_check_mark: | &nbsp;:white_check_mark:**\*** |
 | .closedCaptioning          | :white_check_mark: |                                | :white_check_mark: |                                |
 | .darkerSystemColors        | :white_check_mark: |                                |                    |                                |
-| .differentiateWithoutColor |                    | &nbsp;:white_check_mark:**\*** |                    |                                |
+| .differentiateWithoutColor |                    | :white_check_mark:             |                    |                                |
 | .fullKeyboardAccess        |                    | &nbsp;:white_check_mark:**\*** |                    |                                |
 | .grayscale                 | :white_check_mark: |                                | :white_check_mark: |                                |
 | .guidedAccess              | :white_check_mark: |                                |                    |                                |
-| .increaseContrast          |                    | &nbsp;:white_check_mark:**\*** |                    |                                |
-| .invertColors              | :white_check_mark: | &nbsp;:white_check_mark:**\*** | :white_check_mark: |                                |
+| .increaseContrast          |                    | :white_check_mark:             |                    |                                |
+| .invertColors              | :white_check_mark: | :white_check_mark:             | :white_check_mark: |                                |
 | .largerText                | :white_check_mark: |                                |                    | &nbsp;:white_check_mark:**\*** |
 | .monoAudio                 | :white_check_mark: |                                | :white_check_mark: |                                |
-| .reduceMotion              | :white_check_mark: | &nbsp;:white_check_mark:**\*** | :white_check_mark: | :white_check_mark:             |
-| .reduceTransparency        | :white_check_mark: | &nbsp;:white_check_mark:**\*** | :white_check_mark: |                                |
+| .reduceMotion              | :white_check_mark: | :white_check_mark:             | :white_check_mark: | :white_check_mark:             |
+| .reduceTransparency        | :white_check_mark: | :white_check_mark:             | :white_check_mark: |                                |
 | .shakeToUndo               | :white_check_mark: |                                |                    |                                |
 | .speakScreen               | :white_check_mark: |                                |                    |                                |
 | .speakSelection            | :white_check_mark: |                                |                    |                                |
-| .switchControl             | :white_check_mark: | &nbsp;:white_check_mark:**\*** | :white_check_mark: |                                |
-| .voiceOver                 | :white_check_mark: | &nbsp;:white_check_mark:**\*** | :white_check_mark: | :white_check_mark:             |
+| .switchControl             | :white_check_mark: | :white_check_mark:             | :white_check_mark: |                                |
+| .voiceOver                 | :white_check_mark: | :white_check_mark:             | :white_check_mark: | :white_check_mark:             |
 
 *\* Feature status can be read but notifications are not available.*
 
