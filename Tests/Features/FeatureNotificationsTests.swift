@@ -107,7 +107,7 @@ class FeatureNotificationsTests: QuickSpec {
                 context("when AssistiveTouch was activated by the user") {
                     beforeEach {
                         featureStatusesProviderMock!.assistiveTouchEnabled = true
-                        sut!.assistiveTouchStatusChanged(notification: placeholderNotification)
+                        sut!.assistiveTouchStatusChanged()
                     }
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
@@ -118,7 +118,7 @@ class FeatureNotificationsTests: QuickSpec {
                 context("when DarkerSystemColors was activated by the user") {
                     beforeEach {
                         featureStatusesProviderMock!.darkerSystemColorsEnabled = true
-                        sut!.darkerSystemColorsStatusChanged(notification: placeholderNotification)
+                        sut!.darkerSystemColorsStatusChanged()
                     }
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
@@ -129,7 +129,7 @@ class FeatureNotificationsTests: QuickSpec {
                 context("when GuidedAccess was activated by the user") {
                     beforeEach {
                         featureStatusesProviderMock!.guidedAccessEnabled = true
-                        sut!.guidedAccessStatusChanged(notification: placeholderNotification)
+                        sut!.guidedAccessStatusChanged()
                     }
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
@@ -143,7 +143,7 @@ class FeatureNotificationsTests: QuickSpec {
                     beforeEach {
                         testContentSizeCategory = .accessibilityExtraExtraExtraLarge
                         featureStatusesProviderMock!.textCatagory = testContentSizeCategory!
-                        sut!.largerTextStatusChanged(notification: placeholderNotification)
+                        sut!.largerTextStatusChanged()
                     }
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
@@ -154,7 +154,7 @@ class FeatureNotificationsTests: QuickSpec {
                 context("when ShakeToUndo was activated by the user") {
                     beforeEach {
                         featureStatusesProviderMock!.shakeToUndoEnabled = true
-                        sut!.shakeToUndoStatusChanged(notification: placeholderNotification)
+                        sut!.shakeToUndoStatusChanged()
                     }
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
@@ -165,7 +165,7 @@ class FeatureNotificationsTests: QuickSpec {
                 context("when SpeakScreen was activated by the user") {
                     beforeEach {
                         featureStatusesProviderMock!.speakScreenEnabled = true
-                        sut!.speakScreenStatusChanged(notification: placeholderNotification)
+                        sut!.speakScreenStatusChanged()
                     }
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
@@ -176,7 +176,7 @@ class FeatureNotificationsTests: QuickSpec {
                 context("when SpeackSelection was activated by the user") {
                     beforeEach {
                         featureStatusesProviderMock!.speakSelectionEnabled = true
-                        sut!.speakSelectionStatusChanged(notification: placeholderNotification)
+                        sut!.speakSelectionStatusChanged()
                     }
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
@@ -250,7 +250,7 @@ class FeatureNotificationsTests: QuickSpec {
                 context("when BoldText was activated by the user") {
                     beforeEach {
                         featureStatusesProviderMock!.boldTextEnabled = true
-                        sut!.boldTextStatusChanged(notification: placeholderNotification)
+                        sut!.boldTextStatusChanged()
                     }
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
@@ -261,7 +261,7 @@ class FeatureNotificationsTests: QuickSpec {
                 context("when ClosedCaptioning was activated by the user") {
                     beforeEach {
                         featureStatusesProviderMock!.closedCaptioningEnabled = true
-                        sut!.closedCaptioningStatusChanged(notification: placeholderNotification)
+                        sut!.closedCaptioningStatusChanged()
                     }
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
@@ -272,7 +272,7 @@ class FeatureNotificationsTests: QuickSpec {
                 context("when Grayscale was activated by the user") {
                     beforeEach {
                         featureStatusesProviderMock!.grayscaleEnabled = true
-                        sut!.grayscaleStatusChanged(notification: placeholderNotification)
+                        sut!.grayscaleStatusChanged()
                     }
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
@@ -294,7 +294,7 @@ class FeatureNotificationsTests: QuickSpec {
                 context("when MonoAudio was activated by the user") {
                     beforeEach {
                         featureStatusesProviderMock!.monoAudioEnabled = true
-                        sut!.monoAudioStatusChanged(notification: placeholderNotification)
+                        sut!.monoAudioStatusChanged()
                     }
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
@@ -302,32 +302,10 @@ class FeatureNotificationsTests: QuickSpec {
                     }
                 }
 
-                context("when SwitchControl was activated by the user") {
-                    beforeEach {
-                        featureStatusesProviderMock!.switchControlEnabled = true
-                        sut!.switchControlStatusChanged(notification: placeholderNotification)
-                    }
-
-                    it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
-                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .switchControl, statusString: "enabled")
-                    }
-                }
-
-                context("when ReduceTransparency was activated by the user") {
-                    beforeEach {
-                        featureStatusesProviderMock!.reduceTransparencyEnabled = true
-                        sut!.reduceTransparencyStatusChanged(notification: placeholderNotification)
-                    }
-
-                    it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
-                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .reduceTransparency, statusString: "enabled")
-                    }
-                }
-
                 context("when ReduceMotion was activated by the user") {
                     beforeEach {
                         featureStatusesProviderMock!.reduceMotionEnabled = true
-                        sut!.reduceMotionStatusChanged(notification: placeholderNotification)
+                        sut!.reduceMotionStatusChanged()
                     }
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
@@ -335,10 +313,34 @@ class FeatureNotificationsTests: QuickSpec {
                     }
                 }
 
+                context("when ReduceTransparency was activated by the user") {
+                    beforeEach {
+                        featureStatusesProviderMock!.reduceTransparencyEnabled = true
+                        sut!.reduceTransparencyStatusChanged()
+                    }
+
+                    it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
+                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .reduceTransparency, statusString: "enabled")
+                    }
+                }
+
+                #endif
+
+                context("when SwitchControl was activated by the user") {
+                    beforeEach {
+                        featureStatusesProviderMock!.switchControlEnabled = true
+                        sut!.switchControlStatusChanged()
+                    }
+
+                    it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
+                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .switchControl, statusString: "enabled")
+                    }
+                }
+
                 context("when VoiceOver was activated by the user") {
                     beforeEach {
                         featureStatusesProviderMock!.voiceOverEnabled = true
-                        sut!.voiceOverStatusChanged(notification: placeholderNotification)
+                        sut!.voiceOverStatusChanged()
                     }
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
@@ -348,9 +350,9 @@ class FeatureNotificationsTests: QuickSpec {
             }
 
             func verifyFeatureDidChangeNotificationWasPosted(withFeature feature: CapableFeature, statusString: String) {
-                expect(notificationCenterMock!.postedNotifications.count).to(equal(1))
+                expect(targetNotificationCenterMock!.postedNotifications).to(haveCount(1))
 
-                let notificationObject = notificationCenterMock!.postedNotifications[featureDidChangeNotification]
+                let notificationObject = targetNotificationCenterMock!.postedNotifications[featureDidChangeNotification]
                 guard let featureStatus = notificationObject as? FeatureStatus else {
                     fail("Notification does not contain a FeatureStatus object.")
                     return
