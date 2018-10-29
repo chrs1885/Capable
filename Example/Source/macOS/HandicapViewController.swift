@@ -14,6 +14,7 @@ class HandicapViewController: NSViewController {
     var capable: Capable?
     var objects: [String: String]?
     var handicaps: [Handicap]?
+    var alert: NSAlert?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,16 @@ class HandicapViewController: NSViewController {
         self.capable = Capable(withHandicaps: [lowVision])
         self.handicaps = [lowVision]
         self.refreshData()
+    }
+
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        self.registerObservers()
+    }
+
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        self.unregisterObservers()
     }
 
     func refreshData() {
@@ -49,8 +60,8 @@ extension HandicapViewController: NSTableViewDataSource, NSTableViewDelegate{
 
     func value(forRow row: Int) -> (key: String, value: String) {
         if let objects = self.objects {
-            let featuresArray = Array(objects)
-            return featuresArray[row]
+            let handicapArray = Array(objects)
+            return handicapArray[row]
         }
         fatalError("Requested item does not exist")
     }
@@ -72,3 +83,41 @@ extension HandicapViewController {
         self.handicapTableView.reloadData()
     }
 }
+
+// MARK: Capable Notification
+extension HandicapViewController {
+    @objc private func handicapStatusChanged(notification: NSNotification) {
+        if let handicapStatus = notification.object as? HandicapStatus {
+            self.showAlert(for: handicapStatus)
+            refreshData()
+            self.handicapTableView.reloadData()
+        }
+    }
+
+    func registerObservers() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.handicapStatusChanged),
+            name: .CapableHandicapStatusDidChange,
+            object: nil)
+    }
+
+    func unregisterObservers() {
+        NotificationCenter.default.removeObserver(self)
+    }
+}
+
+// MARK: Alert
+extension HandicapViewController {
+    private func showAlert(for handicapStatus: HandicapStatus) {
+        let alert = NSAlert()
+        alert.messageText = "Handicap status changed"
+        alert.informativeText = "\(handicapStatus.handicap.name) changed to \(handicapStatus.statusString)"
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "OK")
+
+        self.alert = alert
+        self.alert?.runModal()
+    }
+}
+
