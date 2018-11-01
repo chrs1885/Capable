@@ -5,6 +5,8 @@
 //  Created by Christoph Wendt on 23.03.18.
 //
 
+import os.log
+
 /// This class defines the main interface of the Capable framework.
 public struct Capable {
     var statusesModule: StatusesProtocol
@@ -27,11 +29,11 @@ public struct Capable {
      - Parameters:
         - features: An optional array containing the features of interest. This will default to all features available on the current platform.
     */
-    public init(withFeatures features: [CapableFeature] = CapableFeature.allCases) {
+    public init(withFeatures features: [CapableFeature] = CapableFeature.allCases, onLog: ((String, OSLogType) -> Void)? = nil) {
         let featureStatusesProvider = FeatureStatusesProvider()
         let statusesModule = FeatureStatuses(withFeatures: features, featureStatusesProvider: featureStatusesProvider)
         let notificationsModule = FeatureNotifications(featureStatusesProvider: featureStatusesProvider, features: features)
-        self.init(withFeatures: features, featureStatusesProvider: featureStatusesProvider, statusesModule: statusesModule, notificationModule: notificationsModule)
+        self.init(withFeatures: features, featureStatusesProvider: featureStatusesProvider, statusesModule: statusesModule, notificationModule: notificationsModule, onLog: onLog)
     }
 
     /**
@@ -40,25 +42,31 @@ public struct Capable {
      - Parameters:
      - handicaps: An optional array containing the `Handicaps`s specified by the caller.
      */
-    public init(withHandicaps handicaps: [Handicap]) {
+    public init(withHandicaps handicaps: [Handicap], onLog: ((String, OSLogType) -> Void)? = nil) {
         let featureStatusesProvider = FeatureStatusesProvider()
         let statusesModule = HandicapStatuses(withHandicaps: handicaps, featureStatusesProvider: featureStatusesProvider)
         let notificationsModule = HandicapNotifications(statusesModule: statusesModule, handicaps: handicaps, featureStatusesProvider: featureStatusesProvider)
-        self.init(withHandicaps: handicaps, featureStatusesProvider: featureStatusesProvider, statusesModule: statusesModule, notificationModule: notificationsModule)
+        self.init(withHandicaps: handicaps, featureStatusesProvider: featureStatusesProvider, statusesModule: statusesModule, notificationModule: notificationsModule, onLog: onLog)
     }
 
-    init(withFeatures features: [CapableFeature], featureStatusesProvider: FeatureStatusesProviderProtocol, statusesModule: StatusesProtocol, notificationModule: NotificationsProtocol) {
+    init(withFeatures features: [CapableFeature], featureStatusesProvider: FeatureStatusesProviderProtocol, statusesModule: StatusesProtocol, notificationModule: NotificationsProtocol, onLog: ((String, OSLogType) -> Void)? = nil) {
         self.features = features
         self.statusesModule = statusesModule
         self.notificationsModule = notificationModule
         self.featureStatusesProvider = featureStatusesProvider
+
+        Logger.onLog = onLog ?? Logger.defaultOnLog
+        Logger.info("Capable started with handicaps: \(self.features.map({ $0.rawValue }).joined(separator: ", "))")
     }
 
-    init(withHandicaps handicaps: [Handicap], featureStatusesProvider: FeatureStatusesProviderProtocol, statusesModule: StatusesProtocol, notificationModule: NotificationsProtocol) {
+    init(withHandicaps handicaps: [Handicap], featureStatusesProvider: FeatureStatusesProviderProtocol, statusesModule: StatusesProtocol, notificationModule: NotificationsProtocol, onLog: ((String, OSLogType) -> Void)? = nil) {
         self.handicaps = handicaps
         self.statusesModule = statusesModule
         self.notificationsModule = notificationModule
         self.featureStatusesProvider = featureStatusesProvider
+
+        Logger.onLog = onLog ?? Logger.defaultOnLog
+        Logger.info("Capable started with handicaps: \(self.handicaps.map({ $0.name }).joined(separator: ", "))")
     }
 
     /**
