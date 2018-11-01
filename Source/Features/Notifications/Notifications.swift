@@ -166,6 +166,8 @@ extension Notifications {
         }
 
         #endif
+
+        Logger.info("Registered notification for features \(features.map({ $0.rawValue }).joined(separator: ", "))")
     }
     // swiftlint:enable cyclomatic_complexity
 }

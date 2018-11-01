@@ -30,6 +30,8 @@ class HandicapNotifications: Notifications {
                 self.lastValues[handicap.name] = statusString
                 let handicapStatus = HandicapStatus(handicap: handicap, statusString: statusString)
                 self.targetNotificationCenter.post(name: .CapableHandicapStatusDidChange, object: handicapStatus)
+
+                Logger.info("Posted notification for handicap \(handicap.name) set to \(statusString)")
             }
         }
     }
