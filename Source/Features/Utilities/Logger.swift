@@ -11,39 +11,37 @@ struct Logger {
     static var logType: OSLogType = .debug
     static var onLog: ((String, OSLogType) -> Void) = defaultOnLog
 
-    static let defaultLog = OSLog(
+    private static let defaultLog = OSLog(
         subsystem: "com.chrs1885.capable",
         category: "general"
     )
 
-    static var defaultOnLog: (String, OSLogType) -> Void = { message, logType in
+    private static var defaultOnLog: (String, OSLogType) -> Void = { message, logType in
         os_log("%{public}@", log: Logger.defaultLog, type: logType, message)
+    }
+
+    private static func logIfNeeded(message: String, logType: OSLogType) {
+        if self.logType >= logType {
+            onLog(message, logType)
+        }
     }
 }
 
 // MARK: - Logging API
 extension Logger {
     static func verbose(_ message: String) {
-        if logType >= .debug {
-            onLog(message, .debug)
-        }
+        logIfNeeded(message: message, logType: .debug)
     }
 
     static func info(_ message: String) {
-        if logType >= .info {
-            onLog(message, .info)
-        }
+        logIfNeeded(message: message, logType: .info)
     }
 
     static func warning(_ message: String) {
-        if logType >= .default {
-            onLog(message, .default)
-        }
+        logIfNeeded(message: message, logType: .default)
     }
 
     static func error(_ message: String) {
-        if logType >= .error {
-            onLog(message, .error)
-        }
+        logIfNeeded(message: message, logType: .error)
     }
 }
