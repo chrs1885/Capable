@@ -47,7 +47,7 @@ class HandicapNotifications: Notifications {
     }
 }
 
-// MARK: Register Observers
+// MARK: - Register Observers
 extension Notifications {
     func enableNotifications(forHandicaps handicaps: [Handicap]) {
         var observedFeatures = [CapableFeature]()

@@ -9,29 +9,39 @@ import os.log
 
 struct Logger {
 
-    // MARK: Action
+    // MARK: - Action
 
-    static var onLog: ((String, OSLogType) -> Void)?
+    static var onLog: ((String, OSLogType) -> Void) = defaultOnLog
 
-    // MARK: Logging API
+    // MARK: - Logging API
 
     static func verbose(_ message: String) {
-        onLog?(message, .debug)
+        if logType >= .debug {
+            onLog(message, .debug)
+        }
     }
 
     static func info(_ message: String) {
-        onLog?(message, .info)
+        if logType >= .info {
+            onLog(message, .info)
+        }
     }
 
     static func warning(_ message: String) {
-        onLog?(message, .default)
+        if logType >= .default {
+            onLog(message, .default)
+        }
     }
 
     static func error(_ message: String) {
-        onLog?(message, .error)
+        if logType >= .error {
+            onLog(message, .error)
+        }
     }
 
-    // MARK: Default logger
+    static var logType: OSLogType = .default
+
+    // MARK: - Default logger
 
     static let defaultLog = OSLog(
         subsystem: "com.chrs1885.capable",

@@ -53,7 +53,7 @@ class Notifications: NSObject, NotificationsProtocol {
     }
 }
 
-// MARK: Register Observers
+// MARK: - Register Observers
 extension Notifications {
 
     // swiftlint:disable cyclomatic_complexity
@@ -172,7 +172,7 @@ extension Notifications {
     // swiftlint:enable cyclomatic_complexity
 }
 
-// MARK: Handle notifications
+// MARK: - Handle notifications
 extension Notifications {
     func addObserver(forNotification notificationName: NSNotification.Name, selector: Selector, object: Any? = nil) {
         self.systemNotificationCenter.addObserver(

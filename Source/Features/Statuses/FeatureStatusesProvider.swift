@@ -18,7 +18,7 @@ import WatchKit
 #endif
 
 class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
-    
+
     #if os(iOS)
 
     var isAssistiveTouchEnabled: Bool {
@@ -108,7 +108,7 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
         if #available(watchOS 4.0, *) {
             return WKAccessibilityIsReduceMotionEnabled()
         } else {
-            self.logger.warning("Unable to determine status for isReduceMotion since it is only available on watchOS 4 or later.")
+            Logger.warning("Unable to determine status for isReduceMotion since it is only available on watchOS 4 or later.")
             return false
         }
     }
@@ -159,6 +159,7 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
             return NSWorkspace.shared.isVoiceOverEnabled
         } else {
             Logger.warning("Unable to determine status for voiceOver since it is only available on macOS 10.13 or later.")
+            return false
         }
     }
 
@@ -262,7 +263,7 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
         }
 
         #endif
-        
+
     }
     // swiftlint:enable cyclomatic_complexity
 }
