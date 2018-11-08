@@ -38,6 +38,7 @@
 		8323D8EC2167D1980015F8A3 /* FeatureStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323D8EB2167D1980015F8A3 /* FeatureStatusesMock.swift */; };
 		832953CE2110D9E200072EB9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832953CC2110D9E100072EB9 /* Quick.framework */; };
 		832953CF2110D9E200072EB9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832953CD2110D9E200072EB9 /* Nimble.framework */; };
+		833CE9AA2194CCF400D741DE /* OSLogType+greaterEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833CE9A92194CCF400D741DE /* OSLogType+greaterEqual.swift */; };
 		833DB9BF206C164B00C8DA02 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9BE206C164B00C8DA02 /* Notification+Name.swift */; };
 		833DB9C2206C188B00C8DA02 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */; };
 		834C7232213072B300DCEBDC /* FeatureNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834C7231213072B300DCEBDC /* FeatureNotificationsTests.swift */; };
@@ -104,6 +105,7 @@
 		8323D8EB2167D1980015F8A3 /* FeatureStatusesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesMock.swift; sourceTree = "<group>"; };
 		832953CC2110D9E100072EB9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		832953CD2110D9E200072EB9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		833CE9A92194CCF400D741DE /* OSLogType+greaterEqual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLogType+greaterEqual.swift"; sourceTree = "<group>"; };
 		833DB9BE206C164B00C8DA02 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 		833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatus.swift; sourceTree = "<group>"; };
 		834C7231213072B300DCEBDC /* FeatureNotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureNotificationsTests.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 			children = (
 				83DB724720698EB400384B3F /* Bool+statusString.swift */,
 				833DB9BE206C164B00C8DA02 /* Notification+Name.swift */,
+				833CE9A92194CCF400D741DE /* OSLogType+greaterEqual.swift */,
 				83D2A46820F006000032054C /* String+ContentSizeCategoryString.swift */,
 				83DB72452069891200384B3F /* UIContentSizeCategory+stringValue.swift */,
 			);
@@ -545,6 +548,7 @@
 				83648E9E218A36560095D208 /* Logger.swift in Sources */,
 				831AA4E0212F46CC00AEAC44 /* NotificationCenterProtocol.swift in Sources */,
 				833DB9BF206C164B00C8DA02 /* Notification+Name.swift in Sources */,
+				833CE9AA2194CCF400D741DE /* OSLogType+greaterEqual.swift in Sources */,
 				83B5FFEB206542FC00E8E83F /* FeatureStatusesProviderProtocol.swift in Sources */,
 				83B5FFE62065352500E8E83F /* CapableFeature.swift in Sources */,
 				4486976A2127148700A06BFF /* FeatureNotifications.swift in Sources */,
