@@ -8,13 +8,21 @@
 import os.log
 
 struct Logger {
-
-    // MARK: - Action
-
+    static var logType: OSLogType = .debug
     static var onLog: ((String, OSLogType) -> Void) = defaultOnLog
 
-    // MARK: - Logging API
+    static let defaultLog = OSLog(
+        subsystem: "com.chrs1885.capable",
+        category: "general"
+    )
 
+    static var defaultOnLog: (String, OSLogType) -> Void = { message, logType in
+        os_log("%{public}@", log: Logger.defaultLog, type: logType, message)
+    }
+}
+
+// MARK: - Logging API
+extension Logger {
     static func verbose(_ message: String) {
         if logType >= .debug {
             onLog(message, .debug)
@@ -37,18 +45,5 @@ struct Logger {
         if logType >= .error {
             onLog(message, .error)
         }
-    }
-
-    static var logType: OSLogType = .default
-
-    // MARK: - Default logger
-
-    static let defaultLog = OSLog(
-        subsystem: "com.chrs1885.capable",
-        category: "general"
-    )
-
-    static var defaultOnLog: (String, OSLogType) -> Void = { message, logType in
-        os_log("%{public}@", log: Logger.defaultLog, type: logType, message)
     }
 }
