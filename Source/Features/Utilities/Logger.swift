@@ -45,7 +45,7 @@ struct Logger {
 
     static let defaultLog = OSLog(
         subsystem: "com.chrs1885.capable",
-        category: "CapableFramework"
+        category: "general"
     )
 
     static var defaultOnLog: (String, OSLogType) -> Void = { message, logType in
