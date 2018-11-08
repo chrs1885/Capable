@@ -21,7 +21,7 @@ struct Logger {
     }
 
     private static func logIfNeeded(message: String, logType: OSLogType) {
-        if self.logType >= logType {
+        if logType >= self.logType {
             onLog(message, logType)
         }
     }
