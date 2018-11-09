@@ -16,14 +16,14 @@ struct Logger {
         category: "general"
     )
 
-    private static var defaultOnLog: (String, OSLogType) -> Void = { message, logType in
-        os_log("%{public}@", log: Logger.defaultLog, type: logType, message)
-    }
-
     private static func logIfNeeded(message: String, logType: OSLogType) {
         if logType >= self.logType {
             onLog(message, logType)
         }
+    }
+
+    static var defaultOnLog: (String, OSLogType) -> Void = { message, logType in
+        os_log("%{public}@", log: Logger.defaultLog, type: logType, message)
     }
 }
 
@@ -43,5 +43,9 @@ extension Logger {
 
     static func error(_ message: String) {
         logIfNeeded(message: message, logType: .error)
+    }
+
+    static func systemError(_ message: String) {
+        logIfNeeded(message: message, logType: .fault)
     }
 }

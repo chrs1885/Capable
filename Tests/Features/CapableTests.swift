@@ -9,6 +9,7 @@
 
 import Quick
 import Nimble
+import os.log
 @testable import Capable
 
 class CapableTests: QuickSpec {
@@ -183,6 +184,54 @@ class CapableTests: QuickSpec {
 
                         it("returns false") {
                             expect(testStatuses!.didCallIsHandicapEnabled).to(beTrue())
+                        }
+                    }
+                }
+
+                context("when setting the logType") {
+                    var testLogType: OSLogType?
+
+                    beforeEach {
+                        Logger.logType = .debug
+                        testLogType = .error
+                        Capable.logType = testLogType!
+                    }
+
+                    it("sets the logType on the Logger") {
+                        expect(Logger.logType).to(equal(testLogType!))
+                    }
+
+                    context("when requesting the logType") {
+                        it("returns the correct value") {
+                            expect(Capable.logType).to(equal(testLogType!))
+                        }
+                    }
+                }
+
+                context("when setting the onLog closure") {
+                    var testOnLog: ((String, OSLogType) -> Void)?
+                    var testDidCall: Bool = false
+
+                    beforeEach {
+                        Logger.onLog = Logger.defaultOnLog
+                        testDidCall = false
+                        testOnLog = { message, logType in
+                            testDidCall = true
+                        }
+                        Capable.onLog = testOnLog!
+                    }
+
+                    it("sets the onLog closure on the Logger") {
+                        Logger.onLog("test", .debug)
+
+                        expect(testDidCall).to(beTrue())
+                    }
+
+                    context("when requesting the onLog closure") {
+                        it("returns the correct value") {
+                            Capable.onLog("test", .debug)
+
+                            expect(testDidCall).to(beTrue())
                         }
                     }
                 }

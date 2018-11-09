@@ -114,7 +114,7 @@ extension Capable {
     }
 
     /**
-     A custom closure that should be used for all Capable instances instead of the default os_log implementation.
+     A custom closure that should be used by the logger for all Capable instances instead of the default os_log implementation.
 
      - Parameters:
      - message: The message string that is about to be logged.
@@ -124,7 +124,6 @@ extension Capable {
         get {
             return Logger.onLog
         }
-
         set {
             Logger.onLog = newValue
         }
