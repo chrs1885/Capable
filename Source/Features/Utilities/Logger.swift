@@ -13,7 +13,7 @@ struct Logger {
 
     private static let defaultLog = OSLog(
         subsystem: "com.chrs1885.capable",
-        category: "general"
+        category: "Capable"
     )
 
     private static func logIfNeeded(message: String, logType: OSLogType) {
