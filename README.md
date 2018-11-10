@@ -225,7 +225,7 @@ While these extension APIs are available on tvOS as well, setting the font size 
 <a id="logging"></a> 
 ### Logging with OSLog
 
-The Capable framework provides a logging mechanism that lets you keep track of what's going on under the hood. You'll get information ragarding your current setup, warnings about anything that might cause issues further on, and errors that will lead to misbehaviour. 
+The Capable framework provides a logging mechanism that lets you keep track of what's going on under the hood. You'll get information regarding your current setup, warnings about anything that might cause issues further on, and errors that will lead to misbehavior. 
 
 By default, all messages will be logged automatically by using Apple's [Unified Logging System](https://developer.apple.com/documentation/os/logging). However, it also integrates with your specific logging environment by providing a custom closure that will be called instead. For example, you may want to send all errors coming from the Capable framework to your analytics service:
 
@@ -251,7 +251,7 @@ Here's a list of the supported log types, their order, and what kind of messages
 | ----------|:-------------------------------------------------------------|
 | .debug    | Verbose logging **\***                                       |
 | .info     | Information regarding the framework setup and status changes |
-| .default  | Warnings might lead to unwanted behaviour                    |
+| .default  | Warnings might lead to unwanted behavior                     |
 | .error    | Errors caused by the framework                               |
 | .fault    | Errors caused by the framework due to system issues **\***   |
 
@@ -313,7 +313,7 @@ While most features can only have a status set to **enabled** or **disabled**, t
 * XXXL
 * Unknown
 
-## Ressources
+## Resources
 
 * [Apple - WWDC Session Videos](https://developer.apple.com/videos/frameworks/accessibility/
 )
