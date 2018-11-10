@@ -18,7 +18,7 @@ class HandicapViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let lowVision = Handicap(with: [.increaseContrast, .invertColors, .reduceTransparency], name: "Low Vision", enabledIf: .oneFeatureEnabled)
+        let lowVision = Handicap(features: [.increaseContrast, .invertColors, .reduceTransparency], name: "Low Vision", enabledIf: .oneFeatureEnabled)
         self.capable = Capable(withHandicaps: [lowVision])
         self.handicaps = [lowVision]
         self.refreshData()
