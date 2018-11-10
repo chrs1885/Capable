@@ -49,7 +49,9 @@ class Notifications: NSObject, NotificationsProtocol {
     }
 
     func postNotification(withFeature feature: CapableFeature, statusString: String) {
-        fatalError("Capable.Notifications.postNotification: Function needs to be implemented by its subclass.")
+        let errorMessage = "Capable.Notifications.postNotification: Function needs to be implemented by its subclass."
+        Logger.error(errorMessage)
+        fatalError(errorMessage)
     }
 }
 
