@@ -8,7 +8,7 @@
 import os.log
 
 struct Logger {
-    static var logType: OSLogType = .debug
+    static var minLogType: OSLogType = .debug
     static var onLog: ((String, OSLogType) -> Void) = defaultOnLog
 
     private static let defaultLog = OSLog(
@@ -17,7 +17,7 @@ struct Logger {
     )
 
     private static func logIfNeeded(message: String, logType: OSLogType) {
-        if logType >= self.logType {
+        if logType >= self.minLogType {
             onLog(message, logType)
         }
     }

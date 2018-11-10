@@ -192,18 +192,18 @@ class CapableTests: QuickSpec {
                     var testLogType: OSLogType?
 
                     beforeEach {
-                        Logger.logType = .debug
+                        Logger.minLogType = .debug
                         testLogType = .error
-                        Capable.logType = testLogType!
+                        Capable.minLogType = testLogType!
                     }
 
                     it("sets the logType on the Logger") {
-                        expect(Logger.logType).to(equal(testLogType!))
+                        expect(Logger.minLogType).to(equal(testLogType!))
                     }
 
                     context("when requesting the logType") {
                         it("returns the correct value") {
-                            expect(Capable.logType).to(equal(testLogType!))
+                            expect(Capable.minLogType).to(equal(testLogType!))
                         }
                     }
                 }

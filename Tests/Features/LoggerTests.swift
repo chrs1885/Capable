@@ -26,7 +26,7 @@ class LoggerTests: QuickSpec {
 
             context("when logType is set to debug") {
                 beforeEach {
-                    Logger.logType = .debug
+                    Logger.minLogType = .debug
                     logMessagesForAllTypes()
                 }
 
@@ -42,7 +42,7 @@ class LoggerTests: QuickSpec {
 
             context("when logType is set to info") {
                 beforeEach {
-                    Logger.logType = .info
+                    Logger.minLogType = .info
                     logMessagesForAllTypes()
                 }
 
@@ -57,7 +57,7 @@ class LoggerTests: QuickSpec {
 
             context("when logType is set to default") {
                 beforeEach {
-                    Logger.logType = .default
+                    Logger.minLogType = .default
                     logMessagesForAllTypes()
                 }
 
@@ -71,7 +71,7 @@ class LoggerTests: QuickSpec {
 
             context("when logType is set to error") {
                 beforeEach {
-                    Logger.logType = .error
+                    Logger.minLogType = .error
                     logMessagesForAllTypes()
                 }
 
@@ -84,7 +84,7 @@ class LoggerTests: QuickSpec {
 
             context("when logType is set to fault") {
                 beforeEach {
-                    Logger.logType = .fault
+                    Logger.minLogType = .fault
                     logMessagesForAllTypes()
                 }
 

@@ -104,12 +104,12 @@ extension Capable {
     /**
      The minimum log level that should be considered when logging messages. Note that the custom 'onLog' closure will only be called for messages of this log type or higher. This value defaults to `OSLogType.debug`.
      */
-    public static var logType: OSLogType {
+    public static var minLogType: OSLogType {
         get {
-            return Logger.logType
+            return Logger.minLogType
         }
         set {
-            Logger.logType = newValue
+            Logger.minLogType = newValue
         }
     }
 
