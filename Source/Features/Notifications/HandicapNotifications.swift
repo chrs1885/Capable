@@ -30,13 +30,17 @@ class HandicapNotifications: Notifications {
                 self.lastValues[handicap.name] = statusString
                 let handicapStatus = HandicapStatus(handicap: handicap, statusString: statusString)
                 self.targetNotificationCenter.post(name: .CapableHandicapStatusDidChange, object: handicapStatus)
+
+                Logger.info("Posted notification for handicap \(handicap.name) set to \(statusString)")
             }
         }
     }
 
     func hasStatusChanged(handicap: Handicap) -> Bool {
         guard let handicapStatuses = self.statusesModule as? HandicapStatuses else {
-            fatalError("Capable.HandicapStatuses.hasStatusChanged: The instance hasnot been initialized with a HandicapStatuses instance.")
+            let errorMessage = "Capable.HandicapStatuses.hasStatusChanged: The instance hasnot been initialized with a HandicapStatuses instance."
+            Logger.error(errorMessage)
+            fatalError(errorMessage)
         }
         let currentStatus = handicapStatuses.isHandicapEnabled(handicapName: handicap.name).statusString
         let lastStatus = self.lastValues[handicap.name]
@@ -45,7 +49,7 @@ class HandicapNotifications: Notifications {
     }
 }
 
-// MARK: Register Observers
+// MARK: - Register Observers
 extension Notifications {
     func enableNotifications(forHandicaps handicaps: [Handicap]) {
         var observedFeatures = [CapableFeature]()

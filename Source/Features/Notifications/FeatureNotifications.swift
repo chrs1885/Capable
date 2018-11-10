@@ -20,5 +20,7 @@ class FeatureNotifications: Notifications {
     override func postNotification(withFeature feature: CapableFeature, statusString: String) {
         let featureStatus = FeatureStatus(feature: feature, statusString: statusString)
         self.targetNotificationCenter.post(name: .CapableFeatureStatusDidChange, object: featureStatus)
+
+        Logger.info("Posted notification for feature \(feature) set to \(statusString)")
     }
 }

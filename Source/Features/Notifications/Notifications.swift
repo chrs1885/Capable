@@ -49,11 +49,13 @@ class Notifications: NSObject, NotificationsProtocol {
     }
 
     func postNotification(withFeature feature: CapableFeature, statusString: String) {
-        fatalError("Capable.Notifications.postNotification: Function needs to be implemented by its subclass.")
+        let errorMessage = "Capable.Notifications.postNotification: Function needs to be implemented by its subclass."
+        Logger.error(errorMessage)
+        fatalError(errorMessage)
     }
 }
 
-// MARK: Register Observers
+// MARK: - Register Observers
 extension Notifications {
 
     // swiftlint:disable cyclomatic_complexity
@@ -166,11 +168,13 @@ extension Notifications {
         }
 
         #endif
+
+        Logger.info("Registered notification for features \(features.map({ $0.rawValue }).joined(separator: ", "))")
     }
     // swiftlint:enable cyclomatic_complexity
 }
 
-// MARK: Handle notifications
+// MARK: - Handle notifications
 extension Notifications {
     func addObserver(forNotification notificationName: NSNotification.Name, selector: Selector, object: Any? = nil) {
         self.systemNotificationCenter.addObserver(
