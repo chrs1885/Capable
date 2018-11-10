@@ -27,6 +27,7 @@ Check out the *Example.xcworkspace* to get a quick overview.
 * [Send status with your favorite analytics SDK](#send-status)
 * [Get notified about any changes](#notifications)
 * [Use dynamic type with custom fonts](#dynamic-type)
+* [Logging with OSLog](#logging)
 
 ## Installation
 
@@ -220,6 +221,41 @@ myLabel.font = UIFont.scaledBoldSystemFont(ofSize: defaultFontSize)
 ```
 
 While these extension APIs are available on tvOS as well, setting the font size in the system settings is not supported on this platforms.
+
+<a id="logging"></a> 
+### Logging with OSLog
+
+The Capable framework provides a logging mechanism that lets you keep track of what's going on under the hood. You'll get information ragarding your current setup, warnings about anything that might cause issues further on, and errors that will lead to misbehaviour. 
+
+By default, all messages will be logged automatically by using Apple's [Unified Logging System](https://developer.apple.com/documentation/os/logging). However, it also integrates with your specific logging environment by providing a custom closure that will be called instead. For example, you may want to send all errors coming from the Capable framework to your analytics service:
+
+```swift
+// Send error messages to your data backend
+Capable.onLog = { message, logType in
+	if logType == OSLogType.error {
+		sendLog("Capable Framework: \(message)")
+	}
+}
+```
+
+Furthermore, you can specify the minimum log level that should be considered when logging messages:
+
+```swift
+// Configure logger to only log warnings and errors (.default, .error, and .fault)
+Capable.minLogType = OSLogType.default
+```
+
+Here's a list of the supported log types, their order, and what kind of messages they are used for:
+
+| OSLogType | Usage                                                        |
+| ----------|:-------------------------------------------------------------|
+| .debug    | Verbose logging **\***                                       |
+| .info     | Information regarding the framework setup and status changes |
+| .default  | Warnings might lead to unwanted behaviour                    |
+| .error    | Errors caused by the framework                               |
+| .fault    | Errors caused by the framework due to system issues **\***   |
+
+*\* Currently not been used by the framework when logging messages.*
 
 <a id="feature-overview"></a> 
 ## Accessibility feature overview
