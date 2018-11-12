@@ -319,6 +319,10 @@ While most features can only have a status set to **enabled** or **disabled**, t
 )
 * [Apple - Accessibility for Developers](https://developer.apple.com/accessibility/)
 
+## Contributions
+
+We'd love to see you contributing to this project by proposing or adding features, reporting bugs, or spreading the word. Please have a quick look at our [contribution gudelines](./.github/CONTRIBUTING.md).
+
 ## License
 
 Capable is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
