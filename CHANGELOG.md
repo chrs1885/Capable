@@ -4,6 +4,9 @@
 * [Add notifications for accessibility feature changes on macOS](https://github.com/chrs1885/Capable/issues/31)
 * [Support debug logging](https://github.com/chrs1885/Capable/issues/29)
 
+### Enhancements
+* [Provide contribution guidelines](https://github.com/chrs1885/Capable/issues/30)
+
 ## Version 0.7.0
 
 ### Features
