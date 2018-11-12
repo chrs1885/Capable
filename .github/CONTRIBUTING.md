@@ -11,8 +11,8 @@ We love your input! We want to make contributing to this project as easy and tra
 ## We develop with GitHub
 We use Github to host code, to track issues and feature requests, as well as accept pull requests.
 
-## We use [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow), So All Code Changes Happen Through Pull Requests
-Pull requests are the best way to propose changes to the codebase (we use [Github Flow](https://guides.github.com/introduction/flow/index.html)). We actively welcome your pull requests:
+## Add code changes
+Pull requests are the best way to propose changes to the codebase (we use [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)). We actively welcome your pull requests:
 
 1. Fork the repo and create your branch from `develop`.
 2. If you've added code that should be tested, add unit tests (we use [Quick](https://github.com/Quick/Quick) and [Nimble](https://github.com/Quick/Nimble)).
@@ -21,9 +21,6 @@ Pull requests are the best way to propose changes to the codebase (we use [Githu
 5. Extend the example projects for all platforms to showcase your feature.
 6. Make sure your code lints. Please run the `Scripts/setup.sh` from the project's root to install the required tools.
 7. Issue that pull request!
-
-## Any contributions you make will be under the MIT Software License
-In short, when you submit code changes, your submissions are understood to be under the same [MIT License](http://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
 
 ## Report bugs
 We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/chrs1885/Capable/issues/new?template=BUG_REPORT.md) and fill out the provided template. It's that easy!
