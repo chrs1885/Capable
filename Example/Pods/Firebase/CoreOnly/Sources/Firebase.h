@@ -38,6 +38,10 @@ Firebase services work as intended."
     #import <FirebaseFunctions/FirebaseFunctions.h>
   #endif
 
+  #if __has_include(<FirebaseInAppMessaging/FirebaseInAppMessaging.h>)
+    #import <FirebaseInAppMessaging/FirebaseInAppMessaging.h>
+  #endif
+
   #if __has_include(<FirebaseInstanceID/FirebaseInstanceID.h>)
     #import <FirebaseInstanceID/FirebaseInstanceID.h>
   #endif

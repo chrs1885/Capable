@@ -42,8 +42,8 @@ NSString *const kFIRIsSignInEnabled = @"IS_SIGNIN_ENABLED";
 // Library version ID.
 NSString *const kFIRLibraryVersionID =
     @"5"     // Major version (one or more digits)
-    @"00"    // Minor version (exactly 2 digits)
-    @"06"    // Build number (exactly 2 digits)
+    @"01"    // Minor version (exactly 2 digits)
+    @"05"    // Build number (exactly 2 digits)
     @"000";  // Fixed "000"
 // Plist file name.
 NSString *const kServiceInfoFileName = @"GoogleService-Info";
@@ -85,7 +85,6 @@ NSString *const kFIRExceptionBadModification =
 @implementation FIROptions {
   /// Backing variable for self.analyticsOptionsDictionary.
   NSDictionary *_analyticsOptionsDictionary;
-  dispatch_once_t _createAnalyticsOptionsDictionaryOnce;
 }
 
 static FIROptions *sDefaultOptions = nil;
@@ -340,7 +339,7 @@ static NSDictionary *sDefaultOptionsDictionary = nil;
 #pragma mark - Internal instance methods
 
 - (NSDictionary *)analyticsOptionsDictionaryWithInfoDictionary:(NSDictionary *)infoDictionary {
-  dispatch_once(&_createAnalyticsOptionsDictionaryOnce, ^{
+  if (_analyticsOptionsDictionary == nil) {
     NSMutableDictionary *tempAnalyticsOptions = [[NSMutableDictionary alloc] init];
     NSArray *measurementKeys = @[
       kFIRIsMeasurementEnabled, kFIRIsAnalyticsCollectionEnabled,
@@ -353,8 +352,8 @@ static NSDictionary *sDefaultOptionsDictionary = nil;
       }
       tempAnalyticsOptions[key] = value;
     }
-    self->_analyticsOptionsDictionary = tempAnalyticsOptions;
-  });
+    _analyticsOptionsDictionary = tempAnalyticsOptions;
+  }
   return _analyticsOptionsDictionary;
 }
 
@@ -385,7 +384,7 @@ static NSDictionary *sDefaultOptionsDictionary = nil;
     }
 
     // Fall back to the default app's collection switch when the key is not in the dictionary.
-    return [FIRApp defaultApp].automaticDataCollectionEnabled;
+    return [FIRApp defaultApp].isDataCollectionDefaultEnabled;
   }
   return [value boolValue];
 }

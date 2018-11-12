@@ -1,3 +1,15 @@
+# 2018-09-25 -- v3.2.2
+- Fixed a crash caused by NSUserDefaults being called on background thread.
+
+# 2018-08-14 -- v3.2.1
+- Fixed an issue that checkin is not cached properly when app first started. (#1561)
+
+# 2018-07-31 -- v3.2.0
+- Added support for global Firebase data collection flag. (#1219)
+- Improved message tracking sent by server API.
+- Fixed an issue that InstanceID doesn't compile in app extensions, allowing its
+dependents like remote config to be working inside the app extensions.
+
 # 2018-06-19 -- v3.1.1
 - Ensure the checkin and tokens are refreshed if firebase project changed.
 - Fixed an issue that checkin should be turned off when FCM's autoInitEnabled flag is off.
