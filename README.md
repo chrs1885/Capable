@@ -251,11 +251,11 @@ Here's a list of the supported log types, their order, and what kind of messages
 | ----------|:-------------------------------------------------------------|
 | .debug    | Verbose logging **\***                                       |
 | .info     | Information regarding the framework setup and status changes |
-| .default  | Warnings might lead to unwanted behavior                     |
+| .default  | Warnings that may lead to unwanted behavior                  |
 | .error    | Errors caused by the framework                               |
 | .fault    | Errors caused by the framework due to system issues **\***   |
 
-*\* Currently not been used by the framework when logging messages.*
+*\* Currently not being used by the framework when logging messages.*
 
 <a id="feature-overview"></a> 
 ## Accessibility feature overview
