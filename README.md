@@ -232,9 +232,9 @@ By default, all messages will be logged automatically by using Apple's [Unified 
 ```swift
 // Send error messages to your data backend
 Capable.onLog = { message, logType in
-	if logType == OSLogType.error {
-		sendLog("Capable Framework: \(message)")
-	}
+    if logType == OSLogType.error {
+        sendLog("Capable Framework: \(message)")
+    }
 }
 ```
 
