@@ -123,7 +123,7 @@ You can also group accessibility features to represent a specific handicap:
 let features: [CapableFeature] = [.voiceOver, .speakScreen, .speakSelection]
 
 // Use the Handicap object to group them
-let blindness = Handicap(with: features, name: "Blindness", enabledIf: .allFeaturesEnabled)
+let blindness = Handicap(features: features, name: "Blindness", enabledIf: .allFeaturesEnabled)
 
 // Initialize the framework instance by providing the Handicap
 let capable = Capable(withHandicaps: [blindness])
@@ -131,7 +131,7 @@ let capable = Capable(withHandicaps: [blindness])
 
 The value of the `name` parameter will be used inside the `statusMap` provided by the Capable framework instance. Based on the value of `enabledIf`, you can specify if all features need to be set to **enabled** in order to set the Handicap to **enabled** as well.
  
-As accessibility feature, the `Handicap` type works great with [notifications](#notifications). 
+Just like accessibility features, the `Handicap` type works great with [notifications](#notifications). 
 
 <a id="send-status"></a> 
 ### Send accessibility status
