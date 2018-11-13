@@ -1,3 +1,8 @@
+## Version 0.9.0
+
+### Enhancements
+* [CocoaPods subspec for UIFontMetrics/UIFont extension](https://github.com/chrs1885/Capable/issues/35)
+
 ## Version 0.8.0
 
 ### Features
