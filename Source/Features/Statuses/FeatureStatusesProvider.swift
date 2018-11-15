@@ -33,6 +33,10 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
         return UIAccessibility.isGuidedAccessEnabled
     }
 
+    var hearingDevicePairedEar: UIAccessibility.HearingDeviceEar {
+        return UIAccessibility.hearingDevicePairedEar
+    }
+
     var largerTextCatagory: UIContentSizeCategory {
         return UIScreen.main.traitCollection.preferredContentSizeCategory
     }
@@ -190,6 +194,9 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
         case .monoAudio:
             return self.isMonoAudioEnabled
         case .shakeToUndo:
+        if feature == .hearingDevice {
+            return self.hearingDevicePairedEar.rawValue != 0
+        }
             return self.isShakeToUndoEnabled
         case .speakScreen:
             return self.isSpeakScreenEnabled

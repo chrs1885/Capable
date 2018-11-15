@@ -19,6 +19,9 @@ public enum CapableFeature: String, CaseIterable {
     /// Restricts access to certain features of a single app to keep the user focused.
     case guidedAccess
 
+    /// Pairing status of a hearing aid.
+    case hearingDevice
+
     /// Deletes the last command by shaking the phone.
     case shakeToUndo
 

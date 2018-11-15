@@ -51,13 +51,19 @@ class FeatureStatusesTests: QuickSpec {
                     it("returns a status map containing the correct statuses") {
                         for key in statusMap!.keys {
                             #if os(iOS)
-                                if key == CapableFeature.largerText.rawValue {
-                                    expect(statusMap![key]).to(equal("Accessibility XXXL"))
-                                } else {
-                                    expect(statusMap![key]).to(equal("enabled"))
-                                }
-                            #else
+
+                            if key == CapableFeature.largerText.rawValue {
+                                expect(statusMap![key]).to(equal("Accessibility XXXL"))
+                            } else if key == CapableFeature.hearingDevice.rawValue {
+                                expect(statusMap![key]).to(equal("both"))
+                            } else {
                                 expect(statusMap![key]).to(equal("enabled"))
+                            }
+
+                            #else
+
+                            expect(statusMap![key]).to(equal("enabled"))
+
                             #endif
                         }
                     }

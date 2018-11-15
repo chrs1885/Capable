@@ -27,6 +27,10 @@ class FeatureStatuses: StatusesProtocol {
 
         for feature in self.features {
             #if os(iOS)
+            if feature == .hearingDevice {
+                statusMap[feature.rawValue] = self.featureStatusesProvider.hearingDevicePairedEar.statusString
+                continue
+            }
             if feature == .largerText {
                 statusMap[feature.rawValue] = self.featureStatusesProvider.largerTextCatagory.stringValue
                 continue

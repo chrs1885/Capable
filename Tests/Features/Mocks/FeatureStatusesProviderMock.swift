@@ -21,6 +21,7 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
     var darkerSystemColorsEnabled = false
     var textCatagory: UIContentSizeCategory = .unspecified
     var guidedAccessEnabled = false
+    var hearingDeviceEar: UIAccessibility.HearingDeviceEar = UIAccessibility.HearingDeviceEar(rawValue: 0)
     var shakeToUndoEnabled = false
     var speakScreenEnabled = false
     var speakSelectionEnabled = false
@@ -52,6 +53,10 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
 
     override var isDarkerSystemColorsEnabled: Bool {
         return darkerSystemColorsEnabled
+    }
+
+    override var hearingDevicePairedEar: UIAccessibility.HearingDeviceEar {
+        return self.hearingDeviceEar
     }
 
     override var largerTextCatagory: UIContentSizeCategory {
@@ -136,6 +141,7 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
         shakeToUndoEnabled = true
         speakScreenEnabled = true
         speakSelectionEnabled = true
+        self.hearingDeviceEar = .both
         #endif
 
         #if os(OSX)

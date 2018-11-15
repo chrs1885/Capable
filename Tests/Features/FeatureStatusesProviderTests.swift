@@ -53,6 +53,16 @@ class FeatureStatusesProviderTests: QuickSpec {
                     }
                 }
 
+                context("for HearingDevice") {
+                    beforeEach {
+                        sut!.hearingDeviceEar = .both
+                    }
+
+                    it("returns correct state") {
+                        expect(sut!.isFeatureEnabled(feature: .hearingDevice)).to(beTrue())
+                    }
+                }
+
                 context("for InvertColors") {
                     beforeEach {
                         sut!.invertColorsEnabled = true
