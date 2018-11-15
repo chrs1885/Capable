@@ -26,17 +26,27 @@ class FeatureStatuses: StatusesProtocol {
         var statusMap = [String: String]()
 
         for feature in self.features {
+
             #if os(iOS)
+
+            if feature == .hearingDevice {
+                statusMap[feature.rawValue] = self.featureStatusesProvider.hearingDevicePairedEar.statusString
+                continue
+            }
             if feature == .largerText {
                 statusMap[feature.rawValue] = self.featureStatusesProvider.largerTextCatagory.stringValue
                 continue
             }
+
             #elseif os(watchOS)
+
             if feature == .largerText {
                 statusMap[feature.rawValue] = self.featureStatusesProvider.largerTextCatagory
                 continue
             }
+
             #endif
+
             statusMap[feature.rawValue] = self.featureStatusesProvider.isFeatureEnabled(feature: feature).statusString
         }
 

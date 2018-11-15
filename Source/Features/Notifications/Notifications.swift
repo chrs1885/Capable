@@ -72,6 +72,9 @@ extension Notifications {
         if features.contains(.guidedAccess) {
             addObserver(forNotification: UIAccessibility.guidedAccessStatusDidChangeNotification, selector: #selector(self.guidedAccessStatusChanged))
         }
+        if features.contains(.hearingDevice) {
+            addObserver(forNotification: UIAccessibility.hearingDevicePairedEarDidChangeNotification, selector: #selector(self.guidedAccessStatusChanged))
+        }
         if features.contains(.largerText) {
             addObserver(forNotification: UIContentSizeCategory.didChangeNotification, selector: #selector(self.largerTextStatusChanged))
         }
@@ -196,6 +199,10 @@ extension Notifications {
 
     @objc func guidedAccessStatusChanged() {
         self.postNotification(withFeature: .guidedAccess, statusString: self.featureStatusesProvider.isGuidedAccessEnabled.statusString)
+    }
+
+    @objc func hearingDeviceStatusChanged() {
+        self.postNotification(withFeature: .hearingDevice, statusString: self.featureStatusesProvider.hearingDevicePairedEar.statusString)
     }
 
     @objc func largerTextStatusChanged() {

@@ -46,7 +46,6 @@
 		834C72342131F55100DCEBDC /* HandicapNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834C72332131F55100DCEBDC /* HandicapNotificationsTests.swift */; };
 		83648E972187BD000095D208 /* HandicapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83648E962187BD000095D208 /* HandicapTests.swift */; };
 		83648E9E218A36560095D208 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83648E9D218A36560095D208 /* Logger.swift */; };
-		837EE71420F1592A00AC8A11 /* ContentSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EE71320F1592A00AC8A11 /* ContentSizeHelper.swift */; };
 		8382A322206E350F00E264A3 /* FeatureStatusesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A321206E350F00E264A3 /* FeatureStatusesProvider.swift */; };
 		8382A324206EB40500E264A3 /* NotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A323206EB40500E264A3 /* NotificationsProtocol.swift */; };
 		8382A326206EB46E00E264A3 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A325206EB46E00E264A3 /* Notifications.swift */; };
@@ -56,12 +55,14 @@
 		83B5FFE42065336F00E8E83F /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE32065336F00E8E83F /* Capable.swift */; };
 		83B5FFE62065352500E8E83F /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE52065352500E8E83F /* CapableFeature.swift */; };
 		83B5FFEB206542FC00E8E83F /* FeatureStatusesProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFEA206542FC00E8E83F /* FeatureStatusesProviderProtocol.swift */; };
+		83C6A351219E08DB00BB039D /* String+isDefaultContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6A350219E08DB00BB039D /* String+isDefaultContentSize.swift */; };
+		83C6A353219E0FF200BB039D /* HearingDeviceEar+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6A352219E0FF200BB039D /* HearingDeviceEar+stringValue.swift */; };
 		83CAA3F82097BEEC003F231D /* OsVersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3F72097BEEC003F231D /* OsVersionProvider.swift */; };
 		83CAA3FA2097BF9B003F231D /* OsVersionProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3F92097BF9B003F231D /* OsVersionProviderProtocol.swift */; };
-		83D2A46920F006000032054C /* String+ContentSizeCategoryString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2A46820F006000032054C /* String+ContentSizeCategoryString.swift */; };
+		83D2A46920F006000032054C /* CGFloat+contentSizeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2A46820F006000032054C /* CGFloat+contentSizeString.swift */; };
 		83DA75F72065167600303D8F /* CapableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA75F62065167600303D8F /* CapableTests.swift */; };
 		83DA75F92065167600303D8F /* Capable.h in Headers */ = {isa = PBXBuildFile; fileRef = 83DA75EB2065167600303D8F /* Capable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83DB72462069891200384B3F /* UIContentSizeCategory+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB72452069891200384B3F /* UIContentSizeCategory+stringValue.swift */; };
+		83DB72462069891200384B3F /* UIContentSizeCategory+values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB72452069891200384B3F /* UIContentSizeCategory+values.swift */; };
 		83DB724820698EB400384B3F /* Bool+statusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB724720698EB400384B3F /* Bool+statusString.swift */; };
 		83DC7B5C2149ACFD00AF12A7 /* HandicapStatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC7B5B2149ACFD00AF12A7 /* HandicapStatusesProtocol.swift */; };
 		83DC7B5E2149AD4B00AF12A7 /* FeatureStatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC7B5D2149AD4B00AF12A7 /* FeatureStatusesProtocol.swift */; };
@@ -114,7 +115,6 @@
 		834C72332131F55100DCEBDC /* HandicapNotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapNotificationsTests.swift; sourceTree = "<group>"; };
 		83648E962187BD000095D208 /* HandicapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapTests.swift; sourceTree = "<group>"; };
 		83648E9D218A36560095D208 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		837EE71320F1592A00AC8A11 /* ContentSizeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSizeHelper.swift; sourceTree = "<group>"; };
 		8382A321206E350F00E264A3 /* FeatureStatusesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProvider.swift; sourceTree = "<group>"; };
 		8382A323206EB40500E264A3 /* NotificationsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsProtocol.swift; sourceTree = "<group>"; };
 		8382A325206EB46E00E264A3 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
@@ -126,18 +126,20 @@
 		83B5FFE32065336F00E8E83F /* Capable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capable.swift; sourceTree = "<group>"; };
 		83B5FFE52065352500E8E83F /* CapableFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapableFeature.swift; sourceTree = "<group>"; };
 		83B5FFEA206542FC00E8E83F /* FeatureStatusesProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProviderProtocol.swift; sourceTree = "<group>"; };
+		83C6A350219E08DB00BB039D /* String+isDefaultContentSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isDefaultContentSize.swift"; sourceTree = "<group>"; };
+		83C6A352219E0FF200BB039D /* HearingDeviceEar+stringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HearingDeviceEar+stringValue.swift"; sourceTree = "<group>"; };
 		83CAA3F72097BEEC003F231D /* OsVersionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OsVersionProvider.swift; sourceTree = "<group>"; };
 		83CAA3F92097BF9B003F231D /* OsVersionProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OsVersionProviderProtocol.swift; sourceTree = "<group>"; };
 		83CAA3FB2097C216003F231D /* OsVersionProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OsVersionProviderMock.swift; path = Tests/Fonts/Mocks/OsVersionProviderMock.swift; sourceTree = SOURCE_ROOT; };
 		83CAA40120990AB5003F231D /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
-		83D2A46820F006000032054C /* String+ContentSizeCategoryString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ContentSizeCategoryString.swift"; sourceTree = "<group>"; };
+		83D2A46820F006000032054C /* CGFloat+contentSizeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+contentSizeString.swift"; sourceTree = "<group>"; };
 		83DA75E82065167600303D8F /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DA75EB2065167600303D8F /* Capable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capable.h; sourceTree = "<group>"; };
 		83DA75EC2065167600303D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83DA75F12065167600303D8F /* CapableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DA75F62065167600303D8F /* CapableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapableTests.swift; sourceTree = "<group>"; };
 		83DA75F82065167600303D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83DB72452069891200384B3F /* UIContentSizeCategory+stringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIContentSizeCategory+stringValue.swift"; sourceTree = "<group>"; };
+		83DB72452069891200384B3F /* UIContentSizeCategory+values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIContentSizeCategory+values.swift"; sourceTree = "<group>"; };
 		83DB724720698EB400384B3F /* Bool+statusString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+statusString.swift"; sourceTree = "<group>"; };
 		83DC7B5B2149ACFD00AF12A7 /* HandicapStatusesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatusesProtocol.swift; sourceTree = "<group>"; };
 		83DC7B5D2149AD4B00AF12A7 /* FeatureStatusesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProtocol.swift; sourceTree = "<group>"; };
@@ -235,7 +237,6 @@
 		837EE71220F1590500AC8A11 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				837EE71320F1592A00AC8A11 /* ContentSizeHelper.swift */,
 				83648E9D218A36560095D208 /* Logger.swift */,
 			);
 			path = Utilities;
@@ -378,10 +379,12 @@
 			isa = PBXGroup;
 			children = (
 				83DB724720698EB400384B3F /* Bool+statusString.swift */,
+				83D2A46820F006000032054C /* CGFloat+contentSizeString.swift */,
+				83C6A352219E0FF200BB039D /* HearingDeviceEar+stringValue.swift */,
 				833DB9BE206C164B00C8DA02 /* Notification+Name.swift */,
 				833CE9A92194CCF400D741DE /* OSLogType+greaterEqual.swift */,
-				83D2A46820F006000032054C /* String+ContentSizeCategoryString.swift */,
-				83DB72452069891200384B3F /* UIContentSizeCategory+stringValue.swift */,
+				83C6A350219E08DB00BB039D /* String+isDefaultContentSize.swift */,
+				83DB72452069891200384B3F /* UIContentSizeCategory+values.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -528,7 +531,7 @@
 				83DC7B5E2149AD4B00AF12A7 /* FeatureStatusesProtocol.swift in Sources */,
 				83DC7B5C2149ACFD00AF12A7 /* HandicapStatusesProtocol.swift in Sources */,
 				831E8EEE21247C620096930C /* Handicap.swift in Sources */,
-				83D2A46920F006000032054C /* String+ContentSizeCategoryString.swift in Sources */,
+				83D2A46920F006000032054C /* CGFloat+contentSizeString.swift in Sources */,
 				83973ADA206FD22C0057CD4F /* UIFont+ScaledFont.swift in Sources */,
 				44E1055A2125CC7B00D85BBC /* HandicapStatus.swift in Sources */,
 				83B5FFE42065336F00E8E83F /* Capable.swift in Sources */,
@@ -537,11 +540,12 @@
 				44580D13212606BB00F9940A /* FeatureStatuses.swift in Sources */,
 				831E8EF021247EAD0096930C /* HandicapEnabledMode.swift in Sources */,
 				83CAA3F82097BEEC003F231D /* OsVersionProvider.swift in Sources */,
-				837EE71420F1592A00AC8A11 /* ContentSizeHelper.swift in Sources */,
-				83DB72462069891200384B3F /* UIContentSizeCategory+stringValue.swift in Sources */,
+				83DB72462069891200384B3F /* UIContentSizeCategory+values.swift in Sources */,
 				448697682127133A00A06BFF /* HandicapNotifications.swift in Sources */,
 				44580D11212605D500F9940A /* HandicapStatuses.swift in Sources */,
+				83C6A351219E08DB00BB039D /* String+isDefaultContentSize.swift in Sources */,
 				44FE2E34211479F700029869 /* FontMetricsProviderProtocol.swift in Sources */,
+				83C6A353219E0FF200BB039D /* HearingDeviceEar+stringValue.swift in Sources */,
 				83973ADD206FD3A40057CD4F /* FontMetricsProtocol.swift in Sources */,
 				83DB724820698EB400384B3F /* Bool+statusString.swift in Sources */,
 				833DB9C2206C188B00C8DA02 /* FeatureStatus.swift in Sources */,

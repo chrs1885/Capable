@@ -281,6 +281,7 @@ The following table contains all features that are available AND settable on eac
 | .fullKeyboardAccess        |                    | &nbsp;:white_check_mark:**\*** |                    |                                |
 | .grayscale                 | :white_check_mark: |                                | :white_check_mark: |                                |
 | .guidedAccess              | :white_check_mark: |                                |                    |                                |
+| .hearingDevice             | :white_check_mark: |                                |                    |                                |
 | .increaseContrast          |                    | :white_check_mark:             |                    |                                |
 | .invertColors              | :white_check_mark: | :white_check_mark:             | :white_check_mark: |                                |
 | .largerText                | :white_check_mark: |                                |                    | &nbsp;:white_check_mark:**\*** |
@@ -295,9 +296,11 @@ The following table contains all features that are available AND settable on eac
 
 *\* Feature status can be read but notifications are not available.*
 
-While most features can only have a status set to **enabled** or **disabled**, the `.largerText` feature offers the font scale set by the user:
+While most features can only have a `statusMap` value set to **enabled** or **disabled**, the `.largerText` and `.hearingDevice` feature do offer specific values:
 
-### iOS
+### LargerText
+
+#### iOS
 
 * XS
 * S
@@ -313,7 +316,8 @@ While most features can only have a status set to **enabled** or **disabled**, t
 * Accessibility XXXL
 * Unknown
 
-### watchOS
+#### watchOS
+
 * XS
 * S *(default watch with 38mm)*
 * L *(default watch with 42mm)*
@@ -321,6 +325,13 @@ While most features can only have a status set to **enabled** or **disabled**, t
 * XXL
 * XXXL
 * Unknown
+
+### HearingDevice
+
+* both
+* left
+* right
+* disabled
 
 ## Resources
 

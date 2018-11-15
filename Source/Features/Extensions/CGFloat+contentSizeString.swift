@@ -5,7 +5,7 @@
 //  Created by Christoph Wendt on 06.07.18.
 //
 
-#if os(watchOS) || os(tvOS)
+#if os(watchOS)
 
 import UIKit
 

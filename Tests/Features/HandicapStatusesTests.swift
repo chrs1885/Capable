@@ -154,6 +154,23 @@ class HandicapStatusesTests: QuickSpec {
                 }
             }
 
+            context("after initialization with a Handicap holding the .hearingDevice feature") {
+                var testHandicapName: String?
+
+                beforeEach {
+                    testHandicapName = "TestHandicap"
+                    let testHandicap = Handicap(features: [.hearingDevice], name: testHandicapName!, enabledIf: .allFeaturesEnabled)
+                    let testHearingDeviceEar: UIAccessibility.HearingDeviceEar = .both
+                    featureStatusesProviderMock!.hearingDeviceEar = testHearingDeviceEar
+                    sut = HandicapStatuses(withHandicaps: [testHandicap], featureStatusesProvider: featureStatusesProviderMock!)
+                }
+
+                it("returns a status map containing enabled/disabled rather than the actual text category for the Handicap") {
+                    let statusMap = sut!.statusMap
+                    expect(statusMap[testHandicapName!]).to(equal("enabled"))
+                }
+            }
+
             #endif
 
         }
