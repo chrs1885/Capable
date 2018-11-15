@@ -40,6 +40,10 @@ extension UIContentSizeCategory {
             return "Unknown"
         }
     }
+
+    var isDefault: Bool {
+        return self == .medium
+    }
 }
 
 #endif
