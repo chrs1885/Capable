@@ -23,6 +23,7 @@ class FeatureStatusesProviderTests: QuickSpec {
             context("when calling isFeatureEnabled") {
 
                 #if os(iOS)
+
                 context("for AssistiveTouch") {
                     beforeEach {
                         sut!.assistiveTouchEnabled = true
@@ -112,9 +113,11 @@ class FeatureStatusesProviderTests: QuickSpec {
                         expect(sut!.isFeatureEnabled(feature: .speakSelection)).to(beTrue())
                     }
                 }
+
                 #endif
 
                 #if os(OSX)
+
                 context("for DifferentiateWithoutColor") {
                     beforeEach {
                         sut!.differentiateWithoutColor = true
@@ -144,9 +147,11 @@ class FeatureStatusesProviderTests: QuickSpec {
                         expect(sut!.isFeatureEnabled(feature: .increaseContrast)).to(beTrue())
                     }
                 }
+
                 #endif
 
                 #if os(iOS) || os(tvOS)
+
                 context("for BoldText") {
                     beforeEach {
                         sut!.boldTextEnabled = true
@@ -186,6 +191,7 @@ class FeatureStatusesProviderTests: QuickSpec {
                         expect(sut!.isFeatureEnabled(feature: .monoAudio)).to(beTrue())
                     }
                 }
+
                 #endif
 
                 context("for ReduceMotion") {

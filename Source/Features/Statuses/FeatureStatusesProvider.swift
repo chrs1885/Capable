@@ -174,103 +174,102 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
 
         #if os(iOS)
 
-        switch feature {
-        case .assistiveTouch:
+        if feature == .assistiveTouch {
             return self.isAssistiveTouchEnabled
-        case .boldText:
-            return self.isBoldTextEnabled
-        case .closedCaptioning:
-            return self.isClosedCaptioningEnabled
-        case .darkerSystemColors:
+        }
+        if feature == .darkerSystemColors {
             return self.isDarkerSystemColorsEnabled
-        case .grayscale:
-            return self.isGrayscaleEnabled
-        case .guidedAccess:
+        }
+        if feature == .guidedAccess {
             return self.isGuidedAccessEnabled
-        case .invertColors:
-            return self.isInvertColorsEnabled
-        case .largerText:
-            return !ContentSizeHelper.isDefaultContentSizeCategory(contentSizeCategory: self.largerTextCatagory)
-        case .monoAudio:
-            return self.isMonoAudioEnabled
-        case .shakeToUndo:
+        }
         if feature == .hearingDevice {
             return self.hearingDevicePairedEar.rawValue != 0
         }
+        if feature == .largerText {
+            return !self.largerTextCatagory.isDefault
+        }
+        if feature == .shakeToUndo {
             return self.isShakeToUndoEnabled
-        case .speakScreen:
+        }
+        if feature == .speakScreen {
             return self.isSpeakScreenEnabled
-        case .speakSelection:
+        }
+        if feature == .speakSelection {
             return self.isSpeakSelectionEnabled
-        case .switchControl:
-            return self.isSwitchControlEnabled
-        case .reduceMotion:
-            return self.isReduceMotionEnabled
-        case .reduceTransparency:
-            return self.isReduceTransparencyEnabled
-        case .voiceOver:
-            return self.isVoiceOverEnabled
-        }
-
-        #elseif os(tvOS)
-
-        switch feature {
-        case .boldText:
-            return self.isBoldTextEnabled
-        case .closedCaptioning:
-            return self.isClosedCaptioningEnabled
-        case .grayscale:
-            return self.isGrayscaleEnabled
-        case .invertColors:
-            return self.isInvertColorsEnabled
-        case .monoAudio:
-            return self.isMonoAudioEnabled
-        case .reduceMotion:
-            return self.isReduceMotionEnabled
-        case .reduceTransparency:
-            return self.isReduceTransparencyEnabled
-        case .switchControl:
-            return self.isSwitchControlEnabled
-        case .voiceOver:
-            return self.isVoiceOverEnabled
-        }
-
-        #elseif os(watchOS)
-
-        switch feature {
-        case .boldText:
-            return self.isBoldTextEnabled
-        case .largerText:
-            return !ContentSizeHelper.isDefaultContentSize(contentSize: self.largerTextCatagory)
-        case .reduceMotion:
-            return self.isReduceMotionEnabled
-        case .voiceOver:
-            return self.isVoiceOverEnabled
-        }
-
-        #elseif os(OSX)
-
-        switch feature {
-        case .differentiateWithoutColor:
-            return self.isDifferentiateWithoutColorEnabled
-        case .fullKeyboardAccess:
-            return self.isFullKeyboardAccessEnabled
-        case .increaseContrast:
-            return self.isIncreaseContrastEnabled
-        case .invertColors:
-            return self.isInvertColorsEnabled
-        case .reduceMotion:
-            return self.isReduceMotionEnabled
-        case .reduceTransparency:
-            return self.isReduceTransparencyEnabled
-        case .switchControl:
-            return self.isSwitchControlEnabled
-        case .voiceOver:
-            return self.isVoiceOverEnabled
         }
 
         #endif
 
+        #if os(watchOS)
+
+        if feature == .largerText {
+            return !self.largerTextCatagory.isDefaultContentSizeString
+        }
+
+        #endif
+
+        #if os(OSX)
+
+        if feature == .differentiateWithoutColor {
+            return self.isDifferentiateWithoutColorEnabled
+        }
+        if feature == .fullKeyboardAccess {
+            return self.isFullKeyboardAccessEnabled
+        }
+        if feature == .increaseContrast {
+            return self.isIncreaseContrastEnabled
+        }
+
+        #endif
+
+        #if os(iOS) || os(tvOS)
+
+        if feature == .closedCaptioning {
+            return self.isClosedCaptioningEnabled
+        }
+        if feature == .grayscale {
+            return self.isGrayscaleEnabled
+        }
+        if feature == .monoAudio {
+            return self.isMonoAudioEnabled
+        }
+
+        #endif
+
+        #if os(iOS) || os(tvOS) || os(macOS)
+
+        if feature == .invertColors {
+            return self.isInvertColorsEnabled
+        }
+
+        if feature == .reduceTransparency {
+            return self.isReduceTransparencyEnabled
+        }
+
+        if feature == .switchControl {
+            return self.isSwitchControlEnabled
+        }
+
+        #endif
+
+        #if os(iOS) || os(tvOS) || os(watchOS)
+
+        if feature == .boldText {
+            return self.isBoldTextEnabled
+        }
+
+        #endif
+
+        if feature == .reduceMotion {
+            return self.isReduceMotionEnabled
+        }
+        if feature == .voiceOver {
+            return self.isVoiceOverEnabled
+        }
+
+        Logger.warning("Feature \(feature) was not handled in isFeatureEnabled. Returning false.")
+        return false
     }
     // swiftlint:enable cyclomatic_complexity
 }

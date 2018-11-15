@@ -19,12 +19,12 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
     #if os(iOS)
     var assistiveTouchEnabled = false
     var darkerSystemColorsEnabled = false
-    var textCatagory: UIContentSizeCategory = .unspecified
     var guidedAccessEnabled = false
     var hearingDeviceEar: UIAccessibility.HearingDeviceEar = UIAccessibility.HearingDeviceEar(rawValue: 0)
     var shakeToUndoEnabled = false
     var speakScreenEnabled = false
     var speakSelectionEnabled = false
+    var textCatagory: UIContentSizeCategory = .unspecified
     #endif
 
     #if os(OSX)
@@ -47,12 +47,13 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
     var voiceOverEnabled = false
 
     #if os(iOS)
+
     override var isAssistiveTouchEnabled: Bool {
-        return assistiveTouchEnabled
+        return self.assistiveTouchEnabled
     }
 
     override var isDarkerSystemColorsEnabled: Bool {
-        return darkerSystemColorsEnabled
+        return self.darkerSystemColorsEnabled
     }
 
     override var hearingDevicePairedEar: UIAccessibility.HearingDeviceEar {
@@ -60,108 +61,120 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
     }
 
     override var largerTextCatagory: UIContentSizeCategory {
-        return textCatagory
+        return self.textCatagory
     }
 
     override var isGuidedAccessEnabled: Bool {
-        return guidedAccessEnabled
+        return self.guidedAccessEnabled
     }
 
     override var isShakeToUndoEnabled: Bool {
-        return shakeToUndoEnabled
+        return self.shakeToUndoEnabled
     }
 
     override var isSpeakScreenEnabled: Bool {
-        return speakScreenEnabled
+        return self.speakScreenEnabled
     }
 
     override var isSpeakSelectionEnabled: Bool {
-        return speakSelectionEnabled
+        return self.speakSelectionEnabled
     }
+
     #endif
 
     #if os(OSX)
+
     override var isDifferentiateWithoutColorEnabled: Bool {
-        return differentiateWithoutColor
+        return self.differentiateWithoutColor
     }
 
     override var isFullKeyboardAccessEnabled: Bool {
-        return fullKeyboardAccess
+        return self.fullKeyboardAccess
     }
 
     override var isIncreaseContrastEnabled: Bool {
-        return increaseContrast
+        return self.increaseContrast
     }
+
     #endif
 
     #if os(iOS) || os(tvOS)
+
     override var isBoldTextEnabled: Bool {
-        return boldTextEnabled
+        return self.boldTextEnabled
     }
 
     override var isClosedCaptioningEnabled: Bool {
-        return closedCaptioningEnabled
+        return self.closedCaptioningEnabled
     }
 
     override var isGrayscaleEnabled: Bool {
-        return grayscaleEnabled
+        return self.grayscaleEnabled
     }
 
     override var isMonoAudioEnabled: Bool {
-        return monoAudioEnabled
+        return self.monoAudioEnabled
     }
+
     #endif
 
     override var isInvertColorsEnabled: Bool {
-        return invertColorsEnabled
+        return self.invertColorsEnabled
     }
 
     override var isReduceMotionEnabled: Bool {
-        return reduceMotionEnabled
+        return self.reduceMotionEnabled
     }
 
     override var isReduceTransparencyEnabled: Bool {
-        return reduceTransparencyEnabled
+        return self.reduceTransparencyEnabled
     }
 
     override var isSwitchControlEnabled: Bool {
-        return switchControlEnabled
+        return self.switchControlEnabled
     }
 
     override var isVoiceOverEnabled: Bool {
-        return voiceOverEnabled
+        return self.voiceOverEnabled
     }
 
     func enableAllFeatures() {
+
         #if os(iOS)
-        assistiveTouchEnabled = true
-        darkerSystemColorsEnabled = true
-        textCatagory = .accessibilityExtraExtraExtraLarge
-        guidedAccessEnabled = true
-        shakeToUndoEnabled = true
-        speakScreenEnabled = true
-        speakSelectionEnabled = true
+
+        self.assistiveTouchEnabled = true
+        self.darkerSystemColorsEnabled = true
+        self.textCatagory = .accessibilityExtraExtraExtraLarge
+        self.guidedAccessEnabled = true
         self.hearingDeviceEar = .both
+        self.shakeToUndoEnabled = true
+        self.speakScreenEnabled = true
+        self.speakSelectionEnabled = true
+
         #endif
 
         #if os(OSX)
-        differentiateWithoutColor = true
-        fullKeyboardAccess = true
-        increaseContrast = true
+
+        self.differentiateWithoutColor = true
+        self.fullKeyboardAccess = true
+        self.increaseContrast = true
+
         #endif
 
         #if os(iOS) || os(tvOS)
-        boldTextEnabled = true
-        closedCaptioningEnabled = true
-        grayscaleEnabled = true
-        monoAudioEnabled = true
+
+        self.boldTextEnabled = true
+        self.closedCaptioningEnabled = true
+        self.grayscaleEnabled = true
+        self.monoAudioEnabled = true
+
         #endif
 
-        invertColorsEnabled = true
-        reduceMotionEnabled = true
-        reduceTransparencyEnabled = true
-        switchControlEnabled = true
-        voiceOverEnabled = true
+        self.invertColorsEnabled = true
+        self.reduceMotionEnabled = true
+        self.reduceTransparencyEnabled = true
+        self.switchControlEnabled = true
+        self.voiceOverEnabled = true
     }
 
     override func isFeatureEnabled(feature: CapableFeature) -> Bool {

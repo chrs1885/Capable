@@ -50,6 +50,7 @@ class FeatureStatusesTests: QuickSpec {
 
                     it("returns a status map containing the correct statuses") {
                         for key in statusMap!.keys {
+
                             #if os(iOS)
 
                             if key == CapableFeature.largerText.rawValue {
