@@ -1,5 +1,8 @@
 ## Version 0.9.0
 
+### Features
+* [Add feature hearingDevice on iOS](https://github.com/chrs1885/Capable/issues/38)
+
 ### Enhancements
 * [CocoaPods subspec for UIFontMetrics/UIFont extension](https://github.com/chrs1885/Capable/issues/35)
 
