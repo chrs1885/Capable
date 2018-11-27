@@ -11,6 +11,11 @@ struct RGBAColor: Equatable {
     var red, green, blue, alpha: CGFloat
 
     static func getContrastRatio(forColor aColor: RGBAColor, andColor otherColor: RGBAColor) -> CGFloat {
+        var aColor = aColor
+        if aColor.alpha < 1.0 {
+            aColor = aColor.blended(withFraction: aColor.alpha, of: otherColor)
+        }
+
         let luminance1 = aColor.relativeLuminance
         let luminance2 = otherColor.relativeLuminance
 

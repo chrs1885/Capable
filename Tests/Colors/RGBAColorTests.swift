@@ -34,12 +34,21 @@ class RGBAColorTests: QuickSpec {
                     }
                 }
 
-                context("by passing in grren and orange color") {
+                context("by passing in green and orange color") {
                     it("returns a contrast ratio of 1.96") {
                         let actualContrastRatio = RGBAColor.getContrastRatio(forColor: Color.orange, andColor: Color.green)
                         let rounded = floor(actualContrastRatio * 100) / 100
 
                         expect(rounded).to(equal(1.96))
+                    }
+                }
+
+                context("by passing in semi transparent color and white") {
+                    it("returns a contrast ratio of 4.51") {
+                        let actualContrastRatio = RGBAColor.getContrastRatio(forColor: Color.semiTransparentColor, andColor: Color.white)
+                        let rounded = floor(actualContrastRatio * 100) / 100
+
+                        expect(rounded).to(equal(4.51))
                     }
                 }
             }
