@@ -65,6 +65,8 @@
 		83D2A46920F006000032054C /* CGFloat+contentSizeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2A46820F006000032054C /* CGFloat+contentSizeString.swift */; };
 		83DA75F72065167600303D8F /* CapableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA75F62065167600303D8F /* CapableTests.swift */; };
 		83DA75F92065167600303D8F /* Capable.h in Headers */ = {isa = PBXBuildFile; fileRef = 83DA75EB2065167600303D8F /* Capable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83DAF4B421A4A7200076F542 /* NSColor+wcag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DAF4B321A4A7200076F542 /* NSColor+wcag.swift */; };
+		83DAF4B621A4A7320076F542 /* UIColor+wcag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DAF4B521A4A7320076F542 /* UIColor+wcag.swift */; };
 		83DAF4B821A4A9670076F542 /* RGBAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DAF4B721A4A9670076F542 /* RGBAColor.swift */; };
 		83DB72462069891200384B3F /* UIContentSizeCategory+values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB72452069891200384B3F /* UIContentSizeCategory+values.swift */; };
 		83DB724820698EB400384B3F /* Bool+statusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB724720698EB400384B3F /* Bool+statusString.swift */; };
@@ -146,6 +148,8 @@
 		83DA75F12065167600303D8F /* CapableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DA75F62065167600303D8F /* CapableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapableTests.swift; sourceTree = "<group>"; };
 		83DA75F82065167600303D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83DAF4B321A4A7200076F542 /* NSColor+wcag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+wcag.swift"; sourceTree = "<group>"; };
+		83DAF4B521A4A7320076F542 /* UIColor+wcag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+wcag.swift"; sourceTree = "<group>"; };
 		83DAF4B721A4A9670076F542 /* RGBAColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAColor.swift; sourceTree = "<group>"; };
 		83DB72452069891200384B3F /* UIContentSizeCategory+values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIContentSizeCategory+values.swift"; sourceTree = "<group>"; };
 		83DB724720698EB400384B3F /* Bool+statusString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+statusString.swift"; sourceTree = "<group>"; };
@@ -246,6 +250,15 @@
 				83DAF4B721A4A9670076F542 /* RGBAColor.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		83160D9321A5487800FD122C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				83DAF4B321A4A7200076F542 /* NSColor+wcag.swift */,
+				83DAF4B521A4A7320076F542 /* UIColor+wcag.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		833DB9C0206C187C00C8DA02 /* Models */ = {
@@ -567,6 +580,7 @@
 				8382A324206EB40500E264A3 /* NotificationsProtocol.swift in Sources */,
 				83DC7B5E2149AD4B00AF12A7 /* FeatureStatusesProtocol.swift in Sources */,
 				83DC7B5C2149ACFD00AF12A7 /* HandicapStatusesProtocol.swift in Sources */,
+				83DAF4B421A4A7200076F542 /* NSColor+wcag.swift in Sources */,
 				831E8EEE21247C620096930C /* Handicap.swift in Sources */,
 				83D2A46920F006000032054C /* CGFloat+contentSizeString.swift in Sources */,
 				83973ADA206FD22C0057CD4F /* UIFont+ScaledFont.swift in Sources */,
@@ -598,6 +612,7 @@
 				83B5FFE62065352500E8E83F /* CapableFeature.swift in Sources */,
 				4486976A2127148700A06BFF /* FeatureNotifications.swift in Sources */,
 				8382A322206E350F00E264A3 /* FeatureStatusesProvider.swift in Sources */,
+				83DAF4B621A4A7320076F542 /* UIColor+wcag.swift in Sources */,
 				83160D9521A548EF00FD122C /* ConformanceLevel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
