@@ -17,21 +17,22 @@ struct RGBAColor: Equatable {
         return (max(luminance1, luminance2) + 0.05) / (min(luminance1, luminance2) + 0.05)
     }
 
-    static func getBlendedColor(forColor aColor: RGBAColor, andColor otherColor: RGBAColor) -> RGBAColor {
-        func blendColorComponent(aColorComponent: CGFloat, transparency: CGFloat, otherColorComponent: CGFloat) -> CGFloat {
-            let blendedComponent = transparency * aColorComponent + (1 - transparency) * otherColorComponent
+    func blended(withFraction fraction: CGFloat,
+                 of color: RGBAColor) -> RGBAColor {
+        func getBlendedColorComponent(aColorComponent: CGFloat, fraction: CGFloat, otherColorComponent: CGFloat) -> CGFloat {
+            let blendedComponent = fraction * aColorComponent + (1 - fraction) * otherColorComponent
             return blendedComponent
         }
 
-        let red = blendColorComponent(aColorComponent: aColor.red, transparency: aColor.alpha, otherColorComponent: otherColor.red)
-        let green = blendColorComponent(aColorComponent: aColor.green, transparency: aColor.alpha, otherColorComponent: otherColor.green)
-        let blue = blendColorComponent(aColorComponent: aColor.blue, transparency: aColor.alpha, otherColorComponent: otherColor.blue)
+        let red = getBlendedColorComponent(aColorComponent: self.red, fraction: self.alpha, otherColorComponent: color.red)
+        let green = getBlendedColorComponent(aColorComponent: self.green, fraction: self.alpha, otherColorComponent: color.green)
+        let blue = getBlendedColorComponent(aColorComponent: self.blue, fraction: self.alpha, otherColorComponent: color.blue)
 
         return RGBAColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
 
     var relativeLuminance: CGFloat {
-        func adjustedColorComponent(_ colorComponent: CGFloat) -> CGFloat {
+        func getAdjustedColorComponent(_ colorComponent: CGFloat) -> CGFloat {
             if colorComponent <= 0.03928 {
                 return (colorComponent / 255.0) / 12.92
             } else {
@@ -39,9 +40,9 @@ struct RGBAColor: Equatable {
             }
         }
 
-        let adjustedRed = adjustedColorComponent(self.red)
-        let adjustedGreen = adjustedColorComponent(self.green)
-        let adjustedBlue = adjustedColorComponent(self.blue)
+        let adjustedRed = getAdjustedColorComponent(self.red)
+        let adjustedGreen = getAdjustedColorComponent(self.green)
+        let adjustedBlue = getAdjustedColorComponent(self.blue)
 
         return (0.2126 * adjustedRed) + (0.7152 * adjustedGreen) + (0.0722 * adjustedBlue)
     }

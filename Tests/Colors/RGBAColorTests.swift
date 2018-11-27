@@ -47,7 +47,7 @@ class RGBAColorTests: QuickSpec {
             context("when calling getBlendedColor") {
                 context("by passing in a semi transparent color and a opaque color") {
                     it("returns the minimum contrast ratio of 1.0") {
-                        let actual = RGBAColor.getBlendedColor(forColor: Color.semiTransparentColor, andColor: Color.white)
+                        let actual = Color.semiTransparentColor.blended(withFraction: Color.semiTransparentColor.alpha, of: Color.white)
                         let expected = Color.blendedColor
 
                         expect(actual).to(equal(expected))

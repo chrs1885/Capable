@@ -31,7 +31,7 @@ extension NSColor {
     var rgbaColor: RGBAColor? {
         var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
         self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-        
+
         return RGBAColor(red: red, green: green, blue: blue, alpha: alpha)
     }
 }
