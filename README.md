@@ -41,11 +41,14 @@ use_frameworks!
 
 target 'MyApp' do
 
-  # all features + font extensions
+  # all features + color and font extensions
   pod 'Capable'
 
-  # all features, but exclude font extensions
+  # all features, but exclude color and font extensions
   pod 'Capable/Features'
+  
+  # color extensions only
+  pod 'Capable/Fonts'
 
   # font extensions only
   pod 'Capable/Fonts'
