@@ -24,6 +24,7 @@
 		44FE2E422114832300029869 /* FontMetricsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E412114832300029869 /* FontMetricsMock.swift */; };
 		44FE2E442114833700029869 /* FontMetricsProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E432114833700029869 /* FontMetricsProviderMock.swift */; };
 		44FE2E452114849100029869 /* OsVersionProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3FB2097C216003F231D /* OsVersionProviderMock.swift */; };
+		83160D9521A548EF00FD122C /* ConformanceLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83160D9421A548EF00FD122C /* ConformanceLevel.swift */; };
 		831AA4DE212F437800AEAC44 /* NotificationCenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA4DD212F437800AEAC44 /* NotificationCenterMock.swift */; };
 		831AA4E0212F46CC00AEAC44 /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA4DF212F46CC00AEAC44 /* NotificationCenterProtocol.swift */; };
 		831B4EF720A4A25A00F1BB94 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F0479D20A49F7400C4CA60 /* Quick.framework */; };
@@ -97,6 +98,8 @@
 		44FE2E3E2114830B00029869 /* FontMetricsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsTests.swift; sourceTree = "<group>"; };
 		44FE2E412114832300029869 /* FontMetricsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsMock.swift; sourceTree = "<group>"; };
 		44FE2E432114833700029869 /* FontMetricsProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProviderMock.swift; sourceTree = "<group>"; };
+		83097DA421A9736100703F29 /* ConformanceLevelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformanceLevelTests.swift; sourceTree = "<group>"; };
+		83160D9421A548EF00FD122C /* ConformanceLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformanceLevel.swift; sourceTree = "<group>"; };
 		831AA4DD212F437800AEAC44 /* NotificationCenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterMock.swift; sourceTree = "<group>"; };
 		831AA4DF212F46CC00AEAC44 /* NotificationCenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterProtocol.swift; sourceTree = "<group>"; };
 		831E8EED21247C620096930C /* Handicap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handicap.swift; sourceTree = "<group>"; };
@@ -220,6 +223,22 @@
 				83CAA3FB2097C216003F231D /* OsVersionProviderMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		83097DA321A9732500703F29 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				83097DA421A9736100703F29 /* ConformanceLevelTests.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		83160D9221A5485300FD122C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83160D9421A548EF00FD122C /* ConformanceLevel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		833DB9C0206C187C00C8DA02 /* Models */ = {
@@ -357,6 +376,7 @@
 		83DA75EA2065167600303D8F /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				83DAF4B221A4A0F10076F542 /* Colors */,
 				83973AD6206FD1B80057CD4F /* Features */,
 				83973AD7206FD1E00057CD4F /* Fonts */,
 				83DA75EB2065167600303D8F /* Capable.h */,
@@ -368,11 +388,21 @@
 		83DA75F52065167600303D8F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				83097DA321A9732500703F29 /* Colors */,
 				44FE2E382114804600029869 /* Features */,
 				44FE2E392114807F00029869 /* Fonts */,
 				83DA75F82065167600303D8F /* Info.plist */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		83DAF4B221A4A0F10076F542 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				83160D9321A5487800FD122C /* Extensions */,
+				83160D9221A5485300FD122C /* Models */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		83DB7243206988DC00384B3F /* Extensions */ = {
@@ -560,6 +590,7 @@
 				83B5FFE62065352500E8E83F /* CapableFeature.swift in Sources */,
 				4486976A2127148700A06BFF /* FeatureNotifications.swift in Sources */,
 				8382A322206E350F00E264A3 /* FeatureStatusesProvider.swift in Sources */,
+				83160D9521A548EF00FD122C /* ConformanceLevel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +613,7 @@
 				44FE2E422114832300029869 /* FontMetricsMock.swift in Sources */,
 				834C7232213072B300DCEBDC /* FeatureNotificationsTests.swift in Sources */,
 				44580D1921261D4E00F9940A /* CapablePerfTests.swift in Sources */,
+				83097DA521A9736100703F29 /* ConformanceLevelTests.swift in Sources */,
 				833CE9AD2196296500D741DE /* LoggerTests.swift in Sources */,
 				4404835E2168F1940051FCE7 /* FeatureStatusesProviderTests.swift in Sources */,
 				8323D8EC2167D1980015F8A3 /* FeatureStatusesMock.swift in Sources */,
