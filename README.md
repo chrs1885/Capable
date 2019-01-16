@@ -23,12 +23,17 @@ Check out the *Example.xcworkspace* to get a quick overview.
 
 ## Features
 
-* [Get the user's accessibility settings](#accessibility-status)
-* [Define handicaps by grouping accessibility features](#handicaps)
-* [Send status with your favorite analytics SDK](#send-status)
-* [Get notified about any changes](#notifications)
-* [Use dynamic type with custom fonts](#dynamic-type)
-* [Logging with OSLog](#logging)
+* User research 
+	* [Get the user's accessibility settings](#accessibility-status)
+	* [Define handicaps by grouping accessibility features](#handicaps)
+	* [Send status with your favorite analytics SDK](#send-status)
+* Improve critical screens
+	* [Get status of accessibility feature](#accessibility-status)
+	* [Get notified about any changes](#notifications)
+	* [Calculate high contrast WCAG compliant colors](#colors)
+	* [Use dynamic type with custom fonts](#dynamic-type)
+* Fault diagnosis
+	* [Custom logging with OSLog](#logging)
 
 ## Installation
 
@@ -204,6 +209,74 @@ Once the notification has been sent, you can parse the `Handicap`and its current
 ```
 
 Please note that when using notifications with `Handicap`s on macOS or watchOS, you might not get notified about all changes since [not all accessibility features do support notifications](#feature-overview), yet. 
+
+<a id="colors"></a> 
+### High contrast colors (Capable UIColor/NSColor extension)
+
+The *Web Content Accessibility Guidelines* (WCAG) define minimum contrast ratios of a text and its background. The Capable framework extends `UIColor` and `NSColor` with functionality to use WCAG conformant colors within your apps to help people with visual disabilities to perceive content.
+
+Internally, the provided colors will be mapped to an equivilent of the sRGB color space or throw if the conversion fails. Semi-transparent text colors will be blended with its background color. However, the alpha value of semi-transparent background colors will be ignored since the underlying color can't be determined.
+
+#### Text colors
+Get a high contrast text color for a given background color as follows:
+
+```swift
+let textColor = UIColor.getTextColor(onBackgroundColor: UIColor.red)
+```
+
+This will return the text color with the highest possible contrast (black/white). Alternatively, you can define a list of possible text colors. Since the WCAG requirements for contrast differ in text size and weight, you also need to provide the font used for the text. The following will return the first text color that satisfies the required conformance level (*AA* by default).
+
+```swift
+let textColor = UIColor.getTextColor(
+    fromColors: [UIColor.red, UIColor.yellow],
+    withFont: myLabel.font,
+    onBackgroundColor: view.backgroundColor,
+    conformanceLevel: .AA
+)
+```
+
+#### Background colors
+
+This will also work the other way round. If you are looking for a high contrast background color:
+
+```swift
+let backgroundColor = UIColor.getBackgroundColor(forTextColor: UIColor.red)
+
+// or
+
+let backgroundColor = UIColor.getBackgroundColor(
+    fromColors: [UIColor.red, UIColor.yellow],
+    forTextColor: myLabel.textColor,
+    withFont: myLabel.font,
+    conformanceLevel: .AA
+)
+
+```
+
+#### Calculating contrast ratios & WCAG conformance levels
+
+The contrast ratio of two opaque colors can be calculated as well:
+
+```swift
+let contrastRatio: CGFloat = UIColor.getContrastRatio(forTextColor: UIColor.red, onBackgroundColor: UIColor.yellow)
+```
+
+Once the contrast ratio has being determined, you can check the resulting conformance level specified by WCAG as follows:
+
+```swift
+let passedConformanceLevel = ConformanceLevel(contrastRatio: contrastRatio, fontSize: myLabel.font.pointSize, isBoldFont: true)
+```
+
+Here's an overview of available conformance levels:
+
+| Level   | Contrast ratio                 | Font size               |
+| --------|:-------------------------------|:------------------------|
+| .A      | *Not specified for text color* | -                       |
+| .AA     | 3.0                            | 18.0 (or 14.0 and bold) |
+|         | 4.5                            | 14.0                    |
+| .AAA    | 4.5                            | 18.0 (or 14.0 and bold) |
+| .AAA    | 7.0                            | 14.0                    |
+| .failed | *.AA/.AAA not satisfied*       | -                       |
 
 <a id="dynamic-type"></a> 
 ### Dynamic Type with custom fonts (Capable UIFont extension)
