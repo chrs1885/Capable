@@ -11,9 +11,10 @@ import Nimble
 
 class ConformanceLevelTests: QuickSpec {
     override func spec() {
-        struct FontSize {
-            static let large: CGFloat = 18.0
-            static let small: CGFloat = 14.0
+        struct Font {
+            static let large = FontProps(fontSize: 18.0, isBoldFont: false)
+            static let smallBold = FontProps(fontSize: 14.0, isBoldFont: true)
+            static let small = FontProps(fontSize: 14.0, isBoldFont: false)
         }
 
         describe("The ConformanceLevel class") {
@@ -22,7 +23,7 @@ class ConformanceLevelTests: QuickSpec {
                 context("with a contrast ratio of 2.9") {
                     context("and large text size") {
                         beforeEach {
-                            sut = ConformanceLevel(contrastRatio: 2.9, fontSize: FontSize.large)
+                            sut = ConformanceLevel(contrastRatio: 2.9, fontProps: Font.large)
                         }
 
                         it("returns .failed") {
@@ -34,7 +35,7 @@ class ConformanceLevelTests: QuickSpec {
                 context("with a contrast ratio of 3.0") {
                     context("and large text size") {
                         beforeEach {
-                            sut = ConformanceLevel(contrastRatio: 3.0, fontSize: FontSize.large)
+                            sut = ConformanceLevel(contrastRatio: 3.0, fontProps: Font.large)
                         }
 
                         it("returns .AA") {
@@ -46,7 +47,7 @@ class ConformanceLevelTests: QuickSpec {
                 context("with a contrast ratio of 4.4") {
                     context("and small text size") {
                         beforeEach {
-                            sut = ConformanceLevel(contrastRatio: 4.4, fontSize: FontSize.small)
+                            sut = ConformanceLevel(contrastRatio: 4.4, fontProps: Font.small)
                         }
 
                         it("returns .failed") {
@@ -56,7 +57,7 @@ class ConformanceLevelTests: QuickSpec {
 
                     context("and large text size") {
                         beforeEach {
-                            sut = ConformanceLevel(contrastRatio: 4.4, fontSize: FontSize.large)
+                            sut = ConformanceLevel(contrastRatio: 4.4, fontProps: Font.large)
                         }
 
                         it("returns .AA") {
@@ -68,7 +69,7 @@ class ConformanceLevelTests: QuickSpec {
                 context("with a contrast ratio of 4.5") {
                     context("and small text size") {
                         beforeEach {
-                            sut = ConformanceLevel(contrastRatio: 4.5, fontSize: FontSize.small)
+                            sut = ConformanceLevel(contrastRatio: 4.5, fontProps: Font.small)
                         }
 
                         it("returns .AA") {
@@ -78,7 +79,7 @@ class ConformanceLevelTests: QuickSpec {
 
                     context("and large text size") {
                         beforeEach {
-                            sut = ConformanceLevel(contrastRatio: 4.5, fontSize: FontSize.large)
+                            sut = ConformanceLevel(contrastRatio: 4.5, fontProps: Font.large)
                         }
 
                         it("returns .AAA") {
@@ -90,7 +91,7 @@ class ConformanceLevelTests: QuickSpec {
                 context("with a contrast ratio of 6.9") {
                     context("and small text size") {
                         beforeEach {
-                            sut = ConformanceLevel(contrastRatio: 6.9, fontSize: FontSize.small)
+                            sut = ConformanceLevel(contrastRatio: 6.9, fontProps: Font.small)
                         }
 
                         it("returns .AA") {
@@ -102,7 +103,7 @@ class ConformanceLevelTests: QuickSpec {
                 context("with a contrast ratio of 7.0") {
                     context("and small text size") {
                         beforeEach {
-                            sut = ConformanceLevel(contrastRatio: 7.0, fontSize: FontSize.small)
+                            sut = ConformanceLevel(contrastRatio: 7.0, fontProps: Font.small)
                         }
 
                         it("returns .AAA") {
@@ -112,29 +113,27 @@ class ConformanceLevelTests: QuickSpec {
                 }
             }
 
-            context("when calling isLargeText") {
-                context("with a fontSize of 17.9") {
-                    it("returns false") {
-                        expect(ConformanceLevel.isLargeText(fontSize: FontSize.large-0.1)).to(beFalse())
-                    }
-                }
+            context("when comparing ConformanceLevel types by using >= operator") {
+                it("returns the correct result") {
+                    expect(ConformanceLevel.AAA >= ConformanceLevel.AAA).to(beTrue())
+                    expect(ConformanceLevel.AAA >= ConformanceLevel.AA).to(beTrue())
+                    expect(ConformanceLevel.AAA >= ConformanceLevel.A).to(beTrue())
+                    expect(ConformanceLevel.AAA >= ConformanceLevel.failed).to(beTrue())
 
-                context("with a fontSize of 18.0") {
-                    it("returns true") {
-                        expect(ConformanceLevel.isLargeText(fontSize: FontSize.large)).to(beTrue())
-                    }
-                }
+                    expect(ConformanceLevel.AA >= ConformanceLevel.AAA).to(beFalse())
+                    expect(ConformanceLevel.AA >= ConformanceLevel.AA).to(beTrue())
+                    expect(ConformanceLevel.AA >= ConformanceLevel.A).to(beTrue())
+                    expect(ConformanceLevel.AA >= ConformanceLevel.failed).to(beTrue())
 
-                context("with a fontSize of 13.9 and isBoldFont set to true") {
-                    it("returns false") {
-                        expect(ConformanceLevel.isLargeText(fontSize: FontSize.small-0.1, isBoldFont: true)).to(beFalse())
-                    }
-                }
+                    expect(ConformanceLevel.A >= ConformanceLevel.AAA).to(beFalse())
+                    expect(ConformanceLevel.A >= ConformanceLevel.AA).to(beFalse())
+                    expect(ConformanceLevel.A >= ConformanceLevel.A).to(beTrue())
+                    expect(ConformanceLevel.A >= ConformanceLevel.failed).to(beTrue())
 
-                context("with a fontSize of 14.0 and isBoldFont set to true") {
-                    it("returns true") {
-                        expect(ConformanceLevel.isLargeText(fontSize: FontSize.small, isBoldFont: true)).to(beTrue())
-                    }
+                    expect(ConformanceLevel.failed >= ConformanceLevel.AAA).to(beFalse())
+                    expect(ConformanceLevel.failed >= ConformanceLevel.AA).to(beFalse())
+                    expect(ConformanceLevel.failed >= ConformanceLevel.A).to(beFalse())
+                    expect(ConformanceLevel.failed >= ConformanceLevel.failed).to(beTrue())
                 }
             }
         }

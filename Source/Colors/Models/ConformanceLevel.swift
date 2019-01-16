@@ -7,6 +7,8 @@
 
 import CoreGraphics
 
+infix operator >=: ComparisonPrecedence
+
 /// An enum specifying all WCAG conformance levels.
 public enum ConformanceLevel {
 
@@ -24,20 +26,10 @@ public enum ConformanceLevel {
 }
 
 extension ConformanceLevel {
-
-    /**
-     Initializes the WCAG level of text for a given contrast ratio, font size, and font weight.
-
-     - Parameters:
-     - contrastRatio: The contrast ratio calculated by the text color and its background color.
-     - fontSize: The font size of the text.
-     - isBoldFont: A flag indicating whether the font weight of the text is bold or not. This is set to `false` by default.
-     */
-    init(contrastRatio: CGFloat, fontSize: CGFloat, isBoldFont: Bool = false) {
+    init(contrastRatio: CGFloat, fontProps: FontProps) {
         var value = ConformanceLevel.failed
-        let isLargeText = ConformanceLevel.isLargeText(fontSize: fontSize, isBoldFont: isBoldFont)
 
-        if isLargeText {
+        if fontProps.isLargeText {
             if contrastRatio >= 4.5 {
                 value = .AAA
             } else if contrastRatio >= 3.0 {
@@ -54,7 +46,16 @@ extension ConformanceLevel {
         self = value
     }
 
-    static func isLargeText(fontSize: CGFloat, isBoldFont: Bool = false) -> Bool {
-        return fontSize >= 18.0 || fontSize >= 14 && isBoldFont
+    static func >= (lhs: ConformanceLevel, rhs: ConformanceLevel) -> Bool {
+        switch lhs {
+        case .AAA:
+            return rhs == .A || rhs == .AA || rhs == .AAA || rhs == .failed
+        case .AA:
+            return rhs == .A || rhs == .AA || rhs == .failed
+        case .A:
+            return rhs == .A || rhs == .failed
+        case .failed:
+            return rhs == .failed
+        }
     }
 }
