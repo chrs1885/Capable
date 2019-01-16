@@ -220,7 +220,7 @@ let myCustomFont = UIFont(name: "Custom Font Name", size: defaultFontSize)!
 myLabel.font = UIFont.scaledFont(for: myCustomFont)
 
 // or
-myLabel.font = UIFont.scaledFont(name: "Custom Font Name", size: defaultFontSize)
+myLabel.font = UIFont.scaledFont(withName: "Custom Font Name", ofSize: defaultFontSize)
 
 // Scalable system font
 myLabel.font = UIFont.scaledSystemFont(ofSize: defaultFontSize)

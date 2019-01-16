@@ -34,7 +34,7 @@ extension UIFont {
 
      - Returns: A scalable font object.
      */
-    public class func scaledFont(name fontName: String, size fontSize: CGFloat) -> UIFont? {
+    public class func scaledFont(withName fontName: String, ofSize fontSize: CGFloat) -> UIFont? {
         if let font = UIFont(name: fontName, size: fontSize) {
             let fontMetrics = FontMetrics()
             return fontMetrics.scaledFont(for: font)
