@@ -14,6 +14,7 @@
 		44580D1921261D4E00F9940A /* CapablePerfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D1821261D4E00F9940A /* CapablePerfTests.swift */; };
 		448697682127133A00A06BFF /* HandicapNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448697672127133A00A06BFF /* HandicapNotifications.swift */; };
 		4486976A2127148700A06BFF /* FeatureNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448697692127148700A06BFF /* FeatureNotifications.swift */; };
+		44A5FBE321B03BB4008DE1EB /* FontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A5FBE221B03BB4008DE1EB /* FontProps.swift */; };
 		44E1055A2125CC7B00D85BBC /* HandicapStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E105592125CC7B00D85BBC /* HandicapStatus.swift */; };
 		44FE2E32211479A300029869 /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E31211479A300029869 /* FontMetricsProvider.swift */; };
 		44FE2E34211479F700029869 /* FontMetricsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E33211479F700029869 /* FontMetricsProviderProtocol.swift */; };
@@ -43,6 +44,9 @@
 		832953CF2110D9E200072EB9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832953CD2110D9E200072EB9 /* Nimble.framework */; };
 		833CE9AA2194CCF400D741DE /* OSLogType+greaterEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833CE9A92194CCF400D741DE /* OSLogType+greaterEqual.swift */; };
 		833CE9AD2196296500D741DE /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833CE9AB2196261200D741DE /* LoggerTests.swift */; };
+		833D435421CFE42B00444EC9 /* NSFont+fontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D435321CFE42B00444EC9 /* NSFont+fontProps.swift */; };
+		833D435621CFE44000444EC9 /* UIFont+fontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D435521CFE44000444EC9 /* UIFont+fontProps.swift */; };
+		833D435821CFE7D300444EC9 /* NSFontFontPropsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D435721CFE7D300444EC9 /* NSFontFontPropsTests.swift */; };
 		833DB9BF206C164B00C8DA02 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9BE206C164B00C8DA02 /* Notification+Name.swift */; };
 		833DB9C2206C188B00C8DA02 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */; };
 		834C7232213072B300DCEBDC /* FeatureNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834C7231213072B300DCEBDC /* FeatureNotificationsTests.swift */; };
@@ -55,6 +59,7 @@
 		83973ADA206FD22C0057CD4F /* UIFont+ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973AD9206FD22C0057CD4F /* UIFont+ScaledFont.swift */; };
 		83973ADD206FD3A40057CD4F /* FontMetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973ADC206FD3A40057CD4F /* FontMetricsProtocol.swift */; };
 		83973ADF206FD4080057CD4F /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973ADE206FD4080057CD4F /* FontMetrics.swift */; };
+		83B21D6D21DE687200E02470 /* UIFontFontPropsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B21D6C21DE687200E02470 /* UIFontFontPropsTests.swift */; };
 		83B5FFE42065336F00E8E83F /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE32065336F00E8E83F /* Capable.swift */; };
 		83B5FFE62065352500E8E83F /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE52065352500E8E83F /* CapableFeature.swift */; };
 		83B5FFEB206542FC00E8E83F /* FeatureStatusesProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFEA206542FC00E8E83F /* FeatureStatusesProviderProtocol.swift */; };
@@ -94,6 +99,7 @@
 		44580D1821261D4E00F9940A /* CapablePerfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapablePerfTests.swift; sourceTree = "<group>"; };
 		448697672127133A00A06BFF /* HandicapNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapNotifications.swift; sourceTree = "<group>"; };
 		448697692127148700A06BFF /* FeatureNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureNotifications.swift; sourceTree = "<group>"; };
+		44A5FBE221B03BB4008DE1EB /* FontProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProps.swift; sourceTree = "<group>"; };
 		44E105592125CC7B00D85BBC /* HandicapStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatus.swift; sourceTree = "<group>"; };
 		44FE2E31211479A300029869 /* FontMetricsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProvider.swift; sourceTree = "<group>"; };
 		44FE2E33211479F700029869 /* FontMetricsProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProviderProtocol.swift; sourceTree = "<group>"; };
@@ -118,6 +124,9 @@
 		832953CD2110D9E200072EB9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		833CE9A92194CCF400D741DE /* OSLogType+greaterEqual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLogType+greaterEqual.swift"; sourceTree = "<group>"; };
 		833CE9AB2196261200D741DE /* LoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
+		833D435321CFE42B00444EC9 /* NSFont+fontProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFont+fontProps.swift"; sourceTree = "<group>"; };
+		833D435521CFE44000444EC9 /* UIFont+fontProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+fontProps.swift"; sourceTree = "<group>"; };
+		833D435721CFE7D300444EC9 /* NSFontFontPropsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSFontFontPropsTests.swift; sourceTree = "<group>"; };
 		833DB9BE206C164B00C8DA02 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 		833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatus.swift; sourceTree = "<group>"; };
 		834C7231213072B300DCEBDC /* FeatureNotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureNotificationsTests.swift; sourceTree = "<group>"; };
@@ -132,6 +141,7 @@
 		83973ADE206FD4080057CD4F /* FontMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetrics.swift; sourceTree = "<group>"; };
 		83A8EE59206FB8410043EB34 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		83A8EE5B206FB8660043EB34 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		83B21D6C21DE687200E02470 /* UIFontFontPropsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontFontPropsTests.swift; sourceTree = "<group>"; };
 		83B5FFE32065336F00E8E83F /* Capable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capable.swift; sourceTree = "<group>"; };
 		83B5FFE52065352500E8E83F /* CapableFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapableFeature.swift; sourceTree = "<group>"; };
 		83B5FFEA206542FC00E8E83F /* FeatureStatusesProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProviderProtocol.swift; sourceTree = "<group>"; };
@@ -239,6 +249,8 @@
 			children = (
 				83097DA621A97CAA00703F29 /* RGBAColorTests.swift */,
 				83097DA421A9736100703F29 /* ConformanceLevelTests.swift */,
+				833D435721CFE7D300444EC9 /* NSFontFontPropsTests.swift */,
+				83B21D6C21DE687200E02470 /* UIFontFontPropsTests.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -247,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				83160D9421A548EF00FD122C /* ConformanceLevel.swift */,
+				44A5FBE221B03BB4008DE1EB /* FontProps.swift */,
 				83DAF4B721A4A9670076F542 /* RGBAColor.swift */,
 			);
 			path = Models;
@@ -256,7 +269,9 @@
 			isa = PBXGroup;
 			children = (
 				83DAF4B321A4A7200076F542 /* NSColor+wcag.swift */,
+				833D435321CFE42B00444EC9 /* NSFont+fontProps.swift */,
 				83DAF4B521A4A7320076F542 /* UIColor+wcag.swift */,
+				833D435521CFE44000444EC9 /* UIFont+fontProps.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -583,6 +598,7 @@
 				83DAF4B421A4A7200076F542 /* NSColor+wcag.swift in Sources */,
 				831E8EEE21247C620096930C /* Handicap.swift in Sources */,
 				83D2A46920F006000032054C /* CGFloat+contentSizeString.swift in Sources */,
+				833D435621CFE44000444EC9 /* UIFont+fontProps.swift in Sources */,
 				83973ADA206FD22C0057CD4F /* UIFont+ScaledFont.swift in Sources */,
 				44E1055A2125CC7B00D85BBC /* HandicapStatus.swift in Sources */,
 				83B5FFE42065336F00E8E83F /* Capable.swift in Sources */,
@@ -591,11 +607,13 @@
 				44580D13212606BB00F9940A /* FeatureStatuses.swift in Sources */,
 				831E8EF021247EAD0096930C /* HandicapEnabledMode.swift in Sources */,
 				83CAA3F82097BEEC003F231D /* OsVersionProvider.swift in Sources */,
+				833D435421CFE42B00444EC9 /* NSFont+fontProps.swift in Sources */,
 				83DB72462069891200384B3F /* UIContentSizeCategory+values.swift in Sources */,
 				448697682127133A00A06BFF /* HandicapNotifications.swift in Sources */,
 				44580D11212605D500F9940A /* HandicapStatuses.swift in Sources */,
 				83C6A351219E08DB00BB039D /* String+isDefaultContentSize.swift in Sources */,
 				44FE2E34211479F700029869 /* FontMetricsProviderProtocol.swift in Sources */,
+				44A5FBE321B03BB4008DE1EB /* FontProps.swift in Sources */,
 				83C6A353219E0FF200BB039D /* HearingDeviceEar+stringValue.swift in Sources */,
 				83973ADD206FD3A40057CD4F /* FontMetricsProtocol.swift in Sources */,
 				83DB724820698EB400384B3F /* Bool+statusString.swift in Sources */,
@@ -628,6 +646,8 @@
 				83DA75F72065167600303D8F /* CapableTests.swift in Sources */,
 				831AA4DE212F437800AEAC44 /* NotificationCenterMock.swift in Sources */,
 				44FE2E452114849100029869 /* OsVersionProviderMock.swift in Sources */,
+				833D435821CFE7D300444EC9 /* NSFontFontPropsTests.swift in Sources */,
+				83B21D6D21DE687200E02470 /* UIFontFontPropsTests.swift in Sources */,
 				44FE2E442114833700029869 /* FontMetricsProviderMock.swift in Sources */,
 				8323D8E82167C2550015F8A3 /* HandicapStatusesTests.swift in Sources */,
 				44FE2E3B211482DD00029869 /* FontMetricsProviderTests.swift in Sources */,
