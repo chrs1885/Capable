@@ -26,6 +26,19 @@ public enum ConformanceLevel {
 }
 
 extension ConformanceLevel {
+    /**
+     Initializes a ConformanceLevel based on a given contrast ratio and font information used for the text.
+
+     - Parameters:
+         - contrastRatio: The contrast ratio of a text and its background.
+         - fontSize: The font size of the text.
+         - isBoldFont: Information regarding the font weight.
+     */
+    public init(contrastRatio: CGFloat, fontSize: CGFloat, isBoldFont: Bool) {
+        let fontProps = FontProps(fontSize: fontSize, isBoldFont: isBoldFont)
+        self.init(contrastRatio: contrastRatio, fontProps: fontProps)
+    }
+
     init(contrastRatio: CGFloat, fontProps: FontProps) {
         var value = ConformanceLevel.failed
 
