@@ -244,7 +244,7 @@ class NSColorWcagTests: QuickSpec {
 
                 context("by not providing any passing color") {
                     it("returns nil") {
-                        let actual = NSColor.getBackgroundColor(fromColors: [], withFont: Fonts.smallFont, belowTextColor: Colors.white, conformanceLevel: .AA)
+                        let actual = NSColor.getBackgroundColor(fromColors: [], forTextColor: Colors.white, withFont: Fonts.smallFont, conformanceLevel: .AA)
 
                         expect(actual).to(beNil())
                     }
@@ -253,7 +253,7 @@ class NSColorWcagTests: QuickSpec {
                 context("when defining conformance level .AA") {
                     context("when using a small font") {
                         it("returns black") {
-                            let actual = NSColor.getBackgroundColor(fromColors: colors!, withFont: Fonts.smallFont, belowTextColor: Colors.white, conformanceLevel: .AA)
+                            let actual = NSColor.getBackgroundColor(fromColors: colors!, forTextColor: Colors.white, withFont: Fonts.smallFont, conformanceLevel: .AA)
 
                             expect(actual).to(equal(Colors.colorWithContrastRatio4_5))
                         }
@@ -261,7 +261,7 @@ class NSColorWcagTests: QuickSpec {
 
                     context("when using a small bold font") {
                         it("returns black") {
-                            let actual = NSColor.getBackgroundColor(fromColors: colors!, withFont: Fonts.smallBoldFont, belowTextColor: Colors.white, conformanceLevel: .AA)
+                            let actual = NSColor.getBackgroundColor(fromColors: colors!, forTextColor: Colors.white, withFont: Fonts.smallBoldFont, conformanceLevel: .AA)
 
                             expect(actual).to(equal(Colors.colorWithContrastRatio3))
                         }
@@ -269,7 +269,7 @@ class NSColorWcagTests: QuickSpec {
 
                     context("when using a large font") {
                         it("returns black") {
-                            let actual = NSColor.getBackgroundColor(fromColors: colors!, withFont: Fonts.largeFont, belowTextColor: Colors.white, conformanceLevel: .AA)
+                            let actual = NSColor.getBackgroundColor(fromColors: colors!, forTextColor: Colors.white, withFont: Fonts.largeFont, conformanceLevel: .AA)
 
                             expect(actual).to(equal(Colors.colorWithContrastRatio3))
                         }
@@ -279,7 +279,7 @@ class NSColorWcagTests: QuickSpec {
                 context("when defining conformance level .AAA") {
                     context("when using a small font") {
                         it("returns black") {
-                            let actual = NSColor.getBackgroundColor(fromColors: colors!, withFont: Fonts.smallFont, belowTextColor: Colors.white, conformanceLevel: .AAA)
+                            let actual = NSColor.getBackgroundColor(fromColors: colors!, forTextColor: Colors.white, withFont: Fonts.smallFont, conformanceLevel: .AAA)
 
                             expect(actual).to(equal(Colors.colorWithContrastRatio7))
                         }
@@ -287,7 +287,7 @@ class NSColorWcagTests: QuickSpec {
 
                     context("when using a small bold font") {
                         it("returns black") {
-                            let actual = NSColor.getBackgroundColor(fromColors: colors!, withFont: Fonts.smallBoldFont, belowTextColor: Colors.white, conformanceLevel: .AAA)
+                            let actual = NSColor.getBackgroundColor(fromColors: colors!, forTextColor: Colors.white, withFont: Fonts.smallBoldFont, conformanceLevel: .AAA)
 
                             expect(actual).to(equal(Colors.colorWithContrastRatio4_5))
                         }
@@ -295,7 +295,7 @@ class NSColorWcagTests: QuickSpec {
 
                     context("when using a large font") {
                         it("returns black") {
-                            let actual = NSColor.getBackgroundColor(fromColors: colors!, withFont: Fonts.largeFont, belowTextColor: Colors.white, conformanceLevel: .AAA)
+                            let actual = NSColor.getBackgroundColor(fromColors: colors!, forTextColor: Colors.white, withFont: Fonts.largeFont, conformanceLevel: .AAA)
 
                             expect(actual).to(equal(Colors.colorWithContrastRatio4_5))
                         }

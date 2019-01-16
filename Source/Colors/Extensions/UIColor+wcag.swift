@@ -92,15 +92,15 @@ extension UIColor {
 
      - Parameters:
          - colors: A list of possible background colors.
-         - font: The font used for the text.
          - textColor: The text color that should be used.
+         - font: The font used for the text.
          - conformanceLevel: The conformance level that needs to be passed when calculating the contrast ratio. The default conformance level is .AA.
 
      - Returns: The first color that conforms to the conformance level defined.
 
      - Warning: This function only accepts RGB compatible colors and will fail otherwise.
      */
-    public class func getBackgroundColor(fromColors colors: [UIColor], withFont font: UIFont, belowTextColor textColor: UIColor, conformanceLevel: ConformanceLevel = .AA) -> UIColor? {
+    public class func getBackgroundColor(fromColors colors: [UIColor], forTextColor textColor: UIColor, withFont font: UIFont, conformanceLevel: ConformanceLevel = .AA) -> UIColor? {
         let textColor = textColor.rgbaColor
 
         for backgroundColor in colors {
