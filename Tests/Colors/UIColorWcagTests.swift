@@ -33,7 +33,7 @@ class UIColorWcagTests: QuickSpec {
             context("when calling rgbaColor") {
                 context("when color space is sRGB") {
                     it("normalizes components to be between 0.0 and 255.0") {
-                        let color = Colors.white.rgbaColor
+                        let color = Colors.white.rgbaColor!
 
                         expect(color.red).to(equal(255.0))
                         expect(color.green).to(equal(255.0))
@@ -44,7 +44,7 @@ class UIColorWcagTests: QuickSpec {
 
                 context("when color space is Grayscale") {
                     it("uses white value for each color component") {
-                        let color = Colors.grayscaleColor.rgbaColor
+                        let color = Colors.grayscaleColor.rgbaColor!
                         var whiteComponent: CGFloat = 0, alphaComponent: CGFloat = 0
                         Colors.grayscaleColor.getWhite(&whiteComponent, alpha: &alphaComponent)
 
@@ -71,7 +71,7 @@ class UIColorWcagTests: QuickSpec {
 
                 context("by passing in green and orange color") {
                     it("returns a contrast ratio of 2.31") {
-                        let actualContrastRatio = UIColor.getContrastRatio(forTextColor: Colors.colorWithContrastRatio3, onBackgroundColor: Colors.colorWithContrastRatio7)
+                        let actualContrastRatio = UIColor.getContrastRatio(forTextColor: Colors.colorWithContrastRatio3, onBackgroundColor: Colors.colorWithContrastRatio7)!
                         let rounded = floor(actualContrastRatio * 100) / 100
 
                         expect(rounded).to(equal(2.3))
@@ -80,7 +80,7 @@ class UIColorWcagTests: QuickSpec {
 
                 context("by passing in semi transparent color and white") {
                     it("returns a contrast ratio of 4.51") {
-                        let actualContrastRatio = UIColor.getContrastRatio(forTextColor: Colors.semiTransparentColor, onBackgroundColor: Colors.white)
+                        let actualContrastRatio = UIColor.getContrastRatio(forTextColor: Colors.semiTransparentColor, onBackgroundColor: Colors.white)!
                         let rounded = floor(actualContrastRatio * 100) / 100
 
                         expect(rounded).to(equal(4.51))

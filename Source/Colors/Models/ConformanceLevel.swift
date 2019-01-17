@@ -21,7 +21,7 @@ public enum ConformanceLevel {
     /// The highest level of conformance including success criterias of level A and AA.
     case AAA
 
-    ///  Indicates that no level of conformance has been reached.
+    /// Indicates that no level of conformance has been reached.
     case failed
 }
 

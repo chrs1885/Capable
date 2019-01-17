@@ -35,7 +35,7 @@ class NSColorWcagTests: QuickSpec {
             context("when calling rgbaColor") {
                 context("when color space is sRGB") {
                     it("normalizes components to be between 0.0 and 255.0") {
-                        let color = Colors.white.rgbaColor
+                        let color = Colors.white.rgbaColor!
 
                         expect(color.red).to(equal(255.0))
                         expect(color.green).to(equal(255.0))
@@ -46,7 +46,7 @@ class NSColorWcagTests: QuickSpec {
 
                 context("when color space is P3") {
                     it("normalizes components to sRGB") {
-                        let color = Colors.p3Color.rgbaColor
+                        let color = Colors.p3Color.rgbaColor!
 
                         expect(color.red).to(equal(255.0))
                         expect(color.green).to(equal(0.0))
@@ -57,7 +57,7 @@ class NSColorWcagTests: QuickSpec {
 
                 context("when color space is Grayscale") {
                     it("uses white value for each color component") {
-                        let color = Colors.grayscaleColor.rgbaColor
+                        let color = Colors.grayscaleColor.rgbaColor!
                         let whiteComponent = Colors.grayscaleColor.whiteComponent*255.0
                         let alphaComponent = Colors.grayscaleColor.alphaComponent
 
@@ -90,7 +90,7 @@ class NSColorWcagTests: QuickSpec {
 
                 context("by passing in green and orange color") {
                     it("returns a contrast ratio of 2.31") {
-                        let actualContrastRatio = NSColor.getContrastRatio(forTextColor: Colors.colorWithContrastRatio3, onBackgroundColor: Colors.colorWithContrastRatio7)
+                        let actualContrastRatio = NSColor.getContrastRatio(forTextColor: Colors.colorWithContrastRatio3, onBackgroundColor: Colors.colorWithContrastRatio7)!
                         let rounded = floor(actualContrastRatio * 100) / 100
 
                         expect(rounded).to(equal(2.3))
@@ -99,7 +99,7 @@ class NSColorWcagTests: QuickSpec {
 
                 context("by passing in semi transparent color and white") {
                     it("returns a contrast ratio of 4.51") {
-                        let actualContrastRatio = NSColor.getContrastRatio(forTextColor: Colors.semiTransparentColor, onBackgroundColor: Colors.white)
+                        let actualContrastRatio = NSColor.getContrastRatio(forTextColor: Colors.semiTransparentColor, onBackgroundColor: Colors.white)!
                         let rounded = floor(actualContrastRatio * 100) / 100
 
                         expect(rounded).to(equal(4.51))

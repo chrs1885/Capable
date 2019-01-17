@@ -215,13 +215,13 @@ Please note that when using notifications with `Handicap`s on macOS or watchOS, 
 
 The *Web Content Accessibility Guidelines* (WCAG) define minimum contrast ratios of a text and its background. The Capable framework extends `UIColor` and `NSColor` with functionality to use WCAG conformant colors within your apps to help people with visual disabilities to perceive content.
 
-Internally, the provided colors will be mapped to an equivilent of the sRGB color space or throw if the conversion fails. Semi-transparent text colors will be blended with its background color. However, the alpha value of semi-transparent background colors will be ignored since the underlying color can't be determined.
+Internally, the provided colors will be mapped to an equivilent of the sRGB color space. All functions will return `nil` in case any input color can't be converted. Also note that semi-transparent text colors will be blended with its background color. However, the alpha value of semi-transparent background colors will be ignored since the underlying color can't be determined.
 
 #### Text colors
 Get a high contrast text color for a given background color as follows:
 
 ```swift
-let textColor = UIColor.getTextColor(onBackgroundColor: UIColor.red)
+let textColor = UIColor.getTextColor(onBackgroundColor: UIColor.red)!
 ```
 
 This will return the text color with the highest possible contrast (black/white). Alternatively, you can define a list of possible text colors. Since the WCAG requirements for contrast differ in text size and weight, you also need to provide the font used for the text. The following will return the first text color that satisfies the required conformance level (*AA* by default).
@@ -232,7 +232,7 @@ let textColor = UIColor.getTextColor(
     withFont: myLabel.font,
     onBackgroundColor: view.backgroundColor,
     conformanceLevel: .AA
-)
+)!
 ```
 
 #### Background colors
@@ -240,7 +240,7 @@ let textColor = UIColor.getTextColor(
 This will also work the other way round. If you are looking for a high contrast background color:
 
 ```swift
-let backgroundColor = UIColor.getBackgroundColor(forTextColor: UIColor.red)
+let backgroundColor = UIColor.getBackgroundColor(forTextColor: UIColor.red)!
 
 // or
 
@@ -249,7 +249,7 @@ let backgroundColor = UIColor.getBackgroundColor(
     forTextColor: myLabel.textColor,
     withFont: myLabel.font,
     conformanceLevel: .AA
-)
+)!
 
 ```
 
@@ -258,7 +258,7 @@ let backgroundColor = UIColor.getBackgroundColor(
 The contrast ratio of two opaque colors can be calculated as well:
 
 ```swift
-let contrastRatio: CGFloat = UIColor.getContrastRatio(forTextColor: UIColor.red, onBackgroundColor: UIColor.yellow)
+let contrastRatio: CGFloat = UIColor.getContrastRatio(forTextColor: UIColor.red, onBackgroundColor: UIColor.yellow)!
 ```
 
 Once the contrast ratio has being determined, you can check the resulting conformance level specified by WCAG as follows:
