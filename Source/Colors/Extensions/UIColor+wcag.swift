@@ -35,7 +35,7 @@ extension UIColor {
      Returns the text color with the highest contrast (black or white) for a given background color.
 
      - Parameters:
-        - onBackgroundColor: The background color.
+        - backgroundColor: The background color.
 
      - Returns: A color that has the highest contrast with the given background color.
 
@@ -52,9 +52,9 @@ extension UIColor {
      Calculates the contrast ratio of a given list of text colors and a background color. The first color that conforms to the conformance level defined gets returned. The default conformance level is .AA.
 
      - Parameters:
-         - fromColors: A list of possible text colors.
-         - withFont: The font used for the text.
-         - onBackgroundColor: The background color that the text should be displayed on.
+         - colors: A list of possible text colors.
+         - font: The font used for the text.
+         - backgroundColor: The background color that the text should be displayed on.
          - conformanceLevel: The conformance level that needs to be passed when calculating the contrast ratio. The default conformance level is .AA.
 
      - Returns: The first color that conforms to the conformance level defined.
@@ -80,7 +80,7 @@ extension UIColor {
      Returns the background color with the highest contrast (black or white) for a given text color.
 
      - Parameters:
-        - forTextColor: The textColor color.
+        - textColor: The textColor color.
 
      - Returns: A color that has the highest contrast with the given text color.
 
@@ -97,9 +97,9 @@ extension UIColor {
      Calculates the contrast ratio of a given list of background colors and a text color. The first color that conforms to the conformance level defined gets returned. The default conformance level is .AA.
 
      - Parameters:
-         - fromColors: A list of possible background colors.
-         - forTextColor: The text color that should be used.
-         - withFont: The font used for the text.
+         - colors: A list of possible background colors.
+         - textColor: The text color that should be used.
+         - font: The font used for the text.
          - conformanceLevel: The conformance level that needs to be passed when calculating the contrast ratio. The default conformance level is .AA.
 
      - Returns: The first color that conforms to the conformance level defined.
