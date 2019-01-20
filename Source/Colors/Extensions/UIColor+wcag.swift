@@ -9,7 +9,7 @@
 
 import UIKit
 
-/// Extension that adds functionality for calculating colors that conform to WCAG success criterias.
+/// Extension that adds functionality for calculating WCAG compliant high contrast colors.
 extension UIColor {
 
     /**
@@ -21,7 +21,9 @@ extension UIColor {
 
      - Returns: The contrast ratio for a given pair of colors.
 
-     - Warning: This function only accepts RGB compatible colors and will fail otherwise.
+     - Note: Semi-transparent text colors will be blended with the background color. However, for background colors, the alpha component is ignored.
+
+     - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
     public class func getContrastRatio(forTextColor textColor: UIColor, onBackgroundColor backgroundColor: UIColor) -> CGFloat? {
         guard let rgbaTextColor = textColor.rgbaColor, let rgbaBackgroundColor = backgroundColor.rgbaColor else {
@@ -39,7 +41,9 @@ extension UIColor {
 
      - Returns: A color that has the highest contrast with the given background color.
 
-     - Warning: This function only accepts RGB compatible colors and will fail otherwise.
+     - Note: Semi-transparent text colors will be blended with the background color. However, for background colors, the alpha component is ignored.
+
+     - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
     public class func getTextColor(onBackgroundColor backgroundColor: UIColor) -> UIColor? {
         guard let rgbaBackgroundColor = backgroundColor.rgbaColor else { return nil }
@@ -57,11 +61,13 @@ extension UIColor {
          - backgroundColor: The background color that the text should be displayed on.
          - conformanceLevel: The conformance level that needs to be passed when calculating the contrast ratio. The default conformance level is .AA.
 
-     - Returns: The first color that conforms to the conformance level defined.
+     - Returns: The first color that conforms to the conformance level defined or `nil` if non of the colors provided passed.
 
-     - Warning: This function only accepts RGB compatible colors and will fail otherwise.
+     - Note: Semi-transparent text colors will be blended with the background color. However, for background colors, the alpha component is ignored.
+
+     - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
-    public class func getTextColor(fromColors colors: [UIColor] = [], withFont font: UIFont, onBackgroundColor backgroundColor: UIColor, conformanceLevel: ConformanceLevel = .AA) -> UIColor? {
+    public class func getTextColor(fromColors colors: [UIColor], withFont font: UIFont, onBackgroundColor backgroundColor: UIColor, conformanceLevel: ConformanceLevel = .AA) -> UIColor? {
         guard let rgbaBackgroundColor = backgroundColor.rgbaColor else { return nil }
 
         for textColor in colors {
@@ -84,7 +90,9 @@ extension UIColor {
 
      - Returns: A color that has the highest contrast with the given text color.
 
-     - Warning: This function only accepts RGB compatible colors and will fail otherwise.
+     - Note: Semi-transparent text colors will be blended with the background color. However, for background colors, the alpha component is ignored.
+
+     - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
     public class func getBackgroundColor(forTextColor textColor: UIColor) -> UIColor? {
         guard let rgbaTextColor = textColor.rgbaColor else { return nil }
@@ -102,9 +110,11 @@ extension UIColor {
          - font: The font used for the text.
          - conformanceLevel: The conformance level that needs to be passed when calculating the contrast ratio. The default conformance level is .AA.
 
-     - Returns: The first color that conforms to the conformance level defined.
+     - Returns: The first color that conforms to the conformance level defined or `nil` if non of the colors provided passed.
 
-     - Warning: This function only accepts RGB compatible colors and will fail otherwise.
+     - Note: Semi-transparent text colors will be blended with the background color. However, for background colors, the alpha component is ignored.
+
+     - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
     public class func getBackgroundColor(fromColors colors: [UIColor], forTextColor textColor: UIColor, withFont font: UIFont, conformanceLevel: ConformanceLevel = .AA) -> UIColor? {
         guard let rgbaTextColor = textColor.rgbaColor else { return nil }
