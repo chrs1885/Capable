@@ -10,19 +10,19 @@ import CoreGraphics
 infix operator >=: ComparisonPrecedence
 
 /// An enum specifying all WCAG conformance levels.
-public enum ConformanceLevel {
+public enum ConformanceLevel: Int {
 
     /// The minimum level of conformance.
-    case A
+    case A = 1
 
     /// The medium level of conformance including success criterias of level A.
-    case AA
+    case AA = 2
 
     /// The highest level of conformance including success criterias of level A and AA.
-    case AAA
+    case AAA = 3
 
     /// Indicates that no level of conformance has been reached.
-    case failed
+    case failed = 0
 }
 
 extension ConformanceLevel {
@@ -60,15 +60,6 @@ extension ConformanceLevel {
     }
 
     static func >= (lhs: ConformanceLevel, rhs: ConformanceLevel) -> Bool {
-        switch lhs {
-        case .AAA:
-            return rhs == .A || rhs == .AA || rhs == .AAA || rhs == .failed
-        case .AA:
-            return rhs == .A || rhs == .AA || rhs == .failed
-        case .A:
-            return rhs == .A || rhs == .failed
-        case .failed:
-            return rhs == .failed
-        }
+        return lhs.rawValue >= rhs.rawValue
     }
 }
