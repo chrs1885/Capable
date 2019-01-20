@@ -53,7 +53,7 @@ target 'MyApp' do
   pod 'Capable/Features'
   
   # color extensions only
-  pod 'Capable/Fonts'
+  pod 'Capable/Colors'
 
   # font extensions only
   pod 'Capable/Fonts'
@@ -213,9 +213,9 @@ Please note that when using notifications with `Handicap`s on macOS or watchOS, 
 <a id="colors"></a> 
 ### High contrast colors (Capable UIColor/NSColor extension)
 
-The *Web Content Accessibility Guidelines* (WCAG) define minimum contrast ratios of a text and its background. The Capable framework extends `UIColor` and `NSColor` with functionality to use WCAG conformant colors within your apps to help people with visual disabilities to perceive content.
+The *Web Content Accessibility Guidelines* (WCAG) define minimum contrast ratios for a text and its background. The Capable framework extends `UIColor` and `NSColor` with functionality to use WCAG conformant colors within your apps to help people with visual disabilities to perceive content.
 
-Internally, the provided colors will be mapped to an equivilent of the sRGB color space. All functions will return `nil` in case any input color can't be converted. Also note that semi-transparent text colors will be blended with its background color. However, the alpha value of semi-transparent background colors will be ignored since the underlying color can't be determined.
+Internally, the provided colors will be mapped to an equivalent of the sRGB color space. All functions will return `nil` and [log warnings](#logging) with further info in case any input color couldn't be converted. Also note that semi-transparent text colors will be blended with its background color. However, the alpha value of semi-transparent background colors will be ignored since the underlying color can't be determined.
 
 #### Text colors
 Get a high contrast text color for a given background color as follows:
@@ -261,7 +261,7 @@ The contrast ratio of two opaque colors can be calculated as well:
 let contrastRatio: CGFloat = UIColor.getContrastRatio(forTextColor: UIColor.red, onBackgroundColor: UIColor.yellow)!
 ```
 
-Once the contrast ratio has being determined, you can check the resulting conformance level specified by WCAG as follows:
+Once the contrast ratio has been determined, you can check the resulting conformance level specified by WCAG as follows:
 
 ```swift
 let passedConformanceLevel = ConformanceLevel(contrastRatio: contrastRatio, fontSize: myLabel.font.pointSize, isBoldFont: true)
@@ -417,7 +417,7 @@ While most features can only have a `statusMap` value set to **enabled** or **di
 
 ## Contributions
 
-We'd love to see you contributing to this project by proposing or adding features, reporting bugs, or spreading the word. Please have a quick look at our [contribution gudelines](./.github/CONTRIBUTING.md).
+We'd love to see you contributing to this project by proposing or adding features, reporting bugs, or spreading the word. Please have a quick look at our [contribution guidelines](./.github/CONTRIBUTING.md).
 
 ## License
 
