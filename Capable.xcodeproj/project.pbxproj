@@ -28,7 +28,6 @@
 		83097DA521A9736100703F29 /* ConformanceLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83097DA421A9736100703F29 /* ConformanceLevelTests.swift */; };
 		83097DA721A97CAA00703F29 /* RGBAColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83097DA621A97CAA00703F29 /* RGBAColorTests.swift */; };
 		8311E58721EE841800B416B4 /* FontPropsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8311E58621EE841800B416B4 /* FontPropsTests.swift */; };
-		8311E58921EE8BFA00B416B4 /* UIColorWcagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8311E58821EE8BFA00B416B4 /* UIColorWcagTests.swift */; };
 		83160D9521A548EF00FD122C /* ConformanceLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83160D9421A548EF00FD122C /* ConformanceLevel.swift */; };
 		831AA4DE212F437800AEAC44 /* NotificationCenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA4DD212F437800AEAC44 /* NotificationCenterMock.swift */; };
 		831AA4E0212F46CC00AEAC44 /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA4DF212F46CC00AEAC44 /* NotificationCenterProtocol.swift */; };
@@ -38,6 +37,8 @@
 		831B4EFA20A4A25A00F1BB94 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A8EE59206FB8410043EB34 /* Nimble.framework */; };
 		831E8EEE21247C620096930C /* Handicap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E8EED21247C620096930C /* Handicap.swift */; };
 		831E8EF021247EAD0096930C /* HandicapEnabledMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E8EEF21247EAD0096930C /* HandicapEnabledMode.swift */; };
+		831FE59121F52DDD0078F260 /* UIColor+rgbaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59021F52DDD0078F260 /* UIColor+rgbaColor.swift */; };
+		831FE59321F52E330078F260 /* NSColor+rgbaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59221F52E330078F260 /* NSColor+rgbaColor.swift */; };
 		8323D8E62167B8C80015F8A3 /* FeatureStatusesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323D8E52167B8C80015F8A3 /* FeatureStatusesTests.swift */; };
 		8323D8E82167C2550015F8A3 /* HandicapStatusesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323D8E72167C2550015F8A3 /* HandicapStatusesTests.swift */; };
 		8323D8EA2167D0670015F8A3 /* HandicapStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323D8E92167D0670015F8A3 /* HandicapStatusesMock.swift */; };
@@ -53,7 +54,7 @@
 		833DB9C2206C188B00C8DA02 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */; };
 		834C7232213072B300DCEBDC /* FeatureNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834C7231213072B300DCEBDC /* FeatureNotificationsTests.swift */; };
 		834C72342131F55100DCEBDC /* HandicapNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834C72332131F55100DCEBDC /* HandicapNotificationsTests.swift */; };
-		83529F3F21ED2BF6007637C7 /* NSColorWcagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83529F3E21ED2BF6007637C7 /* NSColorWcagTests.swift */; };
+		83529F3F21ED2BF6007637C7 /* ColorWcagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83529F3E21ED2BF6007637C7 /* ColorWcagTests.swift */; };
 		83648E972187BD000095D208 /* HandicapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83648E962187BD000095D208 /* HandicapTests.swift */; };
 		83648E9E218A36560095D208 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83648E9D218A36560095D208 /* Logger.swift */; };
 		8382A322206E350F00E264A3 /* FeatureStatusesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A321206E350F00E264A3 /* FeatureStatusesProvider.swift */; };
@@ -73,8 +74,7 @@
 		83D2A46920F006000032054C /* CGFloat+contentSizeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2A46820F006000032054C /* CGFloat+contentSizeString.swift */; };
 		83DA75F72065167600303D8F /* CapableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DA75F62065167600303D8F /* CapableTests.swift */; };
 		83DA75F92065167600303D8F /* Capable.h in Headers */ = {isa = PBXBuildFile; fileRef = 83DA75EB2065167600303D8F /* Capable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83DAF4B421A4A7200076F542 /* NSColor+wcag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DAF4B321A4A7200076F542 /* NSColor+wcag.swift */; };
-		83DAF4B621A4A7320076F542 /* UIColor+wcag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DAF4B521A4A7320076F542 /* UIColor+wcag.swift */; };
+		83DAF4B621A4A7320076F542 /* Color+wcag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DAF4B521A4A7320076F542 /* Color+wcag.swift */; };
 		83DAF4B821A4A9670076F542 /* RGBAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DAF4B721A4A9670076F542 /* RGBAColor.swift */; };
 		83DB72462069891200384B3F /* UIContentSizeCategory+values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB72452069891200384B3F /* UIContentSizeCategory+values.swift */; };
 		83DB724820698EB400384B3F /* Bool+statusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB724720698EB400384B3F /* Bool+statusString.swift */; };
@@ -115,12 +115,13 @@
 		83097DA421A9736100703F29 /* ConformanceLevelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformanceLevelTests.swift; sourceTree = "<group>"; };
 		83097DA621A97CAA00703F29 /* RGBAColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAColorTests.swift; sourceTree = "<group>"; };
 		8311E58621EE841800B416B4 /* FontPropsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPropsTests.swift; sourceTree = "<group>"; };
-		8311E58821EE8BFA00B416B4 /* UIColorWcagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorWcagTests.swift; sourceTree = "<group>"; };
 		83160D9421A548EF00FD122C /* ConformanceLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformanceLevel.swift; sourceTree = "<group>"; };
 		831AA4DD212F437800AEAC44 /* NotificationCenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterMock.swift; sourceTree = "<group>"; };
 		831AA4DF212F46CC00AEAC44 /* NotificationCenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterProtocol.swift; sourceTree = "<group>"; };
 		831E8EED21247C620096930C /* Handicap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handicap.swift; sourceTree = "<group>"; };
 		831E8EEF21247EAD0096930C /* HandicapEnabledMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapEnabledMode.swift; sourceTree = "<group>"; };
+		831FE59021F52DDD0078F260 /* UIColor+rgbaColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+rgbaColor.swift"; sourceTree = "<group>"; };
+		831FE59221F52E330078F260 /* NSColor+rgbaColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+rgbaColor.swift"; sourceTree = "<group>"; };
 		8323D8E52167B8C80015F8A3 /* FeatureStatusesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesTests.swift; sourceTree = "<group>"; };
 		8323D8E72167C2550015F8A3 /* HandicapStatusesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatusesTests.swift; sourceTree = "<group>"; };
 		8323D8E92167D0670015F8A3 /* HandicapStatusesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatusesMock.swift; sourceTree = "<group>"; };
@@ -136,7 +137,7 @@
 		833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatus.swift; sourceTree = "<group>"; };
 		834C7231213072B300DCEBDC /* FeatureNotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureNotificationsTests.swift; sourceTree = "<group>"; };
 		834C72332131F55100DCEBDC /* HandicapNotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapNotificationsTests.swift; sourceTree = "<group>"; };
-		83529F3E21ED2BF6007637C7 /* NSColorWcagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorWcagTests.swift; sourceTree = "<group>"; };
+		83529F3E21ED2BF6007637C7 /* ColorWcagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorWcagTests.swift; sourceTree = "<group>"; };
 		83648E962187BD000095D208 /* HandicapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapTests.swift; sourceTree = "<group>"; };
 		83648E9D218A36560095D208 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		8382A321206E350F00E264A3 /* FeatureStatusesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProvider.swift; sourceTree = "<group>"; };
@@ -164,8 +165,7 @@
 		83DA75F12065167600303D8F /* CapableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DA75F62065167600303D8F /* CapableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapableTests.swift; sourceTree = "<group>"; };
 		83DA75F82065167600303D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83DAF4B321A4A7200076F542 /* NSColor+wcag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSColor+wcag.swift"; sourceTree = "<group>"; };
-		83DAF4B521A4A7320076F542 /* UIColor+wcag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+wcag.swift"; sourceTree = "<group>"; };
+		83DAF4B521A4A7320076F542 /* Color+wcag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+wcag.swift"; sourceTree = "<group>"; };
 		83DAF4B721A4A9670076F542 /* RGBAColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAColor.swift; sourceTree = "<group>"; };
 		83DB72452069891200384B3F /* UIContentSizeCategory+values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIContentSizeCategory+values.swift"; sourceTree = "<group>"; };
 		83DB724720698EB400384B3F /* Bool+statusString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+statusString.swift"; sourceTree = "<group>"; };
@@ -255,10 +255,9 @@
 			children = (
 				83097DA421A9736100703F29 /* ConformanceLevelTests.swift */,
 				8311E58621EE841800B416B4 /* FontPropsTests.swift */,
-				83529F3E21ED2BF6007637C7 /* NSColorWcagTests.swift */,
+				83529F3E21ED2BF6007637C7 /* ColorWcagTests.swift */,
 				833D435721CFE7D300444EC9 /* NSFontFontPropsTests.swift */,
 				83097DA621A97CAA00703F29 /* RGBAColorTests.swift */,
-				8311E58821EE8BFA00B416B4 /* UIColorWcagTests.swift */,
 				83B21D6C21DE687200E02470 /* UIFontFontPropsTests.swift */,
 			);
 			path = Colors;
@@ -277,9 +276,10 @@
 		83160D9321A5487800FD122C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				83DAF4B321A4A7200076F542 /* NSColor+wcag.swift */,
+				83DAF4B521A4A7320076F542 /* Color+wcag.swift */,
+				831FE59221F52E330078F260 /* NSColor+rgbaColor.swift */,
 				833D435321CFE42B00444EC9 /* NSFont+fontProps.swift */,
-				83DAF4B521A4A7320076F542 /* UIColor+wcag.swift */,
+				831FE59021F52DDD0078F260 /* UIColor+rgbaColor.swift */,
 				833D435521CFE44000444EC9 /* UIFont+fontProps.swift */,
 			);
 			path = Extensions;
@@ -601,14 +601,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				83973ADF206FD4080057CD4F /* FontMetrics.swift in Sources */,
+				831FE59321F52E330078F260 /* NSColor+rgbaColor.swift in Sources */,
 				8382A324206EB40500E264A3 /* NotificationsProtocol.swift in Sources */,
 				83DC7B5E2149AD4B00AF12A7 /* FeatureStatusesProtocol.swift in Sources */,
 				83DC7B5C2149ACFD00AF12A7 /* HandicapStatusesProtocol.swift in Sources */,
-				83DAF4B421A4A7200076F542 /* NSColor+wcag.swift in Sources */,
 				831E8EEE21247C620096930C /* Handicap.swift in Sources */,
 				83D2A46920F006000032054C /* CGFloat+contentSizeString.swift in Sources */,
 				833D435621CFE44000444EC9 /* UIFont+fontProps.swift in Sources */,
 				83973ADA206FD22C0057CD4F /* UIFont+ScaledFont.swift in Sources */,
+				831FE59121F52DDD0078F260 /* UIColor+rgbaColor.swift in Sources */,
 				44E1055A2125CC7B00D85BBC /* HandicapStatus.swift in Sources */,
 				83B5FFE42065336F00E8E83F /* Capable.swift in Sources */,
 				44FE2E3621147A6F00029869 /* FontMetricsSupport.swift in Sources */,
@@ -639,7 +640,7 @@
 				83B5FFE62065352500E8E83F /* CapableFeature.swift in Sources */,
 				4486976A2127148700A06BFF /* FeatureNotifications.swift in Sources */,
 				8382A322206E350F00E264A3 /* FeatureStatusesProvider.swift in Sources */,
-				83DAF4B621A4A7320076F542 /* UIColor+wcag.swift in Sources */,
+				83DAF4B621A4A7320076F542 /* Color+wcag.swift in Sources */,
 				83160D9521A548EF00FD122C /* ConformanceLevel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,7 +649,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8311E58921EE8BFA00B416B4 /* UIColorWcagTests.swift in Sources */,
 				8323D8EA2167D0670015F8A3 /* HandicapStatusesMock.swift in Sources */,
 				8311E58721EE841800B416B4 /* FontPropsTests.swift in Sources */,
 				8323D8E62167B8C80015F8A3 /* FeatureStatusesTests.swift in Sources */,
@@ -665,7 +665,7 @@
 				83DC7B602149BB4800AF12A7 /* NotificationsTests.swift in Sources */,
 				44580D1721260EAA00F9940A /* FeatureStatusesProviderMock.swift in Sources */,
 				44FE2E3F2114830B00029869 /* FontMetricsTests.swift in Sources */,
-				83529F3F21ED2BF6007637C7 /* NSColorWcagTests.swift in Sources */,
+				83529F3F21ED2BF6007637C7 /* ColorWcagTests.swift in Sources */,
 				44FE2E422114832300029869 /* FontMetricsMock.swift in Sources */,
 				834C7232213072B300DCEBDC /* FeatureNotificationsTests.swift in Sources */,
 				44580D1921261D4E00F9940A /* CapablePerfTests.swift in Sources */,

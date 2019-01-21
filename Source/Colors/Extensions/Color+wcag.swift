@@ -1,5 +1,5 @@
 //
-//  UIColor+wcag.swift
+//  Color+wcag.swift
 //  Capable
 //
 //  Created by Christoph Wendt on 20.11.18.
@@ -8,9 +8,19 @@
 #if os(iOS) || os(tvOS) || os(watchOS)
 
 import UIKit
+public typealias Color = UIColor
+public typealias Font = UIFont
+
+#elseif os(OSX)
+
+import AppKit
+public typealias Color = NSColor
+public typealias Font = NSFont
+
+#endif
 
 /// Extension that adds functionality for calculating WCAG compliant high contrast colors.
-extension UIColor {
+extension Color {
 
     /**
      Calculates the color ratio for a text color on a background color.
@@ -25,7 +35,7 @@ extension UIColor {
 
      - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
-    public class func getContrastRatio(forTextColor textColor: UIColor, onBackgroundColor backgroundColor: UIColor) -> CGFloat? {
+    public class func getContrastRatio(forTextColor textColor: Color, onBackgroundColor backgroundColor: Color) -> CGFloat? {
         guard let rgbaTextColor = textColor.rgbaColor, let rgbaBackgroundColor = backgroundColor.rgbaColor else {
             return nil
         }
@@ -45,7 +55,7 @@ extension UIColor {
 
      - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
-    public class func getTextColor(onBackgroundColor backgroundColor: UIColor) -> UIColor? {
+    public class func getTextColor(onBackgroundColor backgroundColor: Color) -> Color? {
         guard let rgbaBackgroundColor = backgroundColor.rgbaColor else { return nil }
         let textColor = RGBAColor.getTextColor(onBackgroundColor: rgbaBackgroundColor)
 
@@ -67,7 +77,7 @@ extension UIColor {
 
      - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
-    public class func getTextColor(fromColors colors: [UIColor], withFont font: UIFont, onBackgroundColor backgroundColor: UIColor, conformanceLevel: ConformanceLevel = .AA) -> UIColor? {
+    public class func getTextColor(fromColors colors: [Color], withFont font: Font, onBackgroundColor backgroundColor: Color, conformanceLevel: ConformanceLevel = .AA) -> Color? {
         guard let rgbaBackgroundColor = backgroundColor.rgbaColor else { return nil }
 
         for textColor in colors {
@@ -94,7 +104,7 @@ extension UIColor {
 
      - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
-    public class func getBackgroundColor(forTextColor textColor: UIColor) -> UIColor? {
+    public class func getBackgroundColor(forTextColor textColor: Color) -> Color? {
         guard let rgbaTextColor = textColor.rgbaColor else { return nil }
         let backgroundColor = RGBAColor.getBackgroundColor(forTextColor: rgbaTextColor)
 
@@ -116,7 +126,7 @@ extension UIColor {
 
      - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
-    public class func getBackgroundColor(fromColors colors: [UIColor], forTextColor textColor: UIColor, withFont font: UIFont, conformanceLevel: ConformanceLevel = .AA) -> UIColor? {
+    public class func getBackgroundColor(fromColors colors: [Color], forTextColor textColor: Color, withFont font: Font, conformanceLevel: ConformanceLevel = .AA) -> Color? {
         guard let rgbaTextColor = textColor.rgbaColor else { return nil }
 
         for backgroundColor in colors {
@@ -130,19 +140,4 @@ extension UIColor {
 
         return nil
     }
-
-    var rgbaColor: RGBAColor? {
-        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, white: CGFloat = 0, alpha: CGFloat = 0
-
-        if self.getRed(&red, green: &green, blue: &blue, alpha: &alpha) {
-            return RGBAColor(red: red, green: green, blue: blue, alpha: alpha)
-        } else if self.getWhite(&white, alpha: &alpha) {
-            return RGBAColor(red: white, green: white, blue: white, alpha: alpha)
-        } else {
-            Logger.warning("Input color not compatible with sRGB color space.")
-            return nil
-        }
-    }
 }
-
-#endif
