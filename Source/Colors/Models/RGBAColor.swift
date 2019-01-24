@@ -21,7 +21,7 @@ struct RGBAColor: Equatable {
             if colorComponent <= 0.03928 {
                 return (colorComponent / 255.0) / 12.92
             } else {
-                return pow((colorComponent/255.0 + 0.055) / 1.055, 2.4)
+                return pow((colorComponent + 0.055) / 1.055, 2.4)
             }
         }
 
