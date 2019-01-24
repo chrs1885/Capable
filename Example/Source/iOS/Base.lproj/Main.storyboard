@@ -17,7 +17,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ctr-aM-Raw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.56727635860000003" green="0.6872404218" blue="0.44701707359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="RMx-3f-FxP" kind="relationship" relationship="viewControllers" id="rnh-2Q-Jsh"/>
@@ -34,7 +34,7 @@
         <scene sceneID="emO-QR-pPh">
             <objects>
                 <navigationController id="Fnm-BP-Yi8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Handicaps" image="groups" id="7TC-ub-vJy"/>
+                    <tabBarItem key="tabBarItem" title="Handicaps" image="groups" landscapeImage="groups" largeContentSizeImage="groups" id="7TC-ub-vJy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="shf-Mg-sbE">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -96,7 +96,7 @@
         <scene sceneID="Jhm-3x-fLy">
             <objects>
                 <navigationController id="HB1-Mh-IyL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Colors" id="qXi-TX-3K3"/>
+                    <tabBarItem key="tabBarItem" title="Colors" image="colors" landscapeImage="colors" largeContentSizeImage="colors" id="qXi-TX-3K3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tBB-vX-MWY">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -118,7 +118,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="7eF-7G-SG7" detailTextLabel="S77-Xg-bFb" style="IBUITableViewCellStyleSubtitle" id="qo9-fk-1gr">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="7eF-7G-SG7" detailTextLabel="S77-Xg-bFb" style="IBUITableViewCellStyleSubtitle" id="qo9-fk-1gr">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qo9-fk-1gr" id="Zuo-gp-nGO">
@@ -379,8 +379,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="groups" width="30" height="30"/>
-        <image name="list" width="30" height="30"/>
-        <image name="pencil" width="30" height="30"/>
+        <image name="colors" width="25" height="25"/>
+        <image name="groups" width="25" height="25"/>
+        <image name="list" width="25" height="25"/>
+        <image name="pencil" width="25" height="25"/>
     </resources>
 </document>

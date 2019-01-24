@@ -9,11 +9,6 @@
 import UIKit
 
 class ConformanceLevelView: UIView {
-    struct Colors {
-        static let green = UIColor(red: 0.0, green: 135 / 255.0, blue: 0.0, alpha: 1.0)
-        static let red = UIColor(red: 220 / 255.0, green: 0.0, blue: 0.0, alpha: 1.0)
-    }
-
     private let textLabel = UILabel()
 
     var text: String = "" {
@@ -24,7 +19,7 @@ class ConformanceLevelView: UIView {
 
     var isPassing: Bool = false {
         didSet {
-            self.backgroundColor = isPassing ? Colors.green : Colors.red
+            self.backgroundColor = isPassing ? UIColor.capableGreen : UIColor.capableRed
             self.textLabel.textColor = UIColor.getTextColor(onBackgroundColor: self.backgroundColor!)!
         }
     }

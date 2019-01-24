@@ -29,7 +29,7 @@ class FontsController: UITableViewController {
         cell.textLabel?.numberOfLines = 0
         
         cell.detailTextLabel!.text = FontsConstants.fontsList[row].description
-        cell.detailTextLabel!.font = UIFont.preferredFont(forTextStyle: .caption1)
+        cell.detailTextLabel!.font = UIFont.systemFont(ofSize: 13.0)
             
         return cell
     }

@@ -34,6 +34,7 @@
                         </label>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="M7q-8I-6qP">
                             <rect key="frame" x="-2" y="117.5" width="276" height="31"/>
+                            <color key="tintColor" red="0.56727635860000003" green="0.6872404218" blue="0.44701707359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="sliderValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="pqG-6i-zJH"/>
                             </connections>
@@ -46,6 +47,7 @@
                         </label>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="swh-Ya-9tX">
                             <rect key="frame" x="-2" y="195" width="276" height="31"/>
+                            <color key="tintColor" red="0.56727635860000003" green="0.6872404218" blue="0.44701707359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="sliderValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="qvZ-tn-EYi"/>
                             </connections>
@@ -58,6 +60,7 @@
                         </label>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="SVI-OJ-tG8">
                             <rect key="frame" x="-2" y="272.5" width="276" height="31"/>
+                            <color key="tintColor" red="0.56727635860000003" green="0.6872404218" blue="0.44701707359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="sliderValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="xVS-pa-Z87"/>
                             </connections>
@@ -70,6 +73,7 @@
                         </label>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="vxT-PX-47x">
                             <rect key="frame" x="-2" y="350" width="276" height="31"/>
+                            <color key="tintColor" red="0.56727635860000003" green="0.6872404218" blue="0.44701707359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="sliderValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="6bm-6g-uCA"/>
                             </connections>

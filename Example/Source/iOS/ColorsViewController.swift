@@ -18,7 +18,7 @@ class ColorsViewController: UIViewController {
     @IBOutlet weak var aaLargeTextView: ConformanceLevelView!
     @IBOutlet weak var aaaLargeTextView: ConformanceLevelView!
 
-    var textColor: UIColor = .lightGray
+    var textColor: UIColor = .capableGreen
     var backgroundColor: UIColor = .black
     var contrastRatio: CGFloat?
 
