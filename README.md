@@ -19,7 +19,9 @@ Most of us did, however there has never been an easy way to tell if anyone benef
 
 What if there was a simple way to figure out if there's a real need to support accessibility right now. Or even better, which disability exists most across your user base.
 
-Check out the *Example.xcworkspace* to get a quick overview.
+Check out the *Example.xcworkspace* to get a quick overview:
+
+![Example project overview](./Documentation/Images/features_example_app.png)
 
 ## Features
 
