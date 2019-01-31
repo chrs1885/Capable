@@ -21,6 +21,12 @@
 		831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F6252078138E00F0C74D /* AppDelegate.swift */; };
 		831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
 		831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
+		831FE59521F650B50078F260 /* ColorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59421F650B50078F260 /* ColorAlertController.swift */; };
+		831FE59721F653780078F260 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59621F653780078F260 /* ColorsViewController.swift */; };
+		831FE59921F667EE0078F260 /* ConformanceLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59821F667EE0078F260 /* ConformanceLevelView.swift */; };
+		831FE59B21F67EC30078F260 /* ColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831FE59A21F67EC30078F260 /* ColorPickerView.xib */; };
+		831FE59D21F79FBA0078F260 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59C21F79FBA0078F260 /* ColorPickerView.swift */; };
+		831FE5A121FA60CD0078F260 /* Color+capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE5A021FA60CD0078F260 /* Color+capable.swift */; };
 		832953D721121EAA00072EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953D621121EAA00072EB9 /* AppDelegate.swift */; };
 		832953D921121EAA00072EB9 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953D821121EAA00072EB9 /* FeatureOverviewController.swift */; };
 		832953DE21121EAC00072EB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832953DC21121EAC00072EB9 /* Main.storyboard */; };
@@ -34,8 +40,14 @@
 		837C193020AA27970003D237 /* Example-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 837C191620AA27960003D237 /* Example-watchOS.app */; };
 		837C193920AA27F10003D237 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C193820AA27F10003D237 /* FeatureOverviewController.swift */; };
 		837C193B20AA2D960003D237 /* FeatureRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C193A20AA2D960003D237 /* FeatureRowController.swift */; };
-		837C193D20AA32710003D237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
-		83C6D6EF20F2AE6200D95E02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
+		83B255FA21FE07A4009116EC /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B255F921FE07A4009116EC /* ColorsViewController.swift */; };
+		83B255FB21FE0DC0009116EC /* ConformanceLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59821F667EE0078F260 /* ConformanceLevelView.swift */; };
+		83B255FD21FE0F56009116EC /* NSView+backgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B255FC21FE0F56009116EC /* NSView+backgroundColor.swift */; };
+		83B2560021FE11BE009116EC /* Color+capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE5A021FA60CD0078F260 /* Color+capable.swift */; };
+		83B256022203AD87009116EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
+		83B256032203AD88009116EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
+		83B256042203AD89009116EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
+		83B256052203AD95009116EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
 		83C6F62D2078138E00F0C74D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
 		83C6F62E2078138E00F0C74D /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
 		83C6F62F2078138E00F0C74D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F6252078138E00F0C74D /* AppDelegate.swift */; };
@@ -128,6 +140,12 @@
 		831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		831B4F1D20A4D4F200F1BB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		831B4F2120A4D4F200F1BB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		831FE59421F650B50078F260 /* ColorAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAlertController.swift; sourceTree = "<group>"; };
+		831FE59621F653780078F260 /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		831FE59821F667EE0078F260 /* ConformanceLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformanceLevelView.swift; sourceTree = "<group>"; };
+		831FE59A21F67EC30078F260 /* ColorPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPickerView.xib; sourceTree = "<group>"; };
+		831FE59C21F79FBA0078F260 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		831FE5A021FA60CD0078F260 /* Color+capable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+capable.swift"; sourceTree = "<group>"; };
 		832953D421121EAA00072EB9 /* Example-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		832953D621121EAA00072EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		832953D821121EAA00072EB9 /* FeatureOverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureOverviewController.swift; sourceTree = "<group>"; };
@@ -146,6 +164,8 @@
 		837C192D20AA27970003D237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		837C193820AA27F10003D237 /* FeatureOverviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureOverviewController.swift; sourceTree = "<group>"; };
 		837C193A20AA2D960003D237 /* FeatureRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureRowController.swift; sourceTree = "<group>"; };
+		83B255F921FE07A4009116EC /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		83B255FC21FE0F56009116EC /* NSView+backgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+backgroundColor.swift"; sourceTree = "<group>"; };
 		83C6F5DC20780FE700F0C74D /* Example-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C6F6212078138D00F0C74D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cardo-Regular.ttf"; sourceTree = "<group>"; };
@@ -219,9 +239,13 @@
 		831B4F2520A4D51D00F1BB94 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				831FE59421F650B50078F260 /* ColorAlertController.swift */,
+				831FE59621F653780078F260 /* ColorsViewController.swift */,
+				831FE59C21F79FBA0078F260 /* ColorPickerView.swift */,
+				831FE59A21F67EC30078F260 /* ColorPickerView.xib */,
 				83C6F62B2078138E00F0C74D /* FontsViewController.swift */,
-				83C6F6282078138E00F0C74D /* Main.storyboard */,
 				83C6F62C2078138E00F0C74D /* Info.plist */,
+				83C6F6282078138E00F0C74D /* Main.storyboard */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -239,13 +263,15 @@
 			isa = PBXGroup;
 			children = (
 				832953D621121EAA00072EB9 /* AppDelegate.swift */,
+				83B255F921FE07A4009116EC /* ColorsViewController.swift */,
+				832953E021121EAC00072EB9 /* Example_macOS.entitlements */,
 				832953D821121EAA00072EB9 /* FeatureOverviewController.swift */,
 				832953E42112496300072EB9 /* FeatureTableCellView.swift */,
 				83FF01FE2129FEAB00D26E0D /* HandicapTableCellView.swift */,
 				83FF01FC2129FE8D00D26E0D /* HandicapViewController.swift */,
-				832953DC21121EAC00072EB9 /* Main.storyboard */,
 				832953DF21121EAC00072EB9 /* Info.plist */,
-				832953E021121EAC00072EB9 /* Example_macOS.entitlements */,
+				832953DC21121EAC00072EB9 /* Main.storyboard */,
+				83B255FC21FE0F56009116EC /* NSView+backgroundColor.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -322,6 +348,8 @@
 			isa = PBXGroup;
 			children = (
 				83C6F6252078138E00F0C74D /* AppDelegate.swift */,
+				831FE5A021FA60CD0078F260 /* Color+capable.swift */,
+				831FE59821F667EE0078F260 /* ConformanceLevelView.swift */,
 				83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */,
 				4478927F210B4AEA000D5939 /* FontsConstants.swift */,
 				83FF01F92129FE6300D26E0D /* HandicapViewController.swift */,
@@ -532,7 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */,
-				83C6D6EF20F2AE6200D95E02 /* Assets.xcassets in Resources */,
+				83B256032203AD88009116EC /* Assets.xcassets in Resources */,
 				831B4F1E20A4D4F200F1BB94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,6 +569,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B256022203AD87009116EC /* Assets.xcassets in Resources */,
 				832953DE21121EAC00072EB9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,7 +578,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				837C193D20AA32710003D237 /* Assets.xcassets in Resources */,
+				83B256042203AD89009116EC /* Assets.xcassets in Resources */,
 				837C191A20AA27970003D237 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				837C192C20AA27970003D237 /* Assets.xcassets in Resources */,
+				83B256052203AD95009116EC /* Assets.xcassets in Resources */,
 				4478927E210B4401000D5939 /* Cardo-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +600,7 @@
 				83C6F6302078138E00F0C74D /* LaunchScreen.storyboard in Resources */,
 				83C6F62D2078138E00F0C74D /* Assets.xcassets in Resources */,
 				83C6F62E2078138E00F0C74D /* Cardo-Regular.ttf in Resources */,
+				831FE59B21F67EC30078F260 /* ColorPickerView.xib in Resources */,
 				83C6F6312078138E00F0C74D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,10 +791,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B255FB21FE0DC0009116EC /* ConformanceLevelView.swift in Sources */,
 				83FF01FF2129FEAB00D26E0D /* HandicapTableCellView.swift in Sources */,
 				832953E621124C9600072EB9 /* FeatureTableCellView.swift in Sources */,
+				83B2560021FE11BE009116EC /* Color+capable.swift in Sources */,
 				832953D921121EAA00072EB9 /* FeatureOverviewController.swift in Sources */,
 				83FF01FD2129FE8D00D26E0D /* HandicapViewController.swift in Sources */,
+				83B255FD21FE0F56009116EC /* NSView+backgroundColor.swift in Sources */,
+				83B255FA21FE07A4009116EC /* ColorsViewController.swift in Sources */,
 				832953D721121EAA00072EB9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -789,8 +824,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831FE59721F653780078F260 /* ColorsViewController.swift in Sources */,
 				83C6F62F2078138E00F0C74D /* AppDelegate.swift in Sources */,
+				831FE5A121FA60CD0078F260 /* Color+capable.swift in Sources */,
 				83C6F6332078138E00F0C74D /* FontsViewController.swift in Sources */,
+				831FE59921F667EE0078F260 /* ConformanceLevelView.swift in Sources */,
+				831FE59521F650B50078F260 /* ColorAlertController.swift in Sources */,
+				831FE59D21F79FBA0078F260 /* ColorPickerView.swift in Sources */,
 				83FF01FA2129FE6300D26E0D /* HandicapViewController.swift in Sources */,
 				44789280210B4AEA000D5939 /* FontsConstants.swift in Sources */,
 				83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */,

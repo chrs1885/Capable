@@ -1,6 +1,7 @@
 ## Version 0.9.0
 
 ### Features
+* [Add WCAG colors extension](https://github.com/chrs1885/Capable/issues/39)
 * [Add feature hearingDevice on iOS](https://github.com/chrs1885/Capable/issues/38)
 
 ### Enhancements

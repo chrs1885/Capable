@@ -34,6 +34,9 @@
                 <a href="Enums/CapableFeature.html">CapableFeature</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/ConformanceLevel.html">ConformanceLevel</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/HandicapEnabledMode.html">HandicapEnabledMode</a>
               </li>
             </ul>
@@ -41,6 +44,9 @@
           <li class="nav-group-name">
             <a href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Color.html">Color</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Extensions/Notification.html">Notification</a>
               </li>
@@ -66,6 +72,23 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/HandicapStatus.html">HandicapStatus</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/Color">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:7Capable5Colora">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/Font">Font</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:7Capable4Fonta">Font</a>
               </li>
             </ul>
           </li>
@@ -97,16 +120,32 @@
 
 <p>What if there was a simple way to figure out if there&rsquo;s a real need to support accessibility right now. Or even better, which disability exists most across your user base.</p>
 
-<p>Check out the <em>Example.xcworkspace</em> to get a quick overview.</p>
+<p>Check out the <em>Example.xcworkspace</em> to get a quick overview:</p>
+
+<p><img src="./Documentation/Images/features_example_app.png" alt="Example project overview"></p>
 <h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li>User research 
 
 <ul>
 <li><a href="#accessibility-status">Get the user&rsquo;s accessibility settings</a></li>
 <li><a href="#handicaps">Define handicaps by grouping accessibility features</a></li>
 <li><a href="#send-status">Send status with your favorite analytics SDK</a></li>
+</ul></li>
+<li>Improve critical screens
+
+<ul>
+<li><a href="#accessibility-status">Get status of accessibility feature</a></li>
 <li><a href="#notifications">Get notified about any changes</a></li>
+<li><a href="#colors">Calculate high contrast WCAG compliant colors</a></li>
 <li><a href="#dynamic-type">Use dynamic type with custom fonts</a></li>
-<li><a href="#logging">Logging with OSLog</a></li>
+</ul></li>
+<li>Fault diagnosis
+
+<ul>
+<li><a href="#logging">Custom logging with OSLog</a></li>
+</ul></li>
 </ul>
 <h2 id='installation' class='heading'>Installation</h2>
 
@@ -116,11 +155,14 @@
 
 <span class="n">target</span> <span class="s1">'MyApp'</span> <span class="k">do</span>
 
-  <span class="c1"># all features + font extensions</span>
+  <span class="c1"># all features + color and font extensions</span>
   <span class="n">pod</span> <span class="s1">'Capable'</span>
 
-  <span class="c1"># all features, but exclude font extensions</span>
+  <span class="c1"># all features, but exclude color and font extensions</span>
   <span class="n">pod</span> <span class="s1">'Capable/Features'</span>
+
+  <span class="c1"># color extensions only</span>
+  <span class="n">pod</span> <span class="s1">'Capable/Colors'</span>
 
   <span class="c1"># font extensions only</span>
   <span class="n">pod</span> <span class="s1">'Capable/Fonts'</span>
@@ -246,6 +288,91 @@
 
 <p>Please note that when using notifications with <code><a href="Structs/Handicap.html">Handicap</a></code>s on macOS or watchOS, you might not get notified about all changes since <a href="#feature-overview">not all accessibility features do support notifications</a>, yet. </p>
 
+<p><a id="colors"></a> </p>
+<h3 id='high-contrast-colors-capable-uicolor-nscolor-extension' class='heading'>High contrast colors (Capable UIColor/NSColor extension)</h3>
+
+<p>The <em>Web Content Accessibility Guidelines</em> (WCAG) define minimum contrast ratios for a text and its background. The Capable framework extends <code>UIColor</code> and <code>NSColor</code> with functionality to use WCAG conformant colors within your apps to help people with visual disabilities to perceive content.</p>
+
+<p>Internally, the provided colors will be mapped to an equivalent of the sRGB color space. All functions will return <code>nil</code> and <a href="#logging">log warnings</a> with further info in case any input color couldn&rsquo;t be converted. Also note that semi-transparent text colors will be blended with its background color. However, the alpha value of semi-transparent background colors will be ignored since the underlying color can&rsquo;t be determined.</p>
+<h4 id='text-colors' class='heading'>Text colors</h4>
+
+<p>Get a high contrast text color for a given background color as follows:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">textColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">getTextColor</span><span class="p">(</span><span class="nv">onBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">red</span><span class="p">)</span><span class="o">!</span>
+</code></pre>
+
+<p>This will return the text color with the highest possible contrast (black/white). Alternatively, you can define a list of possible text colors. Since the WCAG requirements for contrast differ in text size and weight, you also need to provide the font used for the text. The following will return the first text color that satisfies the required conformance level (<em>AA</em> by default).</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">textColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">getTextColor</span><span class="p">(</span>
+    <span class="nv">fromColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="o">.</span><span class="n">red</span><span class="p">,</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">yellow</span><span class="p">],</span>
+    <span class="nv">withFont</span><span class="p">:</span> <span class="n">myLabel</span><span class="o">.</span><span class="n">font</span><span class="p">,</span>
+    <span class="nv">onBackgroundColor</span><span class="p">:</span> <span class="n">view</span><span class="o">.</span><span class="n">backgroundColor</span><span class="p">,</span>
+    <span class="nv">conformanceLevel</span><span class="p">:</span> <span class="o">.</span><span class="kt">AA</span>
+<span class="p">)</span><span class="o">!</span>
+</code></pre>
+<h4 id='background-colors' class='heading'>Background colors</h4>
+
+<p>This will also work the other way round. If you are looking for a high contrast background color:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">backgroundColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">getBackgroundColor</span><span class="p">(</span><span class="nv">forTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">red</span><span class="p">)</span><span class="o">!</span>
+
+<span class="c1">// or</span>
+
+<span class="k">let</span> <span class="nv">backgroundColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">getBackgroundColor</span><span class="p">(</span>
+    <span class="nv">fromColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="o">.</span><span class="n">red</span><span class="p">,</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">yellow</span><span class="p">],</span>
+    <span class="nv">forTextColor</span><span class="p">:</span> <span class="n">myLabel</span><span class="o">.</span><span class="n">textColor</span><span class="p">,</span>
+    <span class="nv">withFont</span><span class="p">:</span> <span class="n">myLabel</span><span class="o">.</span><span class="n">font</span><span class="p">,</span>
+    <span class="nv">conformanceLevel</span><span class="p">:</span> <span class="o">.</span><span class="kt">AA</span>
+<span class="p">)</span><span class="o">!</span>
+</code></pre>
+<h4 id='calculating-contrast-ratios-amp-wcag-conformance-levels' class='heading'>Calculating contrast ratios &amp; WCAG conformance levels</h4>
+
+<p>The contrast ratio of two opaque colors can be calculated as well:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">contrastRatio</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">getContrastRatio</span><span class="p">(</span><span class="nv">forTextColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">red</span><span class="p">,</span> <span class="nv">onBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">yellow</span><span class="p">)</span><span class="o">!</span>
+</code></pre>
+
+<p>Once the contrast ratio has been determined, you can check the resulting conformance level specified by WCAG as follows:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">passedConformanceLevel</span> <span class="o">=</span> <span class="kt">ConformanceLevel</span><span class="p">(</span><span class="nv">contrastRatio</span><span class="p">:</span> <span class="n">contrastRatio</span><span class="p">,</span> <span class="nv">fontSize</span><span class="p">:</span> <span class="n">myLabel</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">pointSize</span><span class="p">,</span> <span class="nv">isBoldFont</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre>
+
+<p>Here&rsquo;s an overview of available conformance levels:</p>
+
+<table><thead>
+<tr>
+<th>Level</th>
+<th style="text-align: left">Contrast ratio</th>
+<th style="text-align: left">Font size</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>.A</td>
+<td style="text-align: left"><em>Not specified for text color</em></td>
+<td style="text-align: left">-</td>
+</tr>
+<tr>
+<td>.AA</td>
+<td style="text-align: left">3.0</td>
+<td style="text-align: left">18.0 (or 14.0 and bold)</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: left">4.5</td>
+<td style="text-align: left">14.0</td>
+</tr>
+<tr>
+<td>.AAA</td>
+<td style="text-align: left">4.5</td>
+<td style="text-align: left">18.0 (or 14.0 and bold)</td>
+</tr>
+<tr>
+<td>.AAA</td>
+<td style="text-align: left">7.0</td>
+<td style="text-align: left">14.0</td>
+</tr>
+<tr>
+<td>.failed</td>
+<td style="text-align: left"><em>.AA/.AAA not satisfied</em></td>
+<td style="text-align: left">-</td>
+</tr>
+</tbody></table>
+
 <p><a id="dynamic-type"></a> </p>
 <h3 id='dynamic-type-with-custom-fonts-capable-uifont-extension' class='heading'>Dynamic Type with custom fonts (Capable UIFont extension)</h3>
 
@@ -259,7 +386,7 @@
 <span class="n">myLabel</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="kt">UIFont</span><span class="o">.</span><span class="nf">scaledFont</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">myCustomFont</span><span class="p">)</span>
 
 <span class="c1">// or</span>
-<span class="n">myLabel</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="kt">UIFont</span><span class="o">.</span><span class="nf">scaledFont</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Custom Font Name"</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="n">defaultFontSize</span><span class="p">)</span>
+<span class="n">myLabel</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="kt">UIFont</span><span class="o">.</span><span class="nf">scaledFont</span><span class="p">(</span><span class="nv">withName</span><span class="p">:</span> <span class="s">"Custom Font Name"</span><span class="p">,</span> <span class="nv">ofSize</span><span class="p">:</span> <span class="n">defaultFontSize</span><span class="p">)</span>
 
 <span class="c1">// Scalable system font</span>
 <span class="n">myLabel</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="kt">UIFont</span><span class="o">.</span><span class="nf">scaledSystemFont</span><span class="p">(</span><span class="nv">ofSize</span><span class="p">:</span> <span class="n">defaultFontSize</span><span class="p">)</span>
@@ -528,7 +655,7 @@
 </ul>
 <h2 id='contributions' class='heading'>Contributions</h2>
 
-<p>We&rsquo;d love to see you contributing to this project by proposing or adding features, reporting bugs, or spreading the word. Please have a quick look at our <a href="./.github/CONTRIBUTING.md">contribution gudelines</a>.</p>
+<p>We&rsquo;d love to see you contributing to this project by proposing or adding features, reporting bugs, or spreading the word. Please have a quick look at our <a href="./.github/CONTRIBUTING.md">contribution guidelines</a>.</p>
 <h2 id='license' class='heading'>License</h2>
 
 <p>Capable is available under the MIT license. See the <a href="LICENSE">LICENSE</a> file for more info.</p>
@@ -536,8 +663,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/chrs1885" target="_blank" rel="external">Christoph Wendt</a>. All rights reserved. (Last updated: 2018-11-15)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/chrs1885" target="_blank" rel="external">Christoph Wendt</a>. All rights reserved. (Last updated: 2019-01-31)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
