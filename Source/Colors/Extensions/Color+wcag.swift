@@ -8,13 +8,21 @@
 #if os(iOS) || os(tvOS) || os(watchOS)
 
 import UIKit
+
+/// Typealias used for colors. It maps to UIColor.
 public typealias Color = UIColor
+
+/// Typealias used for fonts. It maps to UIFont.
 public typealias Font = UIFont
 
 #elseif os(OSX)
 
 import AppKit
+
+/// Typealias used for colors. It maps to NSColor.
 public typealias Color = NSColor
+
+/// Typealias used for fonts. It maps to NSFont.
 public typealias Font = NSFont
 
 #endif

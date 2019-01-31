@@ -252,7 +252,6 @@ let backgroundColor = UIColor.getBackgroundColor(
     withFont: myLabel.font,
     conformanceLevel: .AA
 )!
-
 ```
 
 #### Calculating contrast ratios & WCAG conformance levels
