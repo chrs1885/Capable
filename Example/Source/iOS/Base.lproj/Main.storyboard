@@ -368,9 +368,9 @@
                         <outlet property="aaSmallTextView" destination="WWn-61-eOg" id="KWw-QS-KUa"/>
                         <outlet property="aaaLargeTextView" destination="U4U-bT-4E4" id="4ay-v6-w6o"/>
                         <outlet property="aaaSmallTextView" destination="Cgf-f9-0ZC" id="tKu-Dy-5s8"/>
-                        <outlet property="backgroundColorButton" destination="dbS-IL-vWY" id="JUN-Ca-rJh"/>
+                        <outlet property="backgroundColorButton" destination="dbS-IL-vWY" id="LAB-59-96v"/>
                         <outlet property="contrastRatioLabel" destination="Iyo-PW-ctJ" id="qJN-YC-C4u"/>
-                        <outlet property="textColorButton" destination="4og-sr-P5E" id="srq-Zb-ZFU"/>
+                        <outlet property="textColorButton" destination="4og-sr-P5E" id="VlG-Wd-HmT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2de-tI-NNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
