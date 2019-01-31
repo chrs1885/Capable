@@ -40,12 +40,14 @@
 		837C193020AA27970003D237 /* Example-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 837C191620AA27960003D237 /* Example-watchOS.app */; };
 		837C193920AA27F10003D237 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C193820AA27F10003D237 /* FeatureOverviewController.swift */; };
 		837C193B20AA2D960003D237 /* FeatureRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C193A20AA2D960003D237 /* FeatureRowController.swift */; };
-		837C193D20AA32710003D237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
 		83B255FA21FE07A4009116EC /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B255F921FE07A4009116EC /* ColorsViewController.swift */; };
 		83B255FB21FE0DC0009116EC /* ConformanceLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59821F667EE0078F260 /* ConformanceLevelView.swift */; };
 		83B255FD21FE0F56009116EC /* NSView+backgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B255FC21FE0F56009116EC /* NSView+backgroundColor.swift */; };
 		83B2560021FE11BE009116EC /* Color+capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE5A021FA60CD0078F260 /* Color+capable.swift */; };
-		83C6D6EF20F2AE6200D95E02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
+		83B256022203AD87009116EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
+		83B256032203AD88009116EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
+		83B256042203AD89009116EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
+		83B256052203AD95009116EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
 		83C6F62D2078138E00F0C74D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
 		83C6F62E2078138E00F0C74D /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
 		83C6F62F2078138E00F0C74D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F6252078138E00F0C74D /* AppDelegate.swift */; };
@@ -558,7 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */,
-				83C6D6EF20F2AE6200D95E02 /* Assets.xcassets in Resources */,
+				83B256032203AD88009116EC /* Assets.xcassets in Resources */,
 				831B4F1E20A4D4F200F1BB94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,6 +569,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B256022203AD87009116EC /* Assets.xcassets in Resources */,
 				832953DE21121EAC00072EB9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,7 +578,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				837C193D20AA32710003D237 /* Assets.xcassets in Resources */,
+				83B256042203AD89009116EC /* Assets.xcassets in Resources */,
 				837C191A20AA27970003D237 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				837C192C20AA27970003D237 /* Assets.xcassets in Resources */,
+				83B256052203AD95009116EC /* Assets.xcassets in Resources */,
 				4478927E210B4401000D5939 /* Cardo-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
