@@ -19,15 +19,15 @@ struct RGBAColor: Equatable {
     var relativeLuminance: CGFloat {
         func getAdjustedColorComponent(_ colorComponent: CGFloat) -> CGFloat {
             if colorComponent <= 0.03928 {
-                return (colorComponent / 255.0) / 12.92
+                return colorComponent / 12.92
             } else {
                 return pow((colorComponent + 0.055) / 1.055, 2.4)
             }
         }
 
-        let adjustedRed = getAdjustedColorComponent(self.red)
-        let adjustedGreen = getAdjustedColorComponent(self.green)
-        let adjustedBlue = getAdjustedColorComponent(self.blue)
+        let adjustedRed = getAdjustedColorComponent(self.red / 255.0)
+        let adjustedGreen = getAdjustedColorComponent(self.green / 255.0)
+        let adjustedBlue = getAdjustedColorComponent(self.blue / 255.0)
 
         return (0.2126 * adjustedRed) + (0.7152 * adjustedGreen) + (0.0722 * adjustedBlue)
     }
@@ -77,8 +77,7 @@ extension RGBAColor {
 
 // MARK: - Color operations
 extension RGBAColor {
-    func blended(withFraction fraction: CGFloat,
-                 ofColor color: RGBAColor) -> RGBAColor {
+    func blended(withFraction fraction: CGFloat, ofColor color: RGBAColor) -> RGBAColor {
         func getBlendedColorComponent(aColorComponent: CGFloat, fraction: CGFloat, otherColorComponent: CGFloat) -> CGFloat {
             let blendedComponent = fraction * aColorComponent + (1 - fraction) * otherColorComponent
             return blendedComponent

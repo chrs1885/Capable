@@ -12,14 +12,13 @@ public typealias Color = UIColor
 public typealias Font = UIFont
 
 struct Colors {
-    static let white = UIColor(red: 255.0, green: 255.0, blue: 255.0, alpha: 1.0)
-    static let black = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
-    static let colorWithContrastRatio3 = UIColor(red: 148.0, green: 148.0, blue: 148.0, alpha: 1.0)
-    static let colorWithContrastRatio4_5 = UIColor(red: 118.0, green: 118.0, blue: 118.0, alpha: 1.0)
-    static let colorWithContrastRatio7 = UIColor(red: 89.0, green: 89.0, blue: 89.0, alpha: 1.0)
-    static let semiTransparentColor = UIColor(red: 127.5, green: 0.0, blue: 255.0, alpha: 0.75)
-    static let grayscaleColor = UIColor.white
-    static let p3Color = UIColor(displayP3Red: 310.0, green: -255.0, blue: 127.5, alpha: 1.0)
+    static let white = UIColor(white: 1.0, alpha: 1.0)
+    static let black = UIColor(white: 0.0, alpha: 1.0)
+    static let colorWithContrastRatio3 = UIColor(red: 148/255.0, green: 148/255.0, blue: 148/255.0, alpha: 1.0)
+    static let colorWithContrastRatio4_5 = UIColor(red: 118/255.0, green: 118/255.0, blue: 118/255.0, alpha: 1.0)
+    static let colorWithContrastRatio7 = UIColor(red: 89/255.0, green: 89/255.0, blue: 89/255.0, alpha: 1.0)
+    static let semiTransparentColor = UIColor(red: 0.5, green: 0.0, blue: 1.0, alpha: 0.75)
+    static let p3Color = UIColor(displayP3Red: 1.5, green: -1.5, blue: 0.5, alpha: 1.0)
 }
 
 #elseif os(OSX)
@@ -29,13 +28,12 @@ public typealias Color = NSColor
 public typealias Font = NSFont
 
 struct Colors {
-    static let white = NSColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-    static let black = NSColor(deviceRed: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+    static let white = NSColor(white: 1.0, alpha: 1.0)
+    static let black = NSColor(white: 0.0, alpha: 1.0)
     static let colorWithContrastRatio3 = NSColor(deviceRed: 148/255.0, green: 148/255.0, blue: 148/255.0, alpha: 1.0)
     static let colorWithContrastRatio4_5 = NSColor(deviceRed: 118/255.0, green: 118/255.0, blue: 118/255.0, alpha: 1.0)
     static let colorWithContrastRatio7 = NSColor(deviceRed: 89/255.0, green: 89/255.0, blue: 89/255.0, alpha: 1.0)
     static let semiTransparentColor = NSColor(deviceRed: 0.5, green: 0.0, blue: 1.0, alpha: 0.75)
-    static let grayscaleColor = NSColor.white
     static let cmykColor = NSColor(deviceCyan: 1.0, magenta: 0.0, yellow: 0.0, black: 0.0, alpha: 1.0)
     static let p3Color = NSColor(displayP3Red: 2.0, green: -1.0, blue: 0.5, alpha: 1.0)
 }
@@ -80,23 +78,23 @@ class ColorWcagTests: QuickSpec {
 
                 context("when color space is Grayscale") {
                     it("uses white value for each color component") {
-                        let color = Colors.grayscaleColor.rgbaColor!
+                        let color = Colors.white.rgbaColor!
 
                         #if os(iOS) || os(tvOS) || os(watchOS)
 
                         var whiteComponent: CGFloat = 0, alphaComponent: CGFloat = 0
-                        Colors.grayscaleColor.getWhite(&whiteComponent, alpha: &alphaComponent)
+                        Colors.white.getWhite(&whiteComponent, alpha: &alphaComponent)
 
                         #elseif os(OSX)
 
-                        let whiteComponent = Colors.grayscaleColor.whiteComponent*255.0
-                        let alphaComponent = Colors.grayscaleColor.alphaComponent
+                        let whiteComponent = Colors.white.whiteComponent
+                        let alphaComponent = Colors.white.alphaComponent
 
                         #endif
 
-                        expect(color.red).to(equal(whiteComponent))
-                        expect(color.green).to(equal(whiteComponent))
-                        expect(color.blue).to(equal(whiteComponent))
+                        expect(color.red).to(equal(whiteComponent * 255.0))
+                        expect(color.green).to(equal(whiteComponent * 255.0))
+                        expect(color.blue).to(equal(whiteComponent * 255.0))
                         expect(color.alpha).to(equal(alphaComponent))
                     }
                 }
