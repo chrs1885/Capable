@@ -204,7 +204,7 @@
 		44AD88B9220482AF00266F4A /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				83648E9D218A36560095D208 /* Logger.swift */,
+				44AD88BB220487CD00266F4A /* Logger */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -215,6 +215,15 @@
 				833CE9AB2196261200D741DE /* LoggerTests.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		44AD88BB220487CD00266F4A /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				83648E9D218A36560095D208 /* Logger.swift */,
+				833CE9A92194CCF400D741DE /* OSLogType+greaterEqual.swift */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 		44FE2E3721147F7A00029869 /* Protocols */ = {
@@ -464,7 +473,6 @@
 				83D2A46820F006000032054C /* CGFloat+contentSizeString.swift */,
 				83C6A352219E0FF200BB039D /* HearingDeviceEar+stringValue.swift */,
 				833DB9BE206C164B00C8DA02 /* Notification+Name.swift */,
-				833CE9A92194CCF400D741DE /* OSLogType+greaterEqual.swift */,
 				83C6A350219E08DB00BB039D /* String+isDefaultContentSize.swift */,
 				83DB72452069891200384B3F /* UIContentSizeCategory+values.swift */,
 			);
