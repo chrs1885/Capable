@@ -415,6 +415,7 @@ While most features can only have a `statusMap` value set to **enabled** or **di
 * [Apple - WWDC Session Videos](https://developer.apple.com/videos/frameworks/accessibility/
 )
 * [Apple - Accessibility for Developers](https://developer.apple.com/accessibility/)
+* [WCAG - Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Contributions
 
