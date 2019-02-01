@@ -46,7 +46,7 @@ extension UIFont {
      Creates a scalable system font with a given reference font size.
 
      - Parameters:
-     - fontSize: The reference font size to use.
+        - fontSize: The reference font size to use.
 
      - Returns: A scalable font object.
      */
@@ -59,7 +59,7 @@ extension UIFont {
      Creates a scalable bold system font with a given reference font size.
 
      - Parameters:
-     - fontSize: The reference font size to use.
+        - fontSize: The reference font size to use.
 
      - Returns: A scalable font object.
      */
@@ -72,7 +72,7 @@ extension UIFont {
      Creates a scalable italic system font with a given reference font size.
 
      - Parameters:
-     - fontSize: The reference font size to use.
+        - fontSize: The reference font size to use.
 
      - Returns: A scalable font object.
      */

@@ -201,6 +201,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44AD88B9220482AF00266F4A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				44AD88BB220487CD00266F4A /* Logger */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		44AD88BA220482D400266F4A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				833CE9AB2196261200D741DE /* LoggerTests.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		44AD88BB220487CD00266F4A /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				83648E9D218A36560095D208 /* Logger.swift */,
+				833CE9A92194CCF400D741DE /* OSLogType+greaterEqual.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
 		44FE2E3721147F7A00029869 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +248,6 @@
 				834C72332131F55100DCEBDC /* HandicapNotificationsTests.swift */,
 				8323D8E72167C2550015F8A3 /* HandicapStatusesTests.swift */,
 				83648E962187BD000095D208 /* HandicapTests.swift */,
-				833CE9AB2196261200D741DE /* LoggerTests.swift */,
 				83DC7B5F2149BB4800AF12A7 /* NotificationsTests.swift */,
 			);
 			path = Features;
@@ -297,14 +321,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		837EE71220F1590500AC8A11 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				83648E9D218A36560095D208 /* Logger.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		8382A327206EC73400E264A3 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,7 +341,6 @@
 				833DB9C0206C187C00C8DA02 /* Models */,
 				8382A327206EC73400E264A3 /* Notifications */,
 				83B5FFE720653AC000E8E83F /* Statuses */,
-				837EE71220F1590500AC8A11 /* Utilities */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -421,6 +436,7 @@
 			isa = PBXGroup;
 			children = (
 				83DAF4B221A4A0F10076F542 /* Colors */,
+				44AD88B9220482AF00266F4A /* Common */,
 				83973AD6206FD1B80057CD4F /* Features */,
 				83973AD7206FD1E00057CD4F /* Fonts */,
 				83DA75EB2065167600303D8F /* Capable.h */,
@@ -433,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				83097DA321A9732500703F29 /* Colors */,
+				44AD88BA220482D400266F4A /* Common */,
 				44FE2E382114804600029869 /* Features */,
 				44FE2E392114807F00029869 /* Fonts */,
 				83DA75F82065167600303D8F /* Info.plist */,
@@ -456,7 +473,6 @@
 				83D2A46820F006000032054C /* CGFloat+contentSizeString.swift */,
 				83C6A352219E0FF200BB039D /* HearingDeviceEar+stringValue.swift */,
 				833DB9BE206C164B00C8DA02 /* Notification+Name.swift */,
-				833CE9A92194CCF400D741DE /* OSLogType+greaterEqual.swift */,
 				83C6A350219E08DB00BB039D /* String+isDefaultContentSize.swift */,
 				83DB72452069891200384B3F /* UIContentSizeCategory+values.swift */,
 			);
