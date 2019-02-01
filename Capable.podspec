@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Capable'
-  s.version = '0.8.0'
+  s.version = '0.9.0'
   s.summary = 'Keep track of accessibility settings and enable users with disabilities to use your iOS, tvOS, and watchOS app.'
  
   s.description = <<-DESC
@@ -11,7 +11,7 @@ Capable lets you easily keep track of accessibility settings used by your app us
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.author = { 'Christoph Wendt' => 'christoph.wendt@me.com' }
   s.source = { :git => 'https://github.com/chrs1885/Capable.git', :tag => s.version }
-  s.documentation_url = 'http://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/0.8.0/Documentation/index.html'
+  s.documentation_url = 'http://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/0.9.0/Documentation/index.html'
   s.swift_version = '4.2'
 
   s.framework = 'Foundation'
