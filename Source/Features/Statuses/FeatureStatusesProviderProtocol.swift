@@ -15,6 +15,7 @@ protocol FeatureStatusesProviderProtocol {
     var isAssistiveTouchEnabled: Bool { get }
     var isDarkerSystemColorsEnabled: Bool { get }
     var isGuidedAccessEnabled: Bool { get }
+    var hearingDevicePairedEar: UIAccessibility.HearingDeviceEar { get }
     var largerTextCatagory: UIContentSizeCategory { get }
     var isShakeToUndoEnabled: Bool { get }
     var isSpeakScreenEnabled: Bool { get }

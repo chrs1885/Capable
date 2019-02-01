@@ -30,6 +30,7 @@ class HandicapStatuses: HandicapStatusesProtocol {
 
         for feature in handicap.features {
             let isFeatureEnabled = self.featureStatusesProvider.isFeatureEnabled(feature: feature)
+
             if isFeatureEnabled, handicap.enabledIf == .oneFeatureEnabled {
                 return true
             } else if !isFeatureEnabled, handicap.enabledIf == .allFeaturesEnabled {

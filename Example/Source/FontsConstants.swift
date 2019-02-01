@@ -10,7 +10,7 @@ import UIKit
 
 struct FontsConstants {
     static let customFontName: String = "Cardo-Regular"
-    static let defaultFontSize: CGFloat = UIFont.preferredFont(forTextStyle: .body).pointSize
+    static let defaultFontSize: CGFloat = 17.0
     static let defaultText = "This is a sample text"
     static let fontsList: [(font: UIFont, description: String)] = [
         (

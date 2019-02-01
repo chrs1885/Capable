@@ -137,6 +137,17 @@ class FeatureNotificationsTests: QuickSpec {
                     }
                 }
 
+                context("when HearingDevice was activated by the user") {
+                    beforeEach {
+                        featureStatusesProviderMock!.hearingDeviceEar = .both
+                        sut!.hearingDeviceStatusChanged()
+                    }
+
+                    it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
+                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .hearingDevice, statusString: "both")
+                    }
+                }
+
                 context("when LargerText was activated by the user") {
                     var testContentSizeCategory: UIContentSizeCategory?
 

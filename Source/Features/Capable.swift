@@ -32,7 +32,7 @@ public struct Capable {
      Initializes the framework instance with a set of `Handicap`s.
 
      - Parameters:
-     - handicaps: An optional array containing the `Handicaps`s specified by the caller.
+        - handicaps: An optional array containing the `Handicaps`s specified by the caller.
      */
     public init(withHandicaps handicaps: [Handicap]) {
         let featureStatusesProvider = FeatureStatusesProvider()
@@ -87,7 +87,7 @@ extension Capable {
      Provides information regarding the current status of a provided `Handicap`.
 
      - Parameters:
-     - handicapName: The name of the requested of `Handicap`.
+        - handicapName: The name of the requested of `Handicap`.
 
      - Returns: `true` if the given feature has been enabled, otherwise `false`. Note that the status depends on the `Handicap`'s `enabledIf` value (see `HandicapEnabledMode`).
      */
@@ -117,8 +117,8 @@ extension Capable {
      A custom closure that should be used by the logger for all Capable instances instead of the default os_log implementation.
 
      - Parameters:
-     - message: The message string that is about to be logged.
-     - logType: The 'OSLogType' of the message.
+         - message: The message string that is about to be logged.
+         - logType: The 'OSLogType' of the message.
      */
     public static  var onLog: (_ message: String, _ logType: OSLogType) -> Void {
         get {

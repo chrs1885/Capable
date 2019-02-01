@@ -35,6 +35,9 @@
                 <a href="../Enums/CapableFeature.html">CapableFeature</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/ConformanceLevel.html">ConformanceLevel</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/HandicapEnabledMode.html">HandicapEnabledMode</a>
               </li>
             </ul>
@@ -42,6 +45,9 @@
           <li class="nav-group-name">
             <a href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Color.html">Color</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Notification.html">Notification</a>
               </li>
@@ -67,6 +73,23 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/HandicapStatus.html">HandicapStatus</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/Color">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:7Capable5Colora">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/Font">Font</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:7Capable4Fonta">Font</a>
               </li>
             </ul>
           </li>
@@ -149,10 +172,6 @@
                       <div class="abstract">
                         <p>Initializes the framework instance with a set of <code><a href="../Structs/Handicap.html">Handicap</a></code>s.</p>
 
-<ul>
-<li>handicaps: An optional array containing the <code>Handicaps</code>s specified by the caller.</li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -161,6 +180,25 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">withHandicaps</span> <span class="nv">handicaps</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Handicap.html">Handicap</a></span><span class="p">])</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handicaps</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An optional array containing the <code>Handicaps</code>s specified by the caller.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -269,10 +307,6 @@ While most entries can only have a status set to <strong>enabled</strong> or <st
                       <div class="abstract">
                         <p>Provides information regarding the current status of a provided <code><a href="../Structs/Handicap.html">Handicap</a></code>.</p>
 
-<ul>
-<li><p>handicapName: The name of the requested of <code><a href="../Structs/Handicap.html">Handicap</a></code>.</p></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -281,6 +315,25 @@ While most entries can only have a status set to <strong>enabled</strong> or <st
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isHandicapEnabled</span><span class="p">(</span><span class="nv">handicapName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handicapName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the requested of <code><a href="../Structs/Handicap.html">Handicap</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -342,11 +395,6 @@ While most entries can only have a status set to <strong>enabled</strong> or <st
                       <div class="abstract">
                         <p>A custom closure that should be used by the logger for all Capable instances instead of the default os_log implementation.</p>
 
-<ul>
-<li>message: The message string that is about to be logged.</li>
-<li>logType: The &lsquo;OSLogType&rsquo; of the message.</li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -356,6 +404,37 @@ While most entries can only have a status set to <strong>enabled</strong> or <st
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message string that is about to be logged.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>logType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The &lsquo;OSLogType&rsquo; of the message.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -364,7 +443,7 @@ While most entries can only have a status set to <strong>enabled</strong> or <st
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/chrs1885" target="_blank" rel="external">Christoph Wendt</a>. All rights reserved. (Last updated: 2018-11-12)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/chrs1885" target="_blank" rel="external">Christoph Wendt</a>. All rights reserved. (Last updated: 2019-02-01)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
