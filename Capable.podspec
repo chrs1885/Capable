@@ -13,7 +13,6 @@ Capable lets you easily keep track of accessibility settings used by your app us
   s.source = { :git => 'https://github.com/chrs1885/Capable.git', :tag => s.version }
   s.documentation_url = 'http://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/0.9.0/Documentation/index.html'
   s.swift_version = '4.2'
-  s.source_files = 'Source/Common/**/*.swift'
 
   s.framework = 'Foundation'
   s.ios.framework = s.tvos.framework = s.watchos.framework = 'UIKit'
@@ -27,14 +26,14 @@ Capable lets you easily keep track of accessibility settings used by your app us
     s.osx.framework = 'AppKit'
     s.osx.deployment_target = '10.12'
 
-    featuresSubspec.source_files = 'Source/Features/**/*.swift'
+    featuresSubspec.source_files = 'Source/Features/**/*.swift', 'Source/Common/**/*.swift'
   end
 
   s.subspec 'Colors' do |colorsSubspec|
     s.osx.framework = 'AppKit'
     s.osx.deployment_target = '10.12'
     
-    colorsSubspec.source_files = 'Source/Colors/**/*.swift'
+    colorsSubspec.source_files = 'Source/Colors/**/*.swift', 'Source/Common/**/*.swift'
   end
 
   s.subspec 'Fonts' do |fontsSubspec|
