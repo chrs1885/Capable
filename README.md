@@ -73,7 +73,7 @@ github "chrs1885/Capable"
 
 ```ruby
 dependencies: [
-    .package(url: "https://github.com/chrs1885/Capable.git", from: "0.9.0")
+    .package(url: "https://github.com/chrs1885/Capable.git", from: "1.0.0")
 ]
 ```
 
