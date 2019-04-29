@@ -21,11 +21,8 @@
 		831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F6252078138E00F0C74D /* AppDelegate.swift */; };
 		831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
 		831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
-		831FE59521F650B50078F260 /* ColorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59421F650B50078F260 /* ColorAlertController.swift */; };
 		831FE59721F653780078F260 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59621F653780078F260 /* ColorsViewController.swift */; };
 		831FE59921F667EE0078F260 /* ConformanceLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59821F667EE0078F260 /* ConformanceLevelView.swift */; };
-		831FE59B21F67EC30078F260 /* ColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831FE59A21F67EC30078F260 /* ColorPickerView.xib */; };
-		831FE59D21F79FBA0078F260 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59C21F79FBA0078F260 /* ColorPickerView.swift */; };
 		831FE5A121FA60CD0078F260 /* Color+capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE5A021FA60CD0078F260 /* Color+capable.swift */; };
 		832953D721121EAA00072EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953D621121EAA00072EB9 /* AppDelegate.swift */; };
 		832953D921121EAA00072EB9 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953D821121EAA00072EB9 /* FeatureOverviewController.swift */; };
@@ -140,11 +137,8 @@
 		831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		831B4F1D20A4D4F200F1BB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		831B4F2120A4D4F200F1BB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		831FE59421F650B50078F260 /* ColorAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAlertController.swift; sourceTree = "<group>"; };
 		831FE59621F653780078F260 /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
 		831FE59821F667EE0078F260 /* ConformanceLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformanceLevelView.swift; sourceTree = "<group>"; };
-		831FE59A21F67EC30078F260 /* ColorPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPickerView.xib; sourceTree = "<group>"; };
-		831FE59C21F79FBA0078F260 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		831FE5A021FA60CD0078F260 /* Color+capable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+capable.swift"; sourceTree = "<group>"; };
 		832953D421121EAA00072EB9 /* Example-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		832953D621121EAA00072EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -239,10 +233,7 @@
 		831B4F2520A4D51D00F1BB94 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				831FE59421F650B50078F260 /* ColorAlertController.swift */,
 				831FE59621F653780078F260 /* ColorsViewController.swift */,
-				831FE59C21F79FBA0078F260 /* ColorPickerView.swift */,
-				831FE59A21F67EC30078F260 /* ColorPickerView.xib */,
 				83C6F62B2078138E00F0C74D /* FontsViewController.swift */,
 				83C6F62C2078138E00F0C74D /* Info.plist */,
 				83C6F6282078138E00F0C74D /* Main.storyboard */,
@@ -600,7 +591,6 @@
 				83C6F6302078138E00F0C74D /* LaunchScreen.storyboard in Resources */,
 				83C6F62D2078138E00F0C74D /* Assets.xcassets in Resources */,
 				83C6F62E2078138E00F0C74D /* Cardo-Regular.ttf in Resources */,
-				831FE59B21F67EC30078F260 /* ColorPickerView.xib in Resources */,
 				83C6F6312078138E00F0C74D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,12 +607,14 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Example-iOS/Pods-Example-iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Capable-iOS/Capable.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SheetyColors/SheetyColors.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SheetyColors.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -829,8 +821,6 @@
 				831FE5A121FA60CD0078F260 /* Color+capable.swift in Sources */,
 				83C6F6332078138E00F0C74D /* FontsViewController.swift in Sources */,
 				831FE59921F667EE0078F260 /* ConformanceLevelView.swift in Sources */,
-				831FE59521F650B50078F260 /* ColorAlertController.swift in Sources */,
-				831FE59D21F79FBA0078F260 /* ColorPickerView.swift in Sources */,
 				83FF01FA2129FE6300D26E0D /* HandicapViewController.swift in Sources */,
 				44789280210B4AEA000D5939 /* FontsConstants.swift in Sources */,
 				83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */,
@@ -1100,7 +1090,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1154,7 +1144,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1172,7 +1162,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1190,7 +1180,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
