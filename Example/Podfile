@@ -6,10 +6,11 @@ def sharedPods
 end
 
 target 'Example-iOS' do
-  platform :ios, '10.0'
+  platform :ios, '11.0'
   use_frameworks!
 
   sharedPods
+  pod 'SheetyColors'
   pod 'AppCenter/Analytics'
   pod 'Fabric'
   pod 'Answers'

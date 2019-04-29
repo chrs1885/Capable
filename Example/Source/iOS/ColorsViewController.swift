@@ -8,6 +8,12 @@
 
 import UIKit
 import Capable
+import SheetyColors
+
+enum ColorType: String {
+    case textColor = "Text Color"
+    case backgroundColor = "Background Color"
+}
 
 class ColorsViewController: UIViewController {
     @IBOutlet weak var textColorButton: UIButton!
@@ -71,22 +77,28 @@ extension ColorsViewController {
         let button = sender as! UIButton
         let colorType: ColorType = button == self.textColorButton ? .textColor : .backgroundColor
         let color = colorType == .textColor ? self.textColor : self.backgroundColor
-        let selectionHandler: (UIColor) -> () = {
-            selectedColor in
-
+        let alphaEnabled = colorType == .textColor
+        
+        let config = SheetyColorsConfig(alphaEnabled: alphaEnabled, hapticFeedbackEnabled: true, initialColor: color, title: "Select a \(colorType.rawValue)", type: .rgb)
+        let sheetyColors = SheetyColorsController(withConfig: config)
+        let selectAction = UIAlertAction(title: "Save Color", style: .default, handler: { _ in
+            let selectedColor = sheetyColors.color
             if colorType == .textColor {
                 self.textColor = selectedColor
             } else {
                 self.backgroundColor = selectedColor
             }
-
+            
             self.contrastRatio = UIColor.getContrastRatio(forTextColor: self.textColor, onBackgroundColor: self.backgroundColor)!
             self.updateColorButton(button: button, withColor: selectedColor)
             self.updateContrastRatioLabel()
             self.updateConformanceLevelViews()
-        }
+        })
+        sheetyColors.addAction(selectAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        sheetyColors.addAction(cancelAction)
 
-        let colorAlert = ColorAlertController.create(withColorType: colorType, color: color, prefferedStyle: .actionSheet, selectionHandler: selectionHandler)
-        self.present(colorAlert, animated: true, completion: nil)
+        present(sheetyColors, animated: true, completion: nil)
     }
 }
