@@ -1,3 +1,8 @@
+## Version 1.0.0
+
+### Enhancements
+* Swift 5.0 and Xcode 10.2 support
+
 ## Version 0.9.0
 
 ### Features
