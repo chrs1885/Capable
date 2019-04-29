@@ -607,7 +607,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "for path in $FRAMEWORK_SEARCH_PATHS\ndo\nif [[ $path == *\"Carthage\"* ]];\nthen\n    export SCRIPT_INPUT_FILE_COUNT=2\n    export SCRIPT_INPUT_FILE_0=\"${path}/Quick.framework\"\n    export SCRIPT_INPUT_FILE_1=\"${path}/Nimble.framework\"\n    /usr/local/bin/carthage copy-frameworks\n    break\nfi\ndone";
+			shellScript = "for path in $FRAMEWORK_SEARCH_PATHS\ndo\nif [[ $path == *\"Carthage\"* ]];\nthen\n    export SCRIPT_INPUT_FILE_COUNT=2\n    export SCRIPT_INPUT_FILE_0=\"${path}/Quick.framework\"\n    export SCRIPT_INPUT_FILE_1=\"${path}/Nimble.framework\"\n    /usr/local/bin/carthage copy-frameworks\n    break\nfi\ndone\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
