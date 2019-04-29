@@ -41,11 +41,16 @@ class NotificationsTests: QuickSpec {
                     expect((sut!.systemNotificationCenter)).to(equal(systemNotificationCenterMock!))
                 }
 
+                #if os(iOS) || os(OSX)
+
                 context("when calling postNotification") {
                     it("throws an error") {
                         expect(sut!.postNotification(withFeature: .voiceOver, statusString: "enabled")).to(throwAssertion())
                     }
                 }
+
+                #endif
+
             }
         }
     }
