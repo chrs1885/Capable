@@ -4,13 +4,13 @@ PODS:
   - AppCenter/Analytics (1.14.0):
     - AppCenter/Core
   - AppCenter/Core (1.14.0)
-  - Capable (1.0.0):
-    - Capable/Colors (= 1.0.0)
-    - Capable/Features (= 1.0.0)
-    - Capable/Fonts (= 1.0.0)
-  - Capable/Colors (1.0.0)
-  - Capable/Features (1.0.0)
-  - Capable/Fonts (1.0.0)
+  - Capable (1.0.1):
+    - Capable/Colors (= 1.0.1)
+    - Capable/Features (= 1.0.1)
+    - Capable/Fonts (= 1.0.1)
+  - Capable/Colors (1.0.1)
+  - Capable/Features (1.0.1)
+  - Capable/Fonts (1.0.1)
   - Fabric (1.8.2)
   - Firebase/Core (6.1.0):
     - Firebase/CoreOnly
@@ -94,7 +94,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Answers: e7317ccd30e7bf55c3bacfe28adbe2304b082e49
   AppCenter: 02c5efe08d3bbab5421ae41d5f7aa7238906b817
-  Capable: 970f681dfdca226ad9b2dd9b7efd6a4b06f4b614
+  Capable: f102b9cb3167470fac31d07d175b95ecb4f9ca9a
   Fabric: d2b22f443ba195d8a7cc204da230977c72733b40
   Firebase: 8d77bb33624ae9b62d745d82ec023de5f70f7e4f
   FirebaseAnalytics: 629301c2b9925f3537d4093a17a72751ae5b7084
