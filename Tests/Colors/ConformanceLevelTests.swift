@@ -113,6 +113,32 @@ class ConformanceLevelTests: QuickSpec {
                 }
             }
 
+            context("when retrieving the text property value") {
+                context("for conformance level .A") {
+                    it("returns 'A'") {
+                        expect(ConformanceLevel.A.text).to(equal("A"))
+                    }
+                }
+
+                context("for conformance level .AA") {
+                    it("returns 'AA'") {
+                        expect(ConformanceLevel.AA.text).to(equal("AA"))
+                    }
+                }
+
+                context("for conformance level .AAA") {
+                    it("returns 'AAA'") {
+                        expect(ConformanceLevel.AAA.text).to(equal("AAA"))
+                    }
+                }
+
+                context("for conformance level .failed") {
+                    it("returns 'failed'") {
+                        expect(ConformanceLevel.failed.text).to(equal("failed"))
+                    }
+                }
+            }
+
             context("when comparing ConformanceLevel types by using >= operator") {
                 it("returns the correct result") {
                     expect(ConformanceLevel.AAA >= ConformanceLevel.AAA).to(beTrue())
