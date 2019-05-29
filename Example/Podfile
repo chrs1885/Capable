@@ -1,5 +1,5 @@
 def sharedPods
-  pod 'Capable', '~> 0.9.0'
+  pod 'Capable', path: '../'
 end
 
 target 'Example-iOS' do
@@ -8,7 +8,7 @@ target 'Example-iOS' do
 
   sharedPods
   pod 'SheetyColors'
-  pod 'AppCenter/Analytics'
+  pod 'AppCenter/Analytics', '1.14.0'
   pod 'Fabric'
   pod 'Answers'
   pod 'Firebase/Core'

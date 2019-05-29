@@ -12,6 +12,6 @@ struct FontProps: Equatable {
     var isBoldFont: Bool
 
     var isLargeText: Bool {
-        return self.fontSize >= 18.0 || (self.fontSize >= 14 && self.isBoldFont)
+        return self.fontSize >= 18.0 || (self.fontSize >= 14.0 && self.isBoldFont)
     }
 }

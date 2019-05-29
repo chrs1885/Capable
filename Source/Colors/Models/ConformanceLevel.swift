@@ -59,6 +59,20 @@ extension ConformanceLevel {
         self = value
     }
 
+    /// The text representation of the conformance level.
+    public var text: String {
+        switch self {
+        case .A:
+            return "A"
+        case .AA:
+            return "AA"
+        case .AAA:
+            return "AAA"
+        case .failed:
+            return "failed"
+        }
+    }
+
     static func >= (lhs: ConformanceLevel, rhs: ConformanceLevel) -> Bool {
         return lhs.rawValue >= rhs.rawValue
     }
