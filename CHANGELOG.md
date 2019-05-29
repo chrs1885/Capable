@@ -3,6 +3,9 @@
 ### Enhancements
 * Add text-property to `ConformanceLevel`
 
+### Bugfixes
+* Fix bug when using Capable 1.0.0 along with SheetyColors 0.3.0
+
 ## Version 1.0.0
 
 ### Enhancements
