@@ -26,6 +26,8 @@ protocol FeatureStatusesProviderProtocol {
     var isClosedCaptioningEnabled: Bool { get }
     var isGrayscaleEnabled: Bool { get }
     var isMonoAudioEnabled: Bool { get }
+    var isOnOffSwitchLabelsEnabled: Bool { get }
+    var isVideoAutoplayEnabled: Bool { get }
     #endif
 
     #if os(iOS) || os(tvOS) || os(watchOS)
@@ -33,13 +35,13 @@ protocol FeatureStatusesProviderProtocol {
     #endif
 
     #if os(iOS) || os(tvOS) || os(OSX)
+    var isDifferentiateWithoutColorEnabled: Bool { get }
     var isInvertColorsEnabled: Bool { get }
     var isReduceTransparencyEnabled: Bool { get }
     var isSwitchControlEnabled: Bool { get }
     #endif
 
     #if os(OSX)
-    var isDifferentiateWithoutColorEnabled: Bool { get }
     var isFullKeyboardAccessEnabled: Bool { get }
     var isIncreaseContrastEnabled: Bool { get }
     #endif

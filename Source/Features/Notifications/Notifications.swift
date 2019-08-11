@@ -98,6 +98,11 @@ extension Notifications {
         if features.contains(.closedCaptioning) {
             addObserver(forNotification: UIAccessibility.closedCaptioningStatusDidChangeNotification, selector: #selector(self.closedCaptioningStatusChanged))
         }
+        if features.contains(.differentiateWithoutColor) {
+            if #available(iOS 13.0, tvOS 13.0, *) {
+                addObserver(forNotification: NSNotification.Name(rawValue: UIAccessibility.differentiateWithoutColorDidChangeNotification), selector: #selector(self.differentiateWithoutColorStatusChanged))
+            }
+        }
         if features.contains(.grayscale) {
             addObserver(forNotification: UIAccessibility.grayscaleStatusDidChangeNotification, selector: #selector(self.grayscaleStatusChanged))
         }
@@ -107,6 +112,11 @@ extension Notifications {
         if features.contains(.monoAudio) {
             addObserver(forNotification: UIAccessibility.monoAudioStatusDidChangeNotification, selector: #selector(self.monoAudioStatusChanged))
         }
+        if features.contains(.onOffSwitchLabels) {
+            if #available(iOS 13.0, tvOS 13.0, *) {
+                addObserver(forNotification: UIAccessibility.onOffSwitchLabelsDidChangeNotification, selector: #selector(self.onOffSwitchLabelsStatusChanged))
+            }
+        }
         if features.contains(.switchControl) {
             addObserver(forNotification: UIAccessibility.switchControlStatusDidChangeNotification, selector: #selector(self.switchControlStatusChanged))
         }
@@ -115,6 +125,11 @@ extension Notifications {
         }
         if features.contains(.reduceTransparency) {
             addObserver(forNotification: UIAccessibility.reduceTransparencyStatusDidChangeNotification, selector: #selector(self.reduceTransparencyStatusChanged))
+        }
+        if features.contains(.videoAutoplay) {
+            if #available(iOS 13.0, tvOS 13.0, *) {
+                addObserver(forNotification: UIAccessibility.videoAutoplayStatusDidChangeNotification, selector: #selector(self.videoAutoplayStatusChanged))
+            }
         }
         if features.contains(.voiceOver) {
             if #available(iOS 11.0, tvOS 11.0, *) {
@@ -232,6 +247,10 @@ extension Notifications {
     @objc func closedCaptioningStatusChanged() {
         self.postNotification(withFeature: .closedCaptioning, statusString: self.featureStatusesProvider.isClosedCaptioningEnabled.statusString)
     }
+    
+    @objc func differentiateWithoutColorStatusChanged() {
+        self.postNotification(withFeature: .differentiateWithoutColor, statusString: self.featureStatusesProvider.isDifferentiateWithoutColorEnabled.statusString)
+    }
 
     @objc func grayscaleStatusChanged() {
         self.postNotification(withFeature: .grayscale, statusString: self.featureStatusesProvider.isGrayscaleEnabled.statusString)
@@ -245,8 +264,16 @@ extension Notifications {
         self.postNotification(withFeature: .monoAudio, statusString: self.featureStatusesProvider.isMonoAudioEnabled.statusString)
     }
 
+    @objc func onOffSwitchLabelsStatusChanged() {
+        self.postNotification(withFeature: .onOffSwitchLabels, statusString: self.featureStatusesProvider.isOnOffSwitchLabelsEnabled.statusString)
+    }
+    
     @objc func reduceTransparencyStatusChanged() {
         self.postNotification(withFeature: .reduceTransparency, statusString: self.featureStatusesProvider.isReduceTransparencyEnabled.statusString)
+    }
+    
+    @objc func videoAutoplayStatusChanged() {
+        self.postNotification(withFeature: .videoAutoplay, statusString: self.featureStatusesProvider.isVideoAutoplayEnabled.statusString)
     }
 
     #endif

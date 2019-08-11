@@ -35,9 +35,6 @@ public enum CapableFeature: String, CaseIterable {
 
     #if os(OSX)
 
-    /// Helps color blind users to differentiate settings differently, e.g. by using shapes rather than colors.
-    case differentiateWithoutColor
-
     /// Enables users to navigate through items of the screen without having to use a mouse.
     case fullKeyboardAccess
 
@@ -56,6 +53,12 @@ public enum CapableFeature: String, CaseIterable {
 
     /// Merges stereo audio channels to help users that are hard of hearing or deaf in one ear.
     case monoAudio
+    
+    /// Displays on/off labels for UISwitch controls.
+    case onOffSwitchLabels
+    
+    /// Allows users who are sensitive to motion to disable automatic video playback.
+    case videoAutoplay
 
     #endif
 
@@ -68,6 +71,9 @@ public enum CapableFeature: String, CaseIterable {
 
     #if os(iOS) || os(tvOS) || os(OSX)
 
+    /// Helps color blind users to differentiate settings differently, e.g. by using shapes rather than colors.
+    case differentiateWithoutColor
+    
     /// Helps people with low vision, color blindness, or sensitivity to brightness to read the display content.
     case invertColors
 
