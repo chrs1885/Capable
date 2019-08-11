@@ -17,6 +17,7 @@ protocol FeatureStatusesProviderProtocol {
     var isGuidedAccessEnabled: Bool { get }
     var hearingDevicePairedEar: UIAccessibility.HearingDeviceEar { get }
     var largerTextCatagory: UIContentSizeCategory { get }
+    var isOnOffSwitchLabelsEnabled: Bool { get }
     var isShakeToUndoEnabled: Bool { get }
     var isSpeakScreenEnabled: Bool { get }
     var isSpeakSelectionEnabled: Bool { get }
@@ -26,7 +27,6 @@ protocol FeatureStatusesProviderProtocol {
     var isClosedCaptioningEnabled: Bool { get }
     var isGrayscaleEnabled: Bool { get }
     var isMonoAudioEnabled: Bool { get }
-    var isOnOffSwitchLabelsEnabled: Bool { get }
     var isVideoAutoplayEnabled: Bool { get }
     #endif
 

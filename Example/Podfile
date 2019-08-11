@@ -8,7 +8,7 @@ target 'Example-iOS' do
 
   sharedPods
   pod 'SheetyColors', '1.0.0'
-  pod 'AppCenter/Analytics', '1.14.0'
+  pod 'AppCenter/Analytics'
   pod 'Fabric'
   pod 'Answers'
   pod 'Firebase/Core'

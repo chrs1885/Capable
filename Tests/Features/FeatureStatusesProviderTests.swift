@@ -84,6 +84,16 @@ class FeatureStatusesProviderTests: QuickSpec {
                     }
                 }
 
+                context("for OnOffSwitchLabels") {
+                    beforeEach {
+                        sut!.onOffSwitchLabelsEnabled = true
+                    }
+
+                    it("returns correct state") {
+                        expect(sut!.isFeatureEnabled(feature: .onOffSwitchLabels)).to(beTrue())
+                    }
+                }
+
                 context("for ShakeToUndo") {
                     beforeEach {
                         sut!.shakeToUndoEnabled = true
@@ -179,16 +189,6 @@ class FeatureStatusesProviderTests: QuickSpec {
 
                     it("returns correct state") {
                         expect(sut!.isFeatureEnabled(feature: .monoAudio)).to(beTrue())
-                    }
-                }
-
-                context("for OnOffSwitchLabels") {
-                    beforeEach {
-                        sut!.onOffSwitchLabelsEnabled = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut!.isFeatureEnabled(feature: .onOffSwitchLabels)).to(beTrue())
                     }
                 }
 

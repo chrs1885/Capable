@@ -30,7 +30,7 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
     }
 
     var isDifferentiateWithoutColorEnabled: Bool {
-        if #available(iOS 13.0, tvOS 13.0, *) {
+        if #available(iOS 13.0, *) {
             return UIAccessibility.shouldDifferentiateWithoutColor
         } else {
             Logger.warning("Unable to determine status for isDifferentiateWithoutColorEnabled since it is only available on iOS 13 or later.")

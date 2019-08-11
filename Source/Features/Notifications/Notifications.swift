@@ -224,6 +224,10 @@ extension Notifications {
         self.postNotification(withFeature: .largerText, statusString: self.featureStatusesProvider.largerTextCatagory.stringValue)
     }
 
+    @objc func onOffSwitchLabelsStatusChanged() {
+        self.postNotification(withFeature: .onOffSwitchLabels, statusString: self.featureStatusesProvider.isOnOffSwitchLabelsEnabled.statusString)
+    }
+
     @objc func shakeToUndoStatusChanged() {
         self.postNotification(withFeature: .shakeToUndo, statusString: self.featureStatusesProvider.isShakeToUndoEnabled.statusString)
     }
@@ -262,10 +266,6 @@ extension Notifications {
 
     @objc func monoAudioStatusChanged() {
         self.postNotification(withFeature: .monoAudio, statusString: self.featureStatusesProvider.isMonoAudioEnabled.statusString)
-    }
-
-    @objc func onOffSwitchLabelsStatusChanged() {
-        self.postNotification(withFeature: .onOffSwitchLabels, statusString: self.featureStatusesProvider.isOnOffSwitchLabelsEnabled.statusString)
     }
 
     @objc func reduceTransparencyStatusChanged() {

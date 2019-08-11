@@ -355,7 +355,7 @@ The following table contains all features that are available AND settable on eac
 | .boldText                  | :white_check_mark: |                                | :white_check_mark: | &nbsp;:white_check_mark:**\*** |
 | .closedCaptioning          | :white_check_mark: |                                | :white_check_mark: |                                |
 | .darkerSystemColors        | :white_check_mark: |                                |                    |                                |
-| .differentiateWithoutColor | :white_check_mark: |                                | :white_check_mark: |                                |
+| .differentiateWithoutColor | :white_check_mark: | :white_check_mark:             |                    |                                |
 | .fullKeyboardAccess        |                    | &nbsp;:white_check_mark:**\*** |                    |                                |
 | .grayscale                 | :white_check_mark: |                                | :white_check_mark: |                                |
 | .guidedAccess              | :white_check_mark: |                                |                    |                                |
