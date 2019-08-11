@@ -62,7 +62,7 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
-  - SheetyColors (0.3.1):
+  - SheetyColors (1.0.0):
     - Capable/Colors (~> 1.0.0)
 
 DEPENDENCIES:
@@ -71,7 +71,7 @@ DEPENDENCIES:
   - Capable (from `../`)
   - Fabric
   - Firebase/Core
-  - SheetyColors
+  - SheetyColors (= 1.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -94,7 +94,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Answers: e7317ccd30e7bf55c3bacfe28adbe2304b082e49
   AppCenter: 02c5efe08d3bbab5421ae41d5f7aa7238906b817
-  Capable: f102b9cb3167470fac31d07d175b95ecb4f9ca9a
+  Capable: 49d8637d06ee50dac258757071ea27cbce0e1bf6
   Fabric: d2b22f443ba195d8a7cc204da230977c72733b40
   Firebase: 8d77bb33624ae9b62d745d82ec023de5f70f7e4f
   FirebaseAnalytics: 629301c2b9925f3537d4093a17a72751ae5b7084
@@ -103,8 +103,8 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 51d8d9ea48f0ca44484d29cfbdef976fbd4fc336
   GoogleUtilities: 996e0db07153674fd1b54b220fda3a3dc3547cba
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
-  SheetyColors: 71fc251618928f399503138093229e3ea700b35f
+  SheetyColors: dbf4b6b427d10f0316a2237b8a00cd8d576466dd
 
-PODFILE CHECKSUM: b6b60cbce08e7b88bb2acc2c5dee948795b58baf
+PODFILE CHECKSUM: 5dbd3f14150c8d61f0a07bd9d65f8e2e2ba37daf
 
-COCOAPODS: 1.6.0.rc.2
+COCOAPODS: 1.7.5

@@ -7,7 +7,7 @@ target 'Example-iOS' do
   use_frameworks!
 
   sharedPods
-  pod 'SheetyColors'
+  pod 'SheetyColors', '1.0.0'
   pod 'AppCenter/Analytics', '1.14.0'
   pod 'Fabric'
   pod 'Answers'
