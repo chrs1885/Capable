@@ -30,12 +30,15 @@ protocol FeatureStatusesProviderProtocol {
     var isVideoAutoplayEnabled: Bool { get }
     #endif
 
+    #if os(iOS) || os(OSX)
+    var isDifferentiateWithoutColorEnabled: Bool { get }
+    #endif
+
     #if os(iOS) || os(tvOS) || os(watchOS)
     var isBoldTextEnabled: Bool { get }
     #endif
 
     #if os(iOS) || os(tvOS) || os(OSX)
-    var isDifferentiateWithoutColorEnabled: Bool { get }
     var isInvertColorsEnabled: Bool { get }
     var isReduceTransparencyEnabled: Bool { get }
     var isSwitchControlEnabled: Bool { get }

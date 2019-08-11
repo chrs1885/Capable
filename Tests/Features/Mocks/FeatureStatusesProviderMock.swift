@@ -41,7 +41,10 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
     var videoAutoplayEnabled = false
     #endif
 
+    #if os(iOS) || os(OSX)
     var differentiateWithoutColor = false
+    #endif
+
     var invertColorsEnabled = false
     var reduceMotionEnabled = false
     var reduceTransparencyEnabled = false
@@ -113,11 +116,11 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
     override var isMonoAudioEnabled: Bool {
         return self.monoAudioEnabled
     }
-    
+
     override var isOnOffSwitchLabelsEnabled: Bool {
         return self.onOffSwitchLabelsEnabled
     }
-    
+
     override var isVideoAutoplayEnabled: Bool {
         return self.videoAutoplayEnabled
     }
@@ -127,7 +130,7 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
     override var isDifferentiateWithoutColorEnabled: Bool {
         return self.differentiateWithoutColor
     }
-    
+
     override var isInvertColorsEnabled: Bool {
         return self.invertColorsEnabled
     }

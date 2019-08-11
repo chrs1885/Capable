@@ -181,7 +181,7 @@ class FeatureStatusesProviderTests: QuickSpec {
                         expect(sut!.isFeatureEnabled(feature: .monoAudio)).to(beTrue())
                     }
                 }
-                
+
                 context("for OnOffSwitchLabels") {
                     beforeEach {
                         sut!.onOffSwitchLabelsEnabled = true
@@ -191,7 +191,7 @@ class FeatureStatusesProviderTests: QuickSpec {
                         expect(sut!.isFeatureEnabled(feature: .onOffSwitchLabels)).to(beTrue())
                     }
                 }
-                
+
                 context("for VideoAutoplay") {
                     beforeEach {
                         sut!.videoAutoplayEnabled = true
@@ -204,6 +204,8 @@ class FeatureStatusesProviderTests: QuickSpec {
 
                 #endif
 
+                #if os(iOS) || os(OSX)
+
                 context("for DifferentiateWithoutColor") {
                     beforeEach {
                         sut!.differentiateWithoutColor = true
@@ -213,7 +215,9 @@ class FeatureStatusesProviderTests: QuickSpec {
                         expect(sut!.isFeatureEnabled(feature: .differentiateWithoutColor)).to(beTrue())
                     }
                 }
-                
+
+                #endif
+
                 context("for ReduceMotion") {
                     beforeEach {
                         sut!.reduceMotionEnabled = true
