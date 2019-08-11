@@ -280,6 +280,17 @@ class FeatureNotificationsTests: QuickSpec {
                     }
                 }
 
+                context("when DifferentiateWithoutColor was activated by the user") {
+                    beforeEach {
+                        featureStatusesProviderMock!.differentiateWithoutColor = true
+                        sut!.differentiateWithoutColorStatusChanged()
+                    }
+
+                    it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
+                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .differentiateWithoutColor, statusString: "enabled")
+                    }
+                }
+                
                 context("when Grayscale was activated by the user") {
                     beforeEach {
                         featureStatusesProviderMock!.grayscaleEnabled = true
@@ -313,6 +324,17 @@ class FeatureNotificationsTests: QuickSpec {
                     }
                 }
 
+                context("when OnOffSwitchLabels was activated by the user") {
+                    beforeEach {
+                        featureStatusesProviderMock!.onOffSwitchLabelsEnabled = true
+                        sut!.onOffSwitchLabelsStatusChanged()
+                    }
+
+                    it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
+                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .videoAutoplay, statusString: "enabled")
+                    }
+                }
+                
                 context("when ReduceMotion was activated by the user") {
                     beforeEach {
                         featureStatusesProviderMock!.reduceMotionEnabled = true
@@ -332,6 +354,17 @@ class FeatureNotificationsTests: QuickSpec {
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
                         verifyFeatureDidChangeNotificationWasPosted(withFeature: .reduceTransparency, statusString: "enabled")
+                    }
+                }
+                
+                context("when VideoAutoplay was activated by the user") {
+                    beforeEach {
+                        featureStatusesProviderMock!.videoAutoplayEnabled = true
+                        sut!.videoAutoplayStatusChanged()
+                    }
+
+                    it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
+                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .videoAutoplay, statusString: "enabled")
                     }
                 }
 

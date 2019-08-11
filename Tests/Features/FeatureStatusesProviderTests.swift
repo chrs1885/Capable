@@ -118,16 +118,6 @@ class FeatureStatusesProviderTests: QuickSpec {
 
                 #if os(OSX)
 
-                context("for DifferentiateWithoutColor") {
-                    beforeEach {
-                        sut!.differentiateWithoutColor = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut!.isFeatureEnabled(feature: .differentiateWithoutColor)).to(beTrue())
-                    }
-                }
-
                 context("for FullKeyboardAccess") {
                     beforeEach {
                         sut!.fullKeyboardAccess = true
@@ -191,9 +181,39 @@ class FeatureStatusesProviderTests: QuickSpec {
                         expect(sut!.isFeatureEnabled(feature: .monoAudio)).to(beTrue())
                     }
                 }
+                
+                context("for OnOffSwitchLabels") {
+                    beforeEach {
+                        sut!.onOffSwitchLabelsEnabled = true
+                    }
+
+                    it("returns correct state") {
+                        expect(sut!.isFeatureEnabled(feature: .onOffSwitchLabels)).to(beTrue())
+                    }
+                }
+                
+                context("for VideoAutoplay") {
+                    beforeEach {
+                        sut!.videoAutoplayEnabled = true
+                    }
+
+                    it("returns correct state") {
+                        expect(sut!.isFeatureEnabled(feature: .videoAutoplay)).to(beTrue())
+                    }
+                }
 
                 #endif
 
+                context("for DifferentiateWithoutColor") {
+                    beforeEach {
+                        sut!.differentiateWithoutColor = true
+                    }
+
+                    it("returns correct state") {
+                        expect(sut!.isFeatureEnabled(feature: .differentiateWithoutColor)).to(beTrue())
+                    }
+                }
+                
                 context("for ReduceMotion") {
                     beforeEach {
                         sut!.reduceMotionEnabled = true

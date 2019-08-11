@@ -28,7 +28,6 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
     #endif
 
     #if os(OSX)
-    var differentiateWithoutColor = false
     var fullKeyboardAccess = false
     var increaseContrast = false
     #endif
@@ -38,8 +37,11 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
     var closedCaptioningEnabled = false
     var grayscaleEnabled = false
     var monoAudioEnabled = false
+    var onOffSwitchLabelsEnabled = false
+    var videoAutoplayEnabled = false
     #endif
 
+    var differentiateWithoutColor = false
     var invertColorsEnabled = false
     var reduceMotionEnabled = false
     var reduceTransparencyEnabled = false
@@ -84,10 +86,6 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
 
     #if os(OSX)
 
-    override var isDifferentiateWithoutColorEnabled: Bool {
-        return self.differentiateWithoutColor
-    }
-
     override var isFullKeyboardAccessEnabled: Bool {
         return self.fullKeyboardAccess
     }
@@ -115,9 +113,21 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
     override var isMonoAudioEnabled: Bool {
         return self.monoAudioEnabled
     }
+    
+    override var isOnOffSwitchLabelsEnabled: Bool {
+        return self.onOffSwitchLabelsEnabled
+    }
+    
+    override var isVideoAutoplayEnabled: Bool {
+        return self.videoAutoplayEnabled
+    }
 
     #endif
 
+    override var isDifferentiateWithoutColorEnabled: Bool {
+        return self.differentiateWithoutColor
+    }
+    
     override var isInvertColorsEnabled: Bool {
         return self.invertColorsEnabled
     }
@@ -155,7 +165,6 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
 
         #if os(OSX)
 
-        self.differentiateWithoutColor = true
         self.fullKeyboardAccess = true
         self.increaseContrast = true
 
@@ -167,9 +176,12 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
         self.closedCaptioningEnabled = true
         self.grayscaleEnabled = true
         self.monoAudioEnabled = true
+        self.onOffSwitchLabelsEnabled = true
+        self.videoAutoplayEnabled = true
 
         #endif
 
+        self.differentiateWithoutColor = true
         self.invertColorsEnabled = true
         self.reduceMotionEnabled = true
         self.reduceTransparencyEnabled = true
