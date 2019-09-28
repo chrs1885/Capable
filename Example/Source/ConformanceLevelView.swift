@@ -50,7 +50,8 @@ class ConformanceLevelView: View {
 
     func setupView() {
         self.addSubview(textLabel)
-        self.textLabel.font = Font.systemFont(ofSize: 13.0)
+        self.textLabel.font = Font.preferredFont(forTextStyle: .body)
+        self.textLabel.numberOfLines = 0
 
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         let views: [String: Any] = ["textLabel": self.textLabel]

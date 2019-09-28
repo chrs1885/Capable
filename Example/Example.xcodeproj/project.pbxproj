@@ -13,6 +13,7 @@
 		4478927E210B4401000D5939 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
 		44789280210B4AEA000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
 		44789281210B4AED000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
+		44D0B935233F833900A9B136 /* CaptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FD13172336CD3B001C6C7A /* CaptionsViewController.swift */; };
 		44FD13182336CD3B001C6C7A /* CaptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FD13172336CD3B001C6C7A /* CaptionsViewController.swift */; };
 		55A2015AF8E67D0BAC01DA73 /* Pods_Example_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A4614933CCE311EC4CAD3C /* Pods_Example_watchOS_Extension.framework */; };
 		6180FD25002FD5791E4E3C36 /* Pods_Example_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C8CF8E1603FFD70061B7CA /* Pods_Example_iOS.framework */; };
@@ -235,7 +236,6 @@
 		831B4F2520A4D51D00F1BB94 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				44FD13172336CD3B001C6C7A /* CaptionsViewController.swift */,
 				831FE59621F653780078F260 /* ColorsViewController.swift */,
 				83C6F62B2078138E00F0C74D /* FontsViewController.swift */,
 				83C6F62C2078138E00F0C74D /* Info.plist */,
@@ -342,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				83C6F6252078138E00F0C74D /* AppDelegate.swift */,
+				44FD13172336CD3B001C6C7A /* CaptionsViewController.swift */,
 				831FE5A021FA60CD0078F260 /* Color+capable.swift */,
 				831FE59821F667EE0078F260 /* ConformanceLevelView.swift */,
 				83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */,
@@ -779,6 +780,7 @@
 				831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */,
 				831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */,
 				83FF01FB2129FE6300D26E0D /* HandicapViewController.swift in Sources */,
+				44D0B935233F833900A9B136 /* CaptionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

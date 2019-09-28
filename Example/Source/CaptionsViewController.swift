@@ -11,7 +11,7 @@ import Capable
 
 class CaptionsViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var content: UIView!
     @IBOutlet weak var topLeftLabel: UILabel!
     @IBOutlet weak var topCenterLabel: UILabel!
     @IBOutlet weak var topRightLabel: UILabel!
@@ -25,7 +25,7 @@ class CaptionsViewController: UIViewController {
     var isLoading: Bool = true {
         didSet {
             DispatchQueue.main.async {
-                self.scrollView.isHidden = self.isLoading
+                self.content.isHidden = self.isLoading
 
                 if self.isLoading {
                     self.activityIndicator.startAnimating()
