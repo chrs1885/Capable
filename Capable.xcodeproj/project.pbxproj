@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4404835E2168F1940051FCE7 /* FeatureStatusesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404835D2168F1940051FCE7 /* FeatureStatusesProviderTests.swift */; };
+		44478267233279EF00FB1B3B /* Image+averageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44478266233279EF00FB1B3B /* Image+averageColor.swift */; };
 		4447826B2332808400FB1B3B /* ImageArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447826A2332808400FB1B3B /* ImageArea.swift */; };
 		44580D11212605D500F9940A /* HandicapStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D10212605D500F9940A /* HandicapStatuses.swift */; };
 		44580D13212606BB00F9940A /* FeatureStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D12212606BB00F9940A /* FeatureStatuses.swift */; };
@@ -97,6 +98,7 @@
 
 /* Begin PBXFileReference section */
 		4404835D2168F1940051FCE7 /* FeatureStatusesProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProviderTests.swift; sourceTree = "<group>"; };
+		44478266233279EF00FB1B3B /* Image+averageColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+averageColor.swift"; sourceTree = "<group>"; };
 		4447826A2332808400FB1B3B /* ImageArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageArea.swift; sourceTree = "<group>"; };
 		44580D10212605D500F9940A /* HandicapStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatuses.swift; sourceTree = "<group>"; };
 		44580D12212606BB00F9940A /* FeatureStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatuses.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				83DAF4B521A4A7320076F542 /* Color+wcag.swift */,
+				44478266233279EF00FB1B3B /* Image+averageColor.swift */,
 				831FE59221F52E330078F260 /* NSColor+rgbaColor.swift */,
 				833D435321CFE42B00444EC9 /* NSFont+fontProps.swift */,
 				831FE59021F52DDD0078F260 /* UIColor+rgbaColor.swift */,
@@ -636,6 +639,7 @@
 				44580D13212606BB00F9940A /* FeatureStatuses.swift in Sources */,
 				831E8EF021247EAD0096930C /* HandicapEnabledMode.swift in Sources */,
 				83CAA3F82097BEEC003F231D /* OsVersionProvider.swift in Sources */,
+				44478267233279EF00FB1B3B /* Image+averageColor.swift in Sources */,
 				833D435421CFE42B00444EC9 /* NSFont+fontProps.swift in Sources */,
 				83DB72462069891200384B3F /* UIContentSizeCategory+values.swift in Sources */,
 				448697682127133A00A06BFF /* HandicapNotifications.swift in Sources */,
