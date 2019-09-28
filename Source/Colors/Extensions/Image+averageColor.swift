@@ -54,7 +54,7 @@ private extension CIImage {
         var bitmap = [UInt8](repeating: 0, count: 4)
         let context = CIContext(options: [.workingColorSpace: kCFNull as Any])
         context.render(imageSection, toBitmap: &bitmap, rowBytes: 4, bounds: CGRect(x: 0, y: 0, width: 1, height: 1), format: .RGBA8, colorSpace: nil)
-        let averageColor = UIColor(
+        let averageColor = Color(
             red: CGFloat(bitmap[0]) / 255,
             green: CGFloat(bitmap[1]) / 255,
             blue: CGFloat(bitmap[2]) / 255,

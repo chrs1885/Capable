@@ -17,6 +17,7 @@
 		448697682127133A00A06BFF /* HandicapNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448697672127133A00A06BFF /* HandicapNotifications.swift */; };
 		4486976A2127148700A06BFF /* FeatureNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448697692127148700A06BFF /* FeatureNotifications.swift */; };
 		44A5FBE321B03BB4008DE1EB /* FontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A5FBE221B03BB4008DE1EB /* FontProps.swift */; };
+		44D0B937233F86DC00A9B136 /* CIImage+initWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D0B936233F86DC00A9B136 /* CIImage+initWithImage.swift */; };
 		44E1055A2125CC7B00D85BBC /* HandicapStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E105592125CC7B00D85BBC /* HandicapStatus.swift */; };
 		44FE2E32211479A300029869 /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E31211479A300029869 /* FontMetricsProvider.swift */; };
 		44FE2E34211479F700029869 /* FontMetricsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E33211479F700029869 /* FontMetricsProviderProtocol.swift */; };
@@ -107,6 +108,7 @@
 		448697672127133A00A06BFF /* HandicapNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapNotifications.swift; sourceTree = "<group>"; };
 		448697692127148700A06BFF /* FeatureNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureNotifications.swift; sourceTree = "<group>"; };
 		44A5FBE221B03BB4008DE1EB /* FontProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProps.swift; sourceTree = "<group>"; };
+		44D0B936233F86DC00A9B136 /* CIImage+initWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIImage+initWithImage.swift"; sourceTree = "<group>"; };
 		44E105592125CC7B00D85BBC /* HandicapStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatus.swift; sourceTree = "<group>"; };
 		44FE2E31211479A300029869 /* FontMetricsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProvider.swift; sourceTree = "<group>"; };
 		44FE2E33211479F700029869 /* FontMetricsProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProviderProtocol.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 				44478266233279EF00FB1B3B /* Image+averageColor.swift */,
 				831FE59221F52E330078F260 /* NSColor+rgbaColor.swift */,
 				833D435321CFE42B00444EC9 /* NSFont+fontProps.swift */,
+				44D0B936233F86DC00A9B136 /* CIImage+initWithImage.swift */,
 				831FE59021F52DDD0078F260 /* UIColor+rgbaColor.swift */,
 				833D435521CFE44000444EC9 /* UIFont+fontProps.swift */,
 			);
@@ -646,6 +649,7 @@
 				44580D11212605D500F9940A /* HandicapStatuses.swift in Sources */,
 				83C6A351219E08DB00BB039D /* String+isDefaultContentSize.swift in Sources */,
 				44FE2E34211479F700029869 /* FontMetricsProviderProtocol.swift in Sources */,
+				44D0B937233F86DC00A9B136 /* CIImage+initWithImage.swift in Sources */,
 				44A5FBE321B03BB4008DE1EB /* FontProps.swift in Sources */,
 				83C6A353219E0FF200BB039D /* HearingDeviceEar+stringValue.swift in Sources */,
 				83973ADD206FD3A40057CD4F /* FontMetricsProtocol.swift in Sources */,
