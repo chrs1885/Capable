@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4404835E2168F1940051FCE7 /* FeatureStatusesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404835D2168F1940051FCE7 /* FeatureStatusesProviderTests.swift */; };
+		4447826B2332808400FB1B3B /* ImageArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447826A2332808400FB1B3B /* ImageArea.swift */; };
 		44580D11212605D500F9940A /* HandicapStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D10212605D500F9940A /* HandicapStatuses.swift */; };
 		44580D13212606BB00F9940A /* FeatureStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D12212606BB00F9940A /* FeatureStatuses.swift */; };
 		44580D1721260EAA00F9940A /* FeatureStatusesProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D1621260EAA00F9940A /* FeatureStatusesProviderMock.swift */; };
@@ -96,6 +97,7 @@
 
 /* Begin PBXFileReference section */
 		4404835D2168F1940051FCE7 /* FeatureStatusesProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProviderTests.swift; sourceTree = "<group>"; };
+		4447826A2332808400FB1B3B /* ImageArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageArea.swift; sourceTree = "<group>"; };
 		44580D10212605D500F9940A /* HandicapStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatuses.swift; sourceTree = "<group>"; };
 		44580D12212606BB00F9940A /* FeatureStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatuses.swift; sourceTree = "<group>"; };
 		44580D1621260EAA00F9940A /* FeatureStatusesProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProviderMock.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			children = (
 				83160D9421A548EF00FD122C /* ConformanceLevel.swift */,
 				44A5FBE221B03BB4008DE1EB /* FontProps.swift */,
+				4447826A2332808400FB1B3B /* ImageArea.swift */,
 				83DAF4B721A4A9670076F542 /* RGBAColor.swift */,
 			);
 			path = Models;
@@ -653,6 +656,7 @@
 				833DB9BF206C164B00C8DA02 /* Notification+Name.swift in Sources */,
 				833CE9AA2194CCF400D741DE /* OSLogType+greaterEqual.swift in Sources */,
 				83B5FFEB206542FC00E8E83F /* FeatureStatusesProviderProtocol.swift in Sources */,
+				4447826B2332808400FB1B3B /* ImageArea.swift in Sources */,
 				83B5FFE62065352500E8E83F /* CapableFeature.swift in Sources */,
 				4486976A2127148700A06BFF /* FeatureNotifications.swift in Sources */,
 				8382A322206E350F00E264A3 /* FeatureStatusesProvider.swift in Sources */,
