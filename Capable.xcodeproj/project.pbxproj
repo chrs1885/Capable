@@ -14,6 +14,7 @@
 		44580D13212606BB00F9940A /* FeatureStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D12212606BB00F9940A /* FeatureStatuses.swift */; };
 		44580D1721260EAA00F9940A /* FeatureStatusesProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D1621260EAA00F9940A /* FeatureStatusesProviderMock.swift */; };
 		44580D1921261D4E00F9940A /* CapablePerfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D1821261D4E00F9940A /* CapablePerfTests.swift */; };
+		448433B323409ABA00FC7DBC /* ImageAreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448433B223409ABA00FC7DBC /* ImageAreaTests.swift */; };
 		448697682127133A00A06BFF /* HandicapNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448697672127133A00A06BFF /* HandicapNotifications.swift */; };
 		4486976A2127148700A06BFF /* FeatureNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448697692127148700A06BFF /* FeatureNotifications.swift */; };
 		44A5FBE321B03BB4008DE1EB /* FontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A5FBE221B03BB4008DE1EB /* FontProps.swift */; };
@@ -105,6 +106,7 @@
 		44580D12212606BB00F9940A /* FeatureStatuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatuses.swift; sourceTree = "<group>"; };
 		44580D1621260EAA00F9940A /* FeatureStatusesProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProviderMock.swift; sourceTree = "<group>"; };
 		44580D1821261D4E00F9940A /* CapablePerfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapablePerfTests.swift; sourceTree = "<group>"; };
+		448433B223409ABA00FC7DBC /* ImageAreaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAreaTests.swift; sourceTree = "<group>"; };
 		448697672127133A00A06BFF /* HandicapNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapNotifications.swift; sourceTree = "<group>"; };
 		448697692127148700A06BFF /* FeatureNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureNotifications.swift; sourceTree = "<group>"; };
 		44A5FBE221B03BB4008DE1EB /* FontProps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProps.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				83097DA421A9736100703F29 /* ConformanceLevelTests.swift */,
 				8311E58621EE841800B416B4 /* FontPropsTests.swift */,
 				83529F3E21ED2BF6007637C7 /* ColorWcagTests.swift */,
+				448433B223409ABA00FC7DBC /* ImageAreaTests.swift */,
 				833D435721CFE7D300444EC9 /* NSFontFontPropsTests.swift */,
 				83097DA621A97CAA00703F29 /* RGBAColorTests.swift */,
 				83B21D6C21DE687200E02470 /* UIFontFontPropsTests.swift */,
@@ -689,6 +692,7 @@
 				83B21D6D21DE687200E02470 /* UIFontFontPropsTests.swift in Sources */,
 				44FE2E442114833700029869 /* FontMetricsProviderMock.swift in Sources */,
 				8323D8E82167C2550015F8A3 /* HandicapStatusesTests.swift in Sources */,
+				448433B323409ABA00FC7DBC /* ImageAreaTests.swift in Sources */,
 				44FE2E3B211482DD00029869 /* FontMetricsProviderTests.swift in Sources */,
 				83DC7B602149BB4800AF12A7 /* NotificationsTests.swift in Sources */,
 				44580D1721260EAA00F9940A /* FeatureStatusesProviderMock.swift in Sources */,

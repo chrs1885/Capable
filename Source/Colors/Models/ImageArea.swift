@@ -47,6 +47,9 @@ public enum ImageArea {
     /// The last horizontal third.
     case right
 
+    /// The first vertical third.
+    case top
+
     /// The second horizontal third of the first vertical third.
     case topCenter
 
@@ -90,6 +93,8 @@ public enum ImageArea {
             return CGRect(x: 0, y: 0, width: widthThird, height: imageHeight)
         case .right:
             return CGRect(x: widthThird * 2, y: 0, width: widthThird, height: imageHeight)
+        case .top:
+            return CGRect(x: 0, y: 0, width: imageWidth, height: heightThird)
         case .topCenter:
             return CGRect(x: widthThird, y: 0, width: widthThird, height: heightThird)
         case .topLeft:
@@ -97,7 +102,7 @@ public enum ImageArea {
         case .topRight:
             return CGRect(x: widthThird * 2, y: 0, width: widthThird, height: heightThird)
         case .verticalCenter:
-            return CGRect(x: widthThird, y: 0, width: imageWidth, height: imageHeight)
+            return CGRect(x: widthThird, y: 0, width: widthThird, height: imageHeight)
         }
     }
 }
