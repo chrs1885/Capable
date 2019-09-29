@@ -52,7 +52,7 @@ class ColorWcagTests: QuickSpec {
             static let largeFont = Font.systemFont(ofSize: 18.0)
         }
 
-        describe("The NSColor class") {
+        describe("The UIColor/NSColor class") {
             context("when calling rgbaColor") {
                 context("when color space is sRGB") {
                     it("normalizes components to be between 0.0 and 255.0") {

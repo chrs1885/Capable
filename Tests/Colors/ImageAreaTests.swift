@@ -13,21 +13,7 @@ class ImageAreaTests: QuickSpec {
     override func spec() {
         describe("The ImageArea class") {
             var sut: ImageArea!
-            var testImage: Image {
-                #if os(iOS) || os(tvOS)
-
-                let rect = CGRect(x: 0, y: 0, width:3, height: 3)
-                UIGraphicsBeginImageContext(rect.size)
-                let img = UIGraphicsGetImageFromCurrentImageContext()
-                UIGraphicsEndImageContext()
-                return img!
-
-                #elseif os(OSX)
-
-                return NSImage(size: NSSize(width: 3, height: 3))
-
-                #endif
-            }
+            let testImage = Image.mock(withColor: .white, rect: CGRect(x: 0, y: 0, width: 3, height: 3))
 
             context("calling rect()") {
                 var actualRect: CGRect!

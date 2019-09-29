@@ -115,7 +115,7 @@ extension Color {
 
      - Warning: This function will also return `nil` if the image is corrupted.
      */
-    public class func getTextColors(onBackgroundImage image: Image, imageArea: ImageArea = .full) -> Color? {
+    public class func getTextColor(onBackgroundImage image: Image, imageArea: ImageArea = .full) -> Color? {
         guard let averageImageColor = image.averageColor(imageArea: imageArea) else { return nil }
 
         return Color.getTextColor(onBackgroundColor: averageImageColor)
@@ -137,7 +137,7 @@ extension Color {
 
      - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
-    public class func getTextColors(fromColors colors: [Color], withFont font: Font, backgroundImage image: Image, imageArea: ImageArea = .full, conformanceLevel: ConformanceLevel = .AA) -> Color? {
+    public class func getTextColor(fromColors colors: [Color], withFont font: Font, backgroundImage image: Image, imageArea: ImageArea = .full, conformanceLevel: ConformanceLevel = .AA) -> Color? {
         guard let averageImageColor = image.averageColor(imageArea: imageArea) else { return nil }
 
         return Color.getTextColor(fromColors: colors, withFont: font, onBackgroundColor: averageImageColor, conformanceLevel: conformanceLevel)
