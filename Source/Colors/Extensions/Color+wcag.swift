@@ -137,7 +137,7 @@ extension Color {
 
      - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
-    public class func getTextColor(fromColors colors: [Color], withFont font: Font, backgroundImage image: Image, imageArea: ImageArea = .full, conformanceLevel: ConformanceLevel = .AA) -> Color? {
+    public class func getTextColor(fromColors colors: [Color], withFont font: Font, onBackgroundImage image: Image, imageArea: ImageArea = .full, conformanceLevel: ConformanceLevel = .AA) -> Color? {
         guard let averageImageColor = image.averageColor(imageArea: imageArea) else { return nil }
 
         return Color.getTextColor(fromColors: colors, withFont: font, onBackgroundColor: averageImageColor, conformanceLevel: conformanceLevel)

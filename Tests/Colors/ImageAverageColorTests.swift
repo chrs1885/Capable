@@ -17,7 +17,6 @@ class ImageAverageColorTests: QuickSpec {
             context("when calling averageColor() for a red image") {
                 beforeEach {
                     sut = Image.mock(withColor: .red, rect: CGRect(x: 0, y: 0, width: 3, height: 3))
-
                 }
 
                 it("returns .red") {

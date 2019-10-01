@@ -16,7 +16,7 @@ import UIKit
 import CoreImage
 
 extension Image {
-    class func mock(withColor color: Color, rect: CGRect) -> Image {
+    class func mock(withColor color: Color, rect: CGRect = CGRect(x: 0, y: 0, width: 1, height: 1)) -> Image {
         #if os(iOS) || os(tvOS)
 
         UIGraphicsBeginImageContext(rect.size)
