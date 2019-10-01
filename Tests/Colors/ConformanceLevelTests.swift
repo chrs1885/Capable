@@ -19,6 +19,7 @@ class ConformanceLevelTests: QuickSpec {
 
         describe("The ConformanceLevel class") {
             var sut: ConformanceLevel?
+
             context("when initialized") {
                 context("with a contrast ratio of 2.9") {
                     context("and large text size") {

@@ -13,6 +13,9 @@
 		4478927E210B4401000D5939 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
 		44789280210B4AEA000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
 		44789281210B4AED000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
+		44D0B935233F833900A9B136 /* CaptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FD13172336CD3B001C6C7A /* CaptionsViewController.swift */; };
+		44D0B93A233F926100A9B136 /* CaptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D0B938233F900700A9B136 /* CaptionsViewController.swift */; };
+		44FD13182336CD3B001C6C7A /* CaptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FD13172336CD3B001C6C7A /* CaptionsViewController.swift */; };
 		55A2015AF8E67D0BAC01DA73 /* Pods_Example_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A4614933CCE311EC4CAD3C /* Pods_Example_watchOS_Extension.framework */; };
 		6180FD25002FD5791E4E3C36 /* Pods_Example_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C8CF8E1603FFD70061B7CA /* Pods_Example_iOS.framework */; };
 		791054B3341540F931275BD6 /* Pods_Example_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA97E99795B6631F2DB0EB5 /* Pods_Example_watchOS.framework */; };
@@ -130,6 +133,8 @@
 		4478927A210B4073000D5939 /* FontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
 		4478927C210B4288000D5939 /* FontRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontRowController.swift; sourceTree = "<group>"; };
 		4478927F210B4AEA000D5939 /* FontsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsConstants.swift; sourceTree = "<group>"; };
+		44D0B938233F900700A9B136 /* CaptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionsViewController.swift; sourceTree = "<group>"; };
+		44FD13172336CD3B001C6C7A /* CaptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionsViewController.swift; sourceTree = "<group>"; };
 		4A59D50AB7E59EBA9F953814 /* Pods-Example-watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-watchOS Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
 		61C8CF8E1603FFD70061B7CA /* Pods_Example_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A34BF8D95976311A017335 /* Pods_Example_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,8 +249,8 @@
 		831B4F2620A4D53100F1BB94 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				831B4F1C20A4D4F200F1BB94 /* Main.storyboard */,
 				831B4F2120A4D4F200F1BB94 /* Info.plist */,
+				831B4F1C20A4D4F200F1BB94 /* Main.storyboard */,
 			);
 			path = tvOS;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				832953D621121EAA00072EB9 /* AppDelegate.swift */,
+				44D0B938233F900700A9B136 /* CaptionsViewController.swift */,
 				83B255F921FE07A4009116EC /* ColorsViewController.swift */,
 				832953E021121EAC00072EB9 /* Example_macOS.entitlements */,
 				832953D821121EAA00072EB9 /* FeatureOverviewController.swift */,
@@ -339,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				83C6F6252078138E00F0C74D /* AppDelegate.swift */,
+				44FD13172336CD3B001C6C7A /* CaptionsViewController.swift */,
 				831FE5A021FA60CD0078F260 /* Color+capable.swift */,
 				831FE59821F667EE0078F260 /* ConformanceLevelView.swift */,
 				83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */,
@@ -776,6 +783,7 @@
 				831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */,
 				831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */,
 				83FF01FB2129FE6300D26E0D /* HandicapViewController.swift in Sources */,
+				44D0B935233F833900A9B136 /* CaptionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +798,7 @@
 				832953D921121EAA00072EB9 /* FeatureOverviewController.swift in Sources */,
 				83FF01FD2129FE8D00D26E0D /* HandicapViewController.swift in Sources */,
 				83B255FD21FE0F56009116EC /* NSView+backgroundColor.swift in Sources */,
+				44D0B93A233F926100A9B136 /* CaptionsViewController.swift in Sources */,
 				83B255FA21FE07A4009116EC /* ColorsViewController.swift in Sources */,
 				832953D721121EAA00072EB9 /* AppDelegate.swift in Sources */,
 			);
@@ -824,6 +833,7 @@
 				83FF01FA2129FE6300D26E0D /* HandicapViewController.swift in Sources */,
 				44789280210B4AEA000D5939 /* FontsConstants.swift in Sources */,
 				83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */,
+				44FD13182336CD3B001C6C7A /* CaptionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

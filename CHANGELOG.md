@@ -1,3 +1,8 @@
+## Version 1.1.0
+
+### Features
+* [Support caption color calculation for background images](https://github.com/chrs1885/Capable/issues/45)
+
 ## Version 1.0.1
 
 ### Enhancements
