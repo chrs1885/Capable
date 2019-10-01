@@ -58,7 +58,7 @@ class CaptionsViewController: NSViewController {
         isLoading = true
         DispatchQueue.global(qos: .background).async {
             for label in labels {
-                let textColor = NSColor.getTextColors(onBackgroundImage: backgroundImage, imageArea: label.value)
+                let textColor = NSColor.getTextColor(onBackgroundImage: backgroundImage, imageArea: label.value)
 
                 DispatchQueue.main.async {
                     label.key.textColor = textColor

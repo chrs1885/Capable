@@ -249,8 +249,8 @@
 		831B4F2620A4D53100F1BB94 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				831B4F1C20A4D4F200F1BB94 /* Main.storyboard */,
 				831B4F2120A4D4F200F1BB94 /* Info.plist */,
+				831B4F1C20A4D4F200F1BB94 /* Main.storyboard */,
 			);
 			path = tvOS;
 			sourceTree = "<group>";
