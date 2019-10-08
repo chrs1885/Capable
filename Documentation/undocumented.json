@@ -1,6 +1,19 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/d0286949/Documents/Workspace/Capable/Source/Colors/Extensions/Image+averageColor.swift",
+      "line": 20,
+      "symbol": "Image",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/d0286949/Documents/Workspace/Capable/Source/Colors/Models/ImageArea.swift",
+      "line": 12,
+      "symbol": "ImageArea",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    }
   ],
-  "source_directory": "/Users/chris/Documents/Workspace/Capable-iOS"
+  "source_directory": "/Users/d0286949/Documents/Workspace/Capable"
 }

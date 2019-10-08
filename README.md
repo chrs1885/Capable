@@ -14,29 +14,37 @@
 [![Twitter](https://img.shields.io/badge/twitter-%40chr__wendt-58a1f2.svg)](https://twitter.com/chr_wendt)
 
 # Accessibility for iOS, macOS, tvOS, and watchOS
+
+Check out the *Example.xcworkspace* to get a quick overview:
+
+![Example project overview](./Documentation/Images/features_example_app.png)
+
+### 1) Research: Do I need to care about accessibility?
+
+* [Get the user's accessibility settings](#accessibility-status)
+* [Define handicaps by grouping accessibility features](#handicaps)
+* [Send status with your favorite analytics SDK](#send-status)
+
 Have you ever thought about adopting accessibility features within you apps to gain your user base instead of spending a lot of time implementing features no-one really ever asked for? 
 
 Most of us did, however there has never been an easy way to tell if anyone benefits from that. Adjusting layouts to be usable for people with low vision can be quite complex in some situations and tracking the user's accessibility settings adds a lot of boilerplate code to your app.
 
 What if there was a simple way to figure out if there's a real need to support accessibility right now. Or even better, which disability exists most across your user base.
 
-Check out the *Example.xcworkspace* to get a quick overview:
+### 2) React: Improve problematic screens
 
-![Example project overview](./Documentation/Images/features_example_app.png)
+* [Get status of accessibility feature](#accessibility-status)
+* [Get notified about any changes](#notifications)
+* [Calculate high contrast WCAG compliant colors](#colors)
+* [Use dynamic type with custom fonts](#dynamic-type)
 
-## Features
+Once you've figured out that users with specific handicaps get stuck at a certain stage, you can make use of various Capable APIs to enable/disable accessibility support based on the user's accessibility settings or improve texts and colors used within your apps. Go back to step 1 to proof that the work helped users to succeed using your app.
 
-* User research 
-	* [Get the user's accessibility settings](#accessibility-status)
-	* [Define handicaps by grouping accessibility features](#handicaps)
-	* [Send status with your favorite analytics SDK](#send-status)
-* Improve critical screens
-	* [Get status of accessibility feature](#accessibility-status)
-	* [Get notified about any changes](#notifications)
-	* [Calculate high contrast WCAG compliant colors](#colors)
-	* [Use dynamic type with custom fonts](#dynamic-type)
-* Fault diagnosis
-	* [Custom logging with OSLog](#logging)
+### 3) Fault diagnosis
+
+Each Capable feature is backed by the built-in logging system, which will keep you in the loop about what might have been going wrong. Even if you are using your own logging solution, the Capable logger is fully compatible with it!
+
+* [Custom logging with OSLog](#logging)
 
 ## Installation
 
@@ -69,7 +77,7 @@ end
 github "chrs1885/Capable"
 ```
 
-### Swift Package Manager (macOS)
+### Swift Package Manager
 
 ```ruby
 dependencies: [
@@ -227,7 +235,7 @@ Get a high contrast text color for a given background color as follows:
 let textColor = UIColor.getTextColor(onBackgroundColor: UIColor.red)!
 ```
 
-This will return the text color with the highest possible contrast (black/white). Alternatively, you can define a list of possible text colors. Since the WCAG requirements for contrast differ in text size and weight, you also need to provide the font used for the text. The following will return the first text color that satisfies the required conformance level (*AA* by default).
+This will return the text color with the highest possible contrast (black/white). Alternatively, you can define a list of possible text colors as well as a required conformance level. Since the WCAG requirements for contrast differ in text size and weight, you also need to provide the font used for the text. The following will return the first text color that satisfies the required conformance level (*AA* by default).
 
 ```swift
 let textColor = UIColor.getTextColor(
@@ -254,6 +262,30 @@ let backgroundColor = UIColor.getBackgroundColor(
     conformanceLevel: .AA
 )!
 ```
+
+#### Image captions (iOS/tvOS/macOS)
+
+Get a high contrast text color for any given background image as follows:
+
+```swift
+let textColor = UIImage.getTextColor(onBackgroundImage: myImage imageArea: .bottomLeft)!
+```
+
+This will return the text color with the highest possible contrast (black/white) for a specific image Area. 
+
+Alternatively, you can define a list of possible text colors as well as a required conformance level. Since the WCAG requirements for contrast differ in text size and weight, you also need to provide the font used for the text. The following will return the first text color that satisfies the required conformance level (*AA* by default).
+
+```swift
+let textColor = UIImage.getTextColor(
+    fromColors: [UIColor.red, UIColor.yellow],
+    withFont: myLabel.font,
+    onBackgroundImage: view.backgroundColor,
+    imageArea: topLeft,
+    conformanceLevel: .AA
+)!
+```
+
+You can find an overview of all image areas available in the documentation.
 
 #### Calculating contrast ratios & WCAG conformance levels
 
