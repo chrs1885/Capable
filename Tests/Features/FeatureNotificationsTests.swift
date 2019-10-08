@@ -180,7 +180,7 @@ class FeatureNotificationsTests: QuickSpec {
                     }
 
                     it("posts a CapableFeatureStatusDidChange notification with the correct FeatureStatus") {
-                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .videoAutoplay, statusString: "enabled")
+                        verifyFeatureDidChangeNotificationWasPosted(withFeature: .onOffSwitchLabels, statusString: "enabled")
                     }
                 }
 

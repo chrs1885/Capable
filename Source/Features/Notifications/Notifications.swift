@@ -212,6 +212,10 @@ extension Notifications {
         self.postNotification(withFeature: .darkerSystemColors, statusString: self.featureStatusesProvider.isDarkerSystemColorsEnabled.statusString)
     }
 
+    @objc func differentiateWithoutColorStatusChanged() {
+        self.postNotification(withFeature: .differentiateWithoutColor, statusString: self.featureStatusesProvider.isDifferentiateWithoutColorEnabled.statusString)
+    }
+
     @objc func guidedAccessStatusChanged() {
         self.postNotification(withFeature: .guidedAccess, statusString: self.featureStatusesProvider.isGuidedAccessEnabled.statusString)
     }
@@ -250,10 +254,6 @@ extension Notifications {
 
     @objc func closedCaptioningStatusChanged() {
         self.postNotification(withFeature: .closedCaptioning, statusString: self.featureStatusesProvider.isClosedCaptioningEnabled.statusString)
-    }
-
-    @objc func differentiateWithoutColorStatusChanged() {
-        self.postNotification(withFeature: .differentiateWithoutColor, statusString: self.featureStatusesProvider.isDifferentiateWithoutColorEnabled.statusString)
     }
 
     @objc func grayscaleStatusChanged() {
