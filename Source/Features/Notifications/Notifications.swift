@@ -69,6 +69,11 @@ extension Notifications {
         if features.contains(.darkerSystemColors) {
             addObserver(forNotification: UIAccessibility.darkerSystemColorsStatusDidChangeNotification, selector: #selector(self.darkerSystemColorsStatusChanged))
         }
+        if features.contains(.differentiateWithoutColor) {
+            if #available(iOS 13.0, *) {
+                addObserver(forNotification: NSNotification.Name(rawValue: UIAccessibility.differentiateWithoutColorDidChangeNotification), selector: #selector(self.differentiateWithoutColorStatusChanged))
+            }
+        }
         if features.contains(.guidedAccess) {
             addObserver(forNotification: UIAccessibility.guidedAccessStatusDidChangeNotification, selector: #selector(self.guidedAccessStatusChanged))
         }
@@ -77,6 +82,11 @@ extension Notifications {
         }
         if features.contains(.largerText) {
             addObserver(forNotification: UIContentSizeCategory.didChangeNotification, selector: #selector(self.largerTextStatusChanged))
+        }
+        if features.contains(.onOffSwitchLabels) {
+            if #available(iOS 13.0, *) {
+                addObserver(forNotification: UIAccessibility.onOffSwitchLabelsDidChangeNotification, selector: #selector(self.onOffSwitchLabelsStatusChanged))
+            }
         }
         if features.contains(.shakeToUndo) {
             addObserver(forNotification: UIAccessibility.shakeToUndoDidChangeNotification, selector: #selector(self.shakeToUndoStatusChanged))
@@ -115,6 +125,11 @@ extension Notifications {
         }
         if features.contains(.reduceTransparency) {
             addObserver(forNotification: UIAccessibility.reduceTransparencyStatusDidChangeNotification, selector: #selector(self.reduceTransparencyStatusChanged))
+        }
+        if features.contains(.videoAutoplay) {
+            if #available(iOS 13.0, tvOS 13.0, *) {
+                addObserver(forNotification: UIAccessibility.videoAutoplayStatusDidChangeNotification, selector: #selector(self.videoAutoplayStatusChanged))
+            }
         }
         if features.contains(.voiceOver) {
             if #available(iOS 11.0, tvOS 11.0, *) {
@@ -197,6 +212,10 @@ extension Notifications {
         self.postNotification(withFeature: .darkerSystemColors, statusString: self.featureStatusesProvider.isDarkerSystemColorsEnabled.statusString)
     }
 
+    @objc func differentiateWithoutColorStatusChanged() {
+        self.postNotification(withFeature: .differentiateWithoutColor, statusString: self.featureStatusesProvider.isDifferentiateWithoutColorEnabled.statusString)
+    }
+
     @objc func guidedAccessStatusChanged() {
         self.postNotification(withFeature: .guidedAccess, statusString: self.featureStatusesProvider.isGuidedAccessEnabled.statusString)
     }
@@ -207,6 +226,10 @@ extension Notifications {
 
     @objc func largerTextStatusChanged() {
         self.postNotification(withFeature: .largerText, statusString: self.featureStatusesProvider.largerTextCatagory.stringValue)
+    }
+
+    @objc func onOffSwitchLabelsStatusChanged() {
+        self.postNotification(withFeature: .onOffSwitchLabels, statusString: self.featureStatusesProvider.isOnOffSwitchLabelsEnabled.statusString)
     }
 
     @objc func shakeToUndoStatusChanged() {
@@ -247,6 +270,10 @@ extension Notifications {
 
     @objc func reduceTransparencyStatusChanged() {
         self.postNotification(withFeature: .reduceTransparency, statusString: self.featureStatusesProvider.isReduceTransparencyEnabled.statusString)
+    }
+
+    @objc func videoAutoplayStatusChanged() {
+        self.postNotification(withFeature: .videoAutoplay, statusString: self.featureStatusesProvider.isVideoAutoplayEnabled.statusString)
     }
 
     #endif

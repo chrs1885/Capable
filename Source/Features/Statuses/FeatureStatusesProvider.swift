@@ -29,6 +29,15 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
         return UIAccessibility.isDarkerSystemColorsEnabled
     }
 
+    var isDifferentiateWithoutColorEnabled: Bool {
+        if #available(iOS 13.0, *) {
+            return UIAccessibility.shouldDifferentiateWithoutColor
+        } else {
+            Logger.warning("Unable to determine status for isDifferentiateWithoutColorEnabled since it is only available on iOS 13 or later.")
+            return false
+        }
+    }
+
     var isGuidedAccessEnabled: Bool {
         return UIAccessibility.isGuidedAccessEnabled
     }
@@ -39,6 +48,15 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
 
     var largerTextCatagory: UIContentSizeCategory {
         return UIScreen.main.traitCollection.preferredContentSizeCategory
+    }
+
+    var isOnOffSwitchLabelsEnabled: Bool {
+        if #available(iOS 13.0, *) {
+            return UIAccessibility.isOnOffSwitchLabelsEnabled
+        } else {
+            Logger.warning("Unable to determine status for isOnOffSwitchLabelsEnabled since it is only available on iOS 13 or later.")
+            return false
+        }
     }
 
     var isShakeToUndoEnabled: Bool {
@@ -87,6 +105,15 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
 
     var isSwitchControlEnabled: Bool {
         return UIAccessibility.isSwitchControlRunning
+    }
+
+    var isVideoAutoplayEnabled: Bool {
+        if #available(iOS 13.0, tvOS 13.0, *) {
+            return UIAccessibility.isVideoAutoplayEnabled
+        } else {
+            Logger.warning("Unable to determine status for isVideoAutoplayEnabled since it is only available on iOS 13 / tvOS 13 or later.")
+            return false
+        }
     }
 
     var isVoiceOverEnabled: Bool {
@@ -189,6 +216,9 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
         if feature == .largerText {
             return !self.largerTextCatagory.isDefault
         }
+        if feature == .onOffSwitchLabels {
+            return self.isOnOffSwitchLabelsEnabled
+        }
         if feature == .shakeToUndo {
             return self.isShakeToUndoEnabled
         }
@@ -211,9 +241,6 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
 
         #if os(OSX)
 
-        if feature == .differentiateWithoutColor {
-            return self.isDifferentiateWithoutColorEnabled
-        }
         if feature == .fullKeyboardAccess {
             return self.isFullKeyboardAccessEnabled
         }
@@ -234,19 +261,28 @@ class FeatureStatusesProvider: FeatureStatusesProviderProtocol {
         if feature == .monoAudio {
             return self.isMonoAudioEnabled
         }
+        if feature == .videoAutoplay {
+            return self.isVideoAutoplayEnabled
+        }
 
         #endif
 
-        #if os(iOS) || os(tvOS) || os(macOS)
+        #if os(iOS) || os(OSX)
+
+        if feature == .differentiateWithoutColor {
+            return self.isDifferentiateWithoutColorEnabled
+        }
+
+        #endif
+
+        #if os(iOS) || os(tvOS) || os(OSX)
 
         if feature == .invertColors {
             return self.isInvertColorsEnabled
         }
-
         if feature == .reduceTransparency {
             return self.isReduceTransparencyEnabled
         }
-
         if feature == .switchControl {
             return self.isSwitchControlEnabled
         }

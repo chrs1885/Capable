@@ -84,6 +84,16 @@ class FeatureStatusesProviderTests: QuickSpec {
                     }
                 }
 
+                context("for OnOffSwitchLabels") {
+                    beforeEach {
+                        sut!.onOffSwitchLabelsEnabled = true
+                    }
+
+                    it("returns correct state") {
+                        expect(sut!.isFeatureEnabled(feature: .onOffSwitchLabels)).to(beTrue())
+                    }
+                }
+
                 context("for ShakeToUndo") {
                     beforeEach {
                         sut!.shakeToUndoEnabled = true
@@ -117,16 +127,6 @@ class FeatureStatusesProviderTests: QuickSpec {
                 #endif
 
                 #if os(OSX)
-
-                context("for DifferentiateWithoutColor") {
-                    beforeEach {
-                        sut!.differentiateWithoutColor = true
-                    }
-
-                    it("returns correct state") {
-                        expect(sut!.isFeatureEnabled(feature: .differentiateWithoutColor)).to(beTrue())
-                    }
-                }
 
                 context("for FullKeyboardAccess") {
                     beforeEach {
@@ -189,6 +189,30 @@ class FeatureStatusesProviderTests: QuickSpec {
 
                     it("returns correct state") {
                         expect(sut!.isFeatureEnabled(feature: .monoAudio)).to(beTrue())
+                    }
+                }
+
+                context("for VideoAutoplay") {
+                    beforeEach {
+                        sut!.videoAutoplayEnabled = true
+                    }
+
+                    it("returns correct state") {
+                        expect(sut!.isFeatureEnabled(feature: .videoAutoplay)).to(beTrue())
+                    }
+                }
+
+                #endif
+
+                #if os(iOS) || os(OSX)
+
+                context("for DifferentiateWithoutColor") {
+                    beforeEach {
+                        sut!.differentiateWithoutColor = true
+                    }
+
+                    it("returns correct state") {
+                        expect(sut!.isFeatureEnabled(feature: .differentiateWithoutColor)).to(beTrue())
                     }
                 }
 
