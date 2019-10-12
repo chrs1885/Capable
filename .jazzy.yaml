@@ -5,6 +5,6 @@ module: Capable
 readme: README.md
 output: Documentation
 theme: apple
-clean: false
+clean: true
 sdk: iphone
 xcodebuild_arguments: [-scheme, Capable, -project, ./Capable.xcodeproj]
