@@ -3,7 +3,7 @@
 
 ---
 [![Awesome](https://camo.githubusercontent.com/13c4e50d88df7178ae1882a203ed57b641674f94/68747470733a2f2f63646e2e7261776769742e636f6d2f73696e647265736f726875732f617765736f6d652f643733303566333864323966656437386661383536353265336136336531353464643865383832392f6d656469612f62616467652e737667)](https://github.com/vsouza/awesome-ios#accessibility)
-[![Build Status](https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg)](https://www.bitrise.io/app/7596a076a75ab2ab)
+[![Build Status](https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg&branch=develop)](https://app.bitrise.io/app/7596a076a75ab2ab)
 ![Swift](https://img.shields.io/badge/swift-5.0-red.svg)
 ![Platforms](https://img.shields.io/cocoapods/p/Capable.svg)
 [![Carthage compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
@@ -36,6 +36,7 @@ What if there was a simple way to figure out if there's a real need to support a
 * [Get status of accessibility feature](#accessibility-status)
 * [Get notified about any changes](#notifications)
 * [Calculate high contrast WCAG compliant colors](#colors)
+* [Calculate high contrast image text colors](#captions)
 * [Use dynamic type with custom fonts](#dynamic-type)
 
 Once you've figured out that users with specific handicaps get stuck at a certain stage, you can make use of various Capable APIs to enable/disable accessibility support based on the user's accessibility settings or improve texts and colors used within your apps. Go back to step 1 to proof that the work helped users to succeed using your app.
@@ -45,6 +46,10 @@ Once you've figured out that users with specific handicaps get stuck at a certai
 Each Capable feature is backed by the built-in logging system, which will keep you in the loop about what might have been going wrong. Even if you are using your own logging solution, the Capable logger is fully compatible with it!
 
 * [Custom logging with OSLog](#logging)
+
+## Documentation
+
+Capable offers a whole lot of features along with a bunch of configurations. To find more about how to use them inside the [documentation](https://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/1.1.0/Documentation/index.html) section.
 
 ## Installation
 
@@ -81,7 +86,7 @@ github "chrs1885/Capable"
 
 ```ruby
 dependencies: [
-    .package(url: "https://github.com/chrs1885/Capable.git", from: "1.0.1")
+    .package(url: "https://github.com/chrs1885/Capable.git", from: "1.1.0")
 ]
 ```
 
@@ -263,20 +268,21 @@ let backgroundColor = UIColor.getBackgroundColor(
 )!
 ```
 
+<a id="captions"></a> 
 #### Image captions (iOS/tvOS/macOS)
 
 Get a high contrast text color for any given background image as follows:
 
 ```swift
-let textColor = UIImage.getTextColor(onBackgroundImage: myImage imageArea: .bottomLeft)!
+let textColor = UIColor.getTextColor(onBackgroundImage: myImage imageArea: .full)!
 ```
 
-This will return the text color with the highest possible contrast (black/white) for a specific image Area. 
+This will return the text color with the highest possible contrast (black/white) for a specific image area. 
 
 Alternatively, you can define a list of possible text colors as well as a required conformance level. Since the WCAG requirements for contrast differ in text size and weight, you also need to provide the font used for the text. The following will return the first text color that satisfies the required conformance level (*AA* by default).
 
 ```swift
-let textColor = UIImage.getTextColor(
+let textColor = UIColor.getTextColor(
     fromColors: [UIColor.red, UIColor.yellow],
     withFont: myLabel.font,
     onBackgroundImage: view.backgroundColor,
@@ -285,7 +291,7 @@ let textColor = UIImage.getTextColor(
 )!
 ```
 
-You can find an overview of all image areas available in the documentation.
+You can find an overview of all image areas available in the [documentation](https://htmlpreview.github.io/?https://raw.githubusercontent.com/chrs1885/Capable/1.1.0/Documentation/Enums/ImageArea.html).
 
 #### Calculating contrast ratios & WCAG conformance levels
 
