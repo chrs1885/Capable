@@ -11,12 +11,14 @@ import CoreGraphics
 
 import UIKit
 
+/// Typealias used for images. It maps to UIImage.
 public typealias Image = UIImage
 
 #elseif os(OSX)
 
 import AppKit
 
+/// Typealias used for image. It maps to NSImage.
 public typealias Image = NSImage
 
 #endif
