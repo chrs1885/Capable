@@ -13,7 +13,7 @@
     <a title="Capable  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Capable Docs</a> (97% documented)</p>
+        <p><a href="index.html">Capable Docs</a> (98% documented)</p>
         <p class="header-right"><a href="https://github.com/chrs1885/Capable"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -113,7 +113,7 @@
 <hr>
 
 <p><a href="https://github.com/vsouza/awesome-ios#accessibility"><img src="https://camo.githubusercontent.com/13c4e50d88df7178ae1882a203ed57b641674f94/68747470733a2f2f63646e2e7261776769742e636f6d2f73696e647265736f726875732f617765736f6d652f643733303566333864323966656437386661383536353265336136336531353464643865383832392f6d656469612f62616467652e737667" alt="Awesome"></a>
-<a href="https://www.bitrise.io/app/7596a076a75ab2ab"><img src="https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg" alt="Build Status"></a>
+<a href="https://app.bitrise.io/app/7596a076a75ab2ab"><img src="https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg&branch=develop" alt="Build Status"></a>
 <img src="https://img.shields.io/badge/swift-5.0-red.svg" alt="Swift">
 <img src="https://img.shields.io/cocoapods/p/Capable.svg" alt="Platforms">
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/carthage-compatible-4BC51D.svg" alt="Carthage compatible"></a>
@@ -146,6 +146,7 @@
 <li><a href="#accessibility-status">Get status of accessibility feature</a></li>
 <li><a href="#notifications">Get notified about any changes</a></li>
 <li><a href="#colors">Calculate high contrast WCAG compliant colors</a></li>
+<li><a href="#captions">Calculate high contrast image text colors</a></li>
 <li><a href="#dynamic-type">Use dynamic type with custom fonts</a></li>
 </ul>
 
@@ -157,6 +158,9 @@
 <ul>
 <li><a href="#logging">Custom logging with OSLog</a></li>
 </ul>
+<h2 id='documentation' class='heading'>Documentation</h2>
+
+<p>Capable offers a whole lot of features along with a bunch of configurations. To find more about how to use them inside the <a href="https://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/1.1.0/Documentation/index.html">documentation</a> section.</p>
 <h2 id='installation' class='heading'>Installation</h2>
 
 <p>There are currently four different ways to integrate Capable into your apps.</p>
@@ -183,7 +187,7 @@
 </code></pre>
 <h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
 <pre class="highlight ruby"><code><span class="ss">dependencies: </span><span class="p">[</span>
-    <span class="p">.</span><span class="nf">package</span><span class="p">(</span><span class="ss">url: </span><span class="s2">"https://github.com/chrs1885/Capable.git"</span><span class="p">,</span> <span class="ss">from: </span><span class="s2">"1.0.1"</span><span class="p">)</span>
+    <span class="p">.</span><span class="nf">package</span><span class="p">(</span><span class="ss">url: </span><span class="s2">"https://github.com/chrs1885/Capable.git"</span><span class="p">,</span> <span class="ss">from: </span><span class="s2">"1.1.0"</span><span class="p">)</span>
 <span class="p">]</span>
 </code></pre>
 <h3 id='manually' class='heading'>Manually</h3>
@@ -332,16 +336,18 @@
     <span class="nv">conformanceLevel</span><span class="p">:</span> <span class="o">.</span><span class="kt">AA</span>
 <span class="p">)</span><span class="o">!</span>
 </code></pre>
+
+<p><a id="captions"></a> </p>
 <h4 id='image-captions-ios-tvos-macos' class='heading'>Image captions (iOS/tvOS/macOS)</h4>
 
 <p>Get a high contrast text color for any given background image as follows:</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">textColor</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="o">.</span><span class="nf">getTextColor</span><span class="p">(</span><span class="nv">onBackgroundImage</span><span class="p">:</span> <span class="n">myImage</span> <span class="nv">imageArea</span><span class="p">:</span> <span class="o">.</span><span class="n">bottomLeft</span><span class="p">)</span><span class="o">!</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">textColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">getTextColor</span><span class="p">(</span><span class="nv">onBackgroundImage</span><span class="p">:</span> <span class="n">myImage</span> <span class="nv">imageArea</span><span class="p">:</span> <span class="o">.</span><span class="n">full</span><span class="p">)</span><span class="o">!</span>
 </code></pre>
 
-<p>This will return the text color with the highest possible contrast (black/white) for a specific image Area. </p>
+<p>This will return the text color with the highest possible contrast (black/white) for a specific image area. </p>
 
 <p>Alternatively, you can define a list of possible text colors as well as a required conformance level. Since the WCAG requirements for contrast differ in text size and weight, you also need to provide the font used for the text. The following will return the first text color that satisfies the required conformance level (<em>AA</em> by default).</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">textColor</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="o">.</span><span class="nf">getTextColor</span><span class="p">(</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">textColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">getTextColor</span><span class="p">(</span>
     <span class="nv">fromColors</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIColor</span><span class="o">.</span><span class="n">red</span><span class="p">,</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">yellow</span><span class="p">],</span>
     <span class="nv">withFont</span><span class="p">:</span> <span class="n">myLabel</span><span class="o">.</span><span class="n">font</span><span class="p">,</span>
     <span class="nv">onBackgroundImage</span><span class="p">:</span> <span class="n">view</span><span class="o">.</span><span class="n">backgroundColor</span><span class="p">,</span>
@@ -350,7 +356,7 @@
 <span class="p">)</span><span class="o">!</span>
 </code></pre>
 
-<p>You can find an overview of all image areas available in the documentation.</p>
+<p>You can find an overview of all image areas available in the <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/chrs1885/Capable/1.1.0/Documentation/Enums/ImageArea.html">documentation</a>.</p>
 <h4 id='calculating-contrast-ratios-amp-wcag-conformance-levels' class='heading'>Calculating contrast ratios &amp; WCAG conformance levels</h4>
 
 <p>The contrast ratio of two opaque colors can be calculated as well:</p>
@@ -524,7 +530,7 @@
 </tr>
 <tr>
 <td>.differentiateWithoutColor</td>
-<td style="text-align: center"></td>
+<td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center"></td>
 <td style="text-align: center"></td>
@@ -586,6 +592,13 @@
 <td style="text-align: center"></td>
 </tr>
 <tr>
+<td>.onOffSwitchLabels</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
 <td>.reduceMotion</td>
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center">:white_check_mark:</td>
@@ -624,6 +637,13 @@
 <td>.switchControl</td>
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
+</tr>
+<tr>
+<td>.videoAutoplay</td>
+<td style="text-align: center">:white_check_mark:</td>
+<td style="text-align: center"></td>
 <td style="text-align: center">:white_check_mark:</td>
 <td style="text-align: center"></td>
 </tr>
@@ -693,8 +713,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/chrs1885" target="_blank" rel="external">Christoph Wendt</a>. All rights reserved. (Last updated: 2019-10-01)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/chrs1885" target="_blank" rel="external">Christoph Wendt</a>. All rights reserved. (Last updated: 2019-10-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

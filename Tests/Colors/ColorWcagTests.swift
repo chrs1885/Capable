@@ -8,8 +8,6 @@
 #if os(iOS) || os(tvOS) || os(watchOS)
 
 import UIKit
-public typealias Color = UIColor
-public typealias Font = UIFont
 
 struct Colors {
     static let white = UIColor(white: 1.0, alpha: 1.0)
