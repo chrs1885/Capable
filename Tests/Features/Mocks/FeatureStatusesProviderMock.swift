@@ -21,6 +21,7 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
     var darkerSystemColorsEnabled = false
     var guidedAccessEnabled = false
     var hearingDeviceEar: UIAccessibility.HearingDeviceEar = UIAccessibility.HearingDeviceEar(rawValue: 0)
+    var onOffSwitchLabelsEnabled = false
     var shakeToUndoEnabled = false
     var speakScreenEnabled = false
     var speakSelectionEnabled = false
@@ -28,7 +29,6 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
     #endif
 
     #if os(OSX)
-    var differentiateWithoutColor = false
     var fullKeyboardAccess = false
     var increaseContrast = false
     #endif
@@ -38,6 +38,11 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
     var closedCaptioningEnabled = false
     var grayscaleEnabled = false
     var monoAudioEnabled = false
+    var videoAutoplayEnabled = false
+    #endif
+
+    #if os(iOS) || os(OSX)
+    var differentiateWithoutColor = false
     #endif
 
     var invertColorsEnabled = false
@@ -56,6 +61,10 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
         return self.darkerSystemColorsEnabled
     }
 
+    override var isGuidedAccessEnabled: Bool {
+        return self.guidedAccessEnabled
+    }
+
     override var hearingDevicePairedEar: UIAccessibility.HearingDeviceEar {
         return self.hearingDeviceEar
     }
@@ -64,8 +73,8 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
         return self.textCatagory
     }
 
-    override var isGuidedAccessEnabled: Bool {
-        return self.guidedAccessEnabled
+    override var isOnOffSwitchLabelsEnabled: Bool {
+        return self.onOffSwitchLabelsEnabled
     }
 
     override var isShakeToUndoEnabled: Bool {
@@ -83,10 +92,6 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
     #endif
 
     #if os(OSX)
-
-    override var isDifferentiateWithoutColorEnabled: Bool {
-        return self.differentiateWithoutColor
-    }
 
     override var isFullKeyboardAccessEnabled: Bool {
         return self.fullKeyboardAccess
@@ -114,6 +119,18 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
 
     override var isMonoAudioEnabled: Bool {
         return self.monoAudioEnabled
+    }
+
+    override var isVideoAutoplayEnabled: Bool {
+        return self.videoAutoplayEnabled
+    }
+
+    #endif
+
+    #if os(iOS) || os(OSX)
+
+    override var isDifferentiateWithoutColorEnabled: Bool {
+        return self.differentiateWithoutColor
     }
 
     #endif
@@ -147,6 +164,7 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
         self.textCatagory = .accessibilityExtraExtraExtraLarge
         self.guidedAccessEnabled = true
         self.hearingDeviceEar = .both
+        self.onOffSwitchLabelsEnabled = true
         self.shakeToUndoEnabled = true
         self.speakScreenEnabled = true
         self.speakSelectionEnabled = true
@@ -155,7 +173,6 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
 
         #if os(OSX)
 
-        self.differentiateWithoutColor = true
         self.fullKeyboardAccess = true
         self.increaseContrast = true
 
@@ -167,6 +184,13 @@ class FeatureStatusesProviderMock: FeatureStatusesProvider {
         self.closedCaptioningEnabled = true
         self.grayscaleEnabled = true
         self.monoAudioEnabled = true
+        self.videoAutoplayEnabled = true
+
+        #endif
+
+        #if os(iOS) || os(OSX)
+
+        self.differentiateWithoutColor = true
 
         #endif
 

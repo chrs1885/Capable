@@ -22,6 +22,9 @@ public enum CapableFeature: String, CaseIterable {
     /// Pairing status of a hearing aid.
     case hearingDevice
 
+    /// Displays on/off labels for UISwitch controls.
+    case onOffSwitchLabels
+
     /// Deletes the last command by shaking the phone.
     case shakeToUndo
 
@@ -34,9 +37,6 @@ public enum CapableFeature: String, CaseIterable {
     #endif
 
     #if os(OSX)
-
-    /// Helps color blind users to differentiate settings differently, e.g. by using shapes rather than colors.
-    case differentiateWithoutColor
 
     /// Enables users to navigate through items of the screen without having to use a mouse.
     case fullKeyboardAccess
@@ -57,12 +57,22 @@ public enum CapableFeature: String, CaseIterable {
     /// Merges stereo audio channels to help users that are hard of hearing or deaf in one ear.
     case monoAudio
 
+    /// Allows users who are sensitive to motion to disable automatic video playback.
+    case videoAutoplay
+
     #endif
 
     #if os(iOS) || os(watchOS)
 
     /// Increases legibility by making fonts bigger.
     case largerText
+
+    #endif
+
+    #if os(iOS) || os(OSX)
+
+    /// Helps color blind users to differentiate settings differently, e.g. by using shapes rather than colors.
+    case differentiateWithoutColor
 
     #endif
 

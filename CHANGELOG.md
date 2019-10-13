@@ -1,3 +1,9 @@
+## Version 1.1.0
+
+### Features
+* [Support iOS 13 accessibility settings](https://github.com/chrs1885/Capable/issues/43)
+* [Support caption color calculation for background images](https://github.com/chrs1885/Capable/issues/45)
+
 ## Version 1.0.1
 
 ### Enhancements

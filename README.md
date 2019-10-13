@@ -3,7 +3,7 @@
 
 ---
 [![Awesome](https://camo.githubusercontent.com/13c4e50d88df7178ae1882a203ed57b641674f94/68747470733a2f2f63646e2e7261776769742e636f6d2f73696e647265736f726875732f617765736f6d652f643733303566333864323966656437386661383536353265336136336531353464643865383832392f6d656469612f62616467652e737667)](https://github.com/vsouza/awesome-ios#accessibility)
-[![Build Status](https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg)](https://www.bitrise.io/app/7596a076a75ab2ab)
+[![Build Status](https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg&branch=develop)](https://app.bitrise.io/app/7596a076a75ab2ab)
 ![Swift](https://img.shields.io/badge/swift-5.0-red.svg)
 ![Platforms](https://img.shields.io/cocoapods/p/Capable.svg)
 [![Carthage compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
@@ -14,29 +14,42 @@
 [![Twitter](https://img.shields.io/badge/twitter-%40chr__wendt-58a1f2.svg)](https://twitter.com/chr_wendt)
 
 # Accessibility for iOS, macOS, tvOS, and watchOS
+
+Check out the *Example.xcworkspace* to get a quick overview:
+
+![Example project overview](./Documentation/Images/features_example_app.png)
+
+### 1) Research: Do I need to care about accessibility?
+
+* [Get the user's accessibility settings](#accessibility-status)
+* [Define handicaps by grouping accessibility features](#handicaps)
+* [Send status with your favorite analytics SDK](#send-status)
+
 Have you ever thought about adopting accessibility features within you apps to gain your user base instead of spending a lot of time implementing features no-one really ever asked for? 
 
 Most of us did, however there has never been an easy way to tell if anyone benefits from that. Adjusting layouts to be usable for people with low vision can be quite complex in some situations and tracking the user's accessibility settings adds a lot of boilerplate code to your app.
 
 What if there was a simple way to figure out if there's a real need to support accessibility right now. Or even better, which disability exists most across your user base.
 
-Check out the *Example.xcworkspace* to get a quick overview:
+### 2) React: Improve problematic screens
 
-![Example project overview](./Documentation/Images/features_example_app.png)
+* [Get status of accessibility feature](#accessibility-status)
+* [Get notified about any changes](#notifications)
+* [Calculate high contrast WCAG compliant colors](#colors)
+* [Calculate high contrast image text colors](#captions)
+* [Use dynamic type with custom fonts](#dynamic-type)
 
-## Features
+Once you've figured out that users with specific handicaps get stuck at a certain stage, you can make use of various Capable APIs to enable/disable accessibility support based on the user's accessibility settings or improve texts and colors used within your apps. Go back to step 1 to proof that the work helped users to succeed using your app.
 
-* User research 
-	* [Get the user's accessibility settings](#accessibility-status)
-	* [Define handicaps by grouping accessibility features](#handicaps)
-	* [Send status with your favorite analytics SDK](#send-status)
-* Improve critical screens
-	* [Get status of accessibility feature](#accessibility-status)
-	* [Get notified about any changes](#notifications)
-	* [Calculate high contrast WCAG compliant colors](#colors)
-	* [Use dynamic type with custom fonts](#dynamic-type)
-* Fault diagnosis
-	* [Custom logging with OSLog](#logging)
+### 3) Fault diagnosis
+
+Each Capable feature is backed by the built-in logging system, which will keep you in the loop about what might have been going wrong. Even if you are using your own logging solution, the Capable logger is fully compatible with it!
+
+* [Custom logging with OSLog](#logging)
+
+## Documentation
+
+Capable offers a whole lot of features along with a bunch of configurations. To find more about how to use them inside the [documentation](https://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/1.1.0/Documentation/index.html) section.
 
 ## Installation
 
@@ -69,11 +82,11 @@ end
 github "chrs1885/Capable"
 ```
 
-### Swift Package Manager (macOS)
+### Swift Package Manager
 
 ```ruby
 dependencies: [
-    .package(url: "https://github.com/chrs1885/Capable.git", from: "1.0.1")
+    .package(url: "https://github.com/chrs1885/Capable.git", from: "1.1.0")
 ]
 ```
 
@@ -227,7 +240,7 @@ Get a high contrast text color for a given background color as follows:
 let textColor = UIColor.getTextColor(onBackgroundColor: UIColor.red)!
 ```
 
-This will return the text color with the highest possible contrast (black/white). Alternatively, you can define a list of possible text colors. Since the WCAG requirements for contrast differ in text size and weight, you also need to provide the font used for the text. The following will return the first text color that satisfies the required conformance level (*AA* by default).
+This will return the text color with the highest possible contrast (black/white). Alternatively, you can define a list of possible text colors as well as a required conformance level. Since the WCAG requirements for contrast differ in text size and weight, you also need to provide the font used for the text. The following will return the first text color that satisfies the required conformance level (*AA* by default).
 
 ```swift
 let textColor = UIColor.getTextColor(
@@ -254,6 +267,31 @@ let backgroundColor = UIColor.getBackgroundColor(
     conformanceLevel: .AA
 )!
 ```
+
+<a id="captions"></a> 
+#### Image captions (iOS/tvOS/macOS)
+
+Get a high contrast text color for any given background image as follows:
+
+```swift
+let textColor = UIColor.getTextColor(onBackgroundImage: myImage imageArea: .full)!
+```
+
+This will return the text color with the highest possible contrast (black/white) for a specific image area. 
+
+Alternatively, you can define a list of possible text colors as well as a required conformance level. Since the WCAG requirements for contrast differ in text size and weight, you also need to provide the font used for the text. The following will return the first text color that satisfies the required conformance level (*AA* by default).
+
+```swift
+let textColor = UIColor.getTextColor(
+    fromColors: [UIColor.red, UIColor.yellow],
+    withFont: myLabel.font,
+    onBackgroundImage: view.backgroundColor,
+    imageArea: topLeft,
+    conformanceLevel: .AA
+)!
+```
+
+You can find an overview of all image areas available in the [documentation](https://htmlpreview.github.io/?https://raw.githubusercontent.com/chrs1885/Capable/1.1.0/Documentation/Enums/ImageArea.html).
 
 #### Calculating contrast ratios & WCAG conformance levels
 
@@ -355,7 +393,7 @@ The following table contains all features that are available AND settable on eac
 | .boldText                  | :white_check_mark: |                                | :white_check_mark: | &nbsp;:white_check_mark:**\*** |
 | .closedCaptioning          | :white_check_mark: |                                | :white_check_mark: |                                |
 | .darkerSystemColors        | :white_check_mark: |                                |                    |                                |
-| .differentiateWithoutColor |                    | :white_check_mark:             |                    |                                |
+| .differentiateWithoutColor | :white_check_mark: | :white_check_mark:             |                    |                                |
 | .fullKeyboardAccess        |                    | &nbsp;:white_check_mark:**\*** |                    |                                |
 | .grayscale                 | :white_check_mark: |                                | :white_check_mark: |                                |
 | .guidedAccess              | :white_check_mark: |                                |                    |                                |
@@ -364,12 +402,14 @@ The following table contains all features that are available AND settable on eac
 | .invertColors              | :white_check_mark: | :white_check_mark:             | :white_check_mark: |                                |
 | .largerText                | :white_check_mark: |                                |                    | &nbsp;:white_check_mark:**\*** |
 | .monoAudio                 | :white_check_mark: |                                | :white_check_mark: |                                |
+| .onOffSwitchLabels         | :white_check_mark: |                                |                    |                                |
 | .reduceMotion              | :white_check_mark: | :white_check_mark:             | :white_check_mark: | :white_check_mark:             |
 | .reduceTransparency        | :white_check_mark: | :white_check_mark:             | :white_check_mark: |                                |
 | .shakeToUndo               | :white_check_mark: |                                |                    |                                |
 | .speakScreen               | :white_check_mark: |                                |                    |                                |
 | .speakSelection            | :white_check_mark: |                                |                    |                                |
 | .switchControl             | :white_check_mark: | :white_check_mark:             | :white_check_mark: |                                |
+| .videoAutoplay             | :white_check_mark: |                                | :white_check_mark: |                                |
 | .voiceOver                 | :white_check_mark: | :white_check_mark:             | :white_check_mark: | :white_check_mark:             |
 
 *\* Feature status can be read but notifications are not available.*

@@ -14,7 +14,7 @@
     <a title="Color Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Capable Docs</a> (100% documented)</p>
+        <p><a href="../index.html">Capable Docs</a> (98% documented)</p>
         <p class="header-right"><a href="https://github.com/chrs1885/Capable"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -39,6 +39,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/HandicapEnabledMode.html">HandicapEnabledMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageArea.html">ImageArea</a>
               </li>
             </ul>
           </li>
@@ -91,6 +94,12 @@
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:7Capable4Fonta">Font</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/Image">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:7Capable5Imagea">Image</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -101,7 +110,7 @@
             <h1>Color</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt"><a href="../Typealiases.html#/Color">Color</a></span> <span class="o">=</span> <span class="kt">NSColor</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt"><a href="../Typealiases.html#/Color">Color</a></span></code></pre>
 
                 </div>
               </div>
@@ -342,6 +351,95 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:So7NSColorC7CapableE12getTextColor17onBackgroundImage9imageAreaABSgSo7NSImageC_AC0hJ0OtFZ"></a>
+                    <a name="//apple_ref/swift/Method/getTextColor(onBackgroundImage:imageArea:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSColorC7CapableE12getTextColor17onBackgroundImage9imageAreaABSgSo7NSImageC_AC0hJ0OtFZ">getTextColor(onBackgroundImage:imageArea:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the text color with the highest contrast (black or white) for a specific area of given background image.</p>
+<li>backgroundImage: The background image.</li>
+<li><p>imageArea: The area of the image that is used as the text background. Defaults to .full.</p></li>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>For the background image, the alpha component is ignored.</p>
+
+</div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>This function will also return <code>nil</code> if the image is corrupted.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">getTextColor</span><span class="p">(</span><span class="n">onBackgroundImage</span> <span class="nv">image</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/Image">Image</a></span><span class="p">,</span> <span class="nv">imageArea</span><span class="p">:</span> <span class="kt"><a href="../Enums/ImageArea.html">ImageArea</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">full</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/Color">Color</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A color that has the highest contrast with the given background image.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSColorC7CapableE12getTextColor10fromColors8withFont17onBackgroundImage9imageArea16conformanceLevelABSgSayABG_So6NSFontCSo7NSImageCAC0lN0OAC011ConformanceP0OtFZ"></a>
+                    <a name="//apple_ref/swift/Method/getTextColor(fromColors:withFont:onBackgroundImage:imageArea:conformanceLevel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSColorC7CapableE12getTextColor10fromColors8withFont17onBackgroundImage9imageArea16conformanceLevelABSgSayABG_So6NSFontCSo7NSImageCAC0lN0OAC011ConformanceP0OtFZ">getTextColor(fromColors:withFont:onBackgroundImage:imageArea:conformanceLevel:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculates the contrast ratio of a given list of text colors and a specific area of given background image. The first color that conforms to the conformance level defined gets returned. The default conformance level is .AA.</p>
+<li>colors: A list of possible text colors.</li>
+<li>font: The font used for the text.</li>
+<li>backgroundImage: The background image that the text should be displayed on.</li>
+<li>imageArea: The area of the image that is used as the text background. Defaults to .full.</li>
+<li><p>conformanceLevel: The conformance level that needs to be passed when calculating the contrast ratio. The default conformance level is .AA.</p></li>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Semi-transparent text colors will be blended with the background color. However, for the background image, the alpha component is ignored.</p>
+
+</div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>This function will also return <code>nil</code> if any input color is not convertable to the sRGB color space.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">getTextColor</span><span class="p">(</span><span class="n">fromColors</span> <span class="nv">colors</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/Color">Color</a></span><span class="p">],</span> <span class="n">withFont</span> <span class="nv">font</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/Font">Font</a></span><span class="p">,</span> <span class="n">onBackgroundImage</span> <span class="nv">image</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/Image">Image</a></span><span class="p">,</span> <span class="nv">imageArea</span><span class="p">:</span> <span class="kt"><a href="../Enums/ImageArea.html">ImageArea</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">full</span><span class="p">,</span> <span class="nv">conformanceLevel</span><span class="p">:</span> <span class="kt"><a href="../Enums/ConformanceLevel.html">ConformanceLevel</a></span> <span class="o">=</span> <span class="o">.</span><span class="kt">AA</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/Color">Color</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The first color that conforms to the conformance level defined or <code>nil</code> if non of the colors provided passed.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:So7NSColorC7CapableE18getBackgroundColor07forTextE0ABSgAB_tFZ"></a>
                     <a name="//apple_ref/swift/Method/getBackgroundColor(forTextColor:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:So7NSColorC7CapableE18getBackgroundColor07forTextE0ABSgAB_tFZ">getBackgroundColor(forTextColor:)</a>
@@ -500,8 +598,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/chrs1885" target="_blank" rel="external">Christoph Wendt</a>. All rights reserved. (Last updated: 2019-05-29)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/chrs1885" target="_blank" rel="external">Christoph Wendt</a>. All rights reserved. (Last updated: 2019-10-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
