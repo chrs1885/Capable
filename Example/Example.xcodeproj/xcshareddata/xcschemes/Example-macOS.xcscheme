@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1020"
+   LastUpgradeVersion = "1110"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "83C6F5DB20780FE700F0C74D"
-               BuildableName = "Example-iOS.app"
-               BlueprintName = "Example-iOS"
+               BlueprintIdentifier = "832953D321121EAA00072EB9"
+               BuildableName = "Example-macOS.app"
+               BlueprintName = "Example-macOS"
                ReferencedContainer = "container:Example.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,21 +29,12 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES"
       onlyGenerateCoverageForSpecifiedTargets = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "83C6F5DB20780FE700F0C74D"
-            BuildableName = "Example-iOS.app"
-            BlueprintName = "Example-iOS"
-            ReferencedContainer = "container:Example.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BFC740A3F63CCC2A563F58D698D14215"
+            BlueprintIdentifier = "30270BACA4BF8A3D78CC6418D2B0103C"
             BuildableName = "Capable.framework"
-            BlueprintName = "Capable-iOS"
+            BlueprintName = "Capable-macOS"
             ReferencedContainer = "container:Pods/Pods.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
@@ -52,9 +43,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4494E59123550B700082C217"
-               BuildableName = "Tests-iOS.xctest"
-               BlueprintName = "Tests-iOS"
+               BlueprintIdentifier = "4494E59F23550B870082C217"
+               BuildableName = "Tests-macOS.xctest"
+               BlueprintName = "Tests-macOS"
                ReferencedContainer = "container:Example.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -74,9 +65,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "83C6F5DB20780FE700F0C74D"
-            BuildableName = "Example-iOS.app"
-            BlueprintName = "Example-iOS"
+            BlueprintIdentifier = "832953D321121EAA00072EB9"
+            BuildableName = "Example-macOS.app"
+            BlueprintName = "Example-macOS"
             ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -91,9 +82,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "83C6F5DB20780FE700F0C74D"
-            BuildableName = "Example-iOS.app"
-            BlueprintName = "Example-iOS"
+            BlueprintIdentifier = "832953D321121EAA00072EB9"
+            BuildableName = "Example-macOS.app"
+            BlueprintName = "Example-macOS"
             ReferencedContainer = "container:Example.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
