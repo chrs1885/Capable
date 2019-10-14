@@ -8,7 +8,7 @@
 
 import UIKit
 import Capable
-//import SheetyColors
+import SheetyColors
 
 enum ColorType: String {
     case textColor = "Text Color"
@@ -74,31 +74,31 @@ extension ColorsViewController {
 // MARK: - Handling User Interaction
 extension ColorsViewController {
     @IBAction func colorButtonPressed(_ sender: Any) {
-//        let button = sender as! UIButton
-//        let colorType: ColorType = button == self.textColorButton ? .textColor : .backgroundColor
-//        let color = colorType == .textColor ? self.textColor : self.backgroundColor
-//        let alphaEnabled = colorType == .textColor
-//        
-//        let config = SheetyColorsConfig(alphaEnabled: alphaEnabled, hapticFeedbackEnabled: true, initialColor: color, title: "Select a \(colorType.rawValue)", type: .rgb)
-//        let sheetyColors = SheetyColorsController(withConfig: config)
-//        let selectAction = UIAlertAction(title: "Save Color", style: .default, handler: { _ in
-//            let selectedColor = sheetyColors.color
-//            if colorType == .textColor {
-//                self.textColor = selectedColor
-//            } else {
-//                self.backgroundColor = selectedColor
-//            }
-//            
-//            self.contrastRatio = UIColor.getContrastRatio(forTextColor: self.textColor, onBackgroundColor: self.backgroundColor)!
-//            self.updateColorButton(button: button, withColor: selectedColor)
-//            self.updateContrastRatioLabel()
-//            self.updateConformanceLevelViews()
-//        })
-//        sheetyColors.addAction(selectAction)
-//        
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-//        sheetyColors.addAction(cancelAction)
-//
-//        present(sheetyColors, animated: true, completion: nil)
+        let button = sender as! UIButton
+        let colorType: ColorType = button == self.textColorButton ? .textColor : .backgroundColor
+        let color = colorType == .textColor ? self.textColor : self.backgroundColor
+        let alphaEnabled = colorType == .textColor
+        
+        let config = SheetyColorsConfig(alphaEnabled: alphaEnabled, hapticFeedbackEnabled: true, initialColor: color, title: "Select a \(colorType.rawValue)", type: .rgb)
+        let sheetyColors = SheetyColorsController(withConfig: config)
+        let selectAction = UIAlertAction(title: "Save Color", style: .default, handler: { _ in
+            let selectedColor = sheetyColors.color
+            if colorType == .textColor {
+                self.textColor = selectedColor
+            } else {
+                self.backgroundColor = selectedColor
+            }
+            
+            self.contrastRatio = UIColor.getContrastRatio(forTextColor: self.textColor, onBackgroundColor: self.backgroundColor)!
+            self.updateColorButton(button: button, withColor: selectedColor)
+            self.updateContrastRatioLabel()
+            self.updateConformanceLevelViews()
+        })
+        sheetyColors.addAction(selectAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        sheetyColors.addAction(cancelAction)
+
+        present(sheetyColors, animated: true, completion: nil)
     }
 }

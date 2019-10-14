@@ -15,7 +15,7 @@ target 'Example-iOS' do
   platform :ios, '11.0'
 
   sharedPods
-  #pod 'SheetyColors', '1.0.0'
+  pod 'SheetyColors', '1.0.1'
   pod 'AppCenter/Analytics'
   pod 'Fabric'
   pod 'Answers'
