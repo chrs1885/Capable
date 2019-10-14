@@ -602,7 +602,7 @@
 		83C6F5D320780FE700F0C74D = {
 			isa = PBXGroup;
 			children = (
-				83C6F6202078138D00F0C74D /* Ressources */,
+				83C6F6202078138D00F0C74D /* Resources */,
 				83C6F6242078138E00F0C74D /* Source */,
 				4494E5B823550BF00082C217 /* Tests */,
 				83C6F5DD20780FE700F0C74D /* Products */,
@@ -626,13 +626,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		83C6F6202078138D00F0C74D /* Ressources */ = {
+		83C6F6202078138D00F0C74D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				83C6F6212078138D00F0C74D /* Assets.xcassets */,
 				83C6F6222078138D00F0C74D /* Fonts */,
 			);
-			path = Ressources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		83C6F6222078138D00F0C74D /* Fonts */ = {

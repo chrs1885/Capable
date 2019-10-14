@@ -9,11 +9,13 @@ import UIKit
 import Capable
 
 #if os(iOS)
+
 import Fabric
 import Answers
 import AppCenter
 import AppCenterAnalytics
 import Firebase
+
 #endif
 
 class FeatureOverviewController: UITableViewController {
