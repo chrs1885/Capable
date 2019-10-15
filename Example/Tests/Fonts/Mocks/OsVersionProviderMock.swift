@@ -7,14 +7,14 @@
 
 #if os(iOS) || os(tvOS)
 
-@testable import Capable
+    @testable import Capable
 
-class OsVersionProviderMock: OsVersionProviderProtocol {
-    var osVersionWithUIFontMetrics = false
+    class OsVersionProviderMock: OsVersionProviderProtocol {
+        var osVersionWithUIFontMetrics = false
 
-    func isOsVersionWithUIFontMetrics() -> Bool {
-        return self.osVersionWithUIFontMetrics
+        func isOsVersionWithUIFontMetrics() -> Bool {
+            return osVersionWithUIFontMetrics
+        }
     }
-}
 
 #endif

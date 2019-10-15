@@ -1,15 +1,14 @@
 #!/bin/bash
 
-# Run this script from the root directory just before releasing a new Capable version.
+# Run this script from the root directory just before releasing a new Capable version or submitting a new pull request.
 
-#============================= Documentation =============================
-echo "Updating framework documentation"
+#============================= Linting & Formatting =============================
+echo "Running SwiftFormat"
+#swift run swiftformat ./
 
-jazzy
+echo "Running SwiftLint"
+swift run swiftlint autocorrect --path ./
 
-#========================== Example dependencies =========================
-echo "Updating Capable dependency in example project"
-
-cd Example
-pod install
-cd ..
+#================================= Documentation ================================
+echo "Generating docs with SourceDocs"
+swift run sourcedocs generate --output-folder ./Documentation/Reference -- -workspace ./Example/Example.xcworkspace -scheme Capable-iOS

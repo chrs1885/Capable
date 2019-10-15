@@ -775,7 +775,7 @@
 				831B4F1120A4D4F200F1BB94 /* Frameworks */,
 				831B4F1220A4D4F200F1BB94 /* Resources */,
 				83E67A2B20CD946200FE6FC2 /* Embed Frameworks */,
-				CD63CA07C089828CF543BBC4 /* [CP] Embed Pods Frameworks */,
+				A788BE5E33D95CA689982915 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -794,8 +794,8 @@
 				832953D021121EAA00072EB9 /* Sources */,
 				832953D121121EAA00072EB9 /* Frameworks */,
 				832953D221121EAA00072EB9 /* Resources */,
-				66EBB1053BB87E5FD2CD23AA /* [CP] Embed Pods Frameworks */,
 				83FF01F62129FDF900D26E0D /* Embed Frameworks */,
+				A61EE5A19738AB2C58021A36 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -833,7 +833,7 @@
 				837C191E20AA27970003D237 /* Sources */,
 				837C191F20AA27970003D237 /* Frameworks */,
 				837C192020AA27970003D237 /* Resources */,
-				F67097C47BDCE4F9878E7D3B /* [CP] Embed Pods Frameworks */,
+				D34178DF1102C7F98B632D87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1101,24 +1101,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		66EBB1053BB87E5FD2CD23AA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example-macOS/Pods-Example-macOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Capable-macOS/Capable.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-macOS/Pods-Example-macOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		908CD651F925C69DAD7AE2BB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1153,6 +1135,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A61EE5A19738AB2C58021A36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example-macOS/Pods-Example-macOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Capable-macOS/Capable.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-macOS/Pods-Example-macOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A788BE5E33D95CA689982915 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Capable-tvOS/Capable.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BFB7E06181A4734FA448C13E /* [CP] Embed Pods Frameworks */ = {
@@ -1193,24 +1211,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CD63CA07C089828CF543BBC4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Capable-tvOS/Capable.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D32706A5F70834ABC6328786 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1229,6 +1229,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tests-macOS/Pods-Tests-macOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D34178DF1102C7F98B632D87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Capable-watchOS/Capable.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E0FC5F3AA5CB3DA8BF3D6D8B /* [CP] Check Pods Manifest.lock */ = {
@@ -1267,24 +1285,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tests-tvOS/Pods-Tests-tvOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F67097C47BDCE4F9878E7D3B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Capable-watchOS/Capable.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F8FA57791175301B6ECDDAD7 /* [CP] Check Pods Manifest.lock */ = {

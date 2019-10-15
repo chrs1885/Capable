@@ -5,9 +5,9 @@
 //  Created by Christoph Wendt on 15.01.19.
 //
 
-import Quick
-import Nimble
 @testable import Capable
+import Nimble
+import Quick
 
 class FontPropsTests: QuickSpec {
     override func spec() {

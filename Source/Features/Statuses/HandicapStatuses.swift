@@ -10,14 +10,14 @@ class HandicapStatuses: HandicapStatusesProtocol {
     let featureStatusesProvider: FeatureStatusesProviderProtocol
 
     init(withHandicaps handicaps: [Handicap], featureStatusesProvider: FeatureStatusesProviderProtocol) {
-        self.handicapMap = Dictionary(uniqueKeysWithValues: handicaps.map { ($0.name, $0) })
+        handicapMap = Dictionary(uniqueKeysWithValues: handicaps.map { ($0.name, $0) })
         self.featureStatusesProvider = featureStatusesProvider
     }
 
     var statusMap: [String: String] {
         var statusMap = [String: String]()
         for handicapName in handicapMap.keys {
-            statusMap[handicapName] = self.isHandicapEnabled(handicapName: handicapName).statusString
+            statusMap[handicapName] = isHandicapEnabled(handicapName: handicapName).statusString
         }
 
         return statusMap
@@ -29,7 +29,7 @@ class HandicapStatuses: HandicapStatusesProtocol {
         }
 
         for feature in handicap.features {
-            let isFeatureEnabled = self.featureStatusesProvider.isFeatureEnabled(feature: feature)
+            let isFeatureEnabled = featureStatusesProvider.isFeatureEnabled(feature: feature)
 
             if isFeatureEnabled, handicap.enabledIf == .oneFeatureEnabled {
                 return true
@@ -43,6 +43,7 @@ class HandicapStatuses: HandicapStatusesProtocol {
 }
 
 // MARK: - Equatable
+
 extension HandicapStatuses: Equatable {
     static func == (lhs: HandicapStatuses, rhs: HandicapStatuses) -> Bool {
         return

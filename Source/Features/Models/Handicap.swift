@@ -9,7 +9,6 @@
  Model class that groups a number of `CapableFeature`s to represent a user's handicap.
  */
 public struct Handicap: Equatable {
-
     /// A list of `CapableFeature`s that are expected to be enabled if a user has this handicap.
     public private(set) var features: [CapableFeature]
 

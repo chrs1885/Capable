@@ -5,9 +5,9 @@
 //  Created by Wendt, Christoph on 29.09.19.
 //
 
-import Quick
-import Nimble
 @testable import Capable
+import Nimble
+import Quick
 
 class ImageAreaTests: QuickSpec {
     override func spec() {

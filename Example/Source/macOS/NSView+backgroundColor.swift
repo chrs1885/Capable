@@ -9,7 +9,6 @@
 import AppKit
 
 extension NSView {
-
     var backgroundColor: NSColor? {
         get {
             if let colorRef = self.layer?.backgroundColor {
@@ -19,8 +18,8 @@ extension NSView {
             }
         }
         set {
-            self.wantsLayer = true
-            self.layer?.backgroundColor = newValue?.cgColor
+            wantsLayer = true
+            layer?.backgroundColor = newValue?.cgColor
         }
     }
 }

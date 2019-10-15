@@ -10,17 +10,17 @@ import AppKit
 import Capable
 
 class CaptionsViewController: NSViewController {
-    @IBOutlet weak var progressIndicator: NSProgressIndicator!
-    @IBOutlet weak var content: NSView!
-    @IBOutlet weak var topLeftLabel: NSTextField!
-    @IBOutlet weak var topCenterLabel: NSTextField!
-    @IBOutlet weak var topRightLabel: NSTextField!
-    @IBOutlet weak var centerLeftLabel: NSTextField!
-    @IBOutlet weak var centerLabel: NSTextField!
-    @IBOutlet weak var centerRightLabel: NSTextField!
-    @IBOutlet weak var bottomLeftLabel: NSTextField!
-    @IBOutlet weak var bottomCenterLabel: NSTextField!
-    @IBOutlet weak var bottomRightLabel: NSTextField!
+    @IBOutlet var progressIndicator: NSProgressIndicator!
+    @IBOutlet var content: NSView!
+    @IBOutlet var topLeftLabel: NSTextField!
+    @IBOutlet var topCenterLabel: NSTextField!
+    @IBOutlet var topRightLabel: NSTextField!
+    @IBOutlet var centerLeftLabel: NSTextField!
+    @IBOutlet var centerLabel: NSTextField!
+    @IBOutlet var centerRightLabel: NSTextField!
+    @IBOutlet var bottomLeftLabel: NSTextField!
+    @IBOutlet var bottomCenterLabel: NSTextField!
+    @IBOutlet var bottomRightLabel: NSTextField!
 
     var isLoading: Bool = true {
         didSet {
@@ -43,7 +43,7 @@ class CaptionsViewController: NSViewController {
 
     private func setupLabelColors() {
         let backgroundImage = NSImage(named: "captions_gradient")!
-        let labels: [NSTextField:ImageArea] = [
+        let labels: [NSTextField: ImageArea] = [
             topLeftLabel: .topLeft,
             topCenterLabel: .topCenter,
             topRightLabel: .topRight,
@@ -52,7 +52,7 @@ class CaptionsViewController: NSViewController {
             centerRightLabel: .centerRight,
             bottomLeftLabel: .bottomLeft,
             bottomCenterLabel: .bottomCenter,
-            bottomRightLabel: .bottomRight
+            bottomRightLabel: .bottomRight,
         ]
 
         isLoading = true

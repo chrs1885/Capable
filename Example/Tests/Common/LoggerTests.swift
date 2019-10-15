@@ -5,10 +5,10 @@
 //  Created by Christoph Wendt on 09.11.18.
 //
 
-import Quick
+@testable import Capable
 import Nimble
 import os.log
-@testable import Capable
+import Quick
 
 class LoggerTests: QuickSpec {
     override func spec() {
@@ -18,7 +18,7 @@ class LoggerTests: QuickSpec {
 
             beforeEach {
                 testLoggedMessagesTypes = []
-                testOnLog = { message, logType in
+                testOnLog = { _, logType in
                     testLoggedMessagesTypes?.append(logType)
                 }
                 Logger.onLog = testOnLog!

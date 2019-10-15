@@ -5,9 +5,9 @@
 //  Created by Christoph Wendt on 24.11.18.
 //
 
-import Quick
-import Nimble
 @testable import Capable
+import Nimble
+import Quick
 
 class ConformanceLevelTests: QuickSpec {
     override func spec() {

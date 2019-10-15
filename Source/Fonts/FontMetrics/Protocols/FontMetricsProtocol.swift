@@ -7,13 +7,13 @@
 
 #if os(iOS) || os(tvOS) || os(watchOS)
 
-import UIKit
+    import UIKit
 
-protocol FontMetricsProtocol {
-    func scaledFont(for: UIFont) -> UIFont
-}
+    protocol FontMetricsProtocol {
+        func scaledFont(for: UIFont) -> UIFont
+    }
 
-@available(iOS 11.0, tvOS 11.0, watchOS 4.0, *)
-extension UIFontMetrics: FontMetricsProtocol {}
+    @available(iOS 11.0, tvOS 11.0, watchOS 4.0, *)
+    extension UIFontMetrics: FontMetricsProtocol {}
 
 #endif

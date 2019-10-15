@@ -7,40 +7,40 @@
 
 #if os(iOS) || os(tvOS) || os(watchOS)
 
-import UIKit
+    import UIKit
 
-struct Colors {
-    static let white = UIColor(white: 1.0, alpha: 1.0)
-    static let black = UIColor(white: 0.0, alpha: 1.0)
-    static let colorWithContrastRatio3 = UIColor(red: 148/255.0, green: 148/255.0, blue: 148/255.0, alpha: 1.0)
-    static let colorWithContrastRatio4_5 = UIColor(red: 118/255.0, green: 118/255.0, blue: 118/255.0, alpha: 1.0)
-    static let colorWithContrastRatio7 = UIColor(red: 89/255.0, green: 89/255.0, blue: 89/255.0, alpha: 1.0)
-    static let semiTransparentColor = UIColor(red: 0.5, green: 0.0, blue: 1.0, alpha: 0.75)
-    static let p3Color = UIColor(displayP3Red: 1.5, green: -1.5, blue: 0.5, alpha: 1.0)
-}
+    struct Colors {
+        static let white = UIColor(white: 1.0, alpha: 1.0)
+        static let black = UIColor(white: 0.0, alpha: 1.0)
+        static let colorWithContrastRatio3 = UIColor(red: 148 / 255.0, green: 148 / 255.0, blue: 148 / 255.0, alpha: 1.0)
+        static let colorWithContrastRatio4_5 = UIColor(red: 118 / 255.0, green: 118 / 255.0, blue: 118 / 255.0, alpha: 1.0)
+        static let colorWithContrastRatio7 = UIColor(red: 89 / 255.0, green: 89 / 255.0, blue: 89 / 255.0, alpha: 1.0)
+        static let semiTransparentColor = UIColor(red: 0.5, green: 0.0, blue: 1.0, alpha: 0.75)
+        static let p3Color = UIColor(displayP3Red: 1.5, green: -1.5, blue: 0.5, alpha: 1.0)
+    }
 
 #elseif os(OSX)
 
-import AppKit
-public typealias Color = NSColor
-public typealias Font = NSFont
+    import AppKit
+    public typealias Color = NSColor
+    public typealias Font = NSFont
 
-struct Colors {
-    static let white = NSColor(white: 1.0, alpha: 1.0)
-    static let black = NSColor(white: 0.0, alpha: 1.0)
-    static let colorWithContrastRatio3 = NSColor(deviceRed: 148/255.0, green: 148/255.0, blue: 148/255.0, alpha: 1.0)
-    static let colorWithContrastRatio4_5 = NSColor(deviceRed: 118/255.0, green: 118/255.0, blue: 118/255.0, alpha: 1.0)
-    static let colorWithContrastRatio7 = NSColor(deviceRed: 89/255.0, green: 89/255.0, blue: 89/255.0, alpha: 1.0)
-    static let semiTransparentColor = NSColor(deviceRed: 0.5, green: 0.0, blue: 1.0, alpha: 0.75)
-    static let cmykColor = NSColor(deviceCyan: 1.0, magenta: 0.0, yellow: 0.0, black: 0.0, alpha: 1.0)
-    static let p3Color = NSColor(displayP3Red: 2.0, green: -1.0, blue: 0.5, alpha: 1.0)
-}
+    struct Colors {
+        static let white = NSColor(white: 1.0, alpha: 1.0)
+        static let black = NSColor(white: 0.0, alpha: 1.0)
+        static let colorWithContrastRatio3 = NSColor(deviceRed: 148 / 255.0, green: 148 / 255.0, blue: 148 / 255.0, alpha: 1.0)
+        static let colorWithContrastRatio4_5 = NSColor(deviceRed: 118 / 255.0, green: 118 / 255.0, blue: 118 / 255.0, alpha: 1.0)
+        static let colorWithContrastRatio7 = NSColor(deviceRed: 89 / 255.0, green: 89 / 255.0, blue: 89 / 255.0, alpha: 1.0)
+        static let semiTransparentColor = NSColor(deviceRed: 0.5, green: 0.0, blue: 1.0, alpha: 0.75)
+        static let cmykColor = NSColor(deviceCyan: 1.0, magenta: 0.0, yellow: 0.0, black: 0.0, alpha: 1.0)
+        static let p3Color = NSColor(displayP3Red: 2.0, green: -1.0, blue: 0.5, alpha: 1.0)
+    }
 
 #endif
 
-import Quick
-import Nimble
 @testable import Capable
+import Nimble
+import Quick
 
 class ColorWcagTests: QuickSpec {
     override func spec() {
@@ -80,13 +80,13 @@ class ColorWcagTests: QuickSpec {
 
                         #if os(iOS) || os(tvOS) || os(watchOS)
 
-                        var whiteComponent: CGFloat = 0, alphaComponent: CGFloat = 0
-                        Colors.white.getWhite(&whiteComponent, alpha: &alphaComponent)
+                            var whiteComponent: CGFloat = 0, alphaComponent: CGFloat = 0
+                            Colors.white.getWhite(&whiteComponent, alpha: &alphaComponent)
 
                         #elseif os(OSX)
 
-                        let whiteComponent = Colors.white.whiteComponent
-                        let alphaComponent = Colors.white.alphaComponent
+                            let whiteComponent = Colors.white.whiteComponent
+                            let alphaComponent = Colors.white.alphaComponent
 
                         #endif
 
@@ -99,11 +99,11 @@ class ColorWcagTests: QuickSpec {
 
                 #if os(OSX)
 
-                context("when color space is CMYK compatible") {
-                    it("converts the color to sRGB") {
-                        expect(Colors.cmykColor.rgbaColor).toNot(throwError())
+                    context("when color space is CMYK compatible") {
+                        it("converts the color to sRGB") {
+                            expect(Colors.cmykColor.rgbaColor).toNot(throwError())
+                        }
                     }
-                }
 
                 #endif
             }
@@ -172,7 +172,7 @@ class ColorWcagTests: QuickSpec {
                         colors = [
                             Colors.colorWithContrastRatio3,
                             Colors.colorWithContrastRatio4_5,
-                            Colors.colorWithContrastRatio7
+                            Colors.colorWithContrastRatio7,
                         ]
                     }
 
@@ -239,110 +239,108 @@ class ColorWcagTests: QuickSpec {
 
                 #if os(iOS) || os(tvOS) || os(OSX)
 
-                context("by passing in a dark background image") {
-                    it("returns white") {
-                        let backgroundImage = Image.mock(withColor: Colors.black)
-                        let actual = Color.getTextColor(onBackgroundImage: backgroundImage)
+                    context("by passing in a dark background image") {
+                        it("returns white") {
+                            let backgroundImage = Image.mock(withColor: Colors.black)
+                            let actual = Color.getTextColor(onBackgroundImage: backgroundImage)
 
-                        expect(actual).to(equal(Color.white))
-                    }
-                }
-
-                context("by passing in a light background image") {
-                    it("returns black") {
-                        let backgroundImage = Image.mock(withColor: Colors.white)
-                        let actual = Color.getTextColor(onBackgroundImage: backgroundImage)
-
-                        expect(actual).to(equal(Color.black))
-                    }
-                }
-
-                context("by passing in a background image with a medium relative luminance") {
-                    it("returns black") {
-                        let backgroundImage = Image.mock(withColor: Colors.colorWithContrastRatio4_5)
-                        let actual = Color.getTextColor(onBackgroundImage: backgroundImage)
-
-                        expect(actual).to(equal(Color.black))
-                    }
-                }
-
-                context("by passing a background image and a list of text colors") {
-                    var colors: [Color]!
-                    var backgroundImage: Image!
-
-                    beforeEach {
-                        backgroundImage = Image.mock(withColor: Colors.white)
-                        colors = [
-                            Colors.colorWithContrastRatio3,
-                            Colors.colorWithContrastRatio4_5,
-                            Colors.colorWithContrastRatio7
-                        ]
-                    }
-
-                    context("by not providing any passing color") {
-                        it("returns nil") {
-
-                            let actual = Color.getTextColor(fromColors: [], withFont: Fonts.smallFont, onBackgroundImage: backgroundImage, conformanceLevel: .AA)
-
-                            expect(actual).to(beNil())
+                            expect(actual).to(equal(Color.white))
                         }
                     }
 
-                    context("when defining conformance level .AA") {
-                        context("when using a small font") {
-                            it("returns a color of conformance level 4.5") {
-                                let actual = Color.getTextColor(fromColors: colors, withFont: Fonts.smallFont, onBackgroundImage: backgroundImage, conformanceLevel: .AA)
+                    context("by passing in a light background image") {
+                        it("returns black") {
+                            let backgroundImage = Image.mock(withColor: Colors.white)
+                            let actual = Color.getTextColor(onBackgroundImage: backgroundImage)
 
-                                expect(actual).to(equal(Colors.colorWithContrastRatio4_5))
+                            expect(actual).to(equal(Color.black))
+                        }
+                    }
+
+                    context("by passing in a background image with a medium relative luminance") {
+                        it("returns black") {
+                            let backgroundImage = Image.mock(withColor: Colors.colorWithContrastRatio4_5)
+                            let actual = Color.getTextColor(onBackgroundImage: backgroundImage)
+
+                            expect(actual).to(equal(Color.black))
+                        }
+                    }
+
+                    context("by passing a background image and a list of text colors") {
+                        var colors: [Color]!
+                        var backgroundImage: Image!
+
+                        beforeEach {
+                            backgroundImage = Image.mock(withColor: Colors.white)
+                            colors = [
+                                Colors.colorWithContrastRatio3,
+                                Colors.colorWithContrastRatio4_5,
+                                Colors.colorWithContrastRatio7,
+                            ]
+                        }
+
+                        context("by not providing any passing color") {
+                            it("returns nil") {
+                                let actual = Color.getTextColor(fromColors: [], withFont: Fonts.smallFont, onBackgroundImage: backgroundImage, conformanceLevel: .AA)
+
+                                expect(actual).to(beNil())
                             }
                         }
 
-                        context("when using a small bold font") {
-                            it("returns a color of conformance level 3") {
-                                let actual = Color.getTextColor(fromColors: colors, withFont: Fonts.smallBoldFont, onBackgroundImage: backgroundImage, conformanceLevel: .AA)
+                        context("when defining conformance level .AA") {
+                            context("when using a small font") {
+                                it("returns a color of conformance level 4.5") {
+                                    let actual = Color.getTextColor(fromColors: colors, withFont: Fonts.smallFont, onBackgroundImage: backgroundImage, conformanceLevel: .AA)
 
-                                expect(actual).to(equal(Colors.colorWithContrastRatio3))
+                                    expect(actual).to(equal(Colors.colorWithContrastRatio4_5))
+                                }
+                            }
+
+                            context("when using a small bold font") {
+                                it("returns a color of conformance level 3") {
+                                    let actual = Color.getTextColor(fromColors: colors, withFont: Fonts.smallBoldFont, onBackgroundImage: backgroundImage, conformanceLevel: .AA)
+
+                                    expect(actual).to(equal(Colors.colorWithContrastRatio3))
+                                }
+                            }
+
+                            context("when using a large font") {
+                                it("returns a color of conformance level 3") {
+                                    let actual = Color.getTextColor(fromColors: colors, withFont: Fonts.largeFont, onBackgroundImage: backgroundImage, conformanceLevel: .AA)
+
+                                    expect(actual).to(equal(Colors.colorWithContrastRatio3))
+                                }
                             }
                         }
 
-                        context("when using a large font") {
-                            it("returns a color of conformance level 3") {
-                                let actual = Color.getTextColor(fromColors: colors, withFont: Fonts.largeFont, onBackgroundImage: backgroundImage, conformanceLevel: .AA)
+                        context("when defining conformance level .AAA") {
+                            context("when using a small font") {
+                                it("returns a color of conformance level 7") {
+                                    let actual = Color.getTextColor(fromColors: colors, withFont: Fonts.smallFont, onBackgroundImage: backgroundImage, conformanceLevel: .AAA)
 
-                                expect(actual).to(equal(Colors.colorWithContrastRatio3))
+                                    expect(actual).to(equal(Colors.colorWithContrastRatio7))
+                                }
+                            }
+
+                            context("when using a small bold font") {
+                                it("returns a color of conformance level 4.5") {
+                                    let actual = Color.getTextColor(fromColors: colors, withFont: Fonts.smallBoldFont, onBackgroundImage: backgroundImage, conformanceLevel: .AAA)
+
+                                    expect(actual).to(equal(Colors.colorWithContrastRatio4_5))
+                                }
+                            }
+
+                            context("when using a large font") {
+                                it("returns a color of conformance level 4.5") {
+                                    let actual = Color.getTextColor(fromColors: colors, withFont: Fonts.largeFont, onBackgroundImage: backgroundImage, conformanceLevel: .AAA)
+
+                                    expect(actual).to(equal(Colors.colorWithContrastRatio4_5))
+                                }
                             }
                         }
                     }
-
-                    context("when defining conformance level .AAA") {
-                        context("when using a small font") {
-                            it("returns a color of conformance level 7") {
-                                let actual = Color.getTextColor(fromColors: colors, withFont: Fonts.smallFont, onBackgroundImage: backgroundImage, conformanceLevel: .AAA)
-
-                                expect(actual).to(equal(Colors.colorWithContrastRatio7))
-                            }
-                        }
-
-                        context("when using a small bold font") {
-                            it("returns a color of conformance level 4.5") {
-                                let actual = Color.getTextColor(fromColors: colors, withFont: Fonts.smallBoldFont, onBackgroundImage: backgroundImage, conformanceLevel: .AAA)
-
-                                expect(actual).to(equal(Colors.colorWithContrastRatio4_5))
-                            }
-                        }
-
-                        context("when using a large font") {
-                            it("returns a color of conformance level 4.5") {
-                                let actual = Color.getTextColor(fromColors: colors, withFont: Fonts.largeFont, onBackgroundImage: backgroundImage, conformanceLevel: .AAA)
-
-                                expect(actual).to(equal(Colors.colorWithContrastRatio4_5))
-                            }
-                        }
-                    }
-                }
 
                 #endif
-
             }
 
             context("when calling getBackgroundColor") {
@@ -378,7 +376,7 @@ class ColorWcagTests: QuickSpec {
                     colors = [
                         Colors.colorWithContrastRatio3,
                         Colors.colorWithContrastRatio4_5,
-                        Colors.colorWithContrastRatio7
+                        Colors.colorWithContrastRatio7,
                     ]
                 }
 

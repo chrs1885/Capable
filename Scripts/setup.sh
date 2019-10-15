@@ -1,13 +1,7 @@
 #!/bin/sh
+# Run this script from the root directory just before starting to contribute code.
 
-# Run this script before contributing code.
+#================================= Tooling =================================
+echo "Installing tools (SwiftLint, SwiftFormat, and SourceDocs"
 
-#================================= Jazzy =================================
-echo "Installing Jazzy for generating code documentation (https://github.com/realm/jazzy)"
-
-gem install jazzy
-
-#=============================== SwiftLint ===============================
-echo "Installing SwiftLint to enforce the Capable coding style & conventions"
-
-brew install swiftlint
+swift build

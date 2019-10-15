@@ -6,11 +6,11 @@
 //
 
 #if os(iOS)
-import UIKit
+    import UIKit
 #endif
 
 #if os(watchOS)
-import WatchKit
+    import WatchKit
 #endif
 
 class FeatureStatuses: StatusesProtocol {
@@ -25,29 +25,28 @@ class FeatureStatuses: StatusesProtocol {
     var statusMap: [String: String] {
         var statusMap = [String: String]()
 
-        for feature in self.features {
-
+        for feature in features {
             #if os(iOS)
 
-            if feature == .hearingDevice {
-                statusMap[feature.rawValue] = self.featureStatusesProvider.hearingDevicePairedEar.statusString
-                continue
-            }
-            if feature == .largerText {
-                statusMap[feature.rawValue] = self.featureStatusesProvider.largerTextCatagory.stringValue
-                continue
-            }
+                if feature == .hearingDevice {
+                    statusMap[feature.rawValue] = featureStatusesProvider.hearingDevicePairedEar.statusString
+                    continue
+                }
+                if feature == .largerText {
+                    statusMap[feature.rawValue] = featureStatusesProvider.largerTextCatagory.stringValue
+                    continue
+                }
 
             #elseif os(watchOS)
 
-            if feature == .largerText {
-                statusMap[feature.rawValue] = self.featureStatusesProvider.largerTextCatagory
-                continue
-            }
+                if feature == .largerText {
+                    statusMap[feature.rawValue] = featureStatusesProvider.largerTextCatagory
+                    continue
+                }
 
             #endif
 
-            statusMap[feature.rawValue] = self.featureStatusesProvider.isFeatureEnabled(feature: feature).statusString
+            statusMap[feature.rawValue] = featureStatusesProvider.isFeatureEnabled(feature: feature).statusString
         }
 
         return statusMap
@@ -55,6 +54,7 @@ class FeatureStatuses: StatusesProtocol {
 }
 
 // MARK: - Equatable
+
 extension FeatureStatuses: Equatable {
     static func == (lhs: FeatureStatuses, rhs: FeatureStatuses) -> Bool {
         return

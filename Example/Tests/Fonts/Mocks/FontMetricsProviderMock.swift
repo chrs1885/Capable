@@ -7,14 +7,14 @@
 
 #if os(iOS) || os(tvOS)
 
-@testable import Capable
+    @testable import Capable
 
-class FontMetricsProviderMock: FontMetricsProviderProtocol {
-    let fontMetrics: FontMetricsProtocol
+    class FontMetricsProviderMock: FontMetricsProviderProtocol {
+        let fontMetrics: FontMetricsProtocol
 
-    init(fontMetrics: FontMetricsProtocol) {
-        self.fontMetrics = fontMetrics
+        init(fontMetrics: FontMetricsProtocol) {
+            self.fontMetrics = fontMetrics
+        }
     }
-}
 
 #endif

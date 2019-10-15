@@ -6,47 +6,48 @@
 //  Copyright © 2018 Christoph Wendt. All rights reserved.
 //
 
-import Cocoa
 import Capable
+import Cocoa
 
 class FeatureOverviewController: NSViewController {
-    @IBOutlet weak var featuresTableView: NSTableView!
+    @IBOutlet var featuresTableView: NSTableView!
     var objects: [String: String]?
     var capable: Capable?
     var alert: NSAlert?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.capable = Capable()
-        self.refreshData()
+        capable = Capable()
+        refreshData()
     }
 
     override func viewWillAppear() {
         super.viewWillAppear()
-        self.registerObservers()
+        registerObservers()
     }
 
     override func viewWillDisappear() {
         super.viewWillDisappear()
-        self.unregisterObservers()
+        unregisterObservers()
     }
 
     func refreshData() {
         if let capable = self.capable {
-            self.objects = capable.statusMap
+            objects = capable.statusMap
         }
     }
 }
 
 // MARK: - Table View
-extension FeatureOverviewController: NSTableViewDataSource, NSTableViewDelegate{
-    func numberOfRows(in tableView: NSTableView) -> Int {
+
+extension FeatureOverviewController: NSTableViewDataSource, NSTableViewDelegate {
+    func numberOfRows(in _: NSTableView) -> Int {
         return objects?.count ?? 0
     }
 
-    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?{
+    func tableView(_ tableView: NSTableView, viewFor _: NSTableColumn?, row: Int) -> NSView? {
         let cell: FeatureTableCellView = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "FeatureRow"), owner: self) as! FeatureTableCellView
-        let feature = self.value(forRow: row)
+        let feature = value(forRow: row)
         cell.textLabel.stringValue = feature.key
         cell.detailTextLabel.stringValue = feature.value
 
@@ -63,29 +64,32 @@ extension FeatureOverviewController: NSTableViewDataSource, NSTableViewDelegate{
 }
 
 // MARK: - Toolbar actions
+
 extension FeatureOverviewController {
-    @IBAction func refresh(_ sender: Any) {
-        self.refreshData()
-        self.featuresTableView.reloadData()
+    @IBAction func refresh(_: Any) {
+        refreshData()
+        featuresTableView.reloadData()
     }
 }
 
 // MARK: Capable Notification
+
 extension FeatureOverviewController {
     @objc private func featureStatusChanged(notification: NSNotification) {
         if let featureStatus = notification.object as? FeatureStatus {
-            self.showAlert(for: featureStatus)
+            showAlert(for: featureStatus)
             refreshData()
-            self.featuresTableView.reloadData()
+            featuresTableView.reloadData()
         }
     }
 
     func registerObservers() {
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(self.featureStatusChanged),
+            selector: #selector(featureStatusChanged),
             name: .CapableFeatureStatusDidChange,
-            object: nil)
+            object: nil
+        )
     }
 
     func unregisterObservers() {
@@ -94,6 +98,7 @@ extension FeatureOverviewController {
 }
 
 // MARK: Alert
+
 extension FeatureOverviewController {
     private func showAlert(for featureStatus: FeatureStatus) {
         let alert = NSAlert()

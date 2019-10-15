@@ -7,8 +7,8 @@
 
 #if os(iOS) || os(tvOS) || os(watchOS)
 
-protocol OsVersionProviderProtocol {
-    func isOsVersionWithUIFontMetrics() -> Bool
-}
+    protocol OsVersionProviderProtocol {
+        func isOsVersionWithUIFontMetrics() -> Bool
+    }
 
 #endif

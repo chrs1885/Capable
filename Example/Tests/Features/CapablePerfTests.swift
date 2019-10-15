@@ -7,22 +7,22 @@
 
 #if os(iOS) || os(tvOS) || os(OSX)
 
-import XCTest
-import Capable
+    import Capable
+    import XCTest
 
-class CapablePerfTests: XCTestCase {
-    var sut: Capable?
+    class CapablePerfTests: XCTestCase {
+        var sut: Capable?
 
-    override func setUp() {
-        super.setUp()
-        sut = Capable(withFeatures: CapableFeature.allCases)
-    }
+        override func setUp() {
+            super.setUp()
+            sut = Capable(withFeatures: CapableFeature.allCases)
+        }
 
-    func testStatusMapPerformance() {
-        measure {
-            _ = sut!.statusMap
+        func testStatusMapPerformance() {
+            measure {
+                _ = sut!.statusMap
+            }
         }
     }
-}
 
 #endif
