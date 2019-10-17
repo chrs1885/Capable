@@ -48,7 +48,7 @@ Each Capable feature is backed by the built-in logging system, which will keep y
 
 ## Documentation
 
-Capable offers a whole lot of features along with a bunch of configurations. To find more about how to use them inside the [documentation](https://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/1.1.0/Documentation/index.html) section.
+Capable offers a whole lot of features along with a bunch of configurations. To find more about how to use them inside the [documentation](Documentation/Reference/README.md) section.
 
 ## Installation
 
@@ -85,7 +85,7 @@ github "chrs1885/Capable"
 
 ```ruby
 dependencies: [
-    .package(url: "https://github.com/chrs1885/Capable.git", from: "1.1.0")
+    .package(url: "https://github.com/chrs1885/Capable.git", from: "1.1.1")
 ]
 ```
 
@@ -290,7 +290,7 @@ let textColor = UIColor.getTextColor(
 )!
 ```
 
-You can find an overview of all image areas available in the [documentation](https://htmlpreview.github.io/?https://raw.githubusercontent.com/chrs1885/Capable/1.1.0/Documentation/Enums/ImageArea.html).
+You can find an overview of all image areas available in the [documentation](Documentation/Reference/enums/ImageArea.md).
 
 #### Calculating contrast ratios & WCAG conformance levels
 
