@@ -36,6 +36,6 @@ struct FontsConstants {
         (
             font: UIFont.scaledItalicSystemFont(ofSize: defaultFontSize),
             description: "Scaled Italic System Font"
-        )
+        ),
     ]
 }

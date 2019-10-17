@@ -1,3 +1,10 @@
+## Version 1.1.1
+
+### Enhancements
+* Add SPM support for iOS, macOS, tvOS, and watchOS
+* Update project structure to match the CocoaPods lib template
+* Improve development tooling by adding SwiftFormat, SwiftLint, and SourceDocs (replacement for Jazzy)
+
 ## Version 1.1.0
 
 ### Features

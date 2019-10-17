@@ -11,7 +11,6 @@ infix operator >=: ComparisonPrecedence
 
 /// An enum specifying all WCAG conformance levels.
 public enum ConformanceLevel: Int {
-
     /// The minimum level of conformance.
     case A = 1
 

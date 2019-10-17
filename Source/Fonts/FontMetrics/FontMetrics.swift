@@ -7,18 +7,18 @@
 
 #if os(iOS) || os(tvOS) || os(watchOS)
 
-import UIKit
+    import UIKit
 
-class FontMetrics: FontMetricsProtocol {
-    var fontMetrics: FontMetricsProtocol
+    class FontMetrics: FontMetricsProtocol {
+        var fontMetrics: FontMetricsProtocol
 
-    init(fontMetricsProvider: FontMetricsProviderProtocol = FontMetricsProvider()) {
-        self.fontMetrics = fontMetricsProvider.fontMetrics
+        init(fontMetricsProvider: FontMetricsProviderProtocol = FontMetricsProvider()) {
+            fontMetrics = fontMetricsProvider.fontMetrics
+        }
+
+        func scaledFont(for font: UIFont) -> UIFont {
+            return fontMetrics.scaledFont(for: font)
+        }
     }
-
-    func scaledFont(for font: UIFont) -> UIFont {
-        return self.fontMetrics.scaledFont(for: font)
-    }
-}
 
 #endif

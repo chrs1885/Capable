@@ -7,16 +7,16 @@
 
 #if os(iOS) || os(tvOS) || os(watchOS)
 
-import UIKit
+    import UIKit
 
-extension UIFont {
-    var fontProps: FontProps {
-        return FontProps(fontSize: self.pointSize, isBoldFont: self.isBold)
-    }
+    extension UIFont {
+        var fontProps: FontProps {
+            return FontProps(fontSize: pointSize, isBoldFont: isBold)
+        }
 
-    var isBold: Bool {
-        return (self.fontDescriptor.symbolicTraits.rawValue & UIFontDescriptor.SymbolicTraits.traitBold.rawValue) != 0
+        var isBold: Bool {
+            return (fontDescriptor.symbolicTraits.rawValue & UIFontDescriptor.SymbolicTraits.traitBold.rawValue) != 0
+        }
     }
-}
 
 #endif
