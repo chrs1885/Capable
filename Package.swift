@@ -43,8 +43,8 @@ let package = Package(
     let config = PackageConfiguration([
         "komondor": [
             "pre-commit": [
+                // "swift run swiftlint",
                 "swift run swiftformat .",
-                // "swift run swiftlint autocorrect",
                 "swift run sourcedocs generate --spm-module Capable",
             ],
         ],
