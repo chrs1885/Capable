@@ -17,7 +17,7 @@ struct Logger {
     )
 
     private static func logIfNeeded(message: String, logType: OSLogType) {
-        if logType >= self.minLogType {
+        if logType >= minLogType {
             onLog(message, logType)
         }
     }
@@ -28,6 +28,7 @@ struct Logger {
 }
 
 // MARK: - Logging API
+
 extension Logger {
     static func verbose(_ message: String) {
         logIfNeeded(message: message, logType: .debug)

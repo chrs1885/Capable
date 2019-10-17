@@ -7,16 +7,16 @@
 
 #if os(iOS) || os(tvOS) || os(watchOS)
 
-import UIKit
+    import UIKit
 
-class FontMetricsSupport: FontMetricsProtocol {
-    private var scaler: CGFloat {
-        return UIFont.preferredFont(forTextStyle: .body).pointSize / 17.0
-    }
+    class FontMetricsSupport: FontMetricsProtocol {
+        private var scaler: CGFloat {
+            return UIFont.preferredFont(forTextStyle: .body).pointSize / 17.0
+        }
 
-    func scaledFont(for font: UIFont) -> UIFont {
-        return font.withSize(scaler * font.pointSize)
+        func scaledFont(for font: UIFont) -> UIFont {
+            return font.withSize(scaler * font.pointSize)
+        }
     }
-}
 
 #endif

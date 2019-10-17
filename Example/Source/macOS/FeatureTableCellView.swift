@@ -6,10 +6,10 @@
 //  Copyright © 2018 Christoph Wendt. All rights reserved.
 //
 
-import Foundation
 import Cocoa
+import Foundation
 
 class FeatureTableCellView: NSTableCellView {
-    @IBOutlet weak var textLabel: NSTextField!
-    @IBOutlet weak var detailTextLabel: NSTextField!
+    @IBOutlet var textLabel: NSTextField!
+    @IBOutlet var detailTextLabel: NSTextField!
 }

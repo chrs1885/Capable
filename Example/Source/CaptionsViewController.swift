@@ -6,21 +6,21 @@
 //  Copyright © 2019 Christoph Wendt. All rights reserved.
 //
 
-import UIKit
 import Capable
+import UIKit
 
 class CaptionsViewController: UIViewController {
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var content: UIView!
-    @IBOutlet weak var topLeftLabel: UILabel!
-    @IBOutlet weak var topCenterLabel: UILabel!
-    @IBOutlet weak var topRightLabel: UILabel!
-    @IBOutlet weak var centerLeftLabel: UILabel!
-    @IBOutlet weak var centerLabel: UILabel!
-    @IBOutlet weak var centerRightLabel: UILabel!
-    @IBOutlet weak var bottomLeftLabel: UILabel!
-    @IBOutlet weak var bottomCenterLabel: UILabel!
-    @IBOutlet weak var bottomRightLabel: UILabel!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var content: UIView!
+    @IBOutlet var topLeftLabel: UILabel!
+    @IBOutlet var topCenterLabel: UILabel!
+    @IBOutlet var topRightLabel: UILabel!
+    @IBOutlet var centerLeftLabel: UILabel!
+    @IBOutlet var centerLabel: UILabel!
+    @IBOutlet var centerRightLabel: UILabel!
+    @IBOutlet var bottomLeftLabel: UILabel!
+    @IBOutlet var bottomCenterLabel: UILabel!
+    @IBOutlet var bottomRightLabel: UILabel!
 
     var isLoading: Bool = true {
         didSet {
@@ -43,7 +43,7 @@ class CaptionsViewController: UIViewController {
 
     private func setupLabelColors() {
         let backgroundImage = UIImage(named: "captions_gradient")!
-        let labels: [UILabel:ImageArea] = [
+        let labels: [UILabel: ImageArea] = [
             topLeftLabel: .topLeft,
             topCenterLabel: .topCenter,
             topRightLabel: .topRight,
@@ -52,7 +52,7 @@ class CaptionsViewController: UIViewController {
             centerRightLabel: .centerRight,
             bottomLeftLabel: .bottomLeft,
             bottomCenterLabel: .bottomCenter,
-            bottomRightLabel: .bottomRight
+            bottomRightLabel: .bottomRight,
         ]
 
         isLoading = true

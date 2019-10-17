@@ -7,7 +7,6 @@
 
 /// Model class that describes the content of a Capable notification (see `Notification.Name.CapableHandicapStatusDidChange`)
 public struct HandicapStatus {
-
     /// The `Handicap` that has changed.
     public private(set) var handicap: Handicap
 

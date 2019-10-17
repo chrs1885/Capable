@@ -16,8 +16,8 @@ class HandicapNotifications: Notifications {
         self.init(featureStatusesProvider: featureStatusesProvider, targetNotificationCenter: targetNotificationCenter, systemNotificationCenter: systemNotificationCenter)
         self.statusesModule = statusesModule
         self.handicaps = handicaps
-        self.lastValues = Dictionary(uniqueKeysWithValues: self.handicaps.map { ($0.name, statusesModule.isHandicapEnabled(handicapName: $0.name).statusString) })
-        self.enableNotifications(forHandicaps: handicaps)
+        lastValues = Dictionary(uniqueKeysWithValues: self.handicaps.map { ($0.name, statusesModule.isHandicapEnabled(handicapName: $0.name).statusString) })
+        enableNotifications(forHandicaps: handicaps)
     }
 
     required init(featureStatusesProvider: FeatureStatusesProviderProtocol, targetNotificationCenter: NotificationCenter = NotificationCenter.default, systemNotificationCenter: NotificationCenter = Notifications.systemNotificationCenter) {
@@ -25,11 +25,11 @@ class HandicapNotifications: Notifications {
     }
 
     override func postNotification(withFeature feature: CapableFeature, statusString: String) {
-        for handicap in self.handicaps {
-            if handicap.features.contains(feature), self.hasStatusChanged(handicap: handicap) {
-                self.lastValues[handicap.name] = statusString
+        for handicap in handicaps {
+            if handicap.features.contains(feature), hasStatusChanged(handicap: handicap) {
+                lastValues[handicap.name] = statusString
                 let handicapStatus = HandicapStatus(handicap: handicap, statusString: statusString)
-                self.targetNotificationCenter.post(name: .CapableHandicapStatusDidChange, object: handicapStatus)
+                targetNotificationCenter.post(name: .CapableHandicapStatusDidChange, object: handicapStatus)
 
                 Logger.info("Posted notification for handicap \(handicap.name) set to \(statusString)")
             }
@@ -43,13 +43,14 @@ class HandicapNotifications: Notifications {
             fatalError(errorMessage)
         }
         let currentStatus = handicapStatuses.isHandicapEnabled(handicapName: handicap.name).statusString
-        let lastStatus = self.lastValues[handicap.name]
+        let lastStatus = lastValues[handicap.name]
 
         return currentStatus != lastStatus
     }
 }
 
 // MARK: - Register Observers
+
 extension Notifications {
     func enableNotifications(forHandicaps handicaps: [Handicap]) {
         var observedFeatures = [CapableFeature]()

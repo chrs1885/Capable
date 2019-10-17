@@ -10,7 +10,7 @@ import Foundation
 class FeatureNotifications: Notifications {
     convenience init(featureStatusesProvider: FeatureStatusesProviderProtocol, features: [CapableFeature], targetNotificationCenter: NotificationCenter = NotificationCenter.default, systemNotificationCenter: NotificationCenter = Notifications.systemNotificationCenter) {
         self.init(featureStatusesProvider: featureStatusesProvider, targetNotificationCenter: targetNotificationCenter, systemNotificationCenter: systemNotificationCenter)
-        self.enableNotifications(forFeatures: features)
+        enableNotifications(forFeatures: features)
     }
 
     required init(featureStatusesProvider: FeatureStatusesProviderProtocol, targetNotificationCenter: NotificationCenter = NotificationCenter.default, systemNotificationCenter: NotificationCenter = Notifications.systemNotificationCenter) {
@@ -19,7 +19,7 @@ class FeatureNotifications: Notifications {
 
     override func postNotification(withFeature feature: CapableFeature, statusString: String) {
         let featureStatus = FeatureStatus(feature: feature, statusString: statusString)
-        self.targetNotificationCenter.post(name: .CapableFeatureStatusDidChange, object: featureStatus)
+        targetNotificationCenter.post(name: .CapableFeatureStatusDidChange, object: featureStatus)
 
         Logger.info("Posted notification for feature \(feature) set to \(statusString)")
     }

@@ -4,13 +4,13 @@ PODS:
   - AppCenter/Analytics (2.4.0):
     - AppCenter/Core
   - AppCenter/Core (2.4.0)
-  - Capable (1.0.1):
-    - Capable/Colors (= 1.0.1)
-    - Capable/Features (= 1.0.1)
-    - Capable/Fonts (= 1.0.1)
-  - Capable/Colors (1.0.1)
-  - Capable/Features (1.0.1)
-  - Capable/Fonts (1.0.1)
+  - Capable (1.1.0):
+    - Capable/Colors (= 1.1.0)
+    - Capable/Features (= 1.1.0)
+    - Capable/Fonts (= 1.1.0)
+  - Capable/Colors (1.1.0)
+  - Capable/Features (1.1.0)
+  - Capable/Fonts (1.1.0)
   - Fabric (1.10.2)
   - Firebase/Core (6.10.0):
     - Firebase/CoreOnly
@@ -75,8 +75,10 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
-  - SheetyColors (1.0.0):
-    - Capable/Colors (~> 1.0.0)
+  - Nimble (8.0.4)
+  - Quick (2.2.0)
+  - SheetyColors (1.0.1):
+    - Capable/Colors (~> 1.0)
 
 DEPENDENCIES:
   - Answers
@@ -84,7 +86,9 @@ DEPENDENCIES:
   - Capable (from `../`)
   - Fabric
   - Firebase/Core
-  - SheetyColors (= 1.0.0)
+  - Nimble (~> 8.0.4)
+  - Quick (~> 2.2.0)
+  - SheetyColors (= 1.0.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -102,6 +106,8 @@ SPEC REPOS:
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - nanopb
+    - Nimble
+    - Quick
     - SheetyColors
 
 EXTERNAL SOURCES:
@@ -111,7 +117,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Answers: 7d5ff1f77fea900eb75032b37b4288482b824055
   AppCenter: 49a9ffe114c00e2bf5374aeda816d47eabf1978a
-  Capable: 49d8637d06ee50dac258757071ea27cbce0e1bf6
+  Capable: 603460a0ba563178753c39f62b2d329360f40968
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   Firebase: 5e6b7b12bf9adb90986688edc06b156c37e109cd
   FirebaseAnalytics: 0e3ecff2c5d86070f7d4325e21f1edabfbd558dc
@@ -124,8 +130,10 @@ SPEC CHECKSUMS:
   GoogleDataTransportCCTSupport: 862418a8cdda520c4dd4af83a756d04efe4a6990
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
-  SheetyColors: dbf4b6b427d10f0316a2237b8a00cd8d576466dd
+  Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  SheetyColors: ae8c3a5d04d310e8e2d08e4aa0bd543519d02252
 
-PODFILE CHECKSUM: 281f4c067013ef97112498d527050bb7d1b70f3b
+PODFILE CHECKSUM: 1ddad2d76c31989ac603b5e5ffa5a72726b31819
 
 COCOAPODS: 1.7.5

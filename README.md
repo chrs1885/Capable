@@ -6,10 +6,9 @@
 [![Build Status](https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg&branch=develop)](https://app.bitrise.io/app/7596a076a75ab2ab)
 ![Swift](https://img.shields.io/badge/swift-5.0-red.svg)
 ![Platforms](https://img.shields.io/cocoapods/p/Capable.svg)
-[![Carthage compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![Cocoapods compatible](https://img.shields.io/cocoapods/v/Capable.svg)](https://cocoapods.org/pods/Capable)
-![SPM](https://img.shields.io/badge/swift%20package%20manager-macOS-blue.svg)
-![Documentation](Documentation/badge.svg)
+![SPM](https://img.shields.io/badge/SPM-compatible-ff59b4)
+[![Carthage compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![codecov](https://codecov.io/gh/chrs1885/Capable/branch/develop/graph/badge.svg)](https://codecov.io/gh/chrs1885/Capable)
 [![Twitter](https://img.shields.io/badge/twitter-%40chr__wendt-58a1f2.svg)](https://twitter.com/chr_wendt)
 

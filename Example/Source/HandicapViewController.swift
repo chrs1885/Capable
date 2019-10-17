@@ -6,8 +6,8 @@
 //  Copyright © 2018 Christoph Wendt. All rights reserved.
 //
 
-import UIKit
 import Capable
+import UIKit
 
 class HandicapViewController: UITableViewController {
     var alert: UIAlertController?
@@ -19,49 +19,50 @@ class HandicapViewController: UITableViewController {
         super.viewDidLoad()
         #if os(iOS)
             let blindness = Handicap(features: [.speakScreen, .speakSelection, .voiceOver], name: "Blindness", enabledIf: .oneFeatureEnabled)
-            self.capable = Capable(withHandicaps: [blindness])
-            self.handicaps = [blindness]
+            capable = Capable(withHandicaps: [blindness])
+            handicaps = [blindness]
         #else
             let lowVision = Handicap(features: [.boldText, .invertColors, .reduceTransparency], name: "Low Vision ", enabledIf: .oneFeatureEnabled)
-            self.capable = Capable(withHandicaps: [lowVision])
-            self.handicaps = [lowVision]
+            capable = Capable(withHandicaps: [lowVision])
+            handicaps = [lowVision]
         #endif
 
-        self.registerObservers()
-        self.refreshData()
+        registerObservers()
+        refreshData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.registerObservers()
+        registerObservers()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.unregisterObservers()
+        unregisterObservers()
     }
 
     func refreshData() {
         if let capable = self.capable {
-            self.objects = capable.statusMap
+            objects = capable.statusMap
         }
     }
 }
 
 // MARK: - Table View
+
 extension HandicapViewController {
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in _: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.objects?.count ?? 0
+    override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        return objects?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let row = indexPath.row
-        let status = self.value(forRow: row)
+        let status = value(forRow: row)
         let handicap = self.handicap(forName: status.key)
         cell.textLabel!.text = handicap.name
         cell.detailTextLabel!.text = CapableFeature.keys(forFeatures: handicap.features).joined(separator: ", ")
@@ -79,7 +80,7 @@ extension HandicapViewController {
     }
 
     private func handicap(forName name: String) -> Handicap {
-        for handicap in self.handicaps! {
+        for handicap in handicaps! {
             if handicap.name == name {
                 return handicap
             }
@@ -89,29 +90,32 @@ extension HandicapViewController {
 }
 
 // MARK: Capable Notification
+
 extension HandicapViewController {
     @objc private func handicapStatusChanged(notification: NSNotification) {
         if let handicapStatus = notification.object as? HandicapStatus {
-            self.showAlert(for: handicapStatus)
+            showAlert(for: handicapStatus)
             refreshData()
-            self.tableView.reloadData()
+            tableView.reloadData()
         }
     }
 
     func registerObservers() {
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(self.handicapStatusChanged),
+            selector: #selector(handicapStatusChanged),
             name: .CapableHandicapStatusDidChange,
-            object: nil)
+            object: nil
+        )
     }
 
-    func unregisterObservers(){
+    func unregisterObservers() {
         NotificationCenter.default.removeObserver(self)
     }
 }
 
 // MARK: Alert
+
 extension HandicapViewController {
     private func showAlert(for handicapStatus: HandicapStatus) {
         let showNewAlert = {
@@ -124,12 +128,12 @@ extension HandicapViewController {
             }
         }
 
-        self.dismissAlertIfNeeded(completion: showNewAlert)
+        dismissAlertIfNeeded(completion: showNewAlert)
     }
 
-    private func dismissAlertIfNeeded(completion: @escaping () -> ()) {
-        if self.alert != nil, self.presentedViewController == self.alert {
-            self.alert!.dismiss(animated: false) {
+    private func dismissAlertIfNeeded(completion: @escaping () -> Void) {
+        if alert != nil, presentedViewController == alert {
+            alert!.dismiss(animated: false) {
                 completion()
             }
         } else {
@@ -137,5 +141,3 @@ extension HandicapViewController {
         }
     }
 }
-
-

@@ -14,7 +14,7 @@ class OverviewRowController: NSObject {
 
     var title: String? {
         didSet {
-            guard let item  = title else { return }
+            guard let item = title else { return }
             titleLabel.setText(item)
         }
     }

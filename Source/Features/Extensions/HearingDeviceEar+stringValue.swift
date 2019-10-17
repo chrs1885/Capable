@@ -7,21 +7,21 @@
 
 #if os(iOS)
 
-import UIKit
+    import UIKit
 
-extension UIAccessibility.HearingDeviceEar {
-    var statusString: String {
-        switch self {
-        case .both:
-            return "both"
-        case .left:
-            return "left"
-        case .right:
-            return "right"
-        default:
-            return "disabled"
+    extension UIAccessibility.HearingDeviceEar {
+        var statusString: String {
+            switch self {
+            case .both:
+                return "both"
+            case .left:
+                return "left"
+            case .right:
+                return "right"
+            default:
+                return "disabled"
+            }
         }
     }
-}
 
 #endif
