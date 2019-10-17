@@ -69,8 +69,8 @@
         "repositoryURL": "https://github.com/shibapm/PackageConfig",
         "state": {
           "branch": null,
-          "revision": "877e49db48007239b8e184d9e90d3f12b79b3b16",
-          "version": "0.12.1"
+          "revision": "fd0829aac9851434b3d2db0890e27bc489fc973a",
+          "version": "0.12.2"
         }
       },
       {

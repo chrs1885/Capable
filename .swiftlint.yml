@@ -13,4 +13,7 @@ opt_in_rules: # some rules are only opt-in
   - empty_count
   - trailing_newline
 included:
-  - Sources
+  - Source/
+excluded:
+  - .build/*
+  - Example/Pods/

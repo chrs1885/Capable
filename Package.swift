@@ -13,10 +13,10 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/Quick/Quick.git", from: "2.2.0"),
+        .package(url: "https://github.com/Quick/Quick.git", from: "2.1.0"),
         .package(url: "https://github.com/Quick/Nimble.git", from: "8.0.4"),
         .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.40.13"),
-        .package(url: "https://github.com/Realm/SwiftLint", from: "0.34.0"),
+        .package(url: "https://github.com/Realm/SwiftLint", from: "0.35.0"),
         .package(url: "https://github.com/orta/Komondor", from: "1.0.4"),
         .package(url: "https://github.com/eneko/SourceDocs.git", from: "0.5.1"),
     ],
@@ -24,7 +24,7 @@ let package = Package(
         .target(
             name: "Capable",
             dependencies: [],
-            path: "Sources"
+            path: "Source"
         ),
         .testTarget(
             name: "CapableTests",
@@ -40,14 +40,13 @@ let package = Package(
 #if canImport(PackageConfig)
     import PackageConfig
 
-    let config = PackageConfig([
+    let config = PackageConfiguration([
         "komondor": [
             "pre-commit": [
                 "swift run swiftformat .",
-                "swift run swiftlint autocorrect --path SheetyColors/",
-                "swift run sourcedocs generate -- -workspace Example/SheetyColors.xcworkspace -scheme SheetyColors",
-                "git add .",
+                // "swift run swiftlint autocorrect",
+                "swift run sourcedocs generate --spm-module Capable",
             ],
         ],
-    ])
+    ]).write()
 #endif

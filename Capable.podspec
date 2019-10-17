@@ -26,17 +26,17 @@ Capable lets you easily keep track of accessibility settings used by your app us
     s.osx.framework = 'AppKit'
     s.osx.deployment_target = '10.12'
 
-    featuresSubspec.source_files = 'Sources/Features/**/*.swift', 'Sources/Common/**/*.swift'
+    featuresSubspec.source_files = 'Source/Features/**/*.swift', 'Source/Common/**/*.swift'
   end
 
   s.subspec 'Colors' do |colorsSubspec|
     s.osx.framework = 'AppKit'
     s.osx.deployment_target = '10.12'
     
-    colorsSubspec.source_files = 'Sources/Colors/**/*.swift', 'Sources/Common/**/*.swift'
+    colorsSubspec.source_files = 'Source/Colors/**/*.swift', 'Source/Common/**/*.swift'
   end
 
   s.subspec 'Fonts' do |fontsSubspec|
-    fontsSubspec.source_files = 'Sources/Fonts/**/*.swift'
+    fontsSubspec.source_files = 'Source/Fonts/**/*.swift'
   end
 end

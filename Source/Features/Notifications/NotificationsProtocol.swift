@@ -9,8 +9,6 @@ import Foundation
 
 protocol NotificationsProtocol {
     init(featureStatusesProvider: FeatureStatusesProviderProtocol, targetNotificationCenter: NotificationCenter, systemNotificationCenter: NotificationCenter)
-    
-        func postNotification(withFeature feature: CapableFeature, statusString: String)
-    
-    
+
+    func postNotification(withFeature feature: CapableFeature, statusString: String)
 }

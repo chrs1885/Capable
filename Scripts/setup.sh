@@ -3,5 +3,7 @@
 
 #================================= Tooling =================================
 echo "Installing tools (SwiftLint, SwiftFormat, and SourceDocs"
-
 swift build
+
+echo "Installing pre-commit hook"
+swift run komondor install
