@@ -176,7 +176,7 @@
 		83DA75EC2065167600303D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83DA75F12065167600303D8F /* CapableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DA75F62065167600303D8F /* CapableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapableTests.swift; sourceTree = "<group>"; };
-		83DA75F82065167600303D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83DA75F82065167600303D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
 		83DAF4B521A4A7320076F542 /* Color+wcag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+wcag.swift"; sourceTree = "<group>"; };
 		83DAF4B721A4A9670076F542 /* RGBAColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAColor.swift; sourceTree = "<group>"; };
 		83DB72452069891200384B3F /* UIContentSizeCategory+values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIContentSizeCategory+values.swift"; sourceTree = "<group>"; };
@@ -468,7 +468,8 @@
 				83DA75EB2065167600303D8F /* Capable.h */,
 				83DA75EC2065167600303D8F /* Info.plist */,
 			);
-			path = Source;
+			name = Source;
+			path = ../Source;
 			sourceTree = "<group>";
 		};
 		83DA75F52065167600303D8F /* Tests */ = {
@@ -480,7 +481,8 @@
 				44FE2E392114807F00029869 /* Fonts */,
 				83DA75F82065167600303D8F /* Info.plist */,
 			);
-			path = Tests;
+			name = Tests;
+			path = ../Example/Tests;
 			sourceTree = "<group>";
 		};
 		83DAF4B221A4A0F10076F542 /* Colors */ = {
@@ -873,7 +875,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/../Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -902,7 +904,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/../Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
