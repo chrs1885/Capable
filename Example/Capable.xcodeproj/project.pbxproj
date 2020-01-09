@@ -7,6 +7,144 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36D87B3B23C7613C00FD09B5 /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973ADE206FD4080057CD4F /* FontMetrics.swift */; };
+		36D87B3C23C7613C00FD09B5 /* NSColor+rgbaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59221F52E330078F260 /* NSColor+rgbaColor.swift */; };
+		36D87B3D23C7613C00FD09B5 /* NotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A323206EB40500E264A3 /* NotificationsProtocol.swift */; };
+		36D87B3E23C7613C00FD09B5 /* FeatureStatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC7B5D2149AD4B00AF12A7 /* FeatureStatusesProtocol.swift */; };
+		36D87B3F23C7613C00FD09B5 /* HandicapStatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC7B5B2149ACFD00AF12A7 /* HandicapStatusesProtocol.swift */; };
+		36D87B4023C7613C00FD09B5 /* Handicap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E8EED21247C620096930C /* Handicap.swift */; };
+		36D87B4123C7613C00FD09B5 /* CGFloat+contentSizeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2A46820F006000032054C /* CGFloat+contentSizeString.swift */; };
+		36D87B4223C7613C00FD09B5 /* UIFont+fontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D435521CFE44000444EC9 /* UIFont+fontProps.swift */; };
+		36D87B4323C7613C00FD09B5 /* UIFont+ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973AD9206FD22C0057CD4F /* UIFont+ScaledFont.swift */; };
+		36D87B4423C7613C00FD09B5 /* UIColor+rgbaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59021F52DDD0078F260 /* UIColor+rgbaColor.swift */; };
+		36D87B4523C7613C00FD09B5 /* HandicapStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E105592125CC7B00D85BBC /* HandicapStatus.swift */; };
+		36D87B4623C7613C00FD09B5 /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE32065336F00E8E83F /* Capable.swift */; };
+		36D87B4723C7613C00FD09B5 /* FontMetricsSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E3521147A6F00029869 /* FontMetricsSupport.swift */; };
+		36D87B4823C7613C00FD09B5 /* OsVersionProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3F92097BF9B003F231D /* OsVersionProviderProtocol.swift */; };
+		36D87B4923C7613C00FD09B5 /* FeatureStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D12212606BB00F9940A /* FeatureStatuses.swift */; };
+		36D87B4A23C7613C00FD09B5 /* HandicapEnabledMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E8EEF21247EAD0096930C /* HandicapEnabledMode.swift */; };
+		36D87B4B23C7613C00FD09B5 /* OsVersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3F72097BEEC003F231D /* OsVersionProvider.swift */; };
+		36D87B4C23C7613C00FD09B5 /* Image+averageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44478266233279EF00FB1B3B /* Image+averageColor.swift */; };
+		36D87B4D23C7613C00FD09B5 /* NSFont+fontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D435321CFE42B00444EC9 /* NSFont+fontProps.swift */; };
+		36D87B4E23C7613C00FD09B5 /* UIContentSizeCategory+values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB72452069891200384B3F /* UIContentSizeCategory+values.swift */; };
+		36D87B4F23C7613C00FD09B5 /* HandicapNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448697672127133A00A06BFF /* HandicapNotifications.swift */; };
+		36D87B5023C7613C00FD09B5 /* HandicapStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D10212605D500F9940A /* HandicapStatuses.swift */; };
+		36D87B5123C7613C00FD09B5 /* String+isDefaultContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6A350219E08DB00BB039D /* String+isDefaultContentSize.swift */; };
+		36D87B5223C7613C00FD09B5 /* FontMetricsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E33211479F700029869 /* FontMetricsProviderProtocol.swift */; };
+		36D87B5323C7613C00FD09B5 /* CIImage+initWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D0B936233F86DC00A9B136 /* CIImage+initWithImage.swift */; };
+		36D87B5423C7613C00FD09B5 /* FontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A5FBE221B03BB4008DE1EB /* FontProps.swift */; };
+		36D87B5523C7613C00FD09B5 /* HearingDeviceEar+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6A352219E0FF200BB039D /* HearingDeviceEar+stringValue.swift */; };
+		36D87B5623C7613C00FD09B5 /* FontMetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973ADC206FD3A40057CD4F /* FontMetricsProtocol.swift */; };
+		36D87B5723C7613C00FD09B5 /* Bool+statusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB724720698EB400384B3F /* Bool+statusString.swift */; };
+		36D87B5823C7613C00FD09B5 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */; };
+		36D87B5923C7613C00FD09B5 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A325206EB46E00E264A3 /* Notifications.swift */; };
+		36D87B5A23C7613C00FD09B5 /* StatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC7B612149C03E00AF12A7 /* StatusesProtocol.swift */; };
+		36D87B5B23C7613C00FD09B5 /* RGBAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DAF4B721A4A9670076F542 /* RGBAColor.swift */; };
+		36D87B5C23C7613C00FD09B5 /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E31211479A300029869 /* FontMetricsProvider.swift */; };
+		36D87B5D23C7613C00FD09B5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83648E9D218A36560095D208 /* Logger.swift */; };
+		36D87B5E23C7613C00FD09B5 /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA4DF212F46CC00AEAC44 /* NotificationCenterProtocol.swift */; };
+		36D87B5F23C7613C00FD09B5 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9BE206C164B00C8DA02 /* Notification+Name.swift */; };
+		36D87B6023C7613C00FD09B5 /* OSLogType+greaterEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833CE9A92194CCF400D741DE /* OSLogType+greaterEqual.swift */; };
+		36D87B6123C7613C00FD09B5 /* FeatureStatusesProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFEA206542FC00E8E83F /* FeatureStatusesProviderProtocol.swift */; };
+		36D87B6223C7613C00FD09B5 /* ImageArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447826A2332808400FB1B3B /* ImageArea.swift */; };
+		36D87B6323C7613C00FD09B5 /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE52065352500E8E83F /* CapableFeature.swift */; };
+		36D87B6423C7613C00FD09B5 /* FeatureNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448697692127148700A06BFF /* FeatureNotifications.swift */; };
+		36D87B6523C7613C00FD09B5 /* FeatureStatusesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A321206E350F00E264A3 /* FeatureStatusesProvider.swift */; };
+		36D87B6623C7613C00FD09B5 /* Color+wcag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DAF4B521A4A7320076F542 /* Color+wcag.swift */; };
+		36D87B6723C7613C00FD09B5 /* ConformanceLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83160D9421A548EF00FD122C /* ConformanceLevel.swift */; };
+		36D87B6A23C7613C00FD09B5 /* Capable.h in Headers */ = {isa = PBXBuildFile; fileRef = 83DA75EB2065167600303D8F /* Capable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36D87B7423C7617C00FD09B5 /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973ADE206FD4080057CD4F /* FontMetrics.swift */; };
+		36D87B7523C7617C00FD09B5 /* NSColor+rgbaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59221F52E330078F260 /* NSColor+rgbaColor.swift */; };
+		36D87B7623C7617C00FD09B5 /* NotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A323206EB40500E264A3 /* NotificationsProtocol.swift */; };
+		36D87B7723C7617C00FD09B5 /* FeatureStatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC7B5D2149AD4B00AF12A7 /* FeatureStatusesProtocol.swift */; };
+		36D87B7823C7617C00FD09B5 /* HandicapStatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC7B5B2149ACFD00AF12A7 /* HandicapStatusesProtocol.swift */; };
+		36D87B7923C7617C00FD09B5 /* Handicap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E8EED21247C620096930C /* Handicap.swift */; };
+		36D87B7A23C7617C00FD09B5 /* CGFloat+contentSizeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2A46820F006000032054C /* CGFloat+contentSizeString.swift */; };
+		36D87B7B23C7617C00FD09B5 /* UIFont+fontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D435521CFE44000444EC9 /* UIFont+fontProps.swift */; };
+		36D87B7C23C7617C00FD09B5 /* UIFont+ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973AD9206FD22C0057CD4F /* UIFont+ScaledFont.swift */; };
+		36D87B7D23C7617C00FD09B5 /* UIColor+rgbaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59021F52DDD0078F260 /* UIColor+rgbaColor.swift */; };
+		36D87B7E23C7617C00FD09B5 /* HandicapStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E105592125CC7B00D85BBC /* HandicapStatus.swift */; };
+		36D87B7F23C7617C00FD09B5 /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE32065336F00E8E83F /* Capable.swift */; };
+		36D87B8023C7617C00FD09B5 /* FontMetricsSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E3521147A6F00029869 /* FontMetricsSupport.swift */; };
+		36D87B8123C7617C00FD09B5 /* OsVersionProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3F92097BF9B003F231D /* OsVersionProviderProtocol.swift */; };
+		36D87B8223C7617C00FD09B5 /* FeatureStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D12212606BB00F9940A /* FeatureStatuses.swift */; };
+		36D87B8323C7617C00FD09B5 /* HandicapEnabledMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E8EEF21247EAD0096930C /* HandicapEnabledMode.swift */; };
+		36D87B8423C7617C00FD09B5 /* OsVersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3F72097BEEC003F231D /* OsVersionProvider.swift */; };
+		36D87B8523C7617C00FD09B5 /* Image+averageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44478266233279EF00FB1B3B /* Image+averageColor.swift */; };
+		36D87B8623C7617C00FD09B5 /* NSFont+fontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D435321CFE42B00444EC9 /* NSFont+fontProps.swift */; };
+		36D87B8723C7617C00FD09B5 /* UIContentSizeCategory+values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB72452069891200384B3F /* UIContentSizeCategory+values.swift */; };
+		36D87B8823C7617C00FD09B5 /* HandicapNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448697672127133A00A06BFF /* HandicapNotifications.swift */; };
+		36D87B8923C7617C00FD09B5 /* HandicapStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D10212605D500F9940A /* HandicapStatuses.swift */; };
+		36D87B8A23C7617C00FD09B5 /* String+isDefaultContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6A350219E08DB00BB039D /* String+isDefaultContentSize.swift */; };
+		36D87B8B23C7617C00FD09B5 /* FontMetricsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E33211479F700029869 /* FontMetricsProviderProtocol.swift */; };
+		36D87B8C23C7617C00FD09B5 /* CIImage+initWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D0B936233F86DC00A9B136 /* CIImage+initWithImage.swift */; };
+		36D87B8D23C7617C00FD09B5 /* FontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A5FBE221B03BB4008DE1EB /* FontProps.swift */; };
+		36D87B8E23C7617C00FD09B5 /* HearingDeviceEar+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6A352219E0FF200BB039D /* HearingDeviceEar+stringValue.swift */; };
+		36D87B8F23C7617C00FD09B5 /* FontMetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973ADC206FD3A40057CD4F /* FontMetricsProtocol.swift */; };
+		36D87B9023C7617C00FD09B5 /* Bool+statusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB724720698EB400384B3F /* Bool+statusString.swift */; };
+		36D87B9123C7617C00FD09B5 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */; };
+		36D87B9223C7617C00FD09B5 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A325206EB46E00E264A3 /* Notifications.swift */; };
+		36D87B9323C7617C00FD09B5 /* StatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC7B612149C03E00AF12A7 /* StatusesProtocol.swift */; };
+		36D87B9423C7617C00FD09B5 /* RGBAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DAF4B721A4A9670076F542 /* RGBAColor.swift */; };
+		36D87B9523C7617C00FD09B5 /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E31211479A300029869 /* FontMetricsProvider.swift */; };
+		36D87B9623C7617C00FD09B5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83648E9D218A36560095D208 /* Logger.swift */; };
+		36D87B9723C7617C00FD09B5 /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA4DF212F46CC00AEAC44 /* NotificationCenterProtocol.swift */; };
+		36D87B9823C7617C00FD09B5 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9BE206C164B00C8DA02 /* Notification+Name.swift */; };
+		36D87B9923C7617C00FD09B5 /* OSLogType+greaterEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833CE9A92194CCF400D741DE /* OSLogType+greaterEqual.swift */; };
+		36D87B9A23C7617C00FD09B5 /* FeatureStatusesProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFEA206542FC00E8E83F /* FeatureStatusesProviderProtocol.swift */; };
+		36D87B9B23C7617C00FD09B5 /* ImageArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447826A2332808400FB1B3B /* ImageArea.swift */; };
+		36D87B9C23C7617C00FD09B5 /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE52065352500E8E83F /* CapableFeature.swift */; };
+		36D87B9D23C7617C00FD09B5 /* FeatureNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448697692127148700A06BFF /* FeatureNotifications.swift */; };
+		36D87B9E23C7617C00FD09B5 /* FeatureStatusesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A321206E350F00E264A3 /* FeatureStatusesProvider.swift */; };
+		36D87B9F23C7617C00FD09B5 /* Color+wcag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DAF4B521A4A7320076F542 /* Color+wcag.swift */; };
+		36D87BA023C7617C00FD09B5 /* ConformanceLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83160D9421A548EF00FD122C /* ConformanceLevel.swift */; };
+		36D87BA323C7617C00FD09B5 /* Capable.h in Headers */ = {isa = PBXBuildFile; fileRef = 83DA75EB2065167600303D8F /* Capable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36D87BAD23C7618500FD09B5 /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973ADE206FD4080057CD4F /* FontMetrics.swift */; };
+		36D87BAE23C7618500FD09B5 /* NSColor+rgbaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59221F52E330078F260 /* NSColor+rgbaColor.swift */; };
+		36D87BAF23C7618500FD09B5 /* NotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A323206EB40500E264A3 /* NotificationsProtocol.swift */; };
+		36D87BB023C7618500FD09B5 /* FeatureStatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC7B5D2149AD4B00AF12A7 /* FeatureStatusesProtocol.swift */; };
+		36D87BB123C7618500FD09B5 /* HandicapStatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC7B5B2149ACFD00AF12A7 /* HandicapStatusesProtocol.swift */; };
+		36D87BB223C7618500FD09B5 /* Handicap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E8EED21247C620096930C /* Handicap.swift */; };
+		36D87BB323C7618500FD09B5 /* CGFloat+contentSizeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2A46820F006000032054C /* CGFloat+contentSizeString.swift */; };
+		36D87BB423C7618500FD09B5 /* UIFont+fontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D435521CFE44000444EC9 /* UIFont+fontProps.swift */; };
+		36D87BB523C7618500FD09B5 /* UIFont+ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973AD9206FD22C0057CD4F /* UIFont+ScaledFont.swift */; };
+		36D87BB623C7618500FD09B5 /* UIColor+rgbaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59021F52DDD0078F260 /* UIColor+rgbaColor.swift */; };
+		36D87BB723C7618500FD09B5 /* HandicapStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E105592125CC7B00D85BBC /* HandicapStatus.swift */; };
+		36D87BB823C7618500FD09B5 /* Capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE32065336F00E8E83F /* Capable.swift */; };
+		36D87BB923C7618500FD09B5 /* FontMetricsSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E3521147A6F00029869 /* FontMetricsSupport.swift */; };
+		36D87BBA23C7618500FD09B5 /* OsVersionProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3F92097BF9B003F231D /* OsVersionProviderProtocol.swift */; };
+		36D87BBB23C7618500FD09B5 /* FeatureStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D12212606BB00F9940A /* FeatureStatuses.swift */; };
+		36D87BBC23C7618500FD09B5 /* HandicapEnabledMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E8EEF21247EAD0096930C /* HandicapEnabledMode.swift */; };
+		36D87BBD23C7618500FD09B5 /* OsVersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA3F72097BEEC003F231D /* OsVersionProvider.swift */; };
+		36D87BBE23C7618500FD09B5 /* Image+averageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44478266233279EF00FB1B3B /* Image+averageColor.swift */; };
+		36D87BBF23C7618500FD09B5 /* NSFont+fontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D435321CFE42B00444EC9 /* NSFont+fontProps.swift */; };
+		36D87BC023C7618500FD09B5 /* UIContentSizeCategory+values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB72452069891200384B3F /* UIContentSizeCategory+values.swift */; };
+		36D87BC123C7618500FD09B5 /* HandicapNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448697672127133A00A06BFF /* HandicapNotifications.swift */; };
+		36D87BC223C7618500FD09B5 /* HandicapStatuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44580D10212605D500F9940A /* HandicapStatuses.swift */; };
+		36D87BC323C7618500FD09B5 /* String+isDefaultContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6A350219E08DB00BB039D /* String+isDefaultContentSize.swift */; };
+		36D87BC423C7618500FD09B5 /* FontMetricsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E33211479F700029869 /* FontMetricsProviderProtocol.swift */; };
+		36D87BC523C7618500FD09B5 /* CIImage+initWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D0B936233F86DC00A9B136 /* CIImage+initWithImage.swift */; };
+		36D87BC623C7618500FD09B5 /* FontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A5FBE221B03BB4008DE1EB /* FontProps.swift */; };
+		36D87BC723C7618500FD09B5 /* HearingDeviceEar+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6A352219E0FF200BB039D /* HearingDeviceEar+stringValue.swift */; };
+		36D87BC823C7618500FD09B5 /* FontMetricsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83973ADC206FD3A40057CD4F /* FontMetricsProtocol.swift */; };
+		36D87BC923C7618500FD09B5 /* Bool+statusString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB724720698EB400384B3F /* Bool+statusString.swift */; };
+		36D87BCA23C7618500FD09B5 /* FeatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9C1206C188B00C8DA02 /* FeatureStatus.swift */; };
+		36D87BCB23C7618500FD09B5 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A325206EB46E00E264A3 /* Notifications.swift */; };
+		36D87BCC23C7618500FD09B5 /* StatusesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DC7B612149C03E00AF12A7 /* StatusesProtocol.swift */; };
+		36D87BCD23C7618500FD09B5 /* RGBAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DAF4B721A4A9670076F542 /* RGBAColor.swift */; };
+		36D87BCE23C7618500FD09B5 /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE2E31211479A300029869 /* FontMetricsProvider.swift */; };
+		36D87BCF23C7618500FD09B5 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83648E9D218A36560095D208 /* Logger.swift */; };
+		36D87BD023C7618500FD09B5 /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA4DF212F46CC00AEAC44 /* NotificationCenterProtocol.swift */; };
+		36D87BD123C7618500FD09B5 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DB9BE206C164B00C8DA02 /* Notification+Name.swift */; };
+		36D87BD223C7618500FD09B5 /* OSLogType+greaterEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833CE9A92194CCF400D741DE /* OSLogType+greaterEqual.swift */; };
+		36D87BD323C7618500FD09B5 /* FeatureStatusesProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFEA206542FC00E8E83F /* FeatureStatusesProviderProtocol.swift */; };
+		36D87BD423C7618500FD09B5 /* ImageArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447826A2332808400FB1B3B /* ImageArea.swift */; };
+		36D87BD523C7618500FD09B5 /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B5FFE52065352500E8E83F /* CapableFeature.swift */; };
+		36D87BD623C7618500FD09B5 /* FeatureNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448697692127148700A06BFF /* FeatureNotifications.swift */; };
+		36D87BD723C7618500FD09B5 /* FeatureStatusesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8382A321206E350F00E264A3 /* FeatureStatusesProvider.swift */; };
+		36D87BD823C7618500FD09B5 /* Color+wcag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DAF4B521A4A7320076F542 /* Color+wcag.swift */; };
+		36D87BD923C7618500FD09B5 /* ConformanceLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83160D9421A548EF00FD122C /* ConformanceLevel.swift */; };
+		36D87BDC23C7618500FD09B5 /* Capable.h in Headers */ = {isa = PBXBuildFile; fileRef = 83DA75EB2065167600303D8F /* Capable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4404835E2168F1940051FCE7 /* FeatureStatusesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404835D2168F1940051FCE7 /* FeatureStatusesProviderTests.swift */; };
 		44478267233279EF00FB1B3B /* Image+averageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44478266233279EF00FB1B3B /* Image+averageColor.swift */; };
 		4447826B2332808400FB1B3B /* ImageArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4447826A2332808400FB1B3B /* ImageArea.swift */; };
@@ -101,6 +239,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36D87B7023C7613C00FD09B5 /* Capable-macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Capable-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36D87BA923C7617C00FD09B5 /* Capable-tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Capable-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36D87BE223C7618500FD09B5 /* Capable-watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Capable-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4404835D2168F1940051FCE7 /* FeatureStatusesProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProviderTests.swift; sourceTree = "<group>"; };
 		44478266233279EF00FB1B3B /* Image+averageColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+averageColor.swift"; sourceTree = "<group>"; };
 		4447826A2332808400FB1B3B /* ImageArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageArea.swift; sourceTree = "<group>"; };
@@ -171,7 +312,7 @@
 		83CAA3FB2097C216003F231D /* OsVersionProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OsVersionProviderMock.swift; path = Tests/Fonts/Mocks/OsVersionProviderMock.swift; sourceTree = SOURCE_ROOT; };
 		83CAA40120990AB5003F231D /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		83D2A46820F006000032054C /* CGFloat+contentSizeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+contentSizeString.swift"; sourceTree = "<group>"; };
-		83DA75E82065167600303D8F /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83DA75E82065167600303D8F /* Capable_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capable_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DA75EB2065167600303D8F /* Capable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Capable.h; sourceTree = "<group>"; };
 		83DA75EC2065167600303D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83DA75F12065167600303D8F /* CapableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +331,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		36D87B6823C7613C00FD09B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D87BA123C7617C00FD09B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D87BDA23C7618500FD09B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83DA75E42065167600303D8F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,8 +614,11 @@
 		83DA75E92065167600303D8F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83DA75E82065167600303D8F /* Capable.framework */,
+				83DA75E82065167600303D8F /* Capable_iOS.framework */,
 				83DA75F12065167600303D8F /* CapableTests.xctest */,
+				36D87B7023C7613C00FD09B5 /* Capable-macOS.framework */,
+				36D87BA923C7617C00FD09B5 /* Capable-tvOS.framework */,
+				36D87BE223C7618500FD09B5 /* Capable-watchOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -510,6 +675,30 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		36D87B6923C7613C00FD09B5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36D87B6A23C7613C00FD09B5 /* Capable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D87BA223C7617C00FD09B5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36D87BA323C7617C00FD09B5 /* Capable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D87BDB23C7618500FD09B5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36D87BDC23C7618500FD09B5 /* Capable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83DA75E52065167600303D8F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -521,9 +710,66 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		83DA75E72065167600303D8F /* Capable */ = {
+		36D87B3923C7613C00FD09B5 /* Capable-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83DA75FC2065167600303D8F /* Build configuration list for PBXNativeTarget "Capable" */;
+			buildConfigurationList = 36D87B6D23C7613C00FD09B5 /* Build configuration list for PBXNativeTarget "Capable-macOS" */;
+			buildPhases = (
+				36D87B3A23C7613C00FD09B5 /* Sources */,
+				36D87B6823C7613C00FD09B5 /* Frameworks */,
+				36D87B6923C7613C00FD09B5 /* Headers */,
+				36D87B6B23C7613C00FD09B5 /* Resources */,
+				36D87B6C23C7613C00FD09B5 /* Run SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Capable-macOS";
+			productName = "Low Vision";
+			productReference = 36D87B7023C7613C00FD09B5 /* Capable-macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		36D87B7223C7617C00FD09B5 /* Capable-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36D87BA623C7617C00FD09B5 /* Build configuration list for PBXNativeTarget "Capable-tvOS" */;
+			buildPhases = (
+				36D87B7323C7617C00FD09B5 /* Sources */,
+				36D87BA123C7617C00FD09B5 /* Frameworks */,
+				36D87BA223C7617C00FD09B5 /* Headers */,
+				36D87BA423C7617C00FD09B5 /* Resources */,
+				36D87BA523C7617C00FD09B5 /* Run SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Capable-tvOS";
+			productName = "Low Vision";
+			productReference = 36D87BA923C7617C00FD09B5 /* Capable-tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		36D87BAB23C7618500FD09B5 /* Capable-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36D87BDF23C7618500FD09B5 /* Build configuration list for PBXNativeTarget "Capable-watchOS" */;
+			buildPhases = (
+				36D87BAC23C7618500FD09B5 /* Sources */,
+				36D87BDA23C7618500FD09B5 /* Frameworks */,
+				36D87BDB23C7618500FD09B5 /* Headers */,
+				36D87BDD23C7618500FD09B5 /* Resources */,
+				36D87BDE23C7618500FD09B5 /* Run SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Capable-watchOS";
+			productName = "Low Vision";
+			productReference = 36D87BE223C7618500FD09B5 /* Capable-watchOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		83DA75E72065167600303D8F /* Capable-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83DA75FC2065167600303D8F /* Build configuration list for PBXNativeTarget "Capable-iOS" */;
 			buildPhases = (
 				83DA75E32065167600303D8F /* Sources */,
 				83DA75E42065167600303D8F /* Frameworks */,
@@ -535,9 +781,9 @@
 			);
 			dependencies = (
 			);
-			name = Capable;
+			name = "Capable-iOS";
 			productName = "Low Vision";
-			productReference = 83DA75E82065167600303D8F /* Capable.framework */;
+			productReference = 83DA75E82065167600303D8F /* Capable_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		83DA75F02065167600303D8F /* CapableTests */ = {
@@ -567,6 +813,15 @@
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0940;
 				TargetAttributes = {
+					36D87B3923C7613C00FD09B5 = {
+						ProvisioningStyle = Automatic;
+					};
+					36D87B7223C7617C00FD09B5 = {
+						ProvisioningStyle = Automatic;
+					};
+					36D87BAB23C7618500FD09B5 = {
+						ProvisioningStyle = Automatic;
+					};
 					83DA75E72065167600303D8F = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1000;
@@ -592,13 +847,37 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83DA75E72065167600303D8F /* Capable */,
+				83DA75E72065167600303D8F /* Capable-iOS */,
+				36D87B3923C7613C00FD09B5 /* Capable-macOS */,
+				36D87B7223C7617C00FD09B5 /* Capable-tvOS */,
+				36D87BAB23C7618500FD09B5 /* Capable-watchOS */,
 				83DA75F02065167600303D8F /* CapableTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		36D87B6B23C7613C00FD09B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D87BA423C7617C00FD09B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D87BDD23C7618500FD09B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83DA75E62065167600303D8F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -609,6 +888,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		36D87B6C23C7613C00FD09B5 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		36D87BA523C7617C00FD09B5 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		36D87BDE23C7618500FD09B5 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		83C7DA5620FD2EB200C32F52 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -640,6 +961,162 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		36D87B3A23C7613C00FD09B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36D87B3B23C7613C00FD09B5 /* FontMetrics.swift in Sources */,
+				36D87B3C23C7613C00FD09B5 /* NSColor+rgbaColor.swift in Sources */,
+				36D87B3D23C7613C00FD09B5 /* NotificationsProtocol.swift in Sources */,
+				36D87B3E23C7613C00FD09B5 /* FeatureStatusesProtocol.swift in Sources */,
+				36D87B3F23C7613C00FD09B5 /* HandicapStatusesProtocol.swift in Sources */,
+				36D87B4023C7613C00FD09B5 /* Handicap.swift in Sources */,
+				36D87B4123C7613C00FD09B5 /* CGFloat+contentSizeString.swift in Sources */,
+				36D87B4223C7613C00FD09B5 /* UIFont+fontProps.swift in Sources */,
+				36D87B4323C7613C00FD09B5 /* UIFont+ScaledFont.swift in Sources */,
+				36D87B4423C7613C00FD09B5 /* UIColor+rgbaColor.swift in Sources */,
+				36D87B4523C7613C00FD09B5 /* HandicapStatus.swift in Sources */,
+				36D87B4623C7613C00FD09B5 /* Capable.swift in Sources */,
+				36D87B4723C7613C00FD09B5 /* FontMetricsSupport.swift in Sources */,
+				36D87B4823C7613C00FD09B5 /* OsVersionProviderProtocol.swift in Sources */,
+				36D87B4923C7613C00FD09B5 /* FeatureStatuses.swift in Sources */,
+				36D87B4A23C7613C00FD09B5 /* HandicapEnabledMode.swift in Sources */,
+				36D87B4B23C7613C00FD09B5 /* OsVersionProvider.swift in Sources */,
+				36D87B4C23C7613C00FD09B5 /* Image+averageColor.swift in Sources */,
+				36D87B4D23C7613C00FD09B5 /* NSFont+fontProps.swift in Sources */,
+				36D87B4E23C7613C00FD09B5 /* UIContentSizeCategory+values.swift in Sources */,
+				36D87B4F23C7613C00FD09B5 /* HandicapNotifications.swift in Sources */,
+				36D87B5023C7613C00FD09B5 /* HandicapStatuses.swift in Sources */,
+				36D87B5123C7613C00FD09B5 /* String+isDefaultContentSize.swift in Sources */,
+				36D87B5223C7613C00FD09B5 /* FontMetricsProviderProtocol.swift in Sources */,
+				36D87B5323C7613C00FD09B5 /* CIImage+initWithImage.swift in Sources */,
+				36D87B5423C7613C00FD09B5 /* FontProps.swift in Sources */,
+				36D87B5523C7613C00FD09B5 /* HearingDeviceEar+stringValue.swift in Sources */,
+				36D87B5623C7613C00FD09B5 /* FontMetricsProtocol.swift in Sources */,
+				36D87B5723C7613C00FD09B5 /* Bool+statusString.swift in Sources */,
+				36D87B5823C7613C00FD09B5 /* FeatureStatus.swift in Sources */,
+				36D87B5923C7613C00FD09B5 /* Notifications.swift in Sources */,
+				36D87B5A23C7613C00FD09B5 /* StatusesProtocol.swift in Sources */,
+				36D87B5B23C7613C00FD09B5 /* RGBAColor.swift in Sources */,
+				36D87B5C23C7613C00FD09B5 /* FontMetricsProvider.swift in Sources */,
+				36D87B5D23C7613C00FD09B5 /* Logger.swift in Sources */,
+				36D87B5E23C7613C00FD09B5 /* NotificationCenterProtocol.swift in Sources */,
+				36D87B5F23C7613C00FD09B5 /* Notification+Name.swift in Sources */,
+				36D87B6023C7613C00FD09B5 /* OSLogType+greaterEqual.swift in Sources */,
+				36D87B6123C7613C00FD09B5 /* FeatureStatusesProviderProtocol.swift in Sources */,
+				36D87B6223C7613C00FD09B5 /* ImageArea.swift in Sources */,
+				36D87B6323C7613C00FD09B5 /* CapableFeature.swift in Sources */,
+				36D87B6423C7613C00FD09B5 /* FeatureNotifications.swift in Sources */,
+				36D87B6523C7613C00FD09B5 /* FeatureStatusesProvider.swift in Sources */,
+				36D87B6623C7613C00FD09B5 /* Color+wcag.swift in Sources */,
+				36D87B6723C7613C00FD09B5 /* ConformanceLevel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D87B7323C7617C00FD09B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36D87B7423C7617C00FD09B5 /* FontMetrics.swift in Sources */,
+				36D87B7523C7617C00FD09B5 /* NSColor+rgbaColor.swift in Sources */,
+				36D87B7623C7617C00FD09B5 /* NotificationsProtocol.swift in Sources */,
+				36D87B7723C7617C00FD09B5 /* FeatureStatusesProtocol.swift in Sources */,
+				36D87B7823C7617C00FD09B5 /* HandicapStatusesProtocol.swift in Sources */,
+				36D87B7923C7617C00FD09B5 /* Handicap.swift in Sources */,
+				36D87B7A23C7617C00FD09B5 /* CGFloat+contentSizeString.swift in Sources */,
+				36D87B7B23C7617C00FD09B5 /* UIFont+fontProps.swift in Sources */,
+				36D87B7C23C7617C00FD09B5 /* UIFont+ScaledFont.swift in Sources */,
+				36D87B7D23C7617C00FD09B5 /* UIColor+rgbaColor.swift in Sources */,
+				36D87B7E23C7617C00FD09B5 /* HandicapStatus.swift in Sources */,
+				36D87B7F23C7617C00FD09B5 /* Capable.swift in Sources */,
+				36D87B8023C7617C00FD09B5 /* FontMetricsSupport.swift in Sources */,
+				36D87B8123C7617C00FD09B5 /* OsVersionProviderProtocol.swift in Sources */,
+				36D87B8223C7617C00FD09B5 /* FeatureStatuses.swift in Sources */,
+				36D87B8323C7617C00FD09B5 /* HandicapEnabledMode.swift in Sources */,
+				36D87B8423C7617C00FD09B5 /* OsVersionProvider.swift in Sources */,
+				36D87B8523C7617C00FD09B5 /* Image+averageColor.swift in Sources */,
+				36D87B8623C7617C00FD09B5 /* NSFont+fontProps.swift in Sources */,
+				36D87B8723C7617C00FD09B5 /* UIContentSizeCategory+values.swift in Sources */,
+				36D87B8823C7617C00FD09B5 /* HandicapNotifications.swift in Sources */,
+				36D87B8923C7617C00FD09B5 /* HandicapStatuses.swift in Sources */,
+				36D87B8A23C7617C00FD09B5 /* String+isDefaultContentSize.swift in Sources */,
+				36D87B8B23C7617C00FD09B5 /* FontMetricsProviderProtocol.swift in Sources */,
+				36D87B8C23C7617C00FD09B5 /* CIImage+initWithImage.swift in Sources */,
+				36D87B8D23C7617C00FD09B5 /* FontProps.swift in Sources */,
+				36D87B8E23C7617C00FD09B5 /* HearingDeviceEar+stringValue.swift in Sources */,
+				36D87B8F23C7617C00FD09B5 /* FontMetricsProtocol.swift in Sources */,
+				36D87B9023C7617C00FD09B5 /* Bool+statusString.swift in Sources */,
+				36D87B9123C7617C00FD09B5 /* FeatureStatus.swift in Sources */,
+				36D87B9223C7617C00FD09B5 /* Notifications.swift in Sources */,
+				36D87B9323C7617C00FD09B5 /* StatusesProtocol.swift in Sources */,
+				36D87B9423C7617C00FD09B5 /* RGBAColor.swift in Sources */,
+				36D87B9523C7617C00FD09B5 /* FontMetricsProvider.swift in Sources */,
+				36D87B9623C7617C00FD09B5 /* Logger.swift in Sources */,
+				36D87B9723C7617C00FD09B5 /* NotificationCenterProtocol.swift in Sources */,
+				36D87B9823C7617C00FD09B5 /* Notification+Name.swift in Sources */,
+				36D87B9923C7617C00FD09B5 /* OSLogType+greaterEqual.swift in Sources */,
+				36D87B9A23C7617C00FD09B5 /* FeatureStatusesProviderProtocol.swift in Sources */,
+				36D87B9B23C7617C00FD09B5 /* ImageArea.swift in Sources */,
+				36D87B9C23C7617C00FD09B5 /* CapableFeature.swift in Sources */,
+				36D87B9D23C7617C00FD09B5 /* FeatureNotifications.swift in Sources */,
+				36D87B9E23C7617C00FD09B5 /* FeatureStatusesProvider.swift in Sources */,
+				36D87B9F23C7617C00FD09B5 /* Color+wcag.swift in Sources */,
+				36D87BA023C7617C00FD09B5 /* ConformanceLevel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D87BAC23C7618500FD09B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36D87BAD23C7618500FD09B5 /* FontMetrics.swift in Sources */,
+				36D87BAE23C7618500FD09B5 /* NSColor+rgbaColor.swift in Sources */,
+				36D87BAF23C7618500FD09B5 /* NotificationsProtocol.swift in Sources */,
+				36D87BB023C7618500FD09B5 /* FeatureStatusesProtocol.swift in Sources */,
+				36D87BB123C7618500FD09B5 /* HandicapStatusesProtocol.swift in Sources */,
+				36D87BB223C7618500FD09B5 /* Handicap.swift in Sources */,
+				36D87BB323C7618500FD09B5 /* CGFloat+contentSizeString.swift in Sources */,
+				36D87BB423C7618500FD09B5 /* UIFont+fontProps.swift in Sources */,
+				36D87BB523C7618500FD09B5 /* UIFont+ScaledFont.swift in Sources */,
+				36D87BB623C7618500FD09B5 /* UIColor+rgbaColor.swift in Sources */,
+				36D87BB723C7618500FD09B5 /* HandicapStatus.swift in Sources */,
+				36D87BB823C7618500FD09B5 /* Capable.swift in Sources */,
+				36D87BB923C7618500FD09B5 /* FontMetricsSupport.swift in Sources */,
+				36D87BBA23C7618500FD09B5 /* OsVersionProviderProtocol.swift in Sources */,
+				36D87BBB23C7618500FD09B5 /* FeatureStatuses.swift in Sources */,
+				36D87BBC23C7618500FD09B5 /* HandicapEnabledMode.swift in Sources */,
+				36D87BBD23C7618500FD09B5 /* OsVersionProvider.swift in Sources */,
+				36D87BBE23C7618500FD09B5 /* Image+averageColor.swift in Sources */,
+				36D87BBF23C7618500FD09B5 /* NSFont+fontProps.swift in Sources */,
+				36D87BC023C7618500FD09B5 /* UIContentSizeCategory+values.swift in Sources */,
+				36D87BC123C7618500FD09B5 /* HandicapNotifications.swift in Sources */,
+				36D87BC223C7618500FD09B5 /* HandicapStatuses.swift in Sources */,
+				36D87BC323C7618500FD09B5 /* String+isDefaultContentSize.swift in Sources */,
+				36D87BC423C7618500FD09B5 /* FontMetricsProviderProtocol.swift in Sources */,
+				36D87BC523C7618500FD09B5 /* CIImage+initWithImage.swift in Sources */,
+				36D87BC623C7618500FD09B5 /* FontProps.swift in Sources */,
+				36D87BC723C7618500FD09B5 /* HearingDeviceEar+stringValue.swift in Sources */,
+				36D87BC823C7618500FD09B5 /* FontMetricsProtocol.swift in Sources */,
+				36D87BC923C7618500FD09B5 /* Bool+statusString.swift in Sources */,
+				36D87BCA23C7618500FD09B5 /* FeatureStatus.swift in Sources */,
+				36D87BCB23C7618500FD09B5 /* Notifications.swift in Sources */,
+				36D87BCC23C7618500FD09B5 /* StatusesProtocol.swift in Sources */,
+				36D87BCD23C7618500FD09B5 /* RGBAColor.swift in Sources */,
+				36D87BCE23C7618500FD09B5 /* FontMetricsProvider.swift in Sources */,
+				36D87BCF23C7618500FD09B5 /* Logger.swift in Sources */,
+				36D87BD023C7618500FD09B5 /* NotificationCenterProtocol.swift in Sources */,
+				36D87BD123C7618500FD09B5 /* Notification+Name.swift in Sources */,
+				36D87BD223C7618500FD09B5 /* OSLogType+greaterEqual.swift in Sources */,
+				36D87BD323C7618500FD09B5 /* FeatureStatusesProviderProtocol.swift in Sources */,
+				36D87BD423C7618500FD09B5 /* ImageArea.swift in Sources */,
+				36D87BD523C7618500FD09B5 /* CapableFeature.swift in Sources */,
+				36D87BD623C7618500FD09B5 /* FeatureNotifications.swift in Sources */,
+				36D87BD723C7618500FD09B5 /* FeatureStatusesProvider.swift in Sources */,
+				36D87BD823C7618500FD09B5 /* Color+wcag.swift in Sources */,
+				36D87BD923C7618500FD09B5 /* ConformanceLevel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83DA75E32065167600303D8F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -733,12 +1210,179 @@
 /* Begin PBXTargetDependency section */
 		83DA75F42065167600303D8F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 83DA75E72065167600303D8F /* Capable */;
+			target = 83DA75E72065167600303D8F /* Capable-iOS */;
 			targetProxy = 83DA75F32065167600303D8F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		36D87B6E23C7613C00FD09B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/../Source/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.Capable";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RESOURCES_TARGETED_DEVICE_FAMILY = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		36D87B6F23C7613C00FD09B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/../Source/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.Capable";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RESOURCES_TARGETED_DEVICE_FAMILY = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+		36D87BA723C7617C00FD09B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/../Source/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.Capable";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RESOURCES_TARGETED_DEVICE_FAMILY = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		36D87BA823C7617C00FD09B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/../Source/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.Capable";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RESOURCES_TARGETED_DEVICE_FAMILY = "";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+		36D87BE023C7618500FD09B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/../Source/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.Capable";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RESOURCES_TARGETED_DEVICE_FAMILY = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		36D87BE123C7618500FD09B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = V7PYJ2FTTJ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/../Source/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.Capable";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RESOURCES_TARGETED_DEVICE_FAMILY = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
 		83DA75FA2065167600303D8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -867,6 +1511,7 @@
 		83DA75FD2065167600303D8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -882,9 +1527,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.Capable";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				RESOURCES_TARGETED_DEVICE_FAMILY = "";
-				SDKROOT = "";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
@@ -896,6 +1539,7 @@
 		83DA75FE2065167600303D8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -911,9 +1555,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.Capable";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				RESOURCES_TARGETED_DEVICE_FAMILY = "";
-				SDKROOT = "";
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TVOS_DEPLOYMENT_TARGET = 10.0;
@@ -990,6 +1632,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		36D87B6D23C7613C00FD09B5 /* Build configuration list for PBXNativeTarget "Capable-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36D87B6E23C7613C00FD09B5 /* Debug */,
+				36D87B6F23C7613C00FD09B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36D87BA623C7617C00FD09B5 /* Build configuration list for PBXNativeTarget "Capable-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36D87BA723C7617C00FD09B5 /* Debug */,
+				36D87BA823C7617C00FD09B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36D87BDF23C7618500FD09B5 /* Build configuration list for PBXNativeTarget "Capable-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36D87BE023C7618500FD09B5 /* Debug */,
+				36D87BE123C7618500FD09B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		83DA75E22065167600303D8F /* Build configuration list for PBXProject "Capable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -999,7 +1668,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83DA75FC2065167600303D8F /* Build configuration list for PBXNativeTarget "Capable" */ = {
+		83DA75FC2065167600303D8F /* Build configuration list for PBXNativeTarget "Capable-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83DA75FD2065167600303D8F /* Debug */,

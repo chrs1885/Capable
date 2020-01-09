@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1020"
+   LastUpgradeVersion = "1120"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "83DA75E72065167600303D8F"
-               BuildableName = "Capable.framework"
-               BlueprintName = "Capable"
+               BlueprintIdentifier = "36D87B7223C7617C00FD09B5"
+               BuildableName = "Capable-tvOS.framework"
+               BlueprintName = "Capable-tvOS"
+               ReferencedContainer = "container:Capable.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "83DA75F02065167600303D8F"
+               BuildableName = "CapableTests.xctest"
+               BlueprintName = "CapableTests"
                ReferencedContainer = "container:Capable.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,38 +40,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "83DA75E72065167600303D8F"
-            BuildableName = "Capable.framework"
-            BlueprintName = "Capable"
-            ReferencedContainer = "container:Capable.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "83DA75E72065167600303D8F"
-            BuildableName = "Capable.framework"
-            BlueprintName = "Capable"
-            ReferencedContainer = "container:Capable.xcodeproj">
-         </BuildableReference>
-      </CodeCoverageTargets>
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "83DA75F02065167600303D8F"
-               BuildableName = "CapableTests.xctest"
-               BlueprintName = "CapableTests"
-               ReferencedContainer = "container:Capable.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -70,15 +54,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "83DA75E72065167600303D8F"
-            BuildableName = "Capable.framework"
-            BlueprintName = "Capable"
-            ReferencedContainer = "container:Capable.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -89,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "83DA75E72065167600303D8F"
-            BuildableName = "Capable.framework"
-            BlueprintName = "Capable"
+            BlueprintIdentifier = "36D87B7223C7617C00FD09B5"
+            BuildableName = "Capable-tvOS.framework"
+            BlueprintName = "Capable-tvOS"
             ReferencedContainer = "container:Capable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
