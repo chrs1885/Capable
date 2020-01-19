@@ -16,10 +16,6 @@ target 'Example-iOS' do
 
   sharedPods
   pod 'SheetyColors', '1.0.1'
-  pod 'AppCenter/Analytics'
-  pod 'Fabric'
-  pod 'Answers'
-  pod 'Firebase/Core'
 
   target 'Tests-iOS' do
     testPods
