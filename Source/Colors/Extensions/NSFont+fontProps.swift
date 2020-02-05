@@ -7,16 +7,16 @@
 
 #if os(OSX)
 
-import AppKit
+    import AppKit
 
-extension NSFont {
-    var fontProps: FontProps {
-        return FontProps(fontSize: self.pointSize, isBoldFont: self.isBold)
-    }
+    extension NSFont {
+        var fontProps: FontProps {
+            return FontProps(fontSize: pointSize, isBoldFont: isBold)
+        }
 
-    var isBold: Bool {
-        return (self.fontDescriptor.symbolicTraits.rawValue & NSFontSymbolicTraits(NSFontBoldTrait)) != 0
+        var isBold: Bool {
+            return (fontDescriptor.symbolicTraits.rawValue & NSFontSymbolicTraits(NSFontBoldTrait)) != 0
+        }
     }
-}
 
 #endif

@@ -20,7 +20,7 @@ public struct Capable {
 
      - Parameters:
         - features: An optional array containing the features of interest. This will default to all features available on the current platform.
-    */
+     */
     public init(withFeatures features: [CapableFeature] = CapableFeature.allCases) {
         let featureStatusesProvider = FeatureStatusesProvider()
         let statusesModule = FeatureStatuses(withFeatures: features, featureStatusesProvider: featureStatusesProvider)
@@ -44,31 +44,31 @@ public struct Capable {
     init(withFeatures features: [CapableFeature], featureStatusesProvider: FeatureStatusesProviderProtocol, statusesModule: StatusesProtocol, notificationModule: NotificationsProtocol) {
         self.features = features
         self.statusesModule = statusesModule
-        self.notificationsModule = notificationModule
+        notificationsModule = notificationModule
         self.featureStatusesProvider = featureStatusesProvider
 
-        Logger.info("Capable started with handicaps: \(features.map({ $0.rawValue }).joined(separator: ", "))")
+        Logger.info("Capable started with handicaps: \(features.map { $0.rawValue }.joined(separator: ", "))")
     }
 
     init(withHandicaps handicaps: [Handicap], featureStatusesProvider: FeatureStatusesProviderProtocol, statusesModule: StatusesProtocol, notificationModule: NotificationsProtocol) {
         self.handicaps = handicaps
         self.statusesModule = statusesModule
-        self.notificationsModule = notificationModule
+        notificationsModule = notificationModule
         self.featureStatusesProvider = featureStatusesProvider
 
-        Logger.info("Capable started with handicaps: \(handicaps.map({ $0.name }).joined(separator: ", "))")
+        Logger.info("Capable started with handicaps: \(handicaps.map { $0.name }.joined(separator: ", "))")
     }
 }
 
 // MARK: - Accessibility Statuses
-extension Capable {
 
+extension Capable {
     /**
      The `statusMap` property returns a dictionary of all `CapableFeature`s or `Handicap`s , that the Capable instance has been initialized with along with their current statuses. This object is compatible with most analytic SDKs such as **Fabric Answers**, **Firebase Analytics**, **AppCenter Analytics**, or **HockeyApp**.
      While most entries can only have a status set to **enabled** or **disabled**, the `.largerText` feature offers the font scale set by the user.
      */
     public var statusMap: [String: String] {
-        return self.statusesModule.statusMap
+        return statusesModule.statusMap
     }
 
     /**
@@ -80,7 +80,7 @@ extension Capable {
      - Returns: `true` if the given feature has been enabled, otherwise `false`.
      */
     public func isFeatureEnabled(feature: CapableFeature) -> Bool {
-        return self.featureStatusesProvider.isFeatureEnabled(feature: feature)
+        return featureStatusesProvider.isFeatureEnabled(feature: feature)
     }
 
     /**
@@ -95,12 +95,11 @@ extension Capable {
         guard let handicapStatuses = self.statusesModule as? HandicapStatusesProtocol else { return false }
         return handicapStatuses.isHandicapEnabled(handicapName: handicapName)
     }
-
 }
 
 // MARK: - Debug Logging
-extension Capable {
 
+extension Capable {
     /**
      The minimum log level that should be considered when logging messages. Note that the custom 'onLog' closure will only be called for messages of this log type or higher. This value defaults to `OSLogType.debug`.
      */
@@ -120,7 +119,7 @@ extension Capable {
          - message: The message string that is about to be logged.
          - logType: The 'OSLogType' of the message.
      */
-    public static  var onLog: (_ message: String, _ logType: OSLogType) -> Void {
+    public static var onLog: (_ message: String, _ logType: OSLogType) -> Void {
         get {
             return Logger.onLog
         }

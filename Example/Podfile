@@ -1,41 +1,53 @@
+use_frameworks!
+
 def sharedPods
   pod 'Capable', path: '../'
 end
 
+def testPods
+  inherit! :search_paths
+  
+  pod 'Quick', '~> 2.2.0'
+  pod 'Nimble', '~> 8.0.4'
+end
+
 target 'Example-iOS' do
   platform :ios, '11.0'
-  use_frameworks!
 
   sharedPods
-  pod 'SheetyColors', '1.0.0'
-  pod 'AppCenter/Analytics'
-  pod 'Fabric'
-  pod 'Answers'
-  pod 'Firebase/Core'
+  pod 'SheetyColors', '1.0.1'
+
+  target 'Tests-iOS' do
+    testPods
+  end
 end
 
 target 'Example-macOS' do
   platform :osx, '10.12'
-  use_frameworks!
 
   sharedPods
+
+  target 'Tests-macOS' do
+    testPods
+  end
 end
 
 target 'Example-tvOS' do
   platform :tvos, '10.0'
-  use_frameworks!
 
   sharedPods
+
+  target 'Tests-tvOS' do
+    testPods
+  end
 end
 
 target 'Example-watchOS' do
   platform :watchos, '4.0'
-  use_frameworks!
 end
 
 target 'Example-watchOS Extension' do
   platform :watchos, '4.0'
-  use_frameworks!
 
   sharedPods
 end

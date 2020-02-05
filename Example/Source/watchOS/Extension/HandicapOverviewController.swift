@@ -6,9 +6,9 @@
 //  Copyright © 2018 Christoph Wendt. All rights reserved.
 //
 
-import WatchKit
-import Foundation
 import Capable
+import Foundation
+import WatchKit
 
 class HandicapOverviewController: WKInterfaceController {
     @IBOutlet var handicapsTable: WKInterfaceTable!
@@ -19,26 +19,26 @@ class HandicapOverviewController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         let lowVision = Handicap(features: [.boldText, .largerText], name: "Low Vision", enabledIf: .oneFeatureEnabled)
-        self.capable = Capable(withHandicaps: [lowVision])
-        self.handicaps = [lowVision]
-        self.refreshData()
-        self.populateTableData()
+        capable = Capable(withHandicaps: [lowVision])
+        handicaps = [lowVision]
+        refreshData()
+        populateTableData()
     }
 
     override func didAppear() {
-        self.registerObservers()
+        registerObservers()
     }
 
     override func willDisappear() {
-        self.unregisterObservers()
+        unregisterObservers()
     }
 
     func populateTableData() {
         if let objects = self.objects {
-            self.handicapsTable.setNumberOfRows(objects.count, withRowType: "HandicapRow")
-            for index in 0..<handicapsTable.numberOfRows {
+            handicapsTable.setNumberOfRows(objects.count, withRowType: "HandicapRow")
+            for index in 0 ..< handicapsTable.numberOfRows {
                 guard let controller = handicapsTable.rowController(at: index) as? HandicapRowController else { continue }
-                let handicapInfo = self.value(forRow: index)
+                let handicapInfo = value(forRow: index)
                 let handicap = self.handicap(forName: handicapInfo.key)
                 let featuresText = CapableFeature.keys(forFeatures: handicap.features).joined(separator: ", ")
                 controller.handicapInfo = (name: handicapInfo.key, status: handicapInfo.value, featuresText: featuresText)
@@ -48,7 +48,7 @@ class HandicapOverviewController: WKInterfaceController {
 
     func refreshData() {
         if let capable = self.capable {
-            self.objects = capable.statusMap
+            objects = capable.statusMap
         }
     }
 
@@ -61,7 +61,7 @@ class HandicapOverviewController: WKInterfaceController {
     }
 
     func handicap(forName name: String) -> Handicap {
-        for handicap in self.handicaps! {
+        for handicap in handicaps! {
             if handicap.name == name {
                 return handicap
             }
@@ -71,20 +71,22 @@ class HandicapOverviewController: WKInterfaceController {
 }
 
 // MARK: Capable Notification
+
 extension HandicapOverviewController {
     @objc private func handicapStatusChanged(notification: NSNotification) {
         if let handicapStatus = notification.object as? HandicapStatus {
-            self.refreshData()
-            self.showAlert(for: handicapStatus)
+            refreshData()
+            showAlert(for: handicapStatus)
         }
     }
 
     func registerObservers() {
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(self.handicapStatusChanged),
+            selector: #selector(handicapStatusChanged),
             name: .CapableHandicapStatusDidChange,
-            object: nil)
+            object: nil
+        )
     }
 
     func unregisterObservers() {

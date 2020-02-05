@@ -8,17 +8,17 @@
 
 #if os(iOS)
 
-import UIKit
-typealias Font = UIFont
-typealias Label = UILabel
-typealias View = UIView
+    import UIKit
+    typealias Font = UIFont
+    typealias Label = UILabel
+    typealias View = UIView
 
 #elseif os(OSX)
 
-import AppKit
-typealias Font = NSFont
-typealias Label = NSTextField
-typealias View = NSView
+    import AppKit
+    typealias Font = NSFont
+    typealias Label = NSTextField
+    typealias View = NSView
 
 #endif
 
@@ -28,10 +28,10 @@ class ConformanceLevelView: View {
     var text: String = "" {
         didSet {
             #if os(iOS)
-                self.textLabel.text = text
+                textLabel.text = text
             #elseif os(OSX)
-                self.textLabel.stringValue = text
-                self.textLabel.isEditable = false
+                textLabel.stringValue = text
+                textLabel.isEditable = false
             #endif
         }
     }
@@ -49,8 +49,8 @@ class ConformanceLevelView: View {
     }
 
     func setupView() {
-        self.addSubview(textLabel)
-        self.textLabel.font = Font.systemFont(ofSize: 13.0)
+        addSubview(textLabel)
+        textLabel.font = Font.systemFont(ofSize: 13.0)
 
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         let views: [String: Any] = ["textLabel": self.textLabel]
@@ -59,6 +59,6 @@ class ConformanceLevelView: View {
         allConstraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-8-[textLabel]-8-|", metrics: nil, views: views)
         NSLayoutConstraint.activate(allConstraints)
 
-        self.isPassing = true
+        isPassing = true
     }
 }

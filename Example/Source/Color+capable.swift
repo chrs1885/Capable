@@ -8,13 +8,13 @@
 
 #if os(iOS)
 
-import UIKit
-typealias Color = UIColor
+    import UIKit
+    typealias Color = UIColor
 
 #elseif os(OSX)
 
-import AppKit
-typealias Color = NSColor
+    import AppKit
+    typealias Color = NSColor
 
 #endif
 

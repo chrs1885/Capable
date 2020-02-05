@@ -25,15 +25,16 @@ struct RGBAColor: Equatable {
             }
         }
 
-        let adjustedRed = getAdjustedColorComponent(self.red / 255.0)
-        let adjustedGreen = getAdjustedColorComponent(self.green / 255.0)
-        let adjustedBlue = getAdjustedColorComponent(self.blue / 255.0)
+        let adjustedRed = getAdjustedColorComponent(red / 255.0)
+        let adjustedGreen = getAdjustedColorComponent(green / 255.0)
+        let adjustedBlue = getAdjustedColorComponent(blue / 255.0)
 
         return (0.2126 * adjustedRed) + (0.7152 * adjustedGreen) + (0.0722 * adjustedBlue)
     }
 }
 
 // MARK: - Calculating color properties
+
 extension RGBAColor {
     static func getContrastRatio(forTextColor textColor: RGBAColor, onBackgroundColor backgroundColor: RGBAColor) -> CGFloat {
         let blendedColor = textColor.alpha < 1.0 ? textColor.blended(withFraction: textColor.alpha, ofColor: backgroundColor) : textColor
@@ -53,6 +54,7 @@ extension RGBAColor {
 }
 
 // MARK: - Text colors
+
 extension RGBAColor {
     static func getTextColor(onBackgroundColor backgroundColor: RGBAColor) -> RGBAColor {
         let luminance = backgroundColor.relativeLuminance
@@ -62,11 +64,12 @@ extension RGBAColor {
 }
 
 // MARK: - Background colors
+
 extension RGBAColor {
     static func getBackgroundColor(forTextColor textColor: RGBAColor) -> RGBAColor {
         if textColor.alpha < 1.0 {
-            let whiteContrastRatio = self.getContrastRatio(forTextColor: textColor, onBackgroundColor: Colors.white)
-            let blackContrastRatio = self.getContrastRatio(forTextColor: textColor, onBackgroundColor: Colors.black)
+            let whiteContrastRatio = getContrastRatio(forTextColor: textColor, onBackgroundColor: Colors.white)
+            let blackContrastRatio = getContrastRatio(forTextColor: textColor, onBackgroundColor: Colors.black)
 
             return whiteContrastRatio > blackContrastRatio ? Colors.white : Colors.black
         } else {
@@ -76,6 +79,7 @@ extension RGBAColor {
 }
 
 // MARK: - Color operations
+
 extension RGBAColor {
     func blended(withFraction fraction: CGFloat, ofColor color: RGBAColor) -> RGBAColor {
         func getBlendedColorComponent(aColorComponent: CGFloat, fraction: CGFloat, otherColorComponent: CGFloat) -> CGFloat {
@@ -83,9 +87,9 @@ extension RGBAColor {
             return blendedComponent
         }
 
-        let red = getBlendedColorComponent(aColorComponent: self.red, fraction: self.alpha, otherColorComponent: color.red)
-        let green = getBlendedColorComponent(aColorComponent: self.green, fraction: self.alpha, otherColorComponent: color.green)
-        let blue = getBlendedColorComponent(aColorComponent: self.blue, fraction: self.alpha, otherColorComponent: color.blue)
+        let red = getBlendedColorComponent(aColorComponent: self.red, fraction: alpha, otherColorComponent: color.red)
+        let green = getBlendedColorComponent(aColorComponent: self.green, fraction: alpha, otherColorComponent: color.green)
+        let blue = getBlendedColorComponent(aColorComponent: self.blue, fraction: alpha, otherColorComponent: color.blue)
 
         return RGBAColor(red: red, green: green, blue: blue, alpha: 1.0)
     }

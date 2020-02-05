@@ -7,8 +7,8 @@
 
 #if os(iOS) || os(tvOS) || os(watchOS)
 
-protocol FontMetricsProviderProtocol {
-    var fontMetrics: FontMetricsProtocol { get }
-}
+    protocol FontMetricsProviderProtocol {
+        var fontMetrics: FontMetricsProtocol { get }
+    }
 
 #endif

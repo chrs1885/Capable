@@ -7,29 +7,28 @@
 
 #if os(iOS) || os(tvOS) || os(watchOS)
 
-import UIKit
+    import UIKit
 
-/// Typealias used for colors. It maps to UIColor.
-public typealias Color = UIColor
+    /// Typealias used for colors. It maps to UIColor.
+    public typealias Color = UIColor
 
-/// Typealias used for fonts. It maps to UIFont.
-public typealias Font = UIFont
+    /// Typealias used for fonts. It maps to UIFont.
+    public typealias Font = UIFont
 
 #elseif os(OSX)
 
-import AppKit
+    import AppKit
 
-/// Typealias used for colors. It maps to NSColor.
-public typealias Color = NSColor
+    /// Typealias used for colors. It maps to NSColor.
+    public typealias Color = NSColor
 
-/// Typealias used for fonts. It maps to NSFont.
-public typealias Font = NSFont
+    /// Typealias used for fonts. It maps to NSFont.
+    public typealias Font = NSFont
 
 #endif
 
 /// Extension that adds functionality for calculating WCAG compliant high contrast colors.
 extension Color {
-
     /**
      Calculates the color ratio for a text color on a background color.
 
@@ -102,46 +101,46 @@ extension Color {
 
     #if os(iOS) || os(tvOS) || os(OSX)
 
-    /**
-     Returns the text color with the highest contrast (black or white) for a specific area of given background image.
+        /**
+         Returns the text color with the highest contrast (black or white) for a specific area of given background image.
 
-     - Parameters:
-     - backgroundImage: The background image.
-     - imageArea: The area of the image that is used as the text background. Defaults to .full.
+         - Parameters:
+         - backgroundImage: The background image.
+         - imageArea: The area of the image that is used as the text background. Defaults to .full.
 
-     - Returns: A color that has the highest contrast with the given background image.
+         - Returns: A color that has the highest contrast with the given background image.
 
-     - Note: For the background image, the alpha component is ignored.
+         - Note: For the background image, the alpha component is ignored.
 
-     - Warning: This function will also return `nil` if the image is corrupted.
-     */
-    public class func getTextColor(onBackgroundImage image: Image, imageArea: ImageArea = .full) -> Color? {
-        guard let averageImageColor = image.averageColor(imageArea: imageArea) else { return nil }
+         - Warning: This function will also return `nil` if the image is corrupted.
+         */
+        public class func getTextColor(onBackgroundImage image: Image, imageArea: ImageArea = .full) -> Color? {
+            guard let averageImageColor = image.averageColor(imageArea: imageArea) else { return nil }
 
-        return Color.getTextColor(onBackgroundColor: averageImageColor)
-    }
+            return Color.getTextColor(onBackgroundColor: averageImageColor)
+        }
 
-    /**
-     Calculates the contrast ratio of a given list of text colors and a specific area of given background image. The first color that conforms to the conformance level defined gets returned. The default conformance level is .AA.
+        /**
+         Calculates the contrast ratio of a given list of text colors and a specific area of given background image. The first color that conforms to the conformance level defined gets returned. The default conformance level is .AA.
 
-     - Parameters:
-     - colors: A list of possible text colors.
-     - font: The font used for the text.
-     - backgroundImage: The background image that the text should be displayed on.
-     - imageArea: The area of the image that is used as the text background. Defaults to .full.
-     - conformanceLevel: The conformance level that needs to be passed when calculating the contrast ratio. The default conformance level is .AA.
+         - Parameters:
+         - colors: A list of possible text colors.
+         - font: The font used for the text.
+         - backgroundImage: The background image that the text should be displayed on.
+         - imageArea: The area of the image that is used as the text background. Defaults to .full.
+         - conformanceLevel: The conformance level that needs to be passed when calculating the contrast ratio. The default conformance level is .AA.
 
-     - Returns: The first color that conforms to the conformance level defined or `nil` if non of the colors provided passed.
+         - Returns: The first color that conforms to the conformance level defined or `nil` if non of the colors provided passed.
 
-     - Note: Semi-transparent text colors will be blended with the background color. However, for the background image, the alpha component is ignored.
+         - Note: Semi-transparent text colors will be blended with the background color. However, for the background image, the alpha component is ignored.
 
-     - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
-     */
-    public class func getTextColor(fromColors colors: [Color], withFont font: Font, onBackgroundImage image: Image, imageArea: ImageArea = .full, conformanceLevel: ConformanceLevel = .AA) -> Color? {
-        guard let averageImageColor = image.averageColor(imageArea: imageArea) else { return nil }
+         - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
+         */
+        public class func getTextColor(fromColors colors: [Color], withFont font: Font, onBackgroundImage image: Image, imageArea: ImageArea = .full, conformanceLevel: ConformanceLevel = .AA) -> Color? {
+            guard let averageImageColor = image.averageColor(imageArea: imageArea) else { return nil }
 
-        return Color.getTextColor(fromColors: colors, withFont: font, onBackgroundColor: averageImageColor, conformanceLevel: conformanceLevel)
-    }
+            return Color.getTextColor(fromColors: colors, withFont: font, onBackgroundColor: averageImageColor, conformanceLevel: conformanceLevel)
+        }
 
     #endif
 
