@@ -10,11 +10,11 @@ import UIKit
 
 #if os(iOS)
 
-    import Answers
-    import AppCenter
-    import AppCenterAnalytics
-    import Fabric
-    import Firebase
+//    import Answers
+//    import AppCenter
+//    import AppCenterAnalytics
+//    import Fabric
+//    import Firebase
 
 #endif
 
@@ -53,9 +53,9 @@ class FeatureOverviewController: UITableViewController {
         #if os(iOS)
             if let statusMap = self.capable?.statusMap {
                 let eventName = "Capable features received"
-                MSAnalytics.trackEvent(eventName, withProperties: statusMap)
-                Analytics.logEvent(eventName, parameters: statusMap)
-                Answers.logCustomEvent(withName: eventName, customAttributes: statusMap)
+//                MSAnalytics.trackEvent(eventName, withProperties: statusMap)
+//                Analytics.logEvent(eventName, parameters: statusMap)
+//                Answers.logCustomEvent(withName: eventName, customAttributes: statusMap)
             }
         #endif
     }

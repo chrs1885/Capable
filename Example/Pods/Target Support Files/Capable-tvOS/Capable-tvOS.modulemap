@@ -1,0 +1,6 @@
+framework module Capable {
+  umbrella header "Capable-tvOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
