@@ -1,3 +1,8 @@
+## Version 1.1.2
+
+### Bugfixes
+* [Add Carthage support by sharing Pod schemes](https://github.com/chrs1885/Capable/pull/49) *(Thanks to @jefflen)*
+
 ## Version 1.1.1
 
 ### Enhancements
