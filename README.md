@@ -3,7 +3,7 @@
 
 ---
 [![Awesome](https://camo.githubusercontent.com/13c4e50d88df7178ae1882a203ed57b641674f94/68747470733a2f2f63646e2e7261776769742e636f6d2f73696e647265736f726875732f617765736f6d652f643733303566333864323966656437386661383536353265336136336531353464643865383832392f6d656469612f62616467652e737667)](https://github.com/vsouza/awesome-ios#accessibility)
-[![Build Status](https://app.bitrise.io/app/7596a076a75ab2ab/status.svg?token=3kpsJB-PR0sBLRF8NYrwhg&branch=develop)](https://app.bitrise.io/app/7596a076a75ab2ab)
+[![Build Status](https://app.bitrise.io/app/bffa0ab34e532968/status.svg?token=brzakeKmTQGYMdW-lNmClg&branch=develop)](https://app.bitrise.io/app/bffa0ab34e532968)
 ![Swift](https://img.shields.io/badge/swift-5.0-red.svg)
 ![Platforms](https://img.shields.io/cocoapods/p/Capable.svg)
 [![Cocoapods compatible](https://img.shields.io/cocoapods/v/Capable.svg)](https://cocoapods.org/pods/Capable)
@@ -85,7 +85,7 @@ github "chrs1885/Capable"
 
 ```ruby
 dependencies: [
-    .package(url: "https://github.com/chrs1885/Capable.git", from: "1.1.1")
+    .package(url: "https://github.com/chrs1885/Capable.git", from: "1.1.2")
 ]
 ```
 
