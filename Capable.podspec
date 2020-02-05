@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Capable'
-  s.version = '1.1.1'
+  s.version = '1.1.2'
   s.summary = 'Keep track of accessibility settings, leverage high contrast colors, and use scalable fonts to enable users with disabilities to use your app.'
  
   s.description = <<-DESC
