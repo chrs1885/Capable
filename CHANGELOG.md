@@ -1,3 +1,8 @@
+## Version 1.1.3
+
+### Bugfixes
+* [Fix naming collisions with SwiftUI](https://github.com/chrs1885/Capable/pull/51)
+
 ## Version 1.1.2
 
 ### Bugfixes

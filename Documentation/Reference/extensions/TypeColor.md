@@ -1,12 +1,12 @@
 **EXTENSION**
 
-# `Color`
+# `TypeColor`
 
 ## Methods
 ### `getContrastRatio(forTextColor:onBackgroundColor:)`
 
 ```swift
-public class func getContrastRatio(forTextColor textColor: Color, onBackgroundColor backgroundColor: Color) -> CGFloat?
+public class func getContrastRatio(forTextColor textColor: TypeColor, onBackgroundColor backgroundColor: TypeColor) -> CGFloat?
 ```
 
 > Calculates the color ratio for a text color on a background color.
@@ -31,7 +31,7 @@ public class func getContrastRatio(forTextColor textColor: Color, onBackgroundCo
 ### `getTextColor(onBackgroundColor:)`
 
 ```swift
-public class func getTextColor(onBackgroundColor backgroundColor: Color) -> Color?
+public class func getTextColor(onBackgroundColor backgroundColor: TypeColor) -> TypeColor?
 ```
 
 > Returns the text color with the highest contrast (black or white) for a given background color.
@@ -54,7 +54,7 @@ public class func getTextColor(onBackgroundColor backgroundColor: Color) -> Colo
 ### `getTextColor(fromColors:withFont:onBackgroundColor:conformanceLevel:)`
 
 ```swift
-public class func getTextColor(fromColors colors: [Color], withFont font: Font, onBackgroundColor backgroundColor: Color, conformanceLevel: ConformanceLevel = .AA) -> Color?
+public class func getTextColor(fromColors colors: [TypeColor], withFont font: TypeFont, onBackgroundColor backgroundColor: TypeColor, conformanceLevel: ConformanceLevel = .AA) -> TypeColor?
 ```
 
 > Calculates the contrast ratio of a given list of text colors and a background color. The first color that conforms to the conformance level defined gets returned. The default conformance level is .AA.
@@ -83,7 +83,7 @@ public class func getTextColor(fromColors colors: [Color], withFont font: Font, 
 ### `getTextColor(onBackgroundImage:imageArea:)`
 
 ```swift
-public class func getTextColor(onBackgroundImage image: Image, imageArea: ImageArea = .full) -> Color?
+public class func getTextColor(onBackgroundImage image: TypeImage, imageArea: ImageArea = .full) -> TypeColor?
 ```
 
 > Returns the text color with the highest contrast (black or white) for a specific area of given background image.
@@ -101,7 +101,7 @@ public class func getTextColor(onBackgroundImage image: Image, imageArea: ImageA
 ### `getTextColor(fromColors:withFont:onBackgroundImage:imageArea:conformanceLevel:)`
 
 ```swift
-public class func getTextColor(fromColors colors: [Color], withFont font: Font, onBackgroundImage image: Image, imageArea: ImageArea = .full, conformanceLevel: ConformanceLevel = .AA) -> Color?
+public class func getTextColor(fromColors colors: [TypeColor], withFont font: TypeFont, onBackgroundImage image: TypeImage, imageArea: ImageArea = .full, conformanceLevel: ConformanceLevel = .AA) -> TypeColor?
 ```
 
 > Calculates the contrast ratio of a given list of text colors and a specific area of given background image. The first color that conforms to the conformance level defined gets returned. The default conformance level is .AA.
@@ -122,7 +122,7 @@ public class func getTextColor(fromColors colors: [Color], withFont font: Font, 
 ### `getBackgroundColor(forTextColor:)`
 
 ```swift
-public class func getBackgroundColor(forTextColor textColor: Color) -> Color?
+public class func getBackgroundColor(forTextColor textColor: TypeColor) -> TypeColor?
 ```
 
 > Returns the background color with the highest contrast (black or white) for a given text color.
@@ -145,7 +145,7 @@ public class func getBackgroundColor(forTextColor textColor: Color) -> Color?
 ### `getBackgroundColor(fromColors:forTextColor:withFont:conformanceLevel:)`
 
 ```swift
-public class func getBackgroundColor(fromColors colors: [Color], forTextColor textColor: Color, withFont font: Font, conformanceLevel: ConformanceLevel = .AA) -> Color?
+public class func getBackgroundColor(fromColors colors: [TypeColor], forTextColor textColor: TypeColor, withFont font: TypeFont, conformanceLevel: ConformanceLevel = .AA) -> TypeColor?
 ```
 
 > Calculates the contrast ratio of a given list of background colors and a text color. The first color that conforms to the conformance level defined gets returned. The default conformance level is .AA.

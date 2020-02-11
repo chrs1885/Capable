@@ -61,7 +61,7 @@
         /// The second horizontal third.
         case verticalCenter
 
-        func rect(forImage image: Image) -> CGRect {
+        func rect(forImage image: TypeImage) -> CGRect {
             let imageWidth = image.size.width
             let imageHeight = image.size.height
             let widthThird = imageWidth / 3.0
