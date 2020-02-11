@@ -1,11 +1,11 @@
 PODS:
-  - Capable (1.1.2):
-    - Capable/Colors (= 1.1.2)
-    - Capable/Features (= 1.1.2)
-    - Capable/Fonts (= 1.1.2)
-  - Capable/Colors (1.1.2)
-  - Capable/Features (1.1.2)
-  - Capable/Fonts (1.1.2)
+  - Capable (1.1.3):
+    - Capable/Colors (= 1.1.3)
+    - Capable/Features (= 1.1.3)
+    - Capable/Fonts (= 1.1.3)
+  - Capable/Colors (1.1.3)
+  - Capable/Features (1.1.3)
+  - Capable/Fonts (1.1.3)
   - Nimble (8.0.4)
   - Quick (2.2.0)
   - SheetyColors (1.0.1):
@@ -28,7 +28,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Capable: 68f8213fb81f2e4667bcc06449adc6ade1926017
+  Capable: 1568ec5d4dde7daf0925ea327463ee333c9f7341
   Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   SheetyColors: ae8c3a5d04d310e8e2d08e4aa0bd543519d02252

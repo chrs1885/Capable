@@ -19,6 +19,6 @@ This Reference Documentation has been generated with
 ## Extensions
 
 -   [Capable](extensions/Capable.md)
--   [Color](extensions/Color.md)
 -   [ConformanceLevel](extensions/ConformanceLevel.md)
+-   [TypeColor](extensions/TypeColor.md)
 -   [UIFont](extensions/UIFont.md)
