@@ -13,7 +13,7 @@ class ImageAreaTests: QuickSpec {
     override func spec() {
         describe("The ImageArea class") {
             var sut: ImageArea!
-            let testImage = Image.mock(withColor: .white, rect: CGRect(x: 0, y: 0, width: 3, height: 3))
+            let testImage = ImageType.mock(withColor: .white, rect: CGRect(x: 0, y: 0, width: 3, height: 3))
 
             context("calling rect()") {
                 var actualRect: CGRect!

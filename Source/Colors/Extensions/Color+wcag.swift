@@ -10,25 +10,25 @@
     import UIKit
 
     /// Typealias used for colors. It maps to UIColor.
-    public typealias Color = UIColor
+    public typealias ColorType = UIColor
 
     /// Typealias used for fonts. It maps to UIFont.
-    public typealias Font = UIFont
+    public typealias FontType = UIFont
 
 #elseif os(OSX)
 
     import AppKit
 
     /// Typealias used for colors. It maps to NSColor.
-    public typealias Color = NSColor
+    public typealias ColorType = NSColor
 
     /// Typealias used for fonts. It maps to NSFont.
-    public typealias Font = NSFont
+    public typealias FontType = NSFont
 
 #endif
 
 /// Extension that adds functionality for calculating WCAG compliant high contrast colors.
-extension Color {
+extension ColorType {
     /**
      Calculates the color ratio for a text color on a background color.
 
@@ -42,7 +42,7 @@ extension Color {
 
      - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
-    public class func getContrastRatio(forTextColor textColor: Color, onBackgroundColor backgroundColor: Color) -> CGFloat? {
+    public class func getContrastRatio(forTextColor textColor: ColorType, onBackgroundColor backgroundColor: ColorType) -> CGFloat? {
         guard let rgbaTextColor = textColor.rgbaColor, let rgbaBackgroundColor = backgroundColor.rgbaColor else {
             return nil
         }
@@ -62,7 +62,7 @@ extension Color {
 
      - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
-    public class func getTextColor(onBackgroundColor backgroundColor: Color) -> Color? {
+    public class func getTextColor(onBackgroundColor backgroundColor: ColorType) -> ColorType? {
         guard let rgbaBackgroundColor = backgroundColor.rgbaColor else { return nil }
         let textColor = RGBAColor.getTextColor(onBackgroundColor: rgbaBackgroundColor)
 
@@ -84,7 +84,7 @@ extension Color {
 
      - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
-    public class func getTextColor(fromColors colors: [Color], withFont font: Font, onBackgroundColor backgroundColor: Color, conformanceLevel: ConformanceLevel = .AA) -> Color? {
+    public class func getTextColor(fromColors colors: [ColorType], withFont font: FontType, onBackgroundColor backgroundColor: ColorType, conformanceLevel: ConformanceLevel = .AA) -> ColorType? {
         guard let rgbaBackgroundColor = backgroundColor.rgbaColor else { return nil }
 
         for textColor in colors {
@@ -114,10 +114,10 @@ extension Color {
 
          - Warning: This function will also return `nil` if the image is corrupted.
          */
-        public class func getTextColor(onBackgroundImage image: Image, imageArea: ImageArea = .full) -> Color? {
+        public class func getTextColor(onBackgroundImage image: ImageType, imageArea: ImageArea = .full) -> ColorType? {
             guard let averageImageColor = image.averageColor(imageArea: imageArea) else { return nil }
 
-            return Color.getTextColor(onBackgroundColor: averageImageColor)
+            return ColorType.getTextColor(onBackgroundColor: averageImageColor)
         }
 
         /**
@@ -136,10 +136,10 @@ extension Color {
 
          - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
          */
-        public class func getTextColor(fromColors colors: [Color], withFont font: Font, onBackgroundImage image: Image, imageArea: ImageArea = .full, conformanceLevel: ConformanceLevel = .AA) -> Color? {
+        public class func getTextColor(fromColors colors: [ColorType], withFont font: FontType, onBackgroundImage image: ImageType, imageArea: ImageArea = .full, conformanceLevel: ConformanceLevel = .AA) -> ColorType? {
             guard let averageImageColor = image.averageColor(imageArea: imageArea) else { return nil }
 
-            return Color.getTextColor(fromColors: colors, withFont: font, onBackgroundColor: averageImageColor, conformanceLevel: conformanceLevel)
+            return ColorType.getTextColor(fromColors: colors, withFont: font, onBackgroundColor: averageImageColor, conformanceLevel: conformanceLevel)
         }
 
     #endif
@@ -156,7 +156,7 @@ extension Color {
 
      - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
-    public class func getBackgroundColor(forTextColor textColor: Color) -> Color? {
+    public class func getBackgroundColor(forTextColor textColor: ColorType) -> ColorType? {
         guard let rgbaTextColor = textColor.rgbaColor else { return nil }
         let backgroundColor = RGBAColor.getBackgroundColor(forTextColor: rgbaTextColor)
 
@@ -178,7 +178,7 @@ extension Color {
 
      - Warning: This function will also return `nil` if any input color is not convertable to the sRGB color space.
      */
-    public class func getBackgroundColor(fromColors colors: [Color], forTextColor textColor: Color, withFont font: Font, conformanceLevel: ConformanceLevel = .AA) -> Color? {
+    public class func getBackgroundColor(fromColors colors: [ColorType], forTextColor textColor: ColorType, withFont font: FontType, conformanceLevel: ConformanceLevel = .AA) -> ColorType? {
         guard let rgbaTextColor = textColor.rgbaColor else { return nil }
 
         for backgroundColor in colors {
