@@ -15,8 +15,8 @@
 
 import CoreImage
 
-extension Image {
-    class func mock(withColor color: Color, rect: CGRect = CGRect(x: 0, y: 0, width: 1, height: 1)) -> Image {
+extension TypeImage {
+    class func mock(withColor color: TypeColor, rect: CGRect = CGRect(x: 0, y: 0, width: 1, height: 1)) -> TypeImage {
         #if os(iOS) || os(tvOS)
 
             UIGraphicsBeginImageContext(rect.size)
@@ -37,7 +37,7 @@ extension Image {
                 fatalError("Error creating the mock image.")
             }
 
-            return Image(cgImage: cgImage, size: rect.size)
+            return TypeImage(cgImage: cgImage, size: rect.size)
 
         #endif
     }

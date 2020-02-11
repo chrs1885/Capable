@@ -12,21 +12,21 @@ import CoreGraphics
     import UIKit
 
     /// Typealias used for images. It maps to UIImage.
-    public typealias Image = UIImage
+    public typealias TypeImage = UIImage
 
 #elseif os(OSX)
 
     import AppKit
 
     /// Typealias used for image. It maps to NSImage.
-    public typealias Image = NSImage
+    public typealias TypeImage = NSImage
 
 #endif
 
 #if os(iOS) || os(tvOS) || os(OSX)
 
-    extension Image {
-        func averageColor(imageArea: ImageArea = .full) -> Color? {
+    extension TypeImage {
+        func averageColor(imageArea: ImageArea = .full) -> TypeColor? {
             let imageAreaRect = imageArea.rect(forImage: self)
             var transform = CGAffineTransform(scaleX: 1, y: -1)
             transform = transform.translatedBy(x: 0, y: -size.height)
@@ -43,7 +43,7 @@ import CoreGraphics
     }
 
     private extension CIImage {
-        func averageColor(in rect: CGRect) -> Color? {
+        func averageColor(in rect: CGRect) -> TypeColor? {
             let extentVector = CIVector(x: rect.origin.x, y: rect.origin.y, z: rect.size.width, w: rect.size.height)
 
             guard
@@ -56,7 +56,7 @@ import CoreGraphics
             var bitmap = [UInt8](repeating: 0, count: 4)
             let context = CIContext(options: [.workingColorSpace: kCFNull as Any])
             context.render(imageSection, toBitmap: &bitmap, rowBytes: 4, bounds: CGRect(x: 0, y: 0, width: 1, height: 1), format: .RGBA8, colorSpace: nil)
-            let averageColor = Color(
+            let averageColor = TypeColor(
                 red: CGFloat(bitmap[0]) / 255,
                 green: CGFloat(bitmap[1]) / 255,
                 blue: CGFloat(bitmap[2]) / 255,

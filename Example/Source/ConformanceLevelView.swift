@@ -9,14 +9,14 @@
 #if os(iOS)
 
     import UIKit
-    typealias Font = UIFont
+    typealias TypeFont = UIFont
     typealias Label = UILabel
     typealias View = UIView
 
 #elseif os(OSX)
 
     import AppKit
-    typealias Font = NSFont
+    typealias TypeFont = NSFont
     typealias Label = NSTextField
     typealias View = NSView
 
@@ -38,8 +38,8 @@ class ConformanceLevelView: View {
 
     var isPassing: Bool = false {
         didSet {
-            self.backgroundColor = isPassing ? Color.capableGreen : Color.capableRed
-            self.textLabel.textColor = Color.getTextColor(onBackgroundColor: self.backgroundColor!)!
+            self.backgroundColor = isPassing ? TypeColor.capableGreen : TypeColor.capableRed
+            self.textLabel.textColor = TypeColor.getTextColor(onBackgroundColor: self.backgroundColor!)!
         }
     }
 
@@ -50,7 +50,7 @@ class ConformanceLevelView: View {
 
     func setupView() {
         addSubview(textLabel)
-        textLabel.font = Font.systemFont(ofSize: 13.0)
+        textLabel.font = TypeFont.systemFont(ofSize: 13.0)
 
         textLabel.translatesAutoresizingMaskIntoConstraints = false
         let views: [String: Any] = ["textLabel": self.textLabel]
