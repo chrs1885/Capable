@@ -9,21 +9,21 @@
 #if os(iOS)
 
     import UIKit
-    typealias Color = UIColor
+    typealias TypeColor = UIColor
 
 #elseif os(OSX)
 
     import AppKit
-    typealias Color = NSColor
+    typealias TypeColor = NSColor
 
 #endif
 
-extension Color {
-    static var capableGreen: Color {
-        return Color(red: 137 / 255.0, green: 176 / 255.0, blue: 106 / 255.0, alpha: 1.0)
+extension TypeColor {
+    static var capableGreen: TypeColor {
+        return TypeColor(red: 137 / 255.0, green: 176 / 255.0, blue: 106 / 255.0, alpha: 1.0)
     }
 
-    static var capableRed: Color {
-        return Color(red: 1.0, green: 120 / 255.0, blue: 120 / 255.0, alpha: 1.0)
+    static var capableRed: TypeColor {
+        return TypeColor(red: 1.0, green: 120 / 255.0, blue: 120 / 255.0, alpha: 1.0)
     }
 }
