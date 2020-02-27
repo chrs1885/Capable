@@ -28,7 +28,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Capable: 1568ec5d4dde7daf0925ea327463ee333c9f7341
+  Capable: a0fa984888106d458496147719928ffc3dfdefd2
   Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   SheetyColors: ae8c3a5d04d310e8e2d08e4aa0bd543519d02252
