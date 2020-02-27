@@ -1,3 +1,8 @@
+## Version 1.1.4
+
+### Bugfixes
+* Fix macOS deployment target info of subspec definitions.
+
 ## Version 1.1.3
 
 ### Bugfixes
