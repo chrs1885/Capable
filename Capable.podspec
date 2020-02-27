@@ -10,6 +10,7 @@ Capable lets you easily keep track of accessibility settings used by your app us
   s.homepage = 'https://github.com/chrs1885/Capable'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.author = { 'Christoph Wendt' => 'christoph.wendt@me.com' }
+  s.social_media_url = 'https://twitter.com/chr_wendt'
   s.source = { :git => 'https://github.com/chrs1885/Capable.git', :tag => s.version }
   s.documentation_url = 'http://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/1.0.0/Documentation/index.html'
   s.swift_version = '5.0'
@@ -17,22 +18,18 @@ Capable lets you easily keep track of accessibility settings used by your app us
   s.framework = 'Foundation'
   s.ios.framework = s.tvos.framework = s.watchos.framework = 'UIKit'
   s.watchos.framework = 'WatchKit'
+  s.osx.framework = 'AppKit'
 
   s.ios.deployment_target = '10.0'
   s.tvos.deployment_target = '10.0'
   s.watchos.deployment_target = '4.0'
+  s.osx.deployment_target = '10.12'
   
   s.subspec 'Features' do |featuresSubspec|
-    s.osx.framework = 'AppKit'
-    s.osx.deployment_target = '10.12'
-
     featuresSubspec.source_files = 'Source/Features/**/*.swift', 'Source/Common/**/*.swift'
   end
 
   s.subspec 'Colors' do |colorsSubspec|
-    s.osx.framework = 'AppKit'
-    s.osx.deployment_target = '10.12'
-    
     colorsSubspec.source_files = 'Source/Colors/**/*.swift', 'Source/Common/**/*.swift'
   end
 
