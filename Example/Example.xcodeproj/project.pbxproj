@@ -16,41 +16,29 @@
 		44789280210B4AEA000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
 		44789281210B4AED000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
 		4494E5DE23550E5A0082C217 /* NotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BF23550BF00082C217 /* NotificationsTests.swift */; };
-		4494E5DF23550E5A0082C217 /* HandicapNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C023550BF00082C217 /* HandicapNotificationsTests.swift */; };
 		4494E5E023550E5A0082C217 /* CapableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C123550BF00082C217 /* CapableTests.swift */; };
 		4494E5E123550E5A0082C217 /* FeatureNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C223550BF00082C217 /* FeatureNotificationsTests.swift */; };
 		4494E5E223550E5A0082C217 /* FeatureStatusesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C323550BF00082C217 /* FeatureStatusesTests.swift */; };
-		4494E5E323550E5A0082C217 /* HandicapStatusesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C423550BF00082C217 /* HandicapStatusesTests.swift */; };
 		4494E5E423550E5A0082C217 /* FeatureStatusesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C523550BF00082C217 /* FeatureStatusesProviderTests.swift */; };
-		4494E5E523550E5A0082C217 /* HandicapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C623550BF00082C217 /* HandicapTests.swift */; };
 		4494E5E623550E5A0082C217 /* CapablePerfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C723550BF00082C217 /* CapablePerfTests.swift */; };
 		4494E5E723550E5A0082C217 /* NotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BF23550BF00082C217 /* NotificationsTests.swift */; };
-		4494E5E823550E5A0082C217 /* HandicapNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C023550BF00082C217 /* HandicapNotificationsTests.swift */; };
 		4494E5E923550E5A0082C217 /* CapableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C123550BF00082C217 /* CapableTests.swift */; };
 		4494E5EA23550E5A0082C217 /* FeatureNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C223550BF00082C217 /* FeatureNotificationsTests.swift */; };
 		4494E5EB23550E5A0082C217 /* FeatureStatusesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C323550BF00082C217 /* FeatureStatusesTests.swift */; };
-		4494E5EC23550E5A0082C217 /* HandicapStatusesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C423550BF00082C217 /* HandicapStatusesTests.swift */; };
 		4494E5ED23550E5A0082C217 /* FeatureStatusesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C523550BF00082C217 /* FeatureStatusesProviderTests.swift */; };
-		4494E5EE23550E5A0082C217 /* HandicapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C623550BF00082C217 /* HandicapTests.swift */; };
 		4494E5EF23550E5A0082C217 /* CapablePerfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C723550BF00082C217 /* CapablePerfTests.swift */; };
 		4494E5F023550E5B0082C217 /* NotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BF23550BF00082C217 /* NotificationsTests.swift */; };
-		4494E5F123550E5B0082C217 /* HandicapNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C023550BF00082C217 /* HandicapNotificationsTests.swift */; };
 		4494E5F223550E5B0082C217 /* CapableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C123550BF00082C217 /* CapableTests.swift */; };
 		4494E5F323550E5B0082C217 /* FeatureNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C223550BF00082C217 /* FeatureNotificationsTests.swift */; };
 		4494E5F423550E5B0082C217 /* FeatureStatusesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C323550BF00082C217 /* FeatureStatusesTests.swift */; };
-		4494E5F523550E5B0082C217 /* HandicapStatusesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C423550BF00082C217 /* HandicapStatusesTests.swift */; };
 		4494E5F623550E5B0082C217 /* FeatureStatusesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C523550BF00082C217 /* FeatureStatusesProviderTests.swift */; };
-		4494E5F723550E5B0082C217 /* HandicapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C623550BF00082C217 /* HandicapTests.swift */; };
 		4494E5F823550E5B0082C217 /* CapablePerfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C723550BF00082C217 /* CapablePerfTests.swift */; };
-		4494E5F923550E670082C217 /* HandicapStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BB23550BF00082C217 /* HandicapStatusesMock.swift */; };
 		4494E5FA23550E670082C217 /* NotificationCenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BC23550BF00082C217 /* NotificationCenterMock.swift */; };
 		4494E5FB23550E670082C217 /* FeatureStatusesProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BD23550BF00082C217 /* FeatureStatusesProviderMock.swift */; };
 		4494E5FC23550E670082C217 /* FeatureStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BE23550BF00082C217 /* FeatureStatusesMock.swift */; };
-		4494E5FD23550E680082C217 /* HandicapStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BB23550BF00082C217 /* HandicapStatusesMock.swift */; };
 		4494E5FE23550E680082C217 /* NotificationCenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BC23550BF00082C217 /* NotificationCenterMock.swift */; };
 		4494E5FF23550E680082C217 /* FeatureStatusesProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BD23550BF00082C217 /* FeatureStatusesProviderMock.swift */; };
 		4494E60023550E680082C217 /* FeatureStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BE23550BF00082C217 /* FeatureStatusesMock.swift */; };
-		4494E60123550E690082C217 /* HandicapStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BB23550BF00082C217 /* HandicapStatusesMock.swift */; };
 		4494E60223550E690082C217 /* NotificationCenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BC23550BF00082C217 /* NotificationCenterMock.swift */; };
 		4494E60323550E690082C217 /* FeatureStatusesProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BD23550BF00082C217 /* FeatureStatusesProviderMock.swift */; };
 		4494E60423550E690082C217 /* FeatureStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BE23550BF00082C217 /* FeatureStatusesMock.swift */; };
@@ -109,7 +97,6 @@
 		55A2015AF8E67D0BAC01DA73 /* Pods_Example_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A4614933CCE311EC4CAD3C /* Pods_Example_watchOS_Extension.framework */; };
 		6180FD25002FD5791E4E3C36 /* Pods_Example_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C8CF8E1603FFD70061B7CA /* Pods_Example_iOS.framework */; };
 		791054B3341540F931275BD6 /* Pods_Example_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA97E99795B6631F2DB0EB5 /* Pods_Example_watchOS.framework */; };
-		831AA4DC212B356D00AEAC44 /* HandicapOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA4DB212B356D00AEAC44 /* HandicapOverviewController.swift */; };
 		831B4F1E20A4D4F200F1BB94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831B4F1C20A4D4F200F1BB94 /* Main.storyboard */; };
 		831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F6252078138E00F0C74D /* AppDelegate.swift */; };
 		831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
@@ -145,11 +132,6 @@
 		83C6F6312078138E00F0C74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6282078138E00F0C74D /* Main.storyboard */; };
 		83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
 		83C6F6332078138E00F0C74D /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62B2078138E00F0C74D /* FontsViewController.swift */; };
-		83FF01FA2129FE6300D26E0D /* HandicapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01F92129FE6300D26E0D /* HandicapViewController.swift */; };
-		83FF01FB2129FE6300D26E0D /* HandicapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01F92129FE6300D26E0D /* HandicapViewController.swift */; };
-		83FF01FD2129FE8D00D26E0D /* HandicapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01FC2129FE8D00D26E0D /* HandicapViewController.swift */; };
-		83FF01FF2129FEAB00D26E0D /* HandicapTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF01FE2129FEAB00D26E0D /* HandicapTableCellView.swift */; };
-		83FF0204212B21C800D26E0D /* HandicapRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FF0203212B21C800D26E0D /* HandicapRowController.swift */; };
 		9D9BD8F0470D72CAC5F44979 /* Pods_Example_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A34BF8D95976311A017335 /* Pods_Example_tvOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -252,18 +234,14 @@
 		4494E5A423550B870082C217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4494E5AE23550BA30082C217 /* Tests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4494E5B223550BA30082C217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4494E5BB23550BF00082C217 /* HandicapStatusesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatusesMock.swift; sourceTree = "<group>"; };
 		4494E5BC23550BF00082C217 /* NotificationCenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterMock.swift; sourceTree = "<group>"; };
 		4494E5BD23550BF00082C217 /* FeatureStatusesProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProviderMock.swift; sourceTree = "<group>"; };
 		4494E5BE23550BF00082C217 /* FeatureStatusesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesMock.swift; sourceTree = "<group>"; };
 		4494E5BF23550BF00082C217 /* NotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTests.swift; sourceTree = "<group>"; };
-		4494E5C023550BF00082C217 /* HandicapNotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapNotificationsTests.swift; sourceTree = "<group>"; };
 		4494E5C123550BF00082C217 /* CapableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapableTests.swift; sourceTree = "<group>"; };
 		4494E5C223550BF00082C217 /* FeatureNotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureNotificationsTests.swift; sourceTree = "<group>"; };
 		4494E5C323550BF00082C217 /* FeatureStatusesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesTests.swift; sourceTree = "<group>"; };
-		4494E5C423550BF00082C217 /* HandicapStatusesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapStatusesTests.swift; sourceTree = "<group>"; };
 		4494E5C523550BF00082C217 /* FeatureStatusesProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProviderTests.swift; sourceTree = "<group>"; };
-		4494E5C623550BF00082C217 /* HandicapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapTests.swift; sourceTree = "<group>"; };
 		4494E5C723550BF00082C217 /* CapablePerfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapablePerfTests.swift; sourceTree = "<group>"; };
 		4494E5C923550BF00082C217 /* LoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
 		4494E5CC23550BF00082C217 /* Image+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+mock.swift"; sourceTree = "<group>"; };
@@ -288,7 +266,6 @@
 		61C8CF8E1603FFD70061B7CA /* Pods_Example_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A34BF8D95976311A017335 /* Pods_Example_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B78C620EDD88E25833A2D67 /* Pods_Tests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		831AA4DB212B356D00AEAC44 /* HandicapOverviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandicapOverviewController.swift; sourceTree = "<group>"; };
 		831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		831B4F1D20A4D4F200F1BB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		831B4F2120A4D4F200F1BB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -327,10 +304,6 @@
 		83E67A2C20CD94B800FE6FC2 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FF01F72129FE2400D26E0D /* Capable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Capable.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Example-enhbiqqbvspdgvbxeefqumtrwxbb/Build/Products/Debug-iphoneos/Capable.framework"; sourceTree = "<group>"; };
 		83FF01F82129FE2900D26E0D /* Capable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Capable.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Example-enhbiqqbvspdgvbxeefqumtrwxbb/Build/Products/Debug-iphoneos/Capable.framework"; sourceTree = "<group>"; };
-		83FF01F92129FE6300D26E0D /* HandicapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandicapViewController.swift; sourceTree = "<group>"; };
-		83FF01FC2129FE8D00D26E0D /* HandicapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapViewController.swift; sourceTree = "<group>"; };
-		83FF01FE2129FEAB00D26E0D /* HandicapTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapTableCellView.swift; sourceTree = "<group>"; };
-		83FF0203212B21C800D26E0D /* HandicapRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapRowController.swift; sourceTree = "<group>"; };
 		8FF58CFC45A3E07A160D697E /* Pods-Tests-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-macOS/Pods-Tests-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		9C45A1F5FCFA4768DC33403B /* Pods-Example-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-macOS/Pods-Example-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		A5DCF956DE661B9787EAE334 /* Pods-Example-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-iOS/Pods-Example-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -461,9 +434,6 @@
 				4494E5C223550BF00082C217 /* FeatureNotificationsTests.swift */,
 				4494E5C323550BF00082C217 /* FeatureStatusesTests.swift */,
 				4494E5C523550BF00082C217 /* FeatureStatusesProviderTests.swift */,
-				4494E5C023550BF00082C217 /* HandicapNotificationsTests.swift */,
-				4494E5C423550BF00082C217 /* HandicapStatusesTests.swift */,
-				4494E5C623550BF00082C217 /* HandicapTests.swift */,
 				4494E5BF23550BF00082C217 /* NotificationsTests.swift */,
 			);
 			path = Features;
@@ -472,7 +442,6 @@
 		4494E5BA23550BF00082C217 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				4494E5BB23550BF00082C217 /* HandicapStatusesMock.swift */,
 				4494E5BE23550BF00082C217 /* FeatureStatusesMock.swift */,
 				4494E5BD23550BF00082C217 /* FeatureStatusesProviderMock.swift */,
 				4494E5BC23550BF00082C217 /* NotificationCenterMock.swift */,
@@ -562,8 +531,6 @@
 				832953E021121EAC00072EB9 /* Example_macOS.entitlements */,
 				832953D821121EAA00072EB9 /* FeatureOverviewController.swift */,
 				832953E42112496300072EB9 /* FeatureTableCellView.swift */,
-				83FF01FE2129FEAB00D26E0D /* HandicapTableCellView.swift */,
-				83FF01FC2129FE8D00D26E0D /* HandicapViewController.swift */,
 				832953DF21121EAC00072EB9 /* Info.plist */,
 				832953DC21121EAC00072EB9 /* Main.storyboard */,
 				83B255FC21FE0F56009116EC /* NSView+backgroundColor.swift */,
@@ -579,8 +546,6 @@
 				837C193A20AA2D960003D237 /* FeatureRowController.swift */,
 				4478927C210B4288000D5939 /* FontRowController.swift */,
 				4478927A210B4073000D5939 /* FontsViewController.swift */,
-				83FF0203212B21C800D26E0D /* HandicapRowController.swift */,
-				831AA4DB212B356D00AEAC44 /* HandicapOverviewController.swift */,
 				836725CB210A6A7A0008ABF7 /* OverviewController.swift */,
 				836725CD210A6A920008ABF7 /* OverviewRowController.swift */,
 				837C192B20AA27970003D237 /* Assets.xcassets */,
@@ -652,7 +617,6 @@
 				831FE59821F667EE0078F260 /* ConformanceLevelView.swift */,
 				83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */,
 				4478927F210B4AEA000D5939 /* FontsConstants.swift */,
-				83FF01F92129FE6300D26E0D /* HandicapViewController.swift */,
 				831B4F2520A4D51D00F1BB94 /* iOS */,
 				832953D521121EAA00072EB9 /* macOS */,
 				831B4F2620A4D53100F1BB94 /* tvOS */,
@@ -1315,13 +1279,10 @@
 				4494E62523550F240082C217 /* FontMetricsTests.swift in Sources */,
 				4494E5E023550E5A0082C217 /* CapableTests.swift in Sources */,
 				4494E60D23550ED40082C217 /* RGBAColorTests.swift in Sources */,
-				4494E5F923550E670082C217 /* HandicapStatusesMock.swift in Sources */,
 				4494E62E23550F360082C217 /* OsVersionProviderMock.swift in Sources */,
-				4494E5E523550E5A0082C217 /* HandicapTests.swift in Sources */,
 				4494E60C23550ED40082C217 /* UIFontFontPropsTests.swift in Sources */,
 				4494E62323550F240082C217 /* FontMetricsProviderTests.swift in Sources */,
 				4494E62D23550F360082C217 /* FontMetricsProviderMock.swift in Sources */,
-				4494E5E323550E5A0082C217 /* HandicapStatusesTests.swift in Sources */,
 				4494E60F23550ED40082C217 /* ConformanceLevelTests.swift in Sources */,
 				4494E62123550EE40082C217 /* Image+mock.swift in Sources */,
 				4494E5FC23550E670082C217 /* FeatureStatusesMock.swift in Sources */,
@@ -1331,7 +1292,6 @@
 				4494E60523550ECA0082C217 /* LoggerTests.swift in Sources */,
 				4494E5E623550E5A0082C217 /* CapablePerfTests.swift in Sources */,
 				4494E60B23550ED40082C217 /* FontPropsTests.swift in Sources */,
-				4494E5DF23550E5A0082C217 /* HandicapNotificationsTests.swift in Sources */,
 				4494E5FA23550E670082C217 /* NotificationCenterMock.swift in Sources */,
 				4494E5E423550E5A0082C217 /* FeatureStatusesProviderTests.swift in Sources */,
 				4494E62423550F240082C217 /* FontMetricsSupportTests.swift in Sources */,
@@ -1351,13 +1311,10 @@
 				4494E62823550F240082C217 /* FontMetricsTests.swift in Sources */,
 				4494E5E923550E5A0082C217 /* CapableTests.swift in Sources */,
 				4494E61523550ED50082C217 /* RGBAColorTests.swift in Sources */,
-				4494E5FD23550E680082C217 /* HandicapStatusesMock.swift in Sources */,
 				4494E63123550F360082C217 /* OsVersionProviderMock.swift in Sources */,
-				4494E5EE23550E5A0082C217 /* HandicapTests.swift in Sources */,
 				4494E61423550ED50082C217 /* UIFontFontPropsTests.swift in Sources */,
 				4494E62623550F240082C217 /* FontMetricsProviderTests.swift in Sources */,
 				4494E63023550F360082C217 /* FontMetricsProviderMock.swift in Sources */,
-				4494E5EC23550E5A0082C217 /* HandicapStatusesTests.swift in Sources */,
 				4494E61723550ED50082C217 /* ConformanceLevelTests.swift in Sources */,
 				4494E62223550EE40082C217 /* Image+mock.swift in Sources */,
 				4494E60023550E680082C217 /* FeatureStatusesMock.swift in Sources */,
@@ -1367,7 +1324,6 @@
 				4494E60623550ECB0082C217 /* LoggerTests.swift in Sources */,
 				4494E5EF23550E5A0082C217 /* CapablePerfTests.swift in Sources */,
 				4494E61323550ED50082C217 /* FontPropsTests.swift in Sources */,
-				4494E5E823550E5A0082C217 /* HandicapNotificationsTests.swift in Sources */,
 				4494E5FE23550E680082C217 /* NotificationCenterMock.swift in Sources */,
 				4494E5ED23550E5A0082C217 /* FeatureStatusesProviderTests.swift in Sources */,
 				4494E62723550F240082C217 /* FontMetricsSupportTests.swift in Sources */,
@@ -1387,13 +1343,10 @@
 				4494E62B23550F250082C217 /* FontMetricsTests.swift in Sources */,
 				4494E5F223550E5B0082C217 /* CapableTests.swift in Sources */,
 				4494E61D23550ED50082C217 /* RGBAColorTests.swift in Sources */,
-				4494E60123550E690082C217 /* HandicapStatusesMock.swift in Sources */,
 				4494E63423550F380082C217 /* OsVersionProviderMock.swift in Sources */,
-				4494E5F723550E5B0082C217 /* HandicapTests.swift in Sources */,
 				4494E61C23550ED50082C217 /* UIFontFontPropsTests.swift in Sources */,
 				4494E62923550F250082C217 /* FontMetricsProviderTests.swift in Sources */,
 				4494E63323550F380082C217 /* FontMetricsProviderMock.swift in Sources */,
-				4494E5F523550E5B0082C217 /* HandicapStatusesTests.swift in Sources */,
 				4494E61F23550ED50082C217 /* ConformanceLevelTests.swift in Sources */,
 				4494E62023550EE40082C217 /* Image+mock.swift in Sources */,
 				4494E60423550E690082C217 /* FeatureStatusesMock.swift in Sources */,
@@ -1403,7 +1356,6 @@
 				4494E60723550ECC0082C217 /* LoggerTests.swift in Sources */,
 				4494E5F823550E5B0082C217 /* CapablePerfTests.swift in Sources */,
 				4494E61B23550ED50082C217 /* FontPropsTests.swift in Sources */,
-				4494E5F123550E5B0082C217 /* HandicapNotificationsTests.swift in Sources */,
 				4494E60223550E690082C217 /* NotificationCenterMock.swift in Sources */,
 				4494E5F623550E5B0082C217 /* FeatureStatusesProviderTests.swift in Sources */,
 				4494E62A23550F250082C217 /* FontMetricsSupportTests.swift in Sources */,
@@ -1422,7 +1374,6 @@
 			files = (
 				831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */,
 				831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */,
-				83FF01FB2129FE6300D26E0D /* HandicapViewController.swift in Sources */,
 				44D0B935233F833900A9B136 /* CaptionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1432,11 +1383,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B255FB21FE0DC0009116EC /* ConformanceLevelView.swift in Sources */,
-				83FF01FF2129FEAB00D26E0D /* HandicapTableCellView.swift in Sources */,
 				832953E621124C9600072EB9 /* FeatureTableCellView.swift in Sources */,
 				83B2560021FE11BE009116EC /* Color+capable.swift in Sources */,
 				832953D921121EAA00072EB9 /* FeatureOverviewController.swift in Sources */,
-				83FF01FD2129FE8D00D26E0D /* HandicapViewController.swift in Sources */,
 				83B255FD21FE0F56009116EC /* NSView+backgroundColor.swift in Sources */,
 				44D0B93A233F926100A9B136 /* CaptionsViewController.swift in Sources */,
 				83B255FA21FE07A4009116EC /* ColorsViewController.swift in Sources */,
@@ -1450,11 +1399,9 @@
 			files = (
 				837C193B20AA2D960003D237 /* FeatureRowController.swift in Sources */,
 				4478927D210B4288000D5939 /* FontRowController.swift in Sources */,
-				831AA4DC212B356D00AEAC44 /* HandicapOverviewController.swift in Sources */,
 				837C192A20AA27970003D237 /* ExtensionDelegate.swift in Sources */,
 				836725CF210A71780008ABF7 /* OverviewController.swift in Sources */,
 				4478927B210B4073000D5939 /* FontsViewController.swift in Sources */,
-				83FF0204212B21C800D26E0D /* HandicapRowController.swift in Sources */,
 				836725D0210A71780008ABF7 /* OverviewRowController.swift in Sources */,
 				44789281210B4AED000D5939 /* FontsConstants.swift in Sources */,
 				837C193920AA27F10003D237 /* FeatureOverviewController.swift in Sources */,
@@ -1470,7 +1417,6 @@
 				831FE5A121FA60CD0078F260 /* Color+capable.swift in Sources */,
 				83C6F6332078138E00F0C74D /* FontsViewController.swift in Sources */,
 				831FE59921F667EE0078F260 /* ConformanceLevelView.swift in Sources */,
-				83FF01FA2129FE6300D26E0D /* HandicapViewController.swift in Sources */,
 				44789280210B4AEA000D5939 /* FontsConstants.swift in Sources */,
 				83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */,
 				44FD13182336CD3B001C6C7A /* CaptionsViewController.swift in Sources */,
