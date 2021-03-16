@@ -6,14 +6,11 @@ This Reference Documentation has been generated with
 
 -   [Capable](structs/Capable.md)
 -   [FeatureStatus](structs/FeatureStatus.md)
--   [Handicap](structs/Handicap.md)
--   [HandicapStatus](structs/HandicapStatus.md)
 
 ## Enums
 
 -   [CapableFeature](enums/CapableFeature.md)
 -   [ConformanceLevel](enums/ConformanceLevel.md)
--   [HandicapEnabledMode](enums/HandicapEnabledMode.md)
 -   [ImageArea](enums/ImageArea.md)
 
 ## Extensions
