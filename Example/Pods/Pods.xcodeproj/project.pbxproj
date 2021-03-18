@@ -290,6 +290,98 @@
 		823BD84A57FBA30E0A7091B41BE47968 /* NMBExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D391CD376D33B9F01AEDF0ED1C2108 /* NMBExpectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		8272BEFB1DAEAFE2CF6E58CB1B52449B /* UIFont+fontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9763E57F6FEF1C2A6774A3B724BB0C46 /* UIFont+fontProps.swift */; };
 		82C0FA43BA7470A2E011208530BA0078 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F355040F28D258FFCD6202C027E17C6 /* Async.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		831A4CD42602983800764546 /* FeatureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4CD32602983800764546 /* FeatureProtocol.swift */; };
+		831A4CD52602983800764546 /* FeatureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4CD32602983800764546 /* FeatureProtocol.swift */; };
+		831A4CD62602983800764546 /* FeatureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4CD32602983800764546 /* FeatureProtocol.swift */; };
+		831A4CD72602983800764546 /* FeatureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4CD32602983800764546 /* FeatureProtocol.swift */; };
+		831A4CEC260299D700764546 /* VoiceOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4CEB260299D700764546 /* VoiceOver.swift */; };
+		831A4CED260299D700764546 /* VoiceOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4CEB260299D700764546 /* VoiceOver.swift */; };
+		831A4CEE260299D700764546 /* VoiceOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4CEB260299D700764546 /* VoiceOver.swift */; };
+		831A4CEF260299D700764546 /* VoiceOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4CEB260299D700764546 /* VoiceOver.swift */; };
+		831A4D0426029D3B00764546 /* ShakeToUndo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D0326029D3B00764546 /* ShakeToUndo.swift */; };
+		831A4D0526029D3B00764546 /* ShakeToUndo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D0326029D3B00764546 /* ShakeToUndo.swift */; };
+		831A4D0626029D3B00764546 /* ShakeToUndo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D0326029D3B00764546 /* ShakeToUndo.swift */; };
+		831A4D0726029D3B00764546 /* ShakeToUndo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D0326029D3B00764546 /* ShakeToUndo.swift */; };
+		831A4D1C26029EBB00764546 /* AssistiveTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D1B26029EBB00764546 /* AssistiveTouch.swift */; };
+		831A4D1D26029EBB00764546 /* AssistiveTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D1B26029EBB00764546 /* AssistiveTouch.swift */; };
+		831A4D1E26029EBB00764546 /* AssistiveTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D1B26029EBB00764546 /* AssistiveTouch.swift */; };
+		831A4D1F26029EBB00764546 /* AssistiveTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D1B26029EBB00764546 /* AssistiveTouch.swift */; };
+		831A4D3426029FAF00764546 /* GuidedAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D3326029FAF00764546 /* GuidedAccess.swift */; };
+		831A4D3526029FAF00764546 /* GuidedAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D3326029FAF00764546 /* GuidedAccess.swift */; };
+		831A4D3626029FAF00764546 /* GuidedAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D3326029FAF00764546 /* GuidedAccess.swift */; };
+		831A4D3726029FAF00764546 /* GuidedAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D3326029FAF00764546 /* GuidedAccess.swift */; };
+		831A4D4C2602A01700764546 /* OnOffSwitchLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D4B2602A01700764546 /* OnOffSwitchLabels.swift */; };
+		831A4D4D2602A01700764546 /* OnOffSwitchLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D4B2602A01700764546 /* OnOffSwitchLabels.swift */; };
+		831A4D4E2602A01700764546 /* OnOffSwitchLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D4B2602A01700764546 /* OnOffSwitchLabels.swift */; };
+		831A4D4F2602A01700764546 /* OnOffSwitchLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D4B2602A01700764546 /* OnOffSwitchLabels.swift */; };
+		831A4D642602A05400764546 /* SpeakScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D632602A05400764546 /* SpeakScreen.swift */; };
+		831A4D652602A05400764546 /* SpeakScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D632602A05400764546 /* SpeakScreen.swift */; };
+		831A4D662602A05400764546 /* SpeakScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D632602A05400764546 /* SpeakScreen.swift */; };
+		831A4D672602A05400764546 /* SpeakScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D632602A05400764546 /* SpeakScreen.swift */; };
+		831A4D7C2602A0EB00764546 /* SpeakSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D7B2602A0EB00764546 /* SpeakSelection.swift */; };
+		831A4D7D2602A0EB00764546 /* SpeakSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D7B2602A0EB00764546 /* SpeakSelection.swift */; };
+		831A4D7E2602A0EB00764546 /* SpeakSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D7B2602A0EB00764546 /* SpeakSelection.swift */; };
+		831A4D7F2602A0EB00764546 /* SpeakSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D7B2602A0EB00764546 /* SpeakSelection.swift */; };
+		831A4D942602A13400764546 /* BoldText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D932602A13400764546 /* BoldText.swift */; };
+		831A4D952602A13400764546 /* BoldText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D932602A13400764546 /* BoldText.swift */; };
+		831A4D962602A13400764546 /* BoldText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D932602A13400764546 /* BoldText.swift */; };
+		831A4D972602A13400764546 /* BoldText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4D932602A13400764546 /* BoldText.swift */; };
+		831A4DAC2602A16700764546 /* ClosedCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DAB2602A16700764546 /* ClosedCaption.swift */; };
+		831A4DAD2602A16700764546 /* ClosedCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DAB2602A16700764546 /* ClosedCaption.swift */; };
+		831A4DAE2602A16700764546 /* ClosedCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DAB2602A16700764546 /* ClosedCaption.swift */; };
+		831A4DAF2602A16700764546 /* ClosedCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DAB2602A16700764546 /* ClosedCaption.swift */; };
+		831A4DC42602A1A200764546 /* VideoAutoplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DC32602A1A200764546 /* VideoAutoplay.swift */; };
+		831A4DC52602A1A200764546 /* VideoAutoplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DC32602A1A200764546 /* VideoAutoplay.swift */; };
+		831A4DC62602A1A200764546 /* VideoAutoplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DC32602A1A200764546 /* VideoAutoplay.swift */; };
+		831A4DC72602A1A200764546 /* VideoAutoplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DC32602A1A200764546 /* VideoAutoplay.swift */; };
+		831A4DDC2602A1E800764546 /* SwitchControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DDB2602A1E800764546 /* SwitchControl.swift */; };
+		831A4DDD2602A1E800764546 /* SwitchControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DDB2602A1E800764546 /* SwitchControl.swift */; };
+		831A4DDE2602A1E800764546 /* SwitchControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DDB2602A1E800764546 /* SwitchControl.swift */; };
+		831A4DDF2602A1E800764546 /* SwitchControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DDB2602A1E800764546 /* SwitchControl.swift */; };
+		831A4DF42602A46C00764546 /* MonoAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DF32602A46C00764546 /* MonoAudio.swift */; };
+		831A4DF52602A46C00764546 /* MonoAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DF32602A46C00764546 /* MonoAudio.swift */; };
+		831A4DF62602A46C00764546 /* MonoAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DF32602A46C00764546 /* MonoAudio.swift */; };
+		831A4DF72602A46C00764546 /* MonoAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4DF32602A46C00764546 /* MonoAudio.swift */; };
+		831A4E0C2602A4EC00764546 /* FullKeyboardAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E0B2602A4EC00764546 /* FullKeyboardAccess.swift */; };
+		831A4E0D2602A4EC00764546 /* FullKeyboardAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E0B2602A4EC00764546 /* FullKeyboardAccess.swift */; };
+		831A4E0E2602A4EC00764546 /* FullKeyboardAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E0B2602A4EC00764546 /* FullKeyboardAccess.swift */; };
+		831A4E0F2602A4EC00764546 /* FullKeyboardAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E0B2602A4EC00764546 /* FullKeyboardAccess.swift */; };
+		831A4E242602A5CA00764546 /* DifferentiateWithoutColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E232602A5CA00764546 /* DifferentiateWithoutColor.swift */; };
+		831A4E252602A5CA00764546 /* DifferentiateWithoutColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E232602A5CA00764546 /* DifferentiateWithoutColor.swift */; };
+		831A4E262602A5CA00764546 /* DifferentiateWithoutColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E232602A5CA00764546 /* DifferentiateWithoutColor.swift */; };
+		831A4E272602A5CA00764546 /* DifferentiateWithoutColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E232602A5CA00764546 /* DifferentiateWithoutColor.swift */; };
+		831A4E3C2602A65400764546 /* ReduceMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E3B2602A65400764546 /* ReduceMotion.swift */; };
+		831A4E3D2602A65400764546 /* ReduceMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E3B2602A65400764546 /* ReduceMotion.swift */; };
+		831A4E3E2602A65400764546 /* ReduceMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E3B2602A65400764546 /* ReduceMotion.swift */; };
+		831A4E3F2602A65400764546 /* ReduceMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E3B2602A65400764546 /* ReduceMotion.swift */; };
+		831A4E542602A73700764546 /* Grayscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E532602A73700764546 /* Grayscale.swift */; };
+		831A4E552602A73700764546 /* Grayscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E532602A73700764546 /* Grayscale.swift */; };
+		831A4E562602A73700764546 /* Grayscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E532602A73700764546 /* Grayscale.swift */; };
+		831A4E572602A73700764546 /* Grayscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E532602A73700764546 /* Grayscale.swift */; };
+		831A4E6C2602A80D00764546 /* ReduceTransparency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E6B2602A80D00764546 /* ReduceTransparency.swift */; };
+		831A4E6D2602A80D00764546 /* ReduceTransparency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E6B2602A80D00764546 /* ReduceTransparency.swift */; };
+		831A4E6E2602A80D00764546 /* ReduceTransparency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E6B2602A80D00764546 /* ReduceTransparency.swift */; };
+		831A4E6F2602A80D00764546 /* ReduceTransparency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E6B2602A80D00764546 /* ReduceTransparency.swift */; };
+		831A4E842602A87A00764546 /* InvertColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E832602A87A00764546 /* InvertColors.swift */; };
+		831A4E852602A87A00764546 /* InvertColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E832602A87A00764546 /* InvertColors.swift */; };
+		831A4E862602A87A00764546 /* InvertColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E832602A87A00764546 /* InvertColors.swift */; };
+		831A4E872602A87A00764546 /* InvertColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E832602A87A00764546 /* InvertColors.swift */; };
+		831A4E9C2603DE0A00764546 /* IncreaseContrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E9B2603DE0900764546 /* IncreaseContrast.swift */; };
+		831A4E9D2603DE0A00764546 /* IncreaseContrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E9B2603DE0900764546 /* IncreaseContrast.swift */; };
+		831A4E9E2603DE0A00764546 /* IncreaseContrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E9B2603DE0900764546 /* IncreaseContrast.swift */; };
+		831A4E9F2603DE0A00764546 /* IncreaseContrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4E9B2603DE0900764546 /* IncreaseContrast.swift */; };
+		831A4EB42603DE8900764546 /* DarkerSystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4EB32603DE8900764546 /* DarkerSystemColors.swift */; };
+		831A4EB52603DE8900764546 /* DarkerSystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4EB32603DE8900764546 /* DarkerSystemColors.swift */; };
+		831A4EB62603DE8900764546 /* DarkerSystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4EB32603DE8900764546 /* DarkerSystemColors.swift */; };
+		831A4EB72603DE8900764546 /* DarkerSystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4EB32603DE8900764546 /* DarkerSystemColors.swift */; };
+		831A4ECC2603DED100764546 /* LargerText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4ECB2603DED100764546 /* LargerText.swift */; };
+		831A4ECD2603DED100764546 /* LargerText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4ECB2603DED100764546 /* LargerText.swift */; };
+		831A4ECE2603DED100764546 /* LargerText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4ECB2603DED100764546 /* LargerText.swift */; };
+		831A4ECF2603DED100764546 /* LargerText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4ECB2603DED100764546 /* LargerText.swift */; };
+		831A4EE42603E29200764546 /* HearingDevicePairedEar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4EE32603E29100764546 /* HearingDevicePairedEar.swift */; };
+		831A4EE52603E29200764546 /* HearingDevicePairedEar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4EE32603E29100764546 /* HearingDevicePairedEar.swift */; };
+		831A4EE62603E29200764546 /* HearingDevicePairedEar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4EE32603E29100764546 /* HearingDevicePairedEar.swift */; };
+		831A4EE72603E29200764546 /* HearingDevicePairedEar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A4EE32603E29100764546 /* HearingDevicePairedEar.swift */; };
 		842A51DEA1619CE32FC80F3E924829AC /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A9F6936134C32ABE069EA4712B25B1 /* Predicate.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		842B70A594CE62D493C6F6507DA33F59 /* CapableFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913787F85CCF0961DFAEB940ED185E5 /* CapableFeature.swift */; };
 		847E9496739DA6368F9E8E3EED84E16F /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683185469C559775007A38DE167294BE /* AdapterProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -851,6 +943,29 @@
 		819B796E16C83E1C2FF9433A5AFF2E59 /* Pods-Example-watchOS Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-watchOS Extension-acknowledgements.plist"; sourceTree = "<group>"; };
 		8229A3A193B1D8BA8E4860971E17090E /* Capable-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Capable-watchOS-dummy.m"; path = "../Capable-watchOS/Capable-watchOS-dummy.m"; sourceTree = "<group>"; };
 		8294A4E4E560E2FAC2B516AF7BE03B9F /* Nimble-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Nimble-iOS.modulemap"; sourceTree = "<group>"; };
+		831A4CD32602983800764546 /* FeatureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureProtocol.swift; sourceTree = "<group>"; };
+		831A4CEB260299D700764546 /* VoiceOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOver.swift; sourceTree = "<group>"; };
+		831A4D0326029D3B00764546 /* ShakeToUndo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeToUndo.swift; sourceTree = "<group>"; };
+		831A4D1B26029EBB00764546 /* AssistiveTouch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistiveTouch.swift; sourceTree = "<group>"; };
+		831A4D3326029FAF00764546 /* GuidedAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedAccess.swift; sourceTree = "<group>"; };
+		831A4D4B2602A01700764546 /* OnOffSwitchLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnOffSwitchLabels.swift; sourceTree = "<group>"; };
+		831A4D632602A05400764546 /* SpeakScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakScreen.swift; sourceTree = "<group>"; };
+		831A4D7B2602A0EB00764546 /* SpeakSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakSelection.swift; sourceTree = "<group>"; };
+		831A4D932602A13400764546 /* BoldText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoldText.swift; sourceTree = "<group>"; };
+		831A4DAB2602A16700764546 /* ClosedCaption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedCaption.swift; sourceTree = "<group>"; };
+		831A4DC32602A1A200764546 /* VideoAutoplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAutoplay.swift; sourceTree = "<group>"; };
+		831A4DDB2602A1E800764546 /* SwitchControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchControl.swift; sourceTree = "<group>"; };
+		831A4DF32602A46C00764546 /* MonoAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonoAudio.swift; sourceTree = "<group>"; };
+		831A4E0B2602A4EC00764546 /* FullKeyboardAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullKeyboardAccess.swift; sourceTree = "<group>"; };
+		831A4E232602A5CA00764546 /* DifferentiateWithoutColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentiateWithoutColor.swift; sourceTree = "<group>"; };
+		831A4E3B2602A65400764546 /* ReduceMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceMotion.swift; sourceTree = "<group>"; };
+		831A4E532602A73700764546 /* Grayscale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grayscale.swift; sourceTree = "<group>"; };
+		831A4E6B2602A80D00764546 /* ReduceTransparency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceTransparency.swift; sourceTree = "<group>"; };
+		831A4E832602A87A00764546 /* InvertColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvertColors.swift; sourceTree = "<group>"; };
+		831A4E9B2603DE0900764546 /* IncreaseContrast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreaseContrast.swift; sourceTree = "<group>"; };
+		831A4EB32603DE8900764546 /* DarkerSystemColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkerSystemColors.swift; sourceTree = "<group>"; };
+		831A4ECB2603DED100764546 /* LargerText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargerText.swift; sourceTree = "<group>"; };
+		831A4EE32603E29100764546 /* HearingDevicePairedEar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearingDevicePairedEar.swift; sourceTree = "<group>"; };
 		83381A01BDFAFFA42221B7E610AAD336 /* RGBViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RGBViewModel.swift; path = SheetyColors/Classes/RGB/ViewModels/RGBViewModel.swift; sourceTree = "<group>"; };
 		8344C3450042D7C2BD93213E7DA87C67 /* BeNil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeNil.swift; path = Sources/Nimble/Matchers/BeNil.swift; sourceTree = "<group>"; };
 		860B3B1C089C4A02E58E54AB0B2AE9A5 /* Capable-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Capable-iOS-prefix.pch"; sourceTree = "<group>"; };
@@ -1452,6 +1567,7 @@
 		52A80964F2D5810A28FB29899829CE9F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				831A4CD2260297FD00764546 /* Plugins */,
 				8FD7474D683927AFCC5914E33A9EEFF2 /* Capable.swift */,
 				27A84FF7FE927E16F266C6321F9219B0 /* Extensions */,
 				D068CCCADC4D22D30C4DE8B8C3DE3B49 /* Models */,
@@ -1634,6 +1750,36 @@
 			);
 			name = "Pods-Example-macOS";
 			path = "Target Support Files/Pods-Example-macOS";
+			sourceTree = "<group>";
+		};
+		831A4CD2260297FD00764546 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				831A4D1B26029EBB00764546 /* AssistiveTouch.swift */,
+				831A4D932602A13400764546 /* BoldText.swift */,
+				831A4DAB2602A16700764546 /* ClosedCaption.swift */,
+				831A4EB32603DE8900764546 /* DarkerSystemColors.swift */,
+				831A4E232602A5CA00764546 /* DifferentiateWithoutColor.swift */,
+				831A4CD32602983800764546 /* FeatureProtocol.swift */,
+				831A4E0B2602A4EC00764546 /* FullKeyboardAccess.swift */,
+				831A4E532602A73700764546 /* Grayscale.swift */,
+				831A4D3326029FAF00764546 /* GuidedAccess.swift */,
+				831A4EE32603E29100764546 /* HearingDevicePairedEar.swift */,
+				831A4E9B2603DE0900764546 /* IncreaseContrast.swift */,
+				831A4E832602A87A00764546 /* InvertColors.swift */,
+				831A4ECB2603DED100764546 /* LargerText.swift */,
+				831A4DF32602A46C00764546 /* MonoAudio.swift */,
+				831A4D4B2602A01700764546 /* OnOffSwitchLabels.swift */,
+				831A4E3B2602A65400764546 /* ReduceMotion.swift */,
+				831A4E6B2602A80D00764546 /* ReduceTransparency.swift */,
+				831A4D0326029D3B00764546 /* ShakeToUndo.swift */,
+				831A4D632602A05400764546 /* SpeakScreen.swift */,
+				831A4D7B2602A0EB00764546 /* SpeakSelection.swift */,
+				831A4DDB2602A1E800764546 /* SwitchControl.swift */,
+				831A4DC32602A1A200764546 /* VideoAutoplay.swift */,
+				831A4CEB260299D700764546 /* VoiceOver.swift */,
+			);
+			path = Plugins;
 			sourceTree = "<group>";
 		};
 		8619D9D3B022B109864D1CADEF4AFE92 /* Pods-Tests-tvOS */ = {
@@ -2926,15 +3072,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831A4DF72602A46C00764546 /* MonoAudio.swift in Sources */,
+				831A4ECF2603DED100764546 /* LargerText.swift in Sources */,
+				831A4EE72603E29200764546 /* HearingDevicePairedEar.swift in Sources */,
+				831A4E872602A87A00764546 /* InvertColors.swift in Sources */,
 				98D778479DC51C23C6A64826198D8C44 /* Bool+statusString.swift in Sources */,
 				72402E0781B4191E802454C873D4A1ED /* Capable-watchOS-dummy.m in Sources */,
+				831A4EB72603DE8900764546 /* DarkerSystemColors.swift in Sources */,
 				086C80BD2BE4DEB5672BC12325185A5F /* Capable.swift in Sources */,
 				842B70A594CE62D493C6F6507DA33F59 /* CapableFeature.swift in Sources */,
+				831A4E6F2602A80D00764546 /* ReduceTransparency.swift in Sources */,
 				6A9EB0E1A86EA06112257544EE7309AE /* CGFloat+contentSizeString.swift in Sources */,
 				4DE3F6F69F44E7A1445546A3914308F1 /* CIImage+initWithImage.swift in Sources */,
+				831A4E0F2602A4EC00764546 /* FullKeyboardAccess.swift in Sources */,
 				E604EEE46ADD6B9C657E834ECA0FB1CD /* Color+wcag.swift in Sources */,
 				ACA258700682AC0B0E3645721207367A /* ConformanceLevel.swift in Sources */,
 				87B5B72EDAFEAE2921988FB3EB85117C /* FeatureNotifications.swift in Sources */,
+				831A4D672602A05400764546 /* SpeakScreen.swift in Sources */,
 				EEF1576774BE5C9C7B745489A9F31094 /* FeatureStatus.swift in Sources */,
 				A64518BB6B15D4870A170CF6F1CD1E0C /* FeatureStatuses.swift in Sources */,
 				B05D95DEBEE9DDC483F01131247DC608 /* FeatureStatusesProtocol.swift in Sources */,
@@ -2944,24 +3098,39 @@
 				4283BDCF9265B7BD2CE47D8604E6FD45 /* FontMetricsProtocol.swift in Sources */,
 				12BA5C6F2C367BC344D2E35426A69742 /* FontMetricsProvider.swift in Sources */,
 				42DB766358E3B676ACBF7E00226E47F0 /* FontMetricsProviderProtocol.swift in Sources */,
+				831A4D972602A13400764546 /* BoldText.swift in Sources */,
 				B60916A4ADC9B166774283F2F9B6C907 /* FontMetricsSupport.swift in Sources */,
 				47BC3076497712A43283310794B24E50 /* FontProps.swift in Sources */,
+				831A4E572602A73700764546 /* Grayscale.swift in Sources */,
 				E4309344473006F352AF04E8AE48F220 /* HearingDeviceEar+stringValue.swift in Sources */,
 				24DE85D05FCCA677967ED5BC6075402D /* Image+averageColor.swift in Sources */,
 				8AAD1D43E0490DBB08D30DA5484CE6EF /* ImageArea.swift in Sources */,
 				224AA58DEFD8FE23E41A8E0453322F09 /* Logger.swift in Sources */,
+				831A4D7F2602A0EB00764546 /* SpeakSelection.swift in Sources */,
 				F8EFEC4D3052E823B6764694A7723E95 /* Notification+Name.swift in Sources */,
 				B4EB6DE23E61881AD8FF69A682B8C6DD /* NotificationCenterProtocol.swift in Sources */,
+				831A4D0726029D3B00764546 /* ShakeToUndo.swift in Sources */,
+				831A4DAF2602A16700764546 /* ClosedCaption.swift in Sources */,
 				FCC4E0330B30B44599B1CE396B075617 /* Notifications.swift in Sources */,
 				93475C82AFB5A21234424CFA67AD9E2A /* NotificationsProtocol.swift in Sources */,
 				ABD331C9D84ECF66CEC8E1EA5EA4F19C /* NSColor+rgbaColor.swift in Sources */,
 				FBF56E6FE59F83B01F313DA2D6D618A4 /* NSFont+fontProps.swift in Sources */,
+				831A4DC72602A1A200764546 /* VideoAutoplay.swift in Sources */,
+				831A4E9F2603DE0A00764546 /* IncreaseContrast.swift in Sources */,
+				831A4CEF260299D700764546 /* VoiceOver.swift in Sources */,
 				F2FE976E82CAB0432535C6A6FBD1407C /* OSLogType+greaterEqual.swift in Sources */,
+				831A4D1F26029EBB00764546 /* AssistiveTouch.swift in Sources */,
 				33B627D395B5844CB58D687A77D73D52 /* osVersionProvider.swift in Sources */,
+				831A4D4F2602A01700764546 /* OnOffSwitchLabels.swift in Sources */,
+				831A4DDF2602A1E800764546 /* SwitchControl.swift in Sources */,
+				831A4CD72602983800764546 /* FeatureProtocol.swift in Sources */,
+				831A4E272602A5CA00764546 /* DifferentiateWithoutColor.swift in Sources */,
 				8059549F3E5BAD9672B9A39FC4305AF7 /* OsVersionProviderProtocol.swift in Sources */,
 				D98056EA219EA20ECEF001EABA47D92E /* RGBAColor.swift in Sources */,
 				2F7A9D26224B6E02C4AE4FA2AA930391 /* StatusesProtocol.swift in Sources */,
+				831A4D3726029FAF00764546 /* GuidedAccess.swift in Sources */,
 				390CE8577CFFA9A544841B331330F5AC /* String+isDefaultContentSize.swift in Sources */,
+				831A4E3F2602A65400764546 /* ReduceMotion.swift in Sources */,
 				6378B0B31733FC317690CE45761BB992 /* UIColor+rgbaColor.swift in Sources */,
 				E503DEE0CB693209E0CF9C5A4C2B9734 /* UIContentSizeCategory+values.swift in Sources */,
 				3F1DCDF2668F972AE790E9A57B08A163 /* UIFont+fontProps.swift in Sources */,
@@ -2981,15 +3150,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831A4DF62602A46C00764546 /* MonoAudio.swift in Sources */,
+				831A4ECE2603DED100764546 /* LargerText.swift in Sources */,
+				831A4EE62603E29200764546 /* HearingDevicePairedEar.swift in Sources */,
+				831A4E862602A87A00764546 /* InvertColors.swift in Sources */,
 				5CBBB9FC7F55B8A848953785CB4755F8 /* Bool+statusString.swift in Sources */,
 				D94F743176707C0905C97B6C8B052760 /* Capable-tvOS-dummy.m in Sources */,
+				831A4EB62603DE8900764546 /* DarkerSystemColors.swift in Sources */,
 				106701F7041BF737588A840BB50D67B6 /* Capable.swift in Sources */,
 				1A8AC3BADD5703F980B7A5CDC5247800 /* CapableFeature.swift in Sources */,
+				831A4E6E2602A80D00764546 /* ReduceTransparency.swift in Sources */,
 				44DF2257865E8D946739022986A3DD95 /* CGFloat+contentSizeString.swift in Sources */,
 				5A18F8242E23FCCAB00D89E2E8559DC9 /* CIImage+initWithImage.swift in Sources */,
+				831A4E0E2602A4EC00764546 /* FullKeyboardAccess.swift in Sources */,
 				F985B89B4AC4CF5105ECD9BF07E572A5 /* Color+wcag.swift in Sources */,
 				32330D09D16FF3688374C142E9443C69 /* ConformanceLevel.swift in Sources */,
 				259F1E2387A8C8641450F4EF943DFA00 /* FeatureNotifications.swift in Sources */,
+				831A4D662602A05400764546 /* SpeakScreen.swift in Sources */,
 				690E4917FCBABA57E12B37FB11E32476 /* FeatureStatus.swift in Sources */,
 				17D5BEB058FF8DB7CB49FF4B24D468EE /* FeatureStatuses.swift in Sources */,
 				07C5D3F57EF49450E57B501364CFC200 /* FeatureStatusesProtocol.swift in Sources */,
@@ -2999,24 +3176,39 @@
 				02E9A02BC451173C965AFAFAB87D3CCB /* FontMetricsProtocol.swift in Sources */,
 				6E9B24A87382460796C02F577491B623 /* FontMetricsProvider.swift in Sources */,
 				9353286E84D841A4A44BF84D4C882BBB /* FontMetricsProviderProtocol.swift in Sources */,
+				831A4D962602A13400764546 /* BoldText.swift in Sources */,
 				53E314E6C340114A43A6D97393E3760D /* FontMetricsSupport.swift in Sources */,
 				139FB616ABCA3AD99761B90324670B49 /* FontProps.swift in Sources */,
+				831A4E562602A73700764546 /* Grayscale.swift in Sources */,
 				91227DDE42755912F50F2B670D82207F /* HearingDeviceEar+stringValue.swift in Sources */,
 				9AED3B2809988976D35A7E931CA2D8B7 /* Image+averageColor.swift in Sources */,
 				570DBA1CFDE52DEAA1B52B6272BB3B17 /* ImageArea.swift in Sources */,
 				E3C49A169C1557131BD44652FDCB1F75 /* Logger.swift in Sources */,
+				831A4D7E2602A0EB00764546 /* SpeakSelection.swift in Sources */,
 				55603BE38EB03C29A47D740AD1D777AB /* Notification+Name.swift in Sources */,
 				8F37F06AFD869A57F0453DFC23C7C616 /* NotificationCenterProtocol.swift in Sources */,
+				831A4D0626029D3B00764546 /* ShakeToUndo.swift in Sources */,
+				831A4DAE2602A16700764546 /* ClosedCaption.swift in Sources */,
 				BCBBA93B82674A24A0D6E8107EDBEC17 /* Notifications.swift in Sources */,
 				3517272EABC5B433C20B8A5DFD55CC5E /* NotificationsProtocol.swift in Sources */,
 				327C82EC349792FB6213C88267ED7294 /* NSColor+rgbaColor.swift in Sources */,
 				3DC865A6A8CBD856773ABD865B0DAFAF /* NSFont+fontProps.swift in Sources */,
+				831A4DC62602A1A200764546 /* VideoAutoplay.swift in Sources */,
+				831A4E9E2603DE0A00764546 /* IncreaseContrast.swift in Sources */,
+				831A4CEE260299D700764546 /* VoiceOver.swift in Sources */,
 				EC705311B56DD7D9D1044162BD5E3FF4 /* OSLogType+greaterEqual.swift in Sources */,
+				831A4D1E26029EBB00764546 /* AssistiveTouch.swift in Sources */,
 				6AA96EF00819292DE8779B855CFF7AB0 /* osVersionProvider.swift in Sources */,
+				831A4D4E2602A01700764546 /* OnOffSwitchLabels.swift in Sources */,
+				831A4DDE2602A1E800764546 /* SwitchControl.swift in Sources */,
+				831A4CD62602983800764546 /* FeatureProtocol.swift in Sources */,
+				831A4E262602A5CA00764546 /* DifferentiateWithoutColor.swift in Sources */,
 				D8D50098DC5A29A6A39B05CDD40CDBA0 /* OsVersionProviderProtocol.swift in Sources */,
 				079FC86D63220D166961B036614683E1 /* RGBAColor.swift in Sources */,
 				39374EC769E0FAC27753A38C06D75C9E /* StatusesProtocol.swift in Sources */,
+				831A4D3626029FAF00764546 /* GuidedAccess.swift in Sources */,
 				D8F8CBDE7A777C260BFB8C9856D8272A /* String+isDefaultContentSize.swift in Sources */,
+				831A4E3E2602A65400764546 /* ReduceMotion.swift in Sources */,
 				2A5DCDED90A091C65BAFBC4203999900 /* UIColor+rgbaColor.swift in Sources */,
 				23AC9731C45EA3151C73689AB9CAEB95 /* UIContentSizeCategory+values.swift in Sources */,
 				61196095775856D3901E2BBD5C12AE18 /* UIFont+fontProps.swift in Sources */,
@@ -3036,15 +3228,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831A4DF42602A46C00764546 /* MonoAudio.swift in Sources */,
+				831A4ECC2603DED100764546 /* LargerText.swift in Sources */,
+				831A4EE42603E29200764546 /* HearingDevicePairedEar.swift in Sources */,
+				831A4E842602A87A00764546 /* InvertColors.swift in Sources */,
 				7B7E175F409B835BDFF9B4E27F4FDA59 /* Bool+statusString.swift in Sources */,
 				5153C53294FB3C9DEB5E2D76A8D99FCB /* Capable-iOS-dummy.m in Sources */,
+				831A4EB42603DE8900764546 /* DarkerSystemColors.swift in Sources */,
 				E39D70206DA489DC5FBD52F76AA390C5 /* Capable.swift in Sources */,
 				DFB5C23F616FBEAE963CCACFABFE778D /* CapableFeature.swift in Sources */,
+				831A4E6C2602A80D00764546 /* ReduceTransparency.swift in Sources */,
 				11395195FE215F6AF547AA27EE3036E0 /* CGFloat+contentSizeString.swift in Sources */,
 				F4EC21D96EC75CCF6163CFD9676F7F40 /* CIImage+initWithImage.swift in Sources */,
+				831A4E0C2602A4EC00764546 /* FullKeyboardAccess.swift in Sources */,
 				E7E1C2829F655D2D3189F8F7D9BAEA54 /* Color+wcag.swift in Sources */,
 				A05B7FE92E20D94F220A73868FC31CBA /* ConformanceLevel.swift in Sources */,
 				059D327D3CA6ECB3D2128B5C8D35D5FC /* FeatureNotifications.swift in Sources */,
+				831A4D642602A05400764546 /* SpeakScreen.swift in Sources */,
 				23C6026BF2535892FCEFF89EA54FF5F2 /* FeatureStatus.swift in Sources */,
 				5FC98B6E90F3420AE493D531E2E08B3C /* FeatureStatuses.swift in Sources */,
 				AF0A5FD35350C83FF8F81757E5169E8C /* FeatureStatusesProtocol.swift in Sources */,
@@ -3054,24 +3254,39 @@
 				A1F8EAE1B8BD52E31060F45895ED66B1 /* FontMetricsProtocol.swift in Sources */,
 				5112D875615FFA12B226054A698C3A53 /* FontMetricsProvider.swift in Sources */,
 				47231F900CD12C5D8A4C764C33F7EBAA /* FontMetricsProviderProtocol.swift in Sources */,
+				831A4D942602A13400764546 /* BoldText.swift in Sources */,
 				8AEA36DF72FB8F7AB5121F2F33DC8EB4 /* FontMetricsSupport.swift in Sources */,
 				5D1FA0396BF2CA282C7E96D14B5C0EED /* FontProps.swift in Sources */,
+				831A4E542602A73700764546 /* Grayscale.swift in Sources */,
 				49F3EC54D1A89E8426C15FE525760CD7 /* HearingDeviceEar+stringValue.swift in Sources */,
 				1EBF4B884CEB8CF34DC68982125CEB76 /* Image+averageColor.swift in Sources */,
 				D9C5F176B262AA90C0401402C4909511 /* ImageArea.swift in Sources */,
 				7D7B764FF885F79D03AA4A829ECE47E4 /* Logger.swift in Sources */,
+				831A4D7C2602A0EB00764546 /* SpeakSelection.swift in Sources */,
 				F9BF7201A4EB3C246C0C611E424FB359 /* Notification+Name.swift in Sources */,
 				B9C741EC3D44408336EBC3CD721F8DA0 /* NotificationCenterProtocol.swift in Sources */,
+				831A4D0426029D3B00764546 /* ShakeToUndo.swift in Sources */,
+				831A4DAC2602A16700764546 /* ClosedCaption.swift in Sources */,
 				104AE4D3DCCDE2A5C5CF8C189B8F6854 /* Notifications.swift in Sources */,
 				CD4C11C66E0C6E661EBF933C36CD7B8A /* NotificationsProtocol.swift in Sources */,
 				59E7CBA66E141451862DCC0D7B2FB7F8 /* NSColor+rgbaColor.swift in Sources */,
 				53565ED12FDE4977319C08E2FD7D7D47 /* NSFont+fontProps.swift in Sources */,
+				831A4DC42602A1A200764546 /* VideoAutoplay.swift in Sources */,
+				831A4E9C2603DE0A00764546 /* IncreaseContrast.swift in Sources */,
+				831A4CEC260299D700764546 /* VoiceOver.swift in Sources */,
 				364361BAB73EE3008FA64FE3A4C8AF81 /* OSLogType+greaterEqual.swift in Sources */,
+				831A4D1C26029EBB00764546 /* AssistiveTouch.swift in Sources */,
 				48CA9AD17D9C289502E433851E644B16 /* osVersionProvider.swift in Sources */,
+				831A4D4C2602A01700764546 /* OnOffSwitchLabels.swift in Sources */,
+				831A4DDC2602A1E800764546 /* SwitchControl.swift in Sources */,
+				831A4CD42602983800764546 /* FeatureProtocol.swift in Sources */,
+				831A4E242602A5CA00764546 /* DifferentiateWithoutColor.swift in Sources */,
 				41FD2947F857EBEA7413F9258CEA72F6 /* OsVersionProviderProtocol.swift in Sources */,
 				25E295BA4288FAA5C6E5EE3F6BBC60AB /* RGBAColor.swift in Sources */,
 				70892BAC5F4EF2FD2172702F1D9BA055 /* StatusesProtocol.swift in Sources */,
+				831A4D3426029FAF00764546 /* GuidedAccess.swift in Sources */,
 				F17745639D39BDA4F71C2A897E031DB0 /* String+isDefaultContentSize.swift in Sources */,
+				831A4E3C2602A65400764546 /* ReduceMotion.swift in Sources */,
 				DB923C8FDA4E9B4E21134C373E9EC92C /* UIColor+rgbaColor.swift in Sources */,
 				1B3B252FFC26917051A472C0CA6C42A0 /* UIContentSizeCategory+values.swift in Sources */,
 				CA4F1EA37A8614F9194BC5D2229F0A7A /* UIFont+fontProps.swift in Sources */,
@@ -3083,15 +3298,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831A4DF52602A46C00764546 /* MonoAudio.swift in Sources */,
+				831A4ECD2603DED100764546 /* LargerText.swift in Sources */,
+				831A4EE52603E29200764546 /* HearingDevicePairedEar.swift in Sources */,
+				831A4E852602A87A00764546 /* InvertColors.swift in Sources */,
 				9601EDE4E639179D16705B2A41B5FBE5 /* Bool+statusString.swift in Sources */,
 				9BA1C53338E005C65CDF0C5EAE7165A1 /* Capable-macOS-dummy.m in Sources */,
+				831A4EB52603DE8900764546 /* DarkerSystemColors.swift in Sources */,
 				7E28A7AC92DFE904C14C9154F44D9AC3 /* Capable.swift in Sources */,
 				0E7AF6EE60D8E003E27247681252FBD5 /* CapableFeature.swift in Sources */,
+				831A4E6D2602A80D00764546 /* ReduceTransparency.swift in Sources */,
 				4ED4FD2A4935F1A9865C53D2A5F2A972 /* CGFloat+contentSizeString.swift in Sources */,
 				600B6CBEB2ED7BC5C1ACDC18B2888C13 /* CIImage+initWithImage.swift in Sources */,
+				831A4E0D2602A4EC00764546 /* FullKeyboardAccess.swift in Sources */,
 				32EB9A6587DA48AE39AC6ACDEB356709 /* Color+wcag.swift in Sources */,
 				B91EF1A916CB055245472DAA620A9DC0 /* ConformanceLevel.swift in Sources */,
 				9683A93F1B7343B56795A1246CA8637E /* FeatureNotifications.swift in Sources */,
+				831A4D652602A05400764546 /* SpeakScreen.swift in Sources */,
 				317A0F02E111B44986F97E45A094B83B /* FeatureStatus.swift in Sources */,
 				6D26802E4B04BDA44C4E07D86E253A35 /* FeatureStatuses.swift in Sources */,
 				FA13969DE3F82A73A9285DC921E7A646 /* FeatureStatusesProtocol.swift in Sources */,
@@ -3101,24 +3324,39 @@
 				51B9F1A0D07662F6F9C215A959630923 /* FontMetricsProtocol.swift in Sources */,
 				4D342D5B1707EA31F4CA70BC8FDDB2A1 /* FontMetricsProvider.swift in Sources */,
 				5791E45EBF91FA824FF7090955A3517B /* FontMetricsProviderProtocol.swift in Sources */,
+				831A4D952602A13400764546 /* BoldText.swift in Sources */,
 				AFDB1532975AD30F0237E44CC4910823 /* FontMetricsSupport.swift in Sources */,
 				9C3850C3B0B2F5223FCA669C742642AB /* FontProps.swift in Sources */,
+				831A4E552602A73700764546 /* Grayscale.swift in Sources */,
 				C2092A6FC4D49EBCEC013584AAB39058 /* HearingDeviceEar+stringValue.swift in Sources */,
 				6D9BFAFF71B26D07F0D8269A4ABE1C95 /* Image+averageColor.swift in Sources */,
 				2EA017279CE783924DB2801B037D982B /* ImageArea.swift in Sources */,
 				3D74386F004CF95D95AB78A7996E41E2 /* Logger.swift in Sources */,
+				831A4D7D2602A0EB00764546 /* SpeakSelection.swift in Sources */,
 				148ACFFBB56BD118202C12D85BC93C02 /* Notification+Name.swift in Sources */,
 				5BFA4FEA3738536456DD512E02962D9D /* NotificationCenterProtocol.swift in Sources */,
+				831A4D0526029D3B00764546 /* ShakeToUndo.swift in Sources */,
+				831A4DAD2602A16700764546 /* ClosedCaption.swift in Sources */,
 				719D883029E067EFA0704E8E239D8AA6 /* Notifications.swift in Sources */,
 				10CFBDB36972D8B8CF8F4C8F7047A29C /* NotificationsProtocol.swift in Sources */,
 				AE8526C0DCE905631EF2C6D7BD6DBF59 /* NSColor+rgbaColor.swift in Sources */,
 				EEA75CDA97E6441B95C07E68113E4FAE /* NSFont+fontProps.swift in Sources */,
+				831A4DC52602A1A200764546 /* VideoAutoplay.swift in Sources */,
+				831A4E9D2603DE0A00764546 /* IncreaseContrast.swift in Sources */,
+				831A4CED260299D700764546 /* VoiceOver.swift in Sources */,
 				94F054022E0BD0D47E6986B30B468063 /* OSLogType+greaterEqual.swift in Sources */,
+				831A4D1D26029EBB00764546 /* AssistiveTouch.swift in Sources */,
 				79E96DFA63747DBC941E51F4371560EB /* osVersionProvider.swift in Sources */,
+				831A4D4D2602A01700764546 /* OnOffSwitchLabels.swift in Sources */,
+				831A4DDD2602A1E800764546 /* SwitchControl.swift in Sources */,
+				831A4CD52602983800764546 /* FeatureProtocol.swift in Sources */,
+				831A4E252602A5CA00764546 /* DifferentiateWithoutColor.swift in Sources */,
 				2958824E686BC3013BBD2D7A1C107B99 /* OsVersionProviderProtocol.swift in Sources */,
 				61BA323A40ACD9C043DEFDCB95917C42 /* RGBAColor.swift in Sources */,
 				ACC512C213F4C721B8D4F990ABC695AA /* StatusesProtocol.swift in Sources */,
+				831A4D3526029FAF00764546 /* GuidedAccess.swift in Sources */,
 				E70A46B27D183624CE23FA3D0C81168A /* String+isDefaultContentSize.swift in Sources */,
+				831A4E3D2602A65400764546 /* ReduceMotion.swift in Sources */,
 				76C5D6B9A0CB9851D7E573A41FCF373C /* UIColor+rgbaColor.swift in Sources */,
 				033853E4E82094BC70E61DA2479532C8 /* UIContentSizeCategory+values.swift in Sources */,
 				8272BEFB1DAEAFE2CF6E58CB1B52449B /* UIFont+fontProps.swift in Sources */,
