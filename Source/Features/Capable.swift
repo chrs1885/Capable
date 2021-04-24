@@ -9,9 +9,7 @@ import os.log
 
 /// This class defines the main interface of the Capable framework.
 public struct Capable {
-    var statusesModule: StatusesProtocol
-    var notificationsModule: NotificationsProtocol
-    var featureStatusesProvider: FeatureStatusesProviderProtocol
+    var featureProvider: FeatureProviderProtocol
     var features: [CapableFeature]?
 
     /**
@@ -21,17 +19,13 @@ public struct Capable {
         - features: An optional array containing the features of interest. This will default to all features available on the current platform.
      */
     public init(withFeatures features: [CapableFeature] = CapableFeature.allCases) {
-        let featureStatusesProvider = FeatureStatusesProvider()
-        let statusesModule = FeatureStatuses(withFeatures: features, featureStatusesProvider: featureStatusesProvider)
-        let notificationsModule = FeatureNotifications(featureStatusesProvider: featureStatusesProvider, features: features)
-        self.init(withFeatures: features, featureStatusesProvider: featureStatusesProvider, statusesModule: statusesModule, notificationModule: notificationsModule)
+        let featureProvider = FeatureProvider(features: features)
+        self.init(withFeatures: features, featureProvider: featureProvider)
     }
 
-    init(withFeatures features: [CapableFeature], featureStatusesProvider: FeatureStatusesProviderProtocol, statusesModule: StatusesProtocol, notificationModule: NotificationsProtocol) {
+    init(withFeatures features: [CapableFeature], featureProvider: FeatureProviderProtocol) {
         self.features = features
-        self.statusesModule = statusesModule
-        notificationsModule = notificationModule
-        self.featureStatusesProvider = featureStatusesProvider
+        self.featureProvider = featureProvider
 
         Logger.info("Capable started with features: \(features.map { $0.rawValue }.joined(separator: ", "))")
     }
@@ -45,7 +39,7 @@ extension Capable {
      While most entries can only have a status set to **enabled** or **disabled**, the `.largerText` feature offers the font scale set by the user.
      */
     public var statusMap: [String: String] {
-        return statusesModule.statusMap
+        return featureProvider.statusMap
     }
 
     /**
@@ -57,7 +51,7 @@ extension Capable {
      - Returns: `true` if the given feature has been enabled, otherwise `false`.
      */
     public func isFeatureEnabled(feature: CapableFeature) -> Bool {
-        return featureStatusesProvider.isFeatureEnabled(feature: feature)
+        return featureProvider.isFeatureEnabled(feature: feature)
     }
 }
 

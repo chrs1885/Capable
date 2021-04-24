@@ -21,7 +21,7 @@ public enum CapableFeature: String, CaseIterable
 
 > Restricts access to certain features of a single app to keep the user focused.
 
-### `hearingDevice`
+### `hearingDevicePairedEar`
 
 > Pairing status of a hearing aid.
 

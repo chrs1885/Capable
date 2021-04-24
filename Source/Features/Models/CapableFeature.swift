@@ -19,7 +19,7 @@ public enum CapableFeature: String, CaseIterable {
         case guidedAccess
 
         /// Pairing status of a hearing aid.
-        case hearingDevice
+        case hearingDevicePairedEar
 
         /// Displays on/off labels for UISwitch controls.
         case onOffSwitchLabels
@@ -111,5 +111,36 @@ public enum CapableFeature: String, CaseIterable {
      */
     public static func keys(forFeatures features: [CapableFeature]) -> [String] {
         return features.map { $0.rawValue }
+    }
+
+    var accessibilityFeature: AccessibilityFeatureProtocol? {
+        switch rawValue {
+        case AssistiveTouch.name: return AssistiveTouch()
+        case BoldText.name: return BoldText()
+        case ClosedCaptioning.name: return ClosedCaptioning()
+        case DarkerSystemColors.name: return DarkerSystemColors()
+        case DifferentiateWithoutColor.name: return DifferentiateWithoutColor()
+        case FullKeyboardAccess.name: return FullKeyboardAccess()
+        case Grayscale.name: return Grayscale()
+        case GuidedAccess.name: return GuidedAccess()
+        case HearingDevicePairedEar.name: return HearingDevicePairedEar()
+        case IncreaseContrast.name: return IncreaseContrast()
+        case InvertColors.name: return InvertColors()
+        case LargerText.name: return LargerText()
+        case MonoAudio.name: return MonoAudio()
+        case OnOffSwitchLabels.name: return OnOffSwitchLabels()
+        case ReduceMotion.name: return ReduceMotion()
+        case ReduceTransparency.name: return ReduceTransparency()
+        case ShakeToUndo.name: return ShakeToUndo()
+        case SpeakScreen.name: return SpeakScreen()
+        case SpeakSelection.name: return SpeakSelection()
+        case SwitchControl.name: return SwitchControl()
+        case VideoAutoplay.name: return VideoAutoplay()
+        case VoiceOver.name: return VoiceOver()
+        default:
+            Logger.error("Could not map CpableFeature case \(rawValue) to feature object.")
+        }
+
+        return nil
     }
 }
