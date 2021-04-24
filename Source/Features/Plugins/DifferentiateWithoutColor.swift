@@ -2,9 +2,23 @@
     import UIKit
 #elseif os(OSX)
     import AppKit
+#else
+    import Foundation
 #endif
 
-struct DifferentiateWithoutColor: FeatureProtocol {
+class DifferentiateWithoutColor: AccessibilityFeatureProtocol {
+    static let name = "differentiateWithoutColor"
+
+    #if os(OSX)
+
+        var displayOptionStatus: Bool = false
+
+    #endif
+
+    init() {
+        registerObservation()
+    }
+
     var isEnabled: Bool {
         #if os(iOS)
 
@@ -19,10 +33,52 @@ struct DifferentiateWithoutColor: FeatureProtocol {
 
             return NSWorkspace.shared.accessibilityDisplayShouldDifferentiateWithoutColor
 
+        #else
+
+            return false
+
         #endif
     }
 
     var status: String {
         isEnabled.statusString
+    }
+}
+
+extension DifferentiateWithoutColor: ObservableFeatureProtocol {
+    func registerObservation() {
+        #if os(iOS)
+
+            if #available(iOS 13.0, *) {
+                NotificationCenter.default.addObserver(
+                    self,
+                    selector: #selector(valueChanged),
+                    name: NSNotification.Name(rawValue: UIAccessibility.differentiateWithoutColorDidChangeNotification),
+                    object: nil
+                )
+            }
+
+        #elseif os(OSX)
+
+            displayOptionStatus = isEnabled
+            NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(valueChanged),
+                name: NSWorkspace.accessibilityDisplayOptionsDidChangeNotification,
+                object: nil
+            )
+
+        #endif
+    }
+
+    @objc func valueChanged() {
+        #if os(OSX)
+
+            guard isEnabled != displayOptionStatus else { return }
+            displayOptionStatus = isEnabled
+
+        #endif
+
+        postNotification(featureName: Self.name, statusString: status)
     }
 }

@@ -2,9 +2,17 @@
     import UIKit
 #elseif os(watchOS)
     import WatchKit
+#else
+    import Foundation
 #endif
 
-struct VideoAutoplay: FeatureProtocol {
+class VideoAutoplay: AccessibilityFeatureProtocol {
+    static let name = "videoAutoplay"
+
+    init() {
+        registerObservation()
+    }
+
     var isEnabled: Bool {
         #if os(iOS) || os(tvOS)
 
@@ -15,12 +23,35 @@ struct VideoAutoplay: FeatureProtocol {
                 return false
             }
 
-        #endif
+        #else
 
-        return false
+            return false
+
+        #endif
     }
 
     var status: String {
         isEnabled.statusString
+    }
+}
+
+extension VideoAutoplay: ObservableFeatureProtocol {
+    func registerObservation() {
+        #if os(iOS) || os(tvOS)
+
+            if #available(iOS 13.0, tvOS 13.0, *) {
+                NotificationCenter.default.addObserver(
+                    self,
+                    selector: #selector(valueChanged),
+                    name: UIAccessibility.videoAutoplayStatusDidChangeNotification,
+                    object: nil
+                )
+            }
+
+        #endif
+    }
+
+    @objc func valueChanged() {
+        postNotification(featureName: Self.name, statusString: status)
     }
 }

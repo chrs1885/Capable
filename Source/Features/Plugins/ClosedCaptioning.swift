@@ -4,17 +4,17 @@
     import Foundation
 #endif
 
-class DarkerSystemColors: AccessibilityFeatureProtocol {
-    static let name = "darkerSystemColors"
+class ClosedCaptioning: AccessibilityFeatureProtocol {
+    static let name = "closedCaption"
 
     init() {
         registerObservation()
     }
 
     var isEnabled: Bool {
-        #if os(iOS)
+        #if os(iOS) || os(tvOS)
 
-            return UIAccessibility.isDarkerSystemColorsEnabled
+            return UIAccessibility.isClosedCaptioningEnabled
 
         #else
 
@@ -28,14 +28,14 @@ class DarkerSystemColors: AccessibilityFeatureProtocol {
     }
 }
 
-extension DarkerSystemColors: ObservableFeatureProtocol {
+extension ClosedCaptioning: ObservableFeatureProtocol {
     func registerObservation() {
-        #if os(iOS)
+        #if os(iOS) || os(tvOS)
 
             NotificationCenter.default.addObserver(
                 self,
                 selector: #selector(valueChanged),
-                name: UIAccessibility.darkerSystemColorsStatusDidChangeNotification,
+                name: UIAccessibility.closedCaptioningStatusDidChangeNotification,
                 object: nil
             )
 

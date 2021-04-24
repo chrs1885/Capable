@@ -1,16 +1,26 @@
 #if os(iOS)
     import UIKit
+#else
+    import Foundation
 #endif
 
-struct HearingDevicePairedEar: FeatureProtocol {
+class HearingDevicePairedEar: AccessibilityFeatureProtocol {
+    static let name = "hearingDevicePairedEar"
+
+    init() {
+        registerObservation()
+    }
+
     var isEnabled: Bool {
         #if os(iOS)
 
             return hearingDevicePairedEar.rawValue != 0
 
-        #endif
+        #else
 
-        return false
+            return false
+
+        #endif
     }
 
     var status: String {
@@ -18,9 +28,11 @@ struct HearingDevicePairedEar: FeatureProtocol {
 
             return hearingDevicePairedEar.statusString
 
-        #endif
+        #else
 
-        return isEnabled.statusString
+            return isEnabled.statusString
+
+        #endif
     }
 }
 
@@ -32,4 +44,23 @@ private extension HearingDevicePairedEar {
         }
 
     #endif
+}
+
+extension HearingDevicePairedEar: ObservableFeatureProtocol {
+    func registerObservation() {
+        #if os(iOS)
+
+            NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(valueChanged),
+                name: UIAccessibility.hearingDevicePairedEarDidChangeNotification,
+                object: nil
+            )
+
+        #endif
+    }
+
+    @objc func valueChanged() {
+        postNotification(featureName: Self.name, statusString: status)
+    }
 }

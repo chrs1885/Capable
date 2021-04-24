@@ -1,8 +1,16 @@
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(watchOS)
     import UIKit
+#else
+    import Foundation
 #endif
 
-struct BoldText: FeatureProtocol {
+class BoldText: AccessibilityFeatureProtocol {
+    static let name = "boldText"
+
+    init() {
+        registerObservation()
+    }
+
     var isEnabled: Bool {
         #if os(iOS) || os(tvOS)
 
@@ -14,12 +22,33 @@ struct BoldText: FeatureProtocol {
             let isBoldText = referenceFont.fontName.localizedCaseInsensitiveContains("bold")
             return isBoldText
 
-        #endif
+        #else
 
-        return false
+            return false
+
+        #endif
     }
 
     var status: String {
         isEnabled.statusString
+    }
+}
+
+extension BoldText: ObservableFeatureProtocol {
+    func registerObservation() {
+        #if os(iOS) || os(tvOS)
+
+            NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(valueChanged),
+                name: UIAccessibility.boldTextStatusDidChangeNotification,
+                object: nil
+            )
+
+        #endif
+    }
+
+    @objc func valueChanged() {
+        postNotification(featureName: Self.name, statusString: status)
     }
 }

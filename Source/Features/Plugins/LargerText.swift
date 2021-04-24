@@ -2,9 +2,17 @@
     import UIKit
 #elseif os(watchOS)
     import WatchKit
+#else
+    import Foundation
 #endif
 
-struct LargerText: FeatureProtocol {
+class LargerText: AccessibilityFeatureProtocol {
+    static let name = "largerText"
+
+    init() {
+        registerObservation()
+    }
+
     var isEnabled: Bool {
         #if os(iOS)
 
@@ -14,9 +22,11 @@ struct LargerText: FeatureProtocol {
 
             return !largerTextCatagory.isDefaultContentSizeString
 
-        #endif
+        #else
 
-        return false
+            return false
+
+        #endif
     }
 
     var status: String {
@@ -28,9 +38,11 @@ struct LargerText: FeatureProtocol {
 
             return largerTextCatagory
 
-        #endif
+        #else
 
-        return isEnabled.statusString
+            return isEnabled.statusString
+
+        #endif
     }
 }
 
@@ -49,4 +61,23 @@ private extension LargerText {
         }
 
     #endif
+}
+
+extension LargerText: ObservableFeatureProtocol {
+    func registerObservation() {
+        #if os(iOS)
+
+            NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(valueChanged),
+                name: UIContentSizeCategory.didChangeNotification,
+                object: nil
+            )
+
+        #endif
+    }
+
+    @objc func valueChanged() {
+        postNotification(featureName: Self.name, statusString: status)
+    }
 }

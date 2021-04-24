@@ -6,7 +6,19 @@
     import WatchKit
 #endif
 
-struct ReduceMotion: FeatureProtocol {
+class ReduceMotion: AccessibilityFeatureProtocol {
+    static let name = "reduceMotion"
+
+    #if os(OSX)
+
+        var displayOptionStatus: Bool = false
+
+    #endif
+
+    init() {
+        registerObservation()
+    }
+
     var isEnabled: Bool {
         #if os(iOS) || os(tvOS)
 
@@ -30,5 +42,52 @@ struct ReduceMotion: FeatureProtocol {
 
     var status: String {
         isEnabled.statusString
+    }
+}
+
+extension ReduceMotion: ObservableFeatureProtocol {
+    func registerObservation() {
+        #if os(iOS) || os(tvOS)
+
+            NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(valueChanged),
+                name: UIAccessibility.reduceMotionStatusDidChangeNotification,
+                object: nil
+            )
+
+        #elseif os(watchOS)
+
+            if #available(watchOS 4.0, *) {
+                NotificationCenter.default.addObserver(
+                    self,
+                    selector: #selector(valueChanged),
+                    name: .WKAccessibilityReduceMotionStatusDidChange,
+                    object: nil
+                )
+            }
+
+        #elseif os(OSX)
+
+            displayOptionStatus = isEnabled
+            NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(valueChanged),
+                name: NSWorkspace.accessibilityDisplayOptionsDidChangeNotification,
+                object: nil
+            )
+
+        #endif
+    }
+
+    @objc func valueChanged() {
+        #if os(OSX)
+
+            guard isEnabled != displayOptionStatus else { return }
+            displayOptionStatus = isEnabled
+
+        #endif
+
+        postNotification(featureName: Self.name, statusString: status)
     }
 }
