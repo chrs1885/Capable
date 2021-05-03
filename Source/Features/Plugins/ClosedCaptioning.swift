@@ -5,9 +5,11 @@
 #endif
 
 class ClosedCaptioning: AccessibilityFeatureProtocol {
-    static let name = "closedCaption"
-
-    init() {
+    static let name = "closedCaptioning"
+    let notificationCenter: NotificationCenterProtocol
+    
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         registerObservation()
     }
 
@@ -32,7 +34,7 @@ extension ClosedCaptioning: ObservableFeatureProtocol {
     func registerObservation() {
         #if os(iOS) || os(tvOS)
 
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: UIAccessibility.closedCaptioningStatusDidChangeNotification,

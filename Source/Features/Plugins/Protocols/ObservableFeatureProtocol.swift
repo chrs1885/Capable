@@ -1,13 +1,15 @@
 import Foundation
 
-@objc protocol ObservableFeatureProtocol {}
+protocol ObservableFeatureProtocol {
+    var notificationCenter: NotificationCenterProtocol { get }
+}
 
 extension ObservableFeatureProtocol {
     func postNotification(featureName: String, statusString: String) {
         guard let feature = CapableFeature(rawValue: featureName) else { return }
 
         let featureStatus = FeatureStatus(feature: feature, statusString: statusString)
-        NotificationCenter.default.post(name: .CapableFeatureStatusDidChange, object: featureStatus)
+        notificationCenter.post(name: .CapableFeatureStatusDidChange, object: featureStatus)
 
         Logger.info("Posted notification for feature \(feature) set to \(statusString)")
     }

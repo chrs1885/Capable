@@ -6,8 +6,10 @@
 
 class SpeakScreen: AccessibilityFeatureProtocol {
     static let name = "speakScreen"
-
-    init() {
+    let notificationCenter: NotificationCenterProtocol
+    
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         registerObservation()
     }
 
@@ -32,7 +34,7 @@ extension SpeakScreen: ObservableFeatureProtocol {
     func registerObservation() {
         #if os(iOS)
 
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: UIAccessibility.speakScreenStatusDidChangeNotification,

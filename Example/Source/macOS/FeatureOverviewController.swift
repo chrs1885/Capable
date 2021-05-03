@@ -84,7 +84,7 @@ extension FeatureOverviewController {
     }
 
     func registerObservers() {
-        NotificationCenter.default.addObserver(
+        notificationCenter.addObserver(
             self,
             selector: #selector(featureStatusChanged),
             name: .CapableFeatureStatusDidChange,
@@ -93,7 +93,7 @@ extension FeatureOverviewController {
     }
 
     func unregisterObservers() {
-        NotificationCenter.default.removeObserver(self)
+        notificationCenter.removeObserver(self)
     }
 }
 

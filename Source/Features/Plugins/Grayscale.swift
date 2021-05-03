@@ -6,8 +6,10 @@
 
 class Grayscale: AccessibilityFeatureProtocol {
     static let name = "grayscale"
-
-    init() {
+    let notificationCenter: NotificationCenterProtocol
+    
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         registerObservation()
     }
 
@@ -32,7 +34,7 @@ extension Grayscale: ObservableFeatureProtocol {
     func registerObservation() {
         #if os(iOS) || os(tvOS)
 
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: UIAccessibility.grayscaleStatusDidChangeNotification,

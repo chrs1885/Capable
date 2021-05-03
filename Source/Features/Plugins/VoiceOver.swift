@@ -8,14 +8,16 @@
 
 class VoiceOver: AccessibilityFeatureProtocol {
     static let name = "voiceOver"
-
+    let notificationCenter: NotificationCenterProtocol
+    
     #if os(OSX)
 
-        var keyValueObservation: NSKeyValueObservation?
+        private var keyValueObservation: NSKeyValueObservation?
 
     #endif
-
-    init() {
+    
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         registerObservation()
     }
 
@@ -50,14 +52,14 @@ extension VoiceOver: ObservableFeatureProtocol {
         #if os(iOS) || os(tvOS)
 
             if #available(iOS 11.0, tvOS 11.0, *) {
-                NotificationCenter.default.addObserver(
+                notificationCenter.addObserver(
                     self,
                     selector: #selector(valueChanged),
                     name: UIAccessibility.voiceOverStatusDidChangeNotification,
                     object: nil
                 )
             } else {
-                NotificationCenter.default.addObserver(
+                notificationCenter.addObserver(
                     self,
                     selector: #selector(valueChanged),
                     name: Notification.Name(UIAccessibilityVoiceOverStatusChanged),
@@ -67,7 +69,7 @@ extension VoiceOver: ObservableFeatureProtocol {
 
         #elseif os(watchOS)
 
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: NSNotification.Name(rawValue: WKAccessibilityVoiceOverStatusChanged),

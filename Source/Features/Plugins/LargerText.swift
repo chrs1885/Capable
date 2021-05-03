@@ -8,8 +8,10 @@
 
 class LargerText: AccessibilityFeatureProtocol {
     static let name = "largerText"
-
-    init() {
+    let notificationCenter: NotificationCenterProtocol
+    
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         registerObservation()
     }
 
@@ -67,7 +69,7 @@ extension LargerText: ObservableFeatureProtocol {
     func registerObservation() {
         #if os(iOS)
 
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: UIContentSizeCategory.didChangeNotification,

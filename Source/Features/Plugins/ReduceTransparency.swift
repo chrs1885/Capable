@@ -8,14 +8,16 @@
 
 class ReduceTransparency: AccessibilityFeatureProtocol {
     static let name = "reduceTransparency"
-
+    let notificationCenter: NotificationCenterProtocol
+    
     #if os(OSX)
 
         var displayOptionStatus: Bool = false
 
     #endif
 
-    init() {
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         registerObservation()
     }
 
@@ -44,7 +46,7 @@ extension ReduceTransparency: ObservableFeatureProtocol {
     func registerObservation() {
         #if os(iOS) || os(tvOS)
 
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: UIAccessibility.reduceTransparencyStatusDidChangeNotification,
@@ -54,7 +56,7 @@ extension ReduceTransparency: ObservableFeatureProtocol {
         #elseif os(OSX)
 
             displayOptionStatus = isEnabled
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: NSWorkspace.accessibilityDisplayOptionsDidChangeNotification,

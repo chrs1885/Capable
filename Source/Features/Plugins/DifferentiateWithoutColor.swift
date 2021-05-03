@@ -8,14 +8,16 @@
 
 class DifferentiateWithoutColor: AccessibilityFeatureProtocol {
     static let name = "differentiateWithoutColor"
-
+    let notificationCenter: NotificationCenterProtocol
+    
     #if os(OSX)
 
-        var displayOptionStatus: Bool = false
+        private var displayOptionStatus: Bool = false
 
     #endif
-
-    init() {
+    
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         registerObservation()
     }
 
@@ -50,7 +52,7 @@ extension DifferentiateWithoutColor: ObservableFeatureProtocol {
         #if os(iOS)
 
             if #available(iOS 13.0, *) {
-                NotificationCenter.default.addObserver(
+                notificationCenter.addObserver(
                     self,
                     selector: #selector(valueChanged),
                     name: NSNotification.Name(rawValue: UIAccessibility.differentiateWithoutColorDidChangeNotification),
@@ -61,7 +63,7 @@ extension DifferentiateWithoutColor: ObservableFeatureProtocol {
         #elseif os(OSX)
 
             displayOptionStatus = isEnabled
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: NSWorkspace.accessibilityDisplayOptionsDidChangeNotification,

@@ -6,8 +6,10 @@
 
 class GuidedAccess: AccessibilityFeatureProtocol {
     static let name = "guidedAccess"
-
-    init() {
+    let notificationCenter: NotificationCenterProtocol
+    
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         registerObservation()
     }
 
@@ -32,7 +34,7 @@ extension GuidedAccess: ObservableFeatureProtocol {
     func registerObservation() {
         #if os(iOS)
 
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: UIAccessibility.guidedAccessStatusDidChangeNotification,

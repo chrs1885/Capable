@@ -1,22 +1,30 @@
 //
-//  FeatureStatusesProvider.swift
+//  FeatureProvider.swift
 //  Capable
 //
 //  Created by Christoph Wendt on 30.03.18.
 //
 
-class FeatureProvider: FeatureProviderProtocol {
-    private var accessibilityFeatures: [AccessibilityFeatureProtocol] = []
+protocol FeatureProviderProtocol {
+    var statusMap: [String: String] { get }
 
-    init(features: [CapableFeature]) {
+    func isFeatureEnabled(feature: CapableFeature) -> Bool
+}
+
+class FeatureProvider: FeatureProviderProtocol {
+    var accessibilityFeatures: [AccessibilityFeatureProtocol] = []
+    var accessibilityFeatureProvider: AccessibilityFeatureProviderProtocol
+
+    init(features: [CapableFeature], accessibilityFeatureProvider: AccessibilityFeatureProviderProtocol = AccessibilityFeatureProvider()) {
+        self.accessibilityFeatureProvider = accessibilityFeatureProvider
         for feature in features {
-            guard let accessibilityFeature = feature.accessibilityFeature else { continue }
+            guard let accessibilityFeature = accessibilityFeatureProvider.accessibilityFeature(featureName: feature.rawValue) else { continue }
             accessibilityFeatures.append(accessibilityFeature)
         }
     }
 
     func isFeatureEnabled(feature: CapableFeature) -> Bool {
-        guard let accessibilityFeature = feature.accessibilityFeature else { return false }
+        guard let accessibilityFeature = accessibilityFeatureProvider.accessibilityFeature(featureName: feature.rawValue) else { return false }
 
         return accessibilityFeature.isEnabled
     }

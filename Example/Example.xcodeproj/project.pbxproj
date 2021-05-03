@@ -15,33 +15,21 @@
 		4478927E210B4401000D5939 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
 		44789280210B4AEA000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
 		44789281210B4AED000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
-		4494E5DE23550E5A0082C217 /* NotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BF23550BF00082C217 /* NotificationsTests.swift */; };
 		4494E5E023550E5A0082C217 /* CapableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C123550BF00082C217 /* CapableTests.swift */; };
-		4494E5E123550E5A0082C217 /* FeatureNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C223550BF00082C217 /* FeatureNotificationsTests.swift */; };
-		4494E5E223550E5A0082C217 /* FeatureStatusesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C323550BF00082C217 /* FeatureStatusesTests.swift */; };
-		4494E5E423550E5A0082C217 /* FeatureStatusesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C523550BF00082C217 /* FeatureStatusesProviderTests.swift */; };
+		4494E5E423550E5A0082C217 /* FeatureProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C523550BF00082C217 /* FeatureProviderTests.swift */; };
 		4494E5E623550E5A0082C217 /* CapablePerfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C723550BF00082C217 /* CapablePerfTests.swift */; };
-		4494E5E723550E5A0082C217 /* NotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BF23550BF00082C217 /* NotificationsTests.swift */; };
 		4494E5E923550E5A0082C217 /* CapableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C123550BF00082C217 /* CapableTests.swift */; };
-		4494E5EA23550E5A0082C217 /* FeatureNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C223550BF00082C217 /* FeatureNotificationsTests.swift */; };
-		4494E5EB23550E5A0082C217 /* FeatureStatusesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C323550BF00082C217 /* FeatureStatusesTests.swift */; };
-		4494E5ED23550E5A0082C217 /* FeatureStatusesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C523550BF00082C217 /* FeatureStatusesProviderTests.swift */; };
+		4494E5ED23550E5A0082C217 /* FeatureProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C523550BF00082C217 /* FeatureProviderTests.swift */; };
 		4494E5EF23550E5A0082C217 /* CapablePerfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C723550BF00082C217 /* CapablePerfTests.swift */; };
-		4494E5F023550E5B0082C217 /* NotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BF23550BF00082C217 /* NotificationsTests.swift */; };
 		4494E5F223550E5B0082C217 /* CapableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C123550BF00082C217 /* CapableTests.swift */; };
-		4494E5F323550E5B0082C217 /* FeatureNotificationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C223550BF00082C217 /* FeatureNotificationsTests.swift */; };
-		4494E5F423550E5B0082C217 /* FeatureStatusesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C323550BF00082C217 /* FeatureStatusesTests.swift */; };
-		4494E5F623550E5B0082C217 /* FeatureStatusesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C523550BF00082C217 /* FeatureStatusesProviderTests.swift */; };
+		4494E5F623550E5B0082C217 /* FeatureProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C523550BF00082C217 /* FeatureProviderTests.swift */; };
 		4494E5F823550E5B0082C217 /* CapablePerfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C723550BF00082C217 /* CapablePerfTests.swift */; };
 		4494E5FA23550E670082C217 /* NotificationCenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BC23550BF00082C217 /* NotificationCenterMock.swift */; };
-		4494E5FB23550E670082C217 /* FeatureStatusesProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BD23550BF00082C217 /* FeatureStatusesProviderMock.swift */; };
-		4494E5FC23550E670082C217 /* FeatureStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BE23550BF00082C217 /* FeatureStatusesMock.swift */; };
+		4494E5FB23550E670082C217 /* FeatureProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BD23550BF00082C217 /* FeatureProviderMock.swift */; };
 		4494E5FE23550E680082C217 /* NotificationCenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BC23550BF00082C217 /* NotificationCenterMock.swift */; };
-		4494E5FF23550E680082C217 /* FeatureStatusesProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BD23550BF00082C217 /* FeatureStatusesProviderMock.swift */; };
-		4494E60023550E680082C217 /* FeatureStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BE23550BF00082C217 /* FeatureStatusesMock.swift */; };
+		4494E5FF23550E680082C217 /* FeatureProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BD23550BF00082C217 /* FeatureProviderMock.swift */; };
 		4494E60223550E690082C217 /* NotificationCenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BC23550BF00082C217 /* NotificationCenterMock.swift */; };
-		4494E60323550E690082C217 /* FeatureStatusesProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BD23550BF00082C217 /* FeatureStatusesProviderMock.swift */; };
-		4494E60423550E690082C217 /* FeatureStatusesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BE23550BF00082C217 /* FeatureStatusesMock.swift */; };
+		4494E60323550E690082C217 /* FeatureProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5BD23550BF00082C217 /* FeatureProviderMock.swift */; };
 		4494E60523550ECA0082C217 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C923550BF00082C217 /* LoggerTests.swift */; };
 		4494E60623550ECB0082C217 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C923550BF00082C217 /* LoggerTests.swift */; };
 		4494E60723550ECC0082C217 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C923550BF00082C217 /* LoggerTests.swift */; };
@@ -97,6 +85,15 @@
 		55A2015AF8E67D0BAC01DA73 /* Pods_Example_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A4614933CCE311EC4CAD3C /* Pods_Example_watchOS_Extension.framework */; };
 		6180FD25002FD5791E4E3C36 /* Pods_Example_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C8CF8E1603FFD70061B7CA /* Pods_Example_iOS.framework */; };
 		791054B3341540F931275BD6 /* Pods_Example_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA97E99795B6631F2DB0EB5 /* Pods_Example_watchOS.framework */; };
+		831B189C2640887900C638AD /* AccessibilityFeatureProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B189B2640887900C638AD /* AccessibilityFeatureProviderMock.swift */; };
+		831B189D2640887900C638AD /* AccessibilityFeatureProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B189B2640887900C638AD /* AccessibilityFeatureProviderMock.swift */; };
+		831B189E2640887900C638AD /* AccessibilityFeatureProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B189B2640887900C638AD /* AccessibilityFeatureProviderMock.swift */; };
+		831B18A62640890D00C638AD /* AccessibilityFeatureMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B18A52640890D00C638AD /* AccessibilityFeatureMock.swift */; };
+		831B18A72640890D00C638AD /* AccessibilityFeatureMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B18A52640890D00C638AD /* AccessibilityFeatureMock.swift */; };
+		831B18A82640890D00C638AD /* AccessibilityFeatureMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B18A52640890D00C638AD /* AccessibilityFeatureMock.swift */; };
+		831B18B026408DEC00C638AD /* AccessibilityFeatureProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B18AF26408DEC00C638AD /* AccessibilityFeatureProviderTests.swift */; };
+		831B18B126408DEC00C638AD /* AccessibilityFeatureProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B18AF26408DEC00C638AD /* AccessibilityFeatureProviderTests.swift */; };
+		831B18B226408DEC00C638AD /* AccessibilityFeatureProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B18AF26408DEC00C638AD /* AccessibilityFeatureProviderTests.swift */; };
 		831B4F1E20A4D4F200F1BB94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831B4F1C20A4D4F200F1BB94 /* Main.storyboard */; };
 		831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F6252078138E00F0C74D /* AppDelegate.swift */; };
 		831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
@@ -235,13 +232,9 @@
 		4494E5AE23550BA30082C217 /* Tests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4494E5B223550BA30082C217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4494E5BC23550BF00082C217 /* NotificationCenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterMock.swift; sourceTree = "<group>"; };
-		4494E5BD23550BF00082C217 /* FeatureStatusesProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProviderMock.swift; sourceTree = "<group>"; };
-		4494E5BE23550BF00082C217 /* FeatureStatusesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesMock.swift; sourceTree = "<group>"; };
-		4494E5BF23550BF00082C217 /* NotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTests.swift; sourceTree = "<group>"; };
+		4494E5BD23550BF00082C217 /* FeatureProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureProviderMock.swift; sourceTree = "<group>"; };
 		4494E5C123550BF00082C217 /* CapableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapableTests.swift; sourceTree = "<group>"; };
-		4494E5C223550BF00082C217 /* FeatureNotificationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureNotificationsTests.swift; sourceTree = "<group>"; };
-		4494E5C323550BF00082C217 /* FeatureStatusesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesTests.swift; sourceTree = "<group>"; };
-		4494E5C523550BF00082C217 /* FeatureStatusesProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusesProviderTests.swift; sourceTree = "<group>"; };
+		4494E5C523550BF00082C217 /* FeatureProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureProviderTests.swift; sourceTree = "<group>"; };
 		4494E5C723550BF00082C217 /* CapablePerfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapablePerfTests.swift; sourceTree = "<group>"; };
 		4494E5C923550BF00082C217 /* LoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
 		4494E5CC23550BF00082C217 /* Image+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+mock.swift"; sourceTree = "<group>"; };
@@ -266,6 +259,9 @@
 		61C8CF8E1603FFD70061B7CA /* Pods_Example_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A34BF8D95976311A017335 /* Pods_Example_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B78C620EDD88E25833A2D67 /* Pods_Tests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		831B189B2640887900C638AD /* AccessibilityFeatureProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityFeatureProviderMock.swift; sourceTree = "<group>"; };
+		831B18A52640890D00C638AD /* AccessibilityFeatureMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityFeatureMock.swift; sourceTree = "<group>"; };
+		831B18AF26408DEC00C638AD /* AccessibilityFeatureProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityFeatureProviderTests.swift; sourceTree = "<group>"; };
 		831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		831B4F1D20A4D4F200F1BB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		831B4F2120A4D4F200F1BB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -431,10 +427,8 @@
 				4494E5BA23550BF00082C217 /* Mocks */,
 				4494E5C723550BF00082C217 /* CapablePerfTests.swift */,
 				4494E5C123550BF00082C217 /* CapableTests.swift */,
-				4494E5C223550BF00082C217 /* FeatureNotificationsTests.swift */,
-				4494E5C323550BF00082C217 /* FeatureStatusesTests.swift */,
-				4494E5C523550BF00082C217 /* FeatureStatusesProviderTests.swift */,
-				4494E5BF23550BF00082C217 /* NotificationsTests.swift */,
+				4494E5C523550BF00082C217 /* FeatureProviderTests.swift */,
+				831B18AF26408DEC00C638AD /* AccessibilityFeatureProviderTests.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -442,9 +436,10 @@
 		4494E5BA23550BF00082C217 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				4494E5BE23550BF00082C217 /* FeatureStatusesMock.swift */,
-				4494E5BD23550BF00082C217 /* FeatureStatusesProviderMock.swift */,
+				4494E5BD23550BF00082C217 /* FeatureProviderMock.swift */,
 				4494E5BC23550BF00082C217 /* NotificationCenterMock.swift */,
+				831B189B2640887900C638AD /* AccessibilityFeatureProviderMock.swift */,
+				831B18A52640890D00C638AD /* AccessibilityFeatureMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1278,14 +1273,15 @@
 			files = (
 				4494E62523550F240082C217 /* FontMetricsTests.swift in Sources */,
 				4494E5E023550E5A0082C217 /* CapableTests.swift in Sources */,
+				831B189C2640887900C638AD /* AccessibilityFeatureProviderMock.swift in Sources */,
 				4494E60D23550ED40082C217 /* RGBAColorTests.swift in Sources */,
 				4494E62E23550F360082C217 /* OsVersionProviderMock.swift in Sources */,
 				4494E60C23550ED40082C217 /* UIFontFontPropsTests.swift in Sources */,
 				4494E62323550F240082C217 /* FontMetricsProviderTests.swift in Sources */,
+				831B18A62640890D00C638AD /* AccessibilityFeatureMock.swift in Sources */,
 				4494E62D23550F360082C217 /* FontMetricsProviderMock.swift in Sources */,
 				4494E60F23550ED40082C217 /* ConformanceLevelTests.swift in Sources */,
 				4494E62123550EE40082C217 /* Image+mock.swift in Sources */,
-				4494E5FC23550E670082C217 /* FeatureStatusesMock.swift in Sources */,
 				4494E60A23550ED40082C217 /* ColorWcagTests.swift in Sources */,
 				4494E60823550ED40082C217 /* NSFontFontPropsTests.swift in Sources */,
 				4494E60E23550ED40082C217 /* ImageAverageColorTests.swift in Sources */,
@@ -1293,14 +1289,12 @@
 				4494E5E623550E5A0082C217 /* CapablePerfTests.swift in Sources */,
 				4494E60B23550ED40082C217 /* FontPropsTests.swift in Sources */,
 				4494E5FA23550E670082C217 /* NotificationCenterMock.swift in Sources */,
-				4494E5E423550E5A0082C217 /* FeatureStatusesProviderTests.swift in Sources */,
+				4494E5E423550E5A0082C217 /* FeatureProviderTests.swift in Sources */,
 				4494E62423550F240082C217 /* FontMetricsSupportTests.swift in Sources */,
-				4494E5DE23550E5A0082C217 /* NotificationsTests.swift in Sources */,
-				4494E5E123550E5A0082C217 /* FeatureNotificationsTests.swift in Sources */,
 				4494E62C23550F360082C217 /* FontMetricsMock.swift in Sources */,
-				4494E5E223550E5A0082C217 /* FeatureStatusesTests.swift in Sources */,
 				4494E60923550ED40082C217 /* ImageAreaTests.swift in Sources */,
-				4494E5FB23550E670082C217 /* FeatureStatusesProviderMock.swift in Sources */,
+				4494E5FB23550E670082C217 /* FeatureProviderMock.swift in Sources */,
+				831B18B026408DEC00C638AD /* AccessibilityFeatureProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1310,14 +1304,15 @@
 			files = (
 				4494E62823550F240082C217 /* FontMetricsTests.swift in Sources */,
 				4494E5E923550E5A0082C217 /* CapableTests.swift in Sources */,
+				831B189D2640887900C638AD /* AccessibilityFeatureProviderMock.swift in Sources */,
 				4494E61523550ED50082C217 /* RGBAColorTests.swift in Sources */,
 				4494E63123550F360082C217 /* OsVersionProviderMock.swift in Sources */,
 				4494E61423550ED50082C217 /* UIFontFontPropsTests.swift in Sources */,
 				4494E62623550F240082C217 /* FontMetricsProviderTests.swift in Sources */,
+				831B18A72640890D00C638AD /* AccessibilityFeatureMock.swift in Sources */,
 				4494E63023550F360082C217 /* FontMetricsProviderMock.swift in Sources */,
 				4494E61723550ED50082C217 /* ConformanceLevelTests.swift in Sources */,
 				4494E62223550EE40082C217 /* Image+mock.swift in Sources */,
-				4494E60023550E680082C217 /* FeatureStatusesMock.swift in Sources */,
 				4494E61223550ED50082C217 /* ColorWcagTests.swift in Sources */,
 				4494E61023550ED50082C217 /* NSFontFontPropsTests.swift in Sources */,
 				4494E61623550ED50082C217 /* ImageAverageColorTests.swift in Sources */,
@@ -1325,14 +1320,12 @@
 				4494E5EF23550E5A0082C217 /* CapablePerfTests.swift in Sources */,
 				4494E61323550ED50082C217 /* FontPropsTests.swift in Sources */,
 				4494E5FE23550E680082C217 /* NotificationCenterMock.swift in Sources */,
-				4494E5ED23550E5A0082C217 /* FeatureStatusesProviderTests.swift in Sources */,
+				4494E5ED23550E5A0082C217 /* FeatureProviderTests.swift in Sources */,
 				4494E62723550F240082C217 /* FontMetricsSupportTests.swift in Sources */,
-				4494E5E723550E5A0082C217 /* NotificationsTests.swift in Sources */,
-				4494E5EA23550E5A0082C217 /* FeatureNotificationsTests.swift in Sources */,
 				4494E62F23550F360082C217 /* FontMetricsMock.swift in Sources */,
-				4494E5EB23550E5A0082C217 /* FeatureStatusesTests.swift in Sources */,
 				4494E61123550ED50082C217 /* ImageAreaTests.swift in Sources */,
-				4494E5FF23550E680082C217 /* FeatureStatusesProviderMock.swift in Sources */,
+				4494E5FF23550E680082C217 /* FeatureProviderMock.swift in Sources */,
+				831B18B126408DEC00C638AD /* AccessibilityFeatureProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1342,14 +1335,15 @@
 			files = (
 				4494E62B23550F250082C217 /* FontMetricsTests.swift in Sources */,
 				4494E5F223550E5B0082C217 /* CapableTests.swift in Sources */,
+				831B189E2640887900C638AD /* AccessibilityFeatureProviderMock.swift in Sources */,
 				4494E61D23550ED50082C217 /* RGBAColorTests.swift in Sources */,
 				4494E63423550F380082C217 /* OsVersionProviderMock.swift in Sources */,
 				4494E61C23550ED50082C217 /* UIFontFontPropsTests.swift in Sources */,
 				4494E62923550F250082C217 /* FontMetricsProviderTests.swift in Sources */,
+				831B18A82640890D00C638AD /* AccessibilityFeatureMock.swift in Sources */,
 				4494E63323550F380082C217 /* FontMetricsProviderMock.swift in Sources */,
 				4494E61F23550ED50082C217 /* ConformanceLevelTests.swift in Sources */,
 				4494E62023550EE40082C217 /* Image+mock.swift in Sources */,
-				4494E60423550E690082C217 /* FeatureStatusesMock.swift in Sources */,
 				4494E61A23550ED50082C217 /* ColorWcagTests.swift in Sources */,
 				4494E61823550ED50082C217 /* NSFontFontPropsTests.swift in Sources */,
 				4494E61E23550ED50082C217 /* ImageAverageColorTests.swift in Sources */,
@@ -1357,14 +1351,12 @@
 				4494E5F823550E5B0082C217 /* CapablePerfTests.swift in Sources */,
 				4494E61B23550ED50082C217 /* FontPropsTests.swift in Sources */,
 				4494E60223550E690082C217 /* NotificationCenterMock.swift in Sources */,
-				4494E5F623550E5B0082C217 /* FeatureStatusesProviderTests.swift in Sources */,
+				4494E5F623550E5B0082C217 /* FeatureProviderTests.swift in Sources */,
 				4494E62A23550F250082C217 /* FontMetricsSupportTests.swift in Sources */,
-				4494E5F023550E5B0082C217 /* NotificationsTests.swift in Sources */,
-				4494E5F323550E5B0082C217 /* FeatureNotificationsTests.swift in Sources */,
 				4494E63223550F380082C217 /* FontMetricsMock.swift in Sources */,
-				4494E5F423550E5B0082C217 /* FeatureStatusesTests.swift in Sources */,
 				4494E61923550ED50082C217 /* ImageAreaTests.swift in Sources */,
-				4494E60323550E690082C217 /* FeatureStatusesProviderMock.swift in Sources */,
+				4494E60323550E690082C217 /* FeatureProviderMock.swift in Sources */,
+				831B18B226408DEC00C638AD /* AccessibilityFeatureProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1504,6 +1496,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6TTE9K9RG;
 				INFOPLIST_FILE = "Tests/Tests-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1524,6 +1517,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6TTE9K9RG;
 				INFOPLIST_FILE = "Tests/Tests-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1544,6 +1538,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P6TTE9K9RG;
 				INFOPLIST_FILE = "Tests/Tests-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
@@ -1565,6 +1560,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = P6TTE9K9RG;
 				INFOPLIST_FILE = "Tests/Tests-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
@@ -1584,6 +1580,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6TTE9K9RG;
 				INFOPLIST_FILE = "Tests/Tests-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -1605,6 +1602,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6TTE9K9RG;
 				INFOPLIST_FILE = "Tests/Tests-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;

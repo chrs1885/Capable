@@ -6,8 +6,10 @@
 
 class ShakeToUndo: AccessibilityFeatureProtocol {
     static let name = "shakeToUndo"
-
-    init() {
+    let notificationCenter: NotificationCenterProtocol
+    
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         registerObservation()
     }
 
@@ -32,7 +34,7 @@ extension ShakeToUndo: ObservableFeatureProtocol {
     func registerObservation() {
         #if os(iOS)
 
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: UIAccessibility.shakeToUndoDidChangeNotification,

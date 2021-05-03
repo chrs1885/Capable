@@ -6,8 +6,10 @@
 
 class OnOffSwitchLabels: AccessibilityFeatureProtocol {
     static let name = "onOffSwitchLabels"
-
-    init() {
+    let notificationCenter: NotificationCenterProtocol
+    
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         registerObservation()
     }
 
@@ -38,7 +40,7 @@ extension OnOffSwitchLabels: ObservableFeatureProtocol {
         #if os(iOS)
 
             if #available(iOS 13.0, *) {
-                NotificationCenter.default.addObserver(
+                notificationCenter.addObserver(
                     self,
                     selector: #selector(valueChanged),
                     name: UIAccessibility.onOffSwitchLabelsDidChangeNotification,

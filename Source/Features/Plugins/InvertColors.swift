@@ -8,14 +8,16 @@
 
 class InvertColors: AccessibilityFeatureProtocol {
     static let name = "invertColors"
-
+    var notificationCenter: NotificationCenterProtocol
+    
     #if os(OSX)
 
-        var displayOptionStatus: Bool = false
+        private var displayOptionStatus: Bool = false
 
     #endif
 
-    init() {
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         registerObservation()
     }
 
@@ -44,7 +46,7 @@ extension InvertColors: ObservableFeatureProtocol {
     func registerObservation() {
         #if os(iOS) || os(tvOS)
 
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: UIAccessibility.invertColorsStatusDidChangeNotification,
@@ -54,7 +56,7 @@ extension InvertColors: ObservableFeatureProtocol {
         #elseif os(OSX)
 
             displayOptionStatus = isEnabled
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: NSWorkspace.accessibilityDisplayOptionsDidChangeNotification,

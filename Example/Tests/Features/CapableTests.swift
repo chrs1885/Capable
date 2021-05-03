@@ -9,59 +9,28 @@
 
     @testable import Capable
     import Nimble
-    import os.log
     import Quick
 
     class CapableTests: QuickSpec {
         override func spec() {
             describe("The Capable class") {
-                var featureStatusesProviderMock: FeatureStatusesProviderMock?
-
-                beforeEach {
-                    featureStatusesProviderMock = FeatureStatusesProviderMock()
-                }
+                var sut: Capable!
 
                 context("after initialization with features") {
                     context("when providing specific features") {
-                        var sut: Capable?
-                        var testedFeatures: [CapableFeature]?
+                        var testedFeatures: [CapableFeature]!
 
                         beforeEach {
                             testedFeatures = [.reduceMotion, .voiceOver]
-                            sut = Capable(withFeatures: testedFeatures!)
+                            sut = Capable(withFeatures: testedFeatures)
                         }
 
                         it("creates a Capable instance") {
-                            expect(sut!).to(beAnInstanceOf(Capable.self))
+                            expect(sut).to(beAnInstanceOf(Capable.self))
                         }
 
-                        it("initializes its feature statuses provider correctly") {
-                            expect(sut!.featureStatusesProvider).to(beAnInstanceOf(FeatureStatusesProvider.self))
-                        }
-
-                        it("initializes its statuses module correctly") {
-                            expect(sut!.statusesModule).to(beAnInstanceOf(FeatureStatuses.self))
-                            // swiftlint:disable force_cast
-                            let featureStatuses = sut!.statusesModule as! FeatureStatuses
-                            // swiftlint:enable force_cast
-                            expect(featureStatuses.features).to(equal(sut!.features))
-                            expect(featureStatuses.featureStatusesProvider).to(be(sut!.featureStatusesProvider))
-                        }
-
-                        it("initializes its notifications module correctly") {
-                            expect(sut!.notificationsModule).to(beAnInstanceOf(FeatureNotifications.self))
-                            // swiftlint:disable force_cast
-                            let featureNotifications = sut!.notificationsModule as! FeatureNotifications
-                            // swiftlint:enable force_cast
-
-                            expect(featureNotifications.featureStatusesProvider).to(be(sut!.featureStatusesProvider))
-                            expect(featureNotifications.targetNotificationCenter).to(equal(NotificationCenter.default))
-
-                            #if os(OSX)
-                                expect(featureNotifications.systemNotificationCenter).to(equal(NSWorkspace.shared.notificationCenter))
-                            #else
-                                expect(featureNotifications.systemNotificationCenter).to(equal(NotificationCenter.default))
-                            #endif
+                        it("initializes its feature provider correctly") {
+                            expect(sut.featureProvider).to(beAnInstanceOf(FeatureProvider.self))
                         }
 
                         it("sets the features property correctly") {
@@ -70,8 +39,6 @@
                     }
 
                     context("when providing no parameters") {
-                        var sut: Capable?
-
                         beforeEach {
                             sut = Capable()
                         }
@@ -82,31 +49,36 @@
                     }
 
                     context("after initialization") {
-                        var sut: Capable?
-                        var testStatuses: FeatureStatusesMock?
+                        var featureProviderMock: FeatureProviderMock!
 
                         beforeEach {
-                            testStatuses = FeatureStatusesMock()
-                            sut = Capable(withFeatures: [], featureStatusesProvider: featureStatusesProviderMock!, statusesModule: testStatuses!, notificationModule: FeatureNotifications(featureStatusesProvider: featureStatusesProviderMock!))
+                            featureProviderMock = FeatureProviderMock()
+                            sut = Capable(withFeatures: CapableFeature.allCases, featureProvider: featureProviderMock)
                         }
 
                         context("when calling statusMap") {
+                            let testStatusMap = ["foo": "bar"]
+                            
                             beforeEach {
-                                _ = sut!.statusMap
+                                featureProviderMock.statusMap = testStatusMap
+                                _ = sut.statusMap
                             }
 
                             it("requests the status map from the statuses module") {
-                                expect(testStatuses!.didCallStatusMap).to(beTrue())
+                                expect(sut.statusMap).to(equal(testStatusMap))
                             }
                         }
 
                         context("when calling isFeatureEnabled") {
+                            let testFeature = CapableFeature.voiceOver
+                            
                             beforeEach {
-                                _ = sut!.isFeatureEnabled(feature: .voiceOver)
+                                _ = sut.isFeatureEnabled(feature: testFeature)
                             }
 
-                            it("requests the status map from the statuses module") {
-                                expect(featureStatusesProviderMock!.didCallIsFeatureEnabled).to(beTrue())
+                            it("requests the feature status from the feature provider") {
+                                expect(featureProviderMock!.didCallIsFeatureEnabled).to(beTrue())
+                                expect(featureProviderMock!.requestedFeature).to(equal(testFeature))
                             }
                         }
                     }

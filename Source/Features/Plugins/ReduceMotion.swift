@@ -8,14 +8,16 @@
 
 class ReduceMotion: AccessibilityFeatureProtocol {
     static let name = "reduceMotion"
-
+    let notificationCenter: NotificationCenterProtocol
+    
     #if os(OSX)
 
-        var displayOptionStatus: Bool = false
+        private var displayOptionStatus: Bool = false
 
     #endif
-
-    init() {
+    
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         registerObservation()
     }
 
@@ -49,7 +51,7 @@ extension ReduceMotion: ObservableFeatureProtocol {
     func registerObservation() {
         #if os(iOS) || os(tvOS)
 
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: UIAccessibility.reduceMotionStatusDidChangeNotification,
@@ -59,7 +61,7 @@ extension ReduceMotion: ObservableFeatureProtocol {
         #elseif os(watchOS)
 
             if #available(watchOS 4.0, *) {
-                NotificationCenter.default.addObserver(
+                notificationCenter.addObserver(
                     self,
                     selector: #selector(valueChanged),
                     name: .WKAccessibilityReduceMotionStatusDidChange,
@@ -70,7 +72,7 @@ extension ReduceMotion: ObservableFeatureProtocol {
         #elseif os(OSX)
 
             displayOptionStatus = isEnabled
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: NSWorkspace.accessibilityDisplayOptionsDidChangeNotification,

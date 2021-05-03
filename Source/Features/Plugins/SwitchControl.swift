@@ -8,14 +8,16 @@
 
 class SwitchControl: AccessibilityFeatureProtocol {
     static let name = "switchControl"
-
+    let notificationCenter: NotificationCenterProtocol
+    
     #if os(OSX)
 
         var keyValueObservation: NSKeyValueObservation?
 
     #endif
-
-    init() {
+    
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         registerObservation()
     }
 
@@ -49,7 +51,7 @@ extension SwitchControl: ObservableFeatureProtocol {
     func registerObservation() {
         #if os(iOS) || os(tvOS)
 
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: UIAccessibility.switchControlStatusDidChangeNotification,

@@ -6,8 +6,10 @@
 
 class HearingDevicePairedEar: AccessibilityFeatureProtocol {
     static let name = "hearingDevicePairedEar"
-
-    init() {
+    let notificationCenter: NotificationCenterProtocol
+    
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         registerObservation()
     }
 
@@ -50,7 +52,7 @@ extension HearingDevicePairedEar: ObservableFeatureProtocol {
     func registerObservation() {
         #if os(iOS)
 
-            NotificationCenter.default.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: UIAccessibility.hearingDevicePairedEarDidChangeNotification,

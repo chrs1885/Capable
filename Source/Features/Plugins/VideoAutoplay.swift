@@ -8,8 +8,10 @@
 
 class VideoAutoplay: AccessibilityFeatureProtocol {
     static let name = "videoAutoplay"
-
-    init() {
+    let notificationCenter: NotificationCenterProtocol
+    
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
         registerObservation()
     }
 
@@ -40,7 +42,7 @@ extension VideoAutoplay: ObservableFeatureProtocol {
         #if os(iOS) || os(tvOS)
 
             if #available(iOS 13.0, tvOS 13.0, *) {
-                NotificationCenter.default.addObserver(
+                notificationCenter.addObserver(
                     self,
                     selector: #selector(valueChanged),
                     name: UIAccessibility.videoAutoplayStatusDidChangeNotification,
