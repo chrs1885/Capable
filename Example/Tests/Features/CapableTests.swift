@@ -58,7 +58,7 @@
 
                         context("when calling statusMap") {
                             let testStatusMap = ["foo": "bar"]
-                            
+
                             beforeEach {
                                 featureProviderMock.statusMap = testStatusMap
                                 _ = sut.statusMap
@@ -71,7 +71,7 @@
 
                         context("when calling isFeatureEnabled") {
                             let testFeature = CapableFeature.voiceOver
-                            
+
                             beforeEach {
                                 _ = sut.isFeatureEnabled(feature: testFeature)
                             }

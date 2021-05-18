@@ -7,7 +7,7 @@
 class Grayscale: AccessibilityFeatureProtocol {
     static let name = "grayscale"
     let notificationCenter: NotificationCenterProtocol
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()

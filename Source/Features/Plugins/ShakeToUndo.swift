@@ -7,7 +7,7 @@
 class ShakeToUndo: AccessibilityFeatureProtocol {
     static let name = "shakeToUndo"
     let notificationCenter: NotificationCenterProtocol
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()

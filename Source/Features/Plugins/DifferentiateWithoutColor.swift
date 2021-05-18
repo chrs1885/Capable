@@ -9,13 +9,13 @@
 class DifferentiateWithoutColor: AccessibilityFeatureProtocol {
     static let name = "differentiateWithoutColor"
     let notificationCenter: NotificationCenterProtocol
-    
+
     #if os(OSX)
 
         private var displayOptionStatus: Bool = false
 
     #endif
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()

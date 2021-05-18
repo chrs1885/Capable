@@ -9,13 +9,13 @@
 class SwitchControl: AccessibilityFeatureProtocol {
     static let name = "switchControl"
     let notificationCenter: NotificationCenterProtocol
-    
+
     #if os(OSX)
 
-        var keyValueObservation: NSKeyValueObservation?
+        private var keyValueObservation: NSKeyValueObservation?
 
     #endif
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()

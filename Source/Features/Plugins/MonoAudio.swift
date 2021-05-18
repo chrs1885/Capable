@@ -7,7 +7,7 @@
 class MonoAudio: AccessibilityFeatureProtocol {
     static let name = "monoAudio"
     let notificationCenter: NotificationCenterProtocol
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()

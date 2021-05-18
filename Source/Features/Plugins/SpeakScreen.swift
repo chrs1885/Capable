@@ -7,7 +7,7 @@
 class SpeakScreen: AccessibilityFeatureProtocol {
     static let name = "speakScreen"
     let notificationCenter: NotificationCenterProtocol
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()

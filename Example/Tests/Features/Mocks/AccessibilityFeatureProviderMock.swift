@@ -6,16 +6,16 @@
 //  Copyright © 2021 Christoph Wendt. All rights reserved.
 //
 
-import Foundation
 @testable import Capable
+import Foundation
 
 class AccessibilityFeatureProviderMock: AccessibilityFeatureProviderProtocol {
     var didCallAccessibilityFeature = false
     var expectedAccessibilityFeature: AccessibilityFeatureProtocol?
-    
-    func accessibilityFeature(featureName: String) -> AccessibilityFeatureProtocol? {
+
+    func accessibilityFeature(featureName _: String) -> AccessibilityFeatureProtocol? {
         didCallAccessibilityFeature = true
-        
+
         return expectedAccessibilityFeature
     }
 }

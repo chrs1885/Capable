@@ -7,7 +7,7 @@
 class GuidedAccess: AccessibilityFeatureProtocol {
     static let name = "guidedAccess"
     let notificationCenter: NotificationCenterProtocol
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()

@@ -7,7 +7,7 @@
 class DarkerSystemColors: AccessibilityFeatureProtocol {
     static let name = "darkerSystemColors"
     let notificationCenter: NotificationCenterProtocol
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()

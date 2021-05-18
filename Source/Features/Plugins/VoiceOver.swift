@@ -9,13 +9,13 @@
 class VoiceOver: AccessibilityFeatureProtocol {
     static let name = "voiceOver"
     let notificationCenter: NotificationCenterProtocol
-    
+
     #if os(OSX)
 
         private var keyValueObservation: NSKeyValueObservation?
 
     #endif
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()

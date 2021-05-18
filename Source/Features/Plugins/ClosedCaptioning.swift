@@ -7,7 +7,7 @@
 class ClosedCaptioning: AccessibilityFeatureProtocol {
     static let name = "closedCaptioning"
     let notificationCenter: NotificationCenterProtocol
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()

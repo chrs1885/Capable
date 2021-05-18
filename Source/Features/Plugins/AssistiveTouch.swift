@@ -7,7 +7,7 @@
 class AssistiveTouch: AccessibilityFeatureProtocol {
     static let name = "assistiveTouch"
     let notificationCenter: NotificationCenterProtocol
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()
@@ -34,7 +34,7 @@ extension AssistiveTouch: ObservableFeatureProtocol {
     func registerObservation() {
         #if os(iOS)
 
-        notificationCenter.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: UIAccessibility.assistiveTouchStatusDidChangeNotification,

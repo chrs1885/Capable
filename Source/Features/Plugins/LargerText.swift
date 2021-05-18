@@ -9,7 +9,7 @@
 class LargerText: AccessibilityFeatureProtocol {
     static let name = "largerText"
     let notificationCenter: NotificationCenterProtocol
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()

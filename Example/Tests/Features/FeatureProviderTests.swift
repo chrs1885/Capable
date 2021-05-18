@@ -15,17 +15,17 @@
         override func spec() {
             describe("The FeatureProviderTests class") {
                 var sut: FeatureProvider!
-                
+
                 context("after initialization with features") {
                     var accessibilityFeatureProviderMock: AccessibilityFeatureProviderMock!
                     let testAccessibilityFeature = AccessibilityFeatureMock()
-                    
+
                     beforeEach {
                         accessibilityFeatureProviderMock = AccessibilityFeatureProviderMock()
                         accessibilityFeatureProviderMock.expectedAccessibilityFeature = testAccessibilityFeature
                         sut = FeatureProvider(features: [.voiceOver], accessibilityFeatureProvider: accessibilityFeatureProviderMock)
                     }
-                    
+
                     context("calling statusMap") {
                         it("retuns a dictionary containing the status of each accessibility feature") {
                             let statusMap = sut.statusMap
@@ -34,12 +34,12 @@
                             expect(statusMap.first?.value).to(equal(testAccessibilityFeature.status))
                         }
                     }
-                    
+
                     context("calling isFeatureEnabled") {
                         beforeEach {
                             _ = sut.isFeatureEnabled(feature: .voiceOver)
                         }
-                        
+
                         it("requests the current feature status from the accessibility feature provider") {
                             expect(testAccessibilityFeature.didCallIsEnabled).to(beTrue())
                         }

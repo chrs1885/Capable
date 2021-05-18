@@ -9,7 +9,7 @@
 class VideoAutoplay: AccessibilityFeatureProtocol {
     static let name = "videoAutoplay"
     let notificationCenter: NotificationCenterProtocol
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()

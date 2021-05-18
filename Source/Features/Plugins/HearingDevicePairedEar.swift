@@ -7,7 +7,7 @@
 class HearingDevicePairedEar: AccessibilityFeatureProtocol {
     static let name = "hearingDevicePairedEar"
     let notificationCenter: NotificationCenterProtocol
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()

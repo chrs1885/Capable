@@ -7,7 +7,7 @@
 class OnOffSwitchLabels: AccessibilityFeatureProtocol {
     static let name = "onOffSwitchLabels"
     let notificationCenter: NotificationCenterProtocol
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()

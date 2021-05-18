@@ -9,10 +9,10 @@
 class ReduceTransparency: AccessibilityFeatureProtocol {
     static let name = "reduceTransparency"
     let notificationCenter: NotificationCenterProtocol
-    
+
     #if os(OSX)
 
-        var displayOptionStatus: Bool = false
+        private var displayOptionStatus: Bool = false
 
     #endif
 

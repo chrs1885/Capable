@@ -10,16 +10,15 @@
 class FeatureProviderMock: FeatureProviderProtocol {
     var didCallIsFeatureEnabled = false
     var requestedFeature: CapableFeature?
-    
+
     var statusMap: [String: String] = [:]
 
     init() {}
-    
+
     func isFeatureEnabled(feature: CapableFeature) -> Bool {
         didCallIsFeatureEnabled = true
         requestedFeature = feature
-        
+
         return true
     }
 }
-

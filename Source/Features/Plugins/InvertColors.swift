@@ -9,7 +9,7 @@
 class InvertColors: AccessibilityFeatureProtocol {
     static let name = "invertColors"
     var notificationCenter: NotificationCenterProtocol
-    
+
     #if os(OSX)
 
         private var displayOptionStatus: Bool = false

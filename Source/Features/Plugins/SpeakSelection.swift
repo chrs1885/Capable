@@ -7,7 +7,7 @@
 class SpeakSelection: AccessibilityFeatureProtocol {
     static let name = "speakSelection"
     let notificationCenter: NotificationCenterProtocol
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()

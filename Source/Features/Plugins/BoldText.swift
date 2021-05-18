@@ -7,7 +7,7 @@
 class BoldText: AccessibilityFeatureProtocol {
     static let name = "boldText"
     let notificationCenter: NotificationCenterProtocol
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()
@@ -40,7 +40,7 @@ extension BoldText: ObservableFeatureProtocol {
     func registerObservation() {
         #if os(iOS) || os(tvOS)
 
-        notificationCenter.addObserver(
+            notificationCenter.addObserver(
                 self,
                 selector: #selector(valueChanged),
                 name: UIAccessibility.boldTextStatusDidChangeNotification,

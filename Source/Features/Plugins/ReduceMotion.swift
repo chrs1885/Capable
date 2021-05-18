@@ -9,13 +9,13 @@
 class ReduceMotion: AccessibilityFeatureProtocol {
     static let name = "reduceMotion"
     let notificationCenter: NotificationCenterProtocol
-    
+
     #if os(OSX)
 
         private var displayOptionStatus: Bool = false
 
     #endif
-    
+
     init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
         registerObservation()
