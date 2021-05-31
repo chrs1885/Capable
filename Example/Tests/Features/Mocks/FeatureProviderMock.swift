@@ -1,24 +1,21 @@
 //
 //  FeatureProviderMock.swift
-//  CapableTests
+//  Example
 //
-//  Created by Wendt, Christoph on 16.08.18.
+//  Created by Christoph Wendt on 03.05.21.
+//  Copyright © 2021 Christoph Wendt. All rights reserved.
 //
 
 @testable import Capable
+import Foundation
 
 class FeatureProviderMock: FeatureProviderProtocol {
-    var didCallIsFeatureEnabled = false
-    var requestedFeature: CapableFeature?
+    var didCallFeature = false
+    var expectedFeature: FeatureProtocol?
 
-    var statusMap: [String: String] = [:]
+    func feature(featureName _: String) -> FeatureProtocol? {
+        didCallFeature = true
 
-    init() {}
-
-    func isFeatureEnabled(feature: CapableFeature) -> Bool {
-        didCallIsFeatureEnabled = true
-        requestedFeature = feature
-
-        return true
+        return expectedFeature
     }
 }

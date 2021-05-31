@@ -4,7 +4,7 @@
     import Foundation
 #endif
 
-class ShakeToUndo: AccessibilityFeatureProtocol {
+class ShakeToUndo: FeatureProtocol {
     static let name = "shakeToUndo"
     let notificationCenter: NotificationCenterProtocol
 

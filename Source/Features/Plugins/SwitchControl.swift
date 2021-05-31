@@ -6,7 +6,7 @@
     import Foundation
 #endif
 
-class SwitchControl: AccessibilityFeatureProtocol {
+class SwitchControl: FeatureProtocol {
     static let name = "switchControl"
     let notificationCenter: NotificationCenterProtocol
 

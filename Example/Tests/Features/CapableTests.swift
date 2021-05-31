@@ -30,7 +30,7 @@
                         }
 
                         it("initializes its feature provider correctly") {
-                            expect(sut.featureProvider).to(beAnInstanceOf(FeatureProvider.self))
+                            expect(sut.featureStatusProvider).to(beAnInstanceOf(FeatureStatusProvider.self))
                         }
 
                         it("sets the features property correctly") {
@@ -49,18 +49,18 @@
                     }
 
                     context("after initialization") {
-                        var featureProviderMock: FeatureProviderMock!
+                        var featureStatusProviderMock: FeatureStatusProviderMock!
 
                         beforeEach {
-                            featureProviderMock = FeatureProviderMock()
-                            sut = Capable(withFeatures: CapableFeature.allCases, featureProvider: featureProviderMock)
+                            featureStatusProviderMock = FeatureStatusProviderMock()
+                            sut = Capable(withFeatures: CapableFeature.allCases, featureStatusProvider: featureStatusProviderMock)
                         }
 
                         context("when calling statusMap") {
                             let testStatusMap = ["foo": "bar"]
 
                             beforeEach {
-                                featureProviderMock.statusMap = testStatusMap
+                                featureStatusProviderMock.statusMap = testStatusMap
                                 _ = sut.statusMap
                             }
 
@@ -77,8 +77,8 @@
                             }
 
                             it("requests the feature status from the feature provider") {
-                                expect(featureProviderMock!.didCallIsFeatureEnabled).to(beTrue())
-                                expect(featureProviderMock!.requestedFeature).to(equal(testFeature))
+                                expect(featureStatusProviderMock!.didCallIsFeatureEnabled).to(beTrue())
+                                expect(featureStatusProviderMock!.requestedFeature).to(equal(testFeature))
                             }
                         }
                     }

@@ -4,7 +4,7 @@
     import Foundation
 #endif
 
-class ClosedCaptioning: AccessibilityFeatureProtocol {
+class ClosedCaptioning: FeatureProtocol {
     static let name = "closedCaptioning"
     let notificationCenter: NotificationCenterProtocol
 

@@ -4,7 +4,7 @@
     import Foundation
 #endif
 
-class FullKeyboardAccess: AccessibilityFeatureProtocol {
+class FullKeyboardAccess: FeatureProtocol {
     static let name = "fullKeyboardAccess"
 
     var isEnabled: Bool {

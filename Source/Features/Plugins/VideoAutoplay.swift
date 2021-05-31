@@ -6,7 +6,7 @@
     import Foundation
 #endif
 
-class VideoAutoplay: AccessibilityFeatureProtocol {
+class VideoAutoplay: FeatureProtocol {
     static let name = "videoAutoplay"
     let notificationCenter: NotificationCenterProtocol
 

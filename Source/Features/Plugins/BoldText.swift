@@ -4,7 +4,7 @@
     import Foundation
 #endif
 
-class BoldText: AccessibilityFeatureProtocol {
+class BoldText: FeatureProtocol {
     static let name = "boldText"
     let notificationCenter: NotificationCenterProtocol
 

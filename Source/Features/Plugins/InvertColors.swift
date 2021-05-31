@@ -6,7 +6,7 @@
     import Foundation
 #endif
 
-class InvertColors: AccessibilityFeatureProtocol {
+class InvertColors: FeatureProtocol {
     static let name = "invertColors"
     var notificationCenter: NotificationCenterProtocol
 

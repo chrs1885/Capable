@@ -6,7 +6,7 @@
     import Foundation
 #endif
 
-class ReduceTransparency: AccessibilityFeatureProtocol {
+class ReduceTransparency: FeatureProtocol {
     static let name = "reduceTransparency"
     let notificationCenter: NotificationCenterProtocol
 

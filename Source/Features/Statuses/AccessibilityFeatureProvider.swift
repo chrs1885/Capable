@@ -1,5 +1,5 @@
 //
-//  AccessibilityFeatureProvider.swift
+//  FeatureProvider.swift
 //  Pods
 //
 //  Created by Christoph Wendt on 03.05.21.
@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol AccessibilityFeatureProviderProtocol {
-    func accessibilityFeature(featureName: String) -> AccessibilityFeatureProtocol?
+protocol FeatureProviderProtocol {
+    func feature(featureName: String) -> FeatureProtocol?
 }
 
-class AccessibilityFeatureProvider: AccessibilityFeatureProviderProtocol {
-    func accessibilityFeature(featureName: String) -> AccessibilityFeatureProtocol? {
+class FeatureProvider: FeatureProviderProtocol {
+    func feature(featureName: String) -> FeatureProtocol? {
         switch featureName {
         case AssistiveTouch.name: return AssistiveTouch()
         case BoldText.name: return BoldText()

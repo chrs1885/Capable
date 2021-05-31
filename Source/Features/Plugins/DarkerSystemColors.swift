@@ -4,7 +4,7 @@
     import Foundation
 #endif
 
-class DarkerSystemColors: AccessibilityFeatureProtocol {
+class DarkerSystemColors: FeatureProtocol {
     static let name = "darkerSystemColors"
     let notificationCenter: NotificationCenterProtocol
 

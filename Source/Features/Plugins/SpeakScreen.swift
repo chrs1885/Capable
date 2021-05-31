@@ -4,7 +4,7 @@
     import Foundation
 #endif
 
-class SpeakScreen: AccessibilityFeatureProtocol {
+class SpeakScreen: FeatureProtocol {
     static let name = "speakScreen"
     let notificationCenter: NotificationCenterProtocol
 

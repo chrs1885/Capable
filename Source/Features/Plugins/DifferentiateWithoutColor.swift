@@ -6,7 +6,7 @@
     import Foundation
 #endif
 
-class DifferentiateWithoutColor: AccessibilityFeatureProtocol {
+class DifferentiateWithoutColor: FeatureProtocol {
     static let name = "differentiateWithoutColor"
     let notificationCenter: NotificationCenterProtocol
 

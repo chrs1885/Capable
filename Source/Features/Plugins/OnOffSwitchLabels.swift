@@ -4,7 +4,7 @@
     import Foundation
 #endif
 
-class OnOffSwitchLabels: AccessibilityFeatureProtocol {
+class OnOffSwitchLabels: FeatureProtocol {
     static let name = "onOffSwitchLabels"
     let notificationCenter: NotificationCenterProtocol
 

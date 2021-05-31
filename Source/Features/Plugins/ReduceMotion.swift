@@ -6,7 +6,7 @@
     import WatchKit
 #endif
 
-class ReduceMotion: AccessibilityFeatureProtocol {
+class ReduceMotion: FeatureProtocol {
     static let name = "reduceMotion"
     let notificationCenter: NotificationCenterProtocol
 

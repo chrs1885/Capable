@@ -9,7 +9,7 @@ import os.log
 
 /// This class defines the main interface of the Capable framework.
 public struct Capable {
-    var featureProvider: FeatureProviderProtocol
+    var featureStatusProvider: FeatureStatusProviderProtocol
     var features: [CapableFeature]?
 
     /**
@@ -19,19 +19,19 @@ public struct Capable {
         - features: An optional array containing the features of interest. This will default to all features available on the current platform.
      */
     public init(withFeatures features: [CapableFeature] = CapableFeature.allCases) {
-        let featureProvider = FeatureProvider(features: features)
-        self.init(withFeatures: features, featureProvider: featureProvider)
+        let featureStatusProvider = FeatureStatusProvider(features: features)
+        self.init(withFeatures: features, featureStatusProvider: featureStatusProvider)
     }
 
-    init(withFeatures features: [CapableFeature], featureProvider: FeatureProviderProtocol) {
+    init(withFeatures features: [CapableFeature], featureStatusProvider: FeatureStatusProviderProtocol) {
         self.features = features
-        self.featureProvider = featureProvider
+        self.featureStatusProvider = featureStatusProvider
 
         Logger.info("Capable started with features: \(features.map { $0.rawValue }.joined(separator: ", "))")
     }
 }
 
-// MARK: - Accessibility Statuses
+// MARK: - Feature Statuses
 
 extension Capable {
     /**
@@ -39,7 +39,7 @@ extension Capable {
      While most entries can only have a status set to **enabled** or **disabled**, the `.largerText` feature offers the font scale set by the user.
      */
     public var statusMap: [String: String] {
-        return featureProvider.statusMap
+        return featureStatusProvider.statusMap
     }
 
     /**
@@ -51,7 +51,7 @@ extension Capable {
      - Returns: `true` if the given feature has been enabled, otherwise `false`.
      */
     public func isFeatureEnabled(feature: CapableFeature) -> Bool {
-        return featureProvider.isFeatureEnabled(feature: feature)
+        return featureStatusProvider.isFeatureEnabled(feature: feature)
     }
 }
 

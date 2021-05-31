@@ -4,7 +4,7 @@
     import Foundation
 #endif
 
-class Grayscale: AccessibilityFeatureProtocol {
+class Grayscale: FeatureProtocol {
     static let name = "grayscale"
     let notificationCenter: NotificationCenterProtocol
 

@@ -4,7 +4,7 @@
     import Foundation
 #endif
 
-class AssistiveTouch: AccessibilityFeatureProtocol {
+class AssistiveTouch: FeatureProtocol {
     static let name = "assistiveTouch"
     let notificationCenter: NotificationCenterProtocol
 

@@ -1,5 +1,5 @@
 //
-//  AccessibilityFeatureMock.swift
+//  FeatureMock.swift
 //  Example
 //
 //  Created by Christoph Wendt on 03.05.21.
@@ -9,11 +9,11 @@
 @testable import Capable
 import Foundation
 
-class AccessibilityFeatureMock: AccessibilityFeatureProtocol {
+class FeatureMock: FeatureProtocol {
     var didCallIsEnabled = false
     var didCallStatus = false
 
-    static var name = "AccessibilityFeatureMock"
+    static var name = "FeatureMock"
     var isEnabled: Bool {
         didCallIsEnabled = true
         return true

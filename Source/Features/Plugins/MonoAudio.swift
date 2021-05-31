@@ -4,7 +4,7 @@
     import Foundation
 #endif
 
-class MonoAudio: AccessibilityFeatureProtocol {
+class MonoAudio: FeatureProtocol {
     static let name = "monoAudio"
     let notificationCenter: NotificationCenterProtocol
 

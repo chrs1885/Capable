@@ -4,7 +4,7 @@
     import Foundation
 #endif
 
-class IncreaseContrast: AccessibilityFeatureProtocol {
+class IncreaseContrast: FeatureProtocol {
     static let name = "increaseContrast"
     let notificationCenter: NotificationCenterProtocol
 

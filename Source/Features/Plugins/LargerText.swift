@@ -6,7 +6,7 @@
     import Foundation
 #endif
 
-class LargerText: AccessibilityFeatureProtocol {
+class LargerText: FeatureProtocol {
     static let name = "largerText"
     let notificationCenter: NotificationCenterProtocol
 

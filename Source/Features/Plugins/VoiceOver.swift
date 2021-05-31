@@ -6,7 +6,7 @@
     import WatchKit
 #endif
 
-class VoiceOver: AccessibilityFeatureProtocol {
+class VoiceOver: FeatureProtocol {
     static let name = "voiceOver"
     let notificationCenter: NotificationCenterProtocol
 

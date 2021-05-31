@@ -4,7 +4,7 @@
     import Foundation
 #endif
 
-class HearingDevicePairedEar: AccessibilityFeatureProtocol {
+class HearingDevicePairedEar: FeatureProtocol {
     static let name = "hearingDevicePairedEar"
     let notificationCenter: NotificationCenterProtocol
 
