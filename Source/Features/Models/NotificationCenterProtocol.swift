@@ -12,3 +12,5 @@ protocol NotificationCenterProtocol {
     func post(name aName: NSNotification.Name, object anObject: Any?)
     func removeObserver(_ observer: Any)
 }
+
+extension NotificationCenter: NotificationCenterProtocol {}

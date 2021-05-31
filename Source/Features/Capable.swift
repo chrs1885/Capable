@@ -9,9 +9,7 @@ import os.log
 
 /// This class defines the main interface of the Capable framework.
 public struct Capable {
-    var statusesModule: StatusesProtocol
-    var notificationsModule: NotificationsProtocol
-    var featureStatusesProvider: FeatureStatusesProviderProtocol
+    var featureStatusProvider: FeatureStatusProviderProtocol
     var features: [CapableFeature]?
 
     /**
@@ -21,23 +19,19 @@ public struct Capable {
         - features: An optional array containing the features of interest. This will default to all features available on the current platform.
      */
     public init(withFeatures features: [CapableFeature] = CapableFeature.allCases) {
-        let featureStatusesProvider = FeatureStatusesProvider()
-        let statusesModule = FeatureStatuses(withFeatures: features, featureStatusesProvider: featureStatusesProvider)
-        let notificationsModule = FeatureNotifications(featureStatusesProvider: featureStatusesProvider, features: features)
-        self.init(withFeatures: features, featureStatusesProvider: featureStatusesProvider, statusesModule: statusesModule, notificationModule: notificationsModule)
+        let featureStatusProvider = FeatureStatusProvider(features: features)
+        self.init(withFeatures: features, featureStatusProvider: featureStatusProvider)
     }
 
-    init(withFeatures features: [CapableFeature], featureStatusesProvider: FeatureStatusesProviderProtocol, statusesModule: StatusesProtocol, notificationModule: NotificationsProtocol) {
+    init(withFeatures features: [CapableFeature], featureStatusProvider: FeatureStatusProviderProtocol) {
         self.features = features
-        self.statusesModule = statusesModule
-        notificationsModule = notificationModule
-        self.featureStatusesProvider = featureStatusesProvider
+        self.featureStatusProvider = featureStatusProvider
 
         Logger.info("Capable started with features: \(features.map { $0.rawValue }.joined(separator: ", "))")
     }
 }
 
-// MARK: - Accessibility Statuses
+// MARK: - Feature Statuses
 
 extension Capable {
     /**
@@ -45,7 +39,7 @@ extension Capable {
      While most entries can only have a status set to **enabled** or **disabled**, the `.largerText` feature offers the font scale set by the user.
      */
     public var statusMap: [String: String] {
-        return statusesModule.statusMap
+        return featureStatusProvider.statusMap
     }
 
     /**
@@ -57,7 +51,7 @@ extension Capable {
      - Returns: `true` if the given feature has been enabled, otherwise `false`.
      */
     public func isFeatureEnabled(feature: CapableFeature) -> Bool {
-        return featureStatusesProvider.isFeatureEnabled(feature: feature)
+        return featureStatusProvider.isFeatureEnabled(feature: feature)
     }
 }
 

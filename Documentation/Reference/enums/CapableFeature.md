@@ -21,7 +21,7 @@ public enum CapableFeature: String, CaseIterable
 
 > Restricts access to certain features of a single app to keep the user focused.
 
-### `hearingDevice`
+### `hearingDevicePairedEar`
 
 > Pairing status of a hearing aid.
 
@@ -128,23 +128,3 @@ case voiceOver
 ```
 
 > The screen reader available on Apple platforms.
-
-## Methods
-### `keys(forFeatures:)`
-
-```swift
-public static func keys(forFeatures features: [CapableFeature]) -> [String]
-```
-
-> Iterates through a given list of feature types and returns an array containing the feature names as strings.
->
-> - Parameters:
->    - features: An array containing the feature types of interest.
->
-> - Returns: An array containing the feature names as strings
-
-#### Parameters
-
-| Name | Description |
-| ---- | ----------- |
-| features | An array containing the feature types of interest. |

@@ -19,7 +19,7 @@ public enum CapableFeature: String, CaseIterable {
         case guidedAccess
 
         /// Pairing status of a hearing aid.
-        case hearingDevice
+        case hearingDevicePairedEar
 
         /// Displays on/off labels for UISwitch controls.
         case onOffSwitchLabels
@@ -100,16 +100,4 @@ public enum CapableFeature: String, CaseIterable {
 
     /// The screen reader available on Apple platforms.
     case voiceOver
-
-    /**
-     Iterates through a given list of feature types and returns an array containing the feature names as strings.
-
-     - Parameters:
-        - features: An array containing the feature types of interest.
-
-     - Returns: An array containing the feature names as strings
-     */
-    public static func keys(forFeatures features: [CapableFeature]) -> [String] {
-        return features.map { $0.rawValue }
-    }
 }
