@@ -10,11 +10,7 @@
 		0450E523122D2663B49B0F3D /* Pods_Tests_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B78C620EDD88E25833A2D67 /* Pods_Tests_macOS.framework */; };
 		0D1A1A4F2381DEF54EEEABCC /* Pods_Tests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3608C5EC986382E365A8FF4 /* Pods_Tests_iOS.framework */; };
 		29882843319156428E5159E1 /* Pods_Example_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9D86F10DB1D691B906F54E /* Pods_Example_macOS.framework */; };
-		4478927B210B4073000D5939 /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927A210B4073000D5939 /* FontsViewController.swift */; };
-		4478927D210B4288000D5939 /* FontRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927C210B4288000D5939 /* FontRowController.swift */; };
 		4478927E210B4401000D5939 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
-		44789280210B4AEA000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
-		44789281210B4AED000D5939 /* FontsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4478927F210B4AEA000D5939 /* FontsConstants.swift */; };
 		4494E5E023550E5A0082C217 /* CapableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C123550BF00082C217 /* CapableTests.swift */; };
 		4494E5E423550E5A0082C217 /* FeatureStatusProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C523550BF00082C217 /* FeatureStatusProviderTests.swift */; };
 		4494E5E623550E5A0082C217 /* CapablePerfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C723550BF00082C217 /* CapablePerfTests.swift */; };
@@ -60,24 +56,6 @@
 		4494E62023550EE40082C217 /* Image+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5CC23550BF00082C217 /* Image+mock.swift */; };
 		4494E62123550EE40082C217 /* Image+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5CC23550BF00082C217 /* Image+mock.swift */; };
 		4494E62223550EE40082C217 /* Image+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5CC23550BF00082C217 /* Image+mock.swift */; };
-		4494E62323550F240082C217 /* FontMetricsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5DB23550BF00082C217 /* FontMetricsProviderTests.swift */; };
-		4494E62423550F240082C217 /* FontMetricsSupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5DA23550BF00082C217 /* FontMetricsSupportTests.swift */; };
-		4494E62523550F240082C217 /* FontMetricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5DC23550BF00082C217 /* FontMetricsTests.swift */; };
-		4494E62623550F240082C217 /* FontMetricsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5DB23550BF00082C217 /* FontMetricsProviderTests.swift */; };
-		4494E62723550F240082C217 /* FontMetricsSupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5DA23550BF00082C217 /* FontMetricsSupportTests.swift */; };
-		4494E62823550F240082C217 /* FontMetricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5DC23550BF00082C217 /* FontMetricsTests.swift */; };
-		4494E62923550F250082C217 /* FontMetricsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5DB23550BF00082C217 /* FontMetricsProviderTests.swift */; };
-		4494E62A23550F250082C217 /* FontMetricsSupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5DA23550BF00082C217 /* FontMetricsSupportTests.swift */; };
-		4494E62B23550F250082C217 /* FontMetricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5DC23550BF00082C217 /* FontMetricsTests.swift */; };
-		4494E62C23550F360082C217 /* FontMetricsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D823550BF00082C217 /* FontMetricsMock.swift */; };
-		4494E62D23550F360082C217 /* FontMetricsProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D723550BF00082C217 /* FontMetricsProviderMock.swift */; };
-		4494E62E23550F360082C217 /* OsVersionProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D923550BF00082C217 /* OsVersionProviderMock.swift */; };
-		4494E62F23550F360082C217 /* FontMetricsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D823550BF00082C217 /* FontMetricsMock.swift */; };
-		4494E63023550F360082C217 /* FontMetricsProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D723550BF00082C217 /* FontMetricsProviderMock.swift */; };
-		4494E63123550F360082C217 /* OsVersionProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D923550BF00082C217 /* OsVersionProviderMock.swift */; };
-		4494E63223550F380082C217 /* FontMetricsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D823550BF00082C217 /* FontMetricsMock.swift */; };
-		4494E63323550F380082C217 /* FontMetricsProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D723550BF00082C217 /* FontMetricsProviderMock.swift */; };
-		4494E63423550F380082C217 /* OsVersionProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D923550BF00082C217 /* OsVersionProviderMock.swift */; };
 		44D0B935233F833900A9B136 /* CaptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FD13172336CD3B001C6C7A /* CaptionsViewController.swift */; };
 		44D0B93A233F926100A9B136 /* CaptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D0B938233F900700A9B136 /* CaptionsViewController.swift */; };
 		44FD13182336CD3B001C6C7A /* CaptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FD13172336CD3B001C6C7A /* CaptionsViewController.swift */; };
@@ -105,8 +83,6 @@
 		832953D921121EAA00072EB9 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953D821121EAA00072EB9 /* FeatureOverviewController.swift */; };
 		832953DE21121EAC00072EB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832953DC21121EAC00072EB9 /* Main.storyboard */; };
 		832953E621124C9600072EB9 /* FeatureTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953E42112496300072EB9 /* FeatureTableCellView.swift */; };
-		836725CF210A71780008ABF7 /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836725CB210A6A7A0008ABF7 /* OverviewController.swift */; };
-		836725D0210A71780008ABF7 /* OverviewRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836725CD210A6A920008ABF7 /* OverviewRowController.swift */; };
 		837C191A20AA27970003D237 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837C191820AA27970003D237 /* Interface.storyboard */; };
 		837C192320AA27970003D237 /* Example-watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 837C192220AA27970003D237 /* Example-watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		837C192A20AA27970003D237 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C192920AA27970003D237 /* ExtensionDelegate.swift */; };
@@ -128,7 +104,6 @@
 		83C6F6302078138E00F0C74D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6262078138E00F0C74D /* LaunchScreen.storyboard */; };
 		83C6F6312078138E00F0C74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6282078138E00F0C74D /* Main.storyboard */; };
 		83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
-		83C6F6332078138E00F0C74D /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62B2078138E00F0C74D /* FontsViewController.swift */; };
 		9D9BD8F0470D72CAC5F44979 /* Pods_Example_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A34BF8D95976311A017335 /* Pods_Example_tvOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -222,9 +197,6 @@
 		1021B1BF9523C4E2D4946FE7 /* Pods-Tests-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-iOS/Pods-Tests-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		1A9D86F10DB1D691B906F54E /* Pods_Example_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2718FA59414252A3E57D1724 /* Pods-Tests-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-macOS/Pods-Tests-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		4478927A210B4073000D5939 /* FontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
-		4478927C210B4288000D5939 /* FontRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontRowController.swift; sourceTree = "<group>"; };
-		4478927F210B4AEA000D5939 /* FontsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsConstants.swift; sourceTree = "<group>"; };
 		4494E59223550B700082C217 /* Tests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4494E59623550B700082C217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4494E5A023550B870082C217 /* Tests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,12 +218,6 @@
 		4494E5D223550BF00082C217 /* RGBAColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAColorTests.swift; sourceTree = "<group>"; };
 		4494E5D323550BF00082C217 /* ImageAverageColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAverageColorTests.swift; sourceTree = "<group>"; };
 		4494E5D423550BF00082C217 /* ConformanceLevelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformanceLevelTests.swift; sourceTree = "<group>"; };
-		4494E5D723550BF00082C217 /* FontMetricsProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProviderMock.swift; sourceTree = "<group>"; };
-		4494E5D823550BF00082C217 /* FontMetricsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsMock.swift; sourceTree = "<group>"; };
-		4494E5D923550BF00082C217 /* OsVersionProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OsVersionProviderMock.swift; sourceTree = "<group>"; };
-		4494E5DA23550BF00082C217 /* FontMetricsSupportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsSupportTests.swift; sourceTree = "<group>"; };
-		4494E5DB23550BF00082C217 /* FontMetricsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProviderTests.swift; sourceTree = "<group>"; };
-		4494E5DC23550BF00082C217 /* FontMetricsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsTests.swift; sourceTree = "<group>"; };
 		44D0B938233F900700A9B136 /* CaptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionsViewController.swift; sourceTree = "<group>"; };
 		44FD13172336CD3B001C6C7A /* CaptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionsViewController.swift; sourceTree = "<group>"; };
 		4A59D50AB7E59EBA9F953814 /* Pods-Example-watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-watchOS Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -275,8 +241,6 @@
 		832953DF21121EAC00072EB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		832953E021121EAC00072EB9 /* Example_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example_macOS.entitlements; sourceTree = "<group>"; };
 		832953E42112496300072EB9 /* FeatureTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTableCellView.swift; sourceTree = "<group>"; };
-		836725CB210A6A7A0008ABF7 /* OverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewController.swift; sourceTree = "<group>"; };
-		836725CD210A6A920008ABF7 /* OverviewRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewRowController.swift; sourceTree = "<group>"; };
 		837C191620AA27960003D237 /* Example-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		837C191920AA27970003D237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		837C191D20AA27970003D237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -295,7 +259,6 @@
 		83C6F6272078138E00F0C74D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83C6F6292078138E00F0C74D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureOverviewController.swift; sourceTree = "<group>"; };
-		83C6F62B2078138E00F0C74D /* FontsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
 		83C6F62C2078138E00F0C74D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83E67A2C20CD94B800FE6FC2 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FF01F72129FE2400D26E0D /* Capable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Capable.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Example-enhbiqqbvspdgvbxeefqumtrwxbb/Build/Products/Debug-iphoneos/Capable.framework"; sourceTree = "<group>"; };
@@ -413,7 +376,6 @@
 				4494E5B923550BF00082C217 /* Features */,
 				4494E5C823550BF00082C217 /* Common */,
 				4494E5CA23550BF00082C217 /* Colors */,
-				4494E5D523550BF00082C217 /* Fonts */,
 				4494E59323550B700082C217 /* Tests-iOS */,
 				4494E5A123550B870082C217 /* Tests-macOS */,
 				4494E5AF23550BA30082C217 /* Tests-tvOS */,
@@ -476,32 +438,10 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
-		4494E5D523550BF00082C217 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				4494E5DB23550BF00082C217 /* FontMetricsProviderTests.swift */,
-				4494E5DA23550BF00082C217 /* FontMetricsSupportTests.swift */,
-				4494E5DC23550BF00082C217 /* FontMetricsTests.swift */,
-				4494E5D623550BF00082C217 /* Mocks */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		4494E5D623550BF00082C217 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				4494E5D823550BF00082C217 /* FontMetricsMock.swift */,
-				4494E5D723550BF00082C217 /* FontMetricsProviderMock.swift */,
-				4494E5D923550BF00082C217 /* OsVersionProviderMock.swift */,
-			);
-			path = Mocks;
-			sourceTree = "<group>";
-		};
 		831B4F2520A4D51D00F1BB94 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				831FE59621F653780078F260 /* ColorsViewController.swift */,
-				83C6F62B2078138E00F0C74D /* FontsViewController.swift */,
 				83C6F62C2078138E00F0C74D /* Info.plist */,
 				83C6F6282078138E00F0C74D /* Main.storyboard */,
 			);
@@ -539,10 +479,6 @@
 				837C192920AA27970003D237 /* ExtensionDelegate.swift */,
 				837C193820AA27F10003D237 /* FeatureOverviewController.swift */,
 				837C193A20AA2D960003D237 /* FeatureRowController.swift */,
-				4478927C210B4288000D5939 /* FontRowController.swift */,
-				4478927A210B4073000D5939 /* FontsViewController.swift */,
-				836725CB210A6A7A0008ABF7 /* OverviewController.swift */,
-				836725CD210A6A920008ABF7 /* OverviewRowController.swift */,
 				837C192B20AA27970003D237 /* Assets.xcassets */,
 				837C192D20AA27970003D237 /* Info.plist */,
 			);
@@ -611,7 +547,6 @@
 				831FE5A021FA60CD0078F260 /* Color+capable.swift */,
 				831FE59821F667EE0078F260 /* ConformanceLevelView.swift */,
 				83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */,
-				4478927F210B4AEA000D5939 /* FontsConstants.swift */,
 				831B4F2520A4D51D00F1BB94 /* iOS */,
 				832953D521121EAA00072EB9 /* macOS */,
 				831B4F2620A4D53100F1BB94 /* tvOS */,
@@ -1271,15 +1206,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4494E62523550F240082C217 /* FontMetricsTests.swift in Sources */,
 				4494E5E023550E5A0082C217 /* CapableTests.swift in Sources */,
 				831B189C2640887900C638AD /* FeatureProviderMock.swift in Sources */,
 				4494E60D23550ED40082C217 /* RGBAColorTests.swift in Sources */,
-				4494E62E23550F360082C217 /* OsVersionProviderMock.swift in Sources */,
 				4494E60C23550ED40082C217 /* UIFontFontPropsTests.swift in Sources */,
-				4494E62323550F240082C217 /* FontMetricsProviderTests.swift in Sources */,
 				831B18A62640890D00C638AD /* FeatureMock.swift in Sources */,
-				4494E62D23550F360082C217 /* FontMetricsProviderMock.swift in Sources */,
 				4494E60F23550ED40082C217 /* ConformanceLevelTests.swift in Sources */,
 				4494E62123550EE40082C217 /* Image+mock.swift in Sources */,
 				4494E60A23550ED40082C217 /* ColorWcagTests.swift in Sources */,
@@ -1290,8 +1221,6 @@
 				4494E60B23550ED40082C217 /* FontPropsTests.swift in Sources */,
 				4494E5FA23550E670082C217 /* NotificationCenterMock.swift in Sources */,
 				4494E5E423550E5A0082C217 /* FeatureStatusProviderTests.swift in Sources */,
-				4494E62423550F240082C217 /* FontMetricsSupportTests.swift in Sources */,
-				4494E62C23550F360082C217 /* FontMetricsMock.swift in Sources */,
 				4494E60923550ED40082C217 /* ImageAreaTests.swift in Sources */,
 				4494E5FB23550E670082C217 /* FeatureStatusProviderMock.swift in Sources */,
 				831B18B026408DEC00C638AD /* FeatureProviderTests.swift in Sources */,
@@ -1302,15 +1231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4494E62823550F240082C217 /* FontMetricsTests.swift in Sources */,
 				4494E5E923550E5A0082C217 /* CapableTests.swift in Sources */,
 				831B189D2640887900C638AD /* FeatureProviderMock.swift in Sources */,
 				4494E61523550ED50082C217 /* RGBAColorTests.swift in Sources */,
-				4494E63123550F360082C217 /* OsVersionProviderMock.swift in Sources */,
 				4494E61423550ED50082C217 /* UIFontFontPropsTests.swift in Sources */,
-				4494E62623550F240082C217 /* FontMetricsProviderTests.swift in Sources */,
 				831B18A72640890D00C638AD /* FeatureMock.swift in Sources */,
-				4494E63023550F360082C217 /* FontMetricsProviderMock.swift in Sources */,
 				4494E61723550ED50082C217 /* ConformanceLevelTests.swift in Sources */,
 				4494E62223550EE40082C217 /* Image+mock.swift in Sources */,
 				4494E61223550ED50082C217 /* ColorWcagTests.swift in Sources */,
@@ -1321,8 +1246,6 @@
 				4494E61323550ED50082C217 /* FontPropsTests.swift in Sources */,
 				4494E5FE23550E680082C217 /* NotificationCenterMock.swift in Sources */,
 				4494E5ED23550E5A0082C217 /* FeatureStatusProviderTests.swift in Sources */,
-				4494E62723550F240082C217 /* FontMetricsSupportTests.swift in Sources */,
-				4494E62F23550F360082C217 /* FontMetricsMock.swift in Sources */,
 				4494E61123550ED50082C217 /* ImageAreaTests.swift in Sources */,
 				4494E5FF23550E680082C217 /* FeatureStatusProviderMock.swift in Sources */,
 				831B18B126408DEC00C638AD /* FeatureProviderTests.swift in Sources */,
@@ -1333,15 +1256,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4494E62B23550F250082C217 /* FontMetricsTests.swift in Sources */,
 				4494E5F223550E5B0082C217 /* CapableTests.swift in Sources */,
 				831B189E2640887900C638AD /* FeatureProviderMock.swift in Sources */,
 				4494E61D23550ED50082C217 /* RGBAColorTests.swift in Sources */,
-				4494E63423550F380082C217 /* OsVersionProviderMock.swift in Sources */,
 				4494E61C23550ED50082C217 /* UIFontFontPropsTests.swift in Sources */,
-				4494E62923550F250082C217 /* FontMetricsProviderTests.swift in Sources */,
 				831B18A82640890D00C638AD /* FeatureMock.swift in Sources */,
-				4494E63323550F380082C217 /* FontMetricsProviderMock.swift in Sources */,
 				4494E61F23550ED50082C217 /* ConformanceLevelTests.swift in Sources */,
 				4494E62023550EE40082C217 /* Image+mock.swift in Sources */,
 				4494E61A23550ED50082C217 /* ColorWcagTests.swift in Sources */,
@@ -1352,8 +1271,6 @@
 				4494E61B23550ED50082C217 /* FontPropsTests.swift in Sources */,
 				4494E60223550E690082C217 /* NotificationCenterMock.swift in Sources */,
 				4494E5F623550E5B0082C217 /* FeatureStatusProviderTests.swift in Sources */,
-				4494E62A23550F250082C217 /* FontMetricsSupportTests.swift in Sources */,
-				4494E63223550F380082C217 /* FontMetricsMock.swift in Sources */,
 				4494E61923550ED50082C217 /* ImageAreaTests.swift in Sources */,
 				4494E60323550E690082C217 /* FeatureStatusProviderMock.swift in Sources */,
 				831B18B226408DEC00C638AD /* FeatureProviderTests.swift in Sources */,
@@ -1390,12 +1307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				837C193B20AA2D960003D237 /* FeatureRowController.swift in Sources */,
-				4478927D210B4288000D5939 /* FontRowController.swift in Sources */,
 				837C192A20AA27970003D237 /* ExtensionDelegate.swift in Sources */,
-				836725CF210A71780008ABF7 /* OverviewController.swift in Sources */,
-				4478927B210B4073000D5939 /* FontsViewController.swift in Sources */,
-				836725D0210A71780008ABF7 /* OverviewRowController.swift in Sources */,
-				44789281210B4AED000D5939 /* FontsConstants.swift in Sources */,
 				837C193920AA27F10003D237 /* FeatureOverviewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1407,9 +1319,7 @@
 				831FE59721F653780078F260 /* ColorsViewController.swift in Sources */,
 				83C6F62F2078138E00F0C74D /* AppDelegate.swift in Sources */,
 				831FE5A121FA60CD0078F260 /* Color+capable.swift in Sources */,
-				83C6F6332078138E00F0C74D /* FontsViewController.swift in Sources */,
 				831FE59921F667EE0078F260 /* ConformanceLevelView.swift in Sources */,
-				44789280210B4AEA000D5939 /* FontsConstants.swift in Sources */,
 				83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */,
 				44FD13182336CD3B001C6C7A /* CaptionsViewController.swift in Sources */,
 			);

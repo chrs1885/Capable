@@ -173,7 +173,7 @@
                             <constraint firstItem="e8v-bN-m4l" firstAttribute="centerY" secondItem="5Am-h8-rui" secondAttribute="centerY" id="uAJ-dk-h1m"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Captions" image="image" largeContentSizeImage="image" badgeValue="New" id="Dgi-DE-gu5"/>
+                    <tabBarItem key="tabBarItem" title="Captions" image="image" largeContentSizeImage="image" id="Dgi-DE-gu5"/>
                     <connections>
                         <outlet property="activityIndicator" destination="e8v-bN-m4l" id="dXv-9i-xre"/>
                         <outlet property="bottomCenterLabel" destination="YwX-Im-TUi" id="o5V-s1-n1E"/>
@@ -212,7 +212,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="captions_gradient" width="1600" height="1000"/>
+        <image name="captions_gradient" width="1000" height="688"/>
         <image name="image" width="25" height="25"/>
         <image name="list" width="25" height="25"/>
     </resources>
