@@ -34,6 +34,7 @@ class FeatureOverviewController: NSViewController {
     func refreshData() {
         if let capable = self.capable {
             objects = capable.statusMap
+            featuresTableView.reloadData()
         }
     }
 }
@@ -68,7 +69,6 @@ extension FeatureOverviewController: NSTableViewDataSource, NSTableViewDelegate 
 extension FeatureOverviewController {
     @IBAction func refresh(_: Any) {
         refreshData()
-        featuresTableView.reloadData()
     }
 }
 
@@ -79,7 +79,6 @@ extension FeatureOverviewController {
         if let featureStatus = notification.object as? FeatureStatus {
             showAlert(for: featureStatus)
             refreshData()
-            featuresTableView.reloadData()
         }
     }
 

@@ -28,9 +28,5 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Automatic</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Cardo-Regular.ttf</string>
-	</array>
 </dict>
 </plist>

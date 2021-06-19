@@ -18,16 +18,16 @@ Check out the *Example.xcworkspace* to get a quick overview:
 
 ![Example project overview](./Documentation/Images/features_example_app.png)
 
-### 1) Research: Do I need to care about accessibility?
+### 1) Research: Which accessibility features are enabled across your user base?
 
 * [Get the user's accessibility settings](#accessibility-status)
 * [Send status with your favorite analytics SDK](#send-status)
 
-Have you ever thought about adopting accessibility features within you apps to gain your user base instead of spending a lot of time implementing features no-one really ever asked for? 
 
-Most of us did, however there has never been an easy way to tell if anyone benefits from that. Adjusting layouts to be usable for people with low vision can be quite complex in some situations and tracking the user's accessibility settings adds a lot of boilerplate code to your app.
+Have you ever thought about improving accessibility within your apps to gain your user base instead of spending a lot of time implementing features no-one really ever asked for? Most of us did, however there has never been an easy way to tell if anyone benefits from that. What if there was a simple way to figure out if there's a real need to support accessibility right now. Or even better, which disability exists most across your user base.
 
-What if there was a simple way to figure out if there's a real need to support accessibility right now. Or even better, which disability exists most across your user base.
+While Apple's accessibility API are different across all platforms and might be located in a variety of system frameworks,
+Capable offers a unified and centralized API to get the current status of accessibility settings. This info can be sent to your analytics backend to learn, if people with specific handicaps are blocked from doing certain actions within your app. Furthermore, this data will help you to prioritize accessibility work.
 
 ### 2) React: Improve problematic screens
 
@@ -35,7 +35,6 @@ What if there was a simple way to figure out if there's a real need to support a
 * [Get notified about any changes](#notifications)
 * [Calculate high contrast WCAG compliant colors](#colors)
 * [Calculate high contrast image text colors](#captions)
-* [Use dynamic type with custom fonts](#dynamic-type)
 
 Once you've figured out that users with specific handicaps get stuck at a certain stage, you can make use of various Capable APIs to enable/disable accessibility support based on the user's accessibility settings or improve texts and colors used within your apps. Go back to step 1 to proof that the work helped users to succeed using your app.
 
@@ -60,17 +59,15 @@ use_frameworks!
 
 target 'MyApp' do
 
-  # all features + color and font extensions
+  # all features + color extensions
   pod 'Capable'
 
-  # all features, but exclude color and font extensions
+  # all features, but exclude color extensions
   pod 'Capable/Features'
   
   # color extensions only
   pod 'Capable/Colors'
-
-  # font extensions only
-  pod 'Capable/Fonts'
+  
 end
 ```
 
@@ -84,7 +81,7 @@ github "chrs1885/Capable"
 
 ```ruby
 dependencies: [
-    .package(url: "https://github.com/chrs1885/Capable.git", from: "1.1.4")
+    .package(url: "https://github.com/chrs1885/Capable.git", from: "2.0.0")
 ]
 ```
 
@@ -272,35 +269,6 @@ Here's an overview of available conformance levels:
 | .AAA    | 4.5                            | 18.0 (or 14.0 and bold) |
 | .AAA    | 7.0                            | 14.0                    |
 | .failed | *.AA/.AAA not satisfied*       | -                       |
-
-<a id="dynamic-type"></a> 
-### Dynamic Type with custom fonts (Capable UIFont extension)
-
-Supporting Dynamic Type along with different OS versions such as iOS 10 and iOS 11 (watchOS 3 and watchOS 4) can be a huge pain, since both versions provide different APIs.
-
-Capable easily auto scales system fonts as well as your custom fonts by providing one line of code:
-
-```swift
-let myLabel = UILabel(frame: frame)
-
-// Scalable custom font
-let myCustomFont = UIFont(name: "Custom Font Name", size: defaultFontSize)!
-myLabel.font = UIFont.scaledFont(for: myCustomFont)
-
-// or
-myLabel.font = UIFont.scaledFont(withName: "Custom Font Name", ofSize: defaultFontSize)
-
-// Scalable system font
-myLabel.font = UIFont.scaledSystemFont(ofSize: defaultFontSize)
-
-// Scalable italic system font
-myLabel.font = UIFont.scaledItalicSystemFont(ofSize: defaultFontSize)
-
-// Scalable bold system font
-myLabel.font = UIFont.scaledBoldSystemFont(ofSize: defaultFontSize)
-```
-
-While these extension APIs are available on tvOS as well, setting the font size in the system settings is not supported on this platforms.
 
 <a id="logging"></a> 
 ### Logging with OSLog

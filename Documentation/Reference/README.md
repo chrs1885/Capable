@@ -18,4 +18,3 @@ This Reference Documentation has been generated with
 -   [Capable](extensions/Capable.md)
 -   [ConformanceLevel](extensions/ConformanceLevel.md)
 -   [TypeColor](extensions/TypeColor.md)
--   [UIFont](extensions/UIFont.md)

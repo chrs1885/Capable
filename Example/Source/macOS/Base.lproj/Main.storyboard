@@ -131,7 +131,7 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="466" minWidth="40" maxWidth="10000" id="7Ni-A9-fSK">
+                                                <tableColumn width="437" minWidth="40" maxWidth="10000" id="7Ni-A9-fSK">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -144,11 +144,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <customView identifier="FeatureRow" id="oGp-wX-eRU" customClass="FeatureTableCellView" customModule="Example_macOS" customModuleProvider="target">
-                                                            <rect key="frame" x="1" y="1" width="475" height="84"/>
+                                                            <rect key="frame" x="11" y="1" width="446" height="84"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="prF-oe-RSl">
-                                                                    <rect key="frame" x="18" y="44" width="439" height="20"/>
+                                                                    <rect key="frame" x="18" y="44" width="410" height="20"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Label" id="Bfo-G0-uaV">
                                                                         <font key="font" metaFont="systemBold" size="17"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -156,7 +156,7 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Blg-kg-LBf">
-                                                                    <rect key="frame" x="18" y="20" width="439" height="19"/>
+                                                                    <rect key="frame" x="18" y="20" width="410" height="19"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="c1a-60-rUa">
                                                                         <font key="font" metaFont="system" size="15"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -181,8 +181,8 @@
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
-                                                <outlet property="dataSource" destination="XfG-lQ-9wD" id="cEu-oC-H6E"/>
-                                                <outlet property="delegate" destination="XfG-lQ-9wD" id="3ge-ab-4cP"/>
+                                                <outlet property="dataSource" destination="XfG-lQ-9wD" id="2uJ-wk-sqi"/>
+                                                <outlet property="delegate" destination="XfG-lQ-9wD" id="J7m-Pf-nFp"/>
                                             </connections>
                                         </tableView>
                                     </subviews>
@@ -208,7 +208,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="featuresTableView" destination="irR-L8-QYl" id="yot-eK-wm9"/>
+                        <outlet property="featuresTableView" destination="irR-L8-QYl" id="d74-JT-Qrn"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -627,7 +627,7 @@
                                     <rect key="frame" x="-100" y="-100" width="478" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Nrp-5p-Jjy">
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.97402597402597402" horizontal="NO" id="Nrp-5p-Jjy">
                                     <rect key="frame" x="323" y="1" width="16" height="818"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -659,6 +659,6 @@
     </scenes>
     <resources>
         <image name="NSRefreshTemplate" width="14" height="16"/>
-        <image name="captions_gradient" width="1600" height="1000"/>
+        <image name="captions_gradient" width="1000" height="688"/>
     </resources>
 </document>
