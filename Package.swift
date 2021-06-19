@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "Capable",
     platforms: [
-        .macOS(.v10_12), .iOS(.v10), .tvOS(.v10), .watchOS(.v4),
+        .macOS(.v10_13), .iOS(.v12), .tvOS(.v12), .watchOS(.v4),
     ],
     products: [
         .library(

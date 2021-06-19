@@ -12,10 +12,10 @@ def testPods
 end
 
 target 'Example-iOS' do
-  platform :ios, '11.0'
+  platform :ios, '12.0'
 
   sharedPods
-  pod 'SheetyColors', '1.0.1'
+  pod 'SheetyColors', :git => 'https://github.com/chrs1885/SheetyColors.git', :branch => 'release/1.3.1'
 
   target 'Tests-iOS' do
     testPods
@@ -23,7 +23,7 @@ target 'Example-iOS' do
 end
 
 target 'Example-macOS' do
-  platform :osx, '10.12'
+  platform :osx, '10.13'
 
   sharedPods
 
@@ -33,7 +33,7 @@ target 'Example-macOS' do
 end
 
 target 'Example-tvOS' do
-  platform :tvos, '10.0'
+  platform :tvos, '12.0'
 
   sharedPods
 
