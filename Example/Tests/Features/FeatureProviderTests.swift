@@ -34,6 +34,12 @@
                         }
                     }
 
+                    context("calling feature() with name buttonShapes") {
+                        it("returns an instance of type ButtonShapes") {
+                            expect(sut.feature(featureName: ButtonShapes.name)).to(beAnInstanceOf(ButtonShapes.self))
+                        }
+                    }
+
                     context("calling feature() with name closedCaptioning") {
                         it("returns an instance of type ClosedCaptioning") {
                             expect(sut.feature(featureName: ClosedCaptioning.name)).to(beAnInstanceOf(ClosedCaptioning.self))

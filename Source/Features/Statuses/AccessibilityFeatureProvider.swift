@@ -16,6 +16,7 @@ class FeatureProvider: FeatureProviderProtocol {
         switch featureName {
         case AssistiveTouch.name: return AssistiveTouch()
         case BoldText.name: return BoldText()
+        case ButtonShapes.name: return ButtonShapes()
         case ClosedCaptioning.name: return ClosedCaptioning()
         case DarkerSystemColors.name: return DarkerSystemColors()
         case DifferentiateWithoutColor.name: return DifferentiateWithoutColor()
