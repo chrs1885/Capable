@@ -28,12 +28,7 @@ class VoiceOver: FeatureProtocol {
 
         #elseif os(OSX)
 
-            if #available(OSX 10.13, *) {
-                return NSWorkspace.shared.isVoiceOverEnabled
-            } else {
-                Logger.warning("Unable to determine status for voiceOver since it is only available on macOS 10.13 or later.")
-                return false
-            }
+            return NSWorkspace.shared.isVoiceOverEnabled
 
         #elseif os(watchOS)
 
@@ -51,21 +46,12 @@ extension VoiceOver: ObservableFeatureProtocol {
     func registerObservation() {
         #if os(iOS) || os(tvOS)
 
-            if #available(iOS 11.0, tvOS 11.0, *) {
-                notificationCenter.addObserver(
-                    self,
-                    selector: #selector(valueChanged),
-                    name: UIAccessibility.voiceOverStatusDidChangeNotification,
-                    object: nil
-                )
-            } else {
-                notificationCenter.addObserver(
-                    self,
-                    selector: #selector(valueChanged),
-                    name: Notification.Name(UIAccessibilityVoiceOverStatusChanged),
-                    object: nil
-                )
-            }
+            notificationCenter.addObserver(
+                self,
+                selector: #selector(valueChanged),
+                name: UIAccessibility.voiceOverStatusDidChangeNotification,
+                object: nil
+            )
 
         #elseif os(watchOS)
 
@@ -78,10 +64,8 @@ extension VoiceOver: ObservableFeatureProtocol {
 
         #elseif os(OSX)
 
-            if #available(OSX 10.13, *) {
-                keyValueObservation = NSWorkspace.shared.observe(\NSWorkspace.isVoiceOverEnabled) { _, _ in
-                    self.valueChanged()
-                }
+            keyValueObservation = NSWorkspace.shared.observe(\NSWorkspace.isVoiceOverEnabled) { _, _ in
+                self.valueChanged()
             }
 
         #endif

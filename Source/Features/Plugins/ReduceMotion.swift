@@ -32,12 +32,7 @@ class ReduceMotion: FeatureProtocol {
 
         #elseif os(watchOS)
 
-            if #available(watchOS 4.0, *) {
-                return WKAccessibilityIsReduceMotionEnabled()
-            } else {
-                Logger.warning("Unable to determine status for isReduceMotion since it is only available on watchOS 4 or later.")
-                return false
-            }
+            return WKAccessibilityIsReduceMotionEnabled()
 
         #endif
     }
@@ -60,14 +55,12 @@ extension ReduceMotion: ObservableFeatureProtocol {
 
         #elseif os(watchOS)
 
-            if #available(watchOS 4.0, *) {
-                notificationCenter.addObserver(
-                    self,
-                    selector: #selector(valueChanged),
-                    name: .WKAccessibilityReduceMotionStatusDidChange,
-                    object: nil
-                )
-            }
+            notificationCenter.addObserver(
+                self,
+                selector: #selector(valueChanged),
+                name: .WKAccessibilityReduceMotionStatusDidChange,
+                object: nil
+            )
 
         #elseif os(OSX)
 
