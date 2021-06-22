@@ -183,37 +183,38 @@ Inside your `featureStatusChanged` you can parse the specific feature and value:
 
 The following table contains all features that are available:
 
-:white_check_mark: API provided by Apple and fully supported by Capable
-:cross_mark: API provided by Apple but not supported by Capable due to missing system settings entry.
+✅ API provided by Apple and fully supported by Capable
 
-*\* Feature status can be read but notifications are not available.*
+☑️ API provided by Apple (status only, no notification) and fully supported by Capable
 
-|                               | iOS                            | macOS                          | tvOS               | watchOS                        |
-| ----------------------------- |:------------------------------:| :-----------------------------:| :-----------------:| :-----------------------------:|
-| .assistiveTouch               | :white_check_mark:             |                                | :cross_mark:       |                                |
-| .boldText                     | :white_check_mark:             |                                | :white_check_mark: | &nbsp;:white_check_mark:**\*** |
-| .buttonShapes                 | :white_check_mark: **(iOS14)** |                                | :cross_mark:       |                                |
-| .closedCaptioning             | :white_check_mark:             |                                | :white_check_mark: |                                |
-| .darkerSystemColors           | :white_check_mark:             |                                | :cross_mark:       |                                |
-| .differentiateWithoutColor    | :white_check_mark: **(iOS13)** | :white_check_mark:             |                    |                                |
-| .fullKeyboardAccess           |                                | &nbsp;:white_check_mark:**\*** |                    |                                |
-| .grayscale                    | :white_check_mark:             |                                | :white_check_mark: |                                |
-| .guidedAccess                 | :white_check_mark:             |                                | :cross_mark:       |                                |
-| .hearingDevice                | :white_check_mark:             |                                |                    |                                |
-| .increaseContrast             |                                | :white_check_mark:             |                    |                                |
-| .invertColors                 | :white_check_mark:             | :white_check_mark:             | :white_check_mark: |                                |
-| .largerText                   | :white_check_mark:             |                                | :cross_mark:       | &nbsp;:white_check_mark:**\*** |
-| .monoAudio                    | :white_check_mark:             |                                | :white_check_mark: |                                |
-| .onOffSwitchLabels            | :white_check_mark:             |                                | :cross_mark:       |                                |
-| .prefersCrossFadeTransitions  | :white_check_mark: **(iOS14)** |                                |                    |                                |
-| .reduceMotion                 | :white_check_mark:             | :white_check_mark:             | :white_check_mark: | :white_check_mark:             |
-| .reduceTransparency           | :white_check_mark:             | :white_check_mark:             | :white_check_mark: |                                |
-| .shakeToUndo                  | :white_check_mark:             |                                | :cross_mark:       |                                |
-| .speakScreen                  | :white_check_mark:             |                                | :cross_mark:       |                                |
-| .speakSelection               | :white_check_mark:             |                                | :cross_mark:       |                                |
-| .switchControl                | :white_check_mark:             | :white_check_mark:             | :white_check_mark: |                                |
-| .videoAutoplay                | :white_check_mark:             |                                | :white_check_mark: |                                |
-| .voiceOver                    | :white_check_mark:             | :white_check_mark:             | :white_check_mark: | :white_check_mark:             |
+❌ API provided by Apple but not supported by Capable due to missing system settings entry.
+
+|                               | iOS          | macOS | tvOS | watchOS |
+| ----------------------------- |:-------------| :----:| :---:| :------:|
+| .assistiveTouch               | ✅           |       | ❌   |        |
+| .boldText                     | ✅           |       | ✅   | ☑️     |
+| .buttonShapes                 | ✅ *(iOS14)* |       | ❌   |        |
+| .closedCaptioning             | ✅           |       | ✅   |        |
+| .darkerSystemColors           | ✅           |       | ❌   |        |
+| .differentiateWithoutColor    | ✅ *(iOS13)* | ✅    |      |        |
+| .fullKeyboardAccess           |              | ☑️    |      |        |
+| .grayscale                    | ✅           |       | ✅   |        |
+| .guidedAccess                 | ✅           |       | ❌   |        |
+| .hearingDevice                | ✅           |       |       |       |
+| .increaseContrast             |              | ✅    |       |       |
+| .invertColors                 | ✅           | ✅    | ✅   |        |
+| .largerText                   | ✅           |       | ❌   | ☑️     |
+| .monoAudio                    | ✅           |       | ✅   |        |
+| .onOffSwitchLabels            | ✅ *(iOS13)* |       | ❌   |        |
+| .prefersCrossFadeTransitions  | ✅ *(iOS14)* |       |      |        |
+| .reduceMotion                 | ✅           | ✅    | ✅   | ✅    |
+| .reduceTransparency           | ✅           | ✅    | ✅   |       |
+| .shakeToUndo                  | ✅           |       | ❌   |        |
+| .speakScreen                  | ✅           |       | ❌   |        |
+| .speakSelection               | ✅           |       | ❌   |        |
+| .switchControl                | ✅           | ✅    | ✅   |        |
+| .videoAutoplay                | ✅ *(iOS13)* |       | ✅   |        |
+| .voiceOver                    | ✅           | ✅    | ✅   | ✅     |
 
 While most features can only have a `statusMap` value set to **enabled** or **disabled**, the `.largerText` and `.hearingDevice` feature do offer specific values:
 
