@@ -327,6 +327,7 @@ The following table contains all features that are available AND settable on eac
 | .largerText                | :white_check_mark: |                                |                    | &nbsp;:white_check_mark:**\*** |
 | .monoAudio                 | :white_check_mark: |                                | :white_check_mark: |                                |
 | .onOffSwitchLabels         | :white_check_mark: |                                |                    |                                |
+| .prefersCrossFadeTransitions         | :white_check_mark: |                                |                    |                                |
 | .reduceMotion              | :white_check_mark: | :white_check_mark:             | :white_check_mark: | :white_check_mark:             |
 | .reduceTransparency        | :white_check_mark: | :white_check_mark:             | :white_check_mark: |                                |
 | .shakeToUndo               | :white_check_mark: |                                |                    |                                |

@@ -112,6 +112,12 @@
                         }
                     }
 
+                    context("calling feature() with name prefersCrossFadeTransitions") {
+                        it("returns an instance of type PrefersCrossFadeTransitions") {
+                            expect(sut.feature(featureName: PrefersCrossFadeTransitions.name)).to(beAnInstanceOf(PrefersCrossFadeTransitions.self))
+                        }
+                    }
+
                     context("calling feature() with name reduceMotion") {
                         it("returns an instance of type ReduceMotion") {
                             expect(sut.feature(featureName: ReduceMotion.name)).to(beAnInstanceOf(ReduceMotion.self))

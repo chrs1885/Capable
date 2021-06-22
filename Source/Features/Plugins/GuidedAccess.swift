@@ -16,7 +16,7 @@ class GuidedAccess: FeatureProtocol {
     var isEnabled: Bool {
         #if os(iOS)
 
-            return UIAccessibility.isAssistiveTouchRunning
+            return UIAccessibility.isGuidedAccessEnabled
 
         #else
 

@@ -29,6 +29,7 @@ class FeatureProvider: FeatureProviderProtocol {
         case LargerText.name: return LargerText()
         case MonoAudio.name: return MonoAudio()
         case OnOffSwitchLabels.name: return OnOffSwitchLabels()
+        case PrefersCrossFadeTransitions.name: return PrefersCrossFadeTransitions()
         case ReduceMotion.name: return ReduceMotion()
         case ReduceTransparency.name: return ReduceTransparency()
         case ShakeToUndo.name: return ShakeToUndo()

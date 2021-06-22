@@ -27,6 +27,9 @@ public enum CapableFeature: String, CaseIterable {
         /// Displays on/off labels for UISwitch controls.
         case onOffSwitchLabels
 
+        ///  Replaces slide transitions and with cross fade animations.
+        case prefersCrossFadeTransitions
+
         /// Deletes the last command by shaking the phone.
         case shakeToUndo
 

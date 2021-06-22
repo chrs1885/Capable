@@ -285,6 +285,10 @@
 		823BD84A57FBA30E0A7091B41BE47968 /* NMBExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF48ABDC8B1AB5C1493D55EE7A78E540 /* NMBExpectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		82C0FA43BA7470A2E011208530BA0078 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF523E09DEAB105A814B88BF257044 /* Async.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		8309389DA0416F6D88EA468CE26AF3CE /* AccessibilityFeatureProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473EBACABA3C523043876448C842E067 /* AccessibilityFeatureProvider.swift */; };
+		8358699026827344005FB59D /* PrefersCrossFadeTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358698F26827344005FB59D /* PrefersCrossFadeTransitions.swift */; };
+		8358699126827344005FB59D /* PrefersCrossFadeTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358698F26827344005FB59D /* PrefersCrossFadeTransitions.swift */; };
+		8358699226827344005FB59D /* PrefersCrossFadeTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358698F26827344005FB59D /* PrefersCrossFadeTransitions.swift */; };
+		8358699326827344005FB59D /* PrefersCrossFadeTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8358698F26827344005FB59D /* PrefersCrossFadeTransitions.swift */; };
 		83A6E1623D3C6E2AE35EDE294F689D23 /* Callsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95675D0BE29A399C552B52160363007B /* Callsite.swift */; };
 		83BA36DDCD88E8D001D6413CD82FE178 /* HearingDeviceEar+stringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93A058D84CD6A252175DAB692EF42B5 /* HearingDeviceEar+stringValue.swift */; };
 		83C64A43267E3AB5004625FC /* ButtonShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C64A42267E3AB5004625FC /* ButtonShapes.swift */; };
@@ -900,6 +904,7 @@
 		808A46CCD7E30A95639BE7A76417E0B0 /* GuidedAccess.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GuidedAccess.swift; sourceTree = "<group>"; };
 		819B796E16C83E1C2FF9433A5AFF2E59 /* Pods-Example-watchOS Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-watchOS Extension-acknowledgements.plist"; sourceTree = "<group>"; };
 		823C2F5B567E4FFB35B7951DF6A43995 /* UIColor+hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+hex.swift"; path = "SheetyColors/Classes/Common/Models/Extensions/UIColor+hex.swift"; sourceTree = "<group>"; };
+		8358698F26827344005FB59D /* PrefersCrossFadeTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefersCrossFadeTransitions.swift; sourceTree = "<group>"; };
 		83A0F008C73EEA17FC3BF44B2C6A5064 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83C64A42267E3AB5004625FC /* ButtonShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonShapes.swift; sourceTree = "<group>"; };
 		856A0FB5E89C7FDFF64E78E669B6C09F /* CGFloat+constrainToRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGFloat+constrainToRange.swift"; path = "SheetyColors/Classes/Common/Models/Extensions/CGFloat+constrainToRange.swift"; sourceTree = "<group>"; };
@@ -1367,6 +1372,7 @@
 				F829D9A7DEF395C4E13B3B27EF756294 /* VideoAutoplay.swift */,
 				E733D5718716990500A75E4FC86A83A0 /* VoiceOver.swift */,
 				18E589B29FA061CCAAFA8744CF7E2AB2 /* Protocols */,
+				8358698F26827344005FB59D /* PrefersCrossFadeTransitions.swift */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -2730,6 +2736,7 @@
 				68F048A260E2F39857C8378653C5A38E /* Color+wcag.swift in Sources */,
 				EFF6D4465C58DAD33CE13707C100DD0A /* ConformanceLevel.swift in Sources */,
 				BE05A6F1AFE1B8BA0045E12EDEA6C99B /* DarkerSystemColors.swift in Sources */,
+				8358699026827344005FB59D /* PrefersCrossFadeTransitions.swift in Sources */,
 				101EDECE112D1501B3D80A3FD9DD32C1 /* DifferentiateWithoutColor.swift in Sources */,
 				17EA669C735DC3AE3CEBDFA3EE87435A /* FeatureProtocol.swift in Sources */,
 				7F7B96AE28C30FFA0187A4BD97C46054 /* FeatureStatus.swift in Sources */,
@@ -2796,6 +2803,7 @@
 				B1942623652009DE8ADE7B6B64061978 /* Color+wcag.swift in Sources */,
 				14DC197E978FAE636A9CEC854FD4B82F /* ConformanceLevel.swift in Sources */,
 				9A97E22782B64C18528BCD171EAFF6CC /* DarkerSystemColors.swift in Sources */,
+				8358699326827344005FB59D /* PrefersCrossFadeTransitions.swift in Sources */,
 				470716B11FD0F9A4BBC9880C1FC45A59 /* DifferentiateWithoutColor.swift in Sources */,
 				03280E1C250C5CC86E270FC690100B4A /* FeatureProtocol.swift in Sources */,
 				6880E7C328E4B4A1740EBD0B55A99C8A /* FeatureStatus.swift in Sources */,
@@ -3053,6 +3061,7 @@
 				1585F68277951EAA6CC6842A513B6B18 /* Color+wcag.swift in Sources */,
 				BDA96C0518B1B682637AB2013A2DA562 /* ConformanceLevel.swift in Sources */,
 				7D0C8774263CDCE53E533628C47BA275 /* DarkerSystemColors.swift in Sources */,
+				8358699126827344005FB59D /* PrefersCrossFadeTransitions.swift in Sources */,
 				09C30F300AC2D0DEC08976DBA515C7BF /* DifferentiateWithoutColor.swift in Sources */,
 				0FAD69BF33D58703307C2E209FD07DE6 /* FeatureProtocol.swift in Sources */,
 				90E16DD997452D93B55FF417E8D0F9C3 /* FeatureStatus.swift in Sources */,
@@ -3111,6 +3120,7 @@
 				45F5F0A87225817B375C1F07883B69B1 /* Color+wcag.swift in Sources */,
 				EE161D1867ABB6EDF8B0204E1CE68410 /* ConformanceLevel.swift in Sources */,
 				D34F3E64030FEE06F34FA2FD88C99F92 /* DarkerSystemColors.swift in Sources */,
+				8358699226827344005FB59D /* PrefersCrossFadeTransitions.swift in Sources */,
 				950F5D1BB7A8A3F4E7A2943263421576 /* DifferentiateWithoutColor.swift in Sources */,
 				88F6C97ED7A97E121C65B256B11153AC /* FeatureProtocol.swift in Sources */,
 				195D7992ED32C2FCBDBFCDA97D9101B1 /* FeatureStatus.swift in Sources */,
