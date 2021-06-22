@@ -16,6 +16,7 @@ class FeatureProvider: FeatureProviderProtocol {
         switch featureName {
         case AssistiveTouch.name: return AssistiveTouch()
         case BoldText.name: return BoldText()
+        case ButtonShapes.name: return ButtonShapes()
         case ClosedCaptioning.name: return ClosedCaptioning()
         case DarkerSystemColors.name: return DarkerSystemColors()
         case DifferentiateWithoutColor.name: return DifferentiateWithoutColor()
@@ -28,6 +29,7 @@ class FeatureProvider: FeatureProviderProtocol {
         case LargerText.name: return LargerText()
         case MonoAudio.name: return MonoAudio()
         case OnOffSwitchLabels.name: return OnOffSwitchLabels()
+        case PrefersCrossFadeTransitions.name: return PrefersCrossFadeTransitions()
         case ReduceMotion.name: return ReduceMotion()
         case ReduceTransparency.name: return ReduceTransparency()
         case ShakeToUndo.name: return ShakeToUndo()

@@ -12,6 +12,9 @@ public enum CapableFeature: String, CaseIterable {
         /// Menu that helps people with motor skill impairments to do certain actions or gestures by using a single tap.
         case assistiveTouch
 
+        /// Creates outlines around tappable interface elements.
+        case buttonShapes
+
         /// Enhances text contrast.
         case darkerSystemColors
 
@@ -23,6 +26,9 @@ public enum CapableFeature: String, CaseIterable {
 
         /// Displays on/off labels for UISwitch controls.
         case onOffSwitchLabels
+
+        ///  Replaces slide transitions and with cross fade animations.
+        case prefersCrossFadeTransitions
 
         /// Deletes the last command by shaking the phone.
         case shakeToUndo
