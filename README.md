@@ -178,6 +178,81 @@ Inside your `featureStatusChanged` you can parse the specific feature and value:
 }
 ```
 
+<a id="feature-overview"></a> 
+### Accessibility feature overview
+
+The following table contains all features that are available:
+
+:white_check_mark: API provided by Apple and fully supported by Capable
+:cross_mark: API provided by Apple but not supported by Capable due to missing system settings entry.
+
+*\* Feature status can be read but notifications are not available.*
+
+|                               | iOS                            | macOS                          | tvOS               | watchOS                        |
+| ----------------------------- |:------------------------------:| :-----------------------------:| :-----------------:| :-----------------------------:|
+| .assistiveTouch               | :white_check_mark:             |                                | :cross_mark:       |                                |
+| .boldText                     | :white_check_mark:             |                                | :white_check_mark: | &nbsp;:white_check_mark:**\*** |
+| .buttonShapes                 | :white_check_mark: **(iOS14)** |                                | :cross_mark:       |                                |
+| .closedCaptioning             | :white_check_mark:             |                                | :white_check_mark: |                                |
+| .darkerSystemColors           | :white_check_mark:             |                                | :cross_mark:       |                                |
+| .differentiateWithoutColor    | :white_check_mark: **(iOS13)** | :white_check_mark:             |                    |                                |
+| .fullKeyboardAccess           |                                | &nbsp;:white_check_mark:**\*** |                    |                                |
+| .grayscale                    | :white_check_mark:             |                                | :white_check_mark: |                                |
+| .guidedAccess                 | :white_check_mark:             |                                | :cross_mark:       |                                |
+| .hearingDevice                | :white_check_mark:             |                                |                    |                                |
+| .increaseContrast             |                                | :white_check_mark:             |                    |                                |
+| .invertColors                 | :white_check_mark:             | :white_check_mark:             | :white_check_mark: |                                |
+| .largerText                   | :white_check_mark:             |                                | :cross_mark:       | &nbsp;:white_check_mark:**\*** |
+| .monoAudio                    | :white_check_mark:             |                                | :white_check_mark: |                                |
+| .onOffSwitchLabels            | :white_check_mark:             |                                | :cross_mark:       |                                |
+| .prefersCrossFadeTransitions  | :white_check_mark: **(iOS14)** |                                |                    |                                |
+| .reduceMotion                 | :white_check_mark:             | :white_check_mark:             | :white_check_mark: | :white_check_mark:             |
+| .reduceTransparency           | :white_check_mark:             | :white_check_mark:             | :white_check_mark: |                                |
+| .shakeToUndo                  | :white_check_mark:             |                                | :cross_mark:       |                                |
+| .speakScreen                  | :white_check_mark:             |                                | :cross_mark:       |                                |
+| .speakSelection               | :white_check_mark:             |                                | :cross_mark:       |                                |
+| .switchControl                | :white_check_mark:             | :white_check_mark:             | :white_check_mark: |                                |
+| .videoAutoplay                | :white_check_mark:             |                                | :white_check_mark: |                                |
+| .voiceOver                    | :white_check_mark:             | :white_check_mark:             | :white_check_mark: | :white_check_mark:             |
+
+While most features can only have a `statusMap` value set to **enabled** or **disabled**, the `.largerText` and `.hearingDevice` feature do offer specific values:
+
+#### LargerText
+
+##### iOS
+
+* XS
+* S
+* M *(default)*
+* L
+* XL
+* XXL
+* XXXL
+* Accessibility M
+* Accessibility L
+* Accessibility XL
+* Accessibility XXL
+* Accessibility XXXL
+* Unknown
+
+##### watchOS
+
+* XS
+* S *(default watch with 38mm)*
+* L *(default watch with 42mm)*
+* XL
+* XXL
+* XXXL
+* Unknown
+
+#### HearingDevice
+
+* both
+* left
+* right
+* disabled
+
+
 <a id="colors"></a> 
 ### High contrast colors (Capable UIColor/NSColor extension)
 
@@ -304,77 +379,6 @@ Here's a list of the supported log types, their order, and what kind of messages
 | .fault    | Errors caused by the framework due to system issues **\***   |
 
 *\* Currently not being used by the framework when logging messages.*
-
-<a id="feature-overview"></a> 
-## Accessibility feature overview
-
-The following table contains all features that are available AND settable on each platform.
-
-|                            | iOS                | macOS                          | tvOS               | watchOS                        |
-| -------------------------- |:------------------:| :-----------------------------:| :-----------------:| :-----------------------------:|
-| .assistiveTouch            | :white_check_mark: |                                |                    |                                |
-| .boldText                  | :white_check_mark: |                                | :white_check_mark: | &nbsp;:white_check_mark:**\*** |
-| .buttonShapes          | :white_check_mark: |                                |                                ||                                |
-| .closedCaptioning          | :white_check_mark: |                                | :white_check_mark: |                                |
-| .darkerSystemColors        | :white_check_mark: |                                |                    |                                |
-| .differentiateWithoutColor | :white_check_mark: | :white_check_mark:             |                    |                                |
-| .fullKeyboardAccess        |                    | &nbsp;:white_check_mark:**\*** |                    |                                |
-| .grayscale                 | :white_check_mark: |                                | :white_check_mark: |                                |
-| .guidedAccess              | :white_check_mark: |                                |                    |                                |
-| .hearingDevice             | :white_check_mark: |                                |                    |                                |
-| .increaseContrast          |                    | :white_check_mark:             |                    |                                |
-| .invertColors              | :white_check_mark: | :white_check_mark:             | :white_check_mark: |                                |
-| .largerText                | :white_check_mark: |                                |                    | &nbsp;:white_check_mark:**\*** |
-| .monoAudio                 | :white_check_mark: |                                | :white_check_mark: |                                |
-| .onOffSwitchLabels         | :white_check_mark: |                                |                    |                                |
-| .prefersCrossFadeTransitions         | :white_check_mark: |                                |                    |                                |
-| .reduceMotion              | :white_check_mark: | :white_check_mark:             | :white_check_mark: | :white_check_mark:             |
-| .reduceTransparency        | :white_check_mark: | :white_check_mark:             | :white_check_mark: |                                |
-| .shakeToUndo               | :white_check_mark: |                                |                    |                                |
-| .speakScreen               | :white_check_mark: |                                |                    |                                |
-| .speakSelection            | :white_check_mark: |                                |                    |                                |
-| .switchControl             | :white_check_mark: | :white_check_mark:             | :white_check_mark: |                                |
-| .videoAutoplay             | :white_check_mark: |                                | :white_check_mark: |                                |
-| .voiceOver                 | :white_check_mark: | :white_check_mark:             | :white_check_mark: | :white_check_mark:             |
-
-*\* Feature status can be read but notifications are not available.*
-
-While most features can only have a `statusMap` value set to **enabled** or **disabled**, the `.largerText` and `.hearingDevice` feature do offer specific values:
-
-### LargerText
-
-#### iOS
-
-* XS
-* S
-* M *(default)*
-* L
-* XL
-* XXL
-* XXXL
-* Accessibility M
-* Accessibility L
-* Accessibility XL
-* Accessibility XXL
-* Accessibility XXXL
-* Unknown
-
-#### watchOS
-
-* XS
-* S *(default watch with 38mm)*
-* L *(default watch with 42mm)*
-* XL
-* XXL
-* XXXL
-* Unknown
-
-### HearingDevice
-
-* both
-* left
-* right
-* disabled
 
 ## Resources
 
