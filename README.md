@@ -14,35 +14,27 @@
 
 # Accessibility for iOS, macOS, tvOS, and watchOS
 
-Check out the *Example.xcworkspace* to get a quick overview:
+### What's new in Capable 2.0
 
-![Example project overview](./Documentation/Images/features_example_app.png)
+Here re the most important changes:
 
-### 1) Research: Which accessibility features are enabled across your user base?
+* 🏛 New framework architecture that makes contributing support for upcoming accessibility settings easier.
+* 🎯 Focus on unified API for Apple accessibility settings: While support for scalable fonts & handicap grouping was dropped entirely, the APIs for calculating high contrast color pairs based on WCAG 2.1 success criteria has moved to it's own repository [WCAG-Colors](https://github.com/chrs1885/WCAG-Colors).
+* ✅ Support for new accessibility APIs.
+
+### Research & React
 
 * [Get the user's accessibility settings](#accessibility-status)
+* [Get status of accessibility feature](#accessibility-status)
+* [Get notified about any changes](#notifications)
 * [Send status with your favorite analytics SDK](#send-status)
-
 
 Have you ever thought about improving accessibility within your apps to gain your user base instead of spending a lot of time implementing features no-one really ever asked for? Most of us did, however there has never been an easy way to tell if anyone benefits from that. What if there was a simple way to figure out if there's a real need to support accessibility right now. Or even better, which disability exists most across your user base.
 
 While Apple's accessibility API are different across all platforms and might be located in a variety of system frameworks,
 Capable offers a unified and centralized API to get the current status of accessibility settings. This info can be sent to your analytics backend to learn, if people with specific handicaps are blocked from doing certain actions within your app. Furthermore, this data will help you to prioritize accessibility work.
 
-### 2) React: Improve problematic screens
-
-* [Get status of accessibility feature](#accessibility-status)
-* [Get notified about any changes](#notifications)
-* [Calculate high contrast WCAG compliant colors](#colors)
-* [Calculate high contrast image text colors](#captions)
-
-Once you've figured out that users with specific handicaps get stuck at a certain stage, you can make use of various Capable APIs to enable/disable accessibility support based on the user's accessibility settings or improve texts and colors used within your apps. Go back to step 1 to proof that the work helped users to succeed using your app.
-
-### 3) Fault diagnosis
-
-Each Capable feature is backed by the built-in logging system, which will keep you in the loop about what might have been going wrong. Even if you are using your own logging solution, the Capable logger is fully compatible with it!
-
-* [Custom logging with OSLog](#logging)
+Once you've figured out that users with specific handicaps get stuck at a certain stage, you can make use of various Capable APIs to enable/disable accessibility support based on the user's accessibility settings.
 
 ## Documentation
 
@@ -61,12 +53,6 @@ target 'MyApp' do
 
   # all features + color extensions
   pod 'Capable'
-
-  # all features, but exclude color extensions
-  pod 'Capable/Features'
-  
-  # color extensions only
-  pod 'Capable/Colors'
   
 end
 ```
@@ -253,99 +239,6 @@ While most features can only have a `statusMap` value set to **enabled** or **di
 * right
 * disabled
 
-
-<a id="colors"></a> 
-### High contrast colors (Capable UIColor/NSColor extension)
-
-The *Web Content Accessibility Guidelines* (WCAG) define minimum contrast ratios for a text and its background. The Capable framework extends `UIColor` and `NSColor` with functionality to use WCAG conformant colors within your apps to help people with visual disabilities to perceive content.
-
-Internally, the provided colors will be mapped to an equivalent of the sRGB color space. All functions will return `nil` and [log warnings](#logging) with further info in case any input color couldn't be converted. Also note that semi-transparent text colors will be blended with its background color. However, the alpha value of semi-transparent background colors will be ignored since the underlying color can't be determined.
-
-#### Text colors
-Get a high contrast text color for a given background color as follows:
-
-```swift
-let textColor = UIColor.getTextColor(onBackgroundColor: UIColor.red)!
-```
-
-This will return the text color with the highest possible contrast (black/white). Alternatively, you can define a list of possible text colors as well as a required conformance level. Since the WCAG requirements for contrast differ in text size and weight, you also need to provide the font used for the text. The following will return the first text color that satisfies the required conformance level (*AA* by default).
-
-```swift
-let textColor = UIColor.getTextColor(
-    fromColors: [UIColor.red, UIColor.yellow],
-    withFont: myLabel.font,
-    onBackgroundColor: view.backgroundColor,
-    conformanceLevel: .AA
-)!
-```
-
-#### Background colors
-
-This will also work the other way round. If you are looking for a high contrast background color:
-
-```swift
-let backgroundColor = UIColor.getBackgroundColor(forTextColor: UIColor.red)!
-
-// or
-
-let backgroundColor = UIColor.getBackgroundColor(
-    fromColors: [UIColor.red, UIColor.yellow],
-    forTextColor: myLabel.textColor,
-    withFont: myLabel.font,
-    conformanceLevel: .AA
-)!
-```
-
-<a id="captions"></a> 
-#### Image captions (iOS/tvOS/macOS)
-
-Get a high contrast text color for any given background image as follows:
-
-```swift
-let textColor = UIColor.getTextColor(onBackgroundImage: myImage imageArea: .full)!
-```
-
-This will return the text color with the highest possible contrast (black/white) for a specific image area. 
-
-Alternatively, you can define a list of possible text colors as well as a required conformance level. Since the WCAG requirements for contrast differ in text size and weight, you also need to provide the font used for the text. The following will return the first text color that satisfies the required conformance level (*AA* by default).
-
-```swift
-let textColor = UIColor.getTextColor(
-    fromColors: [UIColor.red, UIColor.yellow],
-    withFont: myLabel.font,
-    onBackgroundImage: view.backgroundColor,
-    imageArea: topLeft,
-    conformanceLevel: .AA
-)!
-```
-
-You can find an overview of all image areas available in the [documentation](Documentation/Reference/enums/ImageArea.md).
-
-#### Calculating contrast ratios & WCAG conformance levels
-
-The contrast ratio of two opaque colors can be calculated as well:
-
-```swift
-let contrastRatio: CGFloat = UIColor.getContrastRatio(forTextColor: UIColor.red, onBackgroundColor: UIColor.yellow)!
-```
-
-Once the contrast ratio has been determined, you can check the resulting conformance level specified by WCAG as follows:
-
-```swift
-let passedConformanceLevel = ConformanceLevel(contrastRatio: contrastRatio, fontSize: myLabel.font.pointSize, isBoldFont: true)
-```
-
-Here's an overview of available conformance levels:
-
-| Level   | Contrast ratio                 | Font size               |
-| --------|:-------------------------------|:------------------------|
-| .A      | *Not specified for text color* | -                       |
-| .AA     | 3.0                            | 18.0 (or 14.0 and bold) |
-|         | 4.5                            | 14.0                    |
-| .AAA    | 4.5                            | 18.0 (or 14.0 and bold) |
-| .AAA    | 7.0                            | 14.0                    |
-| .failed | *.AA/.AAA not satisfied*       | -                       |
-
 <a id="logging"></a> 
 ### Logging with OSLog
 
@@ -386,7 +279,6 @@ Here's a list of the supported log types, their order, and what kind of messages
 * [Apple - WWDC Session Videos](https://developer.apple.com/videos/frameworks/accessibility/
 )
 * [Apple - Accessibility for Developers](https://developer.apple.com/accessibility/)
-* [WCAG - Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Contributions
 

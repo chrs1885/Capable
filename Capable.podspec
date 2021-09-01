@@ -15,7 +15,8 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/chrs1885/Capable.git', :tag => s.version }
   s.documentation_url = 'http://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/1.0.0/Documentation/index.html'
   s.swift_version = '5.0'
-
+  s.source_files = 'Source/**/*'
+  
   s.framework = 'Foundation'
   s.ios.framework = s.tvos.framework = s.watchos.framework = 'UIKit'
   s.watchos.framework = 'WatchKit'
@@ -25,12 +26,4 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '12.0'
   s.watchos.deployment_target = '4.0'
   s.osx.deployment_target = '10.13'
-  
-  s.subspec 'Features' do |featuresSubspec|
-    featuresSubspec.source_files = 'Source/Features/**/*.swift', 'Source/Common/**/*.swift'
-  end
-
-  s.subspec 'Colors' do |colorsSubspec|
-    colorsSubspec.source_files = 'Source/Colors/**/*.swift', 'Source/Common/**/*.swift'
-  end
 end
