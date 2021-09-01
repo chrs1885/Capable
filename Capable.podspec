@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/chr_wendt'
   s.source = { :git => 'https://github.com/chrs1885/Capable.git', :tag => s.version }
   s.documentation_url = 'http://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/1.0.0/Documentation/index.html'
-  s.swift_version = '5.0'
+  s.swift_versions = ['5.1', '5.2', '5.3']
   s.source_files = 'Source/**/*'
   
   s.framework = 'Foundation'
