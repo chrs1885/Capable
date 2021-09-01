@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0450E523122D2663B49B0F3D /* Pods_Tests_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B78C620EDD88E25833A2D67 /* Pods_Tests_macOS.framework */; };
 		0D1A1A4F2381DEF54EEEABCC /* Pods_Tests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3608C5EC986382E365A8FF4 /* Pods_Tests_iOS.framework */; };
-		29882843319156428E5159E1 /* Pods_Example_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9D86F10DB1D691B906F54E /* Pods_Example_macOS.framework */; };
-		4478927E210B4401000D5939 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
 		4494E5E023550E5A0082C217 /* CapableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C123550BF00082C217 /* CapableTests.swift */; };
 		4494E5E423550E5A0082C217 /* FeatureStatusProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C523550BF00082C217 /* FeatureStatusProviderTests.swift */; };
 		4494E5E623550E5A0082C217 /* CapablePerfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C723550BF00082C217 /* CapablePerfTests.swift */; };
@@ -29,40 +27,7 @@
 		4494E60523550ECA0082C217 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C923550BF00082C217 /* LoggerTests.swift */; };
 		4494E60623550ECB0082C217 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C923550BF00082C217 /* LoggerTests.swift */; };
 		4494E60723550ECC0082C217 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5C923550BF00082C217 /* LoggerTests.swift */; };
-		4494E60823550ED40082C217 /* NSFontFontPropsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5CD23550BF00082C217 /* NSFontFontPropsTests.swift */; };
-		4494E60923550ED40082C217 /* ImageAreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5CE23550BF00082C217 /* ImageAreaTests.swift */; };
-		4494E60A23550ED40082C217 /* ColorWcagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5CF23550BF00082C217 /* ColorWcagTests.swift */; };
-		4494E60B23550ED40082C217 /* FontPropsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D023550BF00082C217 /* FontPropsTests.swift */; };
-		4494E60C23550ED40082C217 /* UIFontFontPropsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D123550BF00082C217 /* UIFontFontPropsTests.swift */; };
-		4494E60D23550ED40082C217 /* RGBAColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D223550BF00082C217 /* RGBAColorTests.swift */; };
-		4494E60E23550ED40082C217 /* ImageAverageColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D323550BF00082C217 /* ImageAverageColorTests.swift */; };
-		4494E60F23550ED40082C217 /* ConformanceLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D423550BF00082C217 /* ConformanceLevelTests.swift */; };
-		4494E61023550ED50082C217 /* NSFontFontPropsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5CD23550BF00082C217 /* NSFontFontPropsTests.swift */; };
-		4494E61123550ED50082C217 /* ImageAreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5CE23550BF00082C217 /* ImageAreaTests.swift */; };
-		4494E61223550ED50082C217 /* ColorWcagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5CF23550BF00082C217 /* ColorWcagTests.swift */; };
-		4494E61323550ED50082C217 /* FontPropsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D023550BF00082C217 /* FontPropsTests.swift */; };
-		4494E61423550ED50082C217 /* UIFontFontPropsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D123550BF00082C217 /* UIFontFontPropsTests.swift */; };
-		4494E61523550ED50082C217 /* RGBAColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D223550BF00082C217 /* RGBAColorTests.swift */; };
-		4494E61623550ED50082C217 /* ImageAverageColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D323550BF00082C217 /* ImageAverageColorTests.swift */; };
-		4494E61723550ED50082C217 /* ConformanceLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D423550BF00082C217 /* ConformanceLevelTests.swift */; };
-		4494E61823550ED50082C217 /* NSFontFontPropsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5CD23550BF00082C217 /* NSFontFontPropsTests.swift */; };
-		4494E61923550ED50082C217 /* ImageAreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5CE23550BF00082C217 /* ImageAreaTests.swift */; };
-		4494E61A23550ED50082C217 /* ColorWcagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5CF23550BF00082C217 /* ColorWcagTests.swift */; };
-		4494E61B23550ED50082C217 /* FontPropsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D023550BF00082C217 /* FontPropsTests.swift */; };
-		4494E61C23550ED50082C217 /* UIFontFontPropsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D123550BF00082C217 /* UIFontFontPropsTests.swift */; };
-		4494E61D23550ED50082C217 /* RGBAColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D223550BF00082C217 /* RGBAColorTests.swift */; };
-		4494E61E23550ED50082C217 /* ImageAverageColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D323550BF00082C217 /* ImageAverageColorTests.swift */; };
-		4494E61F23550ED50082C217 /* ConformanceLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5D423550BF00082C217 /* ConformanceLevelTests.swift */; };
-		4494E62023550EE40082C217 /* Image+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5CC23550BF00082C217 /* Image+mock.swift */; };
-		4494E62123550EE40082C217 /* Image+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5CC23550BF00082C217 /* Image+mock.swift */; };
-		4494E62223550EE40082C217 /* Image+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4494E5CC23550BF00082C217 /* Image+mock.swift */; };
-		44D0B935233F833900A9B136 /* CaptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FD13172336CD3B001C6C7A /* CaptionsViewController.swift */; };
-		44D0B93A233F926100A9B136 /* CaptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D0B938233F900700A9B136 /* CaptionsViewController.swift */; };
-		44FD13182336CD3B001C6C7A /* CaptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FD13172336CD3B001C6C7A /* CaptionsViewController.swift */; };
 		4CE26EFC3410DC97869F3522 /* Pods_Tests_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDACB4A868A3168E8898DF12 /* Pods_Tests_tvOS.framework */; };
-		55A2015AF8E67D0BAC01DA73 /* Pods_Example_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A4614933CCE311EC4CAD3C /* Pods_Example_watchOS_Extension.framework */; };
-		6180FD25002FD5791E4E3C36 /* Pods_Example_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C8CF8E1603FFD70061B7CA /* Pods_Example_iOS.framework */; };
-		791054B3341540F931275BD6 /* Pods_Example_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA97E99795B6631F2DB0EB5 /* Pods_Example_watchOS.framework */; };
 		831B189C2640887900C638AD /* FeatureProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B189B2640887900C638AD /* FeatureProviderMock.swift */; };
 		831B189D2640887900C638AD /* FeatureProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B189B2640887900C638AD /* FeatureProviderMock.swift */; };
 		831B189E2640887900C638AD /* FeatureProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B189B2640887900C638AD /* FeatureProviderMock.swift */; };
@@ -72,123 +37,7 @@
 		831B18B026408DEC00C638AD /* FeatureProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B18AF26408DEC00C638AD /* FeatureProviderTests.swift */; };
 		831B18B126408DEC00C638AD /* FeatureProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B18AF26408DEC00C638AD /* FeatureProviderTests.swift */; };
 		831B18B226408DEC00C638AD /* FeatureProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B18AF26408DEC00C638AD /* FeatureProviderTests.swift */; };
-		831B4F1E20A4D4F200F1BB94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831B4F1C20A4D4F200F1BB94 /* Main.storyboard */; };
-		831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F6252078138E00F0C74D /* AppDelegate.swift */; };
-		831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
-		831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
-		831FE59721F653780078F260 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59621F653780078F260 /* ColorsViewController.swift */; };
-		831FE59921F667EE0078F260 /* ConformanceLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59821F667EE0078F260 /* ConformanceLevelView.swift */; };
-		831FE5A121FA60CD0078F260 /* Color+capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE5A021FA60CD0078F260 /* Color+capable.swift */; };
-		832953D721121EAA00072EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953D621121EAA00072EB9 /* AppDelegate.swift */; };
-		832953D921121EAA00072EB9 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953D821121EAA00072EB9 /* FeatureOverviewController.swift */; };
-		832953DE21121EAC00072EB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832953DC21121EAC00072EB9 /* Main.storyboard */; };
-		832953E621124C9600072EB9 /* FeatureTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832953E42112496300072EB9 /* FeatureTableCellView.swift */; };
-		837C191A20AA27970003D237 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837C191820AA27970003D237 /* Interface.storyboard */; };
-		837C192320AA27970003D237 /* Example-watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 837C192220AA27970003D237 /* Example-watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		837C192A20AA27970003D237 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C192920AA27970003D237 /* ExtensionDelegate.swift */; };
-		837C192C20AA27970003D237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 837C192B20AA27970003D237 /* Assets.xcassets */; };
-		837C193020AA27970003D237 /* Example-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 837C191620AA27960003D237 /* Example-watchOS.app */; };
-		837C193920AA27F10003D237 /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C193820AA27F10003D237 /* FeatureOverviewController.swift */; };
-		837C193B20AA2D960003D237 /* FeatureRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C193A20AA2D960003D237 /* FeatureRowController.swift */; };
-		83B255FA21FE07A4009116EC /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B255F921FE07A4009116EC /* ColorsViewController.swift */; };
-		83B255FB21FE0DC0009116EC /* ConformanceLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE59821F667EE0078F260 /* ConformanceLevelView.swift */; };
-		83B255FD21FE0F56009116EC /* NSView+backgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B255FC21FE0F56009116EC /* NSView+backgroundColor.swift */; };
-		83B2560021FE11BE009116EC /* Color+capable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831FE5A021FA60CD0078F260 /* Color+capable.swift */; };
-		83B256022203AD87009116EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
-		83B256032203AD88009116EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
-		83B256042203AD89009116EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
-		83B256052203AD95009116EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
-		83C6F62D2078138E00F0C74D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6212078138D00F0C74D /* Assets.xcassets */; };
-		83C6F62E2078138E00F0C74D /* Cardo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */; };
-		83C6F62F2078138E00F0C74D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F6252078138E00F0C74D /* AppDelegate.swift */; };
-		83C6F6302078138E00F0C74D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6262078138E00F0C74D /* LaunchScreen.storyboard */; };
-		83C6F6312078138E00F0C74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C6F6282078138E00F0C74D /* Main.storyboard */; };
-		83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6F62A2078138E00F0C74D /* FeatureOverviewController.swift */; };
-		9D9BD8F0470D72CAC5F44979 /* Pods_Example_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A34BF8D95976311A017335 /* Pods_Example_tvOS.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4494E59723550B700082C217 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83C6F5D420780FE700F0C74D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 83C6F5DB20780FE700F0C74D;
-			remoteInfo = "Example-iOS";
-		};
-		4494E5A523550B870082C217 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83C6F5D420780FE700F0C74D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 832953D321121EAA00072EB9;
-			remoteInfo = "Example-macOS";
-		};
-		4494E5B323550BA30082C217 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83C6F5D420780FE700F0C74D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 831B4F1320A4D4F200F1BB94;
-			remoteInfo = "Example-tvOS";
-		};
-		837C192420AA27970003D237 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83C6F5D420780FE700F0C74D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 837C192120AA27970003D237;
-			remoteInfo = "Example-watchOS Extension";
-		};
-		837C192E20AA27970003D237 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83C6F5D420780FE700F0C74D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 837C191520AA27960003D237;
-			remoteInfo = "Example-watchOS";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		831B4F5420A4F0AA00F1BB94 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				837C193020AA27970003D237 /* Example-watchOS.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		837C193420AA27970003D237 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				837C192320AA27970003D237 /* Example-watchOS Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83E67A2B20CD946200FE6FC2 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83FF01F62129FDF900D26E0D /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		06A4614933CCE311EC4CAD3C /* Pods_Example_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_watchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,15 +58,6 @@
 		4494E5C523550BF00082C217 /* FeatureStatusProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureStatusProviderTests.swift; sourceTree = "<group>"; };
 		4494E5C723550BF00082C217 /* CapablePerfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapablePerfTests.swift; sourceTree = "<group>"; };
 		4494E5C923550BF00082C217 /* LoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
-		4494E5CC23550BF00082C217 /* Image+mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+mock.swift"; sourceTree = "<group>"; };
-		4494E5CD23550BF00082C217 /* NSFontFontPropsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSFontFontPropsTests.swift; sourceTree = "<group>"; };
-		4494E5CE23550BF00082C217 /* ImageAreaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAreaTests.swift; sourceTree = "<group>"; };
-		4494E5CF23550BF00082C217 /* ColorWcagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorWcagTests.swift; sourceTree = "<group>"; };
-		4494E5D023550BF00082C217 /* FontPropsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPropsTests.swift; sourceTree = "<group>"; };
-		4494E5D123550BF00082C217 /* UIFontFontPropsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontFontPropsTests.swift; sourceTree = "<group>"; };
-		4494E5D223550BF00082C217 /* RGBAColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAColorTests.swift; sourceTree = "<group>"; };
-		4494E5D323550BF00082C217 /* ImageAverageColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAverageColorTests.swift; sourceTree = "<group>"; };
-		4494E5D423550BF00082C217 /* ConformanceLevelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformanceLevelTests.swift; sourceTree = "<group>"; };
 		44D0B938233F900700A9B136 /* CaptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionsViewController.swift; sourceTree = "<group>"; };
 		44FD13172336CD3B001C6C7A /* CaptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionsViewController.swift; sourceTree = "<group>"; };
 		4A59D50AB7E59EBA9F953814 /* Pods-Example-watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-watchOS Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,23 +68,19 @@
 		831B189B2640887900C638AD /* FeatureProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureProviderMock.swift; sourceTree = "<group>"; };
 		831B18A52640890D00C638AD /* FeatureMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureMock.swift; sourceTree = "<group>"; };
 		831B18AF26408DEC00C638AD /* FeatureProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureProviderTests.swift; sourceTree = "<group>"; };
-		831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		831B4F1D20A4D4F200F1BB94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		831B4F2120A4D4F200F1BB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		831FE59621F653780078F260 /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
 		831FE59821F667EE0078F260 /* ConformanceLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConformanceLevelView.swift; sourceTree = "<group>"; };
 		831FE5A021FA60CD0078F260 /* Color+capable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+capable.swift"; sourceTree = "<group>"; };
-		832953D421121EAA00072EB9 /* Example-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		832953D621121EAA00072EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		832953D821121EAA00072EB9 /* FeatureOverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureOverviewController.swift; sourceTree = "<group>"; };
 		832953DD21121EAC00072EB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		832953DF21121EAC00072EB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		832953E021121EAC00072EB9 /* Example_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example_macOS.entitlements; sourceTree = "<group>"; };
 		832953E42112496300072EB9 /* FeatureTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTableCellView.swift; sourceTree = "<group>"; };
-		837C191620AA27960003D237 /* Example-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		837C191920AA27970003D237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		837C191D20AA27970003D237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		837C192220AA27970003D237 /* Example-watchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Example-watchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		837C192920AA27970003D237 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		837C192B20AA27970003D237 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		837C192D20AA27970003D237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -252,9 +88,6 @@
 		837C193A20AA2D960003D237 /* FeatureRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureRowController.swift; sourceTree = "<group>"; };
 		83B255F921FE07A4009116EC /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
 		83B255FC21FE0F56009116EC /* NSView+backgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+backgroundColor.swift"; sourceTree = "<group>"; };
-		83C6F5DC20780FE700F0C74D /* Example-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		83C6F6212078138D00F0C74D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cardo-Regular.ttf"; sourceTree = "<group>"; };
 		83C6F6252078138E00F0C74D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83C6F6272078138E00F0C74D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83C6F6292078138E00F0C74D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -303,46 +136,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		831B4F1120A4D4F200F1BB94 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9D9BD8F0470D72CAC5F44979 /* Pods_Example_tvOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		832953D121121EAA00072EB9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				29882843319156428E5159E1 /* Pods_Example_macOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		837C191F20AA27970003D237 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				55A2015AF8E67D0BAC01DA73 /* Pods_Example_watchOS_Extension.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83C6F5D920780FE700F0C74D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6180FD25002FD5791E4E3C36 /* Pods_Example_iOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F05E2059260BD9015112DEF2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				791054B3341540F931275BD6 /* Pods_Example_watchOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -373,26 +166,17 @@
 		4494E5B823550BF00082C217 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				4494E5B923550BF00082C217 /* Features */,
-				4494E5C823550BF00082C217 /* Common */,
-				4494E5CA23550BF00082C217 /* Colors */,
+				4494E5C923550BF00082C217 /* LoggerTests.swift */,
+				4494E5C723550BF00082C217 /* CapablePerfTests.swift */,
+				4494E5C123550BF00082C217 /* CapableTests.swift */,
+				4494E5C523550BF00082C217 /* FeatureStatusProviderTests.swift */,
+				831B18AF26408DEC00C638AD /* FeatureProviderTests.swift */,
+				4494E5BA23550BF00082C217 /* Mocks */,
 				4494E59323550B700082C217 /* Tests-iOS */,
 				4494E5A123550B870082C217 /* Tests-macOS */,
 				4494E5AF23550BA30082C217 /* Tests-tvOS */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		4494E5B923550BF00082C217 /* Features */ = {
-			isa = PBXGroup;
-			children = (
-				4494E5BA23550BF00082C217 /* Mocks */,
-				4494E5C723550BF00082C217 /* CapablePerfTests.swift */,
-				4494E5C123550BF00082C217 /* CapableTests.swift */,
-				4494E5C523550BF00082C217 /* FeatureStatusProviderTests.swift */,
-				831B18AF26408DEC00C638AD /* FeatureProviderTests.swift */,
-			);
-			path = Features;
 			sourceTree = "<group>";
 		};
 		4494E5BA23550BF00082C217 /* Mocks */ = {
@@ -402,38 +186,6 @@
 				4494E5BC23550BF00082C217 /* NotificationCenterMock.swift */,
 				831B189B2640887900C638AD /* FeatureProviderMock.swift */,
 				831B18A52640890D00C638AD /* FeatureMock.swift */,
-			);
-			path = Mocks;
-			sourceTree = "<group>";
-		};
-		4494E5C823550BF00082C217 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				4494E5C923550BF00082C217 /* LoggerTests.swift */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		4494E5CA23550BF00082C217 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-				4494E5CB23550BF00082C217 /* Mocks */,
-				4494E5CF23550BF00082C217 /* ColorWcagTests.swift */,
-				4494E5D423550BF00082C217 /* ConformanceLevelTests.swift */,
-				4494E5D023550BF00082C217 /* FontPropsTests.swift */,
-				4494E5CE23550BF00082C217 /* ImageAreaTests.swift */,
-				4494E5D323550BF00082C217 /* ImageAverageColorTests.swift */,
-				4494E5CD23550BF00082C217 /* NSFontFontPropsTests.swift */,
-				4494E5D223550BF00082C217 /* RGBAColorTests.swift */,
-				4494E5D123550BF00082C217 /* UIFontFontPropsTests.swift */,
-			);
-			path = Colors;
-			sourceTree = "<group>";
-		};
-		4494E5CB23550BF00082C217 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				4494E5CC23550BF00082C217 /* Image+mock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -498,7 +250,6 @@
 		83C6F5D320780FE700F0C74D = {
 			isa = PBXGroup;
 			children = (
-				83C6F6202078138D00F0C74D /* Resources */,
 				83C6F6242078138E00F0C74D /* Source */,
 				4494E5B823550BF00082C217 /* Tests */,
 				83C6F5DD20780FE700F0C74D /* Products */,
@@ -510,33 +261,11 @@
 		83C6F5DD20780FE700F0C74D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83C6F5DC20780FE700F0C74D /* Example-iOS.app */,
-				831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */,
-				837C191620AA27960003D237 /* Example-watchOS.app */,
-				837C192220AA27970003D237 /* Example-watchOS Extension.appex */,
-				832953D421121EAA00072EB9 /* Example-macOS.app */,
 				4494E59223550B700082C217 /* Tests-iOS.xctest */,
 				4494E5A023550B870082C217 /* Tests-macOS.xctest */,
 				4494E5AE23550BA30082C217 /* Tests-tvOS.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		83C6F6202078138D00F0C74D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				83C6F6212078138D00F0C74D /* Assets.xcassets */,
-				83C6F6222078138D00F0C74D /* Fonts */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		83C6F6222078138D00F0C74D /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				83C6F6232078138D00F0C74D /* Cardo-Regular.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		83C6F6242078138E00F0C74D /* Source */ = {
@@ -613,7 +342,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4494E59823550B700082C217 /* PBXTargetDependency */,
 			);
 			name = "Tests-iOS";
 			productName = "Tests-iOS";
@@ -633,7 +361,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4494E5A623550B870082C217 /* PBXTargetDependency */,
 			);
 			name = "Tests-macOS";
 			productName = "Tests-macOS";
@@ -653,111 +380,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				4494E5B423550BA30082C217 /* PBXTargetDependency */,
 			);
 			name = "Tests-tvOS";
 			productName = "Tests-tvOS";
 			productReference = 4494E5AE23550BA30082C217 /* Tests-tvOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		831B4F1320A4D4F200F1BB94 /* Example-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 831B4F2220A4D4F200F1BB94 /* Build configuration list for PBXNativeTarget "Example-tvOS" */;
-			buildPhases = (
-				E0FC5F3AA5CB3DA8BF3D6D8B /* [CP] Check Pods Manifest.lock */,
-				831B4F1020A4D4F200F1BB94 /* Sources */,
-				831B4F1120A4D4F200F1BB94 /* Frameworks */,
-				831B4F1220A4D4F200F1BB94 /* Resources */,
-				83E67A2B20CD946200FE6FC2 /* Embed Frameworks */,
-				A788BE5E33D95CA689982915 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Example-tvOS";
-			productName = "Example-tvOS";
-			productReference = 831B4F1420A4D4F200F1BB94 /* Example-tvOS.app */;
-			productType = "com.apple.product-type.application";
-		};
-		832953D321121EAA00072EB9 /* Example-macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 832953E321121EAC00072EB9 /* Build configuration list for PBXNativeTarget "Example-macOS" */;
-			buildPhases = (
-				0B305DAF6497E3528DC81849 /* [CP] Check Pods Manifest.lock */,
-				832953D021121EAA00072EB9 /* Sources */,
-				832953D121121EAA00072EB9 /* Frameworks */,
-				832953D221121EAA00072EB9 /* Resources */,
-				83FF01F62129FDF900D26E0D /* Embed Frameworks */,
-				A61EE5A19738AB2C58021A36 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Example-macOS";
-			productName = "Example-macOS";
-			productReference = 832953D421121EAA00072EB9 /* Example-macOS.app */;
-			productType = "com.apple.product-type.application";
-		};
-		837C191520AA27960003D237 /* Example-watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 837C193520AA27970003D237 /* Build configuration list for PBXNativeTarget "Example-watchOS" */;
-			buildPhases = (
-				A4DDA928994DFAD251A64B17 /* [CP] Check Pods Manifest.lock */,
-				837C191420AA27960003D237 /* Resources */,
-				837C193420AA27970003D237 /* Embed App Extensions */,
-				F05E2059260BD9015112DEF2 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				837C192520AA27970003D237 /* PBXTargetDependency */,
-			);
-			name = "Example-watchOS";
-			productName = "Example-watchOS";
-			productReference = 837C191620AA27960003D237 /* Example-watchOS.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		837C192120AA27970003D237 /* Example-watchOS Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 837C193120AA27970003D237 /* Build configuration list for PBXNativeTarget "Example-watchOS Extension" */;
-			buildPhases = (
-				C70D01AECEEE31D19B3E4595 /* [CP] Check Pods Manifest.lock */,
-				837C191E20AA27970003D237 /* Sources */,
-				837C191F20AA27970003D237 /* Frameworks */,
-				837C192020AA27970003D237 /* Resources */,
-				D34178DF1102C7F98B632D87 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Example-watchOS Extension";
-			productName = "Example-watchOS Extension";
-			productReference = 837C192220AA27970003D237 /* Example-watchOS Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
-		83C6F5DB20780FE700F0C74D /* Example-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 83C6F60420780FE700F0C74D /* Build configuration list for PBXNativeTarget "Example-iOS" */;
-			buildPhases = (
-				908CD651F925C69DAD7AE2BB /* [CP] Check Pods Manifest.lock */,
-				83C6F5D820780FE700F0C74D /* Sources */,
-				83C6F5D920780FE700F0C74D /* Frameworks */,
-				83C6F5DA20780FE700F0C74D /* Resources */,
-				831B4F5420A4F0AA00F1BB94 /* Embed Watch Content */,
-				06147DD848B4478BE2B0CAAD /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				837C192F20AA27970003D237 /* PBXTargetDependency */,
-			);
-			name = "Example-iOS";
-			productName = Example;
-			productReference = 83C6F5DC20780FE700F0C74D /* Example-iOS.app */;
-			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -772,40 +399,13 @@
 					4494E59123550B700082C217 = {
 						CreatedOnToolsVersion = 11.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 83C6F5DB20780FE700F0C74D;
 					};
 					4494E59F23550B870082C217 = {
 						CreatedOnToolsVersion = 11.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 832953D321121EAA00072EB9;
 					};
 					4494E5AD23550BA30082C217 = {
 						CreatedOnToolsVersion = 11.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 831B4F1320A4D4F200F1BB94;
-					};
-					831B4F1320A4D4F200F1BB94 = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
-						ProvisioningStyle = Automatic;
-					};
-					832953D321121EAA00072EB9 = {
-						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 1000;
-						ProvisioningStyle = Automatic;
-					};
-					837C191520AA27960003D237 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
-					837C192120AA27970003D237 = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-					};
-					83C6F5DB20780FE700F0C74D = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -823,11 +423,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83C6F5DB20780FE700F0C74D /* Example-iOS */,
-				832953D321121EAA00072EB9 /* Example-macOS */,
-				831B4F1320A4D4F200F1BB94 /* Example-tvOS */,
-				837C191520AA27960003D237 /* Example-watchOS */,
-				837C192120AA27970003D237 /* Example-watchOS Extension */,
 				4494E59123550B700082C217 /* Tests-iOS */,
 				4494E59F23550B870082C217 /* Tests-macOS */,
 				4494E5AD23550BA30082C217 /* Tests-tvOS */,
@@ -857,78 +452,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		831B4F1220A4D4F200F1BB94 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				831B4F2B20A4DDDC00F1BB94 /* Cardo-Regular.ttf in Resources */,
-				83B256032203AD88009116EC /* Assets.xcassets in Resources */,
-				831B4F1E20A4D4F200F1BB94 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		832953D221121EAA00072EB9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				83B256022203AD87009116EC /* Assets.xcassets in Resources */,
-				832953DE21121EAC00072EB9 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		837C191420AA27960003D237 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				83B256042203AD89009116EC /* Assets.xcassets in Resources */,
-				837C191A20AA27970003D237 /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		837C192020AA27970003D237 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				837C192C20AA27970003D237 /* Assets.xcassets in Resources */,
-				83B256052203AD95009116EC /* Assets.xcassets in Resources */,
-				4478927E210B4401000D5939 /* Cardo-Regular.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83C6F5DA20780FE700F0C74D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				83C6F6302078138E00F0C74D /* LaunchScreen.storyboard in Resources */,
-				83C6F62D2078138E00F0C74D /* Assets.xcassets in Resources */,
-				83C6F62E2078138E00F0C74D /* Cardo-Regular.ttf in Resources */,
-				83C6F6312078138E00F0C74D /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06147DD848B4478BE2B0CAAD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example-iOS/Pods-Example-iOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Capable-iOS/Capable.framework",
-				"${BUILT_PRODUCTS_DIR}/SheetyColors/SheetyColors.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SheetyColors.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-iOS/Pods-Example-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		078EE6FC1D2B2FEB0A4B6772 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -945,24 +471,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Tests-macOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0B305DAF6497E3528DC81849 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Example-macOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -991,78 +499,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		908CD651F925C69DAD7AE2BB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Example-iOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A4DDA928994DFAD251A64B17 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Example-watchOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A61EE5A19738AB2C58021A36 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example-macOS/Pods-Example-macOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Capable-macOS/Capable.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-macOS/Pods-Example-macOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A788BE5E33D95CA689982915 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Capable-tvOS/Capable.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-tvOS/Pods-Example-tvOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BFB7E06181A4734FA448C13E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1070,35 +506,19 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tests-iOS/Pods-Tests-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Capable-iOS/Capable.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble-iOS/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick-iOS/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tests-iOS/Pods-Tests-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C70D01AECEEE31D19B3E4595 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Example-watchOS Extension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D32706A5F70834ABC6328786 /* [CP] Embed Pods Frameworks */ = {
@@ -1108,53 +528,19 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tests-macOS/Pods-Tests-macOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Capable-macOS/Capable.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble-macOS/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick-macOS/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tests-macOS/Pods-Tests-macOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D34178DF1102C7F98B632D87 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Capable-watchOS/Capable.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-watchOS Extension/Pods-Example-watchOS Extension-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E0FC5F3AA5CB3DA8BF3D6D8B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Example-tvOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ECCE1F6322AC3096D3A2CE98 /* [CP] Embed Pods Frameworks */ = {
@@ -1164,11 +550,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Tests-tvOS/Pods-Tests-tvOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Capable-tvOS/Capable.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble-tvOS/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick-tvOS/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Capable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
@@ -1208,20 +596,11 @@
 			files = (
 				4494E5E023550E5A0082C217 /* CapableTests.swift in Sources */,
 				831B189C2640887900C638AD /* FeatureProviderMock.swift in Sources */,
-				4494E60D23550ED40082C217 /* RGBAColorTests.swift in Sources */,
-				4494E60C23550ED40082C217 /* UIFontFontPropsTests.swift in Sources */,
 				831B18A62640890D00C638AD /* FeatureMock.swift in Sources */,
-				4494E60F23550ED40082C217 /* ConformanceLevelTests.swift in Sources */,
-				4494E62123550EE40082C217 /* Image+mock.swift in Sources */,
-				4494E60A23550ED40082C217 /* ColorWcagTests.swift in Sources */,
-				4494E60823550ED40082C217 /* NSFontFontPropsTests.swift in Sources */,
-				4494E60E23550ED40082C217 /* ImageAverageColorTests.swift in Sources */,
 				4494E60523550ECA0082C217 /* LoggerTests.swift in Sources */,
 				4494E5E623550E5A0082C217 /* CapablePerfTests.swift in Sources */,
-				4494E60B23550ED40082C217 /* FontPropsTests.swift in Sources */,
 				4494E5FA23550E670082C217 /* NotificationCenterMock.swift in Sources */,
 				4494E5E423550E5A0082C217 /* FeatureStatusProviderTests.swift in Sources */,
-				4494E60923550ED40082C217 /* ImageAreaTests.swift in Sources */,
 				4494E5FB23550E670082C217 /* FeatureStatusProviderMock.swift in Sources */,
 				831B18B026408DEC00C638AD /* FeatureProviderTests.swift in Sources */,
 			);
@@ -1233,20 +612,11 @@
 			files = (
 				4494E5E923550E5A0082C217 /* CapableTests.swift in Sources */,
 				831B189D2640887900C638AD /* FeatureProviderMock.swift in Sources */,
-				4494E61523550ED50082C217 /* RGBAColorTests.swift in Sources */,
-				4494E61423550ED50082C217 /* UIFontFontPropsTests.swift in Sources */,
 				831B18A72640890D00C638AD /* FeatureMock.swift in Sources */,
-				4494E61723550ED50082C217 /* ConformanceLevelTests.swift in Sources */,
-				4494E62223550EE40082C217 /* Image+mock.swift in Sources */,
-				4494E61223550ED50082C217 /* ColorWcagTests.swift in Sources */,
-				4494E61023550ED50082C217 /* NSFontFontPropsTests.swift in Sources */,
-				4494E61623550ED50082C217 /* ImageAverageColorTests.swift in Sources */,
 				4494E60623550ECB0082C217 /* LoggerTests.swift in Sources */,
 				4494E5EF23550E5A0082C217 /* CapablePerfTests.swift in Sources */,
-				4494E61323550ED50082C217 /* FontPropsTests.swift in Sources */,
 				4494E5FE23550E680082C217 /* NotificationCenterMock.swift in Sources */,
 				4494E5ED23550E5A0082C217 /* FeatureStatusProviderTests.swift in Sources */,
-				4494E61123550ED50082C217 /* ImageAreaTests.swift in Sources */,
 				4494E5FF23550E680082C217 /* FeatureStatusProviderMock.swift in Sources */,
 				831B18B126408DEC00C638AD /* FeatureProviderTests.swift in Sources */,
 			);
@@ -1258,102 +628,17 @@
 			files = (
 				4494E5F223550E5B0082C217 /* CapableTests.swift in Sources */,
 				831B189E2640887900C638AD /* FeatureProviderMock.swift in Sources */,
-				4494E61D23550ED50082C217 /* RGBAColorTests.swift in Sources */,
-				4494E61C23550ED50082C217 /* UIFontFontPropsTests.swift in Sources */,
 				831B18A82640890D00C638AD /* FeatureMock.swift in Sources */,
-				4494E61F23550ED50082C217 /* ConformanceLevelTests.swift in Sources */,
-				4494E62023550EE40082C217 /* Image+mock.swift in Sources */,
-				4494E61A23550ED50082C217 /* ColorWcagTests.swift in Sources */,
-				4494E61823550ED50082C217 /* NSFontFontPropsTests.swift in Sources */,
-				4494E61E23550ED50082C217 /* ImageAverageColorTests.swift in Sources */,
 				4494E60723550ECC0082C217 /* LoggerTests.swift in Sources */,
 				4494E5F823550E5B0082C217 /* CapablePerfTests.swift in Sources */,
-				4494E61B23550ED50082C217 /* FontPropsTests.swift in Sources */,
 				4494E60223550E690082C217 /* NotificationCenterMock.swift in Sources */,
 				4494E5F623550E5B0082C217 /* FeatureStatusProviderTests.swift in Sources */,
-				4494E61923550ED50082C217 /* ImageAreaTests.swift in Sources */,
 				4494E60323550E690082C217 /* FeatureStatusProviderMock.swift in Sources */,
 				831B18B226408DEC00C638AD /* FeatureProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		831B4F1020A4D4F200F1BB94 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				831B4F2720A4DDCB00F1BB94 /* AppDelegate.swift in Sources */,
-				831B4F2820A4DDCE00F1BB94 /* FeatureOverviewController.swift in Sources */,
-				44D0B935233F833900A9B136 /* CaptionsViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		832953D021121EAA00072EB9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				83B255FB21FE0DC0009116EC /* ConformanceLevelView.swift in Sources */,
-				832953E621124C9600072EB9 /* FeatureTableCellView.swift in Sources */,
-				83B2560021FE11BE009116EC /* Color+capable.swift in Sources */,
-				832953D921121EAA00072EB9 /* FeatureOverviewController.swift in Sources */,
-				83B255FD21FE0F56009116EC /* NSView+backgroundColor.swift in Sources */,
-				44D0B93A233F926100A9B136 /* CaptionsViewController.swift in Sources */,
-				83B255FA21FE07A4009116EC /* ColorsViewController.swift in Sources */,
-				832953D721121EAA00072EB9 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		837C191E20AA27970003D237 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				837C193B20AA2D960003D237 /* FeatureRowController.swift in Sources */,
-				837C192A20AA27970003D237 /* ExtensionDelegate.swift in Sources */,
-				837C193920AA27F10003D237 /* FeatureOverviewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		83C6F5D820780FE700F0C74D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				831FE59721F653780078F260 /* ColorsViewController.swift in Sources */,
-				83C6F62F2078138E00F0C74D /* AppDelegate.swift in Sources */,
-				831FE5A121FA60CD0078F260 /* Color+capable.swift in Sources */,
-				831FE59921F667EE0078F260 /* ConformanceLevelView.swift in Sources */,
-				83C6F6322078138E00F0C74D /* FeatureOverviewController.swift in Sources */,
-				44FD13182336CD3B001C6C7A /* CaptionsViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4494E59823550B700082C217 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 83C6F5DB20780FE700F0C74D /* Example-iOS */;
-			targetProxy = 4494E59723550B700082C217 /* PBXContainerItemProxy */;
-		};
-		4494E5A623550B870082C217 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 832953D321121EAA00072EB9 /* Example-macOS */;
-			targetProxy = 4494E5A523550B870082C217 /* PBXContainerItemProxy */;
-		};
-		4494E5B423550BA30082C217 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 831B4F1320A4D4F200F1BB94 /* Example-tvOS */;
-			targetProxy = 4494E5B323550BA30082C217 /* PBXContainerItemProxy */;
-		};
-		837C192520AA27970003D237 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 837C192120AA27970003D237 /* Example-watchOS Extension */;
-			targetProxy = 837C192420AA27970003D237 /* PBXContainerItemProxy */;
-		};
-		837C192F20AA27970003D237 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 837C191520AA27960003D237 /* Example-watchOS */;
-			targetProxy = 837C192E20AA27970003D237 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		831B4F1C20A4D4F200F1BB94 /* Main.storyboard */ = {
@@ -1403,12 +688,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1021B1BF9523C4E2D4946FE7 /* Pods-Tests-iOS.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6TTE9K9RG;
 				INFOPLIST_FILE = "Tests/Tests-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = "iOS 12.0";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1416,7 +700,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example-iOS.app/Example-iOS";
 			};
 			name = Debug;
 		};
@@ -1424,19 +707,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E60CC370BEED5BC72BF9333 /* Pods-Tests-iOS.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6TTE9K9RG;
 				INFOPLIST_FILE = "Tests/Tests-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = "iOS 12.0";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chrs1885..Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example-iOS.app/Example-iOS";
 			};
 			name = Release;
 		};
@@ -1444,7 +725,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2718FA59414252A3E57D1724 /* Pods-Tests-macOS.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1458,7 +738,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example-macOS.app/Contents/MacOS/Example-macOS";
 			};
 			name = Debug;
 		};
@@ -1466,7 +745,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8FF58CFC45A3E07A160D697E /* Pods-Tests-macOS.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1479,7 +757,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example-macOS.app/Contents/MacOS/Example-macOS";
 			};
 			name = Release;
 		};
@@ -1487,7 +764,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CCD5A28B0848B7B5B546E759 /* Pods-Tests-tvOS.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6TTE9K9RG;
@@ -1500,7 +776,6 @@
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example-tvOS.app/Example-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Debug;
@@ -1509,7 +784,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF9562DEC091BFDE381F3882 /* Pods-Tests-tvOS.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6TTE9K9RG;
@@ -1521,166 +795,7 @@
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example-tvOS.app/Example-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 12.0;
-			};
-			name = Release;
-		};
-		831B4F2320A4D4F200F1BB94 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A69A8636A1A206955AF20AA4 /* Pods-Example-tvOS.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/tvOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.0;
-			};
-			name = Debug;
-		};
-		831B4F2420A4D4F200F1BB94 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B607B9D61AC82056D25E2B77 /* Pods-Example-tvOS.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/tvOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.0;
-			};
-			name = Release;
-		};
-		832953E121121EAC00072EB9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB296F840F14F09371040629 /* Pods-Example-macOS.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-macOS";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_ENTITLEMENTS = Source/macOS/Example_macOS.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
-				INFOPLIST_FILE = "$(SRCROOT)/Source/macOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.chrs1885.Example-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		832953E221121EAC00072EB9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C45A1F5FCFA4768DC33403B /* Pods-Example-macOS.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-macOS";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_ENTITLEMENTS = Source/macOS/Example_macOS.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = P6TTE9K9RG;
-				INFOPLIST_FILE = "$(SRCROOT)/Source/macOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.chrs1885.Example-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		837C193220AA27970003D237 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DC32891E19486D26B764F86 /* Pods-Example-watchOS Extension.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/watchOS/Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
-			};
-			name = Debug;
-		};
-		837C193320AA27970003D237 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A59D50AB7E59EBA9F953814 /* Pods-Example-watchOS Extension.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/watchOS/Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
-			};
-			name = Release;
-		};
-		837C193620AA27970003D237 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEECBAFC5F7980884EBE6AA3 /* Pods-Example-watchOS.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-watchOS";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				IBSC_MODULE = Example_watchOS_Extension;
-				INFOPLIST_FILE = "$(SRCROOT)/Source/watchOS/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
-			};
-			name = Debug;
-		};
-		837C193720AA27970003D237 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1004E7F9A4E366DF66B525B0 /* Pods-Example-watchOS.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-watchOS";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				IBSC_MODULE = Example_watchOS_Extension;
-				INFOPLIST_FILE = "$(SRCROOT)/Source/watchOS/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -1734,7 +849,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = "iOS 12.0";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1788,48 +904,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = "iOS 12.0";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		83C6F60520780FE700F0C74D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B707690BAFBA32861CBBF6F3 /* Pods-Example-iOS.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-iOS";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		83C6F60620780FE700F0C74D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5DCF956DE661B9787EAE334 /* Pods-Example-iOS.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-iOS";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christoph-wendt.capable.Example-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1863,56 +944,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		831B4F2220A4D4F200F1BB94 /* Build configuration list for PBXNativeTarget "Example-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				831B4F2320A4D4F200F1BB94 /* Debug */,
-				831B4F2420A4D4F200F1BB94 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		832953E321121EAC00072EB9 /* Build configuration list for PBXNativeTarget "Example-macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				832953E121121EAC00072EB9 /* Debug */,
-				832953E221121EAC00072EB9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		837C193120AA27970003D237 /* Build configuration list for PBXNativeTarget "Example-watchOS Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				837C193220AA27970003D237 /* Debug */,
-				837C193320AA27970003D237 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		837C193520AA27970003D237 /* Build configuration list for PBXNativeTarget "Example-watchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				837C193620AA27970003D237 /* Debug */,
-				837C193720AA27970003D237 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		83C6F5D720780FE700F0C74D /* Build configuration list for PBXProject "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83C6F60220780FE700F0C74D /* Debug */,
 				83C6F60320780FE700F0C74D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		83C6F60420780FE700F0C74D /* Build configuration list for PBXNativeTarget "Example-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				83C6F60520780FE700F0C74D /* Debug */,
-				83C6F60620780FE700F0C74D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

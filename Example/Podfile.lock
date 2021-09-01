@@ -1,19 +1,12 @@
 PODS:
-  - Capable (2.0.0):
-    - Capable/Colors (= 2.0.0)
-    - Capable/Features (= 2.0.0)
-  - Capable/Colors (2.0.0)
-  - Capable/Features (2.0.0)
+  - Capable (2.0.0)
   - Nimble (8.0.9)
   - Quick (2.2.1)
-  - SheetyColors (1.3.1):
-    - Capable/Colors (~> 2.0)
 
 DEPENDENCIES:
   - Capable (from `../`)
   - Nimble (~> 8.0.4)
   - Quick (~> 2.2.0)
-  - SheetyColors (from `https://github.com/chrs1885/SheetyColors.git`, branch `release/1.3.1`)
 
 SPEC REPOS:
   trunk:
@@ -23,21 +16,12 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   Capable:
     :path: "../"
-  SheetyColors:
-    :branch: release/1.3.1
-    :git: https://github.com/chrs1885/SheetyColors.git
-
-CHECKOUT OPTIONS:
-  SheetyColors:
-    :commit: 54cdf56b2b6e9858d64b0a612f517b0a70a9dd79
-    :git: https://github.com/chrs1885/SheetyColors.git
 
 SPEC CHECKSUMS:
-  Capable: f213e802efada8ea5ad0067205d6b89ee64758a4
+  Capable: 15719b228827ef195e7b5aec14beddd2dc44b093
   Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
-  SheetyColors: 984641880b354e8fa5a3f22e1e37126648086590
 
-PODFILE CHECKSUM: 2dd9de019a1c60fc65d5f6844624fb2788834426
+PODFILE CHECKSUM: 4e457db81b288effc3581f54a2b3c64d9754c41d
 
 COCOAPODS: 1.10.1

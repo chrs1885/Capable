@@ -1,53 +1,21 @@
 use_frameworks!
 
-def sharedPods
-  pod 'Capable', path: '../'
-end
-
 def testPods
   inherit! :search_paths
   
+  pod 'Capable', path: '../'
   pod 'Quick', '~> 2.2.0'
   pod 'Nimble', '~> 8.0.4'
 end
 
-target 'Example-iOS' do
-  platform :ios, '12.0'
-
-  sharedPods
-  pod 'SheetyColors', :git => 'https://github.com/chrs1885/SheetyColors.git', :branch => 'release/1.3.1'
-
-  target 'Tests-iOS' do
-    testPods
-  end
+target 'Tests-iOS' do
+  testPods
 end
 
-target 'Example-macOS' do
-  platform :osx, '10.13'
-
-  sharedPods
-
-  target 'Tests-macOS' do
-    testPods
-  end
+target 'Tests-macOS' do
+  testPods
 end
 
-target 'Example-tvOS' do
-  platform :tvos, '12.0'
-
-  sharedPods
-
-  target 'Tests-tvOS' do
-    testPods
-  end
-end
-
-target 'Example-watchOS' do
-  platform :watchos, '4.0'
-end
-
-target 'Example-watchOS Extension' do
-  platform :watchos, '4.0'
-
-  sharedPods
+target 'Tests-tvOS' do
+  testPods
 end

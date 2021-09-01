@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "Capable.h"
 
 FOUNDATION_EXPORT double CapableVersionNumber;
 FOUNDATION_EXPORT const unsigned char CapableVersionString[];

@@ -1,6 +1,0 @@
-framework module Capable {
-  umbrella header "Capable-watchOS-umbrella.h"
-
-  export *
-  module * { export * }
-}
