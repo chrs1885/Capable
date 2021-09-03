@@ -1,6 +1,0 @@
-framework module Capable {
-  umbrella header "Capable-macOS-umbrella.h"
-
-  export *
-  module * { export * }
-}

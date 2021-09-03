@@ -175,32 +175,32 @@ The following table contains all features that are available:
 
 ❌ API provided by Apple but not supported by Capable due to missing system settings entry.
 
-|                               | iOS          | macOS | tvOS | watchOS |
-| ----------------------------- |:-------------| :----:| :---:| :------:|
-| .assistiveTouch               | ✅           |       | ❌   |        |
-| .boldText                     | ✅           |       | ✅   | ☑️     |
-| .buttonShapes                 | ✅ *(iOS14)* |       | ❌   |        |
-| .closedCaptioning             | ✅           |       | ✅   |        |
-| .darkerSystemColors           | ✅           |       | ❌   |        |
-| .differentiateWithoutColor    | ✅ *(iOS13)* | ✅    |      |        |
-| .fullKeyboardAccess           |              | ☑️    |      |        |
-| .grayscale                    | ✅           |       | ✅   |        |
-| .guidedAccess                 | ✅           |       | ❌   |        |
-| .hearingDevice                | ✅           |       |       |       |
-| .increaseContrast             |              | ✅    |       |       |
-| .invertColors                 | ✅           | ✅    | ✅   |        |
-| .largerText                   | ✅           |       | ❌   | ☑️     |
-| .monoAudio                    | ✅           |       | ✅   |        |
-| .onOffSwitchLabels            | ✅ *(iOS13)* |       | ❌   |        |
-| .prefersCrossFadeTransitions  | ✅ *(iOS14)* |       |      |        |
-| .reduceMotion                 | ✅           | ✅    | ✅   | ✅    |
-| .reduceTransparency           | ✅           | ✅    | ✅   |       |
-| .shakeToUndo                  | ✅           |       | ❌   |        |
-| .speakScreen                  | ✅           |       | ❌   |        |
-| .speakSelection               | ✅           |       | ❌   |        |
-| .switchControl                | ✅           | ✅    | ✅   |        |
-| .videoAutoplay                | ✅ *(iOS13)* |       | ✅   |        |
-| .voiceOver                    | ✅           | ✅    | ✅   | ✅     |
+|                               | iOS          | macOS | tvOS         | watchOS |
+| ----------------------------- |:-------------| :-----| :------------| :-------|
+| .assistiveTouch               | ✅           |       | ❌           |        |
+| .boldText                     | ✅           |       | ✅           | ☑️     |
+| .buttonShapes                 | ✅ *(iOS14)* |       | ❌           |        |
+| .closedCaptioning             | ✅           |       | ✅           |        |
+| .darkerSystemColors           | ✅           |       | ❌           |        |
+| .differentiateWithoutColor    | ✅ *(iOS13)* | ✅    | ❌           |        |
+| .fullKeyboardAccess           |              | ☑️    |              |        |
+| .grayscale                    | ✅           |       | ✅           |        |
+| .guidedAccess                 | ✅           |       | ❌           |        |
+| .hearingDevice                | ✅           |       |              |        |
+| .increaseContrast             |              | ✅    |              |        |
+| .invertColors                 | ✅           | ✅    | ✅           |        |
+| .largerText                   | ✅           |       | ❌           | ☑️     |
+| .monoAudio                    | ✅           |       | ✅           |        |
+| .onOffSwitchLabels            | ✅ *(iOS13)* |       | ❌           |        |
+| .prefersCrossFadeTransitions  | ✅ *(iOS14)* |       | ❌           |        |
+| .reduceMotion                 | ✅           | ✅    | ✅           | ✅     |
+| .reduceTransparency           | ✅           | ✅    | ✅           |        |
+| .shakeToUndo                  | ✅           |       | ❌           |        |
+| .speakScreen                  | ✅           |       | ❌           |        |
+| .speakSelection               | ✅           |       | ❌           |        |
+| .switchControl                | ✅           | ✅    | ✅           |        |
+| .videoAutoplay                | ✅ *(iOS13)* |       | ✅ *(iOS13)* |         |
+| .voiceOver                    | ✅           | ✅    | ✅           | ✅     |
 
 While most features can only have a `statusMap` value set to **enabled** or **disabled**, the `.largerText` and `.hearingDevice` feature do offer specific values:
 
