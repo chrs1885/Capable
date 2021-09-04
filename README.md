@@ -14,12 +14,12 @@
 
 # Accessibility for iOS, macOS, tvOS, and watchOS
 
-### What's new in Capable 2.0
+## 🎉 What's new in Capable 2.0 🎉
 
-Here re the most important changes:
+Here are the most important changes:
 
-* 🏛 New framework architecture that makes contributing support for upcoming accessibility settings easier.
-* 🎯 Focus on unified API for Apple accessibility settings: While support for scalable fonts & handicap grouping was dropped entirely, the APIs for calculating high contrast color pairs based on WCAG 2.1 success criteria has moved to it's own repository [WCAG-Colors](https://github.com/chrs1885/WCAG-Colors).
+* 🏛 New framework architecture and project structure that makes contributing support for upcoming accessibility settings easier.
+* 🎯 Focus on an unified API for Apple accessibility settings: While support for scalable fonts & handicap grouping was dropped entirely, the APIs for calculating high contrast color pairs based on WCAG 2.1 success criteria has moved to it's own repository [WCAG-Colors](https://github.com/chrs1885/WCAG-Colors).
 * ✅ Support for new accessibility APIs.
 
 ### Research & React

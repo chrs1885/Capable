@@ -1,3 +1,21 @@
+## Version 2.0.0
+
+### Enhancements
+* [New framework architecture](https://github.com/chrs1885/Capable/issues/53) that makes contributing support for upcoming accessibility settings easier
+* Uses Swift Package project template
+
+### Features
+* [Adds iOS 14 APIs: prefersCrossFadeTransitions & buttonShapesEnabled](https://github.com/chrs1885/Capable/issues/60)
+
+### Breaking Changes
+
+We are going to focus on an unified API for Apple accessibility settings, so we decided to drop
+
+* scalable fonts extension
+* handicap APIs used for grouping accessibility settings
+* support for iOS 11, macOS 10.12, tvOS11, and watchOS 3
+* WCAG color extension which moved to its own repository: [WCAG-Colors](https://github.com/chrs1885/WCAG-Colors)
+
 ## Version 1.1.4
 
 ### Bugfixes
