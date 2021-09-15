@@ -3,6 +3,7 @@
 
 #================================= Tooling =================================
 echo "Installing tools (SwiftLint, SwiftFormat, and SourceDocs"
+cd BuildTools
 swift build
 
 echo "Installing pre-commit hook"

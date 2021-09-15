@@ -6,40 +6,48 @@
 public enum CapableFeature: String, CaseIterable
 ```
 
-> An enum specifying all features available on the current platform.
+An enum specifying all features available on the current platform.
 
 ## Cases
 ### `assistiveTouch`
 
-> Menu that helps people with motor skill impairments to do certain actions or gestures by using a single tap.
+Menu that helps people with motor skill impairments to do certain actions or gestures by using a single tap.
+
+### `buttonShapes`
+
+Creates outlines around tappable interface elements.
 
 ### `darkerSystemColors`
 
-> Enhances text contrast.
+Enhances text contrast.
 
 ### `guidedAccess`
 
-> Restricts access to certain features of a single app to keep the user focused.
+Restricts access to certain features of a single app to keep the user focused.
 
-### `hearingDevice`
+### `hearingDevicePairedEar`
 
-> Pairing status of a hearing aid.
+Pairing status of a hearing aid.
 
 ### `onOffSwitchLabels`
 
-> Displays on/off labels for UISwitch controls.
+Displays on/off labels for UISwitch controls.
+
+### `prefersCrossFadeTransitions`
+
+Replaces slide transitions and with cross fade animations.
 
 ### `shakeToUndo`
 
-> Deletes the last command by shaking the phone.
+Deletes the last command by shaking the phone.
 
 ### `speakScreen`
 
-> Reads out the content of the current screen.
+Reads out the content of the current screen.
 
 ### `speakSelection`
 
-> Reads out the selected content.
+Reads out the selected content.
 
 ### `fullKeyboardAccess`
 
@@ -47,7 +55,7 @@ public enum CapableFeature: String, CaseIterable
 case fullKeyboardAccess
 ```
 
-> Enables users to navigate through items of the screen without having to use a mouse.
+Enables users to navigate through items of the screen without having to use a mouse.
 
 ### `increaseContrast`
 
@@ -55,27 +63,27 @@ case fullKeyboardAccess
 case increaseContrast
 ```
 
-> Increases contrast to make out text and interface elements.
+Increases contrast to make out text and interface elements.
 
 ### `closedCaptioning`
 
-> Displays subtitles when playing videos.
+Displays subtitles when playing videos.
 
 ### `grayscale`
 
-> Makes the display more readable for color blind people by using gray tones instead of colors.
+Makes the display more readable for color blind people by using gray tones instead of colors.
 
 ### `monoAudio`
 
-> Merges stereo audio channels to help users that are hard of hearing or deaf in one ear.
+Merges stereo audio channels to help users that are hard of hearing or deaf in one ear.
 
 ### `videoAutoplay`
 
-> Allows users who are sensitive to motion to disable automatic video playback.
+Allows users who are sensitive to motion to disable automatic video playback.
 
 ### `largerText`
 
-> Increases legibility by making fonts bigger.
+Increases legibility by making fonts bigger.
 
 ### `differentiateWithoutColor`
 
@@ -83,7 +91,7 @@ case increaseContrast
 case differentiateWithoutColor
 ```
 
-> Helps color blind users to differentiate settings differently, e.g. by using shapes rather than colors.
+Helps color blind users to differentiate settings differently, e.g. by using shapes rather than colors.
 
 ### `invertColors`
 
@@ -91,7 +99,7 @@ case differentiateWithoutColor
 case invertColors
 ```
 
-> Helps people with low vision, color blindness, or sensitivity to brightness to read the display content.
+Helps people with low vision, color blindness, or sensitivity to brightness to read the display content.
 
 ### `reduceTransparency`
 
@@ -99,7 +107,7 @@ case invertColors
 case reduceTransparency
 ```
 
-> Removes transparency from layers to make them readable for users with visual impairment.
+Removes transparency from layers to make them readable for users with visual impairment.
 
 ### `switchControl`
 
@@ -107,11 +115,11 @@ case reduceTransparency
 case switchControl
 ```
 
-> Allows users with limited mobility to control their device with the help of ability switches and other adaptive devices.
+Allows users with limited mobility to control their device with the help of ability switches and other adaptive devices.
 
 ### `boldText`
 
-> Increases legibility by making fonts heavier.
+Increases legibility by making fonts heavier.
 
 ### `reduceMotion`
 
@@ -119,7 +127,7 @@ case switchControl
 case reduceMotion
 ```
 
-> Reduces animations to help users with motion sickness and epilepsy issues.
+Reduces animations to help users with motion sickness and epilepsy issues.
 
 ### `voiceOver`
 
@@ -127,24 +135,4 @@ case reduceMotion
 case voiceOver
 ```
 
-> The screen reader available on Apple platforms.
-
-## Methods
-### `keys(forFeatures:)`
-
-```swift
-public static func keys(forFeatures features: [CapableFeature]) -> [String]
-```
-
-> Iterates through a given list of feature types and returns an array containing the feature names as strings.
->
-> - Parameters:
->    - features: An array containing the feature types of interest.
->
-> - Returns: An array containing the feature names as strings
-
-#### Parameters
-
-| Name | Description |
-| ---- | ----------- |
-| features | An array containing the feature types of interest. |
+The screen reader available on Apple platforms.
