@@ -1,3 +1,5 @@
 ignore:
-  - "Example/Tests"
-  - "Example/Pods"
+  - ".swiftpm"
+  - ".build"
+  - "BuildTools"
+  - "Tests"
