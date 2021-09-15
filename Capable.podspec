@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/chrs1885/Capable.git', :tag => s.version }
   s.documentation_url = 'http://htmlpreview.github.io/?https://github.com/chrs1885/Capable/blob/1.0.0/Documentation/index.html'
   s.swift_versions = ['5.1', '5.2', '5.3']
-  s.source_files = 'Source/**/*'
+  s.source_files = 'Sources/Capable/**/*'
   
   s.framework = 'Foundation'
   s.ios.framework = s.tvos.framework = s.watchos.framework = 'UIKit'
