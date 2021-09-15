@@ -50,10 +50,7 @@ There are currently four different ways to integrate Capable into your apps.
 use_frameworks!
 
 target 'MyApp' do
-
-  # all features + color extensions
   pod 'Capable'
-  
 end
 ```
 
