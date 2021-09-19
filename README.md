@@ -42,7 +42,7 @@ Capable offers a whole lot of features along with a bunch of configurations. To 
 
 ## Installation
 
-There are currently four different ways to integrate Capable into your apps.
+There are currently three different ways to integrate Capable into your apps.
 
 ### CocoaPods
 
@@ -67,11 +67,6 @@ dependencies: [
     .package(url: "https://github.com/chrs1885/Capable.git", from: "2.0.0")
 ]
 ```
-
-### Manually
-
-Simply drop `Capable.xcodeproj` into your project. Also make sure to add
-`Capable.framework` to your app’s embedded frameworks found in the General tab of your main project.
 
 ## Usage
 
