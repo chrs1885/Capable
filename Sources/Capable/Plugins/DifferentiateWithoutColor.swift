@@ -55,7 +55,7 @@ extension DifferentiateWithoutColor: ObservableFeatureProtocol {
                 notificationCenter.addObserver(
                     self,
                     selector: #selector(valueChanged),
-                    name: NSNotification.Name(rawValue: UIAccessibility.differentiateWithoutColorDidChangeNotification),
+                    name: NSNotification.Name(rawValue: UIAccessibility.differentiateWithoutColorDidChangeNotification.rawValue),
                     object: nil
                 )
             }
