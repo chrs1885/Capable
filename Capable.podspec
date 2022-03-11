@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Capable'
-  s.version = '2.0.0'
+  s.version = '2.0.1'
   s.summary = 'Unified accessibility API for all Apple platforms and WCAG 2.1 conformance level calculation for color contrasts.'
  
   s.description = <<-DESC
