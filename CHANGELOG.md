@@ -1,3 +1,8 @@
+## Version 2.0.1
+
+### Bugfixes
+* [Fix build issue due to incorrect NSNotification name](https://github.com/chrs1885/Capable/pull/63). *(Thanks to @acosmicflamingo)*
+
 ## Version 2.0.0
 
 ### Enhancements

@@ -3,13 +3,10 @@
 
 ---
 [![Awesome](https://camo.githubusercontent.com/13c4e50d88df7178ae1882a203ed57b641674f94/68747470733a2f2f63646e2e7261776769742e636f6d2f73696e647265736f726875732f617765736f6d652f643733303566333864323966656437386661383536353265336136336531353464643865383832392f6d656469612f62616467652e737667)](https://github.com/vsouza/awesome-ios#accessibility)
-[![Build Status](https://app.bitrise.io/app/bffa0ab34e532968/status.svg?token=brzakeKmTQGYMdW-lNmClg&branch=develop)](https://app.bitrise.io/app/bffa0ab34e532968)
 ![Swift](https://img.shields.io/badge/swift-5.0-red.svg)
 ![Platforms](https://img.shields.io/cocoapods/p/Capable.svg)
 [![Cocoapods compatible](https://img.shields.io/cocoapods/v/Capable.svg)](https://cocoapods.org/pods/Capable)
 ![SPM](https://img.shields.io/badge/SPM-compatible-ff59b4)
-[![Carthage compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
-[![codecov](https://codecov.io/gh/chrs1885/Capable/branch/develop/graph/badge.svg)](https://codecov.io/gh/chrs1885/Capable)
 [![Twitter](https://img.shields.io/badge/twitter-%40chr__wendt-58a1f2.svg)](https://twitter.com/chr_wendt)
 
 # Accessibility for iOS, macOS, tvOS, and watchOS
@@ -42,7 +39,7 @@ Capable offers a whole lot of features along with a bunch of configurations. To 
 
 ## Installation
 
-There are currently four different ways to integrate Capable into your apps.
+There are currently three different ways to integrate Capable into your apps.
 
 ### CocoaPods
 
@@ -64,14 +61,9 @@ github "chrs1885/Capable"
 
 ```ruby
 dependencies: [
-    .package(url: "https://github.com/chrs1885/Capable.git", from: "2.0.0")
+    .package(url: "https://github.com/chrs1885/Capable.git", from: "2.0.1")
 ]
 ```
-
-### Manually
-
-Simply drop `Capable.xcodeproj` into your project. Also make sure to add
-`Capable.framework` to your app’s embedded frameworks found in the General tab of your main project.
 
 ## Usage
 
